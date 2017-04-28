@@ -1,0 +1,58 @@
+
+/* Copyright (c) 2015 Alinson Xavier
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#ifndef LFREE_2D_H
+#define LFREE_2D_H
+
+struct LFreeSet2D
+{
+    double f[2];
+
+    int n_vertices;
+    double *vertices;
+
+    int n_lattice_points;
+    double *lattice_points;
+
+    int n_halfspaces;
+    double *halfspaces;
+};
+
+int LFREE_2D_init(struct LFreeSet2D *set,
+                  int n_vertices,
+                  int n_lattice_points,
+                  int max_n_halfspaces);
+
+void LFREE_2D_free(struct LFreeSet2D *set);
+
+int LFREE_2D_read_next(FILE *file, struct LFreeSet2D *set);
+
+int LFREE_2D_compute_halfspaces(struct LFreeSet2D *set);
+
+int LFREE_2D_preprocess(struct LFreeSet2D *set, double *m, double *center);
+
+int LFREE_2D_transform_set(struct LFreeSet2D *set, const double *m);
+
+int LFREE_2D_print_set(const struct LFreeSet2D *set);
+
+int LFREE_2D_translate_set(struct LFreeSet2D *set, double dx, double dy);
+
+int LFREE_2D_get_bounding_box(const struct LFreeSet2D *set,
+                              int *lb,
+                              int *ub);
+
+#endif //LFREE_2D_H
