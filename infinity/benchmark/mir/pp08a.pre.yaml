@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/pp08a.pre.mps.gz
+obj-value:
+  0: 2748.345238
+  1: 5273.627141
+generated-cuts:
+  0: 0
+  1: 52
+added-cuts:
+  0: 0
+  1: 47
+user-cpu-time:
+  0: 0.001
+  1: 0.010
+time-per-cut:
+  1: 0.000

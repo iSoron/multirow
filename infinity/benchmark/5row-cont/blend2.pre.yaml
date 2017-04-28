@@ -1,0 +1,21 @@
+input-filename:
+  instances/blend2.pre.mps.gz
+obj-value:
+  0: 6.915675
+  1: 7.025176
+  2: 7.025176
+generated-cuts:
+  0: 0
+  1: 6
+  2: 60
+added-cuts:
+  0: 0
+  1: 5
+  2: 0
+user-cpu-time:
+  0: 0.003
+  1: 0.001
+  2: 48.103
+time-per-cut:
+  1: 0.000
+  2: 0.802

@@ -1,0 +1,62 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-4.local 2017-03-11 22:59
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/gesa3.pre.mps.gz --basis bases/gesa3.pre.bas --log 5row-cont/gesa3.pre.log --stats 5row-cont/gesa3.pre.yaml --solution solutions/gesa3.pre.x --rows 5 
+[      0.01]     1296 rows, 2377 cols
+[      0.01] Storing column types...
+[      0.01] Relaxing integrality...
+[      0.01] Disabling presolve...
+[      0.01] Optimizing...
+[      0.01]     opt = 27884380.373544
+[      0.01] Reading tableau rows...
+[      0.05] Adding MIR cuts...
+[      0.05]     opt = 27887460.805864
+[      0.05]     opt = 27891076.762470
+[      0.05]     opt = 27891094.578304
+[      0.06]     opt = 27894048.102967
+[      0.06]     opt = 27894058.390853
+[      0.06]     opt = 27895167.139302
+[      0.06]     opt = 27896072.570392
+[      0.06]     opt = 27897587.957957
+[      0.06]     opt = 27901452.293734
+[      0.06]     opt = 27902511.851079
+[      0.06]     opt = 27903536.505123
+[      0.06]     opt = 27905217.143457
+[      0.06] Optimizing...
+[      0.06]     opt = 27905217.143457
+[      0.06] Adding greedy intersection cuts (2 rows)...
+[      0.06]     Finding combinations...
+[      0.08]         3347 combinations [0.05]
+[      0.10]     opt = 27907951.018073
+[      0.11]     opt = 27909421.869714
+[      0.12]     opt = 27909495.047056
+[      0.13]     opt = 27910570.374702
+[      0.18]     opt = 27910763.921957
+[      0.19]     opt = 27911230.790686
+[     38.77]     opt = 27911732.575897
+[     47.89]     opt = 27911915.114793
+[     53.91]     opt = 27912073.080285
+[     62.27]     opt = 27912698.506528
+[     79.69]     opt = 27913336.881453
+[     79.95]     opt = 27914990.372667
+[     80.00]     opt = 27916073.091024
+[     86.16]     opt = 27917283.402593
+[    109.72] Adding greedy intersection cuts (3 rows)...
+[    109.72]     Finding combinations...
+[    118.98]         2876 combinations [0.60]
+[    144.99]     opt = 27917895.078643
+[    145.04]     opt = 27917900.665586
+[    149.85]     opt = 27917906.010769
+[    175.56]     opt = 27918056.036543
+[    177.31] Adding greedy intersection cuts (4 rows)...
+[    177.31]     Finding combinations...
+[    785.89]         4376 combinations [0.70]
+[    874.85] Adding greedy intersection cuts (5 rows)...
+[    874.85]     Finding combinations...
+[   2323.72] Optimizing...
+[   2323.72]     opt = 27918056.036543
+[   2323.72] Writing stats to file 5row-cont/gesa3.pre.yaml...

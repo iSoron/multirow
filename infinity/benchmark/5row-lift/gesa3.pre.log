@@ -1,0 +1,71 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-1.local 2017-03-11 23:03
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/gesa3.pre.mps.gz --basis bases/gesa3.pre.bas --log 5row-lift/gesa3.pre.log --stats 5row-lift/gesa3.pre.yaml --solution solutions/gesa3.pre.x --rows 5 --lift 
+[      0.00]     1296 rows, 2377 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 27884380.373544
+[      0.00] Reading tableau rows...
+[      0.04] Adding MIR cuts...
+[      0.04]     opt = 27887460.805864
+[      0.04]     opt = 27891076.762470
+[      0.04]     opt = 27891094.578304
+[      0.05]     opt = 27894048.102967
+[      0.05]     opt = 27894058.390853
+[      0.05]     opt = 27895167.139302
+[      0.05]     opt = 27896072.570392
+[      0.05]     opt = 27897587.957957
+[      0.05]     opt = 27901452.293734
+[      0.05]     opt = 27902511.851079
+[      0.05]     opt = 27903536.505123
+[      0.05]     opt = 27905217.143457
+[      0.05] Optimizing...
+[      0.05]     opt = 27905217.143457
+[      0.05] Adding greedy intersection cuts (2 rows)...
+[      0.05]     Finding combinations...
+[      0.07]         3347 combinations [0.05]
+[      0.13]     opt = 27907951.018073
+[      0.20]     opt = 27909421.869714
+[      0.23]     opt = 27909495.047056
+[      0.29]     opt = 27910602.795695
+[      0.49]     opt = 27910776.323738
+[      0.56]     opt = 27911230.790686
+[      9.66] Cut cuts off known integral solution:  -0.27843704 >=  -0.27857714 (0) (/u/axavier/multirow/infinity/src/cg.c:317)
+[      9.66] check_cut failed (1) (/u/axavier/multirow/infinity/src/cg.c:337)
+[      9.66] invalid cut skipped (cut 1059)
+[     13.15]     opt = 27911732.575897
+[     13.40] Cut cuts off known integral solution:  -0.27843704 >=  -0.27857714 (0) (/u/axavier/multirow/infinity/src/cg.c:317)
+[     13.40] check_cut failed (1) (/u/axavier/multirow/infinity/src/cg.c:337)
+[     13.40] invalid cut skipped (cut 1310)
+[     16.41] Cut cuts off known integral solution:  -0.27843721 >=  -0.27857730 (0) (/u/axavier/multirow/infinity/src/cg.c:317)
+[     16.41] check_cut failed (1) (/u/axavier/multirow/infinity/src/cg.c:337)
+[     16.41] invalid cut skipped (cut 1549)
+[     20.72]     opt = 27911915.112998
+[     24.66]     opt = 27912073.078411
+[     28.05] Cut cuts off known integral solution:  -0.64553915 >=  -0.64567924 (0) (/u/axavier/multirow/infinity/src/cg.c:317)
+[     28.05] check_cut failed (1) (/u/axavier/multirow/infinity/src/cg.c:337)
+[     28.05] invalid cut skipped (cut 2646)
+[     29.27] Cut cuts off known integral solution:  -0.64561918 >=  -0.64567924 (0) (/u/axavier/multirow/infinity/src/cg.c:317)
+[     29.27] check_cut failed (1) (/u/axavier/multirow/infinity/src/cg.c:337)
+[     29.27] invalid cut skipped (cut 2765)
+[     31.48]     opt = 27912769.347322
+[     31.75]     opt = 27912774.274455
+[     31.79]     opt = 27914660.647622
+[     32.02]     opt = 27915638.044365
+[     34.43]     opt = 27916870.992929
+[     35.74] Adding greedy intersection cuts (3 rows)...
+[     35.74]     Finding combinations...
+[     45.16]         2876 combinations [0.60]
+[    103.49]     opt = 27917439.496210
+[    103.58]     opt = 27917444.534027
+[    114.16]     opt = 27917944.986852
+[    163.64]     opt = 27918094.239099
+[    167.01] Adding greedy intersection cuts (4 rows)...
+[    167.01]     Finding combinations...

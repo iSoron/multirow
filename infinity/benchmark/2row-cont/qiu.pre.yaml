@@ -1,0 +1,21 @@
+input-filename:
+  instances/qiu.pre.mps.gz
+obj-value:
+  0: -931.638854
+  1: -920.330676
+  2: -918.148012
+generated-cuts:
+  0: 0
+  1: 36
+  2: 894
+added-cuts:
+  0: 0
+  1: 7
+  2: 9
+user-cpu-time:
+  0: 0.007
+  1: 0.093
+  2: 5.937
+time-per-cut:
+  1: 0.003
+  2: 0.007

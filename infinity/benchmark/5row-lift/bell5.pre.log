@@ -1,0 +1,45 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-5.local 2017-03-11 23:02
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/bell5.pre.mps.gz --basis bases/bell5.pre.bas --log 5row-lift/bell5.pre.log --stats 5row-lift/bell5.pre.yaml --solution solutions/bell5.pre.x --rows 5 --lift 
+[      0.00]     74 rows, 169 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 8608417.946508
+[      0.00] Reading tableau rows...
+[      0.00] Adding MIR cuts...
+[      0.00]     opt = 8620810.013580
+[      0.00]     opt = 8621024.716449
+[      0.00]     opt = 8656250.821027
+[      0.00]     opt = 8658821.324241
+[      0.00]     opt = 8658858.088418
+[      0.00]     opt = 8659319.275204
+[      0.00]     opt = 8659330.299127
+[      0.00]     opt = 8659846.452004
+[      0.00]     opt = 8659985.893684
+[      0.00]     opt = 8660422.457044
+[      0.00] Optimizing...
+[      0.00]     opt = 8660422.457044
+[      0.00] Adding greedy intersection cuts (2 rows)...
+[      0.00]     Finding combinations...
+[      0.00]          320 combinations [0.05]
+[      2.53]     opt = 8660426.129848
+[      2.69]     opt = 8660565.543643
+[      3.53] Adding greedy intersection cuts (3 rows)...
+[      3.53]     Finding combinations...
+[      3.53]         1983 combinations [0.05]
+[    109.15] Cut cuts off known integral solution:  -0.81932548 >=  -1.00000000 (0) (/u/axavier/multirow/infinity/src/cg.c:317)
+[    109.15] check_cut failed (1) (/u/axavier/multirow/infinity/src/cg.c:337)
+[    109.15] invalid cut skipped (cut 1248)
+[    169.98] Adding greedy intersection cuts (4 rows)...
+[    169.98]     Finding combinations...
+[    170.02]         2435 combinations [0.10]
+[    170.02] not implemented (0) (/u/axavier/multirow/infinity/src/greedy.c:346)
+[    170.02] generate failed (cut 1) (1) (/u/axavier/multirow/infinity/src/cg.c:909)
+[    170.02] CG_add_multirow_cuts failed (1) (/u/axavier/multirow/infinity/src/main-greedy.c:422)

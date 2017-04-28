@@ -1,0 +1,21 @@
+input-filename:
+  instances/bell5.pre.mps.gz
+obj-value:
+  0: 8608417.946508
+  1: 8660422.457044
+  2: 8660565.543643
+generated-cuts:
+  0: 0
+  1: 33
+  2: 312
+added-cuts:
+  0: 0
+  1: 10
+  2: 2
+user-cpu-time:
+  0: 0.001
+  1: 0.001
+  2: 0.661
+time-per-cut:
+  1: 0.000
+  2: 0.002

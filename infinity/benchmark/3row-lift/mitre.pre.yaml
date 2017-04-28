@@ -1,0 +1,21 @@
+input-filename:
+  instances/mitre.pre.mps.gz
+obj-value:
+  0: 114908.998992
+  1: 115115.714286
+  2: 115115.714286
+generated-cuts:
+  0: 0
+  1: 692
+  2: 1612
+added-cuts:
+  0: 0
+  1: 271
+  2: 4
+user-cpu-time:
+  0: 0.033
+  1: 0.693
+  2: 900.384
+time-per-cut:
+  1: 0.001
+  2: 0.559

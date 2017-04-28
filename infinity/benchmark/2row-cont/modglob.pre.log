@@ -1,0 +1,50 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-7.local 2017-03-11 22:40
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/modglob.pre.mps.gz --basis bases/modglob.pre.bas --log 2row-cont/modglob.pre.log --stats 2row-cont/modglob.pre.yaml --solution solutions/modglob.pre.x 
+[      0.00]     286 rows, 581 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 20430947.618854
+[      0.00] Reading tableau rows...
+[      0.01] Adding MIR cuts...
+[      0.01]     opt = 20430983.960229
+[      0.01]     opt = 20433220.825802
+[      0.01]     opt = 20433495.030223
+[      0.01]     opt = 20433736.572521
+[      0.01]     opt = 20440695.598861
+[      0.01]     opt = 20443532.852859
+[      0.01]     opt = 20447447.193305
+[      0.01]     opt = 20453105.755755
+[      0.01]     opt = 20456438.319770
+[      0.01]     opt = 20460992.771631
+[      0.01]     opt = 20461294.255818
+[      0.01]     opt = 20461738.774308
+[      0.01]     opt = 20471296.292446
+[      0.01]     opt = 20474558.569302
+[      0.01]     opt = 20477285.450185
+[      0.01]     opt = 20480615.581142
+[      0.01]     opt = 20482469.965155
+[      0.01]     opt = 20483580.680868
+[      0.01]     opt = 20483723.074561
+[      0.01]     opt = 20484319.427740
+[      0.01]     opt = 20484452.962781
+[      0.01] Optimizing...
+[      0.01]     opt = 20484452.962781
+[      0.01] Adding greedy intersection cuts (2 rows)...
+[      0.01]     Finding combinations...
+[      0.01]          187 combinations [0.05]
+[      1.17]     opt = 20484508.124681
+[      1.17]     opt = 20484509.722159
+[      1.18]     opt = 20484779.721104
+[      1.18]     opt = 20485033.859562
+[      1.18]     opt = 20485140.823251
+[      1.18] Optimizing...
+[      1.18]     opt = 20485140.823251
+[      1.18] Writing stats to file 2row-cont/modglob.pre.yaml...

@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/enigma.pre.mps.gz
+obj-value:
+  0: 0.000000
+  1: 0.000000
+generated-cuts:
+  0: 0
+  1: 8
+added-cuts:
+  0: 0
+  1: 1
+user-cpu-time:
+  0: 0.000
+  1: 0.000
+time-per-cut:
+  1: 0.000

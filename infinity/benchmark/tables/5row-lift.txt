@@ -1,0 +1,43 @@
+             instance     g-mir   g-infty   g-exact    improv   t-total t-per-cut n-cuts 
+
+                           NaN%      NaN%      NaN% 
+                                     NaN% 
+Disabled:
+   1          arki001
+   2         dano3mip
+   3           dsbmip
+   4           enigma
+   5            mas76
+   6           noswot
+
+Error:
+   7 5row-lift/bell3a                  1
+   8 5row-lift/bell5                   1
+   9 5row-lift/blend2                  1
+  10 5row-lift/danoint                 1
+  11 5row-lift/dcmulti                 1
+  12 5row-lift/egout                   1
+  13 5row-lift/fixnet6                 1
+  14 5row-lift/flugpl                  1
+  15 5row-lift/gen                     1
+  16 5row-lift/gesa2                   1
+  17 5row-lift/khb05250                1
+  18 5row-lift/lseu                    1
+  19 5row-lift/markshare1              1
+  20 5row-lift/markshare2              1
+  21 5row-lift/mas74                   1
+  22 5row-lift/misc06                  1
+  23 5row-lift/mod008                  1
+  24 5row-lift/mod011                  1
+  25 5row-lift/modglob                 1
+  26 5row-lift/p0033                   1
+  27 5row-lift/p0548                   1
+  28 5row-lift/p2756                   1
+  29 5row-lift/pk1                     1
+  30 5row-lift/pp08a                   1
+  31 5row-lift/rentacar                1
+  32 5row-lift/rgn                     1
+  33 5row-lift/set1ch                  1
+  34 5row-lift/stein27                 1
+  35 5row-lift/vpm1                    1
+  36 5row-lift/vpm2                    1

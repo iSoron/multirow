@@ -1,0 +1,60 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-7.local 2017-03-11 22:09
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/p0548.pre.mps.gz --basis bases/p0548.pre.bas --log 3row-lift/p0548.pre.log --stats 3row-lift/p0548.pre.yaml --solution solutions/p0548.pre.x --rows 3 --lift 
+[      0.00]     131 rows, 526 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 5196.900648
+[      0.00] Reading tableau rows...
+[      0.00] Adding MIR cuts...
+[      0.00]     opt = 5196.900648
+[      0.00]     opt = 5198.552029
+[      0.00]     opt = 5222.284878
+[      0.01]     opt = 5232.866717
+[      0.01]     opt = 5312.992429
+[      0.01]     opt = 5316.105105
+[      0.01]     opt = 5325.308330
+[      0.01]     opt = 5334.863227
+[      0.01]     opt = 5354.088579
+[      0.01]     opt = 5358.949094
+[      0.01]     opt = 5454.086939
+[      0.01]     opt = 5480.868923
+[      0.01]     opt = 5496.758020
+[      0.01]     opt = 5499.470998
+[      0.01]     opt = 5527.349678
+[      0.01]     opt = 5545.349678
+[      0.01]     opt = 5547.500705
+[      0.01]     opt = 5551.726511
+[      0.01]     opt = 5560.284576
+[      0.01]     opt = 5572.490897
+[      0.01]     opt = 5614.794530
+[      0.01]     opt = 5618.112196
+[      0.01]     opt = 5749.854132
+[      0.01]     opt = 5790.715160
+[      0.01]     opt = 5791.679800
+[      0.01]     opt = 5880.420763
+[      0.01]     opt = 7351.418142
+[      0.01]     opt = 7351.562096
+[      0.01]     opt = 7352.472966
+[      0.01]     opt = 7352.901195
+[      0.01] Optimizing...
+[      0.01]     opt = 7352.901195
+[      0.01] Adding greedy intersection cuts (2 rows)...
+[      0.01]     Finding combinations...
+[      0.01]          228 combinations [0.05]
+[      3.65]     opt = 7352.932224
+[      6.55]     opt = 7353.054612
+[      7.35] Adding greedy intersection cuts (3 rows)...
+[      7.35]     Finding combinations...
+[      7.37]          230 combinations [0.05]
+[     37.81]     opt = 7353.291547
+[     75.07] Optimizing...
+[     75.07]     opt = 7353.291547
+[     75.07] Writing stats to file 3row-lift/p0548.pre.yaml...

@@ -1,0 +1,87 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-4.local 2017-03-11 22:59
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/pp08aCUTS.pre.mps.gz --basis bases/pp08aCUTS.pre.bas --log 5row-cont/pp08aCUTS.pre.log --stats 5row-cont/pp08aCUTS.pre.yaml --solution solutions/pp08aCUTS.pre.x --rows 5 
+[      0.00]     239 rows, 416 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 5480.606156
+[      0.00] Reading tableau rows...
+[      0.01] Adding MIR cuts...
+[      0.01]     opt = 5505.843914
+[      0.01]     opt = 5507.441391
+[      0.01]     opt = 5522.577666
+[      0.01]     opt = 5541.746152
+[      0.01]     opt = 5550.016763
+[      0.01]     opt = 5557.866876
+[      0.01]     opt = 5573.773896
+[      0.01]     opt = 5631.660694
+[      0.01]     opt = 5682.648068
+[      0.01]     opt = 5685.952447
+[      0.01]     opt = 5698.079110
+[      0.01]     opt = 5700.355875
+[      0.01]     opt = 5702.813230
+[      0.01]     opt = 5750.749249
+[      0.01]     opt = 5768.231859
+[      0.01]     opt = 5828.663989
+[      0.01]     opt = 5829.483447
+[      0.01]     opt = 5832.222079
+[      0.02]     opt = 5855.802097
+[      0.02]     opt = 5865.085391
+[      0.02]     opt = 5874.993178
+[      0.02]     opt = 5893.387674
+[      0.02]     opt = 5920.572451
+[      0.02]     opt = 5973.785386
+[      0.02]     opt = 5984.534423
+[      0.02]     opt = 6007.467668
+[      0.02]     opt = 6055.809769
+[      0.02]     opt = 6078.509393
+[      0.02]     opt = 6080.360140
+[      0.02]     opt = 6091.153734
+[      0.02]     opt = 6112.270877
+[      0.02] Optimizing...
+[      0.02]     opt = 6112.270877
+[      0.02] Adding greedy intersection cuts (2 rows)...
+[      0.02]     Finding combinations...
+[      0.02]          699 combinations [0.05]
+[      0.05]     opt = 6113.190464
+[      3.88]     opt = 6151.274601
+[      4.05]     opt = 6151.489137
+[      4.12]     opt = 6164.379487
+[      4.24]     opt = 6167.300418
+[      4.42]     opt = 6167.940671
+[      4.45]     opt = 6171.554658
+[      5.23]     opt = 6171.555575
+[      5.25]     opt = 6171.570037
+[      5.25]     opt = 6177.949374
+[      5.46]     opt = 6184.507492
+[      5.56] Adding greedy intersection cuts (3 rows)...
+[      5.56]     Finding combinations...
+[      5.57]         3717 combinations [0.10]
+[     50.70]     opt = 6186.546781
+[     53.79]     opt = 6187.093776
+[     54.26]     opt = 6187.168275
+[     82.44]     opt = 6187.398657
+[     86.69]     opt = 6188.530740
+[     92.11]     opt = 6188.647008
+[    108.43]     opt = 6188.662957
+[    108.92]     opt = 6188.891388
+[    298.68]     opt = 6188.898186
+[    299.18]     opt = 6189.393244
+[    314.11]     opt = 6189.620279
+[    320.88]     opt = 6190.604845
+[    350.11] Adding greedy intersection cuts (4 rows)...
+[    350.11]     Finding combinations...
+[    350.46]         3532 combinations [0.25]
+[    498.57]     opt = 6192.044831
+[    900.12] Adding greedy intersection cuts (5 rows)...
+[    900.12]     Finding combinations...
+[    900.12] Optimizing...
+[    900.12]     opt = 6192.044831
+[    900.12] Writing stats to file 5row-cont/pp08aCUTS.pre.yaml...

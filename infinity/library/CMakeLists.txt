@@ -13,7 +13,7 @@ set(TEST_SOURCES
     tests/greedy-nd-test.cpp)
 
 add_library(infinity_static ${COMMON_SOURCES})
-set_target_properties(infinity_static PROPERTIES OUTPUT_NAME lifting)
+set_target_properties(infinity_static PROPERTIES OUTPUT_NAME infinity)
 target_include_directories (infinity_static PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_executable(infinity-test.run ${COMMON_SOURCES} ${TEST_SOURCES})

@@ -1,0 +1,51 @@
+[      0.00] multirow (git-f8ddaa22007511cf6b9141ace0aee243155733e8)
+[      0.00] cpu133 2015-12-15 10:27
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-09
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00]     MAX_CUTS: -1
+[      0.00]     MAXIMUM_SCORE: 9.500000e-01
+[      0.00]     MAX_TOTAL_TIME: -1
+[      0.00]     MINIMUM_SCORE: 5.000000e-02
+[      0.00]     TRIVIAL_LIFTING_ENABLED: 0
+[      0.00] Command line arguments:
+[      0.00]     ./multirow --mir --problem instances/miplib3/dcmulti.pre.mps.gz --basis bases/miplib3/dcmulti.pre.bas --log mir/miplib3/dcmulti.pre.log --stats mir/miplib3/dcmulti.pre.yaml --solution solutions/miplib3/dcmulti.pre.x 
+[      0.00] Reading problem instances/miplib3/dcmulti.pre.mps.gz...
+[      0.00]     224 rows, 677 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Reading basis from file bases/miplib3/dcmulti.pre.bas...
+[      0.00] Optimizing...
+[      0.00]     opt = 184034.377140
+[      0.00] Reading tableau rows...
+[      0.00] Reading solution from solutions/miplib3/dcmulti.pre.x
+[      0.00] Adding MIR cuts...
+[      0.00]     opt = 184044.679027
+[      0.00]     opt = 184057.443733
+[      0.00]     opt = 184094.608439
+[      0.00]     opt = 184128.499348
+[      0.00]     opt = 184151.381848
+[      0.01]     opt = 184172.581848
+[      0.01]     opt = 184487.490561
+[      0.01]     opt = 184572.854673
+[      0.01]     opt = 185047.744476
+[      0.01]     opt = 185059.231170
+[      0.01]     opt = 185072.654979
+[      0.01]     opt = 185109.025567
+[      0.01]     opt = 185138.843749
+[      0.01]     opt = 185165.470749
+[      0.01]     opt = 185190.306713
+[      0.01]     opt = 185375.653955
+[      0.01]     opt = 185404.484183
+[      0.02]     opt = 185672.080821
+[      0.02]     opt = 185681.409014
+[      0.02]     opt = 185713.891708
+[      0.02]     opt = 185741.940695
+[      0.02]     opt = 185757.492695
+[      0.02]     opt = 185774.142695
+[      0.02]     opt = 186027.334126
+[      0.02] Optimizing...
+[      0.02]     opt = 186027.334126
+[      0.02] Writing stats to file mir/miplib3/dcmulti.pre.yaml...

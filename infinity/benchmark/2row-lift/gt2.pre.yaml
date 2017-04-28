@@ -1,0 +1,21 @@
+input-filename:
+  instances/gt2.pre.mps.gz
+obj-value:
+  0: 20146.761297
+  1: 20756.821715
+  2: 21070.587775
+generated-cuts:
+  0: 0
+  1: 15
+  2: 249
+added-cuts:
+  0: 0
+  1: 7
+  2: 2
+user-cpu-time:
+  0: 0.002
+  1: 0.001
+  2: 7.328
+time-per-cut:
+  1: 0.000
+  2: 0.029

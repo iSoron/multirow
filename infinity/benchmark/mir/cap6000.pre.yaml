@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/cap6000.pre.mps.gz
+obj-value:
+  0: -2451537.325024
+  1: -2451470.553831
+generated-cuts:
+  0: 0
+  1: 4
+added-cuts:
+  0: 0
+  1: 2
+user-cpu-time:
+  0: 0.052
+  1: 0.266
+time-per-cut:
+  1: 0.066

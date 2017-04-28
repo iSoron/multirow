@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/fast0507.pre.mps.gz
+obj-value:
+  0: 172.145567
+  1: 172.186063
+generated-cuts:
+  0: 0
+  1: 325
+added-cuts:
+  0: 0
+  1: 24
+user-cpu-time:
+  0: 0.268
+  1: 1.787
+time-per-cut:
+  1: 0.005

@@ -1,0 +1,21 @@
+input-filename:
+  instances/fiber.pre.mps.gz
+obj-value:
+  0: 198107.357500
+  1: 344210.561379
+  2: 351636.837743
+generated-cuts:
+  0: 0
+  1: 38
+  2: 1406
+added-cuts:
+  0: 0
+  1: 15
+  2: 12
+user-cpu-time:
+  0: 0.005
+  1: 0.010
+  2: 36.764
+time-per-cut:
+  1: 0.000
+  2: 0.026

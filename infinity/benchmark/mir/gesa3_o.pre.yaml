@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/gesa3_o.pre.mps.gz
+obj-value:
+  0: 27833632.450665
+  1: 27926689.932405
+generated-cuts:
+  0: 0
+  1: 139
+added-cuts:
+  0: 0
+  1: 43
+user-cpu-time:
+  0: 0.019
+  1: 0.124
+time-per-cut:
+  1: 0.001

@@ -1,0 +1,55 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-7.local 2017-03-11 22:09
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/fixnet6.pre.mps.gz --basis bases/fixnet6.pre.bas --log 3row-lift/fixnet6.pre.log --stats 3row-lift/fixnet6.pre.yaml --solution solutions/fixnet6.pre.x --rows 3 --lift 
+[      0.00]     477 rows, 1256 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 3192.042000
+[      0.00] Reading tableau rows...
+[      0.01] Adding MIR cuts...
+[      0.01]     opt = 3205.818000
+[      0.01]     opt = 3310.274699
+[      0.01]     opt = 3330.101142
+[      0.01]     opt = 3359.309304
+[      0.01]     opt = 3365.581322
+[      0.01]     opt = 3367.872133
+[      0.01]     opt = 3367.896579
+[      0.01]     opt = 3371.147010
+[      0.01] Optimizing...
+[      0.01]     opt = 3371.147010
+[      0.01] Adding greedy intersection cuts (2 rows)...
+[      0.01]     Finding combinations...
+[      0.01]           95 combinations [0.05]
+[      0.05]     opt = 3371.316927
+[      0.10]     opt = 3381.139540
+[      0.53]     opt = 3387.993627
+[      0.56]     opt = 3389.356906
+[      0.60]     opt = 3389.435109
+[      0.64]     opt = 3391.313503
+[      0.72]     opt = 3400.913268
+[      1.05]     opt = 3419.652102
+[      1.18]     opt = 3420.554424
+[      1.35]     opt = 3424.527719
+[      1.63]     opt = 3434.108159
+[      1.69]     opt = 3435.564075
+[      1.70]     opt = 3435.564204
+[      1.74]     opt = 3435.625868
+[      1.91]     opt = 3435.636346
+[      1.99]     opt = 3436.063953
+[      2.39] Adding greedy intersection cuts (3 rows)...
+[      2.39]     Finding combinations...
+[      2.40]          199 combinations [0.05]
+[      3.36]     opt = 3436.077221
+[      7.77]     opt = 3436.149508
+[      8.75]     opt = 3436.375274
+[     18.38]     opt = 3436.375482
+[     48.76] Optimizing...
+[     48.76]     opt = 3436.375482
+[     48.76] Writing stats to file 3row-lift/fixnet6.pre.yaml...

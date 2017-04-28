@@ -1,0 +1,21 @@
+input-filename:
+  instances/khb05250.pre.mps.gz
+obj-value:
+  0: 95919464.000000
+  1: 104111944.269513
+  2: 104111944.269513
+generated-cuts:
+  0: 0
+  1: 19
+  2: 62
+added-cuts:
+  0: 0
+  1: 18
+  2: 0
+user-cpu-time:
+  0: 0.005
+  1: 0.008
+  2: 1.171
+time-per-cut:
+  1: 0.000
+  2: 0.019

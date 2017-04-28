@@ -1,0 +1,42 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-7.local 2017-03-11 22:40
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/khb05250.pre.mps.gz --basis bases/khb05250.pre.bas --log 2row-cont/khb05250.pre.log --stats 2row-cont/khb05250.pre.yaml --solution solutions/khb05250.pre.x 
+[      0.00]     100 rows, 1324 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 95919464.000000
+[      0.00] Reading tableau rows...
+[      0.01] Adding MIR cuts...
+[      0.01]     opt = 96411446.043288
+[      0.01]     opt = 96947316.043288
+[      0.01]     opt = 96992310.859288
+[      0.01]     opt = 97199137.011676
+[      0.01]     opt = 97642148.646117
+[      0.01]     opt = 98131306.676329
+[      0.01]     opt = 98679906.383611
+[      0.01]     opt = 98844074.508339
+[      0.01]     opt = 99057346.403545
+[      0.01]     opt = 99373346.403545
+[      0.01]     opt = 99585107.526827
+[      0.01]     opt = 99948587.939583
+[      0.01]     opt = 100187681.191047
+[      0.01]     opt = 100373045.355239
+[      0.01]     opt = 101179818.585594
+[      0.01]     opt = 101361918.638917
+[      0.01]     opt = 102657803.193866
+[      0.01]     opt = 104111944.269513
+[      0.01] Optimizing...
+[      0.01]     opt = 104111944.269513
+[      0.01] Adding greedy intersection cuts (2 rows)...
+[      0.01]     Finding combinations...
+[      0.01]           38 combinations [0.05]
+[      0.72] Optimizing...
+[      0.72]     opt = 104111944.269513
+[      0.72] Writing stats to file 2row-cont/khb05250.pre.yaml...

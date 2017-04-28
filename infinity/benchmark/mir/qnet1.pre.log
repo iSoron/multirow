@@ -1,0 +1,40 @@
+[      0.00] multirow (git-f8ddaa22007511cf6b9141ace0aee243155733e8)
+[      0.00] cpu133 2015-12-15 10:27
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-09
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00]     MAX_CUTS: -1
+[      0.00]     MAXIMUM_SCORE: 9.500000e-01
+[      0.00]     MAX_TOTAL_TIME: -1
+[      0.00]     MINIMUM_SCORE: 5.000000e-02
+[      0.00]     TRIVIAL_LIFTING_ENABLED: 0
+[      0.00] Command line arguments:
+[      0.00]     ./multirow --mir --problem instances/miplib3/qnet1.pre.mps.gz --basis bases/miplib3/qnet1.pre.bas --log mir/miplib3/qnet1.pre.log --stats mir/miplib3/qnet1.pre.yaml --solution solutions/miplib3/qnet1.pre.x 
+[      0.00] Reading problem instances/miplib3/qnet1.pre.mps.gz...
+[      0.00]     363 rows, 1573 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Reading basis from file bases/miplib3/qnet1.pre.bas...
+[      0.00] Optimizing...
+[      0.00]     opt = 14274.102667
+[      0.00] Reading tableau rows...
+[      0.01] Reading solution from solutions/miplib3/qnet1.pre.x
+[      0.01] Adding MIR cuts...
+[      0.02]     opt = 14299.280866
+[      0.02]     opt = 14320.407393
+[      0.02]     opt = 14327.598499
+[      0.02]     opt = 14327.735879
+[      0.03]     opt = 14336.493450
+[      0.03]     opt = 14336.542647
+[      0.04]     opt = 14365.610042
+[      0.05]     opt = 14375.994015
+[      0.05]     opt = 14376.326631
+[      0.06]     opt = 14376.968912
+[      0.06]     opt = 14404.243310
+[      0.07]     opt = 14407.350414
+[      0.07]     opt = 14480.008117
+[      0.07] Optimizing...
+[      0.07]     opt = 14480.008117
+[      0.07] Writing stats to file mir/miplib3/qnet1.pre.yaml...

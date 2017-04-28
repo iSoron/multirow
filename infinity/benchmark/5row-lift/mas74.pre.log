@@ -1,0 +1,56 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-1.local 2017-03-11 23:02
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/mas74.pre.mps.gz --basis bases/mas74.pre.bas --log 5row-lift/mas74.pre.log --stats 5row-lift/mas74.pre.yaml --solution solutions/mas74.pre.x --rows 5 --lift 
+[      0.00]     13 rows, 162 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 10482.795280
+[      0.00] Reading tableau rows...
+[      0.00] Adding MIR cuts...
+[      0.00]     opt = 10530.404724
+[      0.00]     opt = 10535.789700
+[      0.00]     opt = 10544.292921
+[      0.00]     opt = 10562.024907
+[      0.00]     opt = 10562.326459
+[      0.00]     opt = 10563.805400
+[      0.00]     opt = 10565.354633
+[      0.00]     opt = 10568.567215
+[      0.00]     opt = 10570.719281
+[      0.00] Optimizing...
+[      0.01]     opt = 10570.719281
+[      0.01] Adding greedy intersection cuts (2 rows)...
+[      0.01]     Finding combinations...
+[      0.01]           66 combinations [0.05]
+[      0.22]     opt = 10571.338826
+[      0.68]     opt = 10571.361702
+[      0.97]     opt = 10571.367870
+[      1.66]     opt = 10571.468679
+[      1.82]     opt = 10573.108792
+[      2.56]     opt = 10573.125696
+[      3.29]     opt = 10574.631428
+[      3.84]     opt = 10574.719934
+[      4.05]     opt = 10574.850997
+[      4.38]     opt = 10575.259636
+[      4.78] Adding greedy intersection cuts (3 rows)...
+[      4.78]     Finding combinations...
+[      4.78]          220 combinations [0.05]
+[     11.01]     opt = 10575.481909
+[     12.78]     opt = 10575.551664
+[     27.04]     opt = 10575.646149
+[     73.91]     opt = 10575.646927
+[    123.87]     opt = 10575.762067
+[    125.08]     opt = 10575.860230
+[    173.21]     opt = 10575.946343
+[    176.16] Adding greedy intersection cuts (4 rows)...
+[    176.16]     Finding combinations...
+[    176.16]          495 combinations [0.05]
+[    176.16] not implemented (0) (/u/axavier/multirow/infinity/src/greedy.c:346)
+[    176.16] generate failed (cut 1) (1) (/u/axavier/multirow/infinity/src/cg.c:909)
+[    176.16] CG_add_multirow_cuts failed (1) (/u/axavier/multirow/infinity/src/main-greedy.c:422)

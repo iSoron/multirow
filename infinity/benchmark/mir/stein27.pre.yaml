@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/stein27.pre.mps.gz
+obj-value:
+  0: 13.000000
+  1: 13.000000
+generated-cuts:
+  0: 0
+  1: 84
+added-cuts:
+  0: 0
+  1: 6
+user-cpu-time:
+  0: 0.003
+  1: 0.002
+time-per-cut:
+  1: 0.000

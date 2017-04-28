@@ -1,0 +1,21 @@
+input-filename:
+  instances/nw04.pre.mps.gz
+obj-value:
+  0: 16310.666667
+  1: 16675.000000
+  2: 16675.000000
+generated-cuts:
+  0: 0
+  1: 6
+  2: 808
+added-cuts:
+  0: 0
+  1: 1
+  2: 0
+user-cpu-time:
+  0: 0.327
+  1: 0.141
+  2: 900.388
+time-per-cut:
+  1: 0.023
+  2: 1.114

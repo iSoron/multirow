@@ -1,0 +1,57 @@
+[      0.00] multirow (git-f8ddaa22007511cf6b9141ace0aee243155733e8)
+[      0.00] cpu133 2015-12-15 10:27
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-09
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00]     MAX_CUTS: -1
+[      0.00]     MAXIMUM_SCORE: 9.500000e-01
+[      0.00]     MAX_TOTAL_TIME: -1
+[      0.00]     MINIMUM_SCORE: 5.000000e-02
+[      0.00]     TRIVIAL_LIFTING_ENABLED: 0
+[      0.00] Command line arguments:
+[      0.00]     ./multirow --mir --problem instances/miplib3/p0548.pre.mps.gz --basis bases/miplib3/p0548.pre.bas --log mir/miplib3/p0548.pre.log --stats mir/miplib3/p0548.pre.yaml --solution solutions/miplib3/p0548.pre.x 
+[      0.00] Reading problem instances/miplib3/p0548.pre.mps.gz...
+[      0.00]     131 rows, 526 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Reading basis from file bases/miplib3/p0548.pre.bas...
+[      0.00] Optimizing...
+[      0.00]     opt = 5196.900648
+[      0.00] Reading tableau rows...
+[      0.00] Reading solution from solutions/miplib3/p0548.pre.x
+[      0.00] Adding MIR cuts...
+[      0.00]     opt = 5196.900648
+[      0.00]     opt = 5198.552029
+[      0.00]     opt = 5222.284878
+[      0.00]     opt = 5232.866717
+[      0.00]     opt = 5312.992429
+[      0.00]     opt = 5316.105105
+[      0.01]     opt = 5325.308330
+[      0.01]     opt = 5334.863227
+[      0.01]     opt = 5354.088579
+[      0.01]     opt = 5358.949094
+[      0.01]     opt = 5454.086939
+[      0.01]     opt = 5480.868923
+[      0.01]     opt = 5496.758020
+[      0.01]     opt = 5499.470998
+[      0.01]     opt = 5527.349678
+[      0.01]     opt = 5545.349678
+[      0.01]     opt = 5547.500705
+[      0.01]     opt = 5551.726511
+[      0.01]     opt = 5560.284576
+[      0.01]     opt = 5572.490897
+[      0.01]     opt = 5614.794530
+[      0.01]     opt = 5618.112196
+[      0.01]     opt = 5749.854132
+[      0.01]     opt = 5790.715160
+[      0.01]     opt = 5791.679800
+[      0.02]     opt = 5880.420763
+[      0.02]     opt = 7351.418142
+[      0.02]     opt = 7351.562096
+[      0.02]     opt = 7352.472966
+[      0.02]     opt = 7352.901195
+[      0.02] Optimizing...
+[      0.02]     opt = 7352.901195
+[      0.02] Writing stats to file mir/miplib3/p0548.pre.yaml...

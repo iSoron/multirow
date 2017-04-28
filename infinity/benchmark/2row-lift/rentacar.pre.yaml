@@ -1,0 +1,21 @@
+input-filename:
+  instances/rentacar.pre.mps.gz
+obj-value:
+  0: 28928379.620260
+  1: 29211264.060304
+  2: 29211264.060304
+generated-cuts:
+  0: 0
+  1: 17
+  2: 54
+added-cuts:
+  0: 0
+  1: 17
+  2: 0
+user-cpu-time:
+  0: 0.016
+  1: 0.112
+  2: 1.113
+time-per-cut:
+  1: 0.007
+  2: 0.021

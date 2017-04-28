@@ -1,0 +1,21 @@
+input-filename:
+  instances/dcmulti.pre.mps.gz
+obj-value:
+  0: 184034.377140
+  1: 186027.334126
+  2: 186070.058410
+generated-cuts:
+  0: 0
+  1: 47
+  2: 5006
+added-cuts:
+  0: 0
+  1: 24
+  2: 12
+user-cpu-time:
+  0: 0.004
+  1: 0.012
+  2: 116.898
+time-per-cut:
+  1: 0.000
+  2: 0.023

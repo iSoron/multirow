@@ -1,0 +1,21 @@
+input-filename:
+  instances/flugpl.pre.mps.gz
+obj-value:
+  0: 1167875.166377
+  1: 1171490.026869
+  2: 1181030.672708
+generated-cuts:
+  0: 0
+  1: 8
+  2: 84
+added-cuts:
+  0: 0
+  1: 7
+  2: 3
+user-cpu-time:
+  0: 0.001
+  1: 0.001
+  2: 2.492
+time-per-cut:
+  1: 0.000
+  2: 0.030

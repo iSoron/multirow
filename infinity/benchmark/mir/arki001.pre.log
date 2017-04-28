@@ -1,0 +1,37 @@
+[      0.00] multirow (git-f8ddaa22007511cf6b9141ace0aee243155733e8)
+[      0.00] cpu133 2015-12-15 10:27
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-09
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00]     MAX_CUTS: -1
+[      0.00]     MAXIMUM_SCORE: 9.500000e-01
+[      0.00]     MAX_TOTAL_TIME: -1
+[      0.00]     MINIMUM_SCORE: 5.000000e-02
+[      0.00]     TRIVIAL_LIFTING_ENABLED: 0
+[      0.00] Command line arguments:
+[      0.00]     ./multirow --mir --problem instances/miplib3/arki001.pre.mps.gz --basis bases/miplib3/arki001.pre.bas --log mir/miplib3/arki001.pre.log --stats mir/miplib3/arki001.pre.yaml --solution solutions/miplib3/arki001.pre.x 
+[      0.00] Reading problem instances/miplib3/arki001.pre.mps.gz...
+[      0.00]     776 rows, 1717 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Reading basis from file bases/miplib3/arki001.pre.bas...
+[      0.00] Optimizing...
+[      0.00]     opt = 7579621.830841
+[      0.00] Reading tableau rows...
+[      0.04] Reading solution from solutions/miplib3/arki001.pre.x
+[      0.04] Adding MIR cuts...
+[      0.04]     opt = 7579621.830841
+[      0.08]     opt = 7579621.871046
+[      0.12]     opt = 7579720.332333
+[      0.12]     opt = 7579730.240323
+[      0.13]     opt = 7579816.727510
+[      0.14]     opt = 7579838.052586
+[      0.14]     opt = 7579863.149757
+[      0.15]     opt = 7579905.351662
+[      0.15]     opt = 7579969.395080
+[      0.15]     opt = 7579975.504004
+[      0.16] Optimizing...
+[      0.16]     opt = 7579975.504004
+[      0.16] Writing stats to file mir/miplib3/arki001.pre.yaml...

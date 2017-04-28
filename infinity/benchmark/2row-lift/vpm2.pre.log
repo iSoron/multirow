@@ -1,0 +1,48 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-5.local 2017-03-11 22:40
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/vpm2.pre.mps.gz --basis bases/vpm2.pre.bas --log 2row-lift/vpm2.pre.log --stats 2row-lift/vpm2.pre.yaml --solution solutions/vpm2.pre.x --lift 
+[      0.00]     128 rows, 297 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 11.135632
+[      0.00] Reading tableau rows...
+[      0.00] Adding MIR cuts...
+[      0.00]     opt = 11.252993
+[      0.00]     opt = 11.271794
+[      0.00]     opt = 11.278350
+[      0.00]     opt = 11.353694
+[      0.00]     opt = 11.366489
+[      0.00]     opt = 11.368443
+[      0.01]     opt = 11.396140
+[      0.01]     opt = 11.453961
+[      0.01]     opt = 11.456248
+[      0.01]     opt = 11.484722
+[      0.01]     opt = 11.498349
+[      0.01] Optimizing...
+[      0.01]     opt = 11.498349
+[      0.01] Adding greedy intersection cuts (2 rows)...
+[      0.01]     Finding combinations...
+[      0.01]          137 combinations [0.05]
+[      0.01]     opt = 11.502989
+[      0.04]     opt = 11.504269
+[      0.06]     opt = 11.504608
+[      0.08]     opt = 11.520178
+[      0.15]     opt = 11.563248
+[      0.16]     opt = 11.565680
+[      0.17]     opt = 11.582961
+[      0.19]     opt = 11.583235
+[      0.28]     opt = 11.600423
+[      0.38]     opt = 11.602032
+[      0.44]     opt = 11.616171
+[      0.61]     opt = 11.616749
+[      0.63]     opt = 11.620722
+[      0.67] Optimizing...
+[      0.67]     opt = 11.620722
+[      0.67] Writing stats to file 2row-lift/vpm2.pre.yaml...

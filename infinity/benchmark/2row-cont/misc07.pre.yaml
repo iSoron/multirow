@@ -1,0 +1,21 @@
+input-filename:
+  instances/misc07.pre.mps.gz
+obj-value:
+  0: 1415.000000
+  1: 1425.000000
+  2: 1425.000000
+generated-cuts:
+  0: 0
+  1: 63
+  2: 4345
+added-cuts:
+  0: 0
+  1: 1
+  2: 0
+user-cpu-time:
+  0: 0.008
+  1: 0.006
+  2: 9.609
+time-per-cut:
+  1: 0.000
+  2: 0.002

@@ -1,0 +1,94 @@
+[      0.00] multirow (git-f8ddaa22007511cf6b9141ace0aee243155733e8)
+[      0.00] cpu133 2015-12-15 10:27
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-09
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00]     MAX_CUTS: -1
+[      0.00]     MAXIMUM_SCORE: 9.500000e-01
+[      0.00]     MAX_TOTAL_TIME: -1
+[      0.00]     MINIMUM_SCORE: 5.000000e-02
+[      0.00]     TRIVIAL_LIFTING_ENABLED: 0
+[      0.00] Command line arguments:
+[      0.00]     ./multirow --mir --problem instances/miplib3/p2756.pre.mps.gz --basis bases/miplib3/p2756.pre.bas --log mir/miplib3/p2756.pre.log --stats mir/miplib3/p2756.pre.yaml --solution solutions/miplib3/p2756.pre.x 
+[      0.00] Reading problem instances/miplib3/p2756.pre.mps.gz...
+[      0.00]     629 rows, 2946 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Reading basis from file bases/miplib3/p2756.pre.bas...
+[      0.00] Optimizing...
+[      0.00]     opt = 2701.750000
+[      0.00] Reading tableau rows...
+[      0.05] Reading solution from solutions/miplib3/p2756.pre.x
+[      0.05] Adding MIR cuts...
+[      0.05]     opt = 2701.750000
+[      0.06]     opt = 2702.666667
+[      0.06]     opt = 2720.277871
+[      0.06]     opt = 2731.477871
+[      0.07]     opt = 2732.108857
+[      0.07]     opt = 2732.279209
+[      0.07]     opt = 2733.341789
+[      0.07]     opt = 2735.966789
+[      0.07]     opt = 2737.078905
+[      0.07]     opt = 2737.272224
+[      0.07]     opt = 2737.342920
+[      0.08]     opt = 2737.617342
+[      0.08]     opt = 2737.665916
+[      0.08]     opt = 2738.144928
+[      0.08]     opt = 2738.426894
+[      0.08]     opt = 2738.528981
+[      0.08]     opt = 2738.781382
+[      0.08]     opt = 2739.232133
+[      0.08]     opt = 2740.164934
+[      0.08]     opt = 2740.686642
+[      0.09]     opt = 2740.733946
+[      0.09]     opt = 2740.915074
+[      0.09]     opt = 2742.997719
+[      0.09]     opt = 2743.291193
+[      0.09]     opt = 2743.524178
+[      0.09]     opt = 2743.978539
+[      0.09]     opt = 2746.783221
+[      0.09]     opt = 2746.998425
+[      0.09]     opt = 2747.196561
+[      0.10]     opt = 2747.524986
+[      0.10]     opt = 2748.433739
+[      0.10]     opt = 2749.282883
+[      0.10]     opt = 2753.066833
+[      0.10]     opt = 2767.134997
+[      0.10]     opt = 2767.493295
+[      0.10]     opt = 2768.291636
+[      0.10]     opt = 2771.939330
+[      0.11]     opt = 2774.662957
+[      0.11]     opt = 2785.516467
+[      0.11]     opt = 2785.995451
+[      0.11]     opt = 2818.389276
+[      0.11]     opt = 2819.578455
+[      0.11]     opt = 2825.991639
+[      0.11]     opt = 2826.201499
+[      0.11]     opt = 2830.235818
+[      0.11]     opt = 2830.787123
+[      0.12]     opt = 2832.692475
+[      0.12]     opt = 2833.334408
+[      0.12]     opt = 2835.949900
+[      0.12]     opt = 2867.061400
+[      0.12]     opt = 2868.779497
+[      0.12]     opt = 2869.799999
+[      0.12]     opt = 2871.260818
+[      0.12]     opt = 2871.617713
+[      0.13]     opt = 2874.367216
+[      0.13]     opt = 2875.621166
+[      0.13]     opt = 2878.040372
+[      0.13]     opt = 2879.417316
+[      0.13]     opt = 2879.784438
+[      0.13]     opt = 2880.932668
+[      0.13]     opt = 2881.423440
+[      0.13]     opt = 2902.896946
+[      0.14]     opt = 2904.485108
+[      0.14]     opt = 2904.980298
+[      0.14]     opt = 2931.096674
+[      0.14]     opt = 2946.718010
+[      0.14]     opt = 2946.722759
+[      0.14] Optimizing...
+[      0.14]     opt = 2946.722759
+[      0.14] Writing stats to file mir/miplib3/p2756.pre.yaml...

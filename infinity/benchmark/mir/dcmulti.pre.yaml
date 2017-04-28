@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/dcmulti.pre.mps.gz
+obj-value:
+  0: 184034.377140
+  1: 186027.334126
+generated-cuts:
+  0: 0
+  1: 47
+added-cuts:
+  0: 0
+  1: 24
+user-cpu-time:
+  0: 0.005
+  1: 0.022
+time-per-cut:
+  1: 0.000

@@ -1,0 +1,21 @@
+input-filename:
+  instances/p0548.pre.mps.gz
+obj-value:
+  0: 5196.900648
+  1: 7352.901195
+  2: 7353.291547
+generated-cuts:
+  0: 0
+  1: 43
+  2: 458
+added-cuts:
+  0: 0
+  1: 32
+  2: 3
+user-cpu-time:
+  0: 0.002
+  1: 0.011
+  2: 75.052
+time-per-cut:
+  1: 0.000
+  2: 0.164

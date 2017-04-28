@@ -1,0 +1,21 @@
+input-filename:
+  instances/rgn.pre.mps.gz
+obj-value:
+  0: 48.799999
+  1: 52.802403
+  2: 52.802403
+generated-cuts:
+  0: 0
+  1: 18
+  2: 94
+added-cuts:
+  0: 0
+  1: 9
+  2: 0
+user-cpu-time:
+  0: 0.002
+  1: 0.002
+  2: 0.056
+time-per-cut:
+  1: 0.000
+  2: 0.001

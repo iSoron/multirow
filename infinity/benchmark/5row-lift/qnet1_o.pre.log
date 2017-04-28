@@ -1,0 +1,62 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-6.local 2017-03-11 23:02
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/qnet1_o.pre.mps.gz --basis bases/qnet1_o.pre.bas --log 5row-lift/qnet1_o.pre.log --stats 5row-lift/qnet1_o.pre.yaml --solution solutions/qnet1_o.pre.x --rows 5 --lift 
+[      0.01]     245 rows, 1368 cols
+[      0.01] Storing column types...
+[      0.01] Relaxing integrality...
+[      0.01] Disabling presolve...
+[      0.01] Optimizing...
+[      0.01]     opt = 12907.779167
+[      0.01] Reading tableau rows...
+[      0.01] Adding MIR cuts...
+[      0.02]     opt = 13032.070278
+[      0.02]     opt = 13120.616767
+[      0.02]     opt = 13128.867879
+[      0.02]     opt = 13259.139444
+[      0.03]     opt = 13442.452153
+[      0.03]     opt = 13475.612822
+[      0.03]     opt = 13484.863447
+[      0.03]     opt = 13527.039627
+[      0.03] Optimizing...
+[      0.03]     opt = 13527.039627
+[      0.03] Adding greedy intersection cuts (2 rows)...
+[      0.03]     Finding combinations...
+[      0.04]          849 combinations [0.05]
+[      0.24]     opt = 13535.996961
+[      0.97]     opt = 13538.891825
+[      1.17]     opt = 13538.932388
+[      2.26]     opt = 13538.933833
+[      6.99]     opt = 13542.757325
+[      7.97]     opt = 13543.115979
+[      8.52]     opt = 13545.793843
+[      8.64]     opt = 13551.607107
+[      9.09]     opt = 13551.755109
+[      9.40]     opt = 13557.279638
+[     11.07]     opt = 13557.935656
+[     15.04]     opt = 13558.116904
+[     15.18]     opt = 13564.190524
+[     19.54]     opt = 13564.205949
+[     19.82]     opt = 13564.412988
+[     21.77]     opt = 13565.161720
+[     22.08]     opt = 13572.284770
+[     22.37]     opt = 13572.299970
+[     25.70]     opt = 13588.175846
+[     27.72]     opt = 13605.394015
+[     28.43]     opt = 13606.221072
+[     28.54]     opt = 13608.063550
+[     32.42]     opt = 13608.084163
+[     66.35]     opt = 13613.782186
+[     78.58]     opt = 13613.785153
+[     90.33]     opt = 13620.713047
+[    106.78]     opt = 13644.071036
+[    111.53] Adding greedy intersection cuts (3 rows)...
+[    111.53]     Finding combinations...
+[    111.97]         4917 combinations [0.25]
+[    114.00]     opt = 13644.440435
+[    164.84]     opt = 13647.088293
+[    226.14]     opt = 13648.235532

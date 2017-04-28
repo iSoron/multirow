@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/noswot.pre.mps.gz
+obj-value:
+  0: -43.000000
+  1: -43.000000
+generated-cuts:
+  0: 0
+  1: 49
+added-cuts:
+  0: 0
+  1: 29
+user-cpu-time:
+  0: 0.005
+  1: 0.018
+time-per-cut:
+  1: 0.000

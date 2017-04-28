@@ -1,0 +1,57 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-7.local 2017-03-11 22:59
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/bell5.pre.mps.gz --basis bases/bell5.pre.bas --log 5row-cont/bell5.pre.log --stats 5row-cont/bell5.pre.yaml --solution solutions/bell5.pre.x --rows 5 
+[      0.00]     74 rows, 169 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 8608417.946508
+[      0.00] Reading tableau rows...
+[      0.00] Adding MIR cuts...
+[      0.00]     opt = 8620810.013580
+[      0.00]     opt = 8621024.716449
+[      0.00]     opt = 8656250.821027
+[      0.00]     opt = 8658821.324241
+[      0.00]     opt = 8658858.088418
+[      0.00]     opt = 8659319.275204
+[      0.00]     opt = 8659330.299127
+[      0.00]     opt = 8659846.452004
+[      0.00]     opt = 8659985.893684
+[      0.00]     opt = 8660422.457044
+[      0.00] Optimizing...
+[      0.00]     opt = 8660422.457044
+[      0.00] Adding greedy intersection cuts (2 rows)...
+[      0.00]     Finding combinations...
+[      0.00]          320 combinations [0.05]
+[      0.66]     opt = 8660426.129848
+[      0.72]     opt = 8660565.543643
+[      0.99] Adding greedy intersection cuts (3 rows)...
+[      0.99]     Finding combinations...
+[      0.99]         1983 combinations [0.05]
+[     38.22] Cut cuts off known integral solution:  -0.81904456 >=  -1.00000000 (0) (/u/axavier/multirow/infinity/src/cg.c:317)
+[     38.22] check_cut failed (1) (/u/axavier/multirow/infinity/src/cg.c:337)
+[     38.22] invalid cut skipped (cut 1248)
+[     59.99] Adding greedy intersection cuts (4 rows)...
+[     59.99]     Finding combinations...
+[     60.02]         2435 combinations [0.10]
+[    169.78] Cut cuts off known integral solution:  -0.90788728 >=  -1.00000000 (0) (/u/axavier/multirow/infinity/src/cg.c:317)
+[    169.78] check_cut failed (1) (/u/axavier/multirow/infinity/src/cg.c:337)
+[    169.78] invalid cut skipped (cut 1968)
+[    169.84] Cut cuts off known integral solution:  -0.84744992 >=  -1.00000000 (0) (/u/axavier/multirow/infinity/src/cg.c:317)
+[    169.84] check_cut failed (1) (/u/axavier/multirow/infinity/src/cg.c:337)
+[    169.84] invalid cut skipped (cut 1969)
+[    169.91] Cut cuts off known integral solution:  -0.81800665 >=  -1.00000000 (0) (/u/axavier/multirow/infinity/src/cg.c:317)
+[    169.91] check_cut failed (1) (/u/axavier/multirow/infinity/src/cg.c:337)
+[    169.91] invalid cut skipped (cut 1970)
+[    207.91] Adding greedy intersection cuts (5 rows)...
+[    207.91]     Finding combinations...
+[    210.62]         2497 combinations [0.95]
+[    415.41] Optimizing...
+[    415.41]     opt = 8660565.543643
+[    415.41] Writing stats to file 5row-cont/bell5.pre.yaml...

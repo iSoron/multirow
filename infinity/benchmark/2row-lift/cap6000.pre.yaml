@@ -1,0 +1,21 @@
+input-filename:
+  instances/cap6000.pre.mps.gz
+obj-value:
+  0: -2451537.325024
+  1: -2451470.553831
+  2: -2451470.553831
+generated-cuts:
+  0: 0
+  1: 4
+  2: 1
+added-cuts:
+  0: 0
+  1: 2
+  2: 0
+user-cpu-time:
+  0: 0.021
+  1: 0.159
+  2: 2.633
+time-per-cut:
+  1: 0.040
+  2: 2.633

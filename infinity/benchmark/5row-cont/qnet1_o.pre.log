@@ -1,0 +1,67 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-6.local 2017-03-11 22:59
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/qnet1_o.pre.mps.gz --basis bases/qnet1_o.pre.bas --log 5row-cont/qnet1_o.pre.log --stats 5row-cont/qnet1_o.pre.yaml --solution solutions/qnet1_o.pre.x --rows 5 
+[      0.00]     245 rows, 1368 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 12907.779167
+[      0.00] Reading tableau rows...
+[      0.01] Adding MIR cuts...
+[      0.01]     opt = 13032.070278
+[      0.01]     opt = 13120.616767
+[      0.01]     opt = 13128.867879
+[      0.02]     opt = 13259.139444
+[      0.02]     opt = 13442.452153
+[      0.02]     opt = 13475.612822
+[      0.02]     opt = 13484.863447
+[      0.02]     opt = 13527.039627
+[      0.02] Optimizing...
+[      0.02]     opt = 13527.039627
+[      0.02] Adding greedy intersection cuts (2 rows)...
+[      0.02]     Finding combinations...
+[      0.03]          849 combinations [0.05]
+[      0.03]     opt = 13534.151785
+[      0.05]     opt = 13538.934209
+[      0.06]     opt = 13538.935225
+[      0.08]     opt = 13538.935700
+[      0.19]     opt = 13542.444088
+[      0.26]     opt = 13543.852289
+[      0.26]     opt = 13552.721240
+[      0.29]     opt = 13557.995577
+[      0.39]     opt = 13558.018469
+[      0.82]     opt = 13558.300618
+[      0.92]     opt = 13559.147066
+[      1.03]     opt = 13571.296463
+[      1.08]     opt = 13583.172918
+[      1.24]     opt = 13586.337973
+[      1.51]     opt = 13586.865728
+[      3.09]     opt = 13592.673417
+[      3.64]     opt = 13605.261172
+[      3.82] Adding greedy intersection cuts (3 rows)...
+[      3.82]     Finding combinations...
+[      4.26]         4917 combinations [0.25]
+[     13.81]     opt = 13608.024523
+[     40.32]     opt = 13608.367990
+[     57.97]     opt = 13608.704016
+[     60.14]     opt = 13618.166249
+[    103.09]     opt = 13622.314442
+[    110.43]     opt = 13646.229322
+[    149.36]     opt = 13646.729184
+[    206.01]     opt = 13646.758651
+[    401.12]     opt = 13648.353530
+[    560.99]     opt = 13650.287734
+[    738.36] Adding greedy intersection cuts (4 rows)...
+[    738.36]     Finding combinations...
+[    793.43]         3187 combinations [0.50]
+[    900.13] Adding greedy intersection cuts (5 rows)...
+[    900.13]     Finding combinations...
+[    900.13] Optimizing...
+[    900.13]     opt = 13650.287734
+[    900.13] Writing stats to file 5row-cont/qnet1_o.pre.yaml...

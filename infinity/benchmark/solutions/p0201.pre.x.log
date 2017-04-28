@@ -1,0 +1,18 @@
+[      0.00] multirow (git-f8ddaa22007511cf6b9141ace0aee243155733e8)
+[      0.00] cogradmac143 2015-12-15 04:33
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-09
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00]     MAX_CUTS: -1
+[      0.00]     MAXIMUM_SCORE: 9.500000e-01
+[      0.00]     MAX_TOTAL_TIME: -1
+[      0.00]     MINIMUM_SCORE: 5.000000e-02
+[      0.00]     TRIVIAL_LIFTING_ENABLED: 0
+[      0.00] Command line arguments:
+[      0.00]     ./multirow --keep-integrality --problem instances/miplib3/p0201.pre.mps.gz --write-solution solutions/miplib3/p0201.pre.x --log solutions/miplib3/p0201.pre.x.log 
+[      0.00] Reading problem instances/miplib3/p0201.pre.mps.gz...
+[      0.00]     110 rows, 274 cols
+[      0.00] Optimizing...
+[      0.69]     opt = 7615.000000
+[      0.69] Writing solution to file solutions/miplib3/p0201.pre.x

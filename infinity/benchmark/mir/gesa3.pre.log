@@ -1,0 +1,39 @@
+[      0.00] multirow (git-f8ddaa22007511cf6b9141ace0aee243155733e8)
+[      0.00] cpu133 2015-12-15 10:27
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-09
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00]     MAX_CUTS: -1
+[      0.00]     MAXIMUM_SCORE: 9.500000e-01
+[      0.00]     MAX_TOTAL_TIME: -1
+[      0.00]     MINIMUM_SCORE: 5.000000e-02
+[      0.00]     TRIVIAL_LIFTING_ENABLED: 0
+[      0.00] Command line arguments:
+[      0.00]     ./multirow --mir --problem instances/miplib3/gesa3.pre.mps.gz --basis bases/miplib3/gesa3.pre.bas --log mir/miplib3/gesa3.pre.log --stats mir/miplib3/gesa3.pre.yaml --solution solutions/miplib3/gesa3.pre.x 
+[      0.00] Reading problem instances/miplib3/gesa3.pre.mps.gz...
+[      0.02]     1296 rows, 2377 cols
+[      0.02] Storing column types...
+[      0.02] Relaxing integrality...
+[      0.02] Disabling presolve...
+[      0.02] Reading basis from file bases/miplib3/gesa3.pre.bas...
+[      0.02] Optimizing...
+[      0.02]     opt = 27884380.373544
+[      0.02] Reading tableau rows...
+[      0.08] Reading solution from solutions/miplib3/gesa3.pre.x
+[      0.08] Adding MIR cuts...
+[      0.08]     opt = 27887460.805864
+[      0.09]     opt = 27891076.762470
+[      0.09]     opt = 27891094.578304
+[      0.09]     opt = 27894048.102967
+[      0.09]     opt = 27894058.390853
+[      0.09]     opt = 27895167.139302
+[      0.09]     opt = 27896072.570392
+[      0.10]     opt = 27897587.957957
+[      0.10]     opt = 27901452.293734
+[      0.10]     opt = 27902511.851079
+[      0.10]     opt = 27903536.505123
+[      0.10]     opt = 27905217.143457
+[      0.10] Optimizing...
+[      0.10]     opt = 27905217.143457
+[      0.10] Writing stats to file mir/miplib3/gesa3.pre.yaml...

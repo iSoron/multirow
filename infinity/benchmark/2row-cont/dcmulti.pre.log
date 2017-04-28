@@ -1,0 +1,56 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-1.local 2017-03-11 22:40
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/dcmulti.pre.mps.gz --basis bases/dcmulti.pre.bas --log 2row-cont/dcmulti.pre.log --stats 2row-cont/dcmulti.pre.yaml --solution solutions/dcmulti.pre.x 
+[      0.00]     224 rows, 677 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 184034.377140
+[      0.00] Reading tableau rows...
+[      0.01] Adding MIR cuts...
+[      0.01]     opt = 184044.679027
+[      0.01]     opt = 184057.443733
+[      0.01]     opt = 184094.608439
+[      0.01]     opt = 184128.499348
+[      0.01]     opt = 184151.381848
+[      0.01]     opt = 184172.581848
+[      0.01]     opt = 184487.490561
+[      0.01]     opt = 184572.854673
+[      0.01]     opt = 185047.744476
+[      0.01]     opt = 185059.231170
+[      0.01]     opt = 185072.654979
+[      0.01]     opt = 185109.025567
+[      0.01]     opt = 185138.843749
+[      0.01]     opt = 185165.470749
+[      0.01]     opt = 185190.306713
+[      0.01]     opt = 185375.653955
+[      0.01]     opt = 185404.484183
+[      0.01]     opt = 185672.080821
+[      0.01]     opt = 185681.409014
+[      0.01]     opt = 185713.891708
+[      0.01]     opt = 185741.940695
+[      0.01]     opt = 185757.492695
+[      0.01]     opt = 185774.142695
+[      0.02]     opt = 186027.334126
+[      0.02] Optimizing...
+[      0.02]     opt = 186027.334126
+[      0.02] Adding greedy intersection cuts (2 rows)...
+[      0.02]     Finding combinations...
+[      0.02]          634 combinations [0.05]
+[      0.32]     opt = 186033.387787
+[      0.37]     opt = 186033.681959
+[      0.41]     opt = 186034.106379
+[      0.44]     opt = 186034.154914
+[      0.46]     opt = 186061.240171
+[      0.48]     opt = 186065.285376
+[      0.48]     opt = 186069.007396
+[      0.99]     opt = 186069.363495
+[      1.95] Optimizing...
+[      1.95]     opt = 186069.363495
+[      1.95] Writing stats to file 2row-cont/dcmulti.pre.yaml...

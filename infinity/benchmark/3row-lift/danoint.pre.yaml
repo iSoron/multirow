@@ -1,0 +1,21 @@
+input-filename:
+  instances/danoint.pre.mps.gz
+obj-value:
+  0: 62.637280
+  1: 62.690000
+  2: 62.690000
+generated-cuts:
+  0: 0
+  1: 52
+  2: 4588
+added-cuts:
+  0: 0
+  1: 11
+  2: 1
+user-cpu-time:
+  0: 0.005
+  1: 0.035
+  2: 213.977
+time-per-cut:
+  1: 0.001
+  2: 0.047

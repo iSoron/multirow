@@ -1,0 +1,58 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-7.local 2017-03-11 22:09
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/bell3a.pre.mps.gz --basis bases/bell3a.pre.bas --log 3row-lift/bell3a.pre.log --stats 3row-lift/bell3a.pre.yaml --solution solutions/bell3a.pre.x --rows 3 --lift 
+[      0.00]     82 rows, 183 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 866171.733378
+[      0.00] Reading tableau rows...
+[      0.00] Adding MIR cuts...
+[      0.00]     opt = 867736.445257
+[      0.00]     opt = 867999.317142
+[      0.00]     opt = 868001.013828
+[      0.00]     opt = 869667.680495
+[      0.00]     opt = 869762.164930
+[      0.00]     opt = 870240.132430
+[      0.00]     opt = 870597.211930
+[      0.00]     opt = 870955.962802
+[      0.00] Optimizing...
+[      0.00]     opt = 870955.962802
+[      0.00] Adding greedy intersection cuts (2 rows)...
+[      0.00]     Finding combinations...
+[      0.00]          322 combinations [0.05]
+[      4.06]     opt = 871021.765281
+[      4.07]     opt = 871057.642307
+[     29.58]     opt = 871071.304491
+[     40.81]     opt = 871228.316319
+[     53.91]     opt = 871529.310372
+[     53.91]     opt = 871537.707420
+[     53.98]     opt = 871544.485859
+[     54.74]     opt = 872181.632483
+[     55.39] Adding greedy intersection cuts (3 rows)...
+[     55.39]     Finding combinations...
+[     55.40]         3384 combinations [0.05]
+[    161.87] Cut cuts off known integral solution:  -0.99912631 >=  -1.00000000 (0) (/u/axavier/multirow/infinity/src/cg.c:317)
+[    161.87] check_cut failed (1) (/u/axavier/multirow/infinity/src/cg.c:337)
+[    161.87] invalid cut skipped (cut 2257)
+[    161.90] Cut cuts off known integral solution:  -0.99912631 >=  -1.00000000 (0) (/u/axavier/multirow/infinity/src/cg.c:317)
+[    161.90] check_cut failed (1) (/u/axavier/multirow/infinity/src/cg.c:337)
+[    161.90] invalid cut skipped (cut 2258)
+[    161.92] Cut cuts off known integral solution:  -0.99912631 >=  -1.00000000 (0) (/u/axavier/multirow/infinity/src/cg.c:317)
+[    161.92] check_cut failed (1) (/u/axavier/multirow/infinity/src/cg.c:337)
+[    161.92] invalid cut skipped (cut 2259)
+[    161.94] Cut cuts off known integral solution:  -0.99912631 >=  -1.00000000 (0) (/u/axavier/multirow/infinity/src/cg.c:317)
+[    161.94] check_cut failed (1) (/u/axavier/multirow/infinity/src/cg.c:337)
+[    161.94] invalid cut skipped (cut 2260)
+[    161.96] Cut cuts off known integral solution:  -0.99912631 >=  -1.00000000 (0) (/u/axavier/multirow/infinity/src/cg.c:317)
+[    161.96] check_cut failed (1) (/u/axavier/multirow/infinity/src/cg.c:337)
+[    161.96] invalid cut skipped (cut 2261)
+[    209.62] Optimizing...
+[    209.62]     opt = 872181.632483
+[    209.62] Writing stats to file 3row-lift/bell3a.pre.yaml...

@@ -1,0 +1,21 @@
+input-filename:
+  instances/seymour.pre.mps.gz
+obj-value:
+  0: 405.525105
+  1: 406.686207
+  2: 406.686207
+generated-cuts:
+  0: 0
+  1: 4120
+  2: 4312
+added-cuts:
+  0: 0
+  1: 14
+  2: 0
+user-cpu-time:
+  0: 0.045
+  1: 0.944
+  2: 899.508
+time-per-cut:
+  1: 0.000
+  2: 0.209

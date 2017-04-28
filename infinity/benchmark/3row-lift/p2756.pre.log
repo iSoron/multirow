@@ -1,0 +1,98 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-4.local 2017-03-11 22:09
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/p2756.pre.mps.gz --basis bases/p2756.pre.bas --log 3row-lift/p2756.pre.log --stats 3row-lift/p2756.pre.yaml --solution solutions/p2756.pre.x --rows 3 --lift 
+[      0.01]     629 rows, 2946 cols
+[      0.01] Storing column types...
+[      0.01] Relaxing integrality...
+[      0.01] Disabling presolve...
+[      0.01] Optimizing...
+[      0.01]     opt = 2701.750000
+[      0.01] Reading tableau rows...
+[      0.04] Adding MIR cuts...
+[      0.04]     opt = 2701.750000
+[      0.04]     opt = 2702.666667
+[      0.05]     opt = 2720.277871
+[      0.05]     opt = 2731.477871
+[      0.05]     opt = 2732.108857
+[      0.05]     opt = 2732.279209
+[      0.05]     opt = 2733.341789
+[      0.05]     opt = 2735.966789
+[      0.05]     opt = 2737.078905
+[      0.05]     opt = 2737.272224
+[      0.05]     opt = 2737.342920
+[      0.05]     opt = 2737.617342
+[      0.05]     opt = 2737.665916
+[      0.06]     opt = 2738.144928
+[      0.06]     opt = 2738.426894
+[      0.06]     opt = 2738.528981
+[      0.06]     opt = 2738.781382
+[      0.06]     opt = 2739.232133
+[      0.06]     opt = 2740.164934
+[      0.06]     opt = 2740.686642
+[      0.06]     opt = 2740.733946
+[      0.06]     opt = 2740.915074
+[      0.06]     opt = 2742.997719
+[      0.06]     opt = 2743.291193
+[      0.06]     opt = 2743.524178
+[      0.06]     opt = 2743.978539
+[      0.06]     opt = 2746.783221
+[      0.07]     opt = 2746.998425
+[      0.07]     opt = 2747.196561
+[      0.07]     opt = 2747.524986
+[      0.07]     opt = 2748.433739
+[      0.07]     opt = 2749.282883
+[      0.07]     opt = 2753.066833
+[      0.07]     opt = 2767.134997
+[      0.07]     opt = 2767.493295
+[      0.07]     opt = 2768.291636
+[      0.07]     opt = 2771.939330
+[      0.07]     opt = 2774.662957
+[      0.07]     opt = 2785.516467
+[      0.07]     opt = 2785.995451
+[      0.08]     opt = 2818.389276
+[      0.08]     opt = 2819.578455
+[      0.08]     opt = 2825.991639
+[      0.08]     opt = 2826.201499
+[      0.08]     opt = 2830.235818
+[      0.08]     opt = 2830.787123
+[      0.08]     opt = 2832.692475
+[      0.08]     opt = 2833.334408
+[      0.08]     opt = 2835.949900
+[      0.08]     opt = 2867.061400
+[      0.08]     opt = 2868.779497
+[      0.08]     opt = 2869.799999
+[      0.08]     opt = 2871.260818
+[      0.09]     opt = 2871.617713
+[      0.09]     opt = 2874.367216
+[      0.09]     opt = 2875.621166
+[      0.09]     opt = 2878.040372
+[      0.09]     opt = 2879.417316
+[      0.09]     opt = 2879.784438
+[      0.09]     opt = 2880.932668
+[      0.09]     opt = 2881.423440
+[      0.09]     opt = 2902.896946
+[      0.09]     opt = 2904.485108
+[      0.09]     opt = 2904.980298
+[      0.09]     opt = 2931.096674
+[      0.10]     opt = 2946.718010
+[      0.10]     opt = 2946.722759
+[      0.10] Optimizing...
+[      0.10]     opt = 2946.722759
+[      0.10] Adding greedy intersection cuts (2 rows)...
+[      0.10]     Finding combinations...
+[      0.12]          226 combinations [0.05]
+[      0.44]     opt = 2946.723006
+[     10.07] Adding greedy intersection cuts (3 rows)...
+[     10.07]     Finding combinations...
+[     11.14]          280 combinations [0.05]
+[     34.72] Cut cuts off known integral solution:  -0.99957932 >=  -0.99990000 (0) (/u/axavier/multirow/infinity/src/cg.c:317)
+[     34.72] check_cut failed (1) (/u/axavier/multirow/infinity/src/cg.c:337)
+[     34.72] invalid cut skipped (cut 91)
+[     50.60] Optimizing...
+[     50.60]     opt = 2946.723006
+[     50.60] Writing stats to file 3row-lift/p2756.pre.yaml...

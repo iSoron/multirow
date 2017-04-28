@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/qnet1.pre.mps.gz
+obj-value:
+  0: 14274.102667
+  1: 14480.008117
+generated-cuts:
+  0: 0
+  1: 55
+added-cuts:
+  0: 0
+  1: 13
+user-cpu-time:
+  0: 0.011
+  1: 0.071
+time-per-cut:
+  1: 0.001

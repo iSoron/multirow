@@ -1,0 +1,21 @@
+input-filename:
+  instances/bell3a.pre.mps.gz
+obj-value:
+  0: 866171.733378
+  1: 870955.962802
+  2: 872078.700064
+generated-cuts:
+  0: 0
+  1: 33
+  2: 3698
+added-cuts:
+  0: 0
+  1: 8
+  2: 9
+user-cpu-time:
+  0: 0.002
+  1: 0.003
+  2: 323.546
+time-per-cut:
+  1: 0.000
+  2: 0.087

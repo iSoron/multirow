@@ -1,0 +1,49 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-5.local 2017-03-11 22:40
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/p0282.pre.mps.gz --basis bases/p0282.pre.bas --log 2row-lift/p0282.pre.log --stats 2row-lift/p0282.pre.yaml --solution solutions/p0282.pre.x --lift 
+[      0.00]     165 rows, 366 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 180000.300231
+[      0.00] Reading tableau rows...
+[      0.00] Adding MIR cuts...
+[      0.00]     opt = 180037.407196
+[      0.00]     opt = 180160.830263
+[      0.00]     opt = 180179.629604
+[      0.00]     opt = 180253.269188
+[      0.00]     opt = 180257.843263
+[      0.00]     opt = 180468.079837
+[      0.00]     opt = 180570.838577
+[      0.00]     opt = 180617.920227
+[      0.00]     opt = 180679.367449
+[      0.00]     opt = 180770.488577
+[      0.00]     opt = 182212.908696
+[      0.00]     opt = 182279.072575
+[      0.00]     opt = 182300.739242
+[      0.00]     opt = 182489.525064
+[      0.00]     opt = 182504.525064
+[      0.00] Optimizing...
+[      0.00]     opt = 182504.525064
+[      0.00] Adding greedy intersection cuts (2 rows)...
+[      0.00]     Finding combinations...
+[      0.00]         1913 combinations [0.05]
+[      0.91]     opt = 182508.685178
+[      1.67]     opt = 182568.646427
+[      3.42]     opt = 182601.539359
+[      5.34]     opt = 182649.345975
+[      5.37]     opt = 182653.492822
+[      5.42]     opt = 182718.586277
+[      6.43]     opt = 182742.157045
+[      7.55]     opt = 182746.947215
+[      8.27]     opt = 184870.576562
+[     15.70]     opt = 184899.013218
+[     40.82] Optimizing...
+[     40.82]     opt = 184899.013218
+[     40.82] Writing stats to file 2row-lift/p0282.pre.yaml...

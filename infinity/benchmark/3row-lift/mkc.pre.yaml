@@ -1,0 +1,21 @@
+input-filename:
+  instances/mkc.pre.mps.gz
+obj-value:
+  0: -611.437978
+  1: -606.412178
+  2: -606.412178
+generated-cuts:
+  0: 0
+  1: 135
+  2: 674
+added-cuts:
+  0: 0
+  1: 24
+  2: 1
+user-cpu-time:
+  0: 0.021
+  1: 0.086
+  2: 900.735
+time-per-cut:
+  1: 0.001
+  2: 1.336

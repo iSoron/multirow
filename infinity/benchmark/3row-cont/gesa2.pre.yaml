@@ -1,0 +1,21 @@
+input-filename:
+  instances/gesa2.pre.mps.gz
+obj-value:
+  0: 25502855.039680
+  1: 25579521.896201
+  2: 25586238.116690
+generated-cuts:
+  0: 0
+  1: 66
+  2: 3386
+added-cuts:
+  0: 0
+  1: 39
+  2: 36
+user-cpu-time:
+  0: 0.009
+  1: 0.050
+  2: 63.525
+time-per-cut:
+  1: 0.001
+  2: 0.019

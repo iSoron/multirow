@@ -1,0 +1,261 @@
+10teams:
+  lp-value: 924
+  ip-value: 917
+
+air03:
+  lp-value: 340160
+  ip-value: 338864.25
+
+air04:
+  lp-value: 56137
+  ip-value: 55535.436
+
+air05:
+  lp-value: 26374
+  ip-value: 25877.609
+
+arki001:
+  lp-value: 7580813.0459
+  ip-value: 7579599.80787
+
+bell3a:
+  lp-value: 878430.32
+  ip-value: 862578.64
+
+bell5:
+  lp-value: 8966406.49
+  ip-value: 8608417.95
+
+blend2:
+  lp-value: 7.598985
+  ip-value: 6.915675114
+
+cap6000:
+  lp-value: -2451377
+  ip-value: -2451537.325
+
+dano3mip:
+  lp-value: 728.1111
+  ip-value: 576.23162474
+
+danoint:
+  lp-value: 65.67
+  ip-value: 62.637280418
+
+dcmulti:
+  lp-value: 188182
+  ip-value: 183975.5397
+
+dsbmip:
+  lp-value: -305.19817501
+  ip-value: -305.19817501
+
+egout:
+  lp-value: 568.101
+  ip-value: 149.589
+
+enigma:
+  lp-value: 0
+  ip-value: 0
+
+fast0507:
+  lp-value: 174
+  ip-value: 172.14556668
+
+fiber:
+  lp-value: 405935.18
+  ip-value: 156082.51759
+
+fixnet6:
+  lp-value: 3983
+  ip-value: 1200.88
+
+flugpl:
+  lp-value: 1201500
+  ip-value: 1167185.73
+
+gen:
+  lp-value: 112313
+  ip-value: 112130
+
+gesa2:
+  lp-value: 25779856.372
+  ip-value: 25476489.678
+
+gesa2_o:
+  lp-value: 25779856.372
+  ip-value: 25476489.678
+
+gesa3:
+  lp-value: 27991042.648
+  ip-value: 27833632.451
+
+gesa3_o:
+  lp-value: 27991042.648
+  ip-value: 27833632.451
+
+gt2:
+  lp-value: 21166
+  ip-value: 13460.233074
+
+harp2:
+  lp-value: -73899798
+  ip-value: -74353341.502
+
+khb05250:
+  lp-value: 106940226
+  ip-value: 95919464
+
+l152lav:
+  lp-value: 4722
+  ip-value: 4656.36
+
+lseu:
+  lp-value: 1120
+  ip-value: 834.68
+
+markshare1:
+  lp-value: 1
+  ip-value: 0
+
+markshare2:
+  lp-value: 1
+  ip-value: 0
+
+mas74:
+  lp-value: 11801.1857
+  ip-value: 10482.79528
+
+mas76:
+  lp-value: 4005.1
+  ip-value: 38893.903641
+
+misc03:
+  lp-value: 3360
+  ip-value: 1910
+
+misc06:
+  lp-value: 12850.8607
+  ip-value: 12841.69
+
+misc07:
+  lp-value: 2810
+  ip-value: 1415
+
+mitre:
+  lp-value: 115155
+  ip-value: 114740.51848
+
+mkc:
+  lp-value: -553.75
+  ip-value: -611.85
+
+mod008:
+  lp-value: 307
+  ip-value: 290.93
+
+mod010:
+  lp-value: 6548
+  ip-value: 6532.08
+
+mod011:
+  lp-value: -54558535
+  ip-value: -62121982.552
+
+modglob:
+  lp-value: 20740508
+  ip-value: 20430947
+
+noswot:
+  lp-value: -43
+  ip-value: -43
+
+nw04:
+  lp-value: 16862
+  ip-value: 16310.66667
+
+p0033:
+  lp-value: 3089
+  ip-value: 2520.57
+
+p0201:
+  lp-value: 7615
+  ip-value: 6875
+
+p0282:
+  lp-value: 258411
+  ip-value: 176867.5
+
+p0548:
+  lp-value: 8691
+  ip-value: 315.29
+
+p2756:
+  lp-value: 3124
+  ip-value: 2688.75
+
+pk1:
+  lp-value: 11
+  ip-value: 0
+
+pp08a:
+  lp-value: 7350
+  ip-value: 2748.3452381
+
+pp08aCUTS:
+  lp-value: 7350
+  ip-value: 5480.6061563
+
+qiu:
+  lp-value: -132.873137
+  ip-value: -931.638857
+
+qnet1:
+  lp-value: 16029.692681
+  ip-value: 14274.102667
+
+qnet1_o:
+  lp-value: 16029.692681
+  ip-value: 12095.571667
+
+rentacar:
+  lp-value: 30356761
+  ip-value: 28806137.644
+
+rgn:
+  lp-value: 82.1999
+  ip-value: 48.7999
+
+rout:
+  lp-value: 1077.56
+  ip-value: 981.86428571
+
+set1ch:
+  lp-value: 54537.75
+  ip-value: 32007.73
+
+seymour:
+  lp-value: 423
+  ip-value: 403.84647413
+
+stein27:
+  lp-value: 18
+  ip-value: 13
+
+stein45:
+  lp-value: 30
+  ip-value: 22
+
+swath:
+  lp-value: 497.603
+  ip-value: 334.4968581
+
+vpm1:
+  lp-value: 20
+  ip-value: 15.4167
+
+vpm2:
+  lp-value: 13.75
+  ip-value: 9.8892645972
+
+

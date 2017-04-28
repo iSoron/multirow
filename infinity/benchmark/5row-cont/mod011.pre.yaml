@@ -1,0 +1,21 @@
+input-filename:
+  instances/mod011.pre.mps.gz
+obj-value:
+  0: -61586669.598207
+  1: -59265329.276363
+  2: -59265329.276363
+generated-cuts:
+  0: 0
+  1: 33
+  2: 5523
+added-cuts:
+  0: 0
+  1: 20
+  2: 0
+user-cpu-time:
+  0: 0.028
+  1: 0.154
+  2: 381.319
+time-per-cut:
+  1: 0.005
+  2: 0.069

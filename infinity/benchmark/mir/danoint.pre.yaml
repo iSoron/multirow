@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/danoint.pre.mps.gz
+obj-value:
+  0: 62.637280
+  1: 62.690000
+generated-cuts:
+  0: 0
+  1: 52
+added-cuts:
+  0: 0
+  1: 9
+user-cpu-time:
+  0: 0.013
+  1: 0.081
+time-per-cut:
+  1: 0.002

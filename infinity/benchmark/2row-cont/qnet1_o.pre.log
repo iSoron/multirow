@@ -1,0 +1,49 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-4.local 2017-03-11 22:40
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/qnet1_o.pre.mps.gz --basis bases/qnet1_o.pre.bas --log 2row-cont/qnet1_o.pre.log --stats 2row-cont/qnet1_o.pre.yaml --solution solutions/qnet1_o.pre.x 
+[      0.00]     245 rows, 1368 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.01]     opt = 12907.779167
+[      0.01] Reading tableau rows...
+[      0.01] Adding MIR cuts...
+[      0.01]     opt = 13032.070278
+[      0.02]     opt = 13120.616767
+[      0.02]     opt = 13128.867879
+[      0.02]     opt = 13259.139444
+[      0.03]     opt = 13442.452153
+[      0.03]     opt = 13475.612822
+[      0.03]     opt = 13484.863447
+[      0.03]     opt = 13527.039627
+[      0.03] Optimizing...
+[      0.03]     opt = 13527.039627
+[      0.03] Adding greedy intersection cuts (2 rows)...
+[      0.03]     Finding combinations...
+[      0.04]          849 combinations [0.05]
+[      0.05]     opt = 13534.151785
+[      0.07]     opt = 13538.934209
+[      0.07]     opt = 13538.935225
+[      0.10]     opt = 13538.935700
+[      0.22]     opt = 13542.444088
+[      0.32]     opt = 13543.852289
+[      0.32]     opt = 13552.721240
+[      0.35]     opt = 13557.995577
+[      0.46]     opt = 13558.018469
+[      0.93]     opt = 13558.300618
+[      1.03]     opt = 13559.147066
+[      1.15]     opt = 13571.296463
+[      1.19]     opt = 13583.172918
+[      1.37]     opt = 13586.337973
+[      1.79]     opt = 13586.865728
+[      3.48]     opt = 13592.673417
+[      4.03]     opt = 13605.261172
+[      4.21] Optimizing...
+[      4.21]     opt = 13605.261172
+[      4.21] Writing stats to file 2row-cont/qnet1_o.pre.yaml...

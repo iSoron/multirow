@@ -1,0 +1,21 @@
+input-filename:
+  instances/harp2.pre.mps.gz
+obj-value:
+  0: -74325169.345138
+  1: -74222594.677631
+  2: -74222375.661312
+generated-cuts:
+  0: 0
+  1: 28
+  2: 1055
+added-cuts:
+  0: 0
+  1: 14
+  2: 6
+user-cpu-time:
+  0: 0.005
+  1: 0.006
+  2: 900.062
+time-per-cut:
+  1: 0.000
+  2: 0.853

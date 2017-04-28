@@ -1,0 +1,67 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-2.local 2017-03-11 22:09
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/qnet1_o.pre.mps.gz --basis bases/qnet1_o.pre.bas --log 3row-lift/qnet1_o.pre.log --stats 3row-lift/qnet1_o.pre.yaml --solution solutions/qnet1_o.pre.x --rows 3 --lift 
+[      0.00]     245 rows, 1368 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 12907.779167
+[      0.00] Reading tableau rows...
+[      0.01] Adding MIR cuts...
+[      0.01]     opt = 13032.070278
+[      0.01]     opt = 13120.616767
+[      0.01]     opt = 13128.867879
+[      0.02]     opt = 13259.139444
+[      0.02]     opt = 13442.452153
+[      0.02]     opt = 13475.612822
+[      0.02]     opt = 13484.863447
+[      0.02]     opt = 13527.039627
+[      0.02] Optimizing...
+[      0.02]     opt = 13527.039627
+[      0.02] Adding greedy intersection cuts (2 rows)...
+[      0.02]     Finding combinations...
+[      0.03]          849 combinations [0.05]
+[      0.14]     opt = 13535.996961
+[      0.56]     opt = 13538.891825
+[      0.68]     opt = 13538.932388
+[      1.30]     opt = 13538.933833
+[      4.00]     opt = 13542.757325
+[      4.94]     opt = 13543.115979
+[      5.46]     opt = 13545.793843
+[      5.57]     opt = 13551.607107
+[      6.00]     opt = 13551.755109
+[      6.29]     opt = 13557.279638
+[      7.52]     opt = 13557.935656
+[     11.09]     opt = 13558.116904
+[     11.17]     opt = 13564.190524
+[     15.36]     opt = 13564.205949
+[     15.62]     opt = 13564.412988
+[     17.52]     opt = 13565.161720
+[     17.82]     opt = 13572.284770
+[     18.09]     opt = 13572.299970
+[     20.22]     opt = 13588.175846
+[     21.41]     opt = 13605.394015
+[     21.84]     opt = 13606.221072
+[     21.91]     opt = 13608.063550
+[     24.20]     opt = 13608.084163
+[     46.97]     opt = 13613.782186
+[     53.89]     opt = 13613.785153
+[     68.37]     opt = 13620.713047
+[     85.64]     opt = 13644.071036
+[     89.69] Adding greedy intersection cuts (3 rows)...
+[     89.69]     Finding combinations...
+[     90.13]         4917 combinations [0.25]
+[     91.74]     opt = 13644.440435
+[    152.15]     opt = 13647.088293
+[    207.31]     opt = 13648.235532
+[    324.65]     opt = 13650.954017
+[    669.05]     opt = 13680.515375
+[    900.37] Optimizing...
+[    900.37]     opt = 13680.515375
+[    900.37] Writing stats to file 3row-lift/qnet1_o.pre.yaml...

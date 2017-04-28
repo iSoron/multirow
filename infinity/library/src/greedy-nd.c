@@ -435,7 +435,7 @@ int GREEDY_ND_generate_cut(int nrows,
             rval = GREEDY_ND_bound(nrows, nrays, f, rays, x, beta, &epsilon_x,
                     tx);
             abort_if(rval, "GREEDY_ND_bound failed");
-            epsilon_x *= 0.999;
+//            epsilon_x *= 0.999;
 
             if(isinf(epsilon_x)) break;
 
@@ -464,7 +464,7 @@ int GREEDY_ND_generate_cut(int nrows,
             if(t[i])
             {
                 beta[i] = min(beta[i], epsilon);
-                beta[i] *= 0.999;
+//                beta[i] *= 0.999;
             }
             else if(!skip_ahull)
             {
@@ -482,7 +482,7 @@ int GREEDY_ND_generate_cut(int nrows,
                 }
 
                 beta[i] = min(beta[i], alpha);
-                beta[i] *= 0.999;
+//                beta[i] *= 0.999;
             }
 
             log_debug("  beta[%2d] = %.4lf\n", i, beta[i]);

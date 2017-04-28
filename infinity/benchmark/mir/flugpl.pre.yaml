@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/flugpl.pre.mps.gz
+obj-value:
+  0: 1167875.166377
+  1: 1171490.026869
+generated-cuts:
+  0: 0
+  1: 8
+added-cuts:
+  0: 0
+  1: 7
+user-cpu-time:
+  0: 0.001
+  1: 0.002
+time-per-cut:
+  1: 0.000

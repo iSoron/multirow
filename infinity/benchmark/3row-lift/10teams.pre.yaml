@@ -1,0 +1,21 @@
+input-filename:
+  instances/10teams.pre.mps.gz
+obj-value:
+  0: 917.000000
+  1: 921.000000
+  2: 921.000000
+generated-cuts:
+  0: 0
+  1: 174
+  2: 1617
+added-cuts:
+  0: 0
+  1: 15
+  2: 0
+user-cpu-time:
+  0: 0.009
+  1: 0.044
+  2: 900.236
+time-per-cut:
+  1: 0.000
+  2: 0.557

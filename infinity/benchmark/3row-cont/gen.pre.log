@@ -1,0 +1,49 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-3.local 2017-03-11 22:10
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/gen.pre.mps.gz --basis bases/gen.pre.bas --log 3row-cont/gen.pre.log --stats 3row-cont/gen.pre.yaml --solution solutions/gen.pre.x --rows 3 
+[      0.00]     463 rows, 1081 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 112284.216449
+[      0.00] Reading tableau rows...
+[      0.01] Adding MIR cuts...
+[      0.01]     opt = 112284.306803
+[      0.01]     opt = 112284.397167
+[      0.01]     opt = 112284.522791
+[      0.01]     opt = 112284.581405
+[      0.01] Optimizing...
+[      0.01]     opt = 112284.582867
+[      0.01] Adding greedy intersection cuts (2 rows)...
+[      0.01]     Finding combinations...
+[      0.01]           88 combinations [0.05]
+[      0.01]     opt = 112284.816555
+[      0.01]     opt = 112284.935788
+[      0.03]     opt = 112285.404610
+[      0.06]     opt = 112285.416735
+[      0.06]     opt = 112285.472893
+[      0.08]     opt = 112285.726137
+[      0.10]     opt = 112286.334479
+[      0.10]     opt = 112286.551072
+[      0.11] Adding greedy intersection cuts (3 rows)...
+[      0.11]     Finding combinations...
+[      0.12]          383 combinations [0.05]
+[      0.48]     opt = 112286.563812
+[      0.59]     opt = 112286.594808
+[      1.17]     opt = 112286.747189
+[      2.41]     opt = 112286.760256
+[      4.03]     opt = 112286.997320
+[     11.76]     opt = 112287.783528
+[     12.22]     opt = 112287.790564
+[     20.15]     opt = 112289.558078
+[     22.18]     opt = 112289.569094
+[     22.39]     opt = 112289.583523
+[     43.27] Optimizing...
+[     43.27]     opt = 112289.583523
+[     43.27] Writing stats to file 3row-cont/gen.pre.yaml...

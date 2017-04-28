@@ -1,0 +1,67 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-7.local 2017-03-11 22:59
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/gen.pre.mps.gz --basis bases/gen.pre.bas --log 5row-cont/gen.pre.log --stats 5row-cont/gen.pre.yaml --solution solutions/gen.pre.x --rows 5 
+[      0.00]     463 rows, 1081 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 112284.216449
+[      0.00] Reading tableau rows...
+[      0.01] Adding MIR cuts...
+[      0.01]     opt = 112284.306803
+[      0.01]     opt = 112284.397167
+[      0.01]     opt = 112284.522791
+[      0.01]     opt = 112284.581405
+[      0.01] Optimizing...
+[      0.01]     opt = 112284.582867
+[      0.01] Adding greedy intersection cuts (2 rows)...
+[      0.01]     Finding combinations...
+[      0.01]           88 combinations [0.05]
+[      0.02]     opt = 112284.816555
+[      0.02]     opt = 112284.935788
+[      0.04]     opt = 112285.404610
+[      0.07]     opt = 112285.416735
+[      0.07]     opt = 112285.472893
+[      0.09]     opt = 112285.726137
+[      0.11]     opt = 112286.334479
+[      0.12]     opt = 112286.551072
+[      0.13] Adding greedy intersection cuts (3 rows)...
+[      0.13]     Finding combinations...
+[      0.14]          383 combinations [0.05]
+[      0.48]     opt = 112286.563812
+[      0.61]     opt = 112286.594808
+[      1.15]     opt = 112286.747189
+[      2.32]     opt = 112286.760256
+[      3.96]     opt = 112286.997320
+[     11.83]     opt = 112287.783528
+[     12.29]     opt = 112287.790564
+[     21.02]     opt = 112289.558078
+[     23.15]     opt = 112289.569094
+[     23.37]     opt = 112289.583523
+[     50.91] Adding greedy intersection cuts (4 rows)...
+[     50.91]     Finding combinations...
+[     51.03]          969 combinations [0.05]
+[    115.86]     opt = 112289.593979
+[    172.34]     opt = 112289.609508
+[    174.25]     opt = 112289.621406
+[    237.01]     opt = 112289.795707
+[    237.47]     opt = 112289.885066
+[    239.41]     opt = 112289.898780
+[    239.79]     opt = 112289.970836
+[    393.47] Adding greedy intersection cuts (5 rows)...
+[    393.47]     Finding combinations...
+[    394.41]         1584 combinations [0.05]
+[    510.34]     opt = 112290.033953
+[    511.27]     opt = 112290.158235
+[    526.47]     opt = 112290.163982
+[    575.58]     opt = 112290.175352
+[    831.55]     opt = 112290.181300
+[    900.16] Optimizing...
+[    900.16]     opt = 112290.181300
+[    900.16] Writing stats to file 5row-cont/gen.pre.yaml...

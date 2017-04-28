@@ -1,0 +1,203 @@
+* ENCODING=ISO-8859-1
+NAME          instances/miplib3/p0282.pre.mps.gz  Iterations 50  Rows 165  Cols 366
+ XL C1004      R1002   
+ XL C1286      R1004   
+ XL _sR1006    R1006   
+ XL C1172      R1008   
+ XL _sR1010    R1010   
+ XL C1262      R1012   
+ XL C1253      R1014   
+ XL C1249      R1016   
+ XL _sR1018    R1018   
+ XL _sR1020    R1020   
+ XL C1247      R1022   
+ XL _sR1023    R1023   
+ XL C1093      R1024   
+ XL _sR1025    R1025   
+ XL C1283      R1026   
+ XL _sR1027    R1027   
+ XL C1120      R1028   
+ XL _sR1014    R1030   
+ XL _sR1032    R1032   
+ XL _sR1034    R1034   
+ XL _sR1036    R1036   
+ XL _sR1037    R1037   
+ XL C1155      R1039   
+ XL _sR1040    R1040   
+ XL C1164      R1041   
+ XL C1012      R1043   
+ XL _sR1045    R1045   
+ XL _sR1046    R1046   
+ XL C1192      R1048   
+ XL _sR1008    R1050   
+ XL C1102      R1052   
+ XL _sR1053    R1053   
+ XL C1213      R1054   
+ XL _sR1055    R1055   
+ XL C1083      R1056   
+ XL _sR1057    R1057   
+ XL C1112      R1058   
+ XL C1248      R1059   
+ XL _sR1012    R1060   
+ XL C1250      R1061   
+ XL C1251      R1062   
+ XL C1252      R1063   
+ XL C1227      R1064   
+ XL C1254      R1065   
+ XL _sR1098    R1098   
+ XL _sR1099    R1099   
+ XL _sR1100    R1100   
+ XL _sR1104    R1104   
+ XL _sR1105    R1105   
+ XL _sR1106    R1106   
+ XL _sR1110    R1110   
+ XL _sR1111    R1111   
+ XL _sR1112    R1112   
+ XL _sR1116    R1116   
+ XL _sR1117    R1117   
+ XL _sR1118    R1118   
+ XL _sR1122    R1122   
+ XL _sR1123    R1123   
+ XL _sR1124    R1124   
+ XL _sR1128    R1128   
+ XL _sR1129    R1129   
+ XL _sR1130    R1130   
+ XL _sR1134    R1134   
+ XL _sR1135    R1135   
+ XL _sR1136    R1136   
+ XL _sR1140    R1140   
+ XL _sR1141    R1141   
+ XL _sR1142    R1142   
+ XL _sR1146    R1146   
+ XL _sR1147    R1147   
+ XL _sR1148    R1148   
+ XL _sR1152    R1152   
+ XL _sR1153    R1153   
+ XL _sR1154    R1154   
+ XL _sR1158    R1158   
+ XL _sR1159    R1159   
+ XL _sR1160    R1160   
+ XL _sR1161    R1161   
+ XL _sR1162    R1162   
+ XL _sR1163    R1163   
+ XL _sR1164    R1164   
+ XL _sR1165    R1165   
+ XL _sR1166    R1166   
+ XL _sR1167    R1167   
+ XL _sR1168    R1168   
+ XL _sR1169    R1169   
+ XL _sR1170    R1170   
+ XL _sR1171    R1171   
+ XL _sR1172    R1172   
+ XL _sR1173    R1173   
+ XL _sR1174    R1174   
+ XL C1245      R1175   
+ XL _sR1176    R1176   
+ XL _sR1177    R1177   
+ XL _sR1178    R1178   
+ XL _sR1179    R1179   
+ XL _sR1180    R1180   
+ XL _sR1181    R1181   
+ XL _sR1182    R1182   
+ XL _sR1186    R1186   
+ XL _sR1187    R1187   
+ XL _sR1188    R1188   
+ XL _sR1192    R1192   
+ XL _sR1193    R1193   
+ XL _sR1194    R1194   
+ XL _sR1198    R1198   
+ XL _sR1199    R1199   
+ XL _sR1200    R1200   
+ XL _sR1204    R1204   
+ XL _sR1205    R1205   
+ XL _sR1206    R1206   
+ XL _sR1207    R1207   
+ XL _sR1208    R1208   
+ XL _sR1209    R1209   
+ XL _sR1213    R1213   
+ XL _sR1214    R1214   
+ XL _sR1215    R1215   
+ XL _sR1216    R1216   
+ XL _sR1217    R1217   
+ XL _sR1218    R1218   
+ XL _sR1219    R1219   
+ XL _sR1220    R1220   
+ XL _sR1221    R1221   
+ XL _sR1225    R1225   
+ XL _sR1226    R1226   
+ XL _sR1227    R1227   
+ XL _sR1231    R1231   
+ XL _sR1232    R1232   
+ XL _sR1233    R1233   
+ XL _sR1234    R1234   
+ XL _sR1235    R1235   
+ XL _sR1236    R1236   
+ XL _sR1240    R1240   
+ XL _sR1241    R1241   
+ XL _sR1242    R1242   
+ XL _sR1246    R1246   
+ XL _sR1247    R1247   
+ XL _sR1248    R1248   
+ XL _sR1252    R1252   
+ XL C1205      R1253   
+ XL _sR1254    R1254   
+ XL _sR1255    R1255   
+ XL _sR1256    R1256   
+ XL _sR1257    R1257   
+ XL _sR1258    R1258   
+ XL _sR1259    R1259   
+ XL _sR1260    R1260   
+ XL _sR1261    R1261   
+ XL _sR1262    R1262   
+ XL _sR1263    R1263   
+ XL _sR1264    R1264   
+ XL _sR1265    R1265   
+ XL _sR1266    R1266   
+ XL _sR1267    R1267   
+ XL _sR1268    R1268   
+ XL _sR1269    R1269   
+ XL _sR1270    R1270   
+ XL _sR1271    R1271   
+ XL _sR1272    R1272   
+ XL _sR1273    R1273   
+ XL x287       c242    
+ XL x284       c243    
+ XL x285       c244    
+ XL x283       c245    
+ XL x286       c246    
+ UL C1082
+ UL C1084
+ UL C1092
+ UL C1094
+ UL C1101
+ UL C1103
+ UL C1104
+ UL C1154
+ UL C1156
+ UL C1162
+ UL C1200
+ UL C1206
+ UL C1207
+ UL C1208
+ UL C1214
+ UL C1215
+ UL C1216
+ UL C1224
+ UL C1225
+ UL C1226
+ UL C1256
+ UL C1257
+ UL C1259
+ UL C1260
+ UL C1264
+ UL C1265
+ UL C1268
+ UL C1270
+ UL C1271
+ UL C1276
+ UL C1280
+ UL C1281
+ UL C1284
+ UL C1285
+ UL C1288
+ENDATA

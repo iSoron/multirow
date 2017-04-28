@@ -1,0 +1,21 @@
+input-filename:
+  instances/air03.pre.mps.gz
+obj-value:
+  0: 338864.250000
+  1: 340160.000000
+  2: 340160.000000
+generated-cuts:
+  0: 0
+  1: 35
+  2: 639
+added-cuts:
+  0: 0
+  1: 1
+  2: 0
+user-cpu-time:
+  0: 0.059
+  1: 0.045
+  2: 900.810
+time-per-cut:
+  1: 0.001
+  2: 1.410

@@ -1,0 +1,21 @@
+input-filename:
+  instances/gen.pre.mps.gz
+obj-value:
+  0: 112284.216449
+  1: 112284.582867
+  2: 112289.580513
+generated-cuts:
+  0: 0
+  1: 11
+  2: 467
+added-cuts:
+  0: 0
+  1: 7
+  2: 31
+user-cpu-time:
+  0: 0.003
+  1: 0.010
+  2: 68.848
+time-per-cut:
+  1: 0.001
+  2: 0.147

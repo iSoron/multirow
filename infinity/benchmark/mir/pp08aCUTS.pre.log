@@ -1,0 +1,58 @@
+[      0.00] multirow (git-f8ddaa22007511cf6b9141ace0aee243155733e8)
+[      0.00] cpu133 2015-12-15 10:27
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-09
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00]     MAX_CUTS: -1
+[      0.00]     MAXIMUM_SCORE: 9.500000e-01
+[      0.00]     MAX_TOTAL_TIME: -1
+[      0.00]     MINIMUM_SCORE: 5.000000e-02
+[      0.00]     TRIVIAL_LIFTING_ENABLED: 0
+[      0.00] Command line arguments:
+[      0.00]     ./multirow --mir --problem instances/miplib3/pp08aCUTS.pre.mps.gz --basis bases/miplib3/pp08aCUTS.pre.bas --log mir/miplib3/pp08aCUTS.pre.log --stats mir/miplib3/pp08aCUTS.pre.yaml --solution solutions/miplib3/pp08aCUTS.pre.x 
+[      0.00] Reading problem instances/miplib3/pp08aCUTS.pre.mps.gz...
+[      0.00]     239 rows, 416 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Reading basis from file bases/miplib3/pp08aCUTS.pre.bas...
+[      0.00] Optimizing...
+[      0.00]     opt = 5480.606156
+[      0.00] Reading tableau rows...
+[      0.00] Reading solution from solutions/miplib3/pp08aCUTS.pre.x
+[      0.00] Adding MIR cuts...
+[      0.00]     opt = 5505.843914
+[      0.00]     opt = 5507.441391
+[      0.00]     opt = 5522.577666
+[      0.00]     opt = 5541.746152
+[      0.00]     opt = 5550.016763
+[      0.00]     opt = 5557.866876
+[      0.00]     opt = 5573.773896
+[      0.00]     opt = 5631.660694
+[      0.01]     opt = 5682.648068
+[      0.01]     opt = 5685.952447
+[      0.01]     opt = 5698.079110
+[      0.01]     opt = 5700.355875
+[      0.01]     opt = 5702.813230
+[      0.01]     opt = 5750.749249
+[      0.01]     opt = 5768.231859
+[      0.01]     opt = 5828.663989
+[      0.01]     opt = 5829.483447
+[      0.01]     opt = 5832.222079
+[      0.01]     opt = 5855.802097
+[      0.01]     opt = 5865.085391
+[      0.01]     opt = 5874.993178
+[      0.01]     opt = 5893.387674
+[      0.01]     opt = 5920.572451
+[      0.01]     opt = 5973.785386
+[      0.01]     opt = 5984.534423
+[      0.01]     opt = 6007.467668
+[      0.01]     opt = 6055.809769
+[      0.01]     opt = 6078.509393
+[      0.01]     opt = 6080.360140
+[      0.01]     opt = 6091.153734
+[      0.01]     opt = 6112.270847
+[      0.01] Optimizing...
+[      0.02]     opt = 6112.270847
+[      0.02] Writing stats to file mir/miplib3/pp08aCUTS.pre.yaml...

@@ -1,0 +1,38 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-1.local 2017-03-11 22:40
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/bell3a.pre.mps.gz --basis bases/bell3a.pre.bas --log 2row-cont/bell3a.pre.log --stats 2row-cont/bell3a.pre.yaml --solution solutions/bell3a.pre.x 
+[      0.00]     82 rows, 183 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 866171.733378
+[      0.00] Reading tableau rows...
+[      0.00] Adding MIR cuts...
+[      0.00]     opt = 867736.445257
+[      0.00]     opt = 867999.317142
+[      0.00]     opt = 868001.013828
+[      0.00]     opt = 869667.680495
+[      0.00]     opt = 869762.164930
+[      0.00]     opt = 870240.132430
+[      0.00]     opt = 870597.211930
+[      0.00]     opt = 870955.962802
+[      0.00] Optimizing...
+[      0.00]     opt = 870955.962802
+[      0.00] Adding greedy intersection cuts (2 rows)...
+[      0.00]     Finding combinations...
+[      0.00]          322 combinations [0.05]
+[    186.90]     opt = 871018.364428
+[    186.90]     opt = 871057.947388
+[    268.37]     opt = 871232.564512
+[    276.17]     opt = 871411.456539
+[    276.17]     opt = 871426.709464
+[    276.81]     opt = 872063.856088
+[    276.99] Optimizing...
+[    276.99]     opt = 872063.856088
+[    276.99] Writing stats to file 2row-cont/bell3a.pre.yaml...

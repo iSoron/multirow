@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/p0033.pre.mps.gz
+obj-value:
+  0: 2838.546739
+  1: 2924.758784
+generated-cuts:
+  0: 0
+  1: 9
+added-cuts:
+  0: 0
+  1: 3
+user-cpu-time:
+  0: 0.002
+  1: 0.002
+time-per-cut:
+  1: 0.000

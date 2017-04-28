@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/mitre.pre.mps.gz
+obj-value:
+  0: 114908.998992
+  1: 115115.714286
+generated-cuts:
+  0: 0
+  1: 692
+added-cuts:
+  0: 0
+  1: 271
+user-cpu-time:
+  0: 0.112
+  1: 1.672
+time-per-cut:
+  1: 0.002

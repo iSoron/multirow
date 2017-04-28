@@ -1,0 +1,21 @@
+input-filename:
+  instances/modglob.pre.mps.gz
+obj-value:
+  0: 20430947.618854
+  1: 20484452.962781
+  2: 20485140.823251
+generated-cuts:
+  0: 0
+  1: 30
+  2: 4549
+added-cuts:
+  0: 0
+  1: 21
+  2: 5
+user-cpu-time:
+  0: 0.004
+  1: 0.011
+  2: 132.857
+time-per-cut:
+  1: 0.000
+  2: 0.029

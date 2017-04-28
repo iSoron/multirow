@@ -1,0 +1,33 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-1.local 2017-03-11 23:03
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/seymour.pre.mps.gz --basis bases/seymour.pre.bas --log 5row-lift/seymour.pre.log --stats 5row-lift/seymour.pre.yaml --solution solutions/seymour.pre.x --rows 5 --lift 
+[      0.04]     4294 rows, 5178 cols
+[      0.04] Storing column types...
+[      0.04] Relaxing integrality...
+[      0.04] Disabling presolve...
+[      0.04] Optimizing...
+[      0.04]     opt = 405.525105
+[      0.04] Reading tableau rows...
+[      0.48] ERROR: Could not read solution file!
+[      0.48] Adding MIR cuts...
+[      0.56]     opt = 405.562224
+[      0.59]     opt = 405.566500
+[      0.62]     opt = 405.587304
+[      0.62]     opt = 405.587336
+[      0.63]     opt = 405.587536
+[      0.65]     opt = 405.587625
+[      0.69]     opt = 405.594115
+[      0.79]     opt = 405.926762
+[      0.80]     opt = 405.932853
+[      0.86]     opt = 406.186207
+[      0.87]     opt = 406.519540
+[      0.88]     opt = 406.686207
+[      1.03] Optimizing...
+[      1.03]     opt = 406.686207
+[      1.03] Adding greedy intersection cuts (2 rows)...
+[      1.03]     Finding combinations...

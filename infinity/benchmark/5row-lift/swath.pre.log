@@ -1,0 +1,34 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-5.local 2017-03-11 23:02
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/swath.pre.mps.gz --basis bases/swath.pre.bas --log 5row-lift/swath.pre.log --stats 5row-lift/swath.pre.yaml --solution solutions/swath.pre.x --rows 5 --lift 
+[      0.03]     482 rows, 6641 cols
+[      0.03] Storing column types...
+[      0.03] Relaxing integrality...
+[      0.03] Disabling presolve...
+[      0.03] Optimizing...
+[      0.03]     opt = 334.496858
+[      0.03] Reading tableau rows...
+[      0.09] ERROR: Could not read solution file!
+[      0.09] Adding MIR cuts...
+[      0.09]     opt = 334.635042
+[      0.09]     opt = 335.232729
+[      0.10]     opt = 336.459580
+[      0.10]     opt = 336.533031
+[      0.10]     opt = 336.563409
+[      0.11]     opt = 338.791711
+[      0.11]     opt = 340.822634
+[      0.12]     opt = 340.947048
+[      0.12]     opt = 344.963170
+[      0.12]     opt = 348.657531
+[      0.12] Optimizing...
+[      0.13]     opt = 348.657531
+[      0.13] Adding greedy intersection cuts (2 rows)...
+[      0.13]     Finding combinations...
+[      0.17]         2192 combinations [0.05]
+[     20.07]     opt = 348.708236
+[     40.55]     opt = 351.620485

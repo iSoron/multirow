@@ -1,0 +1,21 @@
+input-filename:
+  instances/mas74.pre.mps.gz
+obj-value:
+  0: 10482.795280
+  1: 10570.719281
+  2: 10570.719281
+generated-cuts:
+  0: 0
+  1: 12
+  2: 286
+added-cuts:
+  0: 0
+  1: 9
+  2: 0
+user-cpu-time:
+  0: 0.001
+  1: 0.001
+  2: 52.961
+time-per-cut:
+  1: 0.000
+  2: 0.185

@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/arki001.pre.mps.gz
+obj-value:
+  0: 7579621.830841
+  1: 7579975.504004
+generated-cuts:
+  0: 0
+  1: 79
+added-cuts:
+  0: 0
+  1: 57
+user-cpu-time:
+  0: 0.027
+  1: 0.155
+time-per-cut:
+  1: 0.002

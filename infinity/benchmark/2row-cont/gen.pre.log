@@ -1,0 +1,36 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-1.local 2017-03-11 22:40
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/gen.pre.mps.gz --basis bases/gen.pre.bas --log 2row-cont/gen.pre.log --stats 2row-cont/gen.pre.yaml --solution solutions/gen.pre.x 
+[      0.00]     463 rows, 1081 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 112284.216449
+[      0.00] Reading tableau rows...
+[      0.00] Adding MIR cuts...
+[      0.00]     opt = 112284.306803
+[      0.00]     opt = 112284.397167
+[      0.00]     opt = 112284.522791
+[      0.01]     opt = 112284.581405
+[      0.01] Optimizing...
+[      0.01]     opt = 112284.582867
+[      0.01] Adding greedy intersection cuts (2 rows)...
+[      0.01]     Finding combinations...
+[      0.01]           88 combinations [0.05]
+[      0.01]     opt = 112284.816555
+[      0.01]     opt = 112284.935788
+[      0.03]     opt = 112285.404610
+[      0.06]     opt = 112285.416735
+[      0.07]     opt = 112285.472893
+[      0.09]     opt = 112285.726137
+[      0.11]     opt = 112286.334479
+[      0.12]     opt = 112286.551072
+[      0.13] Optimizing...
+[      0.13]     opt = 112286.551072
+[      0.13] Writing stats to file 2row-cont/gen.pre.yaml...

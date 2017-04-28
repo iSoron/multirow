@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/modglob.pre.mps.gz
+obj-value:
+  0: 20430947.618854
+  1: 20484452.962781
+generated-cuts:
+  0: 0
+  1: 30
+added-cuts:
+  0: 0
+  1: 21
+user-cpu-time:
+  0: 0.005
+  1: 0.024
+time-per-cut:
+  1: 0.001

@@ -1,0 +1,70 @@
+[      0.00] multirow (git-f8ddaa22007511cf6b9141ace0aee243155733e8)
+[      0.00] cpu133 2015-12-15 10:27
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-09
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00]     MAX_CUTS: -1
+[      0.00]     MAXIMUM_SCORE: 9.500000e-01
+[      0.00]     MAX_TOTAL_TIME: -1
+[      0.00]     MINIMUM_SCORE: 5.000000e-02
+[      0.00]     TRIVIAL_LIFTING_ENABLED: 0
+[      0.00] Command line arguments:
+[      0.00]     ./multirow --mir --problem instances/miplib3/gesa3_o.pre.mps.gz --basis bases/miplib3/gesa3_o.pre.bas --log mir/miplib3/gesa3_o.pre.log --stats mir/miplib3/gesa3_o.pre.yaml --solution solutions/miplib3/gesa3_o.pre.x 
+[      0.00] Reading problem instances/miplib3/gesa3_o.pre.mps.gz...
+[      0.00]     1104 rows, 2113 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Reading basis from file bases/miplib3/gesa3_o.pre.bas...
+[      0.00] Optimizing...
+[      0.00]     opt = 27833632.450665
+[      0.00] Reading tableau rows...
+[      0.05] Reading solution from solutions/miplib3/gesa3_o.pre.x
+[      0.05] Adding MIR cuts...
+[      0.05]     opt = 27836689.568119
+[      0.05]     opt = 27845065.049838
+[      0.06]     opt = 27845145.292420
+[      0.06]     opt = 27849959.123862
+[      0.06]     opt = 27851461.548759
+[      0.06]     opt = 27851496.197565
+[      0.06]     opt = 27854902.815413
+[      0.06]     opt = 27855998.940810
+[      0.07]     opt = 27859816.475138
+[      0.07]     opt = 27860140.107139
+[      0.07]     opt = 27871592.202965
+[      0.07]     opt = 27871677.854593
+[      0.07]     opt = 27872844.327762
+[      0.07]     opt = 27881476.675208
+[      0.08]     opt = 27882136.155310
+[      0.08]     opt = 27885153.563868
+[      0.08]     opt = 27885165.562879
+[      0.08]     opt = 27886949.415914
+[      0.08]     opt = 27887123.184702
+[      0.09]     opt = 27890610.240510
+[      0.09]     opt = 27892455.880990
+[      0.09]     opt = 27895359.356662
+[      0.09]     opt = 27895448.896617
+[      0.09]     opt = 27896252.708528
+[      0.10]     opt = 27896256.423006
+[      0.10]     opt = 27896271.543008
+[      0.10]     opt = 27896292.452616
+[      0.10]     opt = 27896315.562274
+[      0.10]     opt = 27896336.240297
+[      0.10]     opt = 27896343.012267
+[      0.10]     opt = 27897900.611863
+[      0.11]     opt = 27899680.060228
+[      0.11]     opt = 27901552.169454
+[      0.11]     opt = 27903467.460439
+[      0.11]     opt = 27905371.056364
+[      0.11]     opt = 27907104.624109
+[      0.11]     opt = 27908140.544079
+[      0.12]     opt = 27908144.386524
+[      0.12]     opt = 27909061.563380
+[      0.12]     opt = 27912425.140434
+[      0.12]     opt = 27920485.404724
+[      0.12]     opt = 27920667.189752
+[      0.13]     opt = 27926689.932405
+[      0.13] Optimizing...
+[      0.13]     opt = 27926689.932405
+[      0.13] Writing stats to file mir/miplib3/gesa3_o.pre.yaml...

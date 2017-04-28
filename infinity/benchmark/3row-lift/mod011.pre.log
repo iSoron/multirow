@@ -1,0 +1,47 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-4.local 2017-03-11 22:09
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/mod011.pre.mps.gz --basis bases/mod011.pre.bas --log 3row-lift/mod011.pre.log --stats 3row-lift/mod011.pre.yaml --solution solutions/mod011.pre.x --rows 3 --lift 
+[      0.03]     1404 rows, 7135 cols
+[      0.03] Storing column types...
+[      0.03] Relaxing integrality...
+[      0.03] Disabling presolve...
+[      0.03] Optimizing...
+[      0.03]     opt = -61586669.598207
+[      0.03] Reading tableau rows...
+[      0.17] Adding MIR cuts...
+[      0.17]     opt = -61271292.518623
+[      0.17]     opt = -61077316.009312
+[      0.18]     opt = -60976529.050993
+[      0.18]     opt = -60911473.254013
+[      0.18]     opt = -60639662.251885
+[      0.19]     opt = -60495073.949557
+[      0.19]     opt = -60142518.165320
+[      0.20]     opt = -60140960.780064
+[      0.20]     opt = -60136222.624229
+[      0.20]     opt = -60129414.338171
+[      0.20]     opt = -60084657.715552
+[      0.21]     opt = -60059143.037290
+[      0.21]     opt = -59861099.858954
+[      0.22]     opt = -59672785.334703
+[      0.22]     opt = -59670608.927051
+[      0.22]     opt = -59661481.037297
+[      0.23]     opt = -59626534.157531
+[      0.23]     opt = -59622618.129951
+[      0.24]     opt = -59271030.825093
+[      0.24]     opt = -59265329.276363
+[      0.24] Optimizing...
+[      0.24]     opt = -59265329.276363
+[      0.24] Adding greedy intersection cuts (2 rows)...
+[      0.24]     Finding combinations...
+[      0.26]          486 combinations [0.05]
+[     13.36] Adding greedy intersection cuts (3 rows)...
+[     13.36]     Finding combinations...
+[     13.48]         4535 combinations [0.05]
+[    260.32] Optimizing...
+[    260.32]     opt = -59265329.276363
+[    260.32] Writing stats to file 3row-lift/mod011.pre.yaml...

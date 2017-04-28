@@ -1,0 +1,63 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-4.local 2017-03-11 22:59
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/qiu.pre.mps.gz --basis bases/qiu.pre.bas --log 5row-cont/qiu.pre.log --stats 5row-cont/qiu.pre.yaml --solution solutions/qiu.pre.x --rows 5 
+[      0.00]     1192 rows, 1901 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = -931.638854
+[      0.00] Reading tableau rows...
+[      0.04] Adding MIR cuts...
+[      0.06]     opt = -931.638854
+[      0.08]     opt = -924.048688
+[      0.08]     opt = -923.917330
+[      0.08]     opt = -923.609950
+[      0.09]     opt = -920.330676
+[      0.10] Optimizing...
+[      0.10]     opt = -920.330676
+[      0.10] Adding greedy intersection cuts (2 rows)...
+[      0.10]     Finding combinations...
+[      0.10]          894 combinations [0.05]
+[      0.13]     opt = -919.647430
+[      0.34]     opt = -919.185533
+[      0.36]     opt = -919.181108
+[      0.48]     opt = -918.906312
+[      1.82]     opt = -918.684935
+[      3.28]     opt = -918.681642
+[      3.52]     opt = -918.221279
+[      5.78]     opt = -918.186412
+[      8.19]     opt = -918.148012
+[      9.88] Adding greedy intersection cuts (3 rows)...
+[      9.88]     Finding combinations...
+[     11.04]         3828 combinations [0.65]
+[    184.32] tight_rays_lp is infeasible (0) (/u/axavier/multirow/infinity/src/greedy-nd.c:1167)
+[    184.32] GREEDY_ND_find_tight_rays failed (1) (/u/axavier/multirow/infinity/src/greedy-nd.c:601)
+[    184.32] GREEDY_ND_bound failed (1) (/u/axavier/multirow/infinity/src/greedy-nd.c:435)
+[    323.04] tight_rays_lp is infeasible (0) (/u/axavier/multirow/infinity/src/greedy-nd.c:1167)
+[    323.04] GREEDY_ND_find_tight_rays failed (1) (/u/axavier/multirow/infinity/src/greedy-nd.c:601)
+[    323.04] GREEDY_ND_bound failed (1) (/u/axavier/multirow/infinity/src/greedy-nd.c:435)
+[    323.40] tight_rays_lp is infeasible (0) (/u/axavier/multirow/infinity/src/greedy-nd.c:1167)
+[    323.40] GREEDY_ND_find_tight_rays failed (1) (/u/axavier/multirow/infinity/src/greedy-nd.c:601)
+[    323.40] GREEDY_ND_bound failed (1) (/u/axavier/multirow/infinity/src/greedy-nd.c:435)
+[    368.58]     opt = -917.987621
+[    551.82]     opt = -917.950483
+[    667.54] tight_rays_lp is infeasible (0) (/u/axavier/multirow/infinity/src/greedy-nd.c:1167)
+[    667.54] GREEDY_ND_find_tight_rays failed (1) (/u/axavier/multirow/infinity/src/greedy-nd.c:601)
+[    667.54] GREEDY_ND_bound failed (1) (/u/axavier/multirow/infinity/src/greedy-nd.c:435)
+[    712.51] Adding greedy intersection cuts (4 rows)...
+[    712.51]     Finding combinations...
+[    727.75]         1485 combinations [0.85]
+[    766.88] tight_rays_lp is infeasible (0) (/u/axavier/multirow/infinity/src/greedy-nd.c:1167)
+[    766.88] GREEDY_ND_find_tight_rays failed (1) (/u/axavier/multirow/infinity/src/greedy-nd.c:601)
+[    766.88] GREEDY_ND_bound failed (1) (/u/axavier/multirow/infinity/src/greedy-nd.c:435)
+[    900.04] Adding greedy intersection cuts (5 rows)...
+[    900.04]     Finding combinations...
+[    900.04] Optimizing...
+[    900.05]     opt = -917.950483
+[    900.05] Writing stats to file 5row-cont/qiu.pre.yaml...

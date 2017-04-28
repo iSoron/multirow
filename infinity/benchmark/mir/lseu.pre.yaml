@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/lseu.pre.mps.gz
+obj-value:
+  0: 949.518722
+  1: 1012.607497
+generated-cuts:
+  0: 0
+  1: 13
+added-cuts:
+  0: 0
+  1: 5
+user-cpu-time:
+  0: 0.002
+  1: 0.003
+time-per-cut:
+  1: 0.000

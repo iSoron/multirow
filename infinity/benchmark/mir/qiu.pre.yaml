@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/qiu.pre.mps.gz
+obj-value:
+  0: -931.638854
+  1: -920.330676
+generated-cuts:
+  0: 0
+  1: 36
+added-cuts:
+  0: 0
+  1: 5
+user-cpu-time:
+  0: 0.010
+  1: 0.088
+time-per-cut:
+  1: 0.002

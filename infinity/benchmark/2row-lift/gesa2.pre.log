@@ -1,0 +1,79 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-6.local 2017-03-11 22:40
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/gesa2.pre.mps.gz --basis bases/gesa2.pre.bas --log 2row-lift/gesa2.pre.log --stats 2row-lift/gesa2.pre.yaml --solution solutions/gesa2.pre.x --lift 
+[      0.01]     1344 rows, 2521 cols
+[      0.01] Storing column types...
+[      0.01] Relaxing integrality...
+[      0.01] Disabling presolve...
+[      0.01] Optimizing...
+[      0.01]     opt = 25502855.039680
+[      0.01] Reading tableau rows...
+[      0.05] Adding MIR cuts...
+[      0.05]     opt = 25503189.481401
+[      0.05]     opt = 25505097.141593
+[      0.05]     opt = 25507558.328005
+[      0.05]     opt = 25509966.640772
+[      0.05]     opt = 25510293.170291
+[      0.05]     opt = 25510733.317200
+[      0.05]     opt = 25510835.234173
+[      0.05]     opt = 25510895.680454
+[      0.06]     opt = 25511482.108962
+[      0.06]     opt = 25511706.759514
+[      0.06]     opt = 25515089.265446
+[      0.06]     opt = 25517890.088787
+[      0.06]     opt = 25521396.518196
+[      0.06]     opt = 25522955.827163
+[      0.06]     opt = 25526142.783890
+[      0.06]     opt = 25528371.413194
+[      0.06]     opt = 25531443.301219
+[      0.06]     opt = 25532621.300009
+[      0.06]     opt = 25532673.510171
+[      0.06]     opt = 25532875.910642
+[      0.07]     opt = 25533103.043092
+[      0.07]     opt = 25533305.958437
+[      0.07]     opt = 25536080.594461
+[      0.07]     opt = 25536258.566108
+[      0.07]     opt = 25540465.557336
+[      0.07]     opt = 25540675.226899
+[      0.07]     opt = 25545107.992465
+[      0.07]     opt = 25546638.937408
+[      0.07]     opt = 25546745.426519
+[      0.07]     opt = 25547009.915111
+[      0.08]     opt = 25547577.221583
+[      0.08]     opt = 25548747.992486
+[      0.08]     opt = 25554009.580870
+[      0.08]     opt = 25560764.943688
+[      0.08]     opt = 25566551.004404
+[      0.08]     opt = 25576207.171313
+[      0.08]     opt = 25576319.687246
+[      0.08]     opt = 25578042.115325
+[      0.08]     opt = 25579521.896201
+[      0.08] Optimizing...
+[      0.08]     opt = 25579521.896201
+[      0.08] Adding greedy intersection cuts (2 rows)...
+[      0.08]     Finding combinations...
+[      0.10]          604 combinations [0.05]
+[      0.10]     opt = 25579537.039574
+[      0.11]     opt = 25579722.065297
+[      0.12]     opt = 25579743.305042
+[      0.86]     opt = 25579764.813878
+[      0.87]     opt = 25581318.646471
+[      1.31]     opt = 25581406.442126
+[      1.33]     opt = 25581468.860206
+[      1.39]     opt = 25581486.549685
+[      1.42]     opt = 25581493.692129
+[      1.50]     opt = 25581501.804711
+[      1.90]     opt = 25581604.607216
+[      1.96]     opt = 25583146.445035
+[      1.99]     opt = 25583155.573897
+[      2.03] Cut cuts off known integral solution: 490.46527530 >= 490.44289559 (0) (/u/axavier/multirow/infinity/src/cg.c:317)
+[      2.03] check_cut failed (1) (/u/axavier/multirow/infinity/src/cg.c:337)
+[      2.03] invalid cut skipped (cut 499)
+[      2.50] Optimizing...
+[      2.50]     opt = 25583155.573897
+[      2.50] Writing stats to file 2row-lift/gesa2.pre.yaml...

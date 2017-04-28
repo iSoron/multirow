@@ -1,0 +1,21 @@
+input-filename:
+  instances/qnet1_o.pre.mps.gz
+obj-value:
+  0: 12907.779167
+  1: 13527.039627
+  2: 13605.261172
+generated-cuts:
+  0: 0
+  1: 10
+  2: 849
+added-cuts:
+  0: 0
+  1: 8
+  2: 17
+user-cpu-time:
+  0: 0.005
+  1: 0.025
+  2: 4.181
+time-per-cut:
+  1: 0.002
+  2: 0.005

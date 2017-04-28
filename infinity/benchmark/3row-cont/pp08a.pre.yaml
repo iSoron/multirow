@@ -1,0 +1,21 @@
+input-filename:
+  instances/pp08a.pre.mps.gz
+obj-value:
+  0: 2748.345238
+  1: 5273.627141
+  2: 5883.632599
+generated-cuts:
+  0: 0
+  1: 52
+  2: 335
+added-cuts:
+  0: 0
+  1: 47
+  2: 37
+user-cpu-time:
+  0: 0.001
+  1: 0.014
+  2: 5.928
+time-per-cut:
+  1: 0.000
+  2: 0.018

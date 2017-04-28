@@ -1,0 +1,21 @@
+input-filename:
+  instances/set1ch.pre.mps.gz
+obj-value:
+  0: 35118.109848
+  1: 40818.778130
+  2: 43660.476405
+generated-cuts:
+  0: 0
+  1: 129
+  2: 225
+added-cuts:
+  0: 0
+  1: 117
+  2: 87
+user-cpu-time:
+  0: 0.003
+  1: 0.043
+  2: 0.520
+time-per-cut:
+  1: 0.000
+  2: 0.002

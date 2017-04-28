@@ -1,0 +1,21 @@
+input-filename:
+  instances/stein45.pre.mps.gz
+obj-value:
+  0: 22.000000
+  1: 22.000000
+  2: 22.000000
+generated-cuts:
+  0: 0
+  1: 225
+  2: 5000
+added-cuts:
+  0: 0
+  1: 5
+  2: 0
+user-cpu-time:
+  0: 0.001
+  1: 0.007
+  2: 47.455
+time-per-cut:
+  1: 0.000
+  2: 0.009

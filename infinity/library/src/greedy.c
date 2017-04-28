@@ -22,7 +22,6 @@
 #include <multirow/util.h>
 
 #include <infinity/greedy.h>
-#include <infinity/greedy-bsearch.h>
 #include <infinity/greedy-2d.h>
 #include <infinity/greedy-nd.h>
 

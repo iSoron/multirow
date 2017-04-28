@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/fixnet6.pre.mps.gz
+obj-value:
+  0: 3192.042000
+  1: 3371.147010
+generated-cuts:
+  0: 0
+  1: 12
+added-cuts:
+  0: 0
+  1: 8
+user-cpu-time:
+  0: 0.009
+  1: 0.020
+time-per-cut:
+  1: 0.002

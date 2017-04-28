@@ -1,0 +1,14 @@
+[      0.00] multirow (git-9bb67812e378ac468ee742b554f3f3dd9deb5b46)
+[      0.00] gemini 2017-01-25 10:48
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-06
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00]     MAX_CUTS: -1
+[      0.00]     MAXIMUM_SCORE: 1.000000e+00
+[      0.00]     MAX_TOTAL_TIME: -1
+[      0.00]     MINIMUM_SCORE: 0.000000e+00
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --keep-integrality --problem instances/miplib3/mkc.pre.mps.gz --write-solution solutions/miplib3/mkc.pre.x --log solutions/miplib3/mkc.pre.x.log 
+[      0.00]     1286 rows, 4510 cols
+[      0.00] Optimizing...

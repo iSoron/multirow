@@ -1,0 +1,21 @@
+input-filename:
+  instances/rout.pre.mps.gz
+obj-value:
+  0: 981.864286
+  1: 982.172857
+  2: 982.172857
+generated-cuts:
+  0: 0
+  1: 35
+  2: 1956
+added-cuts:
+  0: 0
+  1: 5
+  2: 3
+user-cpu-time:
+  0: 0.004
+  1: 0.008
+  2: 900.694
+time-per-cut:
+  1: 0.000
+  2: 0.460

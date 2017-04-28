@@ -1,0 +1,21 @@
+input-filename:
+  instances/fixnet6.pre.mps.gz
+obj-value:
+  0: 3192.042000
+  1: 3371.147010
+  2: 3436.375482
+generated-cuts:
+  0: 0
+  1: 12
+  2: 294
+added-cuts:
+  0: 0
+  1: 8
+  2: 20
+user-cpu-time:
+  0: 0.004
+  1: 0.010
+  2: 48.748
+time-per-cut:
+  1: 0.001
+  2: 0.166

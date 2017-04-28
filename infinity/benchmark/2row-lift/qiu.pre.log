@@ -1,0 +1,40 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-1.local 2017-03-11 22:40
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/qiu.pre.mps.gz --basis bases/qiu.pre.bas --log 2row-lift/qiu.pre.log --stats 2row-lift/qiu.pre.yaml --solution solutions/qiu.pre.x --lift 
+[      0.00]     1192 rows, 1901 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.01]     opt = -931.638854
+[      0.01] Reading tableau rows...
+[      0.04] Adding MIR cuts...
+[      0.06]     opt = -931.638854
+[      0.08]     opt = -924.048688
+[      0.08]     opt = -923.917330
+[      0.09]     opt = -923.609950
+[      0.09]     opt = -920.330676
+[      0.10] Optimizing...
+[      0.10]     opt = -920.330676
+[      0.10] Adding greedy intersection cuts (2 rows)...
+[      0.10]     Finding combinations...
+[      0.11]          894 combinations [0.05]
+[      0.13]     opt = -919.794955
+[      0.26]     opt = -919.294159
+[      0.27]     opt = -919.257943
+[      0.35]     opt = -918.952202
+[      1.34]     opt = -918.714246
+[      1.47]     opt = -918.703738
+[      2.25]     opt = -918.648765
+[      2.39]     opt = -918.312052
+[      3.71]     opt = -918.262966
+[      3.98]     opt = -918.262199
+[      5.12]     opt = -918.185765
+[      6.11] Optimizing...
+[      6.11]     opt = -918.185765
+[      6.11] Writing stats to file 2row-lift/qiu.pre.yaml...

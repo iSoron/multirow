@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/air04.pre.mps.gz
+obj-value:
+  0: 55535.436388
+  1: 55584.135504
+generated-cuts:
+  0: 0
+  1: 290
+added-cuts:
+  0: 0
+  1: 14
+user-cpu-time:
+  0: 0.086
+  1: 0.697
+time-per-cut:
+  1: 0.002

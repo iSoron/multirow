@@ -1,0 +1,49 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-1.local 2017-03-11 23:02
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/p0282.pre.mps.gz --basis bases/p0282.pre.bas --log 5row-lift/p0282.pre.log --stats 5row-lift/p0282.pre.yaml --solution solutions/p0282.pre.x --rows 5 --lift 
+[      0.00]     165 rows, 366 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 180000.300231
+[      0.00] Reading tableau rows...
+[      0.00] Adding MIR cuts...
+[      0.00]     opt = 180037.407196
+[      0.00]     opt = 180160.830263
+[      0.00]     opt = 180179.629604
+[      0.00]     opt = 180253.269188
+[      0.00]     opt = 180257.843263
+[      0.00]     opt = 180468.079837
+[      0.00]     opt = 180570.838577
+[      0.00]     opt = 180617.920227
+[      0.01]     opt = 180679.367449
+[      0.01]     opt = 180770.488577
+[      0.01]     opt = 182212.908696
+[      0.01]     opt = 182279.072575
+[      0.01]     opt = 182300.739242
+[      0.01]     opt = 182489.525064
+[      0.01]     opt = 182504.525064
+[      0.01] Optimizing...
+[      0.01]     opt = 182504.525064
+[      0.01] Adding greedy intersection cuts (2 rows)...
+[      0.01]     Finding combinations...
+[      0.01]         1913 combinations [0.05]
+[      1.44]     opt = 182508.685178
+[      2.48]     opt = 182568.646427
+[      4.22]     opt = 182601.539359
+[      6.24]     opt = 182649.345975
+[      6.27]     opt = 182653.492822
+[      6.31]     opt = 182718.586277
+[      7.27]     opt = 182742.157045
+[      8.34]     opt = 182746.947215
+[      9.00]     opt = 184870.576562
+[     16.65]     opt = 184899.013218
+[     55.40] Adding greedy intersection cuts (3 rows)...
+[     55.40]     Finding combinations...
+[     55.54]         4177 combinations [0.25]

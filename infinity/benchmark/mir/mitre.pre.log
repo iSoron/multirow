@@ -1,0 +1,37 @@
+[      0.00] multirow (git-f8ddaa22007511cf6b9141ace0aee243155733e8)
+[      0.00] cpu133 2015-12-15 10:27
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-09
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00]     MAX_CUTS: -1
+[      0.00]     MAXIMUM_SCORE: 9.500000e-01
+[      0.00]     MAX_TOTAL_TIME: -1
+[      0.00]     MINIMUM_SCORE: 5.000000e-02
+[      0.00]     TRIVIAL_LIFTING_ENABLED: 0
+[      0.00] Command line arguments:
+[      0.00]     ./multirow --mir --problem instances/miplib3/mitre.pre.mps.gz --basis bases/miplib3/mitre.pre.bas --log mir/miplib3/mitre.pre.log --stats mir/miplib3/mitre.pre.yaml --solution solutions/miplib3/mitre.pre.x 
+[      0.00] Reading problem instances/miplib3/mitre.pre.mps.gz...
+[      0.00]     1471 rows, 9558 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Reading basis from file bases/miplib3/mitre.pre.bas...
+[      0.01] Optimizing...
+[      0.02]     opt = 114908.998992
+[      0.02] Reading tableau rows...
+[      0.53] Reading solution from solutions/miplib3/mitre.pre.x
+[      0.53] Adding MIR cuts...
+[      0.54]     opt = 114908.998992
+[      0.59]     opt = 114910.299570
+[      0.70]     opt = 114926.966237
+[      1.00]     opt = 114973.766237
+[      1.10]     opt = 115030.881622
+[      1.11]     opt = 115079.920083
+[      1.20]     opt = 115103.797220
+[      1.41]     opt = 115106.650246
+[      1.64]     opt = 115109.507389
+[      1.65]     opt = 115115.714286
+[      1.69] Optimizing...
+[      1.69]     opt = 115115.714286
+[      1.69] Writing stats to file mir/miplib3/mitre.pre.yaml...

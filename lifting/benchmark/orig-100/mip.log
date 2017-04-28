@@ -1,0 +1,493 @@
+[      0.00] Writing log to file: orig-100/mip.log
+[      0.00] Writing stats to file: orig-100/mip.yaml
+[      0.00] Reading answers from file: answers/orig-1240.txt
+[      0.00] Random seed: 1240
+[      0.00] Generating 100 random rays...
+[      0.00] Enabling bound algorithm
+[      0.00] Setting 1 samples per set
+[      0.00] Reading sets from file...
+[      0.00]     skipping invalid set on line 2
+[      0.00]     skipping invalid set on line 7
+[      0.00]     skipping invalid set on line 18
+[      0.00]     skipping invalid set on line 29
+[      0.00]     skipping invalid set on line 36
+[      0.00]     skipping invalid set on line 43
+[      0.00]     skipping invalid set on line 44
+[      0.00]     skipping invalid set on line 50
+[      0.00]     skipping invalid set on line 67
+[      0.00]     skipping invalid set on line 74
+[      0.00]     skipping invalid set on line 79
+[      0.00]     skipping invalid set on line 81
+[      0.00]     skipping invalid set on line 98
+[      0.00]     skipping invalid set on line 102
+[      0.00]     skipping invalid set on line 105
+[      0.00]     skipping invalid set on line 110
+[      0.00]     skipping invalid set on line 125
+[      0.00]     skipping invalid set on line 127
+[      0.00]     skipping invalid set on line 134
+[      0.00]     skipping invalid set on line 142
+[      0.00]     skipping invalid set on line 156
+[      0.00]     skipping invalid set on line 159
+[      0.00]     skipping invalid set on line 176
+[      0.00]     skipping invalid set on line 180
+[      0.00]     skipping invalid set on line 188
+[      0.00]     skipping invalid set on line 200
+[      0.00]     skipping invalid set on line 201
+[      0.00]     skipping invalid set on line 204
+[      0.00]     skipping invalid set on line 208
+[      0.00]     skipping invalid set on line 217
+[      0.00]     skipping invalid set on line 218
+[      0.00]     skipping invalid set on line 220
+[      0.00]     skipping invalid set on line 226
+[      0.00]     skipping invalid set on line 238
+[      0.00]     skipping invalid set on line 239
+[      0.00]     skipping invalid set on line 241
+[      0.00]     skipping invalid set on line 243
+[      0.00]     skipping invalid set on line 258
+[      0.00]     skipping invalid set on line 263
+[      0.00]     skipping invalid set on line 268
+[      0.00]     skipping invalid set on line 271
+[      0.00]     skipping invalid set on line 276
+[      0.00]     skipping invalid set on line 283
+[      0.00]     skipping invalid set on line 288
+[      0.00]     skipping invalid set on line 289
+[      0.00]     skipping invalid set on line 306
+[      0.00]     skipping invalid set on line 308
+[      0.00]     skipping invalid set on line 311
+[      0.00]     skipping invalid set on line 316
+[      0.00]     skipping invalid set on line 318
+[      0.00]     skipping invalid set on line 322
+[      0.00]     skipping invalid set on line 323
+[      0.00]     skipping invalid set on line 324
+[      0.00]     skipping invalid set on line 325
+[      0.00]     skipping invalid set on line 329
+[      0.00]     skipping invalid set on line 354
+[      0.00]     skipping invalid set on line 366
+[      0.00]     skipping invalid set on line 368
+[      0.00]     skipping invalid set on line 369
+[      0.00]     skipping invalid set on line 374
+[      0.00]     skipping invalid set on line 377
+[      0.00]     skipping invalid set on line 400
+[      0.00]     skipping invalid set on line 407
+[      0.00]     skipping invalid set on line 409
+[      0.00]     skipping invalid set on line 413
+[      0.00]     skipping invalid set on line 416
+[      0.00]     skipping invalid set on line 431
+[      0.00]     skipping invalid set on line 432
+[      0.00]     skipping invalid set on line 446
+[      0.00]     skipping invalid set on line 449
+[      0.00]     skipping invalid set on line 450
+[      0.00]     skipping invalid set on line 463
+[      0.00]     skipping invalid set on line 478
+[      0.00]     skipping invalid set on line 483
+[      0.00]     skipping invalid set on line 491
+[      0.00]     skipping invalid set on line 495
+[      0.00]     skipping invalid set on line 498
+[      0.00]     skipping invalid set on line 503
+[      0.00]     skipping invalid set on line 508
+[      0.00]     skipping invalid set on line 509
+[      0.00]     skipping invalid set on line 513
+[      0.00]     skipping invalid set on line 521
+[      0.00]     skipping invalid set on line 527
+[      0.00]     skipping invalid set on line 533
+[      0.00]     skipping invalid set on line 536
+[      0.00]     skipping invalid set on line 545
+[      0.00]     skipping invalid set on line 550
+[      0.00]     skipping invalid set on line 556
+[      0.00]     skipping invalid set on line 567
+[      0.00]     skipping invalid set on line 575
+[      0.00]     skipping invalid set on line 580
+[      0.00]     skipping invalid set on line 619
+[      0.00]     skipping invalid set on line 626
+[      0.00]     skipping invalid set on line 630
+[      0.00]     skipping invalid set on line 632
+[      0.00]     skipping invalid set on line 634
+[      0.00]     skipping invalid set on line 635
+[      0.00]     skipping invalid set on line 636
+[      0.00]     skipping invalid set on line 642
+[      0.00]     skipping invalid set on line 651
+[      0.00]     skipping invalid set on line 658
+[      0.00]     skipping invalid set on line 662
+[      0.00]     skipping invalid set on line 667
+[      0.00]     skipping invalid set on line 677
+[      0.00]     skipping invalid set on line 685
+[      0.00]     skipping invalid set on line 691
+[      0.00]     skipping invalid set on line 692
+[      0.00]     skipping invalid set on line 709
+[      0.00]     skipping invalid set on line 718
+[      0.00]     skipping invalid set on line 719
+[      0.00]     skipping invalid set on line 762
+[      0.01]     skipping invalid set on line 767
+[      0.01]     skipping invalid set on line 771
+[      0.01]     skipping invalid set on line 774
+[      0.01]     skipping invalid set on line 781
+[      0.01]     skipping invalid set on line 782
+[      0.01]     skipping invalid set on line 789
+[      0.01]     skipping invalid set on line 790
+[      0.01]     skipping invalid set on line 794
+[      0.01]     skipping invalid set on line 797
+[      0.01]     skipping invalid set on line 818
+[      0.01]     skipping invalid set on line 824
+[      0.01]     skipping invalid set on line 832
+[      0.01]     skipping invalid set on line 857
+[      0.01]     skipping invalid set on line 860
+[      0.01]     skipping invalid set on line 870
+[      0.01]     skipping invalid set on line 875
+[      0.01]     skipping invalid set on line 876
+[      0.01]     skipping invalid set on line 883
+[      0.01]     skipping invalid set on line 884
+[      0.01]     skipping invalid set on line 888
+[      0.01]     skipping invalid set on line 896
+[      0.01]     skipping invalid set on line 917
+[      0.01]     skipping invalid set on line 919
+[      0.01]     skipping invalid set on line 921
+[      0.01]     skipping invalid set on line 923
+[      0.01]     skipping invalid set on line 924
+[      0.01]     skipping invalid set on line 925
+[      0.01]     skipping invalid set on line 929
+[      0.01]     skipping invalid set on line 938
+[      0.01]     skipping invalid set on line 948
+[      0.01]     skipping invalid set on line 952
+[      0.01]     skipping invalid set on line 967
+[      0.01]     skipping invalid set on line 969
+[      0.01]     skipping invalid set on line 980
+[      0.01]     skipping invalid set on line 991
+[      0.01]     skipping invalid set on line 997
+[      0.01]     skipping invalid set on line 998
+[      0.01]     skipping invalid set on line 1013
+[      0.01]     skipping invalid set on line 1020
+[      0.01]     skipping invalid set on line 1024
+[      0.01]     skipping invalid set on line 1026
+[      0.01]     skipping invalid set on line 1031
+[      0.01]     skipping invalid set on line 1038
+[      0.01]     skipping invalid set on line 1042
+[      0.01]     skipping invalid set on line 1044
+[      0.01]     skipping invalid set on line 1052
+[      0.01]     skipping invalid set on line 1067
+[      0.01]     skipping invalid set on line 1093
+[      0.01]     skipping invalid set on line 1097
+[      0.01]     skipping invalid set on line 1113
+[      0.01]     skipping invalid set on line 1118
+[      0.01]     skipping invalid set on line 1135
+[      0.01]     skipping invalid set on line 1149
+[      0.01]     skipping invalid set on line 1151
+[      0.01] Successfully read 1000 sets
+[      0.01] Running benchmark...
+[      1.09]     0:     1085.869 ms
+[      1.55]     1:      454.115 ms
+[      2.02]     2:      473.607 ms
+[      2.50]     3:      477.038 ms
+[      3.90]     4:     1406.578 ms
+[      4.48]     5:      572.744 ms
+[      5.72]     6:     1241.257 ms
+[      6.31]     7:      588.509 ms
+[      6.87]     8:      561.673 ms
+[      7.31]     9:      444.289 ms
+[      8.37]    10:     1060.029 ms
+[      8.88]    11:      510.773 ms
+[      9.40]    12:      513.948 ms
+[      9.98]    13:      583.011 ms
+[     10.43]    14:      448.988 ms
+[     10.91]    15:      482.973 ms
+[     11.39]    16:      473.739 ms
+[     11.86]    17:      468.784 ms
+[     12.38]    18:      523.829 ms
+[     12.90]    19:      520.910 ms
+[     13.36]    20:      456.205 ms
+[     13.82]    21:      463.428 ms
+[     14.30]    22:      481.220 ms
+[     14.80]    23:      501.061 ms
+[     15.26]    24:      457.024 ms
+[     15.70]    25:      444.718 ms
+[     16.24]    26:      532.042 ms
+[     16.69]    27:      453.431 ms
+[     17.13]    28:      437.627 ms
+[     17.89]    29:      763.017 ms
+[     18.37]    30:      476.871 ms
+[     18.84]    31:      472.215 ms
+[     19.31]    32:      475.162 ms
+[     19.76]    33:      441.584 ms
+[     20.24]    34:      482.990 ms
+[     21.00]    35:      763.802 ms
+[     21.46]    36:      460.654 ms
+[     21.92]    37:      454.137 ms
+[     22.36]    38:      441.869 ms
+[     22.91]    39:      546.124 ms
+[     23.39]    40:      483.006 ms
+[     23.85]    41:      461.751 ms
+[     24.49]    42:      640.869 ms
+[     25.01]    43:      515.364 ms
+[     25.45]    44:      445.430 ms
+[     25.88]    45:      426.458 ms
+[     26.51]    46:      632.754 ms
+[     26.93]    47:      420.029 ms
+[     27.59]    48:      662.652 ms
+[     28.03]    49:      436.329 ms
+[     28.46]    50:      425.465 ms
+[     28.96]    51:      504.995 ms
+[     29.48]    52:      514.267 ms
+[     29.98]    53:      503.178 ms
+[     30.86]    54:      881.980 ms
+[     31.35]    55:      485.726 ms
+[     31.80]    56:      456.781 ms
+[     32.33]    57:      526.672 ms
+[     33.16]    58:      825.776 ms
+[     34.18]    59:     1020.775 ms
+[     34.85]    60:      675.864 ms
+[     35.28]    61:      426.797 ms
+[     36.02]    62:      743.135 ms
+[     36.79]    63:      772.474 ms
+[     37.31]    64:      516.294 ms
+[     37.74]    65:      429.800 ms
+[     38.22]    66:      481.277 ms
+[     38.65]    67:      426.842 ms
+[     39.12]    68:      467.861 ms
+[     41.17]    69:     2057.293 ms
+[     42.14]    70:      962.583 ms
+[     43.20]    71:     1061.819 ms
+[     44.16]    72:      960.188 ms
+[     44.81]    73:      649.419 ms
+[     45.31]    74:      502.242 ms
+[     46.62]    75:     1313.973 ms
+[     47.12]    76:      499.078 ms
+[     47.64]    77:      518.508 ms
+[     48.09]    78:      450.963 ms
+[     48.92]    79:      831.477 ms
+[     49.42]    80:      494.309 ms
+[     49.86]    81:      444.361 ms
+[     50.32]    82:      452.784 ms
+[     50.95]    83:      637.750 ms
+[     51.47]    84:      517.405 ms
+[     51.98]    85:      512.984 ms
+[     53.32]    86:     1340.101 ms
+[     54.04]    87:      716.978 ms
+[     54.55]    88:      511.795 ms
+[     55.01]    89:      454.723 ms
+[     55.46]    90:      449.902 ms
+[     55.99]    91:      534.810 ms
+[     56.48]    92:      486.812 ms
+[     58.07]    93:     1586.254 ms
+[     58.74]    94:      676.357 ms
+[     60.06]    95:     1313.572 ms
+[     60.54]    96:      487.527 ms
+[     61.11]    97:      569.543 ms
+[     61.59]    98:      481.322 ms
+[     62.06]    99:      463.326 ms
+[     62.50]   100:      444.956 ms
+[     63.07]   101:      567.170 ms
+[     63.53]   102:      462.997 ms
+[     64.55]   103:     1015.560 ms
+[     66.72]   104:     2170.255 ms
+[     68.14]   105:     1421.396 ms
+[     68.67]   106:      529.800 ms
+[     69.12]   107:      455.307 ms
+[     70.33]   108:     1208.318 ms
+[     70.96]   109:      627.681 ms
+[     71.80]   110:      839.386 ms
+[     72.30]   111:      503.983 ms
+[     72.77]   112:      462.797 ms
+[     73.41]   113:      642.056 ms
+[     73.87]   114:      458.346 ms
+[     74.35]   115:      485.082 ms
+[     75.70]   116:     1347.382 ms
+[     76.15]   117:      447.870 ms
+[     76.77]   118:      623.908 ms
+[     77.40]   119:      623.772 ms
+[     77.97]   120:      571.827 ms
+[     78.49]   121:      522.769 ms
+[     79.29]   122:      804.633 ms
+[     79.75]   123:      454.968 ms
+[     81.32]   124:     1568.216 ms
+[     82.30]   125:      983.054 ms
+[     83.05]   126:      750.274 ms
+[     83.75]   127:      694.241 ms
+[     84.80]   128:     1052.721 ms
+[     85.32]   129:      526.057 ms
+[     85.76]   130:      440.403 ms
+[     86.23]   131:      462.279 ms
+[     86.70]   132:      477.823 ms
+[     87.23]   133:      527.153 ms
+[     88.05]   134:      814.452 ms
+[     88.54]   135:      491.056 ms
+[     89.10]   136:      559.780 ms
+[     90.34]   137:     1242.868 ms
+[     91.26]   138:      922.111 ms
+[     92.23]   139:      969.833 ms
+[     92.81]   140:      573.468 ms
+[     93.78]   141:      975.121 ms
+[     94.19]   142:      412.721 ms
+[     94.65]   143:      455.640 ms
+[     95.97]   144:     1323.717 ms
+[     96.81]   145:      841.006 ms
+[     97.31]   146:      496.013 ms
+[     97.82]   147:      507.324 ms
+[     98.29]   148:      470.628 ms
+[     98.79]   149:      498.094 ms
+[     99.26]   150:      475.010 ms
+[     99.71]   151:      449.972 ms
+[    100.18]   152:      464.429 ms
+[    101.05]   153:      870.293 ms
+[    101.58]   154:      538.379 ms
+[    102.05]   155:      463.829 ms
+[    102.52]   156:      476.902 ms
+[    103.04]   157:      519.594 ms
+[    103.48]   158:      437.586 ms
+[    104.14]   159:      655.127 ms
+[    104.62]   160:      485.304 ms
+[    105.12]   161:      494.427 ms
+[    105.63]   162:      509.462 ms
+[    106.36]   163:      737.890 ms
+[    106.81]   164:      447.548 ms
+[    107.30]   165:      484.426 ms
+[    107.76]   166:      461.792 ms
+[    108.21]   167:      450.028 ms
+[    108.64]   168:      436.532 ms
+[    109.14]   169:      491.476 ms
+[    109.99]   170:      850.920 ms
+[    110.51]   171:      524.758 ms
+[    111.46]   172:      952.558 ms
+[    112.05]   173:      587.259 ms
+[    112.63]   174:      583.463 ms
+[    113.59]   175:      958.149 ms
+[    114.40]   176:      807.772 ms
+[    115.43]   177:     1024.415 ms
+[    116.12]   178:      694.718 ms
+[    116.91]   179:      793.722 ms
+[    117.83]   180:      912.926 ms
+[    118.31]   181:      479.586 ms
+[    118.75]   182:      440.017 ms
+[    119.21]   183:      463.693 ms
+[    119.92]   184:      708.755 ms
+[    120.39]   185:      473.230 ms
+[    121.00]   186:      610.488 ms
+[    121.87]   187:      867.171 ms
+[    122.47]   188:      598.099 ms
+[    122.94]   189:      469.048 ms
+[    124.33]   190:     1398.091 ms
+[    124.86]   191:      522.425 ms
+[    125.38]   192:      518.655 ms
+[    126.06]   193:      683.877 ms
+[    127.17]   194:     1111.302 ms
+[    127.67]   195:      501.037 ms
+[    128.12]   196:      443.753 ms
+[    128.63]   197:      514.213 ms
+[    129.50]   198:      869.950 ms
+[    130.23]   199:      733.829 ms
+[    130.74]   200:      501.979 ms
+[    131.22]   201:      480.461 ms
+[    132.25]   202:     1029.246 ms
+[    132.75]   203:      508.889 ms
+[    133.25]   204:      492.133 ms
+[    134.06]   205:      816.203 ms
+[    134.55]   206:      483.279 ms
+[    135.11]   207:      561.263 ms
+[    135.59]   208:      485.835 ms
+[    136.12]   209:      523.367 ms
+[    136.57]   210:      456.577 ms
+[    137.00]   211:      428.979 ms
+[    137.52]   212:      516.643 ms
+[    138.52]   213:      996.302 ms
+[    139.21]   214:      696.363 ms
+[    139.72]   215:      503.604 ms
+[    140.37]   216:      651.266 ms
+[    140.84]   217:      477.192 ms
+[    141.27]   218:      424.919 ms
+[    141.74]   219:      473.473 ms
+[    142.17]   220:      430.540 ms
+[    143.18]   221:     1002.583 ms
+[    144.17]   222:      995.739 ms
+[    145.54]   223:     1372.082 ms
+[    146.26]   224:      720.742 ms
+[    146.71]   225:      449.511 ms
+[    148.10]   226:     1389.917 ms
+[    149.43]   227:     1322.637 ms
+[    149.95]   228:      527.272 ms
+[    150.52]   229:      566.583 ms
+[    151.00]   230:      476.700 ms
+[    151.59]   231:      588.779 ms
+[    152.13]   232:      543.887 ms
+[    152.66]   233:      528.262 ms
+[    153.17]   234:      513.093 ms
+[    153.61]   235:      444.000 ms
+[    154.53]   236:      917.509 ms
+[    155.20]   237:      668.484 ms
+[    156.73]   238:     1528.525 ms
+[    158.03]   239:     1299.636 ms
+[    158.53]   240:      504.350 ms
+[    159.10]   241:      569.807 ms
+[    159.59]   242:      487.488 ms
+[    160.95]   243:     1355.360 ms
+[    162.22]   244:     1277.309 ms
+[    163.63]   245:     1406.756 ms
+[    164.61]   246:      983.256 ms
+[    165.12]   247:      504.180 ms
+[    166.52]   248:     1399.730 ms
+[    168.24]   249:     1726.538 ms
+[    168.81]   250:      563.645 ms
+[    169.42]   251:      609.005 ms
+[    170.75]   252:     1329.256 ms
+[    171.84]   253:     1099.108 ms
+[    172.50]   254:      654.821 ms
+[    172.93]   255:      431.110 ms
+[    173.32]   256:      389.093 ms
+[    173.76]   257:      437.471 ms
+[    174.13]   258:      368.803 ms
+[    174.60]   259:      471.916 ms
+[    175.04]   260:      439.233 ms
+[    175.48]   261:      441.471 ms
+[    175.90]   262:      423.536 ms
+[    176.27]   263:      363.950 ms
+[    176.66]   264:      389.362 ms
+[    177.12]   265:      459.533 ms
+[    177.55]   266:      437.859 ms
+[    177.98]   267:      425.037 ms
+[    178.44]   268:      457.938 ms
+[    178.80]   269:      363.099 ms
+[    179.19]   270:      386.039 ms
+[    180.37]   271:     1180.367 ms
+[    181.46]   272:     1097.383 ms
+[    181.94]   273:      473.458 ms
+[    182.39]   274:      451.725 ms
+[    182.77]   275:      379.276 ms
+[    183.28]   276:      514.941 ms
+[    183.64]   277:      362.625 ms
+[    184.00]   278:      351.165 ms
+[    184.49]   279:      498.296 ms
+[    184.93]   280:      432.784 ms
+[    185.28]   281:      356.177 ms
+[    185.64]   282:      353.269 ms
+[    186.34]   283:      698.644 ms
+[    186.76]   284:      426.673 ms
+[    187.19]   285:      432.341 ms
+[    187.62]   286:      425.636 ms
+[    188.08]   287:      463.261 ms
+[    189.13]   288:     1047.556 ms
+[    189.57]   289:      434.592 ms
+[    190.95]   290:     1384.862 ms
+[    191.41]   291:      461.609 ms
+[    192.20]   292:      791.000 ms
+[    192.87]   293:      669.785 ms
+[    193.27]   294:      400.326 ms
+[    193.65]   295:      380.021 ms
+[    194.13]   296:      479.194 ms
+[    194.78]   297:      644.529 ms
+[    195.23]   298:      454.055 ms
+[    195.74]   299:      508.579 ms
+[    196.26]   300:      519.461 ms
+[    196.63]   301:      367.364 ms
+[    197.22]   302:      592.967 ms
+[    198.40]   303:     1176.097 ms
+[    199.42]   304:     1019.694 ms
+[    199.82]   305:      407.965 ms
+[    200.32]   306:      497.813 ms
+[    200.69]   307:      372.346 ms
+[    201.14]   308:      445.867 ms
+[    201.63]   309:      487.343 ms
+[    202.01]   310:      381.947 ms
+[    202.55]   311:      545.137 ms
+[    203.54]   312:      983.383 ms
+[    204.16]   313:      625.701 ms
+[    205.46]   314:     1300.657 ms
+[    206.31]   315:      847.973 ms
+[    207.06]   316:      749.967 ms
+[    207.70]   317:      636.568 ms

@@ -1,0 +1,16 @@
+input-filename:
+  instances/miplib3/harp2.pre.mps.gz
+obj-value:
+  0: -74325169.345138
+  1: -74222594.677631
+generated-cuts:
+  0: 0
+  1: 28
+added-cuts:
+  0: 0
+  1: 14
+user-cpu-time:
+  0: 0.010
+  1: 0.017
+time-per-cut:
+  1: 0.001

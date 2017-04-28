@@ -1,0 +1,21 @@
+input-filename:
+  instances/swath.pre.mps.gz
+obj-value:
+  0: 334.496858
+  1: 348.657531
+  2: 348.657531
+generated-cuts:
+  0: 0
+  1: 44
+  2: 2191
+added-cuts:
+  0: 0
+  1: 10
+  2: 4
+user-cpu-time:
+  0: 0.033
+  1: 0.093
+  2: 46.377
+time-per-cut:
+  1: 0.002
+  2: 0.021

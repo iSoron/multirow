@@ -1,0 +1,59 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-7.local 2017-03-11 22:09
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/fiber.pre.mps.gz --basis bases/fiber.pre.bas --log 3row-lift/fiber.pre.log --stats 3row-lift/fiber.pre.yaml --solution solutions/fiber.pre.x --rows 3 --lift 
+[      0.00]     290 rows, 1086 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 198107.357500
+[      0.00] Reading tableau rows...
+[      0.01] Adding MIR cuts...
+[      0.01]     opt = 204446.877500
+[      0.01]     opt = 209780.997500
+[      0.01]     opt = 217619.939074
+[      0.01]     opt = 220492.258796
+[      0.01]     opt = 223475.778796
+[      0.01]     opt = 223559.322796
+[      0.01]     opt = 223657.178796
+[      0.01]     opt = 227241.058621
+[      0.01]     opt = 227513.849067
+[      0.01]     opt = 229999.338519
+[      0.01]     opt = 235855.564671
+[      0.02]     opt = 275131.350730
+[      0.02]     opt = 306825.530082
+[      0.02]     opt = 344210.561379
+[      0.02] Optimizing...
+[      0.02]     opt = 344210.561379
+[      0.02] Adding greedy intersection cuts (2 rows)...
+[      0.02]     Finding combinations...
+[      0.02]         1406 combinations [0.05]
+[      0.14]     opt = 344303.479615
+[     10.43]     opt = 344462.658848
+[     10.45]     opt = 344507.214633
+[     10.80]     opt = 345052.369483
+[     10.88]     opt = 345094.281372
+[     24.17]     opt = 345129.522902
+[     38.49]     opt = 348752.067915
+[     39.24]     opt = 348812.634193
+[     39.25]     opt = 349740.076949
+[     39.54]     opt = 349933.399955
+[     40.00]     opt = 351636.837743
+[     46.92] Adding greedy intersection cuts (3 rows)...
+[     46.92]     Finding combinations...
+[     47.13]         3182 combinations [0.10]
+[     47.34]     opt = 351637.091772
+[     55.78]     opt = 351794.910411
+[     57.81]     opt = 351835.996178
+[     70.11]     opt = 351923.012888
+[    774.92]     opt = 351983.468147
+[    781.10]     opt = 352012.659116
+[    785.45]     opt = 352184.123293
+[    804.16] Optimizing...
+[    804.16]     opt = 352184.123293
+[    804.16] Writing stats to file 3row-lift/fiber.pre.yaml...

@@ -1,0 +1,21 @@
+input-filename:
+  instances/egout.pre.mps.gz
+obj-value:
+  0: 511.617840
+  1: 548.369275
+  2: 554.705265
+generated-cuts:
+  0: 0
+  1: 9
+  2: 62
+added-cuts:
+  0: 0
+  1: 7
+  2: 4
+user-cpu-time:
+  0: 0.002
+  1: 0.001
+  2: 1.405
+time-per-cut:
+  1: 0.000
+  2: 0.023

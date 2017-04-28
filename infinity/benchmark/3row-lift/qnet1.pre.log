@@ -1,0 +1,52 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-4.local 2017-03-11 22:09
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/qnet1.pre.mps.gz --basis bases/qnet1.pre.bas --log 3row-lift/qnet1.pre.log --stats 3row-lift/qnet1.pre.yaml --solution solutions/qnet1.pre.x --rows 3 --lift 
+[      0.01]     363 rows, 1573 cols
+[      0.01] Storing column types...
+[      0.01] Relaxing integrality...
+[      0.01] Disabling presolve...
+[      0.01] Optimizing...
+[      0.01]     opt = 14274.102667
+[      0.01] Reading tableau rows...
+[      0.01] Adding MIR cuts...
+[      0.02]     opt = 14299.280866
+[      0.02]     opt = 14320.407393
+[      0.02]     opt = 14327.598499
+[      0.02]     opt = 14327.735879
+[      0.03]     opt = 14336.493450
+[      0.03]     opt = 14336.542647
+[      0.03]     opt = 14365.610042
+[      0.04]     opt = 14375.994015
+[      0.04]     opt = 14376.326631
+[      0.05]     opt = 14376.968912
+[      0.05]     opt = 14404.243310
+[      0.06]     opt = 14407.350414
+[      0.06]     opt = 14480.008117
+[      0.06] Optimizing...
+[      0.06]     opt = 14480.008117
+[      0.06] Adding greedy intersection cuts (2 rows)...
+[      0.06]     Finding combinations...
+[      0.14]         4669 combinations [0.05]
+[     91.03]     opt = 14484.994785
+[    114.66]     opt = 14494.308653
+[    114.87]     opt = 14494.454885
+[    205.43]     opt = 14495.164173
+[    212.63]     opt = 14497.976016
+[    255.94]     opt = 14498.094740
+[    281.63]     opt = 14498.147922
+[    285.81]     opt = 14498.770475
+[    435.93]     opt = 14512.927463
+[    555.00]     opt = 14519.222620
+[    606.44]     opt = 14519.229297
+[    705.75]     opt = 14519.683908
+[    889.13]     opt = 14532.810715
+[    900.05] Adding greedy intersection cuts (3 rows)...
+[    900.05]     Finding combinations...
+[    900.05] Optimizing...
+[    900.05]     opt = 14532.810715
+[    900.05] Writing stats to file 3row-lift/qnet1.pre.yaml...

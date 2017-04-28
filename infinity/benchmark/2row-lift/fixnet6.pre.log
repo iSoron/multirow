@@ -1,0 +1,48 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-6.local 2017-03-11 22:40
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/fixnet6.pre.mps.gz --basis bases/fixnet6.pre.bas --log 2row-lift/fixnet6.pre.log --stats 2row-lift/fixnet6.pre.yaml --solution solutions/fixnet6.pre.x --lift 
+[      0.01]     477 rows, 1256 cols
+[      0.01] Storing column types...
+[      0.01] Relaxing integrality...
+[      0.01] Disabling presolve...
+[      0.01] Optimizing...
+[      0.01]     opt = 3192.042000
+[      0.01] Reading tableau rows...
+[      0.01] Adding MIR cuts...
+[      0.01]     opt = 3205.818000
+[      0.01]     opt = 3310.274699
+[      0.01]     opt = 3330.101142
+[      0.02]     opt = 3359.309304
+[      0.02]     opt = 3365.581322
+[      0.02]     opt = 3367.872133
+[      0.02]     opt = 3367.896579
+[      0.02]     opt = 3371.147010
+[      0.02] Optimizing...
+[      0.02]     opt = 3371.147010
+[      0.02] Adding greedy intersection cuts (2 rows)...
+[      0.02]     Finding combinations...
+[      0.02]           95 combinations [0.05]
+[      0.06]     opt = 3371.316927
+[      0.10]     opt = 3381.139540
+[      0.46]     opt = 3387.993627
+[      0.49]     opt = 3389.356906
+[      0.51]     opt = 3389.435109
+[      0.55]     opt = 3391.313503
+[      0.63]     opt = 3400.913268
+[      0.84]     opt = 3419.652102
+[      0.94]     opt = 3420.554424
+[      1.10]     opt = 3424.527719
+[      1.38]     opt = 3434.108159
+[      1.44]     opt = 3435.564075
+[      1.45]     opt = 3435.564204
+[      1.49]     opt = 3435.625868
+[      1.60]     opt = 3435.636346
+[      1.65]     opt = 3436.063953
+[      1.90] Optimizing...
+[      1.90]     opt = 3436.063953
+[      1.90] Writing stats to file 2row-lift/fixnet6.pre.yaml...

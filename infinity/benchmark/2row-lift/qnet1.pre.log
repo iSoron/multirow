@@ -1,0 +1,51 @@
+[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
+[      0.00] mf-hpc-1-1.local 2017-03-11 22:40
+[      0.00] Compile-time parameters:
+[      0.00]     EPSILON: 1.000000e-08
+[      0.00]     GREEDY_BIG_E: 1.000000e+03
+[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
+[      0.00] Command line arguments:
+[      0.00]     ../build/infinity.run --mir --greedy --problem instances/qnet1.pre.mps.gz --basis bases/qnet1.pre.bas --log 2row-lift/qnet1.pre.log --stats 2row-lift/qnet1.pre.yaml --solution solutions/qnet1.pre.x --lift 
+[      0.00]     363 rows, 1573 cols
+[      0.00] Storing column types...
+[      0.00] Relaxing integrality...
+[      0.00] Disabling presolve...
+[      0.00] Optimizing...
+[      0.00]     opt = 14274.102667
+[      0.00] Reading tableau rows...
+[      0.01] Adding MIR cuts...
+[      0.01]     opt = 14299.280866
+[      0.01]     opt = 14320.407393
+[      0.02]     opt = 14327.598499
+[      0.02]     opt = 14327.735879
+[      0.02]     opt = 14336.493450
+[      0.02]     opt = 14336.542647
+[      0.02]     opt = 14365.610042
+[      0.03]     opt = 14375.994015
+[      0.03]     opt = 14376.326631
+[      0.03]     opt = 14376.968912
+[      0.04]     opt = 14404.243310
+[      0.04]     opt = 14407.350414
+[      0.04]     opt = 14480.008117
+[      0.04] Optimizing...
+[      0.04]     opt = 14480.008117
+[      0.04] Adding greedy intersection cuts (2 rows)...
+[      0.04]     Finding combinations...
+[      0.12]         4669 combinations [0.05]
+[     53.97]     opt = 14484.994785
+[     76.01]     opt = 14494.308653
+[     76.23]     opt = 14494.454885
+[    151.60]     opt = 14495.164173
+[    155.71]     opt = 14497.976016
+[    189.71]     opt = 14498.094740
+[    214.79]     opt = 14498.147922
+[    218.93]     opt = 14498.770475
+[    355.71]     opt = 14512.927463
+[    470.65]     opt = 14519.222620
+[    519.89]     opt = 14519.229297
+[    615.14]     opt = 14519.683908
+[    791.02]     opt = 14532.810715
+[    896.45]     opt = 14532.967866
+[    900.14] Optimizing...
+[    900.14]     opt = 14532.967866
+[    900.14] Writing stats to file 2row-lift/qnet1.pre.yaml...

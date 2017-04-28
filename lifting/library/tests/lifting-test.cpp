@@ -18,11 +18,9 @@
 
 extern "C" {
 #include <multirow/util.h>
-#include <multirow/double.h>
 #include <multirow/lfree2d.h>
 #include <lifting/lifting.h>
 #include <lifting/lifting-mip.h>
-#include <math.h>
 }
 
 #define E 1e-6

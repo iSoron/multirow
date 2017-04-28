@@ -1,0 +1,21 @@
+input-filename:
+  instances/p0201.pre.mps.gz
+obj-value:
+  0: 7155.000000
+  1: 7185.000000
+  2: 7185.000000
+generated-cuts:
+  0: 0
+  1: 39
+  2: 7682
+added-cuts:
+  0: 0
+  1: 6
+  2: 0
+user-cpu-time:
+  0: 0.001
+  1: 0.003
+  2: 900.888
+time-per-cut:
+  1: 0.000
+  2: 0.117

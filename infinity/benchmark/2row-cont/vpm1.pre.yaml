@@ -1,0 +1,21 @@
+input-filename:
+  instances/vpm1.pre.mps.gz
+obj-value:
+  0: 16.433333
+  1: 17.500000
+  2: 17.527420
+generated-cuts:
+  0: 0
+  1: 14
+  2: 53
+added-cuts:
+  0: 0
+  1: 10
+  2: 5
+user-cpu-time:
+  0: 0.001
+  1: 0.002
+  2: 0.032
+time-per-cut:
+  1: 0.000
+  2: 0.001
