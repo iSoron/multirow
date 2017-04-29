@@ -1,9 +1,13 @@
+set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH}
+  /software/cplex-12.6/distribution/cplex/lib/x86-64_linux/static_pic
+  /Users/axavier/Applications/IBM/ILOG/CPLEX_Studio1262/cplex/lib/x86-64_osx/static_pic)
+
 find_library(CPLEX_LIBRARIES
   NAMES cplex cplex1220 cplex1240 cplex1260 cplex1261 cplex1262)
 
-find_path(CPLEX_INCLUDE_DIR
-  NAMES ilcplex/cplex.h
-  PATHS /Users/axavier/Applications/IBM/ILOG/CPLEX_Studio1262/cplex/include)
+find_path(CPLEX_INCLUDE_DIR NAMES ilcplex/cplex.h PATHS
+  /Users/axavier/Applications/IBM/ILOG/CPLEX_Studio1262/cplex/include
+  /software/cplex-12.6/distribution/cplex/include/)
 
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(

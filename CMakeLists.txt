@@ -3,7 +3,6 @@ project(multirow)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} /Users/axavier/Applications/IBM/ILOG/CPLEX_Studio1262/cplex/lib/x86-64_osx/static_pic)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 find_package(CPLEX REQUIRED)
 include_directories(${CPLEX_INCLUDE_DIR})
