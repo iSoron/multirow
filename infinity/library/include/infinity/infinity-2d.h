@@ -13,19 +13,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef MULTIROW_GREEDY_H
-#define MULTIROW_GREEDY_H
 
-int GREEDY_write_sage_file(int nrows,
-                           int nrays,
-                           const double *f,
-                           const double *rays,
-                           const double *bounds,
-                           const char *filename);
+#ifndef MULTIROW_INFINITY_2D_H
+#define MULTIROW_INFINITY_2D_H
 
-int GREEDY_generate_cut(int nrows,
-                        struct Row **rows,
-                        const char *column_types,
-                        struct Row *cut);
+#include <multirow/cg.h>
 
-#endif //MULTIROW_GREEDY_H
+int INFINITY_2D_generate_cut(const struct MultiRowModel *model, double *bounds);
+
+#endif //MULTIROW_INFINITY_2D_H

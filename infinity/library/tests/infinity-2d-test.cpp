@@ -21,22 +21,30 @@ using namespace std;
 
 extern "C" {
 #include <multirow/util.h>
-#include <infinity/greedy-2d.h>
-#include "../src/greedy-2d.c"
+#include <infinity/infinity-2d.h>
+#include "../src/infinity-2d.c"
 }
 
 #define BOUNDS_EPSILON 0.01
 
-TEST(Greedy2DTest, test_generate_cut_1)
+TEST(Infinity2DTest, test_generate_cut_1)
 {
     int rval = 0;
     double bounds[100];
-    double f[] = {1 / 4.0, 3 / 4.0};
-    double rays[] = {-2 / 5.0, 5 / 7.0, 0.0, 1.0, 1.0, 1.0, 4 / 5.0, -2 / 3.0,
-            -1.0, 0.0};
 
-    rval = GREEDY_2D_generate_cut(rays, 5, f, bounds);
-    abort_if(rval, "GREEDY_2D_generate_cut failed");
+    double f[] = {1 / 4.0, 3 / 4.0};
+    double rays[] = {
+            -2 / 5.0, 5 / 7.0,
+            0.0, 1.0,
+            1.0, 1.0,
+            4 / 5.0, -2 / 3.0,
+            -1.0, 0.0
+    };
+
+    const struct MultiRowModel model = {f , rays, 5, 2};
+
+    rval = INFINITY_2D_generate_cut(&model, bounds);
+    abort_if(rval, "INFINITY_2D_generate_cut failed");
 
     EXPECT_NEAR(23 / 50.0, bounds[0], BOUNDS_EPSILON);
     EXPECT_NEAR(23 / 42.0, bounds[1], BOUNDS_EPSILON);
@@ -48,7 +56,7 @@ TEST(Greedy2DTest, test_generate_cut_1)
     if (rval) FAIL();
 }
 
-TEST(Greedy2DTest, test_generate_cut_2)
+TEST(Infinity2DTest, test_generate_cut_2)
 {
     int rval = 0;
     double bounds[100];
@@ -61,8 +69,10 @@ TEST(Greedy2DTest, test_generate_cut_2)
             1.0, -1.0
     };
 
-    rval = GREEDY_2D_generate_cut(rays, 5, f, bounds);
-    abort_if(rval, "GREEDY_2D_generate_cut failed");
+    const struct MultiRowModel model = {f , rays, 5, 2};
+
+    rval = INFINITY_2D_generate_cut(&model, bounds);
+    abort_if(rval, "INFINITY_2D_generate_cut failed");
 
     EXPECT_NEAR(0.5, bounds[0], BOUNDS_EPSILON);
     EXPECT_NEAR(0.5, bounds[1], BOUNDS_EPSILON);
@@ -74,15 +84,17 @@ TEST(Greedy2DTest, test_generate_cut_2)
     if (rval) FAIL();
 }
 
-TEST(Greedy2DTest, test_generate_cut_3)
+TEST(Infinity2DTest, test_generate_cut_3)
 {
     int rval = 0;
     double bounds[100];
     double f[] = {5 / 22.0, 0.0};
     double rays[] = {-1 / 22.0, 0.0, 0.0, 1 / 18.0, 1 / 22.0, 0.0};
 
-    rval = GREEDY_2D_generate_cut(rays, 3, f, bounds);
-    abort_if(rval, "GREEDY_2D_generate_cut failed");
+    const struct MultiRowModel model = {f , rays, 3, 2};
+
+    rval = INFINITY_2D_generate_cut(&model, bounds);
+    abort_if(rval, "INFINITY_2D_generate_cut failed");
 
     EXPECT_NEAR(5.0, bounds[0], BOUNDS_EPSILON);
     EXPECT_NEAR(17.0, bounds[2], BOUNDS_EPSILON);
@@ -92,7 +104,7 @@ TEST(Greedy2DTest, test_generate_cut_3)
     if (rval) FAIL();
 }
 
-TEST(Greedy2DTest, scale_to_chull_test)
+TEST(Infinity2DTest, scale_to_chull_test)
 {
     int rval = 0;
 
@@ -140,7 +152,7 @@ CLEANUP:
     if(rval) FAIL();
 }
 
-TEST(Greedy2DTest, scale_to_chull_test_2)
+TEST(Infinity2DTest, scale_to_chull_test_2)
 {
     int rval = 0;
 
@@ -173,7 +185,7 @@ TEST(Greedy2DTest, scale_to_chull_test_2)
     if(rval) FAIL();
 }
 
-TEST(Greedy2DTest, find_containing_cone_test)
+TEST(Infinity2DTest, find_containing_cone_test)
 {
     int rval = 0;
 
@@ -213,7 +225,7 @@ TEST(Greedy2DTest, find_containing_cone_test)
     if(rval) FAIL();
 }
 
-TEST(Greedy2DTest, find_containing_cone_test_2)
+TEST(Infinity2DTest, find_containing_cone_test_2)
 {
     int rval = 0;
 
@@ -232,7 +244,7 @@ TEST(Greedy2DTest, find_containing_cone_test_2)
     if(rval) FAIL();
 }
 
-TEST(Greedy2DTest, find_containing_cone_test_3)
+TEST(Infinity2DTest, find_containing_cone_test_3)
 {
     int rval = 0;
 
@@ -257,7 +269,7 @@ TEST(Greedy2DTest, find_containing_cone_test_3)
     if(rval) FAIL();
 }
 
-//TEST(Greedy2DTest, test_generate_cut_4)
+//TEST(Infinity2DTest, test_generate_cut_4)
 //{
 //    int rval = 0;
 //    double bounds[100];
@@ -265,8 +277,8 @@ TEST(Greedy2DTest, find_containing_cone_test_3)
 //    double rays[] = {0, -1 / 38.0, -1 / 22.0, -1 / 38.0, 0, 1 / 38.0, -1 / 22.0,
 //            0, 1 / 22.0, 0, 1 / 22.0, 1 / 38.0};
 //
-//    rval = GREEDY_2D_generate_cut(rays, 6, f, bounds);
-//    abort_if(rval, "GREEDY_2D_generate_cut failed");
+//    rval = INFINITY_2D_generate_cut(rays, 6, f, bounds);
+//    abort_if(rval, "INFINITY_2D_generate_cut failed");
 //
 //    EXPECT_NEAR(20.0, bounds[0], BOUNDS_EPSILON);
 //    EXPECT_NEAR(20.0, bounds[1], BOUNDS_EPSILON);
@@ -279,7 +291,7 @@ TEST(Greedy2DTest, find_containing_cone_test_3)
 //    if (rval) FAIL();
 //}
 //
-//TEST(Greedy2DTest, test_generate_cut_5)
+//TEST(Infinity2DTest, test_generate_cut_5)
 //{
 //    int rval = 0;
 //    double bounds[100];
@@ -291,8 +303,8 @@ TEST(Greedy2DTest, find_containing_cone_test_3)
 //            0.04545454545454545581, 0.00000000000000000000,
 //            0.04545454545454545581, 0.02631578947368420907};
 //
-//    rval = GREEDY_2D_generate_cut(rays, 6, f, bounds);
-//    abort_if(rval, "GREEDY_2D_generate_cut failed");
+//    rval = INFINITY_2D_generate_cut(rays, 6, f, bounds);
+//    abort_if(rval, "INFINITY_2D_generate_cut failed");
 //
 //    EXPECT_NEAR(20.0, bounds[0], BOUNDS_EPSILON);
 //    EXPECT_NEAR(20.0, bounds[1], BOUNDS_EPSILON);
@@ -307,7 +319,7 @@ TEST(Greedy2DTest, find_containing_cone_test_3)
 //
 //
 //
-//TEST(Greedy2DTest, get_peak_ray_test_1)
+//TEST(Infinity2DTest, get_peak_ray_test_1)
 //{
 //    int rval = 0;
 //
@@ -340,7 +352,7 @@ TEST(Greedy2DTest, find_containing_cone_test_3)
 //    if(rval) FAIL();
 //}
 //
-//TEST(Greedy2DTest, get_peak_ray_test_2)
+//TEST(Infinity2DTest, get_peak_ray_test_2)
 //{
 //    int rval = 0;
 //
@@ -383,7 +395,7 @@ TEST(Greedy2DTest, find_containing_cone_test_3)
 //    if(rval) FAIL();
 //}
 //
-//TEST(Greedy2DTest, get_peak_ray_test_3)
+//TEST(Infinity2DTest, get_peak_ray_test_3)
 //{
 //    int rval = 0;
 //
@@ -401,7 +413,7 @@ TEST(Greedy2DTest, find_containing_cone_test_3)
 //    if(rval) FAIL();
 //}
 //
-//TEST(Greedy2DTest, nearest_lattice_point_test_1)
+//TEST(Infinity2DTest, nearest_lattice_point_test_1)
 //{
 //    int rval = 0;
 //
@@ -440,7 +452,7 @@ TEST(Greedy2DTest, find_containing_cone_test_3)
 //    if(rval) FAIL();
 //}
 //
-//TEST(Greedy2DTest, nearest_lattice_point_test_2)
+//TEST(Infinity2DTest, nearest_lattice_point_test_2)
 //{
 //    int rval = 0;
 //
@@ -460,7 +472,7 @@ TEST(Greedy2DTest, find_containing_cone_test_3)
 //    if(rval) FAIL();
 //}
 //
-//TEST(Greedy2DTest, find_normal_test)
+//TEST(Infinity2DTest, find_normal_test)
 //{
 //    int rval = 0;
 //
@@ -496,7 +508,7 @@ TEST(Greedy2DTest, find_containing_cone_test_3)
 //    if(rval) FAIL();
 //}
 //
-//TEST(Greedy2DTest, check_rays_parallel)
+//TEST(Infinity2DTest, check_rays_parallel)
 //{
 //    double r1[] = {1.0, 2.0};
 //    double r2[] = {2.0, 4.0};
@@ -521,7 +533,7 @@ TEST(Greedy2DTest, find_containing_cone_test_3)
 //    EXPECT_FALSE(match);
 //}
 //
-//TEST(Greedy2DTest, find_ray)
+//TEST(Infinity2DTest, find_ray)
 //{
 //    double rays[] = {1.0, 2.0, -1.0, 0.0, -5.0, -5.0};
 //    int nrays = 3;
@@ -557,7 +569,7 @@ TEST(Greedy2DTest, find_containing_cone_test_3)
 //    EXPECT_FALSE(found);
 //}
 //
-//TEST(Greedy2DTest, extract_rays_from_two_sparse_rows_test)
+//TEST(Infinity2DTest, extract_rays_from_two_sparse_rows_test)
 //{
 //    int rval = 0;
 //

@@ -77,7 +77,7 @@
 
 extern int BOOST_VAR;
 extern double BOOST_FACTOR;
-extern int DUMP_CUT;
+extern int SHOULD_DUMP_CUTS;
 extern int DUMP_CUT_N;
 
 extern int ENABLE_LIFTING;

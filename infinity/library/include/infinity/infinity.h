@@ -13,25 +13,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+#ifndef MULTIROW_INFINITY_H
+#define MULTIROW_INFINITY_H
 
-#ifndef MULTIROW_GREEDY_2D_H
-#define MULTIROW_GREEDY_2D_H
+#include <multirow/cg.h>
+#include <multirow/lp.h>
 
-int GREEDY_2D_bound(const double *rays,
-                    const double *bounds,
-                    int nrays,
-                    const double *f,
-                    const double *p,
-                    double *epsilon,
-                    double *v1,
-                    double *v2,
-                    int *index1,
-                    int *index2);
+int INFINITY_generate_cut(struct Tableau *tableau, struct Row *cut);
 
-int GREEDY_2D_generate_cut(const double *rays,
-                           int nrays,
-                           const double *f,
-                           double *bounds);
-
-
-#endif //MULTIROW_GREEDY_2D_H
+#endif //MULTIROW_INFINITY_H

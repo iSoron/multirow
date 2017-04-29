@@ -25,14 +25,14 @@
 #include <multirow/stats.h>
 #include <multirow/util.h>
 
-#include <infinity/greedy.h>
+#include <infinity/infinity.h>
 
 int ENABLE_LIFTING = 0;
 
 int MIN_N_ROWS = 2;
 int MAX_N_ROWS = 2;
 
-int DUMP_CUT = 0;
+int SHOULD_DUMP_CUTS = 0;
 int DUMP_CUT_N = 0;
 
 int GENERATE_MIR = 0;
@@ -415,8 +415,8 @@ int main(int argc,
             {
                 log_info("Adding greedy intersection cuts (%d rows)...\n", k);
 
-                rval = CG_add_multirow_cuts(cg, k, (MultirowGeneratorCallback)
-                                            GREEDY_generate_cut);
+                rval = CG_add_multirow_cuts(cg, k,
+                        (MultiRowGeneratorCallback) INFINITY_generate_cut);
                 abort_if(rval, "CG_add_multirow_cuts failed");
             }
 

@@ -1,40 +1,17 @@
-[      0.00] multirow (git-4d20687d04e75dc63c7bb84cbbfeb2261c6a6ab2)
-[      0.00] mf-hpc-1-7.local 2017-03-11 22:40
-[      0.00] Compile-time parameters:
-[      0.00]     EPSILON: 1.000000e-08
-[      0.00]     GREEDY_BIG_E: 1.000000e+03
-[      0.00]     GREEDY_MAX_GAP: 1.000000e-04
-[      0.00] Command line arguments:
-[      0.00]     ../build/infinity.run --mir --greedy --problem instances/harp2.pre.mps.gz --basis bases/harp2.pre.bas --log 2row-cont/harp2.pre.log --stats 2row-cont/harp2.pre.yaml --solution solutions/harp2.pre.x 
+[      0.00] Reading problem instances/harp2.pre.mps.gz...
 [      0.00]     92 rows, 1049 cols
 [      0.00] Storing column types...
 [      0.00] Relaxing integrality...
 [      0.00] Disabling presolve...
-[      0.01] Optimizing...
-[      0.01]     opt = -74325169.345138
-[      0.01] Reading tableau rows...
+[      0.00] Reading basis from file bases/harp2.pre.bas...
+[      0.00] Optimizing...
+[      0.00]     opt = -74325169.345138
+[      0.00] Reading tableau rows...
+[      0.01] Reading solution from solutions/harp2.pre.x
 [      0.01] Adding MIR cuts...
 [      0.01]     opt = -74315010.901620
-[      0.01]     opt = -74314964.934360
-[      0.01]     opt = -74313681.237627
-[      0.01]     opt = -74313582.579756
 [      0.01]     opt = -74293298.124331
-[      0.01]     opt = -74292514.336406
-[      0.01]     opt = -74281276.834560
-[      0.01]     opt = -74278931.707997
-[      0.01]     opt = -74274793.244156
-[      0.01]     opt = -74268371.376509
-[      0.01]     opt = -74264893.739723
-[      0.01]     opt = -74240861.206190
-[      0.01]     opt = -74222594.677631
-[      0.01] Optimizing...
-[      0.01]     opt = -74222594.677631
-[      0.01] Adding greedy intersection cuts (2 rows)...
-[      0.01]     Finding combinations...
-[      0.02]          483 combinations [0.05]
-[      0.15]     opt = -74222542.959159
-[      0.45]     opt = -74222502.242291
-[      1.44]     opt = -74222380.900680
-[      2.56] Optimizing...
-[      2.56]     opt = -74222380.900680
-[      2.56] Writing stats to file 2row-cont/harp2.pre.yaml...
+[      0.01] Cut cuts off known integral solution:  -0.26968016 >=  -0.42512401 (0) (/Users/axavier/.shared/research/multirow/multirow/src/cg.c:319)
+[      0.01] check_cut failed (1) (/Users/axavier/.shared/research/multirow/multirow/src/cg.c:339)
+[      0.01] add_cut failed (1) (/Users/axavier/.shared/research/multirow/multirow/src/cg.c:644)
+[      0.01] CG_add_single_row_cuts failed (1) (/Users/axavier/.shared/research/multirow/infinity/benchmark/src/main.c:397)

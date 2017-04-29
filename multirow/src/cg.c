@@ -31,27 +31,27 @@ static int select_rows(struct CG *cg, int *row_selected)
 
     long histogram[100] = {0};
 
-    for(int i = 0; i < cg->nrows; i++)
+    for (int i = 0; i < cg->nrows; i++)
     {
         row_selected[i] = 1;
         struct Row *r1 = cg->tableau_rows[i];
 
-        if(r1->head < 0 || cg->column_types[r1->head] != MILP_INTEGER)
+        if (r1->head < 0 || cg->column_types[r1->head] != MILP_INTEGER)
         {
             row_selected[i] = 0;
             continue;
         }
 
         double dist = fabs(0.5 - frac(r1->pi_zero));
-        for(int k = 0; k < 100; k++)
-           if(dist <= (k / 100.0))
-               histogram[k]++;
+        for (int k = 0; k < 100; k++)
+            if (dist <= (k / 100.0))
+                histogram[k]++;
     }
 
     double dist_cutoff = 0.5;
-    for(int k = 0; k < 100; k++)
+    for (int k = 0; k < 100; k++)
     {
-        if(histogram[k] > MAX_SELECTED_ROWS)
+        if (histogram[k] > MAX_SELECTED_ROWS)
         {
             dist_cutoff = k / 100.0;
             break;
@@ -59,14 +59,14 @@ static int select_rows(struct CG *cg, int *row_selected)
     }
 
     int selected_count = 0;
-    for(int i = 0; i < cg->nrows; i++)
+    for (int i = 0; i < cg->nrows; i++)
     {
-        if(!row_selected[i]) continue;
+        if (!row_selected[i]) continue;
 
         struct Row *r1 = cg->tableau_rows[i];
         double dist = fabs(0.5 - frac(r1->pi_zero));
 
-        if(dist > dist_cutoff || selected_count >= MAX_SELECTED_ROWS)
+        if (dist > dist_cutoff || selected_count >= MAX_SELECTED_ROWS)
         {
             row_selected[i] = 0;
             continue;
@@ -79,11 +79,8 @@ CLEANUP:
     return rval;
 }
 
-static int next_combination(int n,
-                            int k,
-                            int *array,
-                            int inc_index,
-                            int *finished)
+static int
+next_combination(int n, int k, int *array, int inc_index, int *finished)
 {
     int i;
     int rval = 0;
@@ -91,13 +88,13 @@ static int next_combination(int n,
     array[inc_index]++;
     *finished = 0;
 
-    for(i = inc_index; i < k; i++)
+    for (i = inc_index; i < k; i++)
     {
-        if(array[i] < n - i)
+        if (array[i] < n - i)
             break;
 
-        if(i+1 < k)
-            array[i+1]++;
+        if (i + 1 < k)
+            array[i + 1]++;
         else
         {
             *finished = 1;
@@ -105,25 +102,21 @@ static int next_combination(int n,
         }
     }
 
-    for(int j = 1; j <= i; j++)
+    for (int j = 1; j <= i; j++)
         array[i - j] = array[i] + j;
 
     return 0;
 }
 
-
-static int ray_norm(int dim,
-                    const double *ray,
-                    double *norm)
+static int ray_norm(int dim, const double *ray, double *norm)
 {
     *norm = 0;
 
-    for(int i = 0; i < dim; i++)
+    for (int i = 0; i < dim; i++)
         *norm += fabs(ray[i]);
 
     return 0;
 }
-
 
 /*
  * Checks whether two rays are parallel. Also returns the scaling factor,
@@ -157,16 +150,17 @@ static int check_rays_parallel(int dim,
     }
     else
     {
-        for(int i = 0; i < dim; i++)
+        for (int i = 0; i < dim; i++)
         {
-            if(DOUBLE_sgn(r1[i]) != DOUBLE_sgn(r2[i]) ||
+            if (DOUBLE_sgn(r1[i]) != DOUBLE_sgn(r2[i]) ||
                     DOUBLE_neq(r1[i] * r2_norm, r2[i] * r1_norm))
             {
                 *match = 0;
                 break;
             }
 
-            log_verbose("        %.12lf equals %.12lf\n", r1[i] * r2_norm, r2[i] * r1_norm);
+            log_verbose("        %.12lf equals %.12lf\n", r1[i] * r2_norm,
+                    r2[i] * r1_norm);
         }
     }
 
@@ -176,9 +170,7 @@ CLEANUP:
     return rval;
 }
 
-
-static void print_row(const struct CG *cg,
-                      const struct Row *row)
+static void print_row(const struct CG *cg, const struct Row *row)
 {
     double *x = cg->integral_solution;
     double *y = cg->basic_solution;
@@ -195,10 +187,8 @@ static void print_row(const struct CG *cg,
     time_printf("    <= %20.6lf [%d]\n", row->pi_zero, row->head);
 }
 
-
-static int evaluate_row_pair(const struct Row *row1,
-                             const struct Row *row2,
-                             double *score)
+static int
+evaluate_row_pair(const struct Row *row1, const struct Row *row2, double *score)
 {
     int rval = 0;
 
@@ -217,7 +207,7 @@ static int evaluate_row_pair(const struct Row *row1,
         if (i2 < row2->nz)
             idx2 = row2->indices[i2];
 
-        if(idx1 == idx2) hit++;
+        if (idx1 == idx2) hit++;
 
         int idx_min = min(idx1, idx2);
 
@@ -230,14 +220,12 @@ static int evaluate_row_pair(const struct Row *row1,
 
     *score = (hit * 2.0) / (row1->nz + row2->nz);
 
-    CLEANUP:
+CLEANUP:
     return rval;
 }
 
-static double replace_x(const double *pi,
-                        const int *indices,
-                        int nz,
-                        const double *x)
+static double
+replace_x(const double *pi, const int *indices, int nz, const double *x)
 {
     double lhs = 0;
 
@@ -247,7 +235,7 @@ static double replace_x(const double *pi,
         int idx = indices[i];
 
         if (!DOUBLE_iszero(pii) && !DOUBLE_iszero(x[idx]))
-            log_verbose("    %12.8lf * %12.8lf (x%d)\n", pii, x[idx], idx);
+                log_verbose("    %12.8lf * %12.8lf (x%d)\n", pii, x[idx], idx);
 
         lhs += pii * x[idx];
     }
@@ -255,10 +243,7 @@ static double replace_x(const double *pi,
     return lhs;
 }
 
-
-static int copy_solution(struct CG *cg,
-                         double *from,
-                         double **to)
+static int copy_solution(struct CG *cg, double *from, double **to)
 {
     int rval = 0;
     int ncols = LP_get_num_cols(cg->lp);
@@ -275,9 +260,7 @@ CLEANUP:
     return rval;
 }
 
-
-static int check_cut(struct CG *cg,
-                     struct Row *cut)
+static int check_cut(struct CG *cg, struct Row *cut)
 {
     int rval = 0;
 
@@ -286,7 +269,7 @@ static int check_cut(struct CG *cg,
         time_printf("Checking cut:\n");
         for (int i = 0; i < cut->nz; i++)
         {
-            if(DOUBLE_iszero(cg->integral_solution[cut->indices[i]])) continue;
+            if (DOUBLE_iszero(cg->integral_solution[cut->indices[i]])) continue;
             time_printf("    %12.8lf x%d", cut->pi[i], cut->indices[i]);
             if (cg->integral_solution)
                 printf(" (=%12.8lf)", cg->integral_solution[cut->indices[i]]);
@@ -300,11 +283,11 @@ static int check_cut(struct CG *cg,
         log_verbose("Basic solution check:\n");
 
         double lhs = replace_x(cut->pi, cut->indices, cut->nz,
-                               cg->basic_solution);
+                cg->basic_solution);
 
         log_verbose("    %.8lf > %.8lf\n", lhs, cut->pi_zero);
         abort_iff(!DOUBLE_geq(lhs, cut->pi_zero), "Cut fails to cut "
-                  "basic solution: %12.8lf < %12.8lf", lhs, cut->pi_zero);
+                "basic solution: %12.8lf < %12.8lf", lhs, cut->pi_zero);
     }
 
     if (cg->integral_solution)
@@ -312,7 +295,7 @@ static int check_cut(struct CG *cg,
         log_verbose("Integral solution check:\n");
 
         double lhs = replace_x(cut->pi, cut->indices, cut->nz,
-                               cg->integral_solution);
+                cg->integral_solution);
 
         log_verbose("    %.8lf <= %.8lf\n", lhs, cut->pi_zero);
         abort_iff(!DOUBLE_leq(lhs, cut->pi_zero), "Cut cuts off known integral "
@@ -323,10 +306,7 @@ CLEANUP:
     return rval;
 }
 
-
-static int add_cut(struct CG *cg,
-                   struct Row *cut,
-                   int *ignored)
+static int add_cut(struct CG *cg, struct Row *cut, int *ignored)
 {
     int rval;
     double *x = 0;
@@ -338,13 +318,12 @@ static int add_cut(struct CG *cg,
     rval = check_cut(cg, cut);
     abort_if(rval, "check_cut failed");
 
-    lhs = replace_x(cut->pi, cut->indices, cut->nz,
-                           cg->current_solution);
+    lhs = replace_x(cut->pi, cut->indices, cut->nz, cg->current_solution);
 
     *ignored = 0;
     STATS_increment_generated_cuts();
 
-    if(DOUBLE_leq(lhs, cut->pi_zero))
+    if (DOUBLE_leq(lhs, cut->pi_zero))
     {
         log_verbose("Ignoring cut (%12.8lf <= %12.8lf)\n", lhs, cut->pi_zero);
         *ignored = 1;
@@ -363,12 +342,12 @@ static int add_cut(struct CG *cg,
         rval = LP_get_obj_val(cg->lp, &obj);
         abort_if(rval, "LP_get_obj_val failed");
 
-        if(DOUBLE_neq(obj, cg->last_obj_value))
+        if (DOUBLE_neq(obj, cg->last_obj_value))
             log_info("    opt = %lf\n", obj);
 
         cg->last_obj_value = obj;
 
-        x = (double*) malloc(cg->ncols * sizeof(double));
+        x = (double *) malloc(cg->ncols * sizeof(double));
         abort_if(!x, "could not allocate x");
 
         rval = LP_get_x(cg->lp, x);
@@ -381,7 +360,7 @@ static int add_cut(struct CG *cg,
     }
 
 CLEANUP:
-    if(x) free(x);
+    if (x) free(x);
     return rval;
 }
 
@@ -419,43 +398,40 @@ CLEANUP:
     return 0;
 }
 
-int CG_extract_rays_from_rows(int nrows,
-                              struct Row **rows,
-                              double *rays,
-                              int *nrays,
-                              int *variable_to_ray,
-                              double *ray_scale,
-                              int *indices,
-                              int *nz)
+int CG_extract_rays_from_tableau(const struct Tableau *tableau,
+                                 struct RayMap *map)
 {
     int rval = 0;
 
-    (*nz) = 0;
-    (*nrays) = 0;
+    int nrows = tableau->nrows;
+    double *rays = map->rays;
+    struct Row **rows = tableau->rows;
+
+    map->nvars = 0;
+    map->nrays = 0;
 
     int *i = 0;
     int *idx = 0;
 
-
-    i = (int*) malloc(nrows * sizeof(int));
-    idx = (int*) malloc(nrows * sizeof(int));
+    i = (int *) malloc(nrows * sizeof(int));
+    idx = (int *) malloc(nrows * sizeof(int));
     abort_if(!i, "could not allocate i");
     abort_if(!idx, "could not allocate idx");
 
-    for(int j = 0; j < nrows; j++)
+    for (int j = 0; j < nrows; j++)
         i[j] = 0;
 
     while (1)
     {
-        double *r = &rays[nrows * (*nrays)];
+        double *r = &rays[nrows * (map->nrays)];
 
         int idx_min = INT_MAX;
 
-        for(int j = 0; j < nrows; j++)
+        for (int j = 0; j < nrows; j++)
         {
             r[j] = 0.0;
 
-            if(i[j] < rows[j]->nz)
+            if (i[j] < rows[j]->nz)
                 idx[j] = rows[j]->indices[i[j]];
             else
                 idx[j] = INT_MAX;
@@ -463,18 +439,18 @@ int CG_extract_rays_from_rows(int nrows,
             idx_min = min(idx_min, idx[j]);
         }
 
-        if(idx_min == INT_MAX)
+        if (idx_min == INT_MAX)
             break;
 
-        for(int j = 0; j < nrows; j++)
+        for (int j = 0; j < nrows; j++)
         {
-            if(idx[j] > idx_min) continue;
+            if (idx[j] > idx_min) continue;
             r[j] = -rows[j]->pi[i[j]];
             i[j]++;
         }
 
-        for(int j = 0; j < nrows; j++)
-            if(idx_min == rows[j]->head)
+        for (int j = 0; j < nrows; j++)
+            if (idx_min == rows[j]->head)
                 goto NEXT_RAY;
 
         int found;
@@ -483,67 +459,65 @@ int CG_extract_rays_from_rows(int nrows,
 
 
         log_verbose("  extracted ray (%d):\n", idx_min);
-        for(int j=0; j < nrows; j++)
-            log_verbose("    r[%d] = %.12lf\n", j, r[j]);
+        for (int j = 0; j < nrows; j++)
+                log_verbose("    r[%d] = %.12lf\n", j, r[j]);
 
-        rval = CG_find_ray(nrows, rays, *nrays, r, &found, &scale, &ray_index);
+        rval = CG_find_ray(nrows, rays, map->nrays, r, &found, &scale,
+                &ray_index);
         abort_if(rval, "CG_find_ray failed");
 
         if (!found)
         {
             log_verbose("  ray is new\n");
             scale = 1.0;
-            ray_index = (*nrays)++;
+            ray_index = (map->nrays)++;
         }
         else
         {
             log_verbose("  ray equals:\n");
             double *q = &rays[ray_index * nrows];
-            for(int j=0; j < nrows; j++)
-                log_verbose("    r[%d] = %.12lf\n", j, q[j]);
+            for (int j = 0; j < nrows; j++)
+                    log_verbose("    r[%d] = %.12lf\n", j, q[j]);
         }
 
-        ray_scale[(*nz)] = scale;
-        indices[(*nz)] = idx_min;
-        variable_to_ray[(*nz)] = ray_index;
-        (*nz)++;
+        map->ray_scale[map->nvars] = scale;
+        map->indices[map->nvars] = idx_min;
+        map->variable_to_ray[map->nvars] = ray_index;
+        map->nvars++;
 
-    NEXT_RAY:
-        ;
+    NEXT_RAY:;
     }
 
-    for(int j = 0; j < *nrays; j++)
+    for (int j = 0; j < map->nrays; j++)
     {
         double *r = &rays[nrows * j];
 
         double max_scale = 0.0;
 
-        for(int k = 0; k < *nz; k++)
+        for (int k = 0; k < map->nvars; k++)
         {
-            if(variable_to_ray[k] != j) continue;
-            if(ray_scale[k] < max_scale) continue;
-            max_scale = ray_scale[k];
+            if (map->variable_to_ray[k] != j) continue;
+            if (map->ray_scale[k] < max_scale) continue;
+            max_scale = map->ray_scale[k];
         }
 
         abort_if(max_scale == 0.0, "max_scale is zero");
 
-        for(int k = 0; k < *nz; k++)
-            if(variable_to_ray[k] == j) ray_scale[k] /= max_scale;
+        for (int k = 0; k < map->nvars; k++)
+            if (map->variable_to_ray[k] == j)
+                map->ray_scale[k] /= max_scale;
 
-        for(int k = 0; k < nrows; k++)
+        for (int k = 0; k < nrows; k++)
             r[k] *= max_scale;
     }
 
 CLEANUP:
-    if(idx) free(idx);
-    if(i) free(i);
+    if (idx) free(idx);
+    if (i) free(i);
     return rval;
 }
 
-
-int CG_init(struct LP *lp,
-            char *column_types,
-            struct CG *cg)
+int CG_init(struct LP *lp, char *column_types, struct CG *cg)
 {
     int rval = 0;
 
@@ -581,7 +555,7 @@ int CG_init(struct LP *lp,
     abort_if(!cg->tableau_rows, "could not allocate cg->tableau_rows");
 
     rval = LP_get_tableau(lp, cg->tableau_rows, cg->cstat, cg->rstat, cg->ub,
-                          cg->lb);
+            cg->lb);
     abort_if(rval, "LP_get_tableau failed");
 
     cg_initial_time = get_user_time();
@@ -589,7 +563,6 @@ int CG_init(struct LP *lp,
 CLEANUP:
     return rval;
 }
-
 
 void CG_free(struct CG *cg)
 {
@@ -613,9 +586,7 @@ void CG_free(struct CG *cg)
     free(cg);
 }
 
-
-int CG_add_single_row_cuts(struct CG *cg,
-                           SingleRowGeneratorCallback generate)
+int CG_add_single_row_cuts(struct CG *cg, SingleRowGeneratorCallback generate)
 {
     int rval = 0;
 
@@ -663,80 +634,79 @@ int estimate_multirow_cut_count(struct CG *cg,
 
     *total_count = 0;
 
-    row_indices = (int*) malloc(nrows * sizeof(int));
+    row_indices = (int *) malloc(nrows * sizeof(int));
     abort_if(!row_indices, "could not allocate row_indices");
 
-    for(int i = 0; i < nrows; i++)
+    for (int i = 0; i < nrows; i++)
         row_indices[i] = nrows - i - 1;
 
-    for(int i = 0; i < cg->nrows * cg->nrows; i++)
+    for (int i = 0; i < cg->nrows * cg->nrows; i++)
         row_affinity[i] = -1;
-    
+
     do
     {
         int inc_index = 0;
         int is_rhs_integer = 1;
         int valid_combination = 1;
 
-        for(int i = 0; i < nrows; i++)
+        for (int i = 0; i < nrows; i++)
         {
             struct Row *r = cg->tableau_rows[row_indices[i]];
 
-            if(!row_selected[row_indices[i]])
+            if (!row_selected[row_indices[i]])
             {
                 valid_combination = 0;
                 inc_index = i;
             }
 
             double df = fabs(frac(r->pi_zero) - 0.5);
-            if(df < INTEGRALITY_THRESHOLD) is_rhs_integer = 0;
+            if (df < INTEGRALITY_THRESHOLD) is_rhs_integer = 0;
         }
 
-        if(is_rhs_integer) valid_combination = 0;
+        if (is_rhs_integer) valid_combination = 0;
 
-        for(int i = 0; valid_combination && i < nrows; i++)
+        for (int i = 0; valid_combination && i < nrows; i++)
         {
-            for(int j = i+1; valid_combination && j < nrows; j++)
+            for (int j = i + 1; valid_combination && j < nrows; j++)
             {
-               int i1 = row_indices[i];
-               int i2 = row_indices[j];
-               if(i2 < i1) swap(i1, i2, int);
+                int i1 = row_indices[i];
+                int i2 = row_indices[j];
+                if (i2 < i1) swap(i1, i2, int);
 
-               int k = cg->nrows * i1 + i2;
+                int k = cg->nrows * i1 + i2;
 
-               if(row_affinity[k] < 0)
-               {
-                   struct Row *row1 = cg->tableau_rows[i1]; 
-                   struct Row *row2 = cg->tableau_rows[i2]; 
-                   double score;
+                if (row_affinity[k] < 0)
+                {
+                    struct Row *row1 = cg->tableau_rows[i1];
+                    struct Row *row2 = cg->tableau_rows[i2];
+                    double score;
 
-                   rval = evaluate_row_pair(row1, row2, &score);
-                   abort_if(rval, "evaluate_row_pair failed");
+                    rval = evaluate_row_pair(row1, row2, &score);
+                    abort_if(rval, "evaluate_row_pair failed");
 
-                   row_affinity[k] = 1;
-                   if(score < score_cutoff) row_affinity[k] = 0;
-               }
+                    row_affinity[k] = 1;
+                    if (score < score_cutoff) row_affinity[k] = 0;
+                }
 
-               if(!row_affinity[k])
-               {
-                   valid_combination = 0;
-                   goto NEXT_COMBINATION;
-               }
+                if (!row_affinity[k])
+                {
+                    valid_combination = 0;
+                    goto NEXT_COMBINATION;
+                }
             }
         }
 
-        if(valid_combination)
+        if (valid_combination)
         {
             (*total_count)++;
         }
 
     NEXT_COMBINATION:
         next_combination(cg->nrows, nrows, row_indices, inc_index, &finished);
-    }
-    while(!finished);
+    } while (!finished);
 
 CLEANUP:
-    if(row_indices) free(row_indices);
+    if (row_indices) free(row_indices);
     return rval;
 }
 
@@ -756,10 +726,9 @@ int cut_dynamism(struct Row *cut, double *dynamism)
     return 0;
 }
 
-
 int CG_add_multirow_cuts(struct CG *cg,
                          int nrows,
-                         MultirowGeneratorCallback generate)
+                         MultiRowGeneratorCallback generate)
 {
     int rval = 0;
     int *row_indices = 0;
@@ -771,10 +740,10 @@ int CG_add_multirow_cuts(struct CG *cg,
     long count = 0;
     long total_count = 0;
 
-    row_indices = (int*) malloc(nrows * sizeof(int));
+    row_indices = (int *) malloc(nrows * sizeof(int));
     rows = (struct Row **) malloc(nrows * sizeof(struct Row *));
-    row_affinity = (int*) malloc((cg->nrows * cg->nrows) * sizeof(int));
-    row_selected = (int*) malloc(cg->nrows * sizeof(int));
+    row_affinity = (int *) malloc((cg->nrows * cg->nrows) * sizeof(int));
+    row_selected = (int *) malloc(cg->nrows * sizeof(int));
 
     abort_if(!row_indices, "could not allocate row_indices");
     abort_if(!rows, "could not allocate rows");
@@ -785,24 +754,25 @@ int CG_add_multirow_cuts(struct CG *cg,
     abort_if(rval, "select_rows failed");
 
     log_info("    Finding combinations...\n");
-    for(double cutoff = 0.05; cutoff <= 1.0; cutoff += 0.05) 
+    for (double cutoff = 0.05; cutoff <= 1.0; cutoff += 0.05)
     {
         double cg_current_time = get_user_time() - cg_initial_time;
-        if(cg_current_time > CG_TIMEOUT) break;
+        if (cg_current_time > CG_TIMEOUT) break;
 
-        rval = estimate_multirow_cut_count(cg, nrows, row_selected, row_affinity, &total_count, cutoff);
+        rval = estimate_multirow_cut_count(cg, nrows, row_selected,
+                row_affinity, &total_count, cutoff);
         abort_if(rval, "estimate_two_row_cuts_count failed");
 
         log_debug("    %8d combinations [%.2lf]\n", total_count, cutoff);
 
-        if(total_count < MAX_SELECTED_COMBINATIONS)
+        if (total_count < MAX_SELECTED_COMBINATIONS)
         {
             log_info("    %8d combinations [%.2lf]\n", total_count, cutoff);
             break;
         }
     }
 
-    for(int i = 0; i < nrows; i++)
+    for (int i = 0; i < nrows; i++)
         row_indices[i] = nrows - i - 1;
 
     total_count = min(total_count, MAX_SELECTED_COMBINATIONS);
@@ -813,95 +783,96 @@ int CG_add_multirow_cuts(struct CG *cg,
     do
     {
         double cg_current_time = get_user_time() - cg_initial_time;
-        if(cg_current_time > CG_TIMEOUT) break;
+        if (cg_current_time > CG_TIMEOUT) break;
 
         int inc_index = 0;
         int is_rhs_integer = 1;
         int valid_combination = 1;
 
-        for(int i = 0; i < nrows; i++)
+        for (int i = 0; i < nrows; i++)
         {
             rows[i] = cg->tableau_rows[row_indices[i]];
 
-            if(!row_selected[row_indices[i]])
+            if (!row_selected[row_indices[i]])
             {
                 valid_combination = 0;
                 inc_index = i;
             }
 
             double df = fabs(frac(rows[i]->pi_zero) - 0.5);
-            if(df < INTEGRALITY_THRESHOLD) is_rhs_integer = 0;
+            if (df < INTEGRALITY_THRESHOLD) is_rhs_integer = 0;
         }
 
-        if(is_rhs_integer) valid_combination = 0;
+        if (is_rhs_integer) valid_combination = 0;
 
-        for(int i = 0; valid_combination && i < nrows; i++)
+        for (int i = 0; valid_combination && i < nrows; i++)
         {
 
-            for(int j = i+1; valid_combination && j < nrows; j++)
+            for (int j = i + 1; valid_combination && j < nrows; j++)
             {
-               int i1 = row_indices[i];
-               int i2 = row_indices[j];
-               if(i2 < i1) swap(i1, i2, int);
+                int i1 = row_indices[i];
+                int i2 = row_indices[j];
+                if (i2 < i1) swap(i1, i2, int);
 
-               int k = cg->nrows * i1 + i2;
+                int k = cg->nrows * i1 + i2;
 
-               abort_if(row_affinity[k] < 0, "row_affinity not computed");
-               if(!row_affinity[k]) valid_combination = 0;
+                abort_if(row_affinity[k] < 0, "row_affinity not computed");
+                if (!row_affinity[k]) valid_combination = 0;
 
-              if_verbose_level
-               {
-                   struct Row *row1 = cg->tableau_rows[i1]; 
-                   struct Row *row2 = cg->tableau_rows[i2]; 
-                   double score;
+                if_verbose_level
+                {
+                    struct Row *row1 = cg->tableau_rows[i1];
+                    struct Row *row2 = cg->tableau_rows[i2];
+                    double score;
 
-                   rval = evaluate_row_pair(row1, row2, &score);
-                   abort_if(rval, "evaluate_row_pair failed");
+                    rval = evaluate_row_pair(row1, row2, &score);
+                    abort_if(rval, "evaluate_row_pair failed");
 
-                   log_verbose("%4d %4d %.2lf\n", i1, i2, score);
-               }
+                    log_verbose("%4d %4d %.2lf\n", i1, i2, score);
+                }
             }
         }
 
-        if(valid_combination)
+        if (valid_combination)
         {
             count++;
-            if(count > MAX_SELECTED_COMBINATIONS)
+            if (count > MAX_SELECTED_COMBINATIONS)
             {
-                log_info("    maximum number of combinations reached. stopping.\n");
+                log_info(
+                        "    maximum number of combinations reached. stopping.\n");
                 break;
             }
 
-            if_debug_level
-                if(ONLY_CUT > 0 && count != ONLY_CUT)
+            if_debug_level if (ONLY_CUT > 0 && count != ONLY_CUT)
                     goto NEXT_COMBINATION;
 
             if_debug_level
             {
                 time_printf("Generating cut %d from [ ", count);
-                for(int i = 0; i < nrows; i++)
+                for (int i = 0; i < nrows; i++)
                     printf("%d ", row_indices[i]);
                 printf("]...\n");
             }
 
-            if(LOG_LEVEL == LOG_LEVEL_INFO)
+            if (LOG_LEVEL == LOG_LEVEL_INFO)
             {
                 progress_print();
                 progress_increment();
             }
-            
+
             struct Row *cut = 0;
-            
-            cut = (struct Row*) malloc(sizeof(struct Row));
+
+            cut = (struct Row *) malloc(sizeof(struct Row));
             abort_if(!cut, "could not allocate cut");
 
             cut->pi = 0;
             cut->indices = 0;
 
             double initial_time = get_user_time();
+            struct Tableau tableau = {nrows, rows, cg->column_types};
 
-            rval = generate(nrows, rows, cg->column_types, cut);
-            if(rval == ERR_NO_CUT)
+            rval = generate(&tableau, cut);
+            if (rval == ERR_NO_CUT)
             {
                 rval = 0;
                 log_verbose("combination does not yield cut\n");
@@ -917,7 +888,7 @@ int CG_add_multirow_cuts(struct CG *cg,
             rval = cut_dynamism(cut, &dynamism);
             abort_if(rval, "cut_dynamism failed");
 
-            if(dynamism > MAX_CUT_DYNAMISM)
+            if (dynamism > MAX_CUT_DYNAMISM)
             {
                 log_debug("Discarding cut (dynamism=%.2lf)\n", dynamism);
                 LP_free_row(cut);
@@ -926,7 +897,7 @@ int CG_add_multirow_cuts(struct CG *cg,
 
             int ignored;
             rval = add_cut(cg, cut, &ignored);
-            if(rval)
+            if (rval)
             {
                 log_warn("invalid cut skipped (cut %d)\n", count);
                 rval = 0;
@@ -936,39 +907,34 @@ int CG_add_multirow_cuts(struct CG *cg,
 
             }
 
-            if_debug_level if(!ignored)
-            {
-                DUMP_CUT = 1;
-                generate(nrows, rows, cg->column_types, cut);
-                DUMP_CUT = 0;
-            }
+            if_debug_level if (!ignored)
+                {
+                    SHOULD_DUMP_CUTS = 1;
+                    generate(&tableau, cut);
+                    SHOULD_DUMP_CUTS = 0;
+                }
 
             LP_free_row(cut);
         }
 
     NEXT_COMBINATION:
         next_combination(cg->nrows, nrows, row_indices, inc_index, &finished);
-    }
-    while(!finished);
+    } while (!finished);
 
 CLEANUP:
-    if(row_selected) free(row_selected);
-    if(row_affinity) free(row_affinity);
-    if(row_indices) free(row_indices);
-    if(rows) free(rows);
+    if (row_selected) free(row_selected);
+    if (row_affinity) free(row_affinity);
+    if (row_indices) free(row_indices);
+    if (rows) free(rows);
     return rval;
 }
 
-
-int CG_set_integral_solution(struct CG *cg,
-                             double *valid_solution)
+int CG_set_integral_solution(struct CG *cg, double *valid_solution)
 {
     return copy_solution(cg, valid_solution, &cg->integral_solution);
 }
 
-
-int CG_set_basic_solution(struct CG *cg,
-                          double *basic_solution)
+int CG_set_basic_solution(struct CG *cg, double *basic_solution)
 {
     int rval = 0;
 
@@ -994,28 +960,88 @@ int CG_boost_variable(int var,
     int rval = 0;
 
     int selected_ray = -1;
-    for(int j = 0; j < nz; j++)
+    for (int j = 0; j < nz; j++)
     {
-       if(indices[j] == var)
-       {
-           selected_ray = variable_to_ray[j];
-           break;
-       }
+        if (indices[j] == var)
+        {
+            selected_ray = variable_to_ray[j];
+            break;
+        }
     }
 
-    if(selected_ray < 0) goto CLEANUP;
+    if (selected_ray < 0) goto CLEANUP;
 
     double *r = &rays[nrows * selected_ray];
-    for(int k = 0; k < nrows; k++)
+    for (int k = 0; k < nrows; k++)
         r[k] *= factor;
 
-    for(int j = 0; j < nz; j++)
+    for (int j = 0; j < nz; j++)
     {
-        if(variable_to_ray[j] == selected_ray)
+        if (variable_to_ray[j] == selected_ray)
             ray_scale[j] /= factor;
     }
 
 CLEANUP:
     return rval;
 }
+
+int CG_init_ray_map(struct RayMap *map, int max_nrays, int nrows)
+{
+    int rval = 0;
+
+    map->variable_to_ray = (int *) malloc(max_nrays * sizeof(int));
+    map->indices = (int *) malloc(max_nrays * sizeof(int));
+    map->ray_scale = (double *) malloc(max_nrays * sizeof(double));
+    map->rays = (double *) malloc(nrows * max_nrays * sizeof(double));
+    abort_if(!map->variable_to_ray, "could not allocate variable_to_ray");
+    abort_if(!map->indices, "could not allocate indices");
+    abort_if(!map->ray_scale, "could not allocate ray_scale");
+    abort_if(!map->rays, "could not allocate rays");
+
+CLEANUP:
+    return rval;
+}
+
+void CG_free_ray_map(struct RayMap *map)
+{
+    if(!map) return;
+    free(map->variable_to_ray);
+    free(map->indices);
+    free(map->ray_scale);
+    free(map->rays);
+}
+
+int CG_extract_f_from_tableau(const struct Tableau *tableau, double *f)
+{
+    for (int i = 0; i < tableau->nrows; i++)
+    {
+        f[i] = frac(tableau->rows[i]->pi_zero);
+        if (DOUBLE_eq(f[i], 1.0)) f[i] = 0.0;
+    }
+
+    return 0;
+}
+
+int CG_init_model(struct MultiRowModel *model, int nrows, int max_nrays)
+{
+    int rval = 0;
+
+    model->nrays = 0;
+    model->nrows = nrows;
+    model->f = (double*) malloc(nrows * sizeof(double));
+    model->rays = (double*) malloc(max_nrays * sizeof(double));
+    abort_if(!model->f, "could not allocate f");
+    abort_if(!model->rays, "could not allocate rays");
+
+CLEANUP:
+    return rval;
+}
+
+void CG_free_model(struct MultiRowModel *model)
+{
+    if(!model) return;
+    free(model->rays);
+    free(model->f);
+}
+
 #endif // TEST_SOURCE

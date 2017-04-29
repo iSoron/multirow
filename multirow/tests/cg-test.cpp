@@ -151,8 +151,8 @@ TEST(CGTest, extract_rays_from_rows_test)
     double rays[1000];
     double ray_scale[1000];
 
-    rval = CG_extract_rays_from_rows(3, rows, rays, &nrays, variable_to_ray,
-                                     ray_scale, indices, &nz);
+    rval = CG_extract_rays_from_tableau(3, rows, rays, &nrays, variable_to_ray,
+            ray_scale, indices, &nz);
     abort_if(rval, "CG_extract_rays_from_rows failed");
 
     EXPECT_EQ(nrays, 4);

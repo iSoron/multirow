@@ -16,6 +16,8 @@
 
 #include <gtest/gtest.h>
 
+#define TEST_SOURCE
+
 extern "C" {
 #include <math.h>
 #include <multirow/lp.h>
@@ -26,7 +28,7 @@ extern "C" {
 int ENABLE_LIFTING = 0;
 int MIN_N_ROWS = 2;
 int MAX_N_ROWS = 2;
-int DUMP_CUT = 0;
+int SHOULD_DUMP_CUTS = 0;
 int DUMP_CUT_N = 0;
 
 TEST(GreedyNDTest, find_violated_cone_test)

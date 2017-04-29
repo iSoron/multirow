@@ -38,42 +38,54 @@ struct CG
     double *current_solution;
 };
 
+struct Tableau
+{
+    int nrows;
+    struct Row **rows;
+    char *column_types;
+};
+
+struct RayMap
+{
+    int nrays;
+    double *rays;
+    int *variable_to_ray;
+    double *ray_scale;
+    int *indices;
+    int nvars;
+};
+
+struct MultiRowModel
+{
+    double *f;
+    double *rays;
+    int nrays;
+    int nrows;
+};
+
 typedef int (*SingleRowGeneratorCallback)(const struct Row *row,
                                           char *column_types,
                                           struct Row *cut);
 
-typedef int (*MultirowGeneratorCallback)(int nrows,
-                                         struct Row **rows,
-                                         char *column_types,
+typedef int (*MultiRowGeneratorCallback)(const struct Tableau *tableau,
                                          struct Row *cut);
 
-int CG_init(struct LP *lp,
-            char *column_types,
-            struct CG *cg);
+int CG_init(struct LP *lp, char *column_types, struct CG *cg);
 
 void CG_free(struct CG *cg);
 
-int CG_add_single_row_cuts(struct CG *cg,
-                           SingleRowGeneratorCallback generate);
+int CG_add_single_row_cuts(struct CG *cg, SingleRowGeneratorCallback generate);
 
 int CG_add_multirow_cuts(struct CG *cg,
                          int nrows,
-                         MultirowGeneratorCallback generate);
+                         MultiRowGeneratorCallback generate);
 
-int CG_set_integral_solution(struct CG *cg,
-                             double *valid_solution);
+int CG_set_integral_solution(struct CG *cg, double *valid_solution);
 
-int CG_set_basic_solution(struct CG *cg,
-                          double *basic_solution);
+int CG_set_basic_solution(struct CG *cg, double *basic_solution);
 
-int CG_extract_rays_from_rows(int nrows,
-                              struct Row **rows,
-                              double *rays,
-                              int *nrays,
-                              int *variable_to_ray,
-                              double *ray_scale,
-                              int *indices,
-                              int *nz);
+int CG_extract_rays_from_tableau(const struct Tableau *tableau,
+                                 struct RayMap *map);
 
 int CG_boost_variable(int var,
                       double factor,
@@ -91,5 +103,15 @@ int CG_find_ray(int dim,
                 int *found,
                 double *scale,
                 int *index);
+
+int CG_init_ray_map(struct RayMap *map, int max_nrays, int nrows);
+
+void CG_free_ray_map(struct RayMap *map);
+
+int CG_extract_f_from_tableau(const struct Tableau *tableau, double *f);
+
+int CG_init_model(struct MultiRowModel *model, int nrows, int max_nrays);
+
+void CG_free_model(struct MultiRowModel *model);
 
 #endif //MULTIROW_CG_H

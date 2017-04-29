@@ -21,9 +21,9 @@
 #include <multirow/geometry.h>
 #include <multirow/double.h>
 #include <multirow/util.h>
-#include <multirow/rational.h>
+#include <multirow/cg.h>
 
-#include <infinity/greedy-2d.h>
+#include <infinity/infinity-2d.h>
 
 static int get_bounding_box(int nrows,
                             int nrays,
@@ -390,18 +390,16 @@ CLEANUP:
     return rval;
 }
 
-#ifndef TEST_SOURCE
-
-int GREEDY_2D_bound(const double *rays,
-                    const double *bounds,
-                    int nrays,
-                    const double *f,
-                    const double *p,
-                    double *epsilon,
-                    double *v1,
-                    double *v2,
-                    int *index1,
-                    int *index2)
+static int bound(const double *rays,
+                 const double *bounds,
+                 int nrays,
+                 const double *f,
+                 const double *p,
+                 double *epsilon,
+                 double *v1,
+                 double *v2,
+                 int *index1,
+                 int *index2)
 {
     int rval = 0;
 
@@ -518,19 +516,21 @@ int GREEDY_2D_bound(const double *rays,
             }
     }
 
-    CLEANUP:
+CLEANUP:
     return rval;
 }
 
 
-int GREEDY_2D_generate_cut(const double *original_rays,
-                           const int nrays,
-                           const double *f,
-                           double *bounds)
+#ifndef TEST_SOURCE
+
+
+int INFINITY_2D_generate_cut(const struct MultiRowModel *model, double *bounds)
 {
-    log_verbose("GREEDY_2D_generate_cut\n");
+    log_verbose("INFINITY_2D_generate_cut\n");
     int rval = 0;
     int count = 0;
+    int nrays = model->nrays;
+    double *f = model->f;
 
     double *scale = 0;
     double *rays = 0;
@@ -545,7 +545,7 @@ int GREEDY_2D_generate_cut(const double *original_rays,
     abort_if(!rays, "could not allocate rays");
     abort_if(!scale, "could not allocate scale");
 
-    memcpy(rays, original_rays, 2 * nrays * sizeof(double));
+    memcpy(rays, model->rays, 2 * nrays * sizeof(double));
 
     rval = scale_to_chull(rays, nrays, scale);
     abort_if(rval, "scale_to_chull failed");
@@ -581,9 +581,8 @@ int GREEDY_2D_generate_cut(const double *original_rays,
 
             log_verbose("    p=%.2lf %.2lf\n", p[0], p[1]);
 
-            rval = GREEDY_2D_bound(rays, bounds, nrays, f, p, &epsilon, v1, v2,
-                    &i1, &i2);
-            abort_if(rval, "GREEDY_2D_bound failed");
+            rval = bound(rays, bounds, nrays, f, p, &epsilon, v1, v2, &i1, &i2);
+            abort_if(rval, "bound failed");
 
             log_verbose("     epsilon=%.2lf\n", epsilon);
 
@@ -720,8 +719,6 @@ int GREEDY_2D_generate_cut(const double *original_rays,
         }
 
         if(is_split) break;
-
-
     }
 
     for(int i=0; i<nrays; i++)
