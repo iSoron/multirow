@@ -19,6 +19,8 @@
 #include <cassert>
 #include <sys/resource.h>
 #include <sys/time.h>
+#include <iostream>
+#include <iomanip>
 
 #include <onerow/params.hpp>
 #include <onerow/stats.hpp>
@@ -189,7 +191,7 @@ namespace Stats
 	{
 		timers[n_timers] = get_current_time() - current_timer_start;
 
-		time_printf("Ending timer %d: %.2lfs\n                 ", n_timers+1, timers[n_timers]);
+		time_printf("Ending timer %d: %.2lfs\n", n_timers+1, timers[n_timers]);
 
 		current_timer_start = 0;
 		n_timers++;
@@ -215,6 +217,7 @@ void time_printf(const char *fmt, ...)
 	if(initial_time == 0)
 		initial_time = get_current_time();
 
+    std::cout << std::setw(40) << Stats::input_filename << " ";
 	printf("[%10.2lf] ", get_current_time() - initial_time);
 
 	va_list args;

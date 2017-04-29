@@ -290,7 +290,7 @@ int CplexHelper::solve(bool should_end_round)
 
 	CPXgetstatstring(env, status, buffer);
 	CPXgetobjval(env, lp, &objval);
-	time_printf("    %.6lf [%s]                    \n", objval, buffer);
+	time_printf("	 %.6lf [%s]					   \n", objval, buffer);
 
 	assert(status == 1);
 
@@ -464,7 +464,7 @@ void CplexHelper::print_solution(double *x)
 {
 	for (int i = 0; i < n_cols; i++)
 		if (fabs(x[i]) > ZERO_CUTOFF)
-			time_printf("    x%d = %.6lf\n", i, x[i]);
+			time_printf("	 x%d = %.6lf\n", i, x[i]);
 }
 
 void CplexHelper::eta_reset()
@@ -476,12 +476,15 @@ void CplexHelper::eta_print()
 {
 	while (true)
 	{
-		sleep(ETA_UPDATE_INTERVAL);
+		for(int i = 0; i < ETA_UPDATE_INTERVAL; i++)
+		{
+			if(eta_count >= eta_total) goto FINISHED;
+			sleep(1);
+		}
 
 		if (eta_count == 0)
 		{
-			printf("\r\r%3.0f%%  ETA: unknown\r", 0.0);
-			fflush(stdout);
+			time_printf("%3.0f%%  ETA: unknown\n", 0.0);
 			continue;
 		}
 
@@ -497,15 +500,13 @@ void CplexHelper::eta_print()
 		time_t eta_date = eta_start + eta;
 		tm *ttm = localtime(&eta_date);
 
-		printf("\r%3.0f%%  ", 100.0 * eta_count / eta_total);
-		printf("ETA: %04d-%02d-%02d %02d:%02d:%02d  %d / %d\r",
-				ttm->tm_year + 1900, ttm->tm_mon + 1, ttm->tm_mday,
-				ttm->tm_hour, ttm->tm_min, ttm->tm_sec,
-				eta_count, eta_total);
-		fflush(stdout);
+		time_printf("%3.0f%%  ETA: %04d-%02d-%02d %02d:%02d:%02d  %d / %d\n",
+					100.0 * eta_count / eta_total,
+					ttm->tm_year + 1900, ttm->tm_mon + 1, ttm->tm_mday,
+					ttm->tm_hour, ttm->tm_min, ttm->tm_sec,
+					eta_count, eta_total);
 	}
-
-	printf("\r                                                       \r");
+FINISHED:;
 }
 
 void CplexHelper::find_good_rows()
@@ -529,5 +530,5 @@ void CplexHelper::find_good_rows()
 		delete row;
 	}
 
-	time_printf("    %d rows found\n", n_good_rows, n_rows);
+	time_printf("	 %d rows found\n", n_good_rows, n_rows);
 }

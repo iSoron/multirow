@@ -24,9 +24,6 @@
 #include <onerow/cplex_helper.tpp>
 #include <onerow/stats.hpp>
 
-#include <valgrind/callgrind.h>
-#include <gperftools/heap-profiler.h>
-
 #include <onerow/gomory_cut_generator.hpp>
 #include <onerow/mir_cut_generator.hpp>
 #include <onerow/wedge_cut_generator.hpp>
