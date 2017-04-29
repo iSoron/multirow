@@ -1,0 +1,30 @@
+input_file:
+  instances/qiu.pre.mps.gz
+sol_value:
+  0: -931.638854
+  1: -919.644028
+  2: -919.644028
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    36
+  depth:
+    0: 36
+n_generated_cuts:
+  total:
+    36
+  round:
+    1: 36
+  depth:
+    0: 36
+timers:
+  1: 0.5760
+  2: 1.0160
+cut_speed:
+  round_1: 0.0160
+  round_2: inf
+mip_value:
+  -132.873000

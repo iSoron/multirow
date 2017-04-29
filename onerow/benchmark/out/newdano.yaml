@@ -1,0 +1,36 @@
+input_file:
+  instances/newdano.pre.mps.gz
+sol_value:
+  0: 11.724138
+  1: 14.442185
+  2: 14.442185
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    52
+  depth:
+    0: 52
+n_generated_cuts:
+  total:
+    72
+  round:
+    1: 52
+    2: 20
+  depth:
+    0: 72
+trivial_lifting:
+  max_m: 0
+  average_m: 0.000000
+  integral_coefficients: 0.002313
+  slowdown: 0.000000
+timers:
+  1: 0.2800
+  2: 0.4360
+cut_speed:
+  round_1: 0.0054
+  round_2: 0.0218
+mip_value:
+  65.666700

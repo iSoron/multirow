@@ -15,6 +15,7 @@
  */
 
 #include <gtest/gtest.h>
+using namespace std;
 
 #define TEST_SOURCE
 

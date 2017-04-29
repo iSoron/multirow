@@ -1,0 +1,46 @@
+input_file:
+  instances/noswot.pre.mps.gz
+sol_value:
+  0: -43.000000
+  1: -43.000000
+  2: -43.000000
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    54
+  depth:
+    0: 49
+    1: 5
+n_generated_cuts:
+  total:
+    1089
+  round:
+    1: 49
+    2: 1040
+  depth:
+    0: 294
+    1: 207
+    2: 200
+    3: 142
+    4: 103
+    5: 72
+    6: 42
+    7: 19
+    8: 8
+    9: 2
+trivial_lifting:
+  max_m: 755
+  average_m: 31.524828
+  integral_coefficients: 0.571790
+  slowdown: 18.025587
+timers:
+  1: 0.0360
+  2: 0.5440
+cut_speed:
+  round_1: 0.0007
+  round_2: 0.0005
+mip_value:
+  -41.000000
