@@ -13,6 +13,7 @@ set(COMMON_SOURCES
     include/multirow/geometry.h
     include/multirow/lfree2d.h
     include/multirow/lp.h
+    include/multirow/mir.h
     include/multirow/rational.h
     include/multirow/stats.h
     include/multirow/params.h

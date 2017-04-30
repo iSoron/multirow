@@ -512,3 +512,32 @@ CLEANUP:
     return rval;
 }
 
+int LFREE_init_ray_list(struct RayList *list, int dim, int capacity)
+{
+    int rval = 0;
+    list->nrays = 0;
+    list->dim = dim;
+    list->values = (double*) malloc(capacity * dim * sizeof(double));
+    abort_if(!list->values, "could not allocate list->values");
+
+CLEANUP:
+    return rval;
+}
+
+void LFREE_free_ray_list(struct RayList *list)
+{
+    if(!list) return;
+    free(list->values);
+}
+
+double* LFREE_get_ray(const struct RayList *list, int index)
+{
+    return &list->values[index * list->dim];
+}
+
+void LFREE_push_ray(struct RayList *list, const double *ray)
+{
+    double *dest = LFREE_get_ray(list, list->nrays);
+    memcpy(dest, ray, list->dim * sizeof(double));
+    list->nrays++;
+}

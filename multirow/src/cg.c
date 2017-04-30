@@ -371,9 +371,7 @@ CLEANUP:
  * parallel to the given one. Returns whether a matching ray was found,
  * the index of the matching ray and the scaling factor.
  */
-int CG_find_ray(int dim,
-                const double *rays,
-                int nrays,
+int CG_find_ray(const struct RayList *rays,
                 const double *r,
                 int *found,
                 double *scale,
@@ -381,10 +379,12 @@ int CG_find_ray(int dim,
 {
     *found = 0;
 
-    for (int i = 0; i < nrays; i++)
+    for (int i = 0; i < rays->nrays; i++)
     {
+        double *q = LFREE_get_ray(rays, i);
+
         int match;
-        check_rays_parallel(dim, r, &rays[dim * i], &match, scale);
+        check_rays_parallel(rays->dim, r, q, &match, scale);
 
         if (match)
         {
@@ -404,11 +404,9 @@ int CG_extract_rays_from_tableau(const struct Tableau *tableau,
     int rval = 0;
 
     int nrows = tableau->nrows;
-    double *rays = map->rays;
     struct Row **rows = tableau->rows;
 
     map->nvars = 0;
-    map->nrays = 0;
 
     int *i = 0;
     int *idx = 0;
@@ -423,7 +421,7 @@ int CG_extract_rays_from_tableau(const struct Tableau *tableau,
 
     while (1)
     {
-        double *r = &rays[nrows * (map->nrays)];
+        double *r = LFREE_get_ray(&map->rays, map->rays.nrays);
 
         int idx_min = INT_MAX;
 
@@ -462,20 +460,19 @@ int CG_extract_rays_from_tableau(const struct Tableau *tableau,
         for (int j = 0; j < nrows; j++)
                 log_verbose("    r[%d] = %.12lf\n", j, r[j]);
 
-        rval = CG_find_ray(nrows, rays, map->nrays, r, &found, &scale,
-                &ray_index);
+        rval = CG_find_ray(&map->rays, r, &found, &scale, &ray_index);
         abort_if(rval, "CG_find_ray failed");
 
         if (!found)
         {
             log_verbose("  ray is new\n");
             scale = 1.0;
-            ray_index = (map->nrays)++;
+            ray_index = map->rays.nrays++;
         }
         else
         {
             log_verbose("  ray equals:\n");
-            double *q = &rays[ray_index * nrows];
+            double *q = LFREE_get_ray(&map->rays, ray_index);
             for (int j = 0; j < nrows; j++)
                     log_verbose("    r[%d] = %.12lf\n", j, q[j]);
         }
@@ -488,10 +485,9 @@ int CG_extract_rays_from_tableau(const struct Tableau *tableau,
     NEXT_RAY:;
     }
 
-    for (int j = 0; j < map->nrays; j++)
+    for (int j = 0; j < map->rays.nrays; j++)
     {
-        double *r = &rays[nrows * j];
-
+        double *r = LFREE_get_ray(&map->rays, j);
         double max_scale = 0.0;
 
         for (int k = 0; k < map->nvars; k++)
@@ -992,11 +988,12 @@ int CG_init_ray_map(struct RayMap *map, int max_nrays, int nrows)
     map->variable_to_ray = (int *) malloc(max_nrays * sizeof(int));
     map->indices = (int *) malloc(max_nrays * sizeof(int));
     map->ray_scale = (double *) malloc(max_nrays * sizeof(double));
-    map->rays = (double *) malloc(nrows * max_nrays * sizeof(double));
     abort_if(!map->variable_to_ray, "could not allocate variable_to_ray");
     abort_if(!map->indices, "could not allocate indices");
     abort_if(!map->ray_scale, "could not allocate ray_scale");
-    abort_if(!map->rays, "could not allocate rays");
+
+    rval = LFREE_init_ray_list(&map->rays, nrows, max_nrays);
+    abort_if(rval, "LFREE_init_ray_list failed");
 
 CLEANUP:
     return rval;
@@ -1008,7 +1005,7 @@ void CG_free_ray_map(struct RayMap *map)
     free(map->variable_to_ray);
     free(map->indices);
     free(map->ray_scale);
-    free(map->rays);
+    LFREE_free_ray_list(&map->rays);
 }
 
 int CG_extract_f_from_tableau(const struct Tableau *tableau, double *f)
@@ -1022,16 +1019,16 @@ int CG_extract_f_from_tableau(const struct Tableau *tableau, double *f)
     return 0;
 }
 
-int CG_init_model(struct MultiRowModel *model, int nrows, int max_nrays)
+int CG_malloc_model(struct MultiRowModel *model, int nrows, int rays_capacity)
 {
     int rval = 0;
-
-    model->nrays = 0;
     model->nrows = nrows;
+
+    rval = LFREE_init_ray_list(&model->rays, nrows, rays_capacity);
+    abort_if(rval, "LFREE_init_ray_list failed");
+
     model->f = (double*) malloc(nrows * sizeof(double));
-    model->rays = (double*) malloc(max_nrays * sizeof(double));
     abort_if(!model->f, "could not allocate f");
-    abort_if(!model->rays, "could not allocate rays");
 
 CLEANUP:
     return rval;
@@ -1040,8 +1037,16 @@ CLEANUP:
 void CG_free_model(struct MultiRowModel *model)
 {
     if(!model) return;
-    free(model->rays);
     free(model->f);
+    LFREE_free_ray_list(&model->rays);
+}
+
+int CG_total_nz(const struct Tableau *tableau)
+{
+    int total_nz = 0;
+    for(int i = 0; i < tableau->nrows; i++)
+        total_nz += tableau->rows[i]->nz;
+    return total_nz;
 }
 
 #endif // TEST_SOURCE

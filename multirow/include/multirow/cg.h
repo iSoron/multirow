@@ -17,7 +17,8 @@
 #ifndef MULTIROW_CG_H
 #define MULTIROW_CG_H
 
-#include "lp.h"
+#include <multirow/lfree2d.h>
+#include <multirow/lp.h>
 
 struct CG
 {
@@ -47,8 +48,7 @@ struct Tableau
 
 struct RayMap
 {
-    int nrays;
-    double *rays;
+    struct RayList rays;
     int *variable_to_ray;
     double *ray_scale;
     int *indices;
@@ -58,8 +58,7 @@ struct RayMap
 struct MultiRowModel
 {
     double *f;
-    double *rays;
-    int nrays;
+    struct RayList rays;
     int nrows;
 };
 
@@ -96,9 +95,7 @@ int CG_boost_variable(int var,
                       int *indices,
                       int nz);
 
-int CG_find_ray(int dim,
-                const double *rays,
-                int nrays,
+int CG_find_ray(const struct RayList *rays,
                 const double *r,
                 int *found,
                 double *scale,
@@ -110,8 +107,10 @@ void CG_free_ray_map(struct RayMap *map);
 
 int CG_extract_f_from_tableau(const struct Tableau *tableau, double *f);
 
-int CG_init_model(struct MultiRowModel *model, int nrows, int max_nrays);
+int CG_malloc_model(struct MultiRowModel *model, int nrows, int rays_capacity);
 
 void CG_free_model(struct MultiRowModel *model);
+
+int CG_total_nz(const struct Tableau *tableau);
 
 #endif //MULTIROW_CG_H

@@ -1,4 +1,3 @@
-
 /* Copyright (c) 2015 Alinson Xavier
  *
  * This program is free software: you can redistribute it and/or modify
@@ -18,6 +17,8 @@
 #ifndef LFREE_2D_H
 #define LFREE_2D_H
 
+#include <stdio.h>
+
 struct LFreeSet2D
 {
     double f[2];
@@ -30,6 +31,13 @@ struct LFreeSet2D
 
     int n_halfspaces;
     double *halfspaces;
+};
+
+struct RayList
+{
+    double *values;
+    int nrays;
+    int dim;
 };
 
 int LFREE_2D_init(struct LFreeSet2D *set,
@@ -51,8 +59,14 @@ int LFREE_2D_print_set(const struct LFreeSet2D *set);
 
 int LFREE_2D_translate_set(struct LFreeSet2D *set, double dx, double dy);
 
-int LFREE_2D_get_bounding_box(const struct LFreeSet2D *set,
-                              int *lb,
-                              int *ub);
+int LFREE_2D_get_bounding_box(const struct LFreeSet2D *set, int *lb, int *ub);
+
+void LFREE_push_ray(struct RayList *list, const double *ray);
+
+double* LFREE_get_ray(const struct RayList *list, int index);
+
+void LFREE_free_ray_list(struct RayList *list);
+
+int LFREE_init_ray_list(struct RayList *list, int dim, int capacity);
 
 #endif //LFREE_2D_H

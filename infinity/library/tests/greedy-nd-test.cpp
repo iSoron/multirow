@@ -22,6 +22,8 @@ extern "C" {
 #include <math.h>
 #include <multirow/lp.h>
 #include <multirow/util.h>
+#include <multirow/lfree2d.h>
+#include <multirow/cg.h>
 #include <infinity/greedy-nd.h>
 }
 
@@ -363,19 +365,26 @@ TEST(GreedyNDTest, generate_cut_test_1)
 {
     int rval = 0;
 
-    double f[] = { 0.5, 0.5 };
-    double rays[] =
-    {
-         1.0,  1.0,
-         1.0, -1.0,
-        -1.0, -1.0,
-        -1.0,  1.0,
-         0.0,  1.0,
-         1.0,  0.0
-    };
+    double r0[] = {  1.0,  1.0 };
+    double r1[] = {  1.0, -1.0 };
+    double r2[] = { -1.0, -1.0 };
+    double r3[] = { -1.0,  1.0 };
+    double r4[] = {  0.0,  1.0 };
+    double r5[] = {  1.0,  0.0 };
     double beta[6];
 
-    rval = GREEDY_ND_generate_cut(2, 6, f, rays, beta);
+    struct MultiRowModel model;
+    CG_malloc_model(&model, 2, 6);
+    LFREE_push_ray(&model.rays, r0);
+    LFREE_push_ray(&model.rays, r1);
+    LFREE_push_ray(&model.rays, r2);
+    LFREE_push_ray(&model.rays, r3);
+    LFREE_push_ray(&model.rays, r4);
+    LFREE_push_ray(&model.rays, r5);
+    model.f[0] = 0.5;
+    model.f[1] = 0.5;
+
+    rval = GREEDY_ND_generate_cut(&model, beta);
     abort_if(rval, "GREEDY_ND_generate_cut failed");
 
     EXPECT_NEAR(beta[0], 0.5, 1e-6);
@@ -393,19 +402,27 @@ TEST(GreedyNDTest, generate_cut_test_2)
 {
     int rval = 0;
 
-    double f[] = { 0.75, 0.75, 0.75};
-    double rays[] =
-    {
-         1.0,  0.0,  0.0,
-        -1.0,  0.0,  0.0,
-         0.0,  1.0,  0.0,
-         0.0, -1.0,  0.0,
-         0.0,  0.0,  1.0,
-         0.0,  0.0, -1.0
-    };
+    double r0[] = { 1.0,  0.0,  0.0 };
+    double r1[] = {-1.0,  0.0,  0.0 };
+    double r2[] = { 0.0,  1.0,  0.0 };
+    double r3[] = { 0.0, -1.0,  0.0 };
+    double r4[] = { 0.0,  0.0,  1.0 };
+    double r5[] = { 0.0,  0.0, -1.0 };
     double beta[6];
 
-    rval = GREEDY_ND_generate_cut(3, 6, f, rays, beta);
+    struct MultiRowModel model;
+    CG_malloc_model(&model, 3, 6);
+    LFREE_push_ray(&model.rays, r0);
+    LFREE_push_ray(&model.rays, r1);
+    LFREE_push_ray(&model.rays, r2);
+    LFREE_push_ray(&model.rays, r3);
+    LFREE_push_ray(&model.rays, r4);
+    LFREE_push_ray(&model.rays, r5);
+    model.f[0] = 0.75;
+    model.f[1] = 0.75;
+    model.f[2] = 0.75;
+
+    rval = GREEDY_ND_generate_cut(&model, beta);
     abort_if(rval, "GREEDY_ND_generate_cut failed");
 
     EXPECT_NEAR(beta[0], 0.75, 1e-6);
@@ -416,6 +433,7 @@ TEST(GreedyNDTest, generate_cut_test_2)
     EXPECT_NEAR(beta[5], 2.25, 1e-6);
 
 CLEANUP:
+    CG_free_model(&model);
     if(rval) FAIL();
 }
 

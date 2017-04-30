@@ -19,6 +19,6 @@
 #include <multirow/cg.h>
 #include <multirow/lp.h>
 
-int INFINITY_generate_cut(struct Tableau *tableau, struct Row *cut);
+int INFINITY_generate_cut(const struct Tableau *tableau, struct Row *cut);
 
 #endif //MULTIROW_INFINITY_H

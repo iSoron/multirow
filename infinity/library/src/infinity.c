@@ -22,8 +22,8 @@
 #include <multirow/util.h>
 
 #include <infinity/infinity.h>
-#include <infinity/infinity-2d.h>
 #include <infinity/greedy-nd.h>
+#include <infinity/infinity-2d.h>
 
 struct SortPair
 {
@@ -51,112 +51,43 @@ static int _qsort_cmp_rays_angle(const void *p1, const void *p2)
 
 /**
  * Sorts a list of rays according to their angle.
- *
- * @param rays the rays to be sorted
- * @param nrays the number of rays in the list
- * @param beta a list of doubles, to be sorted together with the rays
- *
- * @return zero if successful, non-zero otherwise
  */
-static int sort_rays_angle(double *rays, int nrays, double *beta)
+static int sort_rays_by_angle(struct RayList *rays)
 {
     int rval = 0;
-
+    int nrays = rays->nrays;
     double *rays_copy = 0;
-    double *beta_copy = 0;
     struct SortPair *pairs = 0;
 
     pairs = (struct SortPair *) malloc(nrays * sizeof(struct SortPair));
     rays_copy = (double *) malloc(2 * nrays * sizeof(double));
-    beta_copy = (double *) malloc(nrays * sizeof(double));
     abort_if(!pairs, "could not allocate pairs");
     abort_if(!rays_copy, "could not allocate rays_copy");
-    abort_if(!beta_copy, "could not allocate beta_copy");
 
-    memcpy(rays_copy, rays, 2 * nrays * sizeof(double));
-    memcpy(beta_copy, beta, nrays * sizeof(double));
+    memcpy(rays_copy, rays->values, 2 * nrays * sizeof(double));
 
-    for (int i = 0; i < nrays; i++)
+    for(int i = 0; i < nrays; i++)
     {
         pairs[i].index = i;
-        pairs[i].data = &rays[2 * i];
+        pairs[i].data = &rays->values[2 * i];
     }
 
     qsort(pairs, (size_t) nrays, sizeof(struct SortPair),
             _qsort_cmp_rays_angle);
 
-    for (int i = 0; i < nrays; i++)
-    {
-        beta[i] = beta_copy[pairs[i].index];
-        memcpy(&rays[2 * i], &rays_copy[2 * pairs[i].index],
-                2 * sizeof(double));
-    }
+    rays->nrays = 0;
+    for(int i = 0; i < nrays; i++)
+        LFREE_push_ray(rays, &rays_copy[2 * pairs[i].index]);
 
 CLEANUP:
-    if (pairs) free(pairs);
-    if (rays_copy) free(rays_copy);
-    if (beta_copy) free(beta_copy);
+    free(pairs);
+    free(rays_copy);
     return rval;
-}
-
-static void print_row(const struct Row *row)
-{
-    time_printf("Row:\n");
-    for (int i = 0; i < row->nz; i++)
-        time_printf("    %.4lfx%d\n", row->pi[i], row->indices[i]);
-    time_printf("    <= %.4lf [%d]\n", row->pi_zero, row->head);
-}
-
-static void print_rays(const struct Tableau *tableau,
-                       const struct RayMap *map,
-                       const double *f,
-                       const double *rays,
-                       int nrays)
-{
-    int nrows = tableau->nrows;
-
-    time_printf("Ray map:\n");
-    for (int i = 0; i < map->nvars; i++)
-        time_printf("    %4d: %4d x%-4d (scale=%.4lf)\n", i,
-                map->variable_to_ray[i], map->indices[i], map->ray_scale[i]);
-
-    time_printf("Origin:\n");
-    for (int i = 0; i < nrows; i++)
-        time_printf("    %20.12lf\n", f[i]);
-
-    time_printf("Rays:\n");
-    for (int i = 0; i < nrays; i++)
-    {
-        time_printf("    ");
-
-        for (int j = 0; j < nrows; j++)
-            printf("%20.12lf ", rays[i * nrows + j]);
-
-        printf("angle=%.4lf ", atan2(rays[i * nrows], rays[i * nrows + 1]));
-        printf("norm=%.4lf ",
-                fabs(rays[i * nrows]) + fabs(rays[i * nrows + 1]));
-
-        printf("[ ");
-        for (int j = 0; j < map->nvars; j++)
-            if (map->variable_to_ray[j] == i)
-                printf("%d ", map->indices[j]);
-        printf("]\n");
-    }
-}
-
-static void print_cut(const struct Row *cut)
-{
-    time_printf("Generated cut:\n");
-    for (int i = 0; i < cut->nz; i++)
-        time_printf("    %.4lfx%d\n", cut->pi[i], cut->indices[i]);
-    time_printf("     <= %.4lf\n", cut->pi_zero);
 }
 
 static int create_cut(const struct Tableau *tableau,
                       const struct RayMap *map,
-                      const double *f,
-                      const int lfree_nrays,
-                      const double *lfree_rays,
+                      const struct MultiRowModel *model,
                       const double *beta,
                       struct Row *cut)
 {
@@ -171,29 +102,31 @@ static int create_cut(const struct Tableau *tableau,
     abort_if(!cut->indices, "could not allocate cut->indices");
 
     struct LP lp;
-
     rval = LP_open(&lp);
     abort_if(rval, "LP_open failed");
 
-    rval = GREEDY_create_psi_lp(nrows, lfree_nrays, f, lfree_rays, beta, &lp);
+    rval = GREEDY_create_psi_lp(nrows, model->rays.nrays, model->f,
+            model->rays.values, beta, &lp);
     abort_if(rval, "create_psi_lp failed");
 
-    for (int i = 0; i < nvars; i++)
+    for(int i = 0; i < nvars; i++)
     {
         double value;
-        const double *q = &map->rays[map->variable_to_ray[i] * nrows];
+        const double *q = LFREE_get_ray(&map->rays, map->variable_to_ray[i]);
 
-        if (ENABLE_LIFTING &&
+        if(ENABLE_LIFTING &&
                 tableau->column_types[map->indices[i]] == MILP_INTEGER)
         {
-            rval = GREEDY_ND_pi(nrows, lfree_nrays, f, lfree_rays, beta, q,
-                    map->ray_scale[i], &lp, &value);
+            rval = GREEDY_ND_pi(nrows, model->rays.nrays, model->f,
+                    model->rays.values, beta, q, map->ray_scale[i], &lp,
+                    &value);
             abort_if(rval, "GREEDY_ND_pi failed");
         }
         else
         {
-            rval = GREEDY_ND_psi(nrows, lfree_nrays, f, lfree_rays, beta, q,
-                    map->ray_scale[i], &lp, &value);
+            rval = GREEDY_ND_psi(nrows, model->rays.nrays, model->f,
+                    model->rays.values, beta, q, map->ray_scale[i], &lp,
+                    &value);
             abort_if(rval, "GREEDY_ND_psi failed");
         }
 
@@ -213,57 +146,53 @@ CLEANUP:
     return rval;
 }
 
-static int select_rays(const struct RayMap map,
+static int select_rays(const struct RayMap *map,
                        const struct Tableau *tableau,
                        struct MultiRowModel *model)
 {
     int rval = 0;
     int nrows = tableau->nrows;
+    struct RayList *rays = &model->rays;
 
-    for (double norm_cutoff = 0.00; norm_cutoff <= 5.0; norm_cutoff += 0.1)
+    for(double norm_cutoff = 0.00; norm_cutoff <= 5.0; norm_cutoff += 0.1)
     {
-        model->nrays = 0;
+        rays->nrays = 0;
 
-        for (int i = 0; i < map.nrays; i++)
+        for(int i = 0; i < map->rays.nrays; i++)
         {
             int keep = 1;
-            double *r = &map.rays[tableau->nrows * i];
+            double *r = LFREE_get_ray(&map->rays, i);
 
-            for (int j = 0; j < (model->nrays); j++)
+            for(int j = 0; j < (rays->nrays); j++)
             {
-                double *q = &map.rays[tableau->nrows * j];
+                double *q = LFREE_get_ray(&map->rays, j);
                 double norm = 0;
 
-                for (int k = 0; k < nrows; k++)
+                for(int k = 0; k < nrows; k++)
                     norm += fabs(r[k] - q[k]);
 
-                if (norm <= norm_cutoff)
+                if(norm <= norm_cutoff)
                 {
                     keep = 0;
                     break;
                 }
             }
 
-            if (keep)
-            {
-                memcpy(&model->rays[nrows * (model->nrays)], r,
-                        nrows * sizeof(double));
-                model->nrays++;
-            }
+            if(keep) LFREE_push_ray(rays, r);
         }
 
         log_debug("  norm_cutoff=%8.2lf nrays=%8d\n", norm_cutoff,
                 model->nrays);
 
-        if (model->nrays < MAX_N_RAYS) break;
+        if(rays->nrays < MAX_N_RAYS) break;
     }
 
 CLEANUP:
     return rval;
 }
 
-static int
-append_extra_rays(const struct Tableau *tableau, double *rays, int *nrays)
+static int append_extra_rays(const struct Tableau *tableau,
+                             struct RayList *rays)
 {
     int rval = 0;
     int nrows = tableau->nrows;
@@ -272,7 +201,7 @@ append_extra_rays(const struct Tableau *tableau, double *rays, int *nrays)
 
     abort_if(nrows > 3, "not implemented");
 
-    if (nrows == 2)
+    if(nrows == 2)
     {
         extra_rays[0] = 0.0001;
         extra_rays[1] = 0.0000;
@@ -286,7 +215,7 @@ append_extra_rays(const struct Tableau *tableau, double *rays, int *nrays)
         n_extra_rays = 3;
     }
 
-    if (nrows == 3)
+    if(nrows == 3)
     {
         extra_rays[0] = 0.0000;
         extra_rays[1] = 0.0000;
@@ -307,58 +236,50 @@ append_extra_rays(const struct Tableau *tableau, double *rays, int *nrays)
         n_extra_rays = 4;
     }
 
-    for (int i = 0; i < n_extra_rays; i++)
+    for(int i = 0; i < n_extra_rays; i++)
     {
         double *r = &extra_rays[nrows * i];
 
         double scale;
         int found, index;
-        rval = CG_find_ray(nrows, rays, *nrays, r, &found, &scale, &index);
+        rval = CG_find_ray(rays, r, &found, &scale, &index);
         abort_if(rval, "CG_find_ray failed");
 
-        if (!found)
-        {
-            memcpy(&rays[nrows * (*nrays)], r, nrows *
-                    sizeof(double));
-            (*nrays)++;
-        }
+        if(!found) LFREE_push_ray(rays, r);
     }
 
 CLEANUP:
     return rval;
 }
 
-static int write_sage_file(int nrows,
-                           int nrays,
-                           const double *f,
-                           const double *rays,
+static int write_sage_file(const struct MultiRowModel *model,
                            const double *beta,
                            const char *filename)
 {
     int rval = 0;
+    int nrows = model->nrows;
 
     FILE *fsage = fopen(filename, "w");
     abort_iff(!fsage, "could not open %s", filename);
 
     fprintf(fsage, "f=vector([");
-    for (int i = 0; i < nrows; i++)
-        fprintf(fsage, "%.20lf,", f[i]);
+    for(int i = 0; i < nrows; i++)
+        fprintf(fsage, "%.20lf,", model->f[i]);
     fprintf(fsage, "])\n");
 
     fprintf(fsage, "R=matrix([\n");
-    for (int i = 0; i < nrays; i++)
+    for(int i = 0; i < model->rays.nrays; i++)
     {
+        double *r = LFREE_get_ray(&model->rays, i);
         fprintf(fsage, "    [");
-        for (int j = 0; j < nrows; j++)
-        {
-            fprintf(fsage, "%.20lf,", rays[i * nrows + j]);
-        }
+        for(int j = 0; j < nrows; j++)
+            fprintf(fsage, "%.20lf,", r[j]);
         fprintf(fsage, "],\n");
     }
     fprintf(fsage, "])\n");
 
     fprintf(fsage, "pi=vector([\n");
-    for (int k = 0; k < nrays; k++)
+    for(int k = 0; k < model->rays.nrays; k++)
         fprintf(fsage, "    %.12lf,\n", 1 / beta[k]);
     fprintf(fsage, "])\n");
 
@@ -367,11 +288,7 @@ CLEANUP:
     return rval;
 }
 
-static int dump_cut(const struct Tableau *tableau,
-                    const double *rays,
-                    int nrays,
-                    const double *f,
-                    const double *beta)
+static int dump_cut(const struct MultiRowModel *model, const double *beta)
 {
     int rval = 0;
 
@@ -379,8 +296,39 @@ static int dump_cut(const struct Tableau *tableau,
     sprintf(filename, "cut-%03d.sage", DUMP_CUT_N++);
 
     time_printf("Writing %s...\n", filename);
-    rval = write_sage_file(tableau->nrows, nrays, f, rays, beta, filename);
+    rval = write_sage_file(model, beta, filename);
     abort_if(rval, "write_sage_file failed");
+
+CLEANUP:
+    return rval;
+}
+
+static int extract_model_from_tableau(const struct Tableau *tableau,
+                                      struct MultiRowModel *model,
+                                      struct RayMap *map)
+{
+    int rval = 0;
+
+    rval = CG_extract_f_from_tableau(tableau, model->f);
+    abort_if(rval, "CG_extract_f_from_tableau failed");
+
+    rval = CG_extract_rays_from_tableau(tableau, map);
+    abort_if(rval, "CG_extract_rays_from_rows failed");
+
+    rval = select_rays(map, tableau, model);
+    abort_if(rval, "select_rays failed");
+
+    if(ENABLE_LIFTING)
+    {
+        rval = append_extra_rays(tableau, &model->rays);
+        abort_if(rval, "append_extra_rays failed");
+    }
+
+    if(tableau->nrows == 2)
+    {
+        rval = sort_rays_by_angle(&model->rays);
+        abort_if(rval, "sort_rays_by_angle failed");
+    }
 
 CLEANUP:
     return rval;
@@ -388,43 +336,25 @@ CLEANUP:
 
 #ifndef TEST_SOURCE
 
-int INFINITY_generate_cut(struct Tableau *tableau, struct Row *cut)
+int INFINITY_generate_cut(const struct Tableau *tableau, struct Row *cut)
 {
     int rval = 0;
-    int max_nrays = 0;
     int nrows = tableau->nrows;
+    int max_nrays = CG_total_nz(tableau);
     double *beta = 0;
 
-    for (int i = 0; i < tableau->nrows; i++)
-        max_nrays += tableau->rows[i]->nz;
-
     struct MultiRowModel model;
-    rval = CG_init_model(&model, nrows, max_nrays + 100);
-    abort_if(rval, "CG_init_model failed");
-
-    rval = CG_extract_f_from_tableau(tableau, model.f);
-    abort_if(rval, "CG_extract_f_from_tableau failed");
+    rval = CG_malloc_model(&model, nrows, max_nrays + 100);
+    abort_if(rval, "CG_malloc_model failed");
 
     struct RayMap map;
     rval = CG_init_ray_map(&map, max_nrays, nrows);
     abort_if(rval, "CG_init_ray_map failed");
 
-    rval = CG_extract_rays_from_tableau(tableau, &map);
-    abort_if(rval, "CG_extract_rays_from_rows failed");
+    rval = extract_model_from_tableau(tableau, &model, &map);
+    abort_if(rval, "extract_model_from_tableau failed");
 
-    rval = select_rays(map, tableau, &model);
-    abort_if(rval, "select_rays failed");
-
-    if (ENABLE_LIFTING)
-    {
-        rval = append_extra_rays(tableau, model.rays, &model.nrays);
-        abort_if(rval, "append_extra_rays failed");
-    }
-
-    beta = (double *) malloc(model.nrays * sizeof(double));
-    abort_if(!beta, "could not allocate beta");
-
-    if (model.nrays < 3)
+    if(model.rays.nrays < 3)
     {
         rval = ERR_NO_CUT;
         cut->pi = 0;
@@ -432,47 +362,29 @@ int INFINITY_generate_cut(struct Tableau *tableau, struct Row *cut)
         goto CLEANUP;
     }
 
-    log_debug("Selected %d rays\n", nrays);
-    if_verbose_level print_rays(tableau, &map, model.f, map.rays, map.nrays);
+    beta = (double *) malloc(model.rays.nrays * sizeof(double));
+    abort_if(!beta, "could not allocate beta");
 
-    log_verbose("Computing lattice-free set...\n");
-    if (nrows == 2)
-    {
-        rval = sort_rays_angle(model.rays, model.nrays, beta);
-        abort_if(rval, "sort_rays_angle failed");
+    if(nrows == 2) rval = INFINITY_2D_generate_cut(&model, beta);
+    else rval = GREEDY_ND_generate_cut(&model, beta);
 
-        rval = INFINITY_2D_generate_cut(&model, beta);
-        if (rval)
-        {
-            rval = ERR_NO_CUT;
-            goto CLEANUP;
-        }
-    }
-    else
+    if(rval)
     {
-        rval = GREEDY_ND_generate_cut(nrows, model.nrays, model.f, model.rays,
-                beta);
-        if (rval)
-        {
-            rval = ERR_NO_CUT;
-            goto CLEANUP;
-        }
+        rval = ERR_NO_CUT;
+        goto CLEANUP;
     }
 
-    if (SHOULD_DUMP_CUTS)
+    if(SHOULD_DUMP_CUTS)
     {
-        rval = dump_cut(tableau, model.rays, model.nrays, model.f, beta);
+        rval = dump_cut(&model, beta);
         abort_if(rval, "dump_cut failed");
     }
 
-    rval = create_cut(tableau, &map, model.f, model.nrays, model.rays, beta,
-            cut);
+    rval = create_cut(tableau, &map, &model, beta, cut);
     abort_if(rval, "create_cut failed");
 
-    if_verbose_level print_cut(cut);
-
 CLEANUP:
-    if (beta) free(beta);
+    if(beta) free(beta);
     CG_free_model(&model);
     CG_free_ray_map(&map);
     return rval;

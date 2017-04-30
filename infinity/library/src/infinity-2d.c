@@ -529,7 +529,7 @@ int INFINITY_2D_generate_cut(const struct MultiRowModel *model, double *bounds)
     log_verbose("INFINITY_2D_generate_cut\n");
     int rval = 0;
     int count = 0;
-    int nrays = model->nrays;
+    int nrays = model->rays.nrays;
     double *f = model->f;
 
     double *scale = 0;
@@ -545,7 +545,7 @@ int INFINITY_2D_generate_cut(const struct MultiRowModel *model, double *bounds)
     abort_if(!rays, "could not allocate rays");
     abort_if(!scale, "could not allocate scale");
 
-    memcpy(rays, model->rays, 2 * nrays * sizeof(double));
+    memcpy(rays, model->rays.values, 2 * nrays * sizeof(double));
 
     rval = scale_to_chull(rays, nrays, scale);
     abort_if(rval, "scale_to_chull failed");

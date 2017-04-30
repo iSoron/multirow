@@ -71,7 +71,7 @@ TEST(CGTest, next_combination_test_2)
 
     EXPECT_EQ(count, 10);
 
-    CLEANUP:
+CLEANUP:
     if(rval) FAIL();
 }
 
@@ -109,6 +109,7 @@ TEST(CGTest, extract_rays_from_rows_test)
 {
     int rval = 0;
 
+    char column_types[16] = {0};
     double pi1[] = { 1.0, 1.0, 1.0, 2.0, 1.0 };
     int indices1[] = { 1, 7, 8, 12, 14 };
     struct Row row1 =
@@ -143,36 +144,37 @@ TEST(CGTest, extract_rays_from_rows_test)
     };
 
     struct Row *rows[] = { &row1, &row2, &row3 };
+    struct Tableau tableau = {3, rows, column_types};
 
-    int nz;
-    int nrays;
     int indices[1000];
     int variable_to_ray[1000];
-    double rays[1000];
     double ray_scale[1000];
 
-    rval = CG_extract_rays_from_tableau(3, rows, rays, &nrays, variable_to_ray,
-            ray_scale, indices, &nz);
+    struct RayList rays;
+    LFREE_init_ray_list(&rays, 3, 1000);
+    struct RayMap map = {rays, variable_to_ray, ray_scale, indices, 0};
+
+    rval = CG_extract_rays_from_tableau(&tableau, &map);
     abort_if(rval, "CG_extract_rays_from_rows failed");
 
-    EXPECT_EQ(nrays, 4);
-    EXPECT_EQ(nz, 7);
+    EXPECT_EQ(rays.nrays, 4);
+    EXPECT_EQ(map.nvars, 7);
 
-    EXPECT_DOUBLE_EQ(rays[0],  0.0);
-    EXPECT_DOUBLE_EQ(rays[1],  0.0);
-    EXPECT_DOUBLE_EQ(rays[2], -1.0);
+    EXPECT_DOUBLE_EQ(rays.values[0],  0.0);
+    EXPECT_DOUBLE_EQ(rays.values[1],  0.0);
+    EXPECT_DOUBLE_EQ(rays.values[2], -1.0);
 
-    EXPECT_DOUBLE_EQ(rays[3],  0.0);
-    EXPECT_DOUBLE_EQ(rays[4], -1.0);
-    EXPECT_DOUBLE_EQ(rays[5],  0.0);
+    EXPECT_DOUBLE_EQ(rays.values[3],  0.0);
+    EXPECT_DOUBLE_EQ(rays.values[4], -1.0);
+    EXPECT_DOUBLE_EQ(rays.values[5],  0.0);
 
-    EXPECT_DOUBLE_EQ(rays[6], -2.0);
-    EXPECT_DOUBLE_EQ(rays[7], -2.0);
-    EXPECT_DOUBLE_EQ(rays[8],  0.0);
+    EXPECT_DOUBLE_EQ(rays.values[6], -2.0);
+    EXPECT_DOUBLE_EQ(rays.values[7], -2.0);
+    EXPECT_DOUBLE_EQ(rays.values[8],  0.0);
 
-    EXPECT_DOUBLE_EQ(rays[ 9],  0.0);
-    EXPECT_DOUBLE_EQ(rays[10], -1.0);
-    EXPECT_DOUBLE_EQ(rays[11], -1.0);
+    EXPECT_DOUBLE_EQ(rays.values[ 9],  0.0);
+    EXPECT_DOUBLE_EQ(rays.values[10], -1.0);
+    EXPECT_DOUBLE_EQ(rays.values[11], -1.0);
 
     EXPECT_EQ(indices[0], 3);
     EXPECT_EQ(indices[1], 5);

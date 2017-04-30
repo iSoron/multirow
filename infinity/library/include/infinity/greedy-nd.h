@@ -40,20 +40,16 @@ int GREEDY_ND_psi(const int nrows,
                   double *value);
 
 int GREEDY_ND_pi(const int nrows,
-                  const int nrays,
-                  const double *f,
-                  const double *rays,
-                  const double *beta,
-                  const double *q,
-                  const double q_scale,
-                  struct LP *lp,
-                  double *value);
+                 const int nrays,
+                 const double *f,
+                 const double *rays,
+                 const double *beta,
+                 const double *q,
+                 const double q_scale,
+                 struct LP *lp,
+                 double *value);
 
-int GREEDY_ND_generate_cut(int nrows,
-                           int nrays,
-                           const double *f,
-                           const double *rays,
-                           double *beta);
+int GREEDY_ND_generate_cut(const struct MultiRowModel *model, double *beta);
 
 int GREEDY_ND_bound(int nrows,
                     int nrays,

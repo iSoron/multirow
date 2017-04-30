@@ -53,39 +53,36 @@ TEST(InfinityTest, sort_rays_angle_test)
 {
     int rval = 0;
 
-    int n_rays = 5;
-    double beta[] = {0, 1, 2, 3, 4};
+    double r0[] = { 1.0, 1.0 };
+    double r1[] = { 1.0, 0.0 };
+    double r2[] = { 1.0, -1.0 };
+    double r3[] = { -1.0, 0.0 };
+    double r4[] = { 2.0, 0.0 };
+
+    RayList rays;
+    LFREE_init_ray_list(&rays, 2, 5);
+    LFREE_push_ray(&rays, r0);
+    LFREE_push_ray(&rays, r1);
+    LFREE_push_ray(&rays, r2);
+    LFREE_push_ray(&rays, r3);
+    LFREE_push_ray(&rays, r4);
+
+    rval = sort_rays_by_angle(&rays);
+    abort_if(rval, "sort_rays_by_angle failed");
+
     SortPair sp0, sp1, sp2, sp3, sp4;
-
-    double rays[] = {
-            1.0, 1.0,
-            1.0, 0.0,
-            1.0, -1.0,
-            -1.0, 0.0,
-            2.0, 0.0,
-    };
-
-    rval = sort_rays_angle(rays, n_rays, beta);
-    abort_if(rval, "sort_rays_angle failed");
-
-    sp0 = { 0, &rays[0] };
-    sp1 = { 1, &rays[2] };
-    sp2 = { 2, &rays[4] };
-    sp3 = { 3, &rays[6] };
-    sp4 = { 4, &rays[8] };
+    sp0 = { 0, LFREE_get_ray(&rays, 0) };
+    sp1 = { 1, LFREE_get_ray(&rays, 1) };
+    sp2 = { 2, LFREE_get_ray(&rays, 2) };
+    sp3 = { 3, LFREE_get_ray(&rays, 3) };
+    sp4 = { 4, LFREE_get_ray(&rays, 4) };
 
     EXPECT_LE(_qsort_cmp_rays_angle(&sp0, &sp1),  0);
     EXPECT_LE(_qsort_cmp_rays_angle(&sp1, &sp2),  0);
     EXPECT_LE(_qsort_cmp_rays_angle(&sp2, &sp3),  0);
     EXPECT_LE(_qsort_cmp_rays_angle(&sp3, &sp4),  0);
 
-    EXPECT_EQ(beta[0], 3);
-    EXPECT_EQ(beta[1], 0);
-    EXPECT_TRUE(beta[2] == 1 || beta[2] == 4);
-    EXPECT_TRUE(beta[3] == 1 || beta[3] == 4);
-    EXPECT_TRUE(beta[2] != beta[3]);
-    EXPECT_EQ(beta[4], 2);
-
 CLEANUP:
+    LFREE_free_ray_list(&rays);
     if (rval) FAIL();
 }
