@@ -18,5 +18,4 @@ set_target_properties(infinity_static PROPERTIES OUTPUT_NAME infinity)
 target_include_directories (infinity_static PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_executable(infinity-test.run ${COMMON_SOURCES} ${TEST_SOURCES})
-target_compile_options(infinity-test.run PRIVATE "-fpermissive")
 target_link_libraries(infinity-test.run gtest_main multirow_static lifting_static)

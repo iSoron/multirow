@@ -477,18 +477,21 @@ static int bound(const double *rays,
     log_verbose("      pp     %20.12lf %20.12lf\n", pp[0], pp[1]);
     log_verbose("      lambda %20.12lf %20.12lf\n", lambda1, lambda2);
 
-    double r1bound[2] = { r1[0] * bounds[i1], r1[1] * bounds[i1] };
+    {
+        double r1bound[2] = {r1[0] * bounds[i1],
+                             r1[1] * bounds[i1]};
 
-    rval = scale_cone_to_point(r1, r2, pp, &e1);
-    abort_if(rval, "scale_cone_to_point failed");
+        rval = scale_cone_to_point(r1, r2, pp, &e1);
+        abort_if(rval, "scale_cone_to_point failed");
 
-    rval = shear_cone_to_point(r1bound, r2, pp, &e2);
-    abort_if(rval, "scale_cone_to_point failed");
+        rval = shear_cone_to_point(r1bound, r2, pp, &e2);
+        abort_if(rval, "scale_cone_to_point failed");
 
-    log_verbose("    e1=%20.12lf\n", e1);
-    log_verbose("    e2=%20.12lf\n", e2);
-    log_verbose("    b1=%20.12lf\n", bounds[i1]);
-    log_verbose("    b2=%20.12lf\n", bounds[i2]);
+        log_verbose("    e1=%20.12lf\n", e1);
+        log_verbose("    e2=%20.12lf\n", e2);
+        log_verbose("    b1=%20.12lf\n", bounds[i1]);
+        log_verbose("    b2=%20.12lf\n", bounds[i2]);
+    }
 
     switch(DOUBLE_cmp(e1, bounds[i1]))
     {

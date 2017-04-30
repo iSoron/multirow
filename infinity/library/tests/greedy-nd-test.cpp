@@ -296,20 +296,27 @@ TEST(GreedyNDTest, psi_test)
     double q1[] = { 1.0, 1.0 };
     double q2[] = { -2.0, 0.0 };
 
+    struct ConvLFreeSet lfree;
+    lfree.f = f;
+    lfree.beta = beta;
+    lfree.rays.nrays = 6;
+    lfree.rays.values = rays;
+    lfree.nrows = lfree.rays.dim = 2;
+
     double value;
     struct LP lp;
 
     rval = LP_open(&lp);
     abort_if(rval, "LP_open failed");
 
-    rval = GREEDY_create_psi_lp(2, 6, f, rays, beta, &lp);
+    rval = GREEDY_create_psi_lp(&lfree, &lp);
     abort_if(rval, "GREEDY_create_psi_lp failed");
 
-    rval = GREEDY_ND_psi(2, 6, f, rays, beta, q1, 1.0, &lp, &value);
+    rval = GREEDY_ND_psi(2, q1, 1.0, &lp, &value);
     abort_if(rval, "GREDDY_ND_psi failed");
     EXPECT_NEAR(value, 2.0, 1e-6);
 
-    rval = GREEDY_ND_psi(2, 6, f, rays, beta, q2, 2.0, &lp, &value);
+    rval = GREEDY_ND_psi(2, q2, 2.0, &lp, &value);
     abort_if(rval, "GREDDY_ND_psi failed");
     EXPECT_NEAR(value, 8.0, 1e-6);
 
@@ -341,20 +348,27 @@ TEST(GreedyNDTest, psi_test_2)
     double q1[] = { 0.5, 0.5, 0.5 };
     double q2[] = { 1, 0, 0 };
 
+    struct ConvLFreeSet lfree;
+    lfree.f = f;
+    lfree.beta = beta;
+    lfree.rays.nrays = 8;
+    lfree.rays.values = rays;
+    lfree.nrows = lfree.rays.dim = 3;
+
     double value;
     struct LP lp;
 
     rval = LP_open(&lp);
     abort_if(rval, "LP_open failed");
 
-    rval = GREEDY_create_psi_lp(3, 8, f, rays, beta, &lp);
+    rval = GREEDY_create_psi_lp(&lfree, &lp);
     abort_if(rval, "GREEDY_create_psi_lp failed");
 
-    rval = GREEDY_ND_psi(3, 8, f, rays, beta, q1, 1.0, &lp, &value);
+    rval = GREEDY_ND_psi(3, q1, 1.0, &lp, &value);
     abort_if(rval, "GREDDY_ND_psi failed");
     EXPECT_NEAR(value, 1.0, 1e-6);
 
-    rval = GREEDY_ND_psi(3, 8, f, rays, beta, q2, 1.0, &lp, &value);
+    rval = GREEDY_ND_psi(3, q2, 1.0, &lp, &value);
     abort_if(rval, "GREDDY_ND_psi failed");
     EXPECT_NEAR(value, 2.0, 1e-6);
 

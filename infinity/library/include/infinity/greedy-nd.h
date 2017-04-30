@@ -16,28 +16,15 @@
 #ifndef MULTIROW_GREEDY_ND_H
 #define MULTIROW_GREEDY_ND_H
 
-int GREEDY_create_psi_lp(const int nrows,
-                         const int nrays,
-                         const double *f,
-                         const double *rays,
-                         const double *beta,
-                         struct LP *lp);
+int GREEDY_create_psi_lp(const struct ConvLFreeSet *lfree, struct LP *lp);
 
 int GREEDY_ND_psi(const int nrows,
-                  const int nrays,
-                  const double *f,
-                  const double *rays,
-                  const double *beta,
                   const double *q,
                   const double q_scale,
                   struct LP *lp,
                   double *value);
 
 int GREEDY_ND_pi(const int nrows,
-                 const int nrays,
-                 const double *f,
-                 const double *rays,
-                 const double *beta,
                  const double *q,
                  const double q_scale,
                  struct LP *lp,

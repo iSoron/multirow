@@ -53,9 +53,13 @@ static int find_interior_point_enum(const int nrows,
 {
     int rval = 0;
 
+    int M = 1;
+    struct LP lp;
+    double best_value = INFINITY;
+    double *beta2 = 0;
+
     abort_if(nrows != 3, "not implemented");
 
-    double *beta2 = 0;
     beta2 = (double *) malloc(nrays * sizeof(double));
     abort_if(!beta2, "could not allocate beta2");
 
@@ -64,18 +68,22 @@ static int find_interior_point_enum(const int nrows,
         beta2[i] = fmin(epsilon, beta[i]);
     }
 
-    struct LP lp;
-
     rval = LP_open(&lp);
     abort_if(rval, "LP_open failed");
 
-    rval = GREEDY_create_psi_lp(nrows, nrays, f, rays, beta2, &lp);
+    struct ConvLFreeSet lfree;
+    lfree.f = (double*) f;
+    lfree.nrows = nrows;
+    lfree.rays.dim = nrows;
+    lfree.rays.nrays = nrays;
+    lfree.rays.values = (double*) rays;
+    lfree.beta = beta2;
+
+    rval = GREEDY_create_psi_lp(&lfree, &lp);
     abort_if(rval, "GREEDY_create_psi_lp failed");
 
     *found = 0;
-    double best_value = INFINITY;
 
-    int M = 1;
     for(int x1 = -M; x1 <= M; x1++)
         for(int x2 = -M; x2 <= M; x2++)
             for(int x3 = -M; x3 <= M; x3++)
@@ -85,8 +93,7 @@ static int find_interior_point_enum(const int nrows,
                                x2 - f[1],
                                x3 - f[2]};
 
-                rval = GREEDY_ND_psi(nrows, nrays, f, rays, beta2, q, 1, &lp,
-                        &value);
+                rval = GREEDY_ND_psi(nrows, q, 1, &lp, &value);
                 abort_if(rval, "GREEDY_ND_psi failed");
 
                 if(value < best_value)
@@ -117,19 +124,19 @@ static int find_interior_point_cplex(const int nrows,
 {
     int rval = 0;
     struct LP lp;
+    double initial_time;
+    int infeasible;
+    double objval;
 
     rval = LP_open(&lp);
     abort_if(rval, "LP_open failed");
 
     lp_count++;
     sfree_mip_count++;
-    double initial_time = get_user_time();
+    initial_time = get_user_time();
 
     rval = create_sfree_mip(nrows, nrays, f, rays, beta, epsilon, &lp);
     abort_if(rval, "greate_sfree_mip failed");
-
-    int infeasible;
-    double objval;
 
     log_debug("  solving sfree mip...\n");
     rval = LP_optimize(&lp, &infeasible);
@@ -194,6 +201,10 @@ static int bound(int nrows,
     double *fbar = 0;
     double *sbar = 0;
 
+    double prev_epsilon;
+    int count = 0;
+    *epsilon = GREEDY_BIG_E;
+
     rx = (int *) malloc(nrays * sizeof(int));
     fbar = (double *) malloc(nrows * sizeof(double));
     sbar = (double *) malloc(nrays * sizeof(double));
@@ -201,10 +212,6 @@ static int bound(int nrows,
     abort_if(!rx, "could not allocate rx");
     abort_if(!fbar, "could not allocate fbar");
     abort_if(!sbar, "could not allocate sbar");
-
-    *epsilon = GREEDY_BIG_E;
-    double prev_epsilon;
-    int count = 0;
 
     while(1)
     {
@@ -284,6 +291,7 @@ static int create_find_epsilon_lp(int nrows,
     int rmatbeg = 0;
     int *rmatind = 0;
     double *rmatval = 0;
+    int rx_count = 0;
 
     map = (int *) malloc(nrays * sizeof(int));
     abort_if(!map, "could not allocate map");
@@ -297,8 +305,6 @@ static int create_find_epsilon_lp(int nrows,
     abort_if(rval, "LP_create failed");
 
     // create lambda variables
-    int rx_count = 0;
-
     for(int i = 0; i < nrays + 1; i++)
     {
         if(i < nrays && !rx[i]) continue;
@@ -681,18 +687,18 @@ CLEANUP:
 
 #ifndef TEST_SOURCE
 
-int GREEDY_create_psi_lp(const int nrows,
-                         const int nrays,
-                         const double *f,
-                         const double *rays,
-                         const double *beta,
-                         struct LP *lp)
+int GREEDY_create_psi_lp(const struct ConvLFreeSet *lfree, struct LP *lp)
 {
     int rval = 0;
 
     int rmatbeg = 0;
     int *rmatind = 0;
     double *rmatval = 0;
+
+    int nrows = lfree->nrows;
+    int nrays = lfree->rays.nrays;
+    double *rays = lfree->rays.values;
+    double *beta = lfree->beta;
 
     rmatind = (int *) malloc(nrays * sizeof(int));
     rmatval = (double *) malloc(nrays * sizeof(double));
@@ -744,10 +750,6 @@ CLEANUP:
 }
 
 int GREEDY_ND_pi(const int nrows,
-                 const int nrays,
-                 const double *f,
-                 const double *rays,
-                 const double *beta,
                  const double *q,
                  const double q_scale,
                  struct LP *lp,
@@ -765,15 +767,14 @@ int GREEDY_ND_pi(const int nrows,
         for(int k0 = -M; k0 <= M; k0++)
             for(int k1 = -M; k1 <= M; k1++)
             {
+                double v;
                 double qk[] = {frac(q[0] * q_scale) + k0,
                                frac(q[1] * q_scale) + k1};
-                double value;
 
-                rval = GREEDY_ND_psi(nrows, nrays, f, rays, beta, qk, 1, lp,
-                        &value);
+                rval = GREEDY_ND_psi(nrows, qk, 1, lp, &v);
                 abort_if(rval, "GREEDY_ND_psi failed");
 
-                best_value = min(best_value, value);
+                best_value = min(best_value, v);
             }
     }
 
@@ -784,16 +785,15 @@ int GREEDY_ND_pi(const int nrows,
             for(int k1 = -M; k1 <= M; k1++)
                 for(int k2 = -M; k2 <= M; k2++)
                 {
+                    double v;
                     double qk[] = {frac(q[0] * q_scale) + k0,
                                    frac(q[1] * q_scale) + k1,
                                    frac(q[2] * q_scale) + k2};
-                    double value;
 
-                    rval = GREEDY_ND_psi(nrows, nrays, f, rays, beta, qk, 1, lp,
-                            &value);
+                    rval = GREEDY_ND_psi(nrows, qk, 1, lp, &v);
                     abort_if(rval, "GREEDY_ND_psi failed");
 
-                    best_value = min(best_value, value);
+                    best_value = min(best_value, v);
                 }
     }
 
@@ -809,10 +809,6 @@ CLEANUP:
  * q_scale), where B is the convex hull of {f + ri * bi}_i=1^m.
  */
 int GREEDY_ND_psi(const int nrows,
-                  const int nrays,
-                  const double *f,
-                  const double *rays,
-                  const double *beta,
                   const double *q,
                   const double q_scale,
                   struct LP *lp,

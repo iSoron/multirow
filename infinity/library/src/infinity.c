@@ -25,6 +25,9 @@
 #include <infinity/greedy-nd.h>
 #include <infinity/infinity-2d.h>
 
+/**
+ * Auxiliary structure for sorting with qsort.
+ */
 struct SortPair
 {
     int index;
@@ -51,6 +54,9 @@ static int _qsort_cmp_rays_angle(const void *p1, const void *p2)
 
 /**
  * Sorts a list of rays according to their angle.
+ *
+ * @param rays the list to be sorted
+ * @return zero if successful, non-zero otherwise
  */
 static int sort_rays_by_angle(struct RayList *rays)
 {
@@ -85,6 +91,16 @@ CLEANUP:
     return rval;
 }
 
+/**
+ * Creates an intersection cut from the given lattice-free set.
+ *
+ * @param tableau the tableau that was used to generate the model
+ * @param map the mapping between the tableau and model
+ * @param model the multi-row model that was used to generate the cut
+ * @param lfree the lattice-free set
+ * @param[out] cut the generated cut
+ * @return zero if successful, non-zero otherwise
+ */
 static int create_cut_from_lfree(const struct Tableau *tableau,
                                 const struct TableauModelMap *map,
                                 const struct MultiRowModel *model,
@@ -96,13 +112,12 @@ static int create_cut_from_lfree(const struct Tableau *tableau,
     struct LP lp;
     int nvars = map->nvars;
     int nrows = tableau->nrows;
-    struct RayList *rays = &model->rays;
+    const struct RayList *rays = &model->rays;
 
     rval = LP_open(&lp);
     abort_if(rval, "LP_open failed");
 
-    rval = GREEDY_create_psi_lp(nrows, lfree->rays.nrays, lfree->f,
-            lfree->rays.values, lfree->beta, &lp);
+    rval = GREEDY_create_psi_lp(lfree, &lp);
     abort_if(rval, "create_psi_lp failed");
 
     cut->nz = nvars;
@@ -110,20 +125,16 @@ static int create_cut_from_lfree(const struct Tableau *tableau,
     {
         double value;
         const double *q = LFREE_get_ray(rays, map->variable_to_ray[i]);
+        char type = tableau->column_types[map->indices[i]];
 
-        if(ENABLE_LIFTING &&
-                tableau->column_types[map->indices[i]] == MILP_INTEGER)
+        if(ENABLE_LIFTING && type == MILP_INTEGER)
         {
-            rval = GREEDY_ND_pi(nrows, lfree->rays.nrays, lfree->f,
-                    lfree->rays.values, lfree->beta, q, map->ray_scale[i], &lp,
-                    &value);
+            rval = GREEDY_ND_pi(nrows, q, map->ray_scale[i], &lp, &value);
             abort_if(rval, "GREEDY_ND_pi failed");
         }
         else
         {
-            rval = GREEDY_ND_psi(nrows, lfree->rays.nrays, lfree->f,
-                    lfree->rays.values, lfree->beta, q, map->ray_scale[i], &lp,
-                    &value);
+            rval = GREEDY_ND_psi(nrows, q, map->ray_scale[i], &lp, &value);
             abort_if(rval, "GREEDY_ND_psi failed");
         }
 
@@ -143,13 +154,22 @@ CLEANUP:
     return rval;
 }
 
+/**
+ * Given an original multi-row model, returns a simplified model with fewer
+ * rays. For each subset of rays that are very close to each other, only one ray
+ * is selected for the new model.
+ *
+ * @param original_model the original model
+ * @param[out] filtered_model the simplified model
+ * @return
+ */
 static int filter_model(const struct MultiRowModel *original_model,
                         struct MultiRowModel *filtered_model)
 {
     int rval = 0;
     int nrows = original_model->nrows;
     struct RayList *filtered_rays = &filtered_model->rays;
-    struct RayList *original_rays = &original_model->rays;
+    const struct RayList *original_rays = &original_model->rays;
 
     memcpy(filtered_model->f, original_model->f, 2 * sizeof(double));
 
@@ -190,11 +210,21 @@ CLEANUP:
     return rval;
 }
 
-static int append_extra_rays(const struct Tableau *tableau,
-                             struct MultiRowModel *model)
+/**
+ * Appends a few extra rays to the model, so that the resulting
+ * lattice-free set is a little larger than it would be otherwise.
+ * Although this does not change the coefficients for the continuous
+ * variables, it might help with lifting.
+ *
+ * The model is modified in-place.
+ *
+ * @param model the model to be modified
+ * @return zero if successful, non-zero otherwise
+ */
+static int append_extra_rays(struct MultiRowModel *model)
 {
     int rval = 0;
-    int nrows = tableau->nrows;
+    int nrows = model->nrows;
     int n_extra_rays = 0;
     double extra_rays[100];
 
@@ -251,25 +281,33 @@ CLEANUP:
     return rval;
 }
 
-static int write_sage_file(const struct MultiRowModel *model,
-                           const struct ConvLFreeSet *lfree,
-                           const char *filename)
+/**
+ * Writes a given lattice-free set to a sage file.
+ *
+ * This file can be rendered by the script 'benchmark/scripts/render.sage'
+ *
+ * @param lfree the lattice-free set to be written
+ * @param filename the name of the file
+ * @return zero if successful, non-zero otherwise
+ */
+static int write_lfree_to_sage_file(const struct ConvLFreeSet *lfree,
+                                    const char *filename)
 {
     int rval = 0;
-    int nrows = model->nrows;
+    int nrows = lfree->nrows;
 
     FILE *fsage = fopen(filename, "w");
     abort_iff(!fsage, "could not open %s", filename);
 
     fprintf(fsage, "f=vector([");
     for(int i = 0; i < nrows; i++)
-        fprintf(fsage, "%.20lf,", model->f[i]);
+        fprintf(fsage, "%.20lf,", lfree->f[i]);
     fprintf(fsage, "])\n");
 
     fprintf(fsage, "R=matrix([\n");
-    for(int i = 0; i < model->rays.nrays; i++)
+    for(int i = 0; i < lfree->rays.nrays; i++)
     {
-        double *r = LFREE_get_ray(&model->rays, i);
+        double *r = LFREE_get_ray(&lfree->rays, i);
         fprintf(fsage, "    [");
         for(int j = 0; j < nrows; j++)
             fprintf(fsage, "%.20lf,", r[j]);
@@ -278,7 +316,7 @@ static int write_sage_file(const struct MultiRowModel *model,
     fprintf(fsage, "])\n");
 
     fprintf(fsage, "pi=vector([\n");
-    for(int k = 0; k < model->rays.nrays; k++)
+    for(int k = 0; k < lfree->rays.nrays; k++)
         fprintf(fsage, "    %.12lf,\n", 1 / lfree->beta[k]);
     fprintf(fsage, "])\n");
 
@@ -287,8 +325,7 @@ CLEANUP:
     return rval;
 }
 
-static int dump_cut(const struct MultiRowModel *model,
-                    const struct ConvLFreeSet *lfree)
+static int dump_cut(const struct ConvLFreeSet *lfree)
 {
     int rval = 0;
 
@@ -296,13 +333,23 @@ static int dump_cut(const struct MultiRowModel *model,
     sprintf(filename, "cut-%03d.sage", DUMP_CUT_N++);
 
     time_printf("Writing %s...\n", filename);
-    rval = write_sage_file(model, lfree, filename);
-    abort_if(rval, "write_sage_file failed");
+    rval = write_lfree_to_sage_file(lfree, filename);
+    abort_if(rval, "write_lfree_to_sage_file failed");
 
 CLEANUP:
     return rval;
 }
 
+/**
+ * Given a tableau, extracts the original multi-row model, along with
+ * its mapping, in addition to a simplified version of this model.
+ *
+ * @param tableau the tableau
+ * @param original_model the original multi-row model obtained from the tableau
+ * @param filtered_model the simplified multi-row model obtained from the tableau
+ * @param original_map the mapping between the tableau and the original model
+ * @return zero if successful, non-zero otherwise
+ */
 static int extract_models(const struct Tableau *tableau,
                           struct MultiRowModel *original_model,
                           struct MultiRowModel *filtered_model,
@@ -321,7 +368,7 @@ static int extract_models(const struct Tableau *tableau,
 
     if(ENABLE_LIFTING)
     {
-        rval = append_extra_rays(tableau, filtered_model);
+        rval = append_extra_rays(filtered_model);
         abort_if(rval, "append_extra_rays failed");
     }
 
@@ -337,6 +384,13 @@ CLEANUP:
 
 #ifndef TEST_SOURCE
 
+/**
+ * Generates the infinity cut for a given tableau.
+ *
+ * @param tableau the tableau that should be used to generate the cut
+ * @param[out] cut the resulting infinity cut
+ * @return zero if successful, non-zero otherwise
+ */
 int INFINITY_generate_cut(const struct Tableau *tableau, struct Row *cut)
 {
     int rval = 0;
@@ -382,7 +436,7 @@ int INFINITY_generate_cut(const struct Tableau *tableau, struct Row *cut)
 
     if(SHOULD_DUMP_CUTS)
     {
-        rval = dump_cut(&filtered_model, &lfree);
+        rval = dump_cut(&lfree);
         abort_if(rval, "dump_cut failed");
     }
 
