@@ -30,7 +30,6 @@ extern "C" {
 TEST(Infinity2DTest, test_generate_cut_1)
 {
     int rval = 0;
-    double bounds[100];
 
     double f[] = {1 / 4.0, 3 / 4.0};
     double rays[] = {
@@ -43,14 +42,17 @@ TEST(Infinity2DTest, test_generate_cut_1)
 
     const struct MultiRowModel model = {f , rays, 5, 2};
 
-    rval = INFINITY_2D_generate_cut(&model, bounds);
-    abort_if(rval, "INFINITY_2D_generate_cut failed");
+    struct ConvLFreeSet lfree;
+    LFREE_init_conv(&lfree, 2, 5);
 
-    EXPECT_NEAR(23 / 50.0, bounds[0], BOUNDS_EPSILON);
-    EXPECT_NEAR(23 / 42.0, bounds[1], BOUNDS_EPSILON);
-    EXPECT_NEAR(9 / 11.0, bounds[2], BOUNDS_EPSILON);
-    EXPECT_NEAR(9 / 11.0, bounds[3], BOUNDS_EPSILON);
-    EXPECT_NEAR(23 / 50.0, bounds[4], BOUNDS_EPSILON);
+    rval = INFINITY_2D_generate_lfree(&model, &lfree);
+    abort_if(rval, "INFINITY_2D_generate_lfree failed");
+
+    EXPECT_NEAR(23 / 50.0, lfree.beta[0], BOUNDS_EPSILON);
+    EXPECT_NEAR(23 / 42.0, lfree.beta[1], BOUNDS_EPSILON);
+    EXPECT_NEAR(9 / 11.0, lfree.beta[2], BOUNDS_EPSILON);
+    EXPECT_NEAR(9 / 11.0, lfree.beta[3], BOUNDS_EPSILON);
+    EXPECT_NEAR(23 / 50.0, lfree.beta[4], BOUNDS_EPSILON);
 
     CLEANUP:
     if (rval) FAIL();
@@ -59,7 +61,6 @@ TEST(Infinity2DTest, test_generate_cut_1)
 TEST(Infinity2DTest, test_generate_cut_2)
 {
     int rval = 0;
-    double bounds[100];
     double f[] = {1 / 2.0, 1 / 2.0};
     double rays[] = {
             -1.0, -1.0,
@@ -70,15 +71,17 @@ TEST(Infinity2DTest, test_generate_cut_2)
     };
 
     const struct MultiRowModel model = {f , rays, 5, 2};
+    struct ConvLFreeSet lfree;
+    LFREE_init_conv(&lfree, 2, 5);
 
-    rval = INFINITY_2D_generate_cut(&model, bounds);
-    abort_if(rval, "INFINITY_2D_generate_cut failed");
+    rval = INFINITY_2D_generate_lfree(&model, &lfree);
+    abort_if(rval, "INFINITY_2D_generate_lfree failed");
 
-    EXPECT_NEAR(0.5, bounds[0], BOUNDS_EPSILON);
-    EXPECT_NEAR(0.5, bounds[1], BOUNDS_EPSILON);
-    EXPECT_NEAR(0.5, bounds[2], BOUNDS_EPSILON);
-    EXPECT_EQ(GREEDY_BIG_E, bounds[3]);
-    EXPECT_NEAR(0.5, bounds[4], BOUNDS_EPSILON);
+    EXPECT_NEAR(0.5, lfree.beta[0], BOUNDS_EPSILON);
+    EXPECT_NEAR(0.5, lfree.beta[1], BOUNDS_EPSILON);
+    EXPECT_NEAR(0.5, lfree.beta[2], BOUNDS_EPSILON);
+    EXPECT_EQ(GREEDY_BIG_E, lfree.beta[3]);
+    EXPECT_NEAR(0.5, lfree.beta[4], BOUNDS_EPSILON);
 
     CLEANUP:
     if (rval) FAIL();
@@ -87,18 +90,19 @@ TEST(Infinity2DTest, test_generate_cut_2)
 TEST(Infinity2DTest, test_generate_cut_3)
 {
     int rval = 0;
-    double bounds[100];
     double f[] = {5 / 22.0, 0.0};
     double rays[] = {-1 / 22.0, 0.0, 0.0, 1 / 18.0, 1 / 22.0, 0.0};
 
     const struct MultiRowModel model = {f , rays, 3, 2};
+    struct ConvLFreeSet lfree;
+    LFREE_init_conv(&lfree, 2, 5);
 
-    rval = INFINITY_2D_generate_cut(&model, bounds);
-    abort_if(rval, "INFINITY_2D_generate_cut failed");
+    rval = INFINITY_2D_generate_lfree(&model, &lfree);
+    abort_if(rval, "INFINITY_2D_generate_lfree failed");
 
-    EXPECT_NEAR(5.0, bounds[0], BOUNDS_EPSILON);
-    EXPECT_NEAR(17.0, bounds[2], BOUNDS_EPSILON);
-    EXPECT_EQ(GREEDY_BIG_E, bounds[1]);
+    EXPECT_NEAR(5.0, lfree.beta[0], BOUNDS_EPSILON);
+    EXPECT_NEAR(17.0, lfree.beta[2], BOUNDS_EPSILON);
+    EXPECT_EQ(GREEDY_BIG_E, lfree.beta[1]);
 
     CLEANUP:
     if (rval) FAIL();
@@ -277,8 +281,8 @@ TEST(Infinity2DTest, find_containing_cone_test_3)
 //    double rays[] = {0, -1 / 38.0, -1 / 22.0, -1 / 38.0, 0, 1 / 38.0, -1 / 22.0,
 //            0, 1 / 22.0, 0, 1 / 22.0, 1 / 38.0};
 //
-//    rval = INFINITY_2D_generate_cut(rays, 6, f, bounds);
-//    abort_if(rval, "INFINITY_2D_generate_cut failed");
+//    rval = INFINITY_2D_generate_lfree(rays, 6, f, bounds);
+//    abort_if(rval, "INFINITY_2D_generate_lfree failed");
 //
 //    EXPECT_NEAR(20.0, bounds[0], BOUNDS_EPSILON);
 //    EXPECT_NEAR(20.0, bounds[1], BOUNDS_EPSILON);
@@ -303,8 +307,8 @@ TEST(Infinity2DTest, find_containing_cone_test_3)
 //            0.04545454545454545581, 0.00000000000000000000,
 //            0.04545454545454545581, 0.02631578947368420907};
 //
-//    rval = INFINITY_2D_generate_cut(rays, 6, f, bounds);
-//    abort_if(rval, "INFINITY_2D_generate_cut failed");
+//    rval = INFINITY_2D_generate_lfree(rays, 6, f, bounds);
+//    abort_if(rval, "INFINITY_2D_generate_lfree failed");
 //
 //    EXPECT_NEAR(20.0, bounds[0], BOUNDS_EPSILON);
 //    EXPECT_NEAR(20.0, bounds[1], BOUNDS_EPSILON);

@@ -107,7 +107,7 @@ void CG_free_ray_map(struct RayMap *map);
 
 int CG_extract_f_from_tableau(const struct Tableau *tableau, double *f);
 
-int CG_malloc_model(struct MultiRowModel *model, int nrows, int rays_capacity);
+int CG_init_model(struct MultiRowModel *model, int nrows, int rays_capacity);
 
 void CG_free_model(struct MultiRowModel *model);
 

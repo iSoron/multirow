@@ -85,30 +85,25 @@ CLEANUP:
     return rval;
 }
 
-static int create_cut(const struct Tableau *tableau,
-                      const struct RayMap *map,
-                      const struct MultiRowModel *model,
-                      const double *beta,
-                      struct Row *cut)
+static int create_cut_from_lfree(const struct Tableau *tableau,
+                                 const struct RayMap *map,
+                                 const struct ConvLFreeSet *lfree,
+                                 struct Row *cut)
 {
     int rval = 0;
+
+    struct LP lp;
     int nvars = map->nvars;
     int nrows = tableau->nrows;
 
-    cut->nz = nvars;
-    cut->pi = (double *) malloc(nvars * sizeof(double));
-    cut->indices = (int *) malloc(nvars * sizeof(int));
-    abort_if(!cut->pi, "could not allocate cut->pi");
-    abort_if(!cut->indices, "could not allocate cut->indices");
-
-    struct LP lp;
     rval = LP_open(&lp);
     abort_if(rval, "LP_open failed");
 
-    rval = GREEDY_create_psi_lp(nrows, model->rays.nrays, model->f,
-            model->rays.values, beta, &lp);
+    rval = GREEDY_create_psi_lp(nrows, lfree->rays.nrays, lfree->f,
+            lfree->rays.values, lfree->beta, &lp);
     abort_if(rval, "create_psi_lp failed");
 
+    cut->nz = nvars;
     for(int i = 0; i < nvars; i++)
     {
         double value;
@@ -117,15 +112,15 @@ static int create_cut(const struct Tableau *tableau,
         if(ENABLE_LIFTING &&
                 tableau->column_types[map->indices[i]] == MILP_INTEGER)
         {
-            rval = GREEDY_ND_pi(nrows, model->rays.nrays, model->f,
-                    model->rays.values, beta, q, map->ray_scale[i], &lp,
+            rval = GREEDY_ND_pi(nrows, lfree->rays.nrays, lfree->f,
+                    lfree->rays.values, lfree->beta, q, map->ray_scale[i], &lp,
                     &value);
             abort_if(rval, "GREEDY_ND_pi failed");
         }
         else
         {
-            rval = GREEDY_ND_psi(nrows, model->rays.nrays, model->f,
-                    model->rays.values, beta, q, map->ray_scale[i], &lp,
+            rval = GREEDY_ND_psi(nrows, lfree->rays.nrays, lfree->f,
+                    lfree->rays.values, lfree->beta, q, map->ray_scale[i], &lp,
                     &value);
             abort_if(rval, "GREEDY_ND_psi failed");
         }
@@ -146,7 +141,7 @@ CLEANUP:
     return rval;
 }
 
-static int select_rays(const struct RayMap *map,
+static int filter_rays(const struct RayMap *map,
                        const struct Tableau *tableau,
                        struct MultiRowModel *model)
 {
@@ -166,8 +161,8 @@ static int select_rays(const struct RayMap *map,
             for(int j = 0; j < (rays->nrays); j++)
             {
                 double *q = LFREE_get_ray(&map->rays, j);
-                double norm = 0;
 
+                double norm = 0;
                 for(int k = 0; k < nrows; k++)
                     norm += fabs(r[k] - q[k]);
 
@@ -182,7 +177,7 @@ static int select_rays(const struct RayMap *map,
         }
 
         log_debug("  norm_cutoff=%8.2lf nrays=%8d\n", norm_cutoff,
-                model->nrays);
+                model->rays.nrays);
 
         if(rays->nrays < MAX_N_RAYS) break;
     }
@@ -253,7 +248,7 @@ CLEANUP:
 }
 
 static int write_sage_file(const struct MultiRowModel *model,
-                           const double *beta,
+                           const struct ConvLFreeSet *lfree,
                            const char *filename)
 {
     int rval = 0;
@@ -280,7 +275,7 @@ static int write_sage_file(const struct MultiRowModel *model,
 
     fprintf(fsage, "pi=vector([\n");
     for(int k = 0; k < model->rays.nrays; k++)
-        fprintf(fsage, "    %.12lf,\n", 1 / beta[k]);
+        fprintf(fsage, "    %.12lf,\n", 1 / lfree->beta[k]);
     fprintf(fsage, "])\n");
 
 CLEANUP:
@@ -288,7 +283,8 @@ CLEANUP:
     return rval;
 }
 
-static int dump_cut(const struct MultiRowModel *model, const double *beta)
+static int dump_cut(const struct MultiRowModel *model,
+                    const struct ConvLFreeSet *lfree)
 {
     int rval = 0;
 
@@ -296,7 +292,7 @@ static int dump_cut(const struct MultiRowModel *model, const double *beta)
     sprintf(filename, "cut-%03d.sage", DUMP_CUT_N++);
 
     time_printf("Writing %s...\n", filename);
-    rval = write_sage_file(model, beta, filename);
+    rval = write_sage_file(model, lfree, filename);
     abort_if(rval, "write_sage_file failed");
 
 CLEANUP:
@@ -315,8 +311,8 @@ static int extract_model_from_tableau(const struct Tableau *tableau,
     rval = CG_extract_rays_from_tableau(tableau, map);
     abort_if(rval, "CG_extract_rays_from_rows failed");
 
-    rval = select_rays(map, tableau, model);
-    abort_if(rval, "select_rays failed");
+    rval = filter_rays(map, tableau, model);
+    abort_if(rval, "filter_rays failed");
 
     if(ENABLE_LIFTING)
     {
@@ -339,16 +335,16 @@ CLEANUP:
 int INFINITY_generate_cut(const struct Tableau *tableau, struct Row *cut)
 {
     int rval = 0;
-    int nrows = tableau->nrows;
     int max_nrays = CG_total_nz(tableau);
-    double *beta = 0;
-
-    struct MultiRowModel model;
-    rval = CG_malloc_model(&model, nrows, max_nrays + 100);
-    abort_if(rval, "CG_malloc_model failed");
 
     struct RayMap map;
-    rval = CG_init_ray_map(&map, max_nrays, nrows);
+    struct MultiRowModel model;
+    struct ConvLFreeSet lfree;
+
+    rval = CG_init_model(&model, tableau->nrows, max_nrays + 100);
+    abort_if(rval, "CG_init_model failed");
+
+    rval = CG_init_ray_map(&map, max_nrays, tableau->nrows);
     abort_if(rval, "CG_init_ray_map failed");
 
     rval = extract_model_from_tableau(tableau, &model, &map);
@@ -357,16 +353,16 @@ int INFINITY_generate_cut(const struct Tableau *tableau, struct Row *cut)
     if(model.rays.nrays < 3)
     {
         rval = ERR_NO_CUT;
-        cut->pi = 0;
-        cut->indices = 0;
         goto CLEANUP;
     }
 
-    beta = (double *) malloc(model.rays.nrays * sizeof(double));
-    abort_if(!beta, "could not allocate beta");
+    rval = LFREE_init_conv(&lfree, tableau->nrows, model.rays.nrays);
+    abort_if(rval, "LFREE_init_conv failed");
 
-    if(nrows == 2) rval = INFINITY_2D_generate_cut(&model, beta);
-    else rval = GREEDY_ND_generate_cut(&model, beta);
+    if(tableau->nrows == 2)
+        rval = INFINITY_2D_generate_lfree(&model, &lfree);
+    else
+        rval = INFINITY_ND_generate_lfree(&model, &lfree);
 
     if(rval)
     {
@@ -376,15 +372,15 @@ int INFINITY_generate_cut(const struct Tableau *tableau, struct Row *cut)
 
     if(SHOULD_DUMP_CUTS)
     {
-        rval = dump_cut(&model, beta);
+        rval = dump_cut(&model, &lfree);
         abort_if(rval, "dump_cut failed");
     }
 
-    rval = create_cut(tableau, &map, &model, beta, cut);
-    abort_if(rval, "create_cut failed");
+    rval = create_cut_from_lfree(tableau, &map, &lfree, cut);
+    abort_if(rval, "create_cut_from_lfree failed");
 
 CLEANUP:
-    if(beta) free(beta);
+    LFREE_free_conv(&lfree);
     CG_free_model(&model);
     CG_free_ray_map(&map);
     return rval;

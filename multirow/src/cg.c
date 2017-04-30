@@ -575,7 +575,10 @@ void CG_free(struct CG *cg)
     if (cg->tableau_rows)
     {
         for (int i = 0; i < cg->nrows; i++)
+        {
             LP_free_row(cg->tableau_rows[i]);
+            free(cg->tableau_rows[i]);
+        }
         free(cg->tableau_rows);
     }
 
@@ -598,19 +601,16 @@ int CG_add_single_row_cuts(struct CG *cg, SingleRowGeneratorCallback generate)
 
         log_verbose("Generating cut %d...\n", i);
 
-        struct Row *cut = 0;
+        struct Row cut;
 
-        cut = (struct Row *) malloc(sizeof(struct Row));
-        abort_if(!cut, "could not allocate cut");
-
-        rval = generate(row, cg->column_types, cut);
+        rval = generate(row, cg->column_types, &cut);
         abort_if(rval, "generate failed");
 
         int ignored;
-        rval = add_cut(cg, cut, &ignored);
+        rval = add_cut(cg, &cut, &ignored);
         abort_if(rval, "add_cut failed");
 
-        LP_free_row(cut);
+        LP_free_row(&cut);
     }
 
 CLEANUP:
@@ -856,23 +856,24 @@ int CG_add_multirow_cuts(struct CG *cg,
                 progress_increment();
             }
 
-            struct Row *cut = 0;
+            struct Tableau tableau = {nrows, rows, cg->column_types};
+            struct Row cut;
 
-            cut = (struct Row *) malloc(sizeof(struct Row));
-            abort_if(!cut, "could not allocate cut");
-
-            cut->pi = 0;
-            cut->indices = 0;
+            int max_nz = CG_total_nz(&tableau);
+            cut.pi = (double *) malloc(max_nz * sizeof(double));
+            cut.indices = (int *) malloc(max_nz * sizeof(int));
+            abort_if(!cut.pi, "could not allocate cut.pi");
+            abort_if(!cut.indices, "could not allocate cut.indices");
 
             double initial_time = get_user_time();
-            struct Tableau tableau = {nrows, rows, cg->column_types};
 
-            rval = generate(&tableau, cut);
+             SHOULD_DUMP_CUTS = 1;
+            rval = generate(&tableau, &cut);
             if (rval == ERR_NO_CUT)
             {
                 rval = 0;
                 log_verbose("combination does not yield cut\n");
-                LP_free_row(cut);
+                LP_free_row(&cut);
                 goto NEXT_COMBINATION;
             }
             else abort_iff(rval, "generate failed (cut %d)", count);
@@ -881,36 +882,36 @@ int CG_add_multirow_cuts(struct CG *cg,
             log_debug("    generate: %.2lf ms\n", elapsed_time * 1000);
 
             double dynamism;
-            rval = cut_dynamism(cut, &dynamism);
+            rval = cut_dynamism(&cut, &dynamism);
             abort_if(rval, "cut_dynamism failed");
 
             if (dynamism > MAX_CUT_DYNAMISM)
             {
                 log_debug("Discarding cut (dynamism=%.2lf)\n", dynamism);
-                LP_free_row(cut);
+                LP_free_row(&cut);
                 goto NEXT_COMBINATION;
             }
 
             int ignored;
-            rval = add_cut(cg, cut, &ignored);
+            rval = add_cut(cg, &cut, &ignored);
             if (rval)
             {
                 log_warn("invalid cut skipped (cut %d)\n", count);
                 rval = 0;
 
-                LP_free_row(cut);
+                LP_free_row(&cut);
                 goto NEXT_COMBINATION;
 
             }
 
             if_debug_level if (!ignored)
-                {
-                    SHOULD_DUMP_CUTS = 1;
-                    generate(&tableau, cut);
-                    SHOULD_DUMP_CUTS = 0;
-                }
+            {
+                SHOULD_DUMP_CUTS = 1;
+                generate(&tableau, &cut);
+                SHOULD_DUMP_CUTS = 0;
+            }
 
-            LP_free_row(cut);
+            LP_free_row(&cut);
         }
 
     NEXT_COMBINATION:
@@ -1019,7 +1020,7 @@ int CG_extract_f_from_tableau(const struct Tableau *tableau, double *f)
     return 0;
 }
 
-int CG_malloc_model(struct MultiRowModel *model, int nrows, int rays_capacity)
+int CG_init_model(struct MultiRowModel *model, int nrows, int rays_capacity)
 {
     int rval = 0;
     model->nrows = nrows;

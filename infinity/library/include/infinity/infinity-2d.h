@@ -19,6 +19,7 @@
 
 #include <multirow/cg.h>
 
-int INFINITY_2D_generate_cut(const struct MultiRowModel *model, double *bounds);
+int INFINITY_2D_generate_lfree(const struct MultiRowModel *model,
+                               struct ConvLFreeSet *lfree);
 
 #endif //MULTIROW_INFINITY_2D_H

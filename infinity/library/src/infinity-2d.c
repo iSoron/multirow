@@ -524,28 +524,28 @@ CLEANUP:
 #ifndef TEST_SOURCE
 
 
-int INFINITY_2D_generate_cut(const struct MultiRowModel *model, double *bounds)
+int INFINITY_2D_generate_lfree(const struct MultiRowModel *model,
+                               struct ConvLFreeSet *lfree)
 {
-    log_verbose("INFINITY_2D_generate_cut\n");
     int rval = 0;
     int count = 0;
     int nrays = model->rays.nrays;
-    double *f = model->f;
 
     double *scale = 0;
-    double *rays = 0;
-
     double lb[2], ub[2];
 
-    for (int i = 0; i < nrays; i++)
-        bounds[i] = GREEDY_BIG_E;
+    double *f = lfree->f;
+    double *beta = lfree->beta;
+    double *rays = lfree->rays.values;
+
+    lfree->nrows = 2;
+    lfree->rays.nrays = nrays;
+    memcpy(f, model->f, 2 * sizeof(double));
+    memcpy(rays, model->rays.values, 2 * nrays * sizeof(double));
+    for (int i = 0; i < nrays; i++) beta[i] = GREEDY_BIG_E;
 
     scale = (double*) malloc(nrays * sizeof(double));
-    rays = (double*) malloc(2 * nrays * sizeof(double));
-    abort_if(!rays, "could not allocate rays");
     abort_if(!scale, "could not allocate scale");
-
-    memcpy(rays, model->rays.values, 2 * nrays * sizeof(double));
 
     rval = scale_to_chull(rays, nrays, scale);
     abort_if(rval, "scale_to_chull failed");
@@ -558,7 +558,7 @@ int INFINITY_2D_generate_cut(const struct MultiRowModel *model, double *bounds)
 
         abort_if(count++ > 2 * nrays, "infinite loop");
 
-        rval = get_bounding_box(2, nrays, rays, bounds, GREEDY_BIG_E, lb, ub);
+        rval = get_bounding_box(2, nrays, rays, beta, GREEDY_BIG_E, lb, ub);
         abort_if(rval, "get_bounding_box failed");
 
         log_verbose("    box=[%.2lf %.2lf] [%.2lf %.2lf]\n", lb[0], ub[0], lb[1], ub[1]);
@@ -581,7 +581,7 @@ int INFINITY_2D_generate_cut(const struct MultiRowModel *model, double *bounds)
 
             log_verbose("    p=%.2lf %.2lf\n", p[0], p[1]);
 
-            rval = bound(rays, bounds, nrays, f, p, &epsilon, v1, v2, &i1, &i2);
+            rval = bound(rays, beta, nrays, f, p, &epsilon, v1, v2, &i1, &i2);
             abort_if(rval, "bound failed");
 
             log_verbose("     epsilon=%.2lf\n", epsilon);
@@ -590,7 +590,7 @@ int INFINITY_2D_generate_cut(const struct MultiRowModel *model, double *bounds)
             {
                 log_verbose("    found smaller epsilon: %.8lf\n", epsilon);
 
-                rval = get_bounding_box(2, nrays, rays, bounds, epsilon, lb, ub);
+                rval = get_bounding_box(2, nrays, rays, beta, epsilon, lb, ub);
                 abort_if(rval, "get_bounding_box failed");
 
                 log_verbose("      p=%.2lf %.2lf\n", p[0], p[1]);
@@ -625,11 +625,11 @@ int INFINITY_2D_generate_cut(const struct MultiRowModel *model, double *bounds)
             break;
         }
 
-        log_verbose("  updating bounds\n");
+        log_verbose("  updating beta\n");
         if(isinf(best_v1[0]))
         {
-            bounds[best_i1] = best_epsilon;
-            log_verbose("    bounds[%d]=%.8lf (exact)\n", best_i1, best_epsilon);
+            beta[best_i1] = best_epsilon;
+            log_verbose("    beta[%d]=%.8lf (exact)\n", best_i1, best_epsilon);
         }
         else
         {
@@ -646,15 +646,15 @@ int INFINITY_2D_generate_cut(const struct MultiRowModel *model, double *bounds)
 
                 if(!DOUBLE_geq(lambda, 0)) continue;
 
-                bounds[i] = fmin(bounds[i], lambda);
-                log_verbose("    bounds[%d]=%.8lf\n", i, bounds[i]);
+                beta[i] = fmin(beta[i], lambda);
+                log_verbose("    beta[%d]=%.8lf\n", i, beta[i]);
             }
         }
 
         //if(count > 0)
         //{
         //    for (int i = 0; i < nrays; i++)
-        //       bounds[i] = fmin(bounds[i], best_epsilon);
+        //       beta[i] = fmin(beta[i], best_epsilon);
 
         //    break;
         //}
@@ -663,7 +663,7 @@ int INFINITY_2D_generate_cut(const struct MultiRowModel *model, double *bounds)
 
         for (int k = 0; k < nrays; k++)
         {
-            if(bounds[k] < 100) continue;
+            if(beta[k] < 100) continue;
             is_split = 1;
 
             double *split_direction = &rays[2 * k];
@@ -700,13 +700,13 @@ int INFINITY_2D_generate_cut(const struct MultiRowModel *model, double *bounds)
             {
                 const double *r = &rays[2 * i];
 
-                lhs = (f[0] + r[0] * bounds[i]) * pi[0];
-                lhs += (f[1] + r[1] * bounds[i]) * pi[1];
+                lhs = (f[0] + r[0] * beta[i]) * pi[0];
+                lhs += (f[1] + r[1] * beta[i]) * pi[1];
 
                 if (!(DOUBLE_leq(pi_zero, lhs) && DOUBLE_leq(lhs, pi_zero+1)))
                 {
                     log_verbose("    point %.4lf %.4lf falls outside of the split\n",
-                            f[0] + r[0]*bounds[i], f[1] + r[1] * bounds[i]);
+                            f[0] + r[0]*beta[i], f[1] + r[1] * beta[i]);
                     is_split = 0;
                 }
             }
@@ -722,11 +722,10 @@ int INFINITY_2D_generate_cut(const struct MultiRowModel *model, double *bounds)
     }
 
     for(int i=0; i<nrays; i++)
-        bounds[i] *= scale[i];
+        beta[i] *= scale[i];
 
     CLEANUP:
     if(scale) free(scale);
-    if(rays) free(rays);
     return rval;
 }
 

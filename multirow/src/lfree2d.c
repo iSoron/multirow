@@ -541,3 +541,28 @@ void LFREE_push_ray(struct RayList *list, const double *ray)
     memcpy(dest, ray, list->dim * sizeof(double));
     list->nrays++;
 }
+
+int LFREE_init_conv(struct ConvLFreeSet *lfree, int dim, int max_nrays)
+{
+    int rval = 0;
+
+    lfree->nrows = dim;
+    lfree->f = (double*) malloc(dim * sizeof(double));
+    lfree->beta = (double*) malloc(max_nrays * sizeof(double));
+    abort_if(!lfree->f, "could not allocate lfree->f");
+    abort_if(!lfree->beta, "could not allocate lfree->beta");
+
+    rval = LFREE_init_ray_list(&lfree->rays, dim, max_nrays);
+    abort_if(rval, "LFREE_init_ray_list failed");
+
+CLEANUP:
+    return rval;
+}
+
+void LFREE_free_conv(struct ConvLFreeSet *lfree)
+{
+    if(!lfree) return;
+    free(lfree->f);
+    free(lfree->beta);
+    LFREE_free_ray_list(&lfree->rays);
+}

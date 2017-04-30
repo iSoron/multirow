@@ -80,10 +80,8 @@ void LP_free(struct LP *lp)
 void LP_free_row(struct Row *row)
 {
     if (!row) return;
-
     if (row->pi) free(row->pi);
     if (row->indices) free(row->indices);
-    free(row);
 }
 
 int LP_add_rows(struct LP *lp,

@@ -25,6 +25,7 @@ extern "C" {
 #include <multirow/lfree2d.h>
 #include <multirow/cg.h>
 #include <infinity/greedy-nd.h>
+#include "../src/greedy-nd.c"
 }
 
 int ENABLE_LIFTING = 0;
@@ -242,8 +243,8 @@ TEST(GreedyNDTest, bound_test_1)
     double epsilon;
     int tx[6];
 
-    rval = GREEDY_ND_bound(2, 6, f, rays, x, beta1, &epsilon, tx);
-    abort_if(rval, "GREEDY_ND_bound failed");
+    rval = bound(2, 6, f, rays, x, beta1, &epsilon, tx);
+    abort_if(rval, "bound failed");
     EXPECT_NEAR(epsilon, 0.5, 1e-6);
     EXPECT_TRUE(tx[0]);
     EXPECT_FALSE(tx[1]);
@@ -252,8 +253,8 @@ TEST(GreedyNDTest, bound_test_1)
     EXPECT_FALSE(tx[4]);
     EXPECT_FALSE(tx[5]);
 
-    rval = GREEDY_ND_bound(2, 6, f, rays, x, beta2, &epsilon, tx);
-    abort_if(rval, "GREEDY_ND_bound failed");
+    rval = bound(2, 6, f, rays, x, beta2, &epsilon, tx);
+    abort_if(rval, "bound failed");
     EXPECT_NEAR(epsilon, 1.0, 1e-6);
     EXPECT_TRUE(tx[0]);
     EXPECT_FALSE(tx[1]);
@@ -262,8 +263,8 @@ TEST(GreedyNDTest, bound_test_1)
     EXPECT_TRUE(tx[4]);
     EXPECT_TRUE(tx[5]);
 
-    rval = GREEDY_ND_bound(2, 6, f, rays, x, beta3, &epsilon, tx);
-    abort_if(rval, "GREEDY_ND_bound failed");
+    rval = bound(2, 6, f, rays, x, beta3, &epsilon, tx);
+    abort_if(rval, "bound failed");
     EXPECT_EQ(epsilon, INFINITY);
     EXPECT_FALSE(tx[0]);
     EXPECT_FALSE(tx[1]);
@@ -371,10 +372,9 @@ TEST(GreedyNDTest, generate_cut_test_1)
     double r3[] = { -1.0,  1.0 };
     double r4[] = {  0.0,  1.0 };
     double r5[] = {  1.0,  0.0 };
-    double beta[6];
 
     struct MultiRowModel model;
-    CG_malloc_model(&model, 2, 6);
+    CG_init_model(&model, 2, 6);
     LFREE_push_ray(&model.rays, r0);
     LFREE_push_ray(&model.rays, r1);
     LFREE_push_ray(&model.rays, r2);
@@ -384,15 +384,18 @@ TEST(GreedyNDTest, generate_cut_test_1)
     model.f[0] = 0.5;
     model.f[1] = 0.5;
 
-    rval = GREEDY_ND_generate_cut(&model, beta);
-    abort_if(rval, "GREEDY_ND_generate_cut failed");
+    struct ConvLFreeSet lfree;
+    LFREE_init_conv(&lfree, 2, 6);
 
-    EXPECT_NEAR(beta[0], 0.5, 1e-6);
-    EXPECT_NEAR(beta[1], 0.5, 1e-6);
-    EXPECT_NEAR(beta[2], 0.5, 1e-6);
-    EXPECT_NEAR(beta[3], 0.5, 1e-6);
-    EXPECT_NEAR(beta[4], 1.0, 1e-6);
-    EXPECT_NEAR(beta[5], 1.0, 1e-6);
+    rval = INFINITY_ND_generate_lfree(&model, &lfree);
+    abort_if(rval, "INFINITY_ND_generate_lfree failed");
+
+    EXPECT_NEAR(lfree.beta[0], 0.5, 1e-6);
+    EXPECT_NEAR(lfree.beta[1], 0.5, 1e-6);
+    EXPECT_NEAR(lfree.beta[2], 0.5, 1e-6);
+    EXPECT_NEAR(lfree.beta[3], 0.5, 1e-6);
+    EXPECT_NEAR(lfree.beta[4], 1.0, 1e-6);
+    EXPECT_NEAR(lfree.beta[5], 1.0, 1e-6);
 
 CLEANUP:
     if(rval) FAIL();
@@ -408,10 +411,9 @@ TEST(GreedyNDTest, generate_cut_test_2)
     double r3[] = { 0.0, -1.0,  0.0 };
     double r4[] = { 0.0,  0.0,  1.0 };
     double r5[] = { 0.0,  0.0, -1.0 };
-    double beta[6];
 
     struct MultiRowModel model;
-    CG_malloc_model(&model, 3, 6);
+    CG_init_model(&model, 3, 6);
     LFREE_push_ray(&model.rays, r0);
     LFREE_push_ray(&model.rays, r1);
     LFREE_push_ray(&model.rays, r2);
@@ -422,15 +424,18 @@ TEST(GreedyNDTest, generate_cut_test_2)
     model.f[1] = 0.75;
     model.f[2] = 0.75;
 
-    rval = GREEDY_ND_generate_cut(&model, beta);
-    abort_if(rval, "GREEDY_ND_generate_cut failed");
+    struct ConvLFreeSet lfree;
+    LFREE_init_conv(&lfree, 3, 6);
 
-    EXPECT_NEAR(beta[0], 0.75, 1e-6);
-    EXPECT_NEAR(beta[1], 2.25, 1e-6);
-    EXPECT_NEAR(beta[2], 0.75, 1e-6);
-    EXPECT_NEAR(beta[3], 2.25, 1e-6);
-    EXPECT_NEAR(beta[4], 0.75, 1e-6);
-    EXPECT_NEAR(beta[5], 2.25, 1e-6);
+    rval = INFINITY_ND_generate_lfree(&model, &lfree);
+    abort_if(rval, "INFINITY_ND_generate_lfree failed");
+
+    EXPECT_NEAR(lfree.beta[0], 0.75, 1e-6);
+    EXPECT_NEAR(lfree.beta[1], 2.25, 1e-6);
+    EXPECT_NEAR(lfree.beta[2], 0.75, 1e-6);
+    EXPECT_NEAR(lfree.beta[3], 2.25, 1e-6);
+    EXPECT_NEAR(lfree.beta[4], 0.75, 1e-6);
+    EXPECT_NEAR(lfree.beta[5], 2.25, 1e-6);
 
 CLEANUP:
     CG_free_model(&model);

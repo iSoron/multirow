@@ -16,12 +16,6 @@
 #ifndef MULTIROW_GREEDY_ND_H
 #define MULTIROW_GREEDY_ND_H
 
-int GREEDY_ND_next_lattice_point(int dim,
-                                 const double *lb,
-                                 const double *ub,
-                                 double *p,
-                                 int *finished);
-
 int GREEDY_create_psi_lp(const int nrows,
                          const int nrays,
                          const double *f,
@@ -49,16 +43,8 @@ int GREEDY_ND_pi(const int nrows,
                  struct LP *lp,
                  double *value);
 
-int GREEDY_ND_generate_cut(const struct MultiRowModel *model, double *beta);
-
-int GREEDY_ND_bound(int nrows,
-                    int nrays,
-                    const double *f,
-                    const double *rays,
-                    const double *x,
-                    const double *beta,
-                    double *epsilon,
-                    int *tx);
+int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
+                               struct ConvLFreeSet *lfree);
 
 int GREEDY_ND_cone_bound(int nrows,
                          int nrays,

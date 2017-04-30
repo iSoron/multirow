@@ -26,6 +26,7 @@ extern "C" {
 
 int BOOST_VAR = -1;
 double BOOST_FACTOR = 1.0;
+int SHOULD_DUMP_CUTS = 0;
 
 TEST(CGTest, next_combination_test_1)
 {
@@ -157,7 +158,7 @@ TEST(CGTest, extract_rays_from_rows_test)
     rval = CG_extract_rays_from_tableau(&tableau, &map);
     abort_if(rval, "CG_extract_rays_from_rows failed");
 
-    EXPECT_EQ(rays.nrays, 4);
+    EXPECT_EQ(map.rays.nrays, 4);
     EXPECT_EQ(map.nvars, 7);
 
     EXPECT_DOUBLE_EQ(rays.values[0],  0.0);

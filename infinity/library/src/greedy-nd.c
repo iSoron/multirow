@@ -22,6 +22,7 @@
 #include <multirow/util.h>
 
 #include <infinity/greedy-nd.h>
+#include <infinity/greedy-bsearch.h>
 
 static long lp_count = 0;
 static double lp_time = 0;
@@ -41,14 +42,14 @@ static double sfree_mip_time = 0;
 static long scale_ahull_lp_count = 0;
 static double scale_ahull_lp_time = 0;
 
-int find_interior_point_enum(const int nrows,
-                             const int nrays,
-                             const double *f,
-                             const double *rays,
-                             const double *beta,
-                             const double epsilon,
-                             double *x,
-                             int *found)
+static int find_interior_point_enum(const int nrows,
+                                    const int nrays,
+                                    const double *f,
+                                    const double *rays,
+                                    const double *beta,
+                                    const double epsilon,
+                                    double *x,
+                                    int *found)
 {
     int rval = 0;
 
@@ -105,14 +106,14 @@ CLEANUP:
     return rval;
 }
 
-int find_interior_point_cplex(const int nrows,
-                              const int nrays,
-                              const double *f,
-                              const double *rays,
-                              const double *beta,
-                              const double epsilon,
-                              double *x,
-                              int *found)
+static int find_interior_point_cplex(const int nrows,
+                                     const int nrays,
+                                     const double *f,
+                                     const double *rays,
+                                     const double *beta,
+                                     const double epsilon,
+                                     double *x,
+                                     int *found)
 {
     int rval = 0;
     struct LP lp;
@@ -177,366 +178,14 @@ CLEANUP:
     return rval;
 }
 
-int GREEDY_create_psi_lp(const int nrows,
-                         const int nrays,
-                         const double *f,
-                         const double *rays,
-                         const double *beta,
-                         struct LP *lp)
-{
-    int rval = 0;
-
-    int rmatbeg = 0;
-    int *rmatind = 0;
-    double *rmatval = 0;
-
-    rmatind = (int *) malloc(nrays * sizeof(int));
-    rmatval = (double *) malloc(nrays * sizeof(double));
-    abort_if(!rmatind, "could not allocate rmatind");
-    abort_if(!rmatval, "could not allocate rmatval");
-
-    rval = LP_create(lp, "psi");
-    abort_if(rval, "LP_create failed");
-
-    // create lambda variables
-    for(int i = 0; i < nrays; i++)
-    {
-        rval = LP_new_col(lp, 1.0, 0, MILP_INFINITY, 'C');
-        abort_if(rval, "LP_new_col failed");
-    }
-
-    // create constraint 0 = \sum_{i=1}^m \lambda_i r^i_j beta_i
-    for(int j = 0; j < nrows; j++)
-    {
-        char sense = 'E';
-        double rhs = 0;
-        int nz = 0;
-
-        for(int i = 0; i < nrays; i++)
-        {
-            const double *ri = &rays[i * nrows];
-            rmatind[nz] = i;
-            rmatval[nz] = ri[j] * beta[i];
-            nz++;
-        }
-
-        rval = LP_add_rows(lp, 1, nz, &rhs, &sense, &rmatbeg, rmatind, rmatval);
-        abort_if(rval, "LP_add_rows failed");
-    }
-
-    rval = LP_relax(lp);
-    abort_if(rval, "LP_relax failed");
-
-    if_verbose_level
-    {
-        rval = LP_write(lp, "psi.lp");
-        abort_if(rval, "LP_write failed");
-    }
-
-CLEANUP:
-    if(rmatind) free(rmatind);
-    if(rmatval) free(rmatval);
-    return rval;
-}
-
-int GREEDY_ND_pi(const int nrows,
-                 const int nrays,
+static int bound(int nrows,
+                 int nrays,
                  const double *f,
                  const double *rays,
+                 const double *x,
                  const double *beta,
-                 const double *q,
-                 const double q_scale,
-                 struct LP *lp,
-                 double *value)
-{
-    int rval = 0;
-
-    abort_if(nrows > 3, "not implemented");
-
-    double best_value = 1e100;
-
-    if(nrows == 2)
-    {
-        int M = 2;
-        for(int k0 = -M; k0 <= M; k0++)
-            for(int k1 = -M; k1 <= M; k1++)
-            {
-                double qk[] = {frac(q[0] * q_scale) + k0,
-                               frac(q[1] * q_scale) + k1};
-                double value;
-
-                rval = GREEDY_ND_psi(nrows, nrays, f, rays, beta, qk, 1, lp,
-                        &value);
-                abort_if(rval, "GREEDY_ND_psi failed");
-
-                best_value = min(best_value, value);
-            }
-    }
-
-    if(nrows == 3)
-    {
-        int M = 2;
-        for(int k0 = -M; k0 <= M; k0++)
-            for(int k1 = -M; k1 <= M; k1++)
-                for(int k2 = -M; k2 <= M; k2++)
-                {
-                    double qk[] = {frac(q[0] * q_scale) + k0,
-                                   frac(q[1] * q_scale) + k1,
-                                   frac(q[2] * q_scale) + k2};
-                    double value;
-
-                    rval = GREEDY_ND_psi(nrows, nrays, f, rays, beta, qk, 1, lp,
-                            &value);
-                    abort_if(rval, "GREEDY_ND_psi failed");
-
-                    best_value = min(best_value, value);
-                }
-    }
-
-    *value = best_value;
-
-CLEANUP:
-    return rval;
-}
-
-/*
- * Given a point f, a list of rays r1,...,rm, some real numbers b1,...,bm, a
- * point q, and a real number q_scale, this function evaluates psi_B(q *
- * q_scale), where B is the convex hull of {f + ri * bi}_i=1^m.
- */
-int GREEDY_ND_psi(const int nrows,
-                  const int nrays,
-                  const double *f,
-                  const double *rays,
-                  const double *beta,
-                  const double *q,
-                  const double q_scale,
-                  struct LP *lp,
-                  double *value)
-{
-    int rval = 0;
-
-    for(int j = 0; j < nrows; j++)
-    {
-        rval = LP_change_rhs(lp, j, q[j] * q_scale);
-        abort_if(rval, "LP_change_rhs failed");
-    }
-
-    int infeasible;
-    rval = LP_optimize(lp, &infeasible);
-    abort_if(rval, "LP_optimize failed");
-
-    if(infeasible)
-    {
-        *value = INFINITY;
-    }
-    else
-    {
-        rval = LP_get_obj_val(lp, value);
-        abort_if(rval, "LP_get_obj_val failed");
-    }
-
-CLEANUP:
-    return rval;
-}
-
-int GREEDY_ND_generate_cut(const struct MultiRowModel *model, double *beta)
-{
-    int rval = 0;
-    int nrows = model->nrows;
-    int nrays = model->rays.nrays;
-    double *f = model->f;
-
-    double *x = 0;
-
-    int *t = 0;
-    int *tx = 0;
-
-    t = (int *) malloc(nrays * sizeof(int));
-    tx = (int *) malloc(nrays * sizeof(int));
-    abort_if(!t, "could not allocate t");
-    abort_if(!tx, "could not allocate tx");
-
-    x = (double *) malloc((nrows + nrays) * sizeof(double));
-    abort_if(!x, "could not allocate x");
-
-    for(int i = 0; i < nrays; i++)
-        beta[i] = GREEDY_BIG_E;
-
-    int it = 0;
-
-    //lp_time = 0;
-    //lp_count = 0;
-
-    //epsilon_lp_count = 0;
-    //epsilon_lp_time = 0;
-    //
-    //sfree_mip_count = 0;
-    //sfree_mip_time = 0;
-
-    //tight_lp_count = 0;
-    //tight_lp_time = 0;
-
-    //violated_lp_count = 0;
-    //violated_lp_time = 0;
-
-    //scale_ahull_lp_time = 0;
-    //scale_ahull_lp_count = 0;
-
-    long x_count = 0;
-    double epsilon;
-
-    for(int i = 0; i < nrows; i++)
-            log_verbose("  f[%d] = %.12lf\n", i, f[i]);
-
-    while(1)
-    {
-        it++;
-        abort_if(it > 10 * nrays, "infinite loop");
-
-        log_debug("Starting iteration %d...\n", it);
-        epsilon = INFINITY;
-
-        for(int i = 0; i < nrays; i++)
-            t[i] = 0;
-
-        for(int i = 0; i < nrows; i++)
-            x[i] = 0;
-
-        while(1)
-        {
-            log_debug("  epsilon = %.8lf\n", epsilon);
-
-            int found = 0;
-
-            if(nrows == 3)
-            {
-                rval = find_interior_point_enum(nrows, nrays, f,
-                        model->rays.values, beta, epsilon, x, &found);
-                abort_if(rval, "find_interior_point_enum failed");
-            }
-
-            if(!found)
-            {
-                rval = find_interior_point_cplex(nrows, nrays, f,
-                        model->rays.values, beta, epsilon, x, &found);
-                if(rval == ERR_MIP_TIMEOUT) goto CLEANUP;
-                abort_if(rval, "find_interior_point_cplex failed");
-                if(!found) break;
-            }
-
-            log_debug("    found interior point:\n");
-            for(int i = 0; i < nrows; i++) log_debug("        %.2lf\n", x[i]);
-
-            x_count++;
-            abort_if(x_count > 1000, "infinite loop");
-
-            double epsilon_x;
-            rval = GREEDY_ND_bound(nrows, nrays, f, model->rays.values, x, beta,
-                    &epsilon_x, tx);
-            abort_if(rval, "GREEDY_ND_bound failed");
-//            epsilon_x *= 0.999;
-
-            if(isinf(epsilon_x)) break;
-
-            log_debug("    epsilon_x = %.8lf\n", epsilon_x);
-
-            if(DOUBLE_eq(epsilon_x, epsilon))
-            {
-                for(int i = 0; i < nrays; i++)
-                    if(tx[i]) t[i] = 1;
-            }
-            else if(epsilon_x < epsilon)
-            {
-                epsilon = epsilon_x;
-                for(int i = 0; i < nrays; i++)
-                    t[i] = tx[i];
-            }
-        }
-
-        if(isinf(epsilon))
-            break;
-
-        int skip_ahull = 0;
-
-        for(int i = 0; i < nrays; i++)
-        {
-            if(t[i])
-            {
-                beta[i] = min(beta[i], epsilon);
-//                beta[i] *= 0.999;
-            }
-            else if(!skip_ahull)
-            {
-                double alpha;
-                const double *d = LFREE_get_ray(&model->rays, i);
-
-                rval = GREEDY_ND_scale_to_ahull(nrows, nrays,
-                        model->rays.values, t, beta, epsilon, d, &alpha);
-                abort_if(rval, "GREEDY_ND_scale_to_ahull failed");
-
-                if(DOUBLE_iszero(alpha))
-                {
-                    skip_ahull = 1;
-                    continue;
-                }
-
-                beta[i] = min(beta[i], alpha);
-//                beta[i] *= 0.999;
-            }
-
-            log_debug("  beta[%2d] = %.4lf\n", i, beta[i]);
-        }
-
-        log_debug("epsilon = %.6lf\n", epsilon);
-    }
-
-    log_debug("    %6ld lattice points, %ld iterations\n", x_count, it);
-
-    log_debug("    %6ld MIPs (%.2lf ms per call, %.0lf ms total)\n", lp_count,
-            lp_time * 1000 / lp_count, lp_time * 1000);
-
-    log_debug(
-            "          %6ld S-free MIPs (%.2lf ms per call, %.0lf ms total)\n",
-            sfree_mip_count, sfree_mip_time * 1000 / sfree_mip_count,
-            sfree_mip_time * 1000);
-
-    log_debug(
-            "          %6ld epsilon LPs (%.2lf ms per call, %.0lf ms total)\n",
-            epsilon_lp_count, epsilon_lp_time * 1000 / epsilon_lp_count,
-            epsilon_lp_time * 1000);
-
-    log_debug(
-            "          %6ld tight-rays LPs (%.2lf ms per call, %.0lf ms total)\n",
-            tight_lp_count, tight_lp_time * 1000 / tight_lp_count,
-            tight_lp_time * 1000);
-
-    log_debug(
-            "          %6ld violated-cone LPs (%.2lf ms per call, %.0lf ms total)\n",
-            violated_lp_count, violated_lp_time * 1000 / violated_lp_count,
-            violated_lp_time * 1000);
-
-    log_debug(
-            "          %6ld scale-to-ahull LPs (%.2lf ms per call, %.0lf ms total)\n",
-            scale_ahull_lp_count,
-            scale_ahull_lp_time * 1000 / scale_ahull_lp_count,
-            scale_ahull_lp_time * 1000);
-
-CLEANUP:
-    if(x) free(x);
-    if(t) free(t);
-    if(tx) free(tx);
-    return rval;
-}
-
-int GREEDY_ND_bound(int nrows,
-                    int nrays,
-                    const double *f,
-                    const double *rays,
-                    const double *x,
-                    const double *beta,
-                    double *epsilon,
-                    int *tx)
+                 double *epsilon,
+                 int *tx)
 {
     int rval = 0;
 
@@ -767,6 +416,632 @@ CLEANUP:
     return rval;
 }
 
+static int create_violated_cone_lp(int nrows,
+                                   int nrays,
+                                   const double *f,
+                                   const double *rays,
+                                   const double *x,
+                                   const double *beta,
+                                   double epsilon,
+                                   struct LP *lp)
+{
+    int rval = 0;
+
+    double rhs;
+    char sense;
+
+    int rmatbeg = 0;
+    int *rmatind = 0;
+    double *rmatval = 0;
+
+    rmatind = (int *) malloc(nrays * sizeof(int));
+    rmatval = (double *) malloc(nrays * sizeof(double));
+    abort_if(!rmatind, "could not allocate rmatind");
+    abort_if(!rmatval, "could not allocate rmatval");
+
+    rval = LP_create(lp, "violated_cone");
+    abort_if(rval, "LP_create failed");
+
+    // create s variables
+    for(int i = 0; i < nrays; i++)
+    {
+        rval = LP_new_col(lp, 1.0, 0.0, MILP_INFINITY, 'C');
+        abort_if(rval, "LP_new_col failed");
+    }
+
+    // create constraint x = f + \sum(min{e, beta[r]} * r * s_r)
+    for(int j = 0; j < nrows; j++)
+    {
+        sense = 'E';
+        rhs = x[j] - f[j];
+
+        for(int i = 0; i < nrays; i++)
+        {
+            const double *ri = &rays[i * nrows];
+            rmatind[i] = i;
+            rmatval[i] = min(epsilon, beta[i]) * ri[j];
+            if(DOUBLE_iszero(rmatval[i])) rmatval[i] = 0.0;
+        }
+
+        rval = LP_add_rows(lp, 1, nrays, &rhs, &sense, &rmatbeg, rmatind,
+                rmatval);
+        abort_if(rval, "LP_add_rows failed");
+    }
+
+    rval = LP_relax(lp);
+    abort_if(rval, "LP_relax failed");
+
+    //rval = LP_write(lp, "violated-cone.lp");
+    //abort_if(rval, "LP_write failed");
+    //UTIL_pause();
+
+CLEANUP:
+    if(rmatind) free(rmatind);
+    if(rmatval) free(rmatval);
+    return rval;
+}
+
+static int create_scale_to_ahull_lp(int nrows,
+                                    int nrays,
+                                    const double *rays,
+                                    const int *rx,
+                                    const double *beta,
+                                    double epsilon,
+                                    const double *d,
+                                    struct LP *lp)
+{
+    int rval = 0;
+
+    double rhs;
+    char sense;
+    int nz;
+
+    int rmatbeg = 0;
+    int *rmatind = 0;
+    double *rmatval = 0;
+
+    rmatind = (int *) malloc((nrays + 1) * sizeof(int));
+    rmatval = (double *) malloc((nrays + 1) * sizeof(double));
+    abort_if(!rmatind, "could not allocate rmatind");
+    abort_if(!rmatval, "could not allocate rmatval");
+
+    rval = LP_create(lp, "scale_to_ahull");
+    abort_if(rval, "LP_create failed");
+
+    // create alpha variable
+    rval = LP_new_col(lp, 1.0, 0.0, MILP_INFINITY, 'C');
+    abort_if(rval, "LP_new_col failed");
+
+
+    // create lambda variables
+    for(int i = 0; i < nrays; i++)
+    {
+        rval = LP_new_col(lp, 0.0, -MILP_INFINITY, MILP_INFINITY, 'C');
+        abort_if(rval, "LP_new_col failed");
+    }
+
+    // create constraint \sum_{r \in R_x} min(e, beta[r]) * r * \lambda_r = \alpha * d
+    for(int j = 0; j < nrows; j++)
+    {
+        sense = 'E';
+        rhs = 0.0;
+        nz = 0;
+
+        rmatind[nz] = 0;
+        rmatval[nz] = d[j];
+        nz++;
+
+        for(int i = 0; i < nrays; i++)
+        {
+            if(!rx[i]) continue;
+
+            const double *ri = &rays[i * nrows];
+            rmatind[nz] = 1 + i;
+            rmatval[nz] = -min(epsilon, beta[i]) * ri[j];
+            if(DOUBLE_iszero(rmatval[nz])) continue;
+
+            nz++;
+        }
+
+        rval = LP_add_rows(lp, 1, nz, &rhs, &sense, &rmatbeg, rmatind, rmatval);
+        abort_if(rval, "LP_add_rows failed");
+    }
+
+    // create constraint \sum_{r \in R_x} \lambda_r = 1
+    sense = 'E';
+    rhs = 1.0;
+    nz = 0;
+
+    for(int i = 0; i < nrays; i++)
+    {
+        if(!rx[i]) continue;
+
+        rmatind[nz] = 1 + i;
+        rmatval[nz] = 1.0;
+        nz++;
+    }
+
+    rval = LP_add_rows(lp, 1, nz, &rhs, &sense, &rmatbeg, rmatind, rmatval);
+    abort_if(rval, "LP_add_rows failed");
+
+    rval = LP_relax(lp);
+    abort_if(rval, "LP_relax failed");
+
+    //rval = LP_write(lp, "scale-to-ahull.lp");
+    //abort_if(rval, "LP_write failed");
+    //UTIL_pause();
+
+CLEANUP:
+    if(rmatind) free(rmatind);
+    if(rmatval) free(rmatval);
+    return rval;
+}
+
+static int create_tight_rays_lp(int nrows,
+                                int nrays,
+                                const double *f,
+                                const double *rays,
+                                const double *x,
+                                const double *beta,
+                                double epsilon,
+                                double delta,
+                                struct LP *lp)
+{
+    int rval = 0;
+
+    double rhs;
+    char sense;
+
+    int rmatbeg = 0;
+    int *rmatind = 0;
+    double *rmatval = 0;
+
+    rmatind = (int *) malloc(nrays * sizeof(int));
+    rmatval = (double *) malloc(nrays * sizeof(double));
+    abort_if(!rmatind, "could not allocate rmatind");
+    abort_if(!rmatval, "could not allocate rmatval");
+
+    rval = LP_create(lp, "tight_rays");
+    abort_if(rval, "LP_create failed");
+
+    // create lambda variables
+    for(int i = 0; i < nrays; i++)
+    {
+        rval = LP_new_col(lp, 1.0, 0.0, MILP_INFINITY, 'C');
+        abort_if(rval, "LP_new_col failed");
+    }
+
+    // create s variables
+    for(int i = 0; i < nrays; i++)
+    {
+        rval = LP_new_col(lp, 0.0, 0.0, MILP_INFINITY, 'C');
+        abort_if(rval, "LP_new_col failed");
+    }
+
+    // create constraint x = f + \sum_{r \in R} min{e, beta[r]} * r * s_r
+    for(int j = 0; j < nrows; j++)
+    {
+        sense = 'E';
+        rhs = x[j] - f[j];
+
+        for(int i = 0; i < nrays; i++)
+        {
+            const double *ri = &rays[i * nrows];
+            rmatind[i] = nrays + i;
+            rmatval[i] = min(epsilon, beta[i]) * ri[j];
+            if(DOUBLE_iszero(rmatval[i])) rmatval[i] = 0.0;
+        }
+
+        rval = LP_add_rows(lp, 1, nrays, &rhs, &sense, &rmatbeg, rmatind,
+                rmatval);
+        abort_if(rval, "LP_add_rows failed");
+    }
+
+    // create constraint \sum_{r \in R} s_r = 1
+    sense = 'E';
+    rhs = 1.0;
+
+    for(int i = 0; i < nrays; i++)
+    {
+        rmatind[i] = nrays + i;
+        rmatval[i] = 1.0;
+    }
+
+    rval = LP_add_rows(lp, 1, nrays, &rhs, &sense, &rmatbeg, rmatind, rmatval);
+    abort_if(rval, "LP_add_rows failed");
+
+    // create constraints \lambda_r + s_r \geq \delta
+    for(int i = 0; i < nrays; i++)
+    {
+        sense = 'G';
+        rhs = delta;
+
+        rmatind[0] = i;
+        rmatval[0] = 1.0;
+
+        rmatind[1] = nrays + i;
+        rmatval[1] = 1.0;
+
+        rval = LP_add_rows(lp, 1, 2, &rhs, &sense, &rmatbeg, rmatind, rmatval);
+        abort_if(rval, "LP_add_rows failed");
+    }
+
+    rval = LP_relax(lp);
+    abort_if(rval, "LP_relax failed");
+
+    //rval = LP_write(lp, "tight-rays.lp");
+    //abort_if(rval, "LP_write failed");
+
+
+CLEANUP:
+    if(rmatind) free(rmatind);
+    if(rmatval) free(rmatval);
+    return rval;
+}
+
+#ifndef TEST_SOURCE
+
+int GREEDY_create_psi_lp(const int nrows,
+                         const int nrays,
+                         const double *f,
+                         const double *rays,
+                         const double *beta,
+                         struct LP *lp)
+{
+    int rval = 0;
+
+    int rmatbeg = 0;
+    int *rmatind = 0;
+    double *rmatval = 0;
+
+    rmatind = (int *) malloc(nrays * sizeof(int));
+    rmatval = (double *) malloc(nrays * sizeof(double));
+    abort_if(!rmatind, "could not allocate rmatind");
+    abort_if(!rmatval, "could not allocate rmatval");
+
+    rval = LP_create(lp, "psi");
+    abort_if(rval, "LP_create failed");
+
+    // create lambda variables
+    for(int i = 0; i < nrays; i++)
+    {
+        rval = LP_new_col(lp, 1.0, 0, MILP_INFINITY, 'C');
+        abort_if(rval, "LP_new_col failed");
+    }
+
+    // create constraint 0 = \sum_{i=1}^m \lambda_i r^i_j beta_i
+    for(int j = 0; j < nrows; j++)
+    {
+        char sense = 'E';
+        double rhs = 0;
+        int nz = 0;
+
+        for(int i = 0; i < nrays; i++)
+        {
+            const double *ri = &rays[i * nrows];
+            rmatind[nz] = i;
+            rmatval[nz] = ri[j] * beta[i];
+            nz++;
+        }
+
+        rval = LP_add_rows(lp, 1, nz, &rhs, &sense, &rmatbeg, rmatind, rmatval);
+        abort_if(rval, "LP_add_rows failed");
+    }
+
+    rval = LP_relax(lp);
+    abort_if(rval, "LP_relax failed");
+
+    if_verbose_level
+    {
+        rval = LP_write(lp, "psi.lp");
+        abort_if(rval, "LP_write failed");
+    }
+
+CLEANUP:
+    if(rmatind) free(rmatind);
+    if(rmatval) free(rmatval);
+    return rval;
+}
+
+int GREEDY_ND_pi(const int nrows,
+                 const int nrays,
+                 const double *f,
+                 const double *rays,
+                 const double *beta,
+                 const double *q,
+                 const double q_scale,
+                 struct LP *lp,
+                 double *value)
+{
+    int rval = 0;
+
+    abort_if(nrows > 3, "not implemented");
+
+    double best_value = 1e100;
+
+    if(nrows == 2)
+    {
+        int M = 2;
+        for(int k0 = -M; k0 <= M; k0++)
+            for(int k1 = -M; k1 <= M; k1++)
+            {
+                double qk[] = {frac(q[0] * q_scale) + k0,
+                               frac(q[1] * q_scale) + k1};
+                double value;
+
+                rval = GREEDY_ND_psi(nrows, nrays, f, rays, beta, qk, 1, lp,
+                        &value);
+                abort_if(rval, "GREEDY_ND_psi failed");
+
+                best_value = min(best_value, value);
+            }
+    }
+
+    if(nrows == 3)
+    {
+        int M = 2;
+        for(int k0 = -M; k0 <= M; k0++)
+            for(int k1 = -M; k1 <= M; k1++)
+                for(int k2 = -M; k2 <= M; k2++)
+                {
+                    double qk[] = {frac(q[0] * q_scale) + k0,
+                                   frac(q[1] * q_scale) + k1,
+                                   frac(q[2] * q_scale) + k2};
+                    double value;
+
+                    rval = GREEDY_ND_psi(nrows, nrays, f, rays, beta, qk, 1, lp,
+                            &value);
+                    abort_if(rval, "GREEDY_ND_psi failed");
+
+                    best_value = min(best_value, value);
+                }
+    }
+
+    *value = best_value;
+
+CLEANUP:
+    return rval;
+}
+
+/*
+ * Given a point f, a list of rays r1,...,rm, some real numbers b1,...,bm, a
+ * point q, and a real number q_scale, this function evaluates psi_B(q *
+ * q_scale), where B is the convex hull of {f + ri * bi}_i=1^m.
+ */
+int GREEDY_ND_psi(const int nrows,
+                  const int nrays,
+                  const double *f,
+                  const double *rays,
+                  const double *beta,
+                  const double *q,
+                  const double q_scale,
+                  struct LP *lp,
+                  double *value)
+{
+    int rval = 0;
+
+    for(int j = 0; j < nrows; j++)
+    {
+        rval = LP_change_rhs(lp, j, q[j] * q_scale);
+        abort_if(rval, "LP_change_rhs failed");
+    }
+
+    int infeasible;
+    rval = LP_optimize(lp, &infeasible);
+    abort_if(rval, "LP_optimize failed");
+
+    if(infeasible)
+    {
+        *value = INFINITY;
+    }
+    else
+    {
+        rval = LP_get_obj_val(lp, value);
+        abort_if(rval, "LP_get_obj_val failed");
+    }
+
+CLEANUP:
+    return rval;
+}
+
+int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
+                               struct ConvLFreeSet *lfree)
+{
+    int rval = 0;
+    int nrows = model->nrows;
+    int nrays = model->rays.nrays;
+
+    double *f = lfree->f;
+    double *rays = lfree->rays.values;
+    double *beta = lfree->beta;
+
+    lfree->nrows = model->nrows;
+    lfree->rays.nrays = nrays;
+    memcpy(rays, model->rays.values, nrays * nrows * sizeof(double));
+    memcpy(f, model->f, nrows * sizeof(double));
+
+    double *x = 0;
+
+    int *t = 0;
+    int *tx = 0;
+
+    t = (int *) malloc(nrays * sizeof(int));
+    tx = (int *) malloc(nrays * sizeof(int));
+    abort_if(!t, "could not allocate t");
+    abort_if(!tx, "could not allocate tx");
+
+    x = (double *) malloc((nrows + nrays) * sizeof(double));
+    abort_if(!x, "could not allocate x");
+
+    for(int i = 0; i < nrays; i++)
+        beta[i] = GREEDY_BIG_E;
+
+    int it = 0;
+
+    //lp_time = 0;
+    //lp_count = 0;
+
+    //epsilon_lp_count = 0;
+    //epsilon_lp_time = 0;
+    //
+    //sfree_mip_count = 0;
+    //sfree_mip_time = 0;
+
+    //tight_lp_count = 0;
+    //tight_lp_time = 0;
+
+    //violated_lp_count = 0;
+    //violated_lp_time = 0;
+
+    //scale_ahull_lp_time = 0;
+    //scale_ahull_lp_count = 0;
+
+    long x_count = 0;
+    double epsilon;
+
+    for(int i = 0; i < nrows; i++)
+            log_verbose("  f[%d] = %.12lf\n", i, f[i]);
+
+    while(1)
+    {
+        it++;
+        abort_if(it > 10 * nrays, "infinite loop");
+
+        log_debug("Starting iteration %d...\n", it);
+        epsilon = INFINITY;
+
+        for(int i = 0; i < nrays; i++)
+            t[i] = 0;
+
+        for(int i = 0; i < nrows; i++)
+            x[i] = 0;
+
+        while(1)
+        {
+            log_debug("  epsilon = %.8lf\n", epsilon);
+
+            int found = 0;
+
+            if(nrows == 3)
+            {
+                rval = find_interior_point_enum(nrows, nrays, f,
+                        model->rays.values, beta, epsilon, x, &found);
+                abort_if(rval, "find_interior_point_enum failed");
+            }
+
+            if(!found)
+            {
+                rval = find_interior_point_cplex(nrows, nrays, f,
+                        model->rays.values, beta, epsilon, x, &found);
+                if(rval == ERR_MIP_TIMEOUT) goto CLEANUP;
+                abort_if(rval, "find_interior_point_cplex failed");
+                if(!found) break;
+            }
+
+            log_debug("    found interior point:\n");
+            for(int i = 0; i < nrows; i++) log_debug("        %.2lf\n", x[i]);
+
+            x_count++;
+            abort_if(x_count > 1000, "infinite loop");
+
+            double epsilon_x;
+            rval = bound(nrows, nrays, f, model->rays.values, x, beta,
+                    &epsilon_x, tx);
+            abort_if(rval, "bound failed");
+//            epsilon_x *= 0.999;
+
+            if(isinf(epsilon_x)) break;
+
+            log_debug("    epsilon_x = %.8lf\n", epsilon_x);
+
+            if(DOUBLE_eq(epsilon_x, epsilon))
+            {
+                for(int i = 0; i < nrays; i++)
+                    if(tx[i]) t[i] = 1;
+            }
+            else if(epsilon_x < epsilon)
+            {
+                epsilon = epsilon_x;
+                for(int i = 0; i < nrays; i++)
+                    t[i] = tx[i];
+            }
+        }
+
+        if(isinf(epsilon))
+            break;
+
+        int skip_ahull = 0;
+
+        for(int i = 0; i < nrays; i++)
+        {
+            if(t[i])
+            {
+                beta[i] = min(beta[i], epsilon);
+//                beta[i] *= 0.999;
+            }
+            else if(!skip_ahull)
+            {
+                double alpha;
+                const double *d = LFREE_get_ray(&model->rays, i);
+
+                rval = GREEDY_ND_scale_to_ahull(nrows, nrays,
+                        model->rays.values, t, beta, epsilon, d, &alpha);
+                abort_if(rval, "GREEDY_ND_scale_to_ahull failed");
+
+                if(DOUBLE_iszero(alpha))
+                {
+                    skip_ahull = 1;
+                    continue;
+                }
+
+                beta[i] = min(beta[i], alpha);
+//                beta[i] *= 0.999;
+            }
+
+            log_debug("  beta[%2d] = %.4lf\n", i, beta[i]);
+        }
+
+        log_debug("epsilon = %.6lf\n", epsilon);
+    }
+
+    log_debug("    %6ld lattice points, %ld iterations\n", x_count, it);
+
+    log_debug("    %6ld MIPs (%.2lf ms per call, %.0lf ms total)\n", lp_count,
+            lp_time * 1000 / lp_count, lp_time * 1000);
+
+    log_debug(
+            "          %6ld S-free MIPs (%.2lf ms per call, %.0lf ms total)\n",
+            sfree_mip_count, sfree_mip_time * 1000 / sfree_mip_count,
+            sfree_mip_time * 1000);
+
+    log_debug(
+            "          %6ld epsilon LPs (%.2lf ms per call, %.0lf ms total)\n",
+            epsilon_lp_count, epsilon_lp_time * 1000 / epsilon_lp_count,
+            epsilon_lp_time * 1000);
+
+    log_debug(
+            "          %6ld tight-rays LPs (%.2lf ms per call, %.0lf ms total)\n",
+            tight_lp_count, tight_lp_time * 1000 / tight_lp_count,
+            tight_lp_time * 1000);
+
+    log_debug(
+            "          %6ld violated-cone LPs (%.2lf ms per call, %.0lf ms total)\n",
+            violated_lp_count, violated_lp_time * 1000 / violated_lp_count,
+            violated_lp_time * 1000);
+
+    log_debug(
+            "          %6ld scale-to-ahull LPs (%.2lf ms per call, %.0lf ms total)\n",
+            scale_ahull_lp_count,
+            scale_ahull_lp_time * 1000 / scale_ahull_lp_count,
+            scale_ahull_lp_time * 1000);
+
+CLEANUP:
+    if(x) free(x);
+    if(t) free(t);
+    if(tx) free(tx);
+    return rval;
+}
+
 int GREEDY_ND_cone_bound(int nrows,
                          int nrays,
                          const double *f,
@@ -876,102 +1151,6 @@ CLEANUP:
     return rval;
 }
 
-static int create_scale_to_ahull_lp(int nrows,
-                                    int nrays,
-                                    const double *rays,
-                                    const int *rx,
-                                    const double *beta,
-                                    double epsilon,
-                                    const double *d,
-                                    struct LP *lp)
-{
-    int rval = 0;
-
-    double rhs;
-    char sense;
-    int nz;
-
-    int rmatbeg = 0;
-    int *rmatind = 0;
-    double *rmatval = 0;
-
-    rmatind = (int *) malloc((nrays + 1) * sizeof(int));
-    rmatval = (double *) malloc((nrays + 1) * sizeof(double));
-    abort_if(!rmatind, "could not allocate rmatind");
-    abort_if(!rmatval, "could not allocate rmatval");
-
-    rval = LP_create(lp, "scale_to_ahull");
-    abort_if(rval, "LP_create failed");
-
-    // create alpha variable
-    rval = LP_new_col(lp, 1.0, 0.0, MILP_INFINITY, 'C');
-    abort_if(rval, "LP_new_col failed");
-
-
-    // create lambda variables
-    for(int i = 0; i < nrays; i++)
-    {
-        rval = LP_new_col(lp, 0.0, -MILP_INFINITY, MILP_INFINITY, 'C');
-        abort_if(rval, "LP_new_col failed");
-    }
-
-    // create constraint \sum_{r \in R_x} min(e, beta[r]) * r * \lambda_r = \alpha * d
-    for(int j = 0; j < nrows; j++)
-    {
-        sense = 'E';
-        rhs = 0.0;
-        nz = 0;
-
-        rmatind[nz] = 0;
-        rmatval[nz] = d[j];
-        nz++;
-
-        for(int i = 0; i < nrays; i++)
-        {
-            if(!rx[i]) continue;
-
-            const double *ri = &rays[i * nrows];
-            rmatind[nz] = 1 + i;
-            rmatval[nz] = -min(epsilon, beta[i]) * ri[j];
-            if(DOUBLE_iszero(rmatval[nz])) continue;
-
-            nz++;
-        }
-
-        rval = LP_add_rows(lp, 1, nz, &rhs, &sense, &rmatbeg, rmatind, rmatval);
-        abort_if(rval, "LP_add_rows failed");
-    }
-
-    // create constraint \sum_{r \in R_x} \lambda_r = 1
-    sense = 'E';
-    rhs = 1.0;
-    nz = 0;
-
-    for(int i = 0; i < nrays; i++)
-    {
-        if(!rx[i]) continue;
-
-        rmatind[nz] = 1 + i;
-        rmatval[nz] = 1.0;
-        nz++;
-    }
-
-    rval = LP_add_rows(lp, 1, nz, &rhs, &sense, &rmatbeg, rmatind, rmatval);
-    abort_if(rval, "LP_add_rows failed");
-
-    rval = LP_relax(lp);
-    abort_if(rval, "LP_relax failed");
-
-    //rval = LP_write(lp, "scale-to-ahull.lp");
-    //abort_if(rval, "LP_write failed");
-    //UTIL_pause();
-
-CLEANUP:
-    if(rmatind) free(rmatind);
-    if(rmatval) free(rmatval);
-    return rval;
-}
-
 int GREEDY_ND_scale_to_ahull(int nrows,
                              int nrays,
                              const double *rays,
@@ -1020,108 +1199,6 @@ int GREEDY_ND_scale_to_ahull(int nrows,
 CLEANUP:
     if(x) free(x);
     LP_free(&lp);
-    return rval;
-}
-
-static int create_tight_rays_lp(int nrows,
-                                int nrays,
-                                const double *f,
-                                const double *rays,
-                                const double *x,
-                                const double *beta,
-                                double epsilon,
-                                double delta,
-                                struct LP *lp)
-{
-    int rval = 0;
-
-    double rhs;
-    char sense;
-
-    int rmatbeg = 0;
-    int *rmatind = 0;
-    double *rmatval = 0;
-
-    rmatind = (int *) malloc(nrays * sizeof(int));
-    rmatval = (double *) malloc(nrays * sizeof(double));
-    abort_if(!rmatind, "could not allocate rmatind");
-    abort_if(!rmatval, "could not allocate rmatval");
-
-    rval = LP_create(lp, "tight_rays");
-    abort_if(rval, "LP_create failed");
-
-    // create lambda variables
-    for(int i = 0; i < nrays; i++)
-    {
-        rval = LP_new_col(lp, 1.0, 0.0, MILP_INFINITY, 'C');
-        abort_if(rval, "LP_new_col failed");
-    }
-
-    // create s variables
-    for(int i = 0; i < nrays; i++)
-    {
-        rval = LP_new_col(lp, 0.0, 0.0, MILP_INFINITY, 'C');
-        abort_if(rval, "LP_new_col failed");
-    }
-
-    // create constraint x = f + \sum_{r \in R} min{e, beta[r]} * r * s_r
-    for(int j = 0; j < nrows; j++)
-    {
-        sense = 'E';
-        rhs = x[j] - f[j];
-
-        for(int i = 0; i < nrays; i++)
-        {
-            const double *ri = &rays[i * nrows];
-            rmatind[i] = nrays + i;
-            rmatval[i] = min(epsilon, beta[i]) * ri[j];
-            if(DOUBLE_iszero(rmatval[i])) rmatval[i] = 0.0;
-        }
-
-        rval = LP_add_rows(lp, 1, nrays, &rhs, &sense, &rmatbeg, rmatind,
-                rmatval);
-        abort_if(rval, "LP_add_rows failed");
-    }
-
-    // create constraint \sum_{r \in R} s_r = 1
-    sense = 'E';
-    rhs = 1.0;
-
-    for(int i = 0; i < nrays; i++)
-    {
-        rmatind[i] = nrays + i;
-        rmatval[i] = 1.0;
-    }
-
-    rval = LP_add_rows(lp, 1, nrays, &rhs, &sense, &rmatbeg, rmatind, rmatval);
-    abort_if(rval, "LP_add_rows failed");
-
-    // create constraints \lambda_r + s_r \geq \delta
-    for(int i = 0; i < nrays; i++)
-    {
-        sense = 'G';
-        rhs = delta;
-
-        rmatind[0] = i;
-        rmatval[0] = 1.0;
-
-        rmatind[1] = nrays + i;
-        rmatval[1] = 1.0;
-
-        rval = LP_add_rows(lp, 1, 2, &rhs, &sense, &rmatbeg, rmatind, rmatval);
-        abort_if(rval, "LP_add_rows failed");
-    }
-
-    rval = LP_relax(lp);
-    abort_if(rval, "LP_relax failed");
-
-    //rval = LP_write(lp, "tight-rays.lp");
-    //abort_if(rval, "LP_write failed");
-
-
-CLEANUP:
-    if(rmatind) free(rmatind);
-    if(rmatval) free(rmatval);
     return rval;
 }
 
@@ -1176,71 +1253,6 @@ int GREEDY_ND_find_tight_rays(int nrows,
 CLEANUP:
     if(sbar) free(sbar);
     LP_free(&lp);
-    return rval;
-}
-
-static int create_violated_cone_lp(int nrows,
-                                   int nrays,
-                                   const double *f,
-                                   const double *rays,
-                                   const double *x,
-                                   const double *beta,
-                                   double epsilon,
-                                   struct LP *lp)
-{
-    int rval = 0;
-
-    double rhs;
-    char sense;
-
-    int rmatbeg = 0;
-    int *rmatind = 0;
-    double *rmatval = 0;
-
-    rmatind = (int *) malloc(nrays * sizeof(int));
-    rmatval = (double *) malloc(nrays * sizeof(double));
-    abort_if(!rmatind, "could not allocate rmatind");
-    abort_if(!rmatval, "could not allocate rmatval");
-
-    rval = LP_create(lp, "violated_cone");
-    abort_if(rval, "LP_create failed");
-
-    // create s variables
-    for(int i = 0; i < nrays; i++)
-    {
-        rval = LP_new_col(lp, 1.0, 0.0, MILP_INFINITY, 'C');
-        abort_if(rval, "LP_new_col failed");
-    }
-
-    // create constraint x = f + \sum(min{e, beta[r]} * r * s_r)
-    for(int j = 0; j < nrows; j++)
-    {
-        sense = 'E';
-        rhs = x[j] - f[j];
-
-        for(int i = 0; i < nrays; i++)
-        {
-            const double *ri = &rays[i * nrows];
-            rmatind[i] = i;
-            rmatval[i] = min(epsilon, beta[i]) * ri[j];
-            if(DOUBLE_iszero(rmatval[i])) rmatval[i] = 0.0;
-        }
-
-        rval = LP_add_rows(lp, 1, nrays, &rhs, &sense, &rmatbeg, rmatind,
-                rmatval);
-        abort_if(rval, "LP_add_rows failed");
-    }
-
-    rval = LP_relax(lp);
-    abort_if(rval, "LP_relax failed");
-
-    //rval = LP_write(lp, "violated-cone.lp");
-    //abort_if(rval, "LP_write failed");
-    //UTIL_pause();
-
-CLEANUP:
-    if(rmatind) free(rmatind);
-    if(rmatval) free(rmatval);
     return rval;
 }
 
@@ -1325,3 +1337,5 @@ CLEANUP:
     LP_free(&lp);
     return rval;
 }
+
+#endif // TEST_SOURCE

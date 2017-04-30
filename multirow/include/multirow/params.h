@@ -31,7 +31,7 @@
  *      LOG_LEVEL_WARNING
  *      LOG_LEVEL_ERROR
  */
-#define LOG_LEVEL LOG_LEVEL_INFO
+#define LOG_LEVEL LOG_LEVEL_DEBUG
 
 /*
  * Maximum bounding-box size for naive algorithm
@@ -48,7 +48,7 @@
  */
 #define N_RAYS 100
 
-#define ONLY_CUT -1
+#define ONLY_CUT 242
 
 /*
  * Time limit for the computation (user time, in seconds).
