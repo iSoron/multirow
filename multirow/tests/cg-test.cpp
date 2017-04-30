@@ -145,7 +145,13 @@ TEST(CGTest, extract_rays_from_rows_test)
     };
 
     struct Row *rows[] = { &row1, &row2, &row3 };
-    struct Tableau tableau = {3, rows, column_types};
+    struct Tableau tableau =
+    {
+        .ncols = 16,
+        .nrows = 3,
+        .rows = rows,
+        .column_types = column_types
+    };
 
     int indices[1000];
     int variable_to_ray[1000];

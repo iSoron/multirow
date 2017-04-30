@@ -41,6 +41,7 @@ struct CG
 
 struct Tableau
 {
+    int ncols;
     int nrows;
     struct Row **rows;
     char *column_types;

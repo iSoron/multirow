@@ -364,6 +364,48 @@ CLEANUP:
     return rval;
 }
 
+static void dump_row(FILE *file, const struct Row *row, int k)
+{
+    fprintf(file, "double pi%d[] = { ", k);
+    for(int i = 0; i < row->nz; i++)
+        fprintf(file, "%.10lf, ", row->pi[i]);
+    fprintf(file, "};\n");
+
+    fprintf(file, "int indices%d[] = { ", k);
+    for(int i = 0; i < row->nz; i++)
+        fprintf(file, "%d, ", row->indices[i]);
+    fprintf(file, "};\n");
+
+    fprintf(file, "struct Row row%d = {", k);
+    fprintf(file, ".nz = %d, ", row->nz);
+    fprintf(file, ".head = %d, ", row->head);
+    fprintf(file, ".pi_zero = %.10lf, ", row->pi_zero);
+    fprintf(file, ".pi = pi%d, ", k);
+    fprintf(file, ".indices = indices%d };\n", k);
+}
+
+static void dump_tableau(FILE *file, const struct Tableau *tableau)
+{
+    for(int i = 0; i < tableau->nrows; i++)
+        dump_row(file, tableau->rows[i], i);
+
+    fprintf(file, "struct Row* rows[] = {");
+    for(int i = 0; i < tableau->nrows; i++)
+        fprintf(file, "&row%d, ", i);
+    fprintf(file, "};\n");
+
+    fprintf(file, "char column_types[] = {");
+    for(int i = 0; i < tableau->ncols; i++)
+        fprintf(file, "%d, ", tableau->column_types[i]);
+    fprintf(file, "};\n");
+
+    fprintf(file, "struct Tableau tableau = {");
+    fprintf(file, ".ncols = %d, ", tableau->ncols);
+    fprintf(file, ".nrows = %d, ", tableau->nrows);
+    fprintf(file, ".rows = rows, ");
+    fprintf(file, ".column_types = column_types };\n");
+}
+
 #ifndef TEST_SOURCE
 
 /*
@@ -454,7 +496,6 @@ int CG_extract_rays_from_tableau(const struct Tableau *tableau,
         int found;
         double scale;
         int ray_index;
-
 
         log_verbose("  extracted ray (%d):\n", idx_min);
         for (int j = 0; j < nrows; j++)
@@ -856,14 +897,28 @@ int CG_add_multirow_cuts(struct CG *cg,
                 progress_increment();
             }
 
-            struct Tableau tableau = {nrows, rows, cg->column_types};
-            struct Row cut;
+            struct Tableau tableau =
+            {
+                    .ncols = cg->ncols,
+                    .nrows = nrows,
+                    .rows = rows,
+                    .column_types = cg->column_types
+            };
+
+            if_debug_level
+            {
+                char filename[100];
+                sprintf(filename, "tableau-%03ld.c", count);
+                FILE *file = fopen(filename, "w");
+                dump_tableau(file, &tableau);
+                fclose(file);
+            }
 
             int max_nz = CG_total_nz(&tableau);
-            cut.pi = (double *) malloc(max_nz * sizeof(double));
-            cut.indices = (int *) malloc(max_nz * sizeof(int));
-            abort_if(!cut.pi, "could not allocate cut.pi");
-            abort_if(!cut.indices, "could not allocate cut.indices");
+
+            struct Row cut;
+            rval = LP_init_row(&cut, max_nz);
+            abort_if(rval, "LP_init_row failed");
 
             double initial_time = get_user_time();
 
@@ -876,6 +931,15 @@ int CG_add_multirow_cuts(struct CG *cg,
                 goto NEXT_COMBINATION;
             }
             else abort_iff(rval, "generate failed (cut %d)", count);
+
+            if_debug_level
+            {
+                char filename[100];
+                sprintf(filename, "cut-%03ld.c", count);
+                FILE *file = fopen(filename, "w");
+                dump_row(file, &cut, 0);
+                fclose(file);
+            }
 
             double elapsed_time = get_user_time() - initial_time;
             log_debug("    generate: %.2lf ms\n", elapsed_time * 1000);

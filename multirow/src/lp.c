@@ -720,3 +720,20 @@ int LP_change_rhs(struct LP *lp, int index, double value)
 CLEANUP:
     return rval;
 }
+
+int LP_init_row(struct Row *row, int nz_capacity)
+{
+    int rval = 0;
+
+    row->nz = 0;
+    row->head = 0;
+    row->pi_zero = 0;
+
+    row->pi = (double *) malloc(nz_capacity * sizeof(double));
+    row->indices = (int *) malloc(nz_capacity * sizeof(int));
+    abort_if(!row->pi, "could not allocate row->pi");
+    abort_if(!row->indices, "could not allocate row->indices");
+
+    CLEANUP:
+    return rval;
+}

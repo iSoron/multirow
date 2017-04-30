@@ -154,4 +154,6 @@ int LP_write_sage_file(struct LP *lp,
 
 int LP_change_rhs(struct LP *lp, int index, double value);
 
+int LP_init_row(struct Row *row, int nz_capacity);
+
 #endif
