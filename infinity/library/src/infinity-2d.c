@@ -540,8 +540,8 @@ int INFINITY_2D_generate_lfree(const struct MultiRowModel *model,
 
     lfree->nrows = 2;
     lfree->rays.nrays = nrays;
-    memcpy(f, model->f, 2 * sizeof(double));
     memcpy(rays, model->rays.values, 2 * nrays * sizeof(double));
+    memcpy(f, model->f, 2 * sizeof(double));
     for (int i = 0; i < nrays; i++) beta[i] = GREEDY_BIG_E;
 
     scale = (double*) malloc(nrays * sizeof(double));
@@ -720,9 +720,6 @@ int INFINITY_2D_generate_lfree(const struct MultiRowModel *model,
 
         if(is_split) break;
     }
-
-    for(int i=0; i<nrays; i++)
-        beta[i] *= scale[i];
 
     CLEANUP:
     if(scale) free(scale);

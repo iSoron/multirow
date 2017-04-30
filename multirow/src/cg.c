@@ -867,7 +867,6 @@ int CG_add_multirow_cuts(struct CG *cg,
 
             double initial_time = get_user_time();
 
-             SHOULD_DUMP_CUTS = 1;
             rval = generate(&tableau, &cut);
             if (rval == ERR_NO_CUT)
             {
