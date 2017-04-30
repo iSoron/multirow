@@ -86,15 +86,17 @@ CLEANUP:
 }
 
 static int create_cut_from_lfree(const struct Tableau *tableau,
-                                 const struct RayMap *map,
-                                 const struct ConvLFreeSet *lfree,
-                                 struct Row *cut)
+                                const struct TableauModelMap *map,
+                                const struct MultiRowModel *model,
+                                const struct ConvLFreeSet *lfree,
+                                struct Row *cut)
 {
     int rval = 0;
 
     struct LP lp;
     int nvars = map->nvars;
     int nrows = tableau->nrows;
+    struct RayList *rays = &model->rays;
 
     rval = LP_open(&lp);
     abort_if(rval, "LP_open failed");
@@ -107,7 +109,7 @@ static int create_cut_from_lfree(const struct Tableau *tableau,
     for(int i = 0; i < nvars; i++)
     {
         double value;
-        const double *q = LFREE_get_ray(&map->rays, map->variable_to_ray[i]);
+        const double *q = LFREE_get_ray(rays, map->variable_to_ray[i]);
 
         if(ENABLE_LIFTING &&
                 tableau->column_types[map->indices[i]] == MILP_INTEGER)
@@ -141,26 +143,28 @@ CLEANUP:
     return rval;
 }
 
-static int filter_rays(const struct RayMap *map,
-                       const struct Tableau *tableau,
-                       struct MultiRowModel *model)
+static int filter_model(const struct MultiRowModel *original_model,
+                        struct MultiRowModel *filtered_model)
 {
     int rval = 0;
-    int nrows = tableau->nrows;
-    struct RayList *rays = &model->rays;
+    int nrows = original_model->nrows;
+    struct RayList *filtered_rays = &filtered_model->rays;
+    struct RayList *original_rays = &original_model->rays;
+
+    memcpy(filtered_model->f, original_model->f, 2 * sizeof(double));
 
     for(double norm_cutoff = 0.00; norm_cutoff <= 5.0; norm_cutoff += 0.1)
     {
-        rays->nrays = 0;
+        filtered_rays->nrays = 0;
 
-        for(int i = 0; i < map->rays.nrays; i++)
+        for(int i = 0; i < original_rays->nrays; i++)
         {
             int keep = 1;
-            double *r = LFREE_get_ray(&map->rays, i);
+            double *r = LFREE_get_ray(original_rays, i);
 
-            for(int j = 0; j < (rays->nrays); j++)
+            for(int j = 0; j < (filtered_rays->nrays); j++)
             {
-                double *q = LFREE_get_ray(&map->rays, j);
+                double *q = LFREE_get_ray(filtered_rays, j);
 
                 double norm = 0;
                 for(int k = 0; k < nrows; k++)
@@ -173,13 +177,13 @@ static int filter_rays(const struct RayMap *map,
                 }
             }
 
-            if(keep) LFREE_push_ray(rays, r);
+            if(keep) LFREE_push_ray(filtered_rays, r);
         }
 
         log_debug("  norm_cutoff=%8.2lf nrays=%8d\n", norm_cutoff,
-                model->rays.nrays);
+                filtered_model->rays.nrays);
 
-        if(rays->nrays < MAX_N_RAYS) break;
+        if(filtered_rays->nrays < MAX_N_RAYS) break;
     }
 
 CLEANUP:
@@ -187,7 +191,7 @@ CLEANUP:
 }
 
 static int append_extra_rays(const struct Tableau *tableau,
-                             struct RayList *rays)
+                             struct MultiRowModel *model)
 {
     int rval = 0;
     int nrows = tableau->nrows;
@@ -237,10 +241,10 @@ static int append_extra_rays(const struct Tableau *tableau,
 
         double scale;
         int found, index;
-        rval = CG_find_ray(rays, r, &found, &scale, &index);
+        rval = CG_find_ray(&model->rays, r, &found, &scale, &index);
         abort_if(rval, "CG_find_ray failed");
 
-        if(!found) LFREE_push_ray(rays, r);
+        if(!found) LFREE_push_ray(&model->rays, r);
     }
 
 CLEANUP:
@@ -299,30 +303,31 @@ CLEANUP:
     return rval;
 }
 
-static int extract_model_from_tableau(const struct Tableau *tableau,
-                                      struct MultiRowModel *model,
-                                      struct RayMap *map)
+static int extract_models(const struct Tableau *tableau,
+                          struct MultiRowModel *original_model,
+                          struct MultiRowModel *filtered_model,
+                          struct TableauModelMap *original_map)
 {
     int rval = 0;
 
-    rval = CG_extract_f_from_tableau(tableau, model->f);
+    rval = CG_extract_f_from_tableau(tableau, original_model->f);
     abort_if(rval, "CG_extract_f_from_tableau failed");
 
-    rval = CG_extract_rays_from_tableau(tableau, map);
+    rval = CG_extract_model(tableau, original_map, original_model);
     abort_if(rval, "CG_extract_rays_from_rows failed");
 
-    rval = filter_rays(map, tableau, model);
-    abort_if(rval, "filter_rays failed");
+    rval = filter_model(original_model, filtered_model);
+    abort_if(rval, "filter_model failed");
 
     if(ENABLE_LIFTING)
     {
-        rval = append_extra_rays(tableau, &model->rays);
+        rval = append_extra_rays(tableau, filtered_model);
         abort_if(rval, "append_extra_rays failed");
     }
 
     if(tableau->nrows == 2)
     {
-        rval = sort_rays_by_angle(&model->rays);
+        rval = sort_rays_by_angle(&filtered_model->rays);
         abort_if(rval, "sort_rays_by_angle failed");
     }
 
@@ -335,34 +340,39 @@ CLEANUP:
 int INFINITY_generate_cut(const struct Tableau *tableau, struct Row *cut)
 {
     int rval = 0;
-    int max_nrays = CG_total_nz(tableau);
+    int max_nrays = CG_total_nz(tableau) + 100;
 
-    struct RayMap map;
-    struct MultiRowModel model;
+    struct MultiRowModel original_model;
+    struct MultiRowModel filtered_model;
+    struct TableauModelMap original_map;
     struct ConvLFreeSet lfree;
 
-    rval = CG_init_model(&model, tableau->nrows, max_nrays + 100);
+    rval = CG_init_model(&original_model, tableau->nrows, max_nrays);
     abort_if(rval, "CG_init_model failed");
 
-    rval = CG_init_ray_map(&map, max_nrays, tableau->nrows);
-    abort_if(rval, "CG_init_ray_map failed");
+    rval = CG_init_model(&filtered_model, tableau->nrows, max_nrays);
+    abort_if(rval, "CG_init_model failed");
 
-    rval = extract_model_from_tableau(tableau, &model, &map);
-    abort_if(rval, "extract_model_from_tableau failed");
+    rval = CG_init_map(&original_map, max_nrays, tableau->nrows);
+    abort_if(rval, "CG_init_map failed");
 
-    if(model.rays.nrays < 3)
+    rval = extract_models(tableau, &original_model, &filtered_model,
+            &original_map);
+    abort_if(rval, "extract_models failed");
+
+    if(filtered_model.rays.nrays < 3)
     {
         rval = ERR_NO_CUT;
         goto CLEANUP;
     }
 
-    rval = LFREE_init_conv(&lfree, tableau->nrows, model.rays.nrays);
+    rval = LFREE_init_conv(&lfree, tableau->nrows, filtered_model.rays.nrays);
     abort_if(rval, "LFREE_init_conv failed");
 
     if(tableau->nrows == 2)
-        rval = INFINITY_2D_generate_lfree(&model, &lfree);
+        rval = INFINITY_2D_generate_lfree(&filtered_model, &lfree);
     else
-        rval = INFINITY_ND_generate_lfree(&model, &lfree);
+        rval = INFINITY_ND_generate_lfree(&filtered_model, &lfree);
 
     if(rval)
     {
@@ -372,17 +382,19 @@ int INFINITY_generate_cut(const struct Tableau *tableau, struct Row *cut)
 
     if(SHOULD_DUMP_CUTS)
     {
-        rval = dump_cut(&model, &lfree);
+        rval = dump_cut(&filtered_model, &lfree);
         abort_if(rval, "dump_cut failed");
     }
 
-    rval = create_cut_from_lfree(tableau, &map, &lfree, cut);
+    rval = create_cut_from_lfree(tableau, &original_map, &original_model,
+            &lfree, cut);
     abort_if(rval, "create_cut_from_lfree failed");
 
 CLEANUP:
     LFREE_free_conv(&lfree);
-    CG_free_model(&model);
-    CG_free_ray_map(&map);
+    CG_free_model(&original_model);
+    CG_free_model(&filtered_model);
+    CG_free_map(&original_map);
     return rval;
 }
 

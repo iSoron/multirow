@@ -440,8 +440,9 @@ CLEANUP:
     return 0;
 }
 
-int CG_extract_rays_from_tableau(const struct Tableau *tableau,
-                                 struct RayMap *map)
+int CG_extract_model(const struct Tableau *tableau,
+                     struct TableauModelMap *map,
+                     struct MultiRowModel *model)
 {
     int rval = 0;
 
@@ -463,7 +464,7 @@ int CG_extract_rays_from_tableau(const struct Tableau *tableau,
 
     while (1)
     {
-        double *r = LFREE_get_ray(&map->rays, map->rays.nrays);
+        double *r = LFREE_get_ray(&model->rays, model->rays.nrays);
 
         int idx_min = INT_MAX;
 
@@ -501,19 +502,19 @@ int CG_extract_rays_from_tableau(const struct Tableau *tableau,
         for (int j = 0; j < nrows; j++)
                 log_verbose("    r[%d] = %.12lf\n", j, r[j]);
 
-        rval = CG_find_ray(&map->rays, r, &found, &scale, &ray_index);
+        rval = CG_find_ray(&model->rays, r, &found, &scale, &ray_index);
         abort_if(rval, "CG_find_ray failed");
 
         if (!found)
         {
             log_verbose("  ray is new\n");
             scale = 1.0;
-            ray_index = map->rays.nrays++;
+            ray_index = model->rays.nrays++;
         }
         else
         {
             log_verbose("  ray equals:\n");
-            double *q = LFREE_get_ray(&map->rays, ray_index);
+            double *q = LFREE_get_ray(&model->rays, ray_index);
             for (int j = 0; j < nrows; j++)
                     log_verbose("    r[%d] = %.12lf\n", j, q[j]);
         }
@@ -526,9 +527,9 @@ int CG_extract_rays_from_tableau(const struct Tableau *tableau,
     NEXT_RAY:;
     }
 
-    for (int j = 0; j < map->rays.nrays; j++)
+    for (int j = 0; j < model->rays.nrays; j++)
     {
-        double *r = LFREE_get_ray(&map->rays, j);
+        double *r = LFREE_get_ray(&model->rays, j);
         double max_scale = 0.0;
 
         for (int k = 0; k < map->nvars; k++)
@@ -1045,7 +1046,7 @@ CLEANUP:
     return rval;
 }
 
-int CG_init_ray_map(struct RayMap *map, int max_nrays, int nrows)
+int CG_init_map(struct TableauModelMap *map, int max_nrays, int nrows)
 {
     int rval = 0;
 
@@ -1056,20 +1057,16 @@ int CG_init_ray_map(struct RayMap *map, int max_nrays, int nrows)
     abort_if(!map->indices, "could not allocate indices");
     abort_if(!map->ray_scale, "could not allocate ray_scale");
 
-    rval = LFREE_init_ray_list(&map->rays, nrows, max_nrays);
-    abort_if(rval, "LFREE_init_ray_list failed");
-
 CLEANUP:
     return rval;
 }
 
-void CG_free_ray_map(struct RayMap *map)
+void CG_free_map(struct TableauModelMap *map)
 {
     if(!map) return;
     free(map->variable_to_ray);
     free(map->indices);
     free(map->ray_scale);
-    LFREE_free_ray_list(&map->rays);
 }
 
 int CG_extract_f_from_tableau(const struct Tableau *tableau, double *f)

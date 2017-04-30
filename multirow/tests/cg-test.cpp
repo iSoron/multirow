@@ -113,75 +113,49 @@ TEST(CGTest, extract_rays_from_rows_test)
     char column_types[16] = {0};
     double pi1[] = { 1.0, 1.0, 1.0, 2.0, 1.0 };
     int indices1[] = { 1, 7, 8, 12, 14 };
-    struct Row row1 =
-    {
-        .nz = 5,
-        .head = 1,
-        .pi_zero = 1.0,
-        .pi = pi1,
-        .indices = indices1
-    };
+    struct Row row1 = {.nz = 5, .head = 1, .pi_zero = 1.0, .pi = pi1, .indices = indices1};
     
     double pi2[] = { 1.0, 1.0, 2.0, 1.0, 1.0, 1.0 };
     int indices2[] = { 5, 8, 12, 13, 14, 16 };
-    struct Row row2 =
-    {
-        .nz = 6,
-        .head = 13,
-        .pi_zero = 1.0,
-        .pi = pi2,
-        .indices = indices2
-    };
-
+    struct Row row2 = {.nz = 6, .head = 13, .pi_zero = 1.0, .pi = pi2, .indices = indices2}; 
+    
     double pi3[] = { 1.0, 1.0, 1.0, 1.0 };
     int indices3[] = { 3, 7, 10, 16 };
-    struct Row row3 =
-    {
-        .nz = 4,
-        .head = 7,
-        .pi_zero = 1.0,
-        .pi = pi3,
-        .indices = indices3
-    };
-
+    struct Row row3 = {.nz = 4, .head = 7, .pi_zero = 1.0, .pi = pi3, .indices = indices3}; 
+    
     struct Row *rows[] = { &row1, &row2, &row3 };
-    struct Tableau tableau =
-    {
-        .ncols = 16,
-        .nrows = 3,
-        .rows = rows,
-        .column_types = column_types
-    };
+    struct Tableau tableau = {.ncols = 16, .nrows = 3, .rows = rows, .column_types = column_types};
 
     int indices[1000];
     int variable_to_ray[1000];
     double ray_scale[1000];
 
-    struct RayList rays;
-    LFREE_init_ray_list(&rays, 3, 1000);
-    struct RayMap map = {rays, variable_to_ray, ray_scale, indices, 0};
+    struct TableauModelMap map = {variable_to_ray, ray_scale, indices, 0};
+    
+    struct MultiRowModel model;
+    CG_init_model(&model, 3, 1000);
 
-    rval = CG_extract_rays_from_tableau(&tableau, &map);
+    rval = CG_extract_model(&tableau, &map, &model);
     abort_if(rval, "CG_extract_rays_from_rows failed");
 
-    EXPECT_EQ(map.rays.nrays, 4);
     EXPECT_EQ(map.nvars, 7);
 
-    EXPECT_DOUBLE_EQ(rays.values[0],  0.0);
-    EXPECT_DOUBLE_EQ(rays.values[1],  0.0);
-    EXPECT_DOUBLE_EQ(rays.values[2], -1.0);
+    EXPECT_EQ(model.rays.nrays, 4);
+    EXPECT_DOUBLE_EQ(model.rays.values[0],  0.0);
+    EXPECT_DOUBLE_EQ(model.rays.values[1],  0.0);
+    EXPECT_DOUBLE_EQ(model.rays.values[2], -1.0);
 
-    EXPECT_DOUBLE_EQ(rays.values[3],  0.0);
-    EXPECT_DOUBLE_EQ(rays.values[4], -1.0);
-    EXPECT_DOUBLE_EQ(rays.values[5],  0.0);
+    EXPECT_DOUBLE_EQ(model.rays.values[3],  0.0);
+    EXPECT_DOUBLE_EQ(model.rays.values[4], -1.0);
+    EXPECT_DOUBLE_EQ(model.rays.values[5],  0.0);
 
-    EXPECT_DOUBLE_EQ(rays.values[6], -2.0);
-    EXPECT_DOUBLE_EQ(rays.values[7], -2.0);
-    EXPECT_DOUBLE_EQ(rays.values[8],  0.0);
+    EXPECT_DOUBLE_EQ(model.rays.values[6], -2.0);
+    EXPECT_DOUBLE_EQ(model.rays.values[7], -2.0);
+    EXPECT_DOUBLE_EQ(model.rays.values[8],  0.0);
 
-    EXPECT_DOUBLE_EQ(rays.values[ 9],  0.0);
-    EXPECT_DOUBLE_EQ(rays.values[10], -1.0);
-    EXPECT_DOUBLE_EQ(rays.values[11], -1.0);
+    EXPECT_DOUBLE_EQ(model.rays.values[ 9],  0.0);
+    EXPECT_DOUBLE_EQ(model.rays.values[10], -1.0);
+    EXPECT_DOUBLE_EQ(model.rays.values[11], -1.0);
 
     EXPECT_EQ(indices[0], 3);
     EXPECT_EQ(indices[1], 5);

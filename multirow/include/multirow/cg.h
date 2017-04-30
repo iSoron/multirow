@@ -47,9 +47,8 @@ struct Tableau
     char *column_types;
 };
 
-struct RayMap
+struct TableauModelMap
 {
-    struct RayList rays;
     int *variable_to_ray;
     double *ray_scale;
     int *indices;
@@ -84,8 +83,9 @@ int CG_set_integral_solution(struct CG *cg, double *valid_solution);
 
 int CG_set_basic_solution(struct CG *cg, double *basic_solution);
 
-int CG_extract_rays_from_tableau(const struct Tableau *tableau,
-                                 struct RayMap *map);
+int CG_extract_model(const struct Tableau *tableau,
+                     struct TableauModelMap *map,
+                     struct MultiRowModel *model);
 
 int CG_boost_variable(int var,
                       double factor,
@@ -102,9 +102,9 @@ int CG_find_ray(const struct RayList *rays,
                 double *scale,
                 int *index);
 
-int CG_init_ray_map(struct RayMap *map, int max_nrays, int nrows);
+int CG_init_map(struct TableauModelMap *map, int max_nrays, int nrows);
 
-void CG_free_ray_map(struct RayMap *map);
+void CG_free_map(struct TableauModelMap *map);
 
 int CG_extract_f_from_tableau(const struct Tableau *tableau, double *f);
 
