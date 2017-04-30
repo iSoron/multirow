@@ -13,21 +13,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef MULTIROW_GREEDY_BSEARCH_H
-#define MULTIROW_GREEDY_BSEARCH_H
+#ifndef MULTIROW_INFINITY_ND_H
+#define MULTIROW_INFINITY_ND_H
 
-int create_sfree_mip(int nrows,
-                     int nrays,
-                     const double *f,
-                     const double *rays,
-                     const double *bounds,
-                     double e,
-                     struct LP *lp);
+int INFINITY_create_psi_lp(const struct ConvLFreeSet *lfree, struct LP *lp);
 
-int GREEDY_BSEARCH_compute_bounds(int nrows,
-                                  int nrays,
-                                  const double *f,
-                                  const double *rays,
-                                  double *bounds);
+int INFINITY_psi(const int nrows,
+                 const double *q,
+                 const double q_scale,
+                 struct LP *lp,
+                 double *value);
 
-#endif //MULTIROW_GREEDY_BSEARCH_H
+int INFINITY_pi(const int nrows,
+                const double *q,
+                const double q_scale,
+                struct LP *lp,
+                double *value);
+
+int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
+                               struct ConvLFreeSet *lfree);
+
+#endif //MULTIROW_INFINITY_ND_H

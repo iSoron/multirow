@@ -19,13 +19,12 @@
 #define TEST_SOURCE
 
 extern "C" {
-#include <math.h>
 #include <multirow/lp.h>
 #include <multirow/util.h>
 #include <multirow/lfree2d.h>
 #include <multirow/cg.h>
-#include <infinity/greedy-nd.h>
-#include "../src/greedy-nd.c"
+#include <infinity/infinity-nd.h>
+#include "../src/infinity-nd.c"
 }
 
 int ENABLE_LIFTING = 0;
@@ -34,7 +33,7 @@ int MAX_N_ROWS = 2;
 int SHOULD_DUMP_CUTS = 0;
 int DUMP_CUT_N = 0;
 
-TEST(GreedyNDTest, find_violated_cone_test)
+TEST(InfinityNDTest, find_violated_cone_test)
 {
     int rval = 0;
 
@@ -56,9 +55,9 @@ TEST(GreedyNDTest, find_violated_cone_test)
     int rx[nrays];
     int found;
 
-    rval = GREEDY_ND_find_violated_cone(nrows, nrays, f, rays, x, beta,
-                                        1.0, rx, sbar, &found);
-    abort_if(rval, "GREEDY_ND_find_violated_cone failed");
+    rval = find_violated_cone(nrows, nrays, f, rays, x, beta, 1.0, rx, sbar,
+            &found);
+    abort_if(rval, "find_violated_cone failed");
 
     EXPECT_TRUE(found);
     EXPECT_FALSE(rx[0]);
@@ -66,9 +65,9 @@ TEST(GreedyNDTest, find_violated_cone_test)
     EXPECT_TRUE(rx[2]);
     EXPECT_FALSE(rx[3]);
 
-    rval = GREEDY_ND_find_violated_cone(nrows, nrays, f, rays, x, beta,
-                                        0.5, rx, sbar, &found);
-    abort_if(rval, "GREEDY_ND_find_violated_cone failed");
+    rval = find_violated_cone(nrows, nrays, f, rays, x, beta, 0.5, rx, sbar,
+            &found);
+    abort_if(rval, "find_violated_cone failed");
 
     EXPECT_FALSE(found);
 
@@ -76,7 +75,7 @@ TEST(GreedyNDTest, find_violated_cone_test)
     if(rval) FAIL();
 }
 
-TEST(GreedyNDTest, find_tight_rays_test_1)
+TEST(InfinityNDTest, find_tight_rays_test_1)
 {
     int rval = 0;
 
@@ -97,8 +96,8 @@ TEST(GreedyNDTest, find_tight_rays_test_1)
 
     int tx[6];
 
-    rval = GREEDY_ND_find_tight_rays(2, 6, f, rays, x, beta, epsilon, tx);
-    abort_if(rval, "GREEDY_ND_find_tight_rays failed");
+    rval = find_tight_rays(2, 6, f, rays, x, beta, epsilon, tx);
+    abort_if(rval, "find_tight_rays failed");
 
     EXPECT_TRUE(tx[0]);
     EXPECT_FALSE(tx[1]);
@@ -111,7 +110,7 @@ TEST(GreedyNDTest, find_tight_rays_test_1)
     if(rval) FAIL();
 }
 
-TEST(GreedyNDTest, find_tight_rays_test_2)
+TEST(InfinityNDTest, find_tight_rays_test_2)
 {
     int rval = 0;
 
@@ -131,8 +130,8 @@ TEST(GreedyNDTest, find_tight_rays_test_2)
 
     int tx[6];
 
-    rval = GREEDY_ND_find_tight_rays(2, 6, f, rays, x, beta, epsilon, tx);
-    abort_if(rval, "GREEDY_ND_find_tight_rays failed");
+    rval = find_tight_rays(2, 6, f, rays, x, beta, epsilon, tx);
+    abort_if(rval, "find_tight_rays failed");
 
     EXPECT_TRUE(tx[0]);
     EXPECT_FALSE(tx[1]);
@@ -145,7 +144,7 @@ TEST(GreedyNDTest, find_tight_rays_test_2)
     if(rval) FAIL();
 }
 
-TEST(GreedyNDTest, cone_bound_test_1)
+TEST(InfinityNDTest, cone_bound_test_1)
 {
     int rval = 0;
 
@@ -168,19 +167,19 @@ TEST(GreedyNDTest, cone_bound_test_1)
 
     double epsilon;
 
-    rval = GREEDY_ND_cone_bound(2, 6, f, rays, rx1, x, beta, &epsilon);
-    abort_if(rval, "GREEDY_ND_cone_bound failed");
+    rval = cone_bound(2, 6, f, rays, rx1, x, beta, &epsilon);
+    abort_if(rval, "cone_bound failed");
     EXPECT_NEAR(0.5, epsilon, 1e-6);
 
-    rval = GREEDY_ND_cone_bound(2, 6, f, rays, rx2, x, beta, &epsilon);
-    abort_if(rval, "GREEDY_ND_cone_bound failed");
+    rval = cone_bound(2, 6, f, rays, rx2, x, beta, &epsilon);
+    abort_if(rval, "cone_bound failed");
     EXPECT_NEAR(1.0, epsilon, 1e-6);
 
     CLEANUP:
     if(rval) FAIL();
 }
 
-TEST(GreedyNDTest, cone_bound_test_2)
+TEST(InfinityNDTest, cone_bound_test_2)
 {
     int rval = 0;
 
@@ -201,27 +200,27 @@ TEST(GreedyNDTest, cone_bound_test_2)
 
     double epsilon;
 
-    rval = GREEDY_ND_cone_bound(2, 2, f, rays, rx, x1, beta1, &epsilon);
-    abort_if(rval, "GREEDY_ND_cone_bound failed");
+    rval = cone_bound(2, 2, f, rays, rx, x1, beta1, &epsilon);
+    abort_if(rval, "cone_bound failed");
     EXPECT_NEAR(1.0, epsilon, 1e-6);
 
-    rval = GREEDY_ND_cone_bound(2, 2, f, rays, rx, x1, beta2, &epsilon);
-    abort_if(rval, "GREEDY_ND_cone_bound failed");
+    rval = cone_bound(2, 2, f, rays, rx, x1, beta2, &epsilon);
+    abort_if(rval, "cone_bound failed");
     EXPECT_EQ(INFINITY, epsilon);
 
-    rval = GREEDY_ND_cone_bound(2, 2, f, rays, rx, x2, beta2, &epsilon);
-    abort_if(rval, "GREEDY_ND_cone_bound failed");
+    rval = cone_bound(2, 2, f, rays, rx, x2, beta2, &epsilon);
+    abort_if(rval, "cone_bound failed");
     EXPECT_NEAR(1.0, epsilon, 1e-6);
 
-    rval = GREEDY_ND_cone_bound(2, 2, f, rays, rx, x2, beta3, &epsilon);
-    abort_if(rval, "GREEDY_ND_cone_bound failed");
+    rval = cone_bound(2, 2, f, rays, rx, x2, beta3, &epsilon);
+    abort_if(rval, "cone_bound failed");
     EXPECT_EQ(INFINITY, epsilon);
 
 CLEANUP:
     if(rval) FAIL();
 }
 
-TEST(GreedyNDTest, bound_test_1)
+TEST(InfinityNDTest, bound_test_1)
 {
     int rval = 0;
 
@@ -277,7 +276,7 @@ CLEANUP:
     if(rval) FAIL();
 }
 
-TEST(GreedyNDTest, psi_test)
+TEST(InfinityNDTest, psi_test)
 {
     int rval = 0;
 
@@ -309,14 +308,14 @@ TEST(GreedyNDTest, psi_test)
     rval = LP_open(&lp);
     abort_if(rval, "LP_open failed");
 
-    rval = GREEDY_create_psi_lp(&lfree, &lp);
-    abort_if(rval, "GREEDY_create_psi_lp failed");
+    rval = INFINITY_create_psi_lp(&lfree, &lp);
+    abort_if(rval, "INFINITY_create_psi_lp failed");
 
-    rval = GREEDY_ND_psi(2, q1, 1.0, &lp, &value);
+    rval = INFINITY_psi(2, q1, 1.0, &lp, &value);
     abort_if(rval, "GREDDY_ND_psi failed");
     EXPECT_NEAR(value, 2.0, 1e-6);
 
-    rval = GREEDY_ND_psi(2, q2, 2.0, &lp, &value);
+    rval = INFINITY_psi(2, q2, 2.0, &lp, &value);
     abort_if(rval, "GREDDY_ND_psi failed");
     EXPECT_NEAR(value, 8.0, 1e-6);
 
@@ -325,7 +324,7 @@ CLEANUP:
     if(rval) FAIL();
 }
 
-TEST(GreedyNDTest, psi_test_2)
+TEST(InfinityNDTest, psi_test_2)
 {
     int rval = 0;
 
@@ -361,14 +360,14 @@ TEST(GreedyNDTest, psi_test_2)
     rval = LP_open(&lp);
     abort_if(rval, "LP_open failed");
 
-    rval = GREEDY_create_psi_lp(&lfree, &lp);
-    abort_if(rval, "GREEDY_create_psi_lp failed");
+    rval = INFINITY_create_psi_lp(&lfree, &lp);
+    abort_if(rval, "INFINITY_create_psi_lp failed");
 
-    rval = GREEDY_ND_psi(3, q1, 1.0, &lp, &value);
+    rval = INFINITY_psi(3, q1, 1.0, &lp, &value);
     abort_if(rval, "GREDDY_ND_psi failed");
     EXPECT_NEAR(value, 1.0, 1e-6);
 
-    rval = GREEDY_ND_psi(3, q2, 1.0, &lp, &value);
+    rval = INFINITY_psi(3, q2, 1.0, &lp, &value);
     abort_if(rval, "GREDDY_ND_psi failed");
     EXPECT_NEAR(value, 2.0, 1e-6);
 
@@ -376,7 +375,7 @@ CLEANUP:
     if(rval) FAIL();
 }
 
-TEST(GreedyNDTest, generate_cut_test_1)
+TEST(InfinityNDTest, generate_cut_test_1)
 {
     int rval = 0;
 
@@ -415,7 +414,7 @@ CLEANUP:
     if(rval) FAIL();
 }
 
-TEST(GreedyNDTest, generate_cut_test_2)
+TEST(InfinityNDTest, generate_cut_test_2)
 {
     int rval = 0;
 
@@ -456,7 +455,7 @@ CLEANUP:
     if(rval) FAIL();
 }
 
-TEST(GreedyNTest, scale_to_ahull_test)
+TEST(InfinityNDTest, scale_to_ahull_test)
 {
     int rval = 0;
 
@@ -478,16 +477,16 @@ TEST(GreedyNTest, scale_to_ahull_test)
 
     double alpha;
 
-    rval = GREEDY_ND_scale_to_ahull(3, 4, rays, rx, beta, epsilon, d1, &alpha);
-    abort_if(rval, "GREEDY_ND_scale_to_ahull failed");
+    rval = scale_to_ahull(3, 4, rays, rx, beta, epsilon, d1, &alpha);
+    abort_if(rval, "scale_to_ahull failed");
     EXPECT_DOUBLE_EQ(1 / 3.0, alpha);
 
-    rval = GREEDY_ND_scale_to_ahull(3, 4, rays, rx, beta, epsilon, d2, &alpha);
-    abort_if(rval, "GREEDY_ND_scale_to_ahull failed");
+    rval = scale_to_ahull(3, 4, rays, rx, beta, epsilon, d2, &alpha);
+    abort_if(rval, "scale_to_ahull failed");
     EXPECT_DOUBLE_EQ(0.25, alpha);
 
-    rval = GREEDY_ND_scale_to_ahull(3, 4, rays, rx, beta, epsilon, d3, &alpha);
-    abort_if(rval, "GREEDY_ND_scale_to_ahull failed");
+    rval = scale_to_ahull(3, 4, rays, rx, beta, epsilon, d3, &alpha);
+    abort_if(rval, "scale_to_ahull failed");
     EXPECT_EQ(INFINITY, alpha);
 
 CLEANUP:

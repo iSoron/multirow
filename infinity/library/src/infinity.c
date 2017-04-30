@@ -22,7 +22,7 @@
 #include <multirow/util.h>
 
 #include <infinity/infinity.h>
-#include <infinity/greedy-nd.h>
+#include <infinity/infinity-nd.h>
 #include <infinity/infinity-2d.h>
 
 /**
@@ -117,7 +117,7 @@ static int create_cut_from_lfree(const struct Tableau *tableau,
     rval = LP_open(&lp);
     abort_if(rval, "LP_open failed");
 
-    rval = GREEDY_create_psi_lp(lfree, &lp);
+    rval = INFINITY_create_psi_lp(lfree, &lp);
     abort_if(rval, "create_psi_lp failed");
 
     cut->nz = nvars;
@@ -129,13 +129,13 @@ static int create_cut_from_lfree(const struct Tableau *tableau,
 
         if(ENABLE_LIFTING && type == MILP_INTEGER)
         {
-            rval = GREEDY_ND_pi(nrows, q, map->ray_scale[i], &lp, &value);
-            abort_if(rval, "GREEDY_ND_pi failed");
+            rval = INFINITY_pi(nrows, q, map->ray_scale[i], &lp, &value);
+            abort_if(rval, "INFINITY_pi failed");
         }
         else
         {
-            rval = GREEDY_ND_psi(nrows, q, map->ray_scale[i], &lp, &value);
-            abort_if(rval, "GREEDY_ND_psi failed");
+            rval = INFINITY_psi(nrows, q, map->ray_scale[i], &lp, &value);
+            abort_if(rval, "INFINITY_psi failed");
         }
 
         log_verbose("   psi[%4d] = %20.12lf %d\n", map->indices[i], value);
