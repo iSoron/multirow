@@ -485,7 +485,7 @@ TEST(GeometryTest, chull_2d_test)
 //
 //    EXPECT_DOUBLE_EQ(0.5, bounds[0]);
 //    EXPECT_DOUBLE_EQ(0.5, bounds[1]);
-//    EXPECT_EQ(GREEDY_BIG_E, bounds[2]);
+//    EXPECT_EQ(INFINITY_BIG_E, bounds[2]);
 //    EXPECT_DOUBLE_EQ(0.5, bounds[3]);
 //    EXPECT_DOUBLE_EQ(0.5, bounds[4]);
 //

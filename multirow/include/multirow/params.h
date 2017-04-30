@@ -20,7 +20,7 @@
 /*
  * Error margin for floating point comparisons.
  */
-#define EPSILON 1e-5
+#define EPSILON 1e-8
 
 /*
  * Available log levels, in decreasing level of verboseness, are:
@@ -66,11 +66,7 @@
 #define MAX_SELECTED_ROWS 300
 #define MAX_LATTICE_POINTS 100000
 
-/*
- * Greedy cut parameters
- */
-#define GREEDY_BIG_E 1e3
-#define GREEDY_MAX_GAP 1e-4
+#define INFINITY_BIG_E 1e3
 
 #define MAX_CUT_DYNAMISM 1e8
 #define INTEGRALITY_THRESHOLD 0.49

@@ -200,7 +200,7 @@ static int filter_model(const struct MultiRowModel *original_model,
             if(keep) LFREE_push_ray(filtered_rays, r);
         }
 
-        log_debug("  norm_cutoff=%8.2lf nrays=%8d\n", norm_cutoff,
+        log_verbose("  norm_cutoff=%8.2lf nrays=%8d\n", norm_cutoff,
                 filtered_model->rays.nrays);
 
         if(filtered_rays->nrays < MAX_N_RAYS) break;

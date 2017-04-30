@@ -114,32 +114,32 @@ instances/%.done: $(multirow) 2row-cont/%.yaml 2row-lift/%.yaml 3row-cont/%.yaml
 
 2row-cont/%.yaml: $(multirow) instances/%.mps.gz bases/%.bas
 	@echo "   2row-cont  $*..."
-	@$(multirow) --mir --greedy --problem instances/$*.mps.gz --basis bases/$*.bas --log 2row-cont/$*.log --stats $@ --solution solutions/$*.x || touch 2row-cont/$*.err.$$?
+	@$(multirow) --mir --infinity --problem instances/$*.mps.gz --basis bases/$*.bas --log 2row-cont/$*.log --stats $@ --solution solutions/$*.x || touch 2row-cont/$*.err.$$?
 	@echo "   2row-cont  $* [done]"
 
 2row-lift/%.yaml: $(multirow) instances/%.mps.gz bases/%.bas
 	@echo "   2row-lift  $*..."
-	@$(multirow) --mir --greedy --problem instances/$*.mps.gz --basis bases/$*.bas --log 2row-lift/$*.log --stats $@ --solution solutions/$*.x --lift || touch 2row-lift/$*.err.$$?
+	@$(multirow) --mir --infinity --problem instances/$*.mps.gz --basis bases/$*.bas --log 2row-lift/$*.log --stats $@ --solution solutions/$*.x --lift || touch 2row-lift/$*.err.$$?
 	@echo "   2row-lift  $* [done]"
 
 3row-cont/%.yaml: $(multirow) instances/%.mps.gz bases/%.bas
 	@echo "   3row-cont  $*..."
-	@$(multirow) --mir --greedy --problem instances/$*.mps.gz --basis bases/$*.bas --log 3row-cont/$*.log --stats $@ --solution solutions/$*.x --rows 3 || touch 3row-cont/$*.err.$$?
+	@$(multirow) --mir --infinity --problem instances/$*.mps.gz --basis bases/$*.bas --log 3row-cont/$*.log --stats $@ --solution solutions/$*.x --rows 3 || touch 3row-cont/$*.err.$$?
 	@echo "   3row-cont  $* [done]"
 
 3row-lift/%.yaml: $(multirow) instances/%.mps.gz bases/%.bas
 	@echo "   3row-lift  $*..."
-	@$(multirow) --mir --greedy --problem instances/$*.mps.gz --basis bases/$*.bas --log 3row-lift/$*.log --stats $@ --solution solutions/$*.x --rows 3 --lift || touch 3row-lift/$*.err.$$?
+	@$(multirow) --mir --infinity --problem instances/$*.mps.gz --basis bases/$*.bas --log 3row-lift/$*.log --stats $@ --solution solutions/$*.x --rows 3 --lift || touch 3row-lift/$*.err.$$?
 	@echo "   3row-lift  $* [done]"
 
 5row-cont/%.yaml: $(multirow) instances/%.mps.gz bases/%.bas
 	@echo "   5row-cont  $*..."
-	@$(multirow) --mir --greedy --problem instances/$*.mps.gz --basis bases/$*.bas --log 5row-cont/$*.log --stats $@ --solution solutions/$*.x --rows 5 || touch 5row-cont/$*.err.$$?
+	@$(multirow) --mir --infinity --problem instances/$*.mps.gz --basis bases/$*.bas --log 5row-cont/$*.log --stats $@ --solution solutions/$*.x --rows 5 || touch 5row-cont/$*.err.$$?
 	@echo "   5row-cont  $* [done]"
 
 5row-lift/%.yaml: $(multirow) instances/%.mps.gz bases/%.bas
 	@echo "   5row-lift  $*..."
-	@$(multirow) --mir --greedy --problem instances/$*.mps.gz --basis bases/$*.bas --log 5row-lift/$*.log --stats $@ --solution solutions/$*.x --rows 5 --lift || touch 5row-lift/$*.err.$$?
+	@$(multirow) --mir --infinity --problem instances/$*.mps.gz --basis bases/$*.bas --log 5row-lift/$*.log --stats $@ --solution solutions/$*.x --rows 5 --lift || touch 5row-lift/$*.err.$$?
 	@echo "   5row-lift  $* [done]"
 
 

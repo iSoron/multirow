@@ -545,7 +545,7 @@ int INFINITY_2D_generate_lfree(const struct MultiRowModel *model,
     lfree->rays.nrays = nrays;
     memcpy(rays, model->rays.values, 2 * nrays * sizeof(double));
     memcpy(f, model->f, 2 * sizeof(double));
-    for (int i = 0; i < nrays; i++) beta[i] = GREEDY_BIG_E;
+    for (int i = 0; i < nrays; i++) beta[i] = INFINITY_BIG_E;
 
     scale = (double*) malloc(nrays * sizeof(double));
     abort_if(!scale, "could not allocate scale");
@@ -561,7 +561,7 @@ int INFINITY_2D_generate_lfree(const struct MultiRowModel *model,
 
         abort_if(count++ > 2 * nrays, "infinite loop");
 
-        rval = get_bounding_box(2, nrays, rays, beta, GREEDY_BIG_E, lb, ub);
+        rval = get_bounding_box(2, nrays, rays, beta, INFINITY_BIG_E, lb, ub);
         abort_if(rval, "get_bounding_box failed");
 
         log_verbose("    box=[%.2lf %.2lf] [%.2lf %.2lf]\n", lb[0], ub[0], lb[1], ub[1]);

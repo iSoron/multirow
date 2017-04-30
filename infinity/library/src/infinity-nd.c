@@ -942,7 +942,7 @@ static int bound(int nrows,
 
     double prev_epsilon;
     int count = 0;
-    *epsilon = GREEDY_BIG_E;
+    *epsilon = INFINITY_BIG_E;
 
     rx = (int *) malloc(nrays * sizeof(int));
     fbar = (double *) malloc(nrows * sizeof(double));
@@ -990,7 +990,7 @@ static int bound(int nrows,
     for(int i = 0; i < nrays; i++)
         tx[i] = 0;
 
-    if(DOUBLE_geq(*epsilon, GREEDY_BIG_E))
+    if(DOUBLE_geq(*epsilon, INFINITY_BIG_E))
     {
         *epsilon = INFINITY;
         goto CLEANUP;
@@ -1245,7 +1245,7 @@ int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
     abort_if(!x, "could not allocate x");
 
     for(int i = 0; i < nrays; i++)
-        beta[i] = GREEDY_BIG_E;
+        beta[i] = INFINITY_BIG_E;
 
     int it = 0;
 

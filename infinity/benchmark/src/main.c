@@ -36,7 +36,7 @@ int SHOULD_DUMP_CUTS = 0;
 int DUMP_CUT_N = 0;
 
 int GENERATE_MIR = 0;
-int GENERATE_GREEDY = 0;
+int GENERATE_INFINITY = 0;
 int KEEP_INTEGRALITY = 0;
 int N_ROUNDS = 1;
 
@@ -63,7 +63,7 @@ static const struct option options_tab[] =
     {"problem", required_argument, 0, 'p'},
     {"solution", required_argument, 0, 'x'},
     {"mir", no_argument, 0, 'm'},
-    {"greedy", no_argument, 0, 'g'},
+    {"infinity", no_argument, 0, 'g'},
     {"rounds", required_argument, 0, 'r'},
     {"keep-integrality", no_argument, 0, 'k'},
     {"write-solution", required_argument, 0, OPTION_WRITE_SOLUTION},
@@ -86,8 +86,8 @@ static void print_usage(char **argv)
     printf("%4s %-20s %s\n", "-b", "--basis=FILE",
            "BAS file containing an optimal basis for the linear relaxation of "
            "the problem");
-    printf("%4s %-20s %s\n", "-g", "--greedy",
-           "generate greedy intersection cuts");
+    printf("%4s %-20s %s\n", "-g", "--infinity",
+           "generate infinity cuts");
     printf("%4s %-20s %s\n", "-k", "--keep-integrality",
            "do not relax integrality of variables");
     printf("%4s %-20s %s\n", "-l", "--log=FILE",
@@ -135,7 +135,7 @@ static int parse_args(int argc,
             break;
 
         case 'g':
-            GENERATE_GREEDY = 1;
+            GENERATE_INFINITY = 1;
             break;
 
         case 'k':
@@ -207,7 +207,7 @@ static int parse_args(int argc,
         rval = 1;
     }
 
-    if (KEEP_INTEGRALITY && (GENERATE_GREEDY + GENERATE_MIR > 0))
+    if (KEEP_INTEGRALITY && (GENERATE_INFINITY + GENERATE_MIR > 0))
     {
         fprintf(stderr, "Cutting planes cannot be added when integrality is "
                 "kept\n");
@@ -242,8 +242,7 @@ void print_header(int argc,
 
     time_printf("Compile-time parameters:\n");
     time_printf("    EPSILON: %e\n", EPSILON);
-    time_printf("    GREEDY_BIG_E: %e\n", GREEDY_BIG_E);
-    time_printf("    GREEDY_MAX_GAP: %e\n", GREEDY_MAX_GAP);
+    time_printf("    INFINITY_BIG_E: %e\n", INFINITY_BIG_E);
 
     char cmdline[5000] = {0};
     for (int i = 0; i < argc; i++)
@@ -356,7 +355,7 @@ int main(int argc,
         abort_if(rval, "LP_write_basis failed");
     }
 
-    if(GENERATE_MIR || GENERATE_GREEDY)
+    if(GENERATE_MIR || GENERATE_INFINITY)
     {
         cg = (struct CG *) malloc(sizeof(struct CG));
         abort_if(!cg, "could not allocate cg");
@@ -409,11 +408,11 @@ int main(int argc,
             STATS_finish_round();
         }
 
-        if (GENERATE_GREEDY)
+        if (GENERATE_INFINITY)
         {
             for(int k = MIN_N_ROWS; k <= MAX_N_ROWS; k++)
             {
-                log_info("Adding greedy intersection cuts (%d rows)...\n", k);
+                log_info("Adding infinity cuts (%d rows)...\n", k);
 
                 rval = CG_add_multirow_cuts(cg, k,
                         (MultiRowGeneratorCallback) INFINITY_generate_cut);

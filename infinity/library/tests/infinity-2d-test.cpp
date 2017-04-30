@@ -80,7 +80,7 @@ TEST(Infinity2DTest, test_generate_cut_2)
     EXPECT_NEAR(0.5, lfree.beta[0], BOUNDS_EPSILON);
     EXPECT_NEAR(0.5, lfree.beta[1], BOUNDS_EPSILON);
     EXPECT_NEAR(0.5, lfree.beta[2], BOUNDS_EPSILON);
-    EXPECT_EQ(GREEDY_BIG_E, lfree.beta[3]);
+    EXPECT_EQ(INFINITY_BIG_E, lfree.beta[3]);
     EXPECT_NEAR(0.5, lfree.beta[4], BOUNDS_EPSILON);
 
     CLEANUP:
@@ -102,7 +102,7 @@ TEST(Infinity2DTest, test_generate_cut_3)
 
     EXPECT_NEAR(5.0, lfree.beta[0], BOUNDS_EPSILON);
     EXPECT_NEAR(17.0, lfree.beta[2], BOUNDS_EPSILON);
-    EXPECT_EQ(GREEDY_BIG_E, lfree.beta[1]);
+    EXPECT_EQ(INFINITY_BIG_E, lfree.beta[1]);
 
     CLEANUP:
     if (rval) FAIL();
@@ -288,8 +288,8 @@ TEST(Infinity2DTest, find_containing_cone_test_3)
 //    EXPECT_NEAR(20.0, bounds[1], BOUNDS_EPSILON);
 //    EXPECT_NEAR(18.0, bounds[2], BOUNDS_EPSILON);
 //    EXPECT_NEAR(18.0, bounds[5], BOUNDS_EPSILON);
-//    EXPECT_EQ(GREEDY_BIG_E, bounds[3]);
-//    EXPECT_EQ(GREEDY_BIG_E, bounds[4]);
+//    EXPECT_EQ(INFINITY_BIG_E, bounds[3]);
+//    EXPECT_EQ(INFINITY_BIG_E, bounds[4]);
 //
 //    CLEANUP:
 //    if (rval) FAIL();
@@ -314,8 +314,8 @@ TEST(Infinity2DTest, find_containing_cone_test_3)
 //    EXPECT_NEAR(20.0, bounds[1], BOUNDS_EPSILON);
 //    EXPECT_NEAR(18.0, bounds[2], BOUNDS_EPSILON);
 //    EXPECT_NEAR(18.0, bounds[5], BOUNDS_EPSILON);
-//    EXPECT_EQ(GREEDY_BIG_E, bounds[3]);
-//    EXPECT_EQ(GREEDY_BIG_E, bounds[4]);
+//    EXPECT_EQ(INFINITY_BIG_E, bounds[3]);
+//    EXPECT_EQ(INFINITY_BIG_E, bounds[4]);
 //
 //    CLEANUP:
 //    if (rval) FAIL();

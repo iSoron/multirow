@@ -801,7 +801,7 @@ int CG_add_multirow_cuts(struct CG *cg,
                 row_affinity, &total_count, cutoff);
         abort_if(rval, "estimate_two_row_cuts_count failed");
 
-        log_debug("    %8d combinations [%.2lf]\n", total_count, cutoff);
+        log_verbose("    %8d combinations [%.2lf]\n", total_count, cutoff);
 
         if (total_count < MAX_SELECTED_COMBINATIONS)
         {
@@ -884,7 +884,7 @@ int CG_add_multirow_cuts(struct CG *cg,
             if_debug_level if (ONLY_CUT > 0 && count != ONLY_CUT)
                     goto NEXT_COMBINATION;
 
-            if_debug_level
+            if_verbose_level
             {
                 time_printf("Generating cut %d from [ ", count);
                 for (int i = 0; i < nrows; i++)
@@ -906,7 +906,7 @@ int CG_add_multirow_cuts(struct CG *cg,
                     .column_types = cg->column_types
             };
 
-            if_debug_level
+            if_verbose_level
             {
                 char filename[100];
                 sprintf(filename, "tableau-%03ld.c", count);
@@ -933,7 +933,7 @@ int CG_add_multirow_cuts(struct CG *cg,
             }
             else abort_iff(rval, "generate failed (cut %d)", count);
 
-            if_debug_level
+            if_verbose_level
             {
                 char filename[100];
                 sprintf(filename, "cut-%03ld.c", count);
@@ -943,7 +943,7 @@ int CG_add_multirow_cuts(struct CG *cg,
             }
 
             double elapsed_time = get_user_time() - initial_time;
-            log_debug("    generate: %.2lf ms\n", elapsed_time * 1000);
+            log_verbose("    generate: %.2lf ms\n", elapsed_time * 1000);
 
             double dynamism;
             rval = cut_dynamism(&cut, &dynamism);
@@ -951,7 +951,7 @@ int CG_add_multirow_cuts(struct CG *cg,
 
             if (dynamism > MAX_CUT_DYNAMISM)
             {
-                log_debug("Discarding cut (dynamism=%.2lf)\n", dynamism);
+                log_verbose("Discarding cut (dynamism=%.2lf)\n", dynamism);
                 LP_free_row(&cut);
                 goto NEXT_COMBINATION;
             }
