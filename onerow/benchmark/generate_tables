@@ -9,22 +9,22 @@ done
 
 echo "                                     TABLE 1                                    "
 echo "--------------------------------------------------------------------------------"
-printf "%s,%s,%s,%s,%s,%s,%s,%s,%s\n" instance cutsmir cutsw origgap mirperf wperf mircontrib wcontrib wimprov
+printf "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n" instance cutsmir cutsw origgap mirperf wperf mircontrib wcontrib wimprov wtime | tee 'tables/gap.csv'
 for i in out/*.yaml; do
     IN=${i/.yaml/}
     IN=${IN/out\//}
     printf "%s," $IN
     scripts/gap.rb $i
-done | sort -t',' -nrsk 8 | sed -e 's/,$//g' | tee 'tables/gap.csv'
+done | sort -t',' -nrsk 8 | sed -e 's/,$//g' | tee -a 'tables/gap.csv'
 
 echo
 echo
 echo "                                     TABLE 2                                    "
 echo "--------------------------------------------------------------------------------"
-printf "%s,%s,%s,%s,%s,%s\n" instance cutsmir cutsw mirt wedget avgm
+printf "%s,%s,%s,%s,%s,%s\n" instance cutsmir cutsw mirt wedget avgm | tee 'tables/speed.csv'
 for i in out/*.yaml; do
     IN=${i/.yaml/}
     IN=${IN/out\//}
     printf "%s," $IN
     scripts/speed.rb $i
-done | sort | sed -e 's/,$//g' | tee 'tables/speed.csv'
+done | sort | sed -e 's/,$//g' | tee -a 'tables/speed.csv'
