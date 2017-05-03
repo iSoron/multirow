@@ -114,4 +114,6 @@ void CG_free_model(struct MultiRowModel *model);
 
 int CG_total_nz(const struct Tableau *tableau);
 
+double CG_replace_x(const struct Row *row, const double *x);
+
 #endif //MULTIROW_CG_H

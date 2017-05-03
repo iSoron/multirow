@@ -170,23 +170,6 @@ CLEANUP:
     return rval;
 }
 
-static void print_row(const struct CG *cg, const struct Row *row)
-{
-    double *x = cg->integral_solution;
-    double *y = cg->basic_solution;
-
-    time_printf("Row:\n");
-    for (int i = 0; i < row->nz; i++)
-    {
-//        if(DOUBLE_iszero(x[row->indices[i]])) continue;
-
-        time_printf("  %12.6lf x%-5d", row->pi[i], row->indices[i]);
-        printf("  %12.6lf", x[row->indices[i]]);
-        printf("  %12.6lf\n", y[row->indices[i]]);
-    }
-    time_printf("    <= %20.6lf [%d]\n", row->pi_zero, row->head);
-}
-
 static int
 evaluate_row_pair(const struct Row *row1, const struct Row *row2, double *score)
 {
@@ -222,25 +205,6 @@ evaluate_row_pair(const struct Row *row1, const struct Row *row2, double *score)
 
 CLEANUP:
     return rval;
-}
-
-static double
-replace_x(const double *pi, const int *indices, int nz, const double *x)
-{
-    double lhs = 0;
-
-    for (int i = 0; i < nz; i++)
-    {
-        double pii = pi[i];
-        int idx = indices[i];
-
-        if (!DOUBLE_iszero(pii) && !DOUBLE_iszero(x[idx]))
-                log_verbose("    %12.8lf * %12.8lf (x%d)\n", pii, x[idx], idx);
-
-        lhs += pii * x[idx];
-    }
-
-    return lhs;
 }
 
 static int copy_solution(struct CG *cg, double *from, double **to)
@@ -282,8 +246,7 @@ static int check_cut(struct CG *cg, struct Row *cut)
     {
         log_verbose("Basic solution check:\n");
 
-        double lhs = replace_x(cut->pi, cut->indices, cut->nz,
-                cg->basic_solution);
+        double lhs = CG_replace_x(cut, cg->basic_solution);
 
         log_verbose("    %.8lf > %.8lf\n", lhs, cut->pi_zero);
         abort_iff(!DOUBLE_geq(lhs, cut->pi_zero), "Cut fails to cut "
@@ -294,8 +257,7 @@ static int check_cut(struct CG *cg, struct Row *cut)
     {
         log_verbose("Integral solution check:\n");
 
-        double lhs = replace_x(cut->pi, cut->indices, cut->nz,
-                cg->integral_solution);
+        double lhs = CG_replace_x(cut, cg->integral_solution);
 
         log_verbose("    %.8lf <= %.8lf\n", lhs, cut->pi_zero);
         abort_iff(!DOUBLE_leq(lhs, cut->pi_zero), "Cut cuts off known integral "
@@ -318,7 +280,7 @@ static int add_cut(struct CG *cg, struct Row *cut, int *ignored)
     rval = check_cut(cg, cut);
     abort_if(rval, "check_cut failed");
 
-    lhs = replace_x(cut->pi, cut->indices, cut->nz, cg->current_solution);
+    lhs = CG_replace_x(cut, cg->current_solution);
 
     *ignored = 0;
     STATS_increment_generated_cuts();
@@ -384,8 +346,27 @@ static void dump_row(FILE *file, const struct Row *row, int k)
     fprintf(file, ".indices = indices%d };\n", k);
 }
 
-static void dump_tableau(FILE *file, const struct Tableau *tableau)
+static void dump_cut(const struct Row *cut, long count)
 {
+    char filename[100];
+    sprintf(filename, "cut-%03ld.c", count);
+
+    log_info("Dumping generated cut to file %s\n", filename);
+
+    FILE *file = fopen(filename, "w");
+    dump_row(file, cut, 0);
+    fclose(file);
+}
+
+static void dump_tableau(const struct Tableau *tableau, long count)
+{
+    char filename[100];
+    sprintf(filename, "tableau-%03ld.c", count);
+
+    log_info("Dumping tableau to file %s\n", filename);
+
+    FILE *file = fopen(filename, "w");
+
     for(int i = 0; i < tableau->nrows; i++)
         dump_row(file, tableau->rows[i], i);
 
@@ -404,9 +385,47 @@ static void dump_tableau(FILE *file, const struct Tableau *tableau)
     fprintf(file, ".nrows = %d, ", tableau->nrows);
     fprintf(file, ".rows = rows, ");
     fprintf(file, ".column_types = column_types };\n");
+
+    fclose(file);
+}
+
+static void dump_integral_solution(const struct CG *cg, long count)
+{
+    char filename[100];
+    sprintf(filename, "solution-%03ld.c", count);
+
+    log_info("Dumping integral solution to file %s\n", filename);
+
+    FILE *file = fopen(filename, "w");
+    double *x = cg->integral_solution;
+
+    fprintf(file, "x[%d] = {", cg->ncols);
+    for(int i = 0; i < cg->ncols; i++)
+        fprintf(file, "%.10lf, ", x[i]);
+    fprintf(file, "};\n");
+
+    fclose(file);
 }
 
 #ifndef TEST_SOURCE
+
+double CG_replace_x(const struct Row *row, const double *x)
+{
+    double lhs = 0;
+    double *terms = (double*) malloc(row->nz * sizeof(double));
+
+    for (int i = 0; i < row->nz; i++)
+    {
+        double pii = row->pi[i];
+        int idx = row->indices[i];
+        terms[i] = pii * x[idx];
+    }
+
+    DOUBLE_sum(terms, row->nz, &lhs);
+
+    free(terms);
+    return lhs;
+}
 
 /*
  * Looks for a certain ray at an array of rays. Matches rays that are
@@ -505,6 +524,7 @@ int CG_extract_model(const struct Tableau *tableau,
         rval = CG_find_ray(&model->rays, r, &found, &scale, &ray_index);
         abort_if(rval, "CG_find_ray failed");
 
+        found = 0;
         if (!found)
         {
             log_verbose("  ray is new\n");
@@ -516,7 +536,8 @@ int CG_extract_model(const struct Tableau *tableau,
             log_verbose("  ray equals:\n");
             double *q = LFREE_get_ray(&model->rays, ray_index);
             for (int j = 0; j < nrows; j++)
-                    log_verbose("    r[%d] = %.12lf\n", j, q[j]);
+                log_verbose("    r[%d] = %.12lf\n", j, q[j]);
+            log_verbose("    scale = %.12lf\n", scale);
         }
 
         map->ray_scale[map->nvars] = scale;
@@ -527,27 +548,27 @@ int CG_extract_model(const struct Tableau *tableau,
     NEXT_RAY:;
     }
 
-    for (int j = 0; j < model->rays.nrays; j++)
-    {
-        double *r = LFREE_get_ray(&model->rays, j);
-        double max_scale = 0.0;
-
-        for (int k = 0; k < map->nvars; k++)
-        {
-            if (map->variable_to_ray[k] != j) continue;
-            if (map->ray_scale[k] < max_scale) continue;
-            max_scale = map->ray_scale[k];
-        }
-
-        abort_if(max_scale == 0.0, "max_scale is zero");
-
-        for (int k = 0; k < map->nvars; k++)
-            if (map->variable_to_ray[k] == j)
-                map->ray_scale[k] /= max_scale;
-
-        for (int k = 0; k < nrows; k++)
-            r[k] *= max_scale;
-    }
+//    for (int j = 0; j < model->rays.nrays; j++)
+//    {
+//        double *r = LFREE_get_ray(&model->rays, j);
+//        double max_scale = 0.0;
+//
+//        for (int k = 0; k < map->nvars; k++)
+//        {
+//            if (map->variable_to_ray[k] != j) continue;
+//            if (map->ray_scale[k] < max_scale) continue;
+//            max_scale = map->ray_scale[k];
+//        }
+//
+//        abort_if(max_scale == 0.0, "max_scale is zero");
+//
+//        for (int k = 0; k < map->nvars; k++)
+//            if (map->variable_to_ray[k] == j)
+//                map->ray_scale[k] /= max_scale;
+//
+//        for (int k = 0; k < nrows; k++)
+//            r[k] *= max_scale;
+//    }
 
 CLEANUP:
     if (idx) free(idx);
@@ -659,12 +680,12 @@ CLEANUP:
     return rval;
 }
 
-int estimate_multirow_cut_count(struct CG *cg,
-                                int nrows,
-                                int *row_selected,
-                                int *row_affinity,
-                                long *total_count,
-                                double score_cutoff)
+int CG_estimate_multirow_cut_count(struct CG *cg,
+                                   int nrows,
+                                   int *row_selected,
+                                   int *row_affinity,
+                                   long *total_count,
+                                   double score_cutoff)
 {
     int rval = 0;
     int *row_indices = 0;
@@ -748,7 +769,7 @@ CLEANUP:
     return rval;
 }
 
-int cut_dynamism(struct Row *cut, double *dynamism)
+int CG_cut_dynamism(struct Row *cut, double *dynamism)
 {
     double largest = -INFINITY;
     double smallest = INFINITY;
@@ -797,7 +818,7 @@ int CG_add_multirow_cuts(struct CG *cg,
         double cg_current_time = get_user_time() - cg_initial_time;
         if (cg_current_time > CG_TIMEOUT) break;
 
-        rval = estimate_multirow_cut_count(cg, nrows, row_selected,
+        rval = CG_estimate_multirow_cut_count(cg, nrows, row_selected,
                 row_affinity, &total_count, cutoff);
         abort_if(rval, "estimate_two_row_cuts_count failed");
 
@@ -906,14 +927,7 @@ int CG_add_multirow_cuts(struct CG *cg,
                     .column_types = cg->column_types
             };
 
-            if_verbose_level
-            {
-                char filename[100];
-                sprintf(filename, "tableau-%03ld.c", count);
-                FILE *file = fopen(filename, "w");
-                dump_tableau(file, &tableau);
-                fclose(file);
-            }
+            if_verbose_level dump_tableau(&tableau, count);
 
             int max_nz = CG_total_nz(&tableau);
 
@@ -933,21 +947,14 @@ int CG_add_multirow_cuts(struct CG *cg,
             }
             else abort_iff(rval, "generate failed (cut %d)", count);
 
-            if_verbose_level
-            {
-                char filename[100];
-                sprintf(filename, "cut-%03ld.c", count);
-                FILE *file = fopen(filename, "w");
-                dump_row(file, &cut, 0);
-                fclose(file);
-            }
+            if_verbose_level dump_cut(&cut, count);
 
             double elapsed_time = get_user_time() - initial_time;
             log_verbose("    generate: %.2lf ms\n", elapsed_time * 1000);
 
             double dynamism;
-            rval = cut_dynamism(&cut, &dynamism);
-            abort_if(rval, "cut_dynamism failed");
+            rval = CG_cut_dynamism(&cut, &dynamism);
+            abort_if(rval, "CG_cut_dynamism failed");
 
             if (dynamism > MAX_CUT_DYNAMISM)
             {
@@ -958,14 +965,12 @@ int CG_add_multirow_cuts(struct CG *cg,
 
             int ignored;
             rval = add_cut(cg, &cut, &ignored);
-            if (rval)
+            if(rval)
             {
-                log_warn("invalid cut skipped (cut %d)\n", count);
-                rval = 0;
-
-                LP_free_row(&cut);
-                goto NEXT_COMBINATION;
-
+                dump_cut(&cut, count);
+                dump_tableau(&tableau, count);
+                dump_integral_solution(cg, count);
+                abort_iff(1, "add_cut failed (cut=%d)", count);
             }
 
             if_debug_level if (!ignored)

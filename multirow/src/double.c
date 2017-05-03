@@ -132,3 +132,32 @@ int DOUBLE_to_rational(double a,
 CLEANUP:
     return rval;
 }
+
+static int _qsort_double_cmp(const void *a, const void *b)
+{
+    double ia = *((double*) a);
+    double ib = *((double*) b);
+    if (ia > ib) return -1;
+    if (ia < ib) return 1;
+    return 0;
+}
+
+int DOUBLE_sum(const double *list, const int count, double *result)
+{
+    int rval = 0;
+
+    double *list_copy = 0;
+    list_copy = (double*) malloc(count * sizeof(double));
+    abort_if(!list_copy, "could not allocate list_copy");
+
+    memcpy(list_copy, list, count * sizeof(double));
+    qsort(list_copy, (size_t) count, sizeof(double), _qsort_double_cmp);
+
+    *result = 0;
+    for(int i = 0; i < count; i++)
+        *result += list_copy[i];
+
+CLEANUP:
+    if(list_copy) free(list_copy);
+    return rval;
+}

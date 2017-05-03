@@ -47,4 +47,6 @@ int DOUBLE_to_rational(double a,
 
 double DOUBLE_random(double min, double max);
 
+int DOUBLE_sum(const double *list, const int count, double *result);
+
 #endif //MULTIROW_DOUBLE_H

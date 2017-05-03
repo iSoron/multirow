@@ -590,6 +590,9 @@ static int find_interior_point_enum(const int nrows,
                 rval = INFINITY_psi(nrows, q, 1, &lp, &value);
                 abort_if(rval, "INFINITY_psi failed");
 
+                log_debug("        x=[%3d %3d %3d] value=%.12lf\n",
+                        x1, x2, x3, value);
+
                 if(value < best_value)
                 {
                     best_value = value;
@@ -599,7 +602,7 @@ static int find_interior_point_enum(const int nrows,
                 }
             }
 
-    if(best_value < 0.999) *found = 1;
+    if(!DOUBLE_geq(best_value, 1)) *found = 1;
 
 CLEANUP:
     if(beta2) free(beta2);
@@ -662,7 +665,7 @@ static int find_interior_point_cplex(const int nrows,
 
     log_debug("    obj = %.8lf\n", objval);
 
-    if(objval >= 0.999)
+    if(DOUBLE_geq(objval, 1.0))
     {
         log_debug("  set is lattice-free\n");
         *found = 0;
@@ -1112,12 +1115,6 @@ int INFINITY_create_psi_lp(const struct ConvLFreeSet *lfree, struct LP *lp)
     rval = LP_relax(lp);
     abort_if(rval, "LP_relax failed");
 
-    if_verbose_level
-    {
-        rval = LP_write(lp, "psi.lp");
-        abort_if(rval, "LP_write failed");
-    }
-
 CLEANUP:
     if(rmatind) free(rmatind);
     if(rmatval) free(rmatval);
@@ -1218,6 +1215,8 @@ CLEANUP:
 int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
                                struct ConvLFreeSet *lfree)
 {
+    log_debug("INFINITY_ND_generate_lfree\n");
+
     int rval = 0;
     int nrows = model->nrows;
     int nrays = model->rays.nrays;
@@ -1228,6 +1227,7 @@ int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
 
     lfree->nrows = model->nrows;
     lfree->rays.nrays = nrays;
+
     memcpy(rays, model->rays.values, nrays * nrows * sizeof(double));
     memcpy(f, model->f, nrows * sizeof(double));
 
@@ -1319,10 +1319,10 @@ int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
             rval = bound(nrows, nrays, f, model->rays.values, x, beta,
                     &epsilon_x, tx);
             abort_if(rval, "bound failed");
-//            epsilon_x *= 0.999;
 
             if(isinf(epsilon_x)) break;
 
+//            epsilon_x = (floor(epsilon_x * 128) / 128);
             log_debug("    epsilon_x = %.8lf\n", epsilon_x);
 
             if(DOUBLE_eq(epsilon_x, epsilon))
@@ -1348,7 +1348,6 @@ int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
             if(t[i])
             {
                 beta[i] = min(beta[i], epsilon);
-//                beta[i] *= 0.999;
             }
             else if(!skip_ahull)
             {
@@ -1365,11 +1364,11 @@ int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
                     continue;
                 }
 
+//                alpha = (floor(alpha * 128) / 128);
                 beta[i] = min(beta[i], alpha);
-//                beta[i] *= 0.999;
             }
 
-            log_debug("  beta[%2d] = %.4lf\n", i, beta[i]);
+            log_debug("  beta[%2d] = %20.12lf\n", i, beta[i]);
         }
 
         log_debug("epsilon = %.6lf\n", epsilon);

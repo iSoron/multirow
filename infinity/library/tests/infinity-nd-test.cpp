@@ -27,11 +27,6 @@ extern "C" {
 #include "../src/infinity-nd.c"
 }
 
-int ENABLE_LIFTING = 0;
-int MIN_N_ROWS = 2;
-int MAX_N_ROWS = 2;
-int SHOULD_DUMP_CUTS = 0;
-int DUMP_CUT_N = 0;
 
 TEST(InfinityNDTest, find_violated_cone_test)
 {
@@ -492,4 +487,3 @@ TEST(InfinityNDTest, scale_to_ahull_test)
 CLEANUP:
     if(rval) FAIL();
 }
-

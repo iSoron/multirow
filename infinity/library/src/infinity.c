@@ -117,6 +117,8 @@ static int create_cut_from_lfree(const struct Tableau *tableau,
     rval = LP_open(&lp);
     abort_if(rval, "LP_open failed");
 
+    memcpy(lfree->f, model->f, nrows * sizeof(double));
+
     rval = INFINITY_create_psi_lp(lfree, &lp);
     abort_if(rval, "create_psi_lp failed");
 
@@ -126,6 +128,7 @@ static int create_cut_from_lfree(const struct Tableau *tableau,
         double value;
         const double *q = LFREE_get_ray(rays, map->variable_to_ray[i]);
         char type = tableau->column_types[map->indices[i]];
+
 
         if(ENABLE_LIFTING && type == MILP_INTEGER)
         {
@@ -140,8 +143,18 @@ static int create_cut_from_lfree(const struct Tableau *tableau,
 
         log_verbose("   psi[%4d] = %20.12lf %d\n", map->indices[i], value);
 
-        value *= 1.0001;
-        value = DOUBLE_max(value, 0.0001);
+        if_debug_level
+        {
+            time_printf("    q=[");
+            for(int j = 0; j < nrows; j++)
+                printf("%25.20lf ", q[j] * map->ray_scale[i]);
+            printf("] value=%25.20lf\n", value);
+        }
+
+        value = fmax(value, 1 / 1024.0);
+
+//        value *= 1.001;
+//        value = DOUBLE_max(value, 0.001);
 
         cut->indices[i] = map->indices[i];
         cut->pi[i] = -value;
@@ -167,11 +180,21 @@ static int filter_model(const struct MultiRowModel *original_model,
                         struct MultiRowModel *filtered_model)
 {
     int rval = 0;
+    double *r = 0;
+    double *f = filtered_model->f;
     int nrows = original_model->nrows;
     struct RayList *filtered_rays = &filtered_model->rays;
     const struct RayList *original_rays = &original_model->rays;
 
-    memcpy(filtered_model->f, original_model->f, 2 * sizeof(double));
+    memcpy(f, original_model->f, 2 * sizeof(double));
+    for(int i = 0; i < nrows; i++)
+    {
+        f[i] = (ceil(f[i] * 128) / 128);
+        if(f[i] <= 0.01) f[i] = 0;
+    }
+
+    r = (double*) malloc(nrows * sizeof(double));
+    abort_if(!r, "could not allocate r");
 
     for(double norm_cutoff = 0.00; norm_cutoff <= 5.0; norm_cutoff += 0.1)
     {
@@ -180,13 +203,23 @@ static int filter_model(const struct MultiRowModel *original_model,
         for(int i = 0; i < original_rays->nrays; i++)
         {
             int keep = 1;
-            double *r = LFREE_get_ray(original_rays, i);
+            double norm = 0;
+
+            memcpy(r, LFREE_get_ray(original_rays, i), nrows * sizeof(double));
+
+            for(int j = 0; j < nrows; j++)
+            {
+                r[j] = (ceil(r[j] * 128) / 128);
+                norm += fabs(r[j]);
+            }
+
+            if(DOUBLE_iszero(norm)) continue;
 
             for(int j = 0; j < (filtered_rays->nrays); j++)
             {
                 double *q = LFREE_get_ray(filtered_rays, j);
 
-                double norm = 0;
+                norm = 0;
                 for(int k = 0; k < nrows; k++)
                     norm += fabs(r[k] - q[k]);
 
@@ -207,6 +240,7 @@ static int filter_model(const struct MultiRowModel *original_model,
     }
 
 CLEANUP:
+    if(r) free(r);
     return rval;
 }
 
@@ -225,59 +259,30 @@ static int append_extra_rays(struct MultiRowModel *model)
 {
     int rval = 0;
     int nrows = model->nrows;
-    int n_extra_rays = 0;
-    double extra_rays[100];
 
-    abort_if(nrows > 3, "not implemented");
+    double *r = 0;
+    double e = 1 / 128.0;
+
+    r = (double*) malloc(nrows * sizeof(double));
+    abort_if(!r, "could not allocate r");
+
+    for(int i = 0; i < nrows; i++)
+    {
+        for(int j = 0; j < nrows; j++) r[j] = (i == j ? e : 0);
+        LFREE_push_ray(&model->rays, r);
+
+        for(int j = 0; j < nrows; j++) r[j] = (i == j ? -e : 0);
+        LFREE_push_ray(&model->rays, r);
+    }
 
     if(nrows == 2)
     {
-        extra_rays[0] = 0.0001;
-        extra_rays[1] = 0.0000;
-
-        extra_rays[2] = -0.0001;
-        extra_rays[3] = 0.0001;
-
-        extra_rays[4] = -0.0001;
-        extra_rays[5] = -0.0001;
-
-        n_extra_rays = 3;
-    }
-
-    if(nrows == 3)
-    {
-        extra_rays[0] = 0.0000;
-        extra_rays[1] = 0.0000;
-        extra_rays[2] = 0.0001;
-
-        extra_rays[3] = 0.0001;
-        extra_rays[4] = 0.0000;
-        extra_rays[5] = -0.0001;
-
-        extra_rays[6] = -0.0001;
-        extra_rays[7] = 0.0000;
-        extra_rays[8] = -0.0001;
-
-        extra_rays[9] = -0.0001;
-        extra_rays[10] = -0.0001;
-        extra_rays[11] = -0.0001;
-
-        n_extra_rays = 4;
-    }
-
-    for(int i = 0; i < n_extra_rays; i++)
-    {
-        double *r = &extra_rays[nrows * i];
-
-        double scale;
-        int found, index;
-        rval = CG_find_ray(&model->rays, r, &found, &scale, &index);
-        abort_if(rval, "CG_find_ray failed");
-
-        if(!found) LFREE_push_ray(&model->rays, r);
+        rval = sort_rays_by_angle(&model->rays);
+        abort_if(rval, "sort_rays_by_angle failed");
     }
 
 CLEANUP:
+    if(r) free(r);
     return rval;
 }
 
@@ -366,12 +371,6 @@ static int extract_models(const struct Tableau *tableau,
     rval = filter_model(original_model, filtered_model);
     abort_if(rval, "filter_model failed");
 
-    if(ENABLE_LIFTING)
-    {
-        rval = append_extra_rays(filtered_model);
-        abort_if(rval, "append_extra_rays failed");
-    }
-
     if(tableau->nrows == 2)
     {
         rval = sort_rays_by_angle(&filtered_model->rays);
@@ -420,12 +419,33 @@ int INFINITY_generate_cut(const struct Tableau *tableau, struct Row *cut)
         goto CLEANUP;
     }
 
-    rval = LFREE_init_conv(&lfree, tableau->nrows, filtered_model.rays.nrays);
+    rval = LFREE_init_conv(&lfree, tableau->nrows, max_nrays);
     abort_if(rval, "LFREE_init_conv failed");
 
-    if(tableau->nrows == 2)
-        rval = INFINITY_2D_generate_lfree(&filtered_model, &lfree);
-    else
+//    if(tableau->nrows == 2)
+//        rval = INFINITY_2D_generate_lfree(&filtered_model, &lfree);
+//    else
+//        rval = INFINITY_ND_generate_lfree(&filtered_model, &lfree);
+//
+//    if(rval)
+//    {
+//        rval = ERR_NO_CUT;
+//        goto CLEANUP;
+//    }
+//
+//    for(int i = 0; i < filtered_model.rays.nrays; i++)
+//    {
+//        double *r = LFREE_get_ray(&filtered_model.rays, i);
+//        for(int j = 0; j < tableau->nrows; j++)
+//            r[j] *= lfree.beta[j];
+//    }
+
+    rval = append_extra_rays(&filtered_model);
+    abort_if(rval, "append_extra_rays failed");
+
+//    if(tableau->nrows == 2)
+//        rval = INFINITY_2D_generate_lfree(&filtered_model, &lfree);
+//    else
         rval = INFINITY_ND_generate_lfree(&filtered_model, &lfree);
 
     if(rval)

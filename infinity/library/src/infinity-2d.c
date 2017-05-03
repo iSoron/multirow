@@ -557,14 +557,14 @@ int INFINITY_2D_generate_lfree(const struct MultiRowModel *model,
 
     while(1)
     {
-        log_verbose("  starting iteration %d...\n", count);
+        log_debug("  starting iteration %d...\n", count);
 
         abort_if(count++ > 2 * nrays, "infinite loop");
 
         rval = get_bounding_box(2, nrays, rays, beta, INFINITY_BIG_E, lb, ub);
         abort_if(rval, "get_bounding_box failed");
 
-        log_verbose("    box=[%.2lf %.2lf] [%.2lf %.2lf]\n", lb[0], ub[0], lb[1], ub[1]);
+        log_debug("    box=[%.2lf %.2lf] [%.2lf %.2lf]\n", lb[0], ub[0], lb[1], ub[1]);
 
         int best_i1, best_i2;
         double best_v1[2];
@@ -591,17 +591,17 @@ int INFINITY_2D_generate_lfree(const struct MultiRowModel *model,
 
             if(epsilon >= 0 && epsilon < best_epsilon)
             {
-                log_verbose("    found smaller epsilon: %.8lf\n", epsilon);
+                log_debug("    found smaller epsilon: %.8lf\n", epsilon);
 
                 rval = get_bounding_box(2, nrays, rays, beta, epsilon, lb, ub);
                 abort_if(rval, "get_bounding_box failed");
 
-                log_verbose("      p=%.2lf %.2lf\n", p[0], p[1]);
-                log_verbose("      box=[%.2lf %.2lf] [%.2lf %.2lf]\n", lb[0], ub[0],
+                log_debug("      p=%.2lf %.2lf\n", p[0], p[1]);
+                log_debug("      box=[%.2lf %.2lf] [%.2lf %.2lf]\n", lb[0], ub[0],
                         lb[1], ub[1]);
-                log_verbose("      v1=%12.8lf %12.8lf\n", v1[0], v1[1]);
-                log_verbose("      v2=%12.8lf %12.8lf\n", v2[0], v2[1]);
-                log_verbose("      rays=[%d %d]\n", i1, i2);
+                log_debug("      v1=%12.8lf %12.8lf\n", v1[0], v1[1]);
+                log_debug("      v2=%12.8lf %12.8lf\n", v2[0], v2[1]);
+                log_debug("      rays=[%d %d]\n", i1, i2);
 
                 best_epsilon = epsilon;
                 best_v1[0] = v1[0];
@@ -624,21 +624,21 @@ int INFINITY_2D_generate_lfree(const struct MultiRowModel *model,
 
         if(isinf(best_epsilon))
         {
-            log_verbose("    best_epsilon is infinity\n");
+            log_debug("    best_epsilon is infinity\n");
             break;
         }
 
-        log_verbose("  updating beta\n");
+        log_debug("  updating beta\n");
         if(isinf(best_v1[0]))
         {
             beta[best_i1] = best_epsilon;
-            log_verbose("    beta[%d]=%.8lf (exact)\n", best_i1, best_epsilon);
+            log_debug("    beta[%d]=%.8lf (exact)\n", best_i1, best_epsilon);
         }
         else
         {
-            log_verbose("    v1=%.8lf %.8lf\n", best_v1[0], best_v1[1]);
-            log_verbose("    v2=%.8lf %.8lf\n", best_v2[0], best_v2[1]);
-            log_verbose("    i=%d %d\n", best_i1, best_i2);
+            log_debug("    v1=%.8lf %.8lf\n", best_v1[0], best_v1[1]);
+            log_debug("    v2=%.8lf %.8lf\n", best_v2[0], best_v2[1]);
+            log_debug("    i=%d %d\n", best_i1, best_i2);
 
             for (int i = 0; i < nrays; i++)
             {
@@ -650,7 +650,7 @@ int INFINITY_2D_generate_lfree(const struct MultiRowModel *model,
                 if(!DOUBLE_geq(lambda, 0)) continue;
 
                 beta[i] = fmin(beta[i], lambda);
-                log_verbose("    beta[%d]=%.8lf\n", i, beta[i]);
+                log_debug("    beta[%d]=%.8lf\n", i, beta[i]);
             }
         }
 
@@ -671,7 +671,7 @@ int INFINITY_2D_generate_lfree(const struct MultiRowModel *model,
 
             double *split_direction = &rays[2 * k];
 
-            log_verbose("  split_direction=%.2lf %.2lf\n", split_direction[0],
+            log_debug("  split_direction=%.2lf %.2lf\n", split_direction[0],
                     split_direction[1]);
 
             double pi[2];
@@ -680,8 +680,8 @@ int INFINITY_2D_generate_lfree(const struct MultiRowModel *model,
             rval = generate_split(f, split_direction, pi, &pi_zero, 10);
             abort_if(rval, "generate_split failed");
 
-            log_verbose("    pi=%.2lf %.2lf\n", pi[0], pi[1]);
-            log_verbose("    pi_zero=%.2lf\n", pi_zero);
+            log_debug("    pi=%.2lf %.2lf\n", pi[0], pi[1]);
+            log_debug("    pi_zero=%.2lf\n", pi_zero);
 
             if(isinf(pi[0]))
             {
@@ -695,7 +695,7 @@ int INFINITY_2D_generate_lfree(const struct MultiRowModel *model,
             lhs = f[0] * pi[0] + f[1] * pi[1];
             if(DOUBLE_eq(pi_zero, lhs) || DOUBLE_eq(lhs, pi_zero+1))
             {
-                log_verbose("    split rejected\n");
+                log_debug("    split rejected\n");
                 is_split = 0;
             }
 
@@ -708,7 +708,7 @@ int INFINITY_2D_generate_lfree(const struct MultiRowModel *model,
 
                 if (!(DOUBLE_leq(pi_zero, lhs) && DOUBLE_leq(lhs, pi_zero+1)))
                 {
-                    log_verbose("    point %.4lf %.4lf falls outside of the split\n",
+                    log_debug("    point %.4lf %.4lf falls outside of the split\n",
                             f[0] + r[0]*beta[i], f[1] + r[1] * beta[i]);
                     is_split = 0;
                 }
@@ -716,7 +716,7 @@ int INFINITY_2D_generate_lfree(const struct MultiRowModel *model,
 
             if(is_split)
             {
-                log_verbose("  split confirmed. stopping.\n");
+                log_debug("  split confirmed. stopping.\n");
                 break;
             }
         }
