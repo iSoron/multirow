@@ -1,0 +1,23 @@
+input_file:
+  instances/net12.pre.mps.gz
+sol_value:
+  0: 17.249479
+  1: 28.476627
+  2: 28.476627
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    172
+  depth:
+    0: 172
+timers:
+  1: 13.3010
+  2: 1175.1503
+cut_speed:
+  round_1: inf
+  round_2: inf
+mip_value:
+  214.000000

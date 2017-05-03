@@ -1,0 +1,302 @@
+            instances/rail507.pre.mps.gz [      0.00] Reading input file: instances/rail507.pre.mps.gz...
+            instances/rail507.pre.mps.gz [      0.12] Fetched 441 rows, 20922 cols.
+            instances/rail507.pre.mps.gz [      0.12] Solving first relaxation...
+            instances/rail507.pre.mps.gz [      4.79] 	 172.145567 [optimal]					   
+            instances/rail507.pre.mps.gz [      4.79] Reading basis...
+            instances/rail507.pre.mps.gz [      5.00] Generating MIR cuts...
+            instances/rail507.pre.mps.gz [      5.00] Finding interesting rows...
+            instances/rail507.pre.mps.gz [    191.73] 	 320 rows found
+            instances/rail507.pre.mps.gz [    191.73] Starting timer 1...
+            instances/rail507.pre.mps.gz [    252.88] 	 172.173704 [optimal]					   
+            instances/rail507.pre.mps.gz [    410.26] Ending timer 1: 218.52s
+            instances/rail507.pre.mps.gz [    410.26] Added 108 violated cuts...
+            instances/rail507.pre.mps.gz [    410.70] 	 172.176728 [optimal]					   
+            instances/rail507.pre.mps.gz [    410.70] Generating wedge cuts...
+            instances/rail507.pre.mps.gz [    410.70] Starting timer 2...
+            instances/rail507.pre.mps.gz [    710.37]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   1010.05]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   1309.72]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   1609.39]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   1909.07]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   2208.75]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   2508.42]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   2808.09]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   3107.76]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   3407.43]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   3707.11]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   4006.78]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   4306.45]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   4606.12]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   4905.79]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   5205.46]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   5505.14]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   5804.62]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   6104.30]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   6403.98]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   6703.65]   0%  ETA: unknown
+            instances/rail507.pre.mps.gz [   7003.33]   0%  ETA: 2017-05-26 09:13:06  1 / 320
+            instances/rail507.pre.mps.gz [   7303.00]   0%  ETA: 2017-05-27 11:53:06  1 / 320
+            instances/rail507.pre.mps.gz [   7602.67]   0%  ETA: 2017-05-28 14:33:06  1 / 320
+            instances/rail507.pre.mps.gz [   7902.34]   0%  ETA: 2017-05-29 17:13:06  1 / 320
+            instances/rail507.pre.mps.gz [   8202.01]   0%  ETA: 2017-05-30 19:53:06  1 / 320
+            instances/rail507.pre.mps.gz [   8501.68]   0%  ETA: 2017-05-31 22:33:06  1 / 320
+            instances/rail507.pre.mps.gz [   8801.35]   0%  ETA: 2017-06-02 01:13:06  1 / 320
+            instances/rail507.pre.mps.gz [   9067.79]   0%  ETA: 2017-06-03 03:53:06  1 / 320
+            instances/rail507.pre.mps.gz [   9367.36]   0%  ETA: 2017-06-04 06:33:06  1 / 320
+            instances/rail507.pre.mps.gz [   9667.03]   0%  ETA: 2017-06-05 09:13:06  1 / 320
+            instances/rail507.pre.mps.gz [   9966.70]   0%  ETA: 2017-06-06 11:53:06  1 / 320
+            instances/rail507.pre.mps.gz [  10266.38]   0%  ETA: 2017-06-07 14:33:06  1 / 320
+            instances/rail507.pre.mps.gz [  10566.05]   0%  ETA: 2017-06-08 17:13:06  1 / 320
+            instances/rail507.pre.mps.gz [  10865.72]   0%  ETA: 2017-06-09 19:53:06  1 / 320
+            instances/rail507.pre.mps.gz [  11165.39]   0%  ETA: 2017-06-10 22:33:06  1 / 320
+            instances/rail507.pre.mps.gz [  11464.87]   0%  ETA: 2017-06-12 01:13:06  1 / 320
+            instances/rail507.pre.mps.gz [  11764.45]   0%  ETA: 2017-06-13 03:53:06  1 / 320
+            instances/rail507.pre.mps.gz [  12063.64]   0%  ETA: 2017-06-14 06:33:06  1 / 320
+            instances/rail507.pre.mps.gz [  12363.30]   0%  ETA: 2017-06-15 09:13:06  1 / 320
+            instances/rail507.pre.mps.gz [  12662.67]   0%  ETA: 2017-06-16 11:53:06  1 / 320
+            instances/rail507.pre.mps.gz [  12962.13]   0%  ETA: 2017-06-17 14:33:06  1 / 320
+            instances/rail507.pre.mps.gz [  13261.81]   0%  ETA: 2017-06-18 17:13:06  1 / 320
+            instances/rail507.pre.mps.gz [  13561.29]   0%  ETA: 2017-06-19 19:53:06  1 / 320
+            instances/rail507.pre.mps.gz [  13860.07]   1%  ETA: 2017-05-26 22:30:26  2 / 320
+            instances/rail507.pre.mps.gz [  14159.73]   1%  ETA: 2017-05-27 11:50:26  2 / 320
+            instances/rail507.pre.mps.gz [  14459.40]   1%  ETA: 2017-05-28 01:10:26  2 / 320
+            instances/rail507.pre.mps.gz [  14759.07]   1%  ETA: 2017-05-28 14:30:26  2 / 320
+            instances/rail507.pre.mps.gz [  15058.74]   1%  ETA: 2017-05-29 03:50:26  2 / 320
+            instances/rail507.pre.mps.gz [  15358.42]   1%  ETA: 2017-05-29 17:10:26  2 / 320
+            instances/rail507.pre.mps.gz [  15658.09]   1%  ETA: 2017-05-30 06:30:26  2 / 320
+            instances/rail507.pre.mps.gz [  15957.48]   1%  ETA: 2017-05-30 19:50:26  2 / 320
+            instances/rail507.pre.mps.gz [  16256.83]   1%  ETA: 2017-05-31 09:10:26  2 / 320
+            instances/rail507.pre.mps.gz [  16556.44]   1%  ETA: 2017-05-31 22:30:26  2 / 320
+            instances/rail507.pre.mps.gz [  16856.02]   1%  ETA: 2017-06-01 11:50:26  2 / 320
+            instances/rail507.pre.mps.gz [  17155.69]   1%  ETA: 2017-06-02 01:10:26  2 / 320
+            instances/rail507.pre.mps.gz [  17455.36]   1%  ETA: 2017-06-02 14:30:26  2 / 320
+            instances/rail507.pre.mps.gz [  17752.63]   1%  ETA: 2017-06-03 03:50:26  2 / 320
+            instances/rail507.pre.mps.gz [  18052.30]   1%  ETA: 2017-06-03 17:10:26  2 / 320
+            instances/rail507.pre.mps.gz [  18351.95]   1%  ETA: 2017-06-04 06:30:26  2 / 320
+            instances/rail507.pre.mps.gz [  18651.62]   1%  ETA: 2017-06-04 19:50:26  2 / 320
+            instances/rail507.pre.mps.gz [  18951.30]   1%  ETA: 2017-06-05 09:10:26  2 / 320
+            instances/rail507.pre.mps.gz [  19250.97]   1%  ETA: 2017-06-05 22:30:26  2 / 320
+            instances/rail507.pre.mps.gz [  19550.47]   1%  ETA: 2017-06-06 11:50:26  2 / 320
+            instances/rail507.pre.mps.gz [  19850.10]   1%  ETA: 2017-06-07 01:10:26  2 / 320
+            instances/rail507.pre.mps.gz [  20149.74]   1%  ETA: 2017-06-07 14:30:26  2 / 320
+            instances/rail507.pre.mps.gz [  20340.87] 	 172.178536 [optimal]					   
+            instances/rail507.pre.mps.gz [  20449.78]   1%  ETA: 2017-05-26 18:04:39  3 / 320
+            instances/rail507.pre.mps.gz [  20749.45]   1%  ETA: 2017-05-27 02:57:59  3 / 320
+            instances/rail507.pre.mps.gz [  21049.13]   1%  ETA: 2017-05-27 11:51:19  3 / 320
+            instances/rail507.pre.mps.gz [  21348.79]   1%  ETA: 2017-05-27 20:44:39  3 / 320
+            instances/rail507.pre.mps.gz [  21648.47]   1%  ETA: 2017-05-28 05:37:59  3 / 320
+            instances/rail507.pre.mps.gz [  21948.14]   1%  ETA: 2017-05-28 14:31:19  3 / 320
+            instances/rail507.pre.mps.gz [  22247.81]   1%  ETA: 2017-05-28 23:24:39  3 / 320
+            instances/rail507.pre.mps.gz [  22547.49]   1%  ETA: 2017-05-29 08:17:59  3 / 320
+            instances/rail507.pre.mps.gz [  22847.16]   1%  ETA: 2017-05-29 17:11:19  3 / 320
+            instances/rail507.pre.mps.gz [  23146.83]   1%  ETA: 2017-05-30 02:04:39  3 / 320
+            instances/rail507.pre.mps.gz [  23446.47]   1%  ETA: 2017-05-30 10:57:59  3 / 320
+            instances/rail507.pre.mps.gz [  23746.05]   1%  ETA: 2017-05-30 19:51:19  3 / 320
+            instances/rail507.pre.mps.gz [  24045.70]   1%  ETA: 2017-05-31 04:44:39  3 / 320
+            instances/rail507.pre.mps.gz [  24345.36]   1%  ETA: 2017-05-31 13:37:59  3 / 320
+            instances/rail507.pre.mps.gz [  24645.03]   1%  ETA: 2017-05-31 22:31:19  3 / 320
+            instances/rail507.pre.mps.gz [  24944.67]   1%  ETA: 2017-06-01 07:24:39  3 / 320
+            instances/rail507.pre.mps.gz [  25244.35]   1%  ETA: 2017-06-01 16:17:59  3 / 320
+            instances/rail507.pre.mps.gz [  25544.02]   1%  ETA: 2017-06-02 01:11:19  3 / 320
+            instances/rail507.pre.mps.gz [  25843.69]   1%  ETA: 2017-06-02 10:04:39  3 / 320
+            instances/rail507.pre.mps.gz [  26143.37]   1%  ETA: 2017-06-02 18:57:59  3 / 320
+            instances/rail507.pre.mps.gz [  26443.04]   1%  ETA: 2017-06-03 03:51:19  3 / 320
+            instances/rail507.pre.mps.gz [  26742.71]   1%  ETA: 2017-05-26 09:10:26  4 / 320
+            instances/rail507.pre.mps.gz [  27042.38]   1%  ETA: 2017-05-26 15:50:26  4 / 320
+            instances/rail507.pre.mps.gz [  27342.05]   1%  ETA: 2017-05-26 22:30:26  4 / 320
+            instances/rail507.pre.mps.gz [  27641.73]   1%  ETA: 2017-05-27 05:10:26  4 / 320
+            instances/rail507.pre.mps.gz [  27941.40]   1%  ETA: 2017-05-27 11:50:26  4 / 320
+            instances/rail507.pre.mps.gz [  28241.07]   1%  ETA: 2017-05-27 18:30:26  4 / 320
+            instances/rail507.pre.mps.gz [  28540.74]   1%  ETA: 2017-05-28 01:10:26  4 / 320
+            instances/rail507.pre.mps.gz [  28840.41]   1%  ETA: 2017-05-28 07:50:26  4 / 320
+            instances/rail507.pre.mps.gz [  29140.08]   1%  ETA: 2017-05-28 14:30:26  4 / 320
+            instances/rail507.pre.mps.gz [  29439.75]   1%  ETA: 2017-05-28 21:10:26  4 / 320
+            instances/rail507.pre.mps.gz [  29739.42]   1%  ETA: 2017-05-29 03:50:26  4 / 320
+            instances/rail507.pre.mps.gz [  30039.09]   1%  ETA: 2017-05-29 10:30:26  4 / 320
+            instances/rail507.pre.mps.gz [  30338.76]   1%  ETA: 2017-05-29 17:10:26  4 / 320
+            instances/rail507.pre.mps.gz [  30638.43]   1%  ETA: 2017-05-29 23:50:26  4 / 320
+            instances/rail507.pre.mps.gz [  30938.10]   1%  ETA: 2017-05-30 06:30:26  4 / 320
+            instances/rail507.pre.mps.gz [  31237.77]   1%  ETA: 2017-05-30 13:10:26  4 / 320
+            instances/rail507.pre.mps.gz [  31537.45]   1%  ETA: 2017-05-30 19:50:26  4 / 320
+            instances/rail507.pre.mps.gz [  31837.12]   1%  ETA: 2017-05-31 02:30:26  4 / 320
+            instances/rail507.pre.mps.gz [  32136.79]   1%  ETA: 2017-05-31 09:10:26  4 / 320
+            instances/rail507.pre.mps.gz [  32436.46]   1%  ETA: 2017-05-31 15:50:26  4 / 320
+            instances/rail507.pre.mps.gz [  32736.13]   1%  ETA: 2017-05-31 22:30:26  4 / 320
+            instances/rail507.pre.mps.gz [  33035.80]   2%  ETA: 2017-05-26 03:49:54  5 / 320
+            instances/rail507.pre.mps.gz [  33335.48]   2%  ETA: 2017-05-26 09:09:54  5 / 320
+            instances/rail507.pre.mps.gz [  33635.14]   2%  ETA: 2017-05-26 14:29:54  5 / 320
+            instances/rail507.pre.mps.gz [  33934.81]   2%  ETA: 2017-05-26 19:49:54  5 / 320
+            instances/rail507.pre.mps.gz [  34234.48]   2%  ETA: 2017-05-27 01:09:54  5 / 320
+            instances/rail507.pre.mps.gz [  34534.15]   2%  ETA: 2017-05-27 06:29:54  5 / 320
+            instances/rail507.pre.mps.gz [  34833.82]   2%  ETA: 2017-05-27 11:50:58  5 / 320
+            instances/rail507.pre.mps.gz [  35133.49]   2%  ETA: 2017-05-27 17:10:58  5 / 320
+            instances/rail507.pre.mps.gz [  35433.16]   2%  ETA: 2017-05-27 22:30:58  5 / 320
+            instances/rail507.pre.mps.gz [  35732.83]   2%  ETA: 2017-05-28 03:50:58  5 / 320
+            instances/rail507.pre.mps.gz [  36032.50]   2%  ETA: 2017-05-28 09:10:58  5 / 320
+            instances/rail507.pre.mps.gz [  36332.16]   2%  ETA: 2017-05-28 14:30:58  5 / 320
+            instances/rail507.pre.mps.gz [  36631.83]   2%  ETA: 2017-05-28 19:50:58  5 / 320
+            instances/rail507.pre.mps.gz [  36931.50]   2%  ETA: 2017-05-29 01:10:58  5 / 320
+            instances/rail507.pre.mps.gz [  37225.74]   2%  ETA: 2017-05-29 06:30:58  5 / 320
+            instances/rail507.pre.mps.gz [  37525.34]   2%  ETA: 2017-05-29 11:50:58  5 / 320
+            instances/rail507.pre.mps.gz [  37825.01]   2%  ETA: 2017-05-29 17:10:58  5 / 320
+            instances/rail507.pre.mps.gz [  38124.66]   2%  ETA: 2017-05-29 22:30:58  5 / 320
+            instances/rail507.pre.mps.gz [  38424.33]   2%  ETA: 2017-05-30 03:50:58  5 / 320
+            instances/rail507.pre.mps.gz [  38723.99]   2%  ETA: 2017-05-30 09:10:58  5 / 320
+            instances/rail507.pre.mps.gz [  39020.83]   2%  ETA: 2017-05-30 14:30:58  5 / 320
+            instances/rail507.pre.mps.gz [  39320.45]   2%  ETA: 2017-05-30 19:50:58  5 / 320
+            instances/rail507.pre.mps.gz [  39620.10]   2%  ETA: 2017-05-26 04:43:46  6 / 320
+            instances/rail507.pre.mps.gz [  39919.74]   2%  ETA: 2017-05-26 09:10:26  6 / 320
+            instances/rail507.pre.mps.gz [  40219.41]   2%  ETA: 2017-05-26 13:37:06  6 / 320
+            instances/rail507.pre.mps.gz [  40518.92]   2%  ETA: 2017-05-26 18:03:46  6 / 320
+            instances/rail507.pre.mps.gz [  40818.25]   2%  ETA: 2017-05-26 22:30:26  6 / 320
+            instances/rail507.pre.mps.gz [  41117.92]   2%  ETA: 2017-05-27 02:57:06  6 / 320
+            instances/rail507.pre.mps.gz [  41417.59]   2%  ETA: 2017-05-27 07:23:46  6 / 320
+            instances/rail507.pre.mps.gz [  41717.27]   2%  ETA: 2017-05-27 11:50:26  6 / 320
+            instances/rail507.pre.mps.gz [  42016.94]   2%  ETA: 2017-05-27 16:17:06  6 / 320
+            instances/rail507.pre.mps.gz [  42316.61]   2%  ETA: 2017-05-27 20:43:46  6 / 320
+            instances/rail507.pre.mps.gz [  42616.28]   2%  ETA: 2017-05-28 01:10:26  6 / 320
+            instances/rail507.pre.mps.gz [  42915.95]   2%  ETA: 2017-05-28 05:37:06  6 / 320
+            instances/rail507.pre.mps.gz [  43215.62]   2%  ETA: 2017-05-28 10:03:46  6 / 320
+            instances/rail507.pre.mps.gz [  43515.29]   2%  ETA: 2017-05-28 14:30:26  6 / 320
+            instances/rail507.pre.mps.gz [  43814.96]   2%  ETA: 2017-05-28 18:57:06  6 / 320
+            instances/rail507.pre.mps.gz [  44114.63]   2%  ETA: 2017-05-28 23:23:46  6 / 320
+            instances/rail507.pre.mps.gz [  44414.31]   2%  ETA: 2017-05-29 03:50:26  6 / 320
+            instances/rail507.pre.mps.gz [  44713.98]   2%  ETA: 2017-05-29 08:17:06  6 / 320
+            instances/rail507.pre.mps.gz [  45013.66]   2%  ETA: 2017-05-29 12:43:46  6 / 320
+            instances/rail507.pre.mps.gz [  45313.33]   2%  ETA: 2017-05-29 17:10:26  6 / 320
+            instances/rail507.pre.mps.gz [  45613.00]   2%  ETA: 2017-05-29 21:37:06  6 / 320
+            instances/rail507.pre.mps.gz [  45912.68]   2%  ETA: 2017-05-30 02:03:46  6 / 320
+            instances/rail507.pre.mps.gz [  46212.35]   2%  ETA: 2017-05-26 05:21:28  7 / 320
+            instances/rail507.pre.mps.gz [  46512.03]   2%  ETA: 2017-05-26 09:10:03  7 / 320
+            instances/rail507.pre.mps.gz [  46811.70]   2%  ETA: 2017-05-26 12:58:37  7 / 320
+            instances/rail507.pre.mps.gz [  47111.36]   2%  ETA: 2017-05-26 16:47:11  7 / 320
+            instances/rail507.pre.mps.gz [  47411.02]   2%  ETA: 2017-05-26 20:35:46  7 / 320
+            instances/rail507.pre.mps.gz [  47710.66]   2%  ETA: 2017-05-27 00:24:20  7 / 320
+            instances/rail507.pre.mps.gz [  48010.33]   2%  ETA: 2017-05-27 04:12:54  7 / 320
+            instances/rail507.pre.mps.gz [  48310.00]   2%  ETA: 2017-05-27 08:01:28  7 / 320
+            instances/rail507.pre.mps.gz [  48609.66]   2%  ETA: 2017-05-27 11:50:03  7 / 320
+            instances/rail507.pre.mps.gz [  48909.33]   2%  ETA: 2017-05-27 15:38:37  7 / 320
+            instances/rail507.pre.mps.gz [  49209.00]   2%  ETA: 2017-05-27 19:27:57  7 / 320
+            instances/rail507.pre.mps.gz [  49508.67]   2%  ETA: 2017-05-27 23:16:31  7 / 320
+            instances/rail507.pre.mps.gz [  49808.34]   2%  ETA: 2017-05-28 03:05:06  7 / 320
+            instances/rail507.pre.mps.gz [  50108.00]   2%  ETA: 2017-05-28 06:53:40  7 / 320
+            instances/rail507.pre.mps.gz [  50407.67]   2%  ETA: 2017-05-28 10:42:14  7 / 320
+            instances/rail507.pre.mps.gz [  50707.34]   2%  ETA: 2017-05-28 14:30:48  7 / 320
+            instances/rail507.pre.mps.gz [  51007.00]   2%  ETA: 2017-05-28 18:19:23  7 / 320
+            instances/rail507.pre.mps.gz [  51306.67]   2%  ETA: 2017-05-28 22:07:57  7 / 320
+            instances/rail507.pre.mps.gz [  51606.34]   2%  ETA: 2017-05-25 16:30:26  8 / 320
+            instances/rail507.pre.mps.gz [  51906.01]   2%  ETA: 2017-05-25 19:50:26  8 / 320
+            instances/rail507.pre.mps.gz [  52205.62]   2%  ETA: 2017-05-25 23:10:26  8 / 320
+            instances/rail507.pre.mps.gz [  52505.29]   2%  ETA: 2017-05-26 02:30:26  8 / 320
+            instances/rail507.pre.mps.gz [  52804.85]   2%  ETA: 2017-05-26 05:50:26  8 / 320
+            instances/rail507.pre.mps.gz [  53104.52]   2%  ETA: 2017-05-26 09:10:26  8 / 320
+            instances/rail507.pre.mps.gz [  53404.15]   2%  ETA: 2017-05-26 12:30:26  8 / 320
+            instances/rail507.pre.mps.gz [  53703.81]   2%  ETA: 2017-05-26 15:50:26  8 / 320
+            instances/rail507.pre.mps.gz [  54003.46]   2%  ETA: 2017-05-26 19:10:26  8 / 320
+            instances/rail507.pre.mps.gz [  54302.95]   2%  ETA: 2017-05-26 22:30:26  8 / 320
+            instances/rail507.pre.mps.gz [  54602.63]   2%  ETA: 2017-05-27 01:50:26  8 / 320
+            instances/rail507.pre.mps.gz [  54901.31]   2%  ETA: 2017-05-27 05:10:26  8 / 320
+            instances/rail507.pre.mps.gz [  55200.99]   2%  ETA: 2017-05-27 08:30:26  8 / 320
+            instances/rail507.pre.mps.gz [  55500.66]   2%  ETA: 2017-05-27 11:50:26  8 / 320
+            instances/rail507.pre.mps.gz [  55800.33]   2%  ETA: 2017-05-27 15:10:26  8 / 320
+            instances/rail507.pre.mps.gz [  56099.11]   2%  ETA: 2017-05-27 18:30:26  8 / 320
+            instances/rail507.pre.mps.gz [  56398.77]   2%  ETA: 2017-05-27 21:50:26  8 / 320
+            instances/rail507.pre.mps.gz [  56698.45]   2%  ETA: 2017-05-28 01:10:26  8 / 320
+            instances/rail507.pre.mps.gz [  56998.09]   2%  ETA: 2017-05-28 04:30:26  8 / 320
+            instances/rail507.pre.mps.gz [  57297.66]   2%  ETA: 2017-05-28 07:50:26  8 / 320
+            instances/rail507.pre.mps.gz [  57597.01]   3%  ETA: 2017-05-25 12:25:41  9 / 320
+            instances/rail507.pre.mps.gz [  57896.68]   3%  ETA: 2017-05-25 15:23:28  9 / 320
+            instances/rail507.pre.mps.gz [  58196.33]   3%  ETA: 2017-05-25 18:21:14  9 / 320
+            instances/rail507.pre.mps.gz [  58496.01]   3%  ETA: 2017-05-25 21:19:01  9 / 320
+            instances/rail507.pre.mps.gz [  58795.59]   3%  ETA: 2017-05-26 00:16:48  9 / 320
+            instances/rail507.pre.mps.gz [  59095.26]   3%  ETA: 2017-05-26 03:14:34  9 / 320
+            instances/rail507.pre.mps.gz [  59394.90]   3%  ETA: 2017-05-26 06:12:21  9 / 320
+            instances/rail507.pre.mps.gz [  59694.57]   3%  ETA: 2017-05-26 09:10:08  9 / 320
+            instances/rail507.pre.mps.gz [  59994.21]   3%  ETA: 2017-05-26 12:07:54  9 / 320
+            instances/rail507.pre.mps.gz [  60293.88]   3%  ETA: 2017-05-26 15:05:41  9 / 320
+            instances/rail507.pre.mps.gz [  60593.15]   3%  ETA: 2017-05-26 18:03:28  9 / 320
+            instances/rail507.pre.mps.gz [  60892.77]   3%  ETA: 2017-05-26 21:01:14  9 / 320
+            instances/rail507.pre.mps.gz [  61192.45]   3%  ETA: 2017-05-26 23:59:01  9 / 320
+            instances/rail507.pre.mps.gz [  61492.12]   3%  ETA: 2017-05-27 02:56:48  9 / 320
+            instances/rail507.pre.mps.gz [  61791.80]   3%  ETA: 2017-05-27 05:54:34  9 / 320
+            instances/rail507.pre.mps.gz [  62091.48]   3%  ETA: 2017-05-27 08:52:21  9 / 320
+            instances/rail507.pre.mps.gz [  62391.15]   3%  ETA: 2017-05-27 11:50:08  9 / 320
+            instances/rail507.pre.mps.gz [  62690.82]   3%  ETA: 2017-05-27 14:47:54  9 / 320
+            instances/rail507.pre.mps.gz [  62990.50]   3%  ETA: 2017-05-27 17:45:41  9 / 320
+            instances/rail507.pre.mps.gz [  63290.16]   3%  ETA: 2017-05-27 20:43:28  9 / 320
+            instances/rail507.pre.mps.gz [  63589.84]   3%  ETA: 2017-05-27 23:41:14  9 / 320
+            instances/rail507.pre.mps.gz [  63889.51]   3%  ETA: 2017-05-25 11:50:26  10 / 320
+            instances/rail507.pre.mps.gz [  64189.18]   3%  ETA: 2017-05-25 14:30:26  10 / 320
+            instances/rail507.pre.mps.gz [  64488.85]   3%  ETA: 2017-05-25 17:10:26  10 / 320
+            instances/rail507.pre.mps.gz [  64788.40]   3%  ETA: 2017-05-25 19:50:26  10 / 320
+            instances/rail507.pre.mps.gz [  65087.69]   3%  ETA: 2017-05-25 22:30:26  10 / 320
+            instances/rail507.pre.mps.gz [  65386.93]   3%  ETA: 2017-05-26 01:10:26  10 / 320
+            instances/rail507.pre.mps.gz [  65686.59]   3%  ETA: 2017-05-26 03:50:26  10 / 320
+            instances/rail507.pre.mps.gz [  65986.25]   3%  ETA: 2017-05-26 06:30:26  10 / 320
+            instances/rail507.pre.mps.gz [  66285.92]   3%  ETA: 2017-05-26 09:10:26  10 / 320
+            instances/rail507.pre.mps.gz [  66585.59]   3%  ETA: 2017-05-26 11:50:26  10 / 320
+            instances/rail507.pre.mps.gz [  66885.26]   3%  ETA: 2017-05-26 14:30:26  10 / 320
+            instances/rail507.pre.mps.gz [  67184.88]   3%  ETA: 2017-05-26 17:10:26  10 / 320
+            instances/rail507.pre.mps.gz [  67484.40]   3%  ETA: 2017-05-26 19:50:26  10 / 320
+            instances/rail507.pre.mps.gz [  67784.08]   3%  ETA: 2017-05-26 22:30:26  10 / 320
+            instances/rail507.pre.mps.gz [  68083.09]   3%  ETA: 2017-05-27 01:10:26  10 / 320
+            instances/rail507.pre.mps.gz [  68382.47]   3%  ETA: 2017-05-27 03:50:26  10 / 320
+            instances/rail507.pre.mps.gz [  68682.03]   3%  ETA: 2017-05-27 06:30:26  10 / 320
+            instances/rail507.pre.mps.gz [  68981.71]   3%  ETA: 2017-05-27 09:10:26  10 / 320
+            instances/rail507.pre.mps.gz [  69281.38]   3%  ETA: 2017-05-27 11:50:26  10 / 320
+            instances/rail507.pre.mps.gz [  69581.05]   3%  ETA: 2017-05-27 14:30:26  10 / 320
+            instances/rail507.pre.mps.gz [  69880.72]   3%  ETA: 2017-05-27 17:10:26  10 / 320
+            instances/rail507.pre.mps.gz [  70180.39]   3%  ETA: 2017-05-27 19:50:26  10 / 320
+            instances/rail507.pre.mps.gz [  70480.05]   3%  ETA: 2017-05-25 13:46:33  11 / 320
+            instances/rail507.pre.mps.gz [  70779.72]   3%  ETA: 2017-05-25 16:12:00  11 / 320
+            instances/rail507.pre.mps.gz [  71079.39]   3%  ETA: 2017-05-25 18:37:27  11 / 320
+            instances/rail507.pre.mps.gz [  71379.06]   3%  ETA: 2017-05-25 21:02:55  11 / 320
+            instances/rail507.pre.mps.gz [  71678.73]   3%  ETA: 2017-05-25 23:28:22  11 / 320
+            instances/rail507.pre.mps.gz [  71978.40]   3%  ETA: 2017-05-26 01:53:49  11 / 320
+            instances/rail507.pre.mps.gz [  72278.07]   3%  ETA: 2017-05-26 04:19:16  11 / 320
+            instances/rail507.pre.mps.gz [  72577.74]   3%  ETA: 2017-05-26 06:44:44  11 / 320
+            instances/rail507.pre.mps.gz [  72877.41]   3%  ETA: 2017-05-26 09:10:11  11 / 320
+            instances/rail507.pre.mps.gz [  73177.09]   3%  ETA: 2017-05-26 11:35:38  11 / 320
+            instances/rail507.pre.mps.gz [  73476.76]   3%  ETA: 2017-05-26 14:01:06  11 / 320
+            instances/rail507.pre.mps.gz [  73776.43]   3%  ETA: 2017-05-26 16:26:33  11 / 320
+            instances/rail507.pre.mps.gz [  74076.11]   3%  ETA: 2017-05-26 18:52:00  11 / 320
+            instances/rail507.pre.mps.gz [  74375.78]   3%  ETA: 2017-05-26 21:17:27  11 / 320
+            instances/rail507.pre.mps.gz [  74675.46]   3%  ETA: 2017-05-26 23:42:55  11 / 320
+            instances/rail507.pre.mps.gz [  74975.13]   3%  ETA: 2017-05-27 02:08:22  11 / 320
+            instances/rail507.pre.mps.gz [  75274.81]   3%  ETA: 2017-05-27 04:33:49  11 / 320
+            instances/rail507.pre.mps.gz [  75574.49]   3%  ETA: 2017-05-27 06:59:16  11 / 320
+            instances/rail507.pre.mps.gz [  75874.16]   3%  ETA: 2017-05-27 09:24:44  11 / 320
+            instances/rail507.pre.mps.gz [  76173.84]   3%  ETA: 2017-05-27 11:50:11  11 / 320
+            instances/rail507.pre.mps.gz [  76473.51]   3%  ETA: 2017-05-27 14:15:38  11 / 320
+            instances/rail507.pre.mps.gz [  76773.18]   4%  ETA: 2017-05-25 13:09:59  12 / 320
+            instances/rail507.pre.mps.gz [  77072.85]   4%  ETA: 2017-05-25 15:23:19  12 / 320
+            instances/rail507.pre.mps.gz [  77372.52]   4%  ETA: 2017-05-25 17:36:39  12 / 320
+            instances/rail507.pre.mps.gz [  77672.20]   4%  ETA: 2017-05-25 19:49:59  12 / 320
+            instances/rail507.pre.mps.gz [  77971.87]   4%  ETA: 2017-05-25 22:03:19  12 / 320
+            instances/rail507.pre.mps.gz [  78271.53]   4%  ETA: 2017-05-26 00:17:06  12 / 320
+            instances/rail507.pre.mps.gz [  78571.20]   4%  ETA: 2017-05-26 02:30:26  12 / 320
+            instances/rail507.pre.mps.gz [  78870.87]   4%  ETA: 2017-05-26 04:43:46  12 / 320
+            instances/rail507.pre.mps.gz [  79170.55]   4%  ETA: 2017-05-26 06:57:06  12 / 320
+            instances/rail507.pre.mps.gz [  79470.22]   4%  ETA: 2017-05-26 09:10:26  12 / 320
+            instances/rail507.pre.mps.gz [  79769.89]   4%  ETA: 2017-05-26 11:23:46  12 / 320
+            instances/rail507.pre.mps.gz [  80069.55]   4%  ETA: 2017-05-26 13:37:06  12 / 320
+            instances/rail507.pre.mps.gz [  80369.22]   4%  ETA: 2017-05-26 15:50:26  12 / 320
+            instances/rail507.pre.mps.gz [  80668.88]   4%  ETA: 2017-05-26 18:03:46  12 / 320
+            instances/rail507.pre.mps.gz [  80968.55]   4%  ETA: 2017-05-26 20:17:06  12 / 320
+            instances/rail507.pre.mps.gz [  81268.22]   4%  ETA: 2017-05-26 22:30:26  12 / 320
+            instances/rail507.pre.mps.gz [  81567.88]   4%  ETA: 2017-05-27 00:43:46  12 / 320
+            instances/rail507.pre.mps.gz [  81867.56]   4%  ETA: 2017-05-27 02:57:06  12 / 320
+            instances/rail507.pre.mps.gz [  82167.23]   4%  ETA: 2017-05-27 05:10:26  12 / 320
+            instances/rail507.pre.mps.gz [  82466.90]   4%  ETA: 2017-05-27 07:23:46  12 / 320
+            instances/rail507.pre.mps.gz [  82766.58]   4%  ETA: 2017-05-25 10:36:22  13 / 320
+            instances/rail507.pre.mps.gz [  83066.26]   4%  ETA: 2017-05-25 12:39:27  13 / 320
+            instances/rail507.pre.mps.gz [  83365.93]   4%  ETA: 2017-05-25 14:42:32  13 / 320
+            instances/rail507.pre.mps.gz [  83665.61]   4%  ETA: 2017-05-25 16:45:36  13 / 320
+            instances/rail507.pre.mps.gz [  83965.29]   4%  ETA: 2017-05-25 18:48:41  13 / 320
+            instances/rail507.pre.mps.gz [  84264.96]   4%  ETA: 2017-05-25 20:51:46  13 / 320
+            instances/rail507.pre.mps.gz [  84564.64]   4%  ETA: 2017-05-25 22:54:50  13 / 320
+            instances/rail507.pre.mps.gz [  84864.31]   4%  ETA: 2017-05-26 00:57:55  13 / 320
+            instances/rail507.pre.mps.gz [  85163.99]   4%  ETA: 2017-05-26 03:00:59  13 / 320
+            instances/rail507.pre.mps.gz [  85463.66]   4%  ETA: 2017-05-26 05:04:04  13 / 320
+            instances/rail507.pre.mps.gz [  85763.33]   4%  ETA: 2017-05-26 07:07:09  13 / 320
+            instances/rail507.pre.mps.gz [  86063.00]   4%  ETA: 2017-05-26 09:10:13  13 / 320

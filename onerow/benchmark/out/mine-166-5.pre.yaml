@@ -1,0 +1,28 @@
+input_file:
+  instances/mine-166-5.pre.mps.gz
+sol_value:
+  0: -821763677.673139
+  1: -804993763.908531
+  2: -802411146.827043
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    600
+  depth:
+    0: 400
+    1: 178
+    2: 11
+    3: 7
+    4: 2
+    5: 2
+timers:
+  1: 8.1888
+  2: 1069.4574
+cut_speed:
+  round_1: inf
+  round_2: inf
+mip_value:
+  -566396000.000000

@@ -1,0 +1,23 @@
+input_file:
+  instances/timtab1.pre.mps.gz
+sol_value:
+  0: 28694.000000
+  1: 205801.284255
+  2: 205801.284255
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    125
+  depth:
+    0: 125
+timers:
+  1: 0.0160
+  2: 0.0380
+cut_speed:
+  round_1: inf
+  round_2: inf
+mip_value:
+  764772.000000

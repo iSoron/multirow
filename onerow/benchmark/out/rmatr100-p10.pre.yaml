@@ -1,0 +1,23 @@
+input_file:
+  instances/rmatr100-p10.pre.mps.gz
+sol_value:
+  0: 360.593308
+  1: 361.737591
+  2: 361.737591
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    51
+  depth:
+    0: 51
+timers:
+  1: 0.6579
+  2: 21.5467
+cut_speed:
+  round_1: inf
+  round_2: inf
+mip_value:
+  423.000000

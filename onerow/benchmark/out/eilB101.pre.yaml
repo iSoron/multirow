@@ -1,0 +1,26 @@
+input_file:
+  instances/eilB101.pre.mps.gz
+sol_value:
+  0: 1075.247691
+  1: 1078.994157
+  2: 1079.063552
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    475
+  depth:
+    0: 89
+    1: 319
+    2: 53
+    3: 14
+timers:
+  1: 10.5324
+  2: 12191.1897
+cut_speed:
+  round_1: inf
+  round_2: inf
+mip_value:
+  1216.920000

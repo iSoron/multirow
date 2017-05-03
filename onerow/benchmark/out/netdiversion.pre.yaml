@@ -1,0 +1,24 @@
+input_file:
+  instances/netdiversion.pre.mps.gz
+sol_value:
+  0: 230.800000
+  1: 231.571429
+  2: 231.571429
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    143
+  depth:
+    0: 142
+    1: 1
+timers:
+  1: 60.4828
+  2: 3358.7364
+cut_speed:
+  round_1: inf
+  round_2: inf
+mip_value:
+  242.000000

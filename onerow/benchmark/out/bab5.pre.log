@@ -1,0 +1,65 @@
+               instances/bab5.pre.mps.gz [      0.00] Reading input file: instances/bab5.pre.mps.gz...
+               instances/bab5.pre.mps.gz [      0.23] Fetched 4665 rows, 24865 cols.
+               instances/bab5.pre.mps.gz [      0.23] Solving first relaxation...
+               instances/bab5.pre.mps.gz [     14.33] 	 -117062.158350 [optimal]					   
+               instances/bab5.pre.mps.gz [     14.33] Reading basis...
+               instances/bab5.pre.mps.gz [     16.10] Generating MIR cuts...
+               instances/bab5.pre.mps.gz [     16.10] Finding interesting rows...
+               instances/bab5.pre.mps.gz [     29.63] 	 318 rows found
+               instances/bab5.pre.mps.gz [     29.63] Starting timer 1...
+               instances/bab5.pre.mps.gz [     32.32] 	 -116262.630268 [optimal]					   
+               instances/bab5.pre.mps.gz [     40.82] Ending timer 1: 11.18s
+               instances/bab5.pre.mps.gz [     40.82] Added 124 violated cuts...
+               instances/bab5.pre.mps.gz [     41.11] 	 -115831.073600 [optimal]					   
+               instances/bab5.pre.mps.gz [     41.11] Generating wedge cuts...
+               instances/bab5.pre.mps.gz [     41.11] Starting timer 2...
+               instances/bab5.pre.mps.gz [    273.59]   3%  ETA: 2017-04-29 13:07:47  11 / 318
+               instances/bab5.pre.mps.gz [    475.18]   4%  ETA: 2017-04-29 15:08:15  12 / 318
+               instances/bab5.pre.mps.gz [    674.62]   4%  ETA: 2017-04-29 16:50:10  13 / 318
+               instances/bab5.pre.mps.gz [    879.55]   4%  ETA: 2017-04-29 18:17:32  14 / 318
+               instances/bab5.pre.mps.gz [   1082.57]   5%  ETA: 2017-04-29 19:33:15  15 / 318
+               instances/bab5.pre.mps.gz [   1289.04]   9%  ETA: 2017-04-29 16:12:12  29 / 318
+               instances/bab5.pre.mps.gz [   1498.92]   9%  ETA: 2017-04-29 16:54:15  30 / 318
+               instances/bab5.pre.mps.gz [   1708.93]  10%  ETA: 2017-04-29 17:33:34  31 / 318
+               instances/bab5.pre.mps.gz [   1904.07]  10%  ETA: 2017-04-29 18:10:26  32 / 318
+               instances/bab5.pre.mps.gz [   2103.17]  10%  ETA: 2017-04-29 18:45:04  33 / 318
+               instances/bab5.pre.mps.gz [   2314.82]  16%  ETA: 2017-04-29 16:33:03  50 / 318
+               instances/bab5.pre.mps.gz [   2520.42]  18%  ETA: 2017-04-29 16:23:57  56 / 318
+               instances/bab5.pre.mps.gz [   2711.95]  23%  ETA: 2017-04-29 15:30:20  72 / 318
+               instances/bab5.pre.mps.gz [   2905.58]  25%  ETA: 2017-04-29 15:18:03  81 / 318
+               instances/bab5.pre.mps.gz [   3150.08]  26%  ETA: 2017-04-29 15:30:39  83 / 318
+               instances/bab5.pre.mps.gz [   3350.06]  28%  ETA: 2017-04-29 15:25:58  90 / 318
+               instances/bab5.pre.mps.gz [   3556.46]  29%  ETA: 2017-04-29 15:37:06  92 / 318
+               instances/bab5.pre.mps.gz [   3768.12]  30%  ETA: 2017-04-29 15:44:34  95 / 318
+               instances/bab5.pre.mps.gz [   3968.62]  30%  ETA: 2017-04-29 15:57:59  96 / 318
+               instances/bab5.pre.mps.gz [   4167.04]  31%  ETA: 2017-04-29 16:11:08  97 / 318
+               instances/bab5.pre.mps.gz [   4376.33]  31%  ETA: 2017-04-29 16:17:12  100 / 318
+               instances/bab5.pre.mps.gz [   4574.01]  33%  ETA: 2017-04-29 16:13:18  106 / 318
+               instances/bab5.pre.mps.gz [   4777.66]  34%  ETA: 2017-04-29 16:18:48  109 / 318
+               instances/bab5.pre.mps.gz [   4977.43]  35%  ETA: 2017-04-29 16:24:00  112 / 318
+               instances/bab5.pre.mps.gz [   5176.95]  38%  ETA: 2017-04-29 16:14:32  120 / 318
+               instances/bab5.pre.mps.gz [   5380.59]  39%  ETA: 2017-04-29 16:19:23  123 / 318
+               instances/bab5.pre.mps.gz [   5575.29]  40%  ETA: 2017-04-29 16:18:40  128 / 318
+               instances/bab5.pre.mps.gz [   5803.31]  42%  ETA: 2017-04-29 16:20:33  132 / 318
+               instances/bab5.pre.mps.gz [   6102.98]  47%  ETA: 2017-04-29 15:48:38  151 / 318
+               instances/bab5.pre.mps.gz [   6402.63]  51%  ETA: 2017-04-29 15:37:43  162 / 318
+               instances/bab5.pre.mps.gz [   6702.29]  54%  ETA: 2017-04-29 15:28:11  173 / 318
+               instances/bab5.pre.mps.gz [   7001.96]  56%  ETA: 2017-04-29 15:29:07  178 / 318
+               instances/bab5.pre.mps.gz [   7301.63]  58%  ETA: 2017-04-29 15:28:26  184 / 318
+               instances/bab5.pre.mps.gz [   7601.29]  65%  ETA: 2017-04-29 15:03:10  208 / 318
+               instances/bab5.pre.mps.gz [   7900.96]  67%  ETA: 2017-04-29 15:04:32  213 / 318
+               instances/bab5.pre.mps.gz [   8200.63]  71%  ETA: 2017-04-29 14:56:32  226 / 318
+               instances/bab5.pre.mps.gz [   8500.25]  74%  ETA: 2017-04-29 14:53:36  235 / 318
+               instances/bab5.pre.mps.gz [   8799.93]  75%  ETA: 2017-04-29 14:58:12  237 / 318
+               instances/bab5.pre.mps.gz [   9099.41]  77%  ETA: 2017-04-29 14:55:20  246 / 318
+               instances/bab5.pre.mps.gz [   9398.95]  82%  ETA: 2017-04-29 14:47:53  260 / 318
+               instances/bab5.pre.mps.gz [   9698.52]  86%  ETA: 2017-04-29 14:40:19  275 / 318
+               instances/bab5.pre.mps.gz [   9998.16]  88%  ETA: 2017-04-29 14:40:55  281 / 318
+               instances/bab5.pre.mps.gz [  10297.83]  91%  ETA: 2017-04-29 14:39:50  289 / 318
+               instances/bab5.pre.mps.gz [  10597.50]  93%  ETA: 2017-04-29 14:40:25  295 / 318
+               instances/bab5.pre.mps.gz [  10897.16]  96%  ETA: 2017-04-29 14:38:37  304 / 318
+               instances/bab5.pre.mps.gz [  10935.15] Ending timer 2: 10894.04s
+               instances/bab5.pre.mps.gz [  10935.15] Added 0 violated cuts...
+               instances/bab5.pre.mps.gz [  10935.23] 	 -115831.073600 [optimal]					   
+               instances/bab5.pre.mps.gz [  10935.23] Writting stats: out/bab5.pre.yaml...
+               instances/bab5.pre.mps.gz [  10935.23] Done.

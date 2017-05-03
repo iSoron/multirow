@@ -1,7 +1,240 @@
-[      0.00] Reading input file: instances/30n20b8.pre.mps.gz...
-[      0.00] Fetched 406 rows, 5077 cols.
-[      0.00] Solving first relaxation...
-[      0.36]     93.274056 [optimal]                    
-[      0.36] Reading basis...
-                                                       [      0.41] Generating MIR cuts...
-[      0.41] Finding interesting rows...
+            instances/30n20b8.pre.mps.gz [      0.00] Reading input file: instances/30n20b8.pre.mps.gz...
+            instances/30n20b8.pre.mps.gz [      0.03] Fetched 406 rows, 5077 cols.
+            instances/30n20b8.pre.mps.gz [      0.03] Solving first relaxation...
+            instances/30n20b8.pre.mps.gz [      0.44] 	 93.274056 [optimal]					   
+            instances/30n20b8.pre.mps.gz [      0.44] Reading basis...
+            instances/30n20b8.pre.mps.gz [      0.51] Generating MIR cuts...
+            instances/30n20b8.pre.mps.gz [      0.51] Finding interesting rows...
+            instances/30n20b8.pre.mps.gz [     41.72] 	 227 rows found
+            instances/30n20b8.pre.mps.gz [     41.72] Starting timer 1...
+            instances/30n20b8.pre.mps.gz [    158.85] 	 123.104608 [optimal]					   
+            instances/30n20b8.pre.mps.gz [    181.16] Ending timer 1: 139.44s
+            instances/30n20b8.pre.mps.gz [    181.17] Added 108 violated cuts...
+            instances/30n20b8.pre.mps.gz [    181.48] 	 123.694896 [optimal]					   
+            instances/30n20b8.pre.mps.gz [    181.48] Generating wedge cuts...
+            instances/30n20b8.pre.mps.gz [    181.48] Starting timer 2...
+            instances/30n20b8.pre.mps.gz [    402.14]   0%  ETA: unknown
+            instances/30n20b8.pre.mps.gz [    602.98]   0%  ETA: 2017-05-02 08:00:32  1 / 227
+            instances/30n20b8.pre.mps.gz [    806.36]   0%  ETA: 2017-05-03 02:59:19  1 / 227
+            instances/30n20b8.pre.mps.gz [   1004.58]   1%  ETA: 2017-05-02 08:02:25  2 / 227
+            instances/30n20b8.pre.mps.gz [   1206.18]   1%  ETA: 2017-05-02 17:29:55  2 / 227
+            instances/30n20b8.pre.mps.gz [   1412.40]   1%  ETA: 2017-05-03 02:57:25  2 / 227
+            instances/30n20b8.pre.mps.gz [   1608.03]   1%  ETA: 2017-05-02 14:20:07  3 / 227
+            instances/30n20b8.pre.mps.gz [   1809.76]   2%  ETA: 2017-05-02 08:01:28  4 / 227
+            instances/30n20b8.pre.mps.gz [   2020.40]   2%  ETA: 2017-05-02 12:45:13  4 / 227
+            instances/30n20b8.pre.mps.gz [   2220.54]   2%  ETA: 2017-05-02 08:01:17  5 / 227
+            instances/30n20b8.pre.mps.gz [   2421.05]   2%  ETA: 2017-05-02 11:48:17  5 / 227
+            instances/30n20b8.pre.mps.gz [   2621.63]   2%  ETA: 2017-05-02 15:35:17  5 / 227
+            instances/30n20b8.pre.mps.gz [   2817.49]   3%  ETA: 2017-05-02 11:10:19  6 / 227
+            instances/30n20b8.pre.mps.gz [   3014.53]   3%  ETA: 2017-05-02 14:19:29  6 / 227
+            instances/30n20b8.pre.mps.gz [   3205.51]   3%  ETA: 2017-05-02 10:43:13  7 / 227
+            instances/30n20b8.pre.mps.gz [   3413.68]   3%  ETA: 2017-05-02 13:25:21  7 / 227
+            instances/30n20b8.pre.mps.gz [   3620.36]   4%  ETA: 2017-05-02 10:22:52  8 / 227
+            instances/30n20b8.pre.mps.gz [   3816.17]   4%  ETA: 2017-05-02 12:44:45  8 / 227
+            instances/30n20b8.pre.mps.gz [   4010.75]   4%  ETA: 2017-05-02 10:07:03  9 / 227
+            instances/30n20b8.pre.mps.gz [   4218.87]   4%  ETA: 2017-05-02 12:13:10  9 / 227
+            instances/30n20b8.pre.mps.gz [   4420.70]   4%  ETA: 2017-05-02 09:54:24  10 / 227
+            instances/30n20b8.pre.mps.gz [   4619.73]   4%  ETA: 2017-05-02 11:47:54  10 / 227
+            instances/30n20b8.pre.mps.gz [   4815.40]   5%  ETA: 2017-05-02 09:44:03  11 / 227
+            instances/30n20b8.pre.mps.gz [   5019.57]   5%  ETA: 2017-05-02 11:27:14  11 / 227
+            instances/30n20b8.pre.mps.gz [   5204.61]   5%  ETA: 2017-05-02 09:35:25  12 / 227
+            instances/30n20b8.pre.mps.gz [   5394.97]   5%  ETA: 2017-05-02 11:10:00  12 / 227
+            instances/30n20b8.pre.mps.gz [   5594.36]   5%  ETA: 2017-05-02 12:44:35  12 / 227
+            instances/30n20b8.pre.mps.gz [   5851.95]   6%  ETA: 2017-05-02 10:55:26  13 / 227
+            instances/30n20b8.pre.mps.gz [   6151.48]   6%  ETA: 2017-05-02 09:21:52  14 / 227
+            instances/30n20b8.pre.mps.gz [   6451.14]   7%  ETA: 2017-05-02 05:38:53  16 / 227
+            instances/30n20b8.pre.mps.gz [   6748.51]   7%  ETA: 2017-05-02 04:40:27  17 / 227
+            instances/30n20b8.pre.mps.gz [   7048.18]   8%  ETA: 2017-05-02 03:48:31  18 / 227
+            instances/30n20b8.pre.mps.gz [   7347.85]   8%  ETA: 2017-05-02 03:02:02  19 / 227
+            instances/30n20b8.pre.mps.gz [   7647.51]   9%  ETA: 2017-05-02 00:48:19  21 / 227
+            instances/30n20b8.pre.mps.gz [   7947.07]  10%  ETA: 2017-05-02 00:16:23  22 / 227
+            instances/30n20b8.pre.mps.gz [   8246.67]  10%  ETA: 2017-05-01 23:47:13  23 / 227
+            instances/30n20b8.pre.mps.gz [   8543.96]  11%  ETA: 2017-05-01 23:20:28  24 / 227
+            instances/30n20b8.pre.mps.gz [   8831.93]  11%  ETA: 2017-05-01 22:55:53  25 / 227
+            instances/30n20b8.pre.mps.gz [   9128.45]  11%  ETA: 2017-05-01 22:33:10  26 / 227
+            instances/30n20b8.pre.mps.gz [   9428.11]  12%  ETA: 2017-05-01 22:12:09  27 / 227
+            instances/30n20b8.pre.mps.gz [   9727.78]  12%  ETA: 2017-05-01 21:52:37  28 / 227
+            instances/30n20b8.pre.mps.gz [  10027.44]  13%  ETA: 2017-05-01 21:34:27  29 / 227
+            instances/30n20b8.pre.mps.gz [  10327.11]  13%  ETA: 2017-05-01 21:17:29  30 / 227
+            instances/30n20b8.pre.mps.gz [  10626.78]  14%  ETA: 2017-05-01 20:11:16  32 / 227
+            instances/30n20b8.pre.mps.gz [  10926.45]  15%  ETA: 2017-05-01 19:58:22  33 / 227
+            instances/30n20b8.pre.mps.gz [  11226.12]  15%  ETA: 2017-05-01 19:46:13  34 / 227
+            instances/30n20b8.pre.mps.gz [  11525.78]  16%  ETA: 2017-05-01 18:52:26  36 / 227
+            instances/30n20b8.pre.mps.gz [  11825.45]  16%  ETA: 2017-05-01 18:43:04  37 / 227
+            instances/30n20b8.pre.mps.gz [  12125.12]  17%  ETA: 2017-05-01 18:34:11  38 / 227
+            instances/30n20b8.pre.mps.gz [  12424.79]  17%  ETA: 2017-05-01 18:25:45  39 / 227
+            instances/30n20b8.pre.mps.gz [  12724.40]  18%  ETA: 2017-05-01 18:17:45  40 / 227
+            instances/30n20b8.pre.mps.gz [  13024.06]  18%  ETA: 2017-05-01 18:10:08  41 / 227
+            instances/30n20b8.pre.mps.gz [  13323.69]  19%  ETA: 2017-05-01 18:02:53  42 / 227
+            instances/30n20b8.pre.mps.gz [  13623.35]  19%  ETA: 2017-05-01 17:23:34  44 / 227
+            instances/30n20b8.pre.mps.gz [  13923.03]  20%  ETA: 2017-05-01 17:17:55  45 / 227
+            instances/30n20b8.pre.mps.gz [  14222.69]  20%  ETA: 2017-05-01 17:12:26  46 / 227
+            instances/30n20b8.pre.mps.gz [  14522.36]  21%  ETA: 2017-05-01 17:07:11  47 / 227
+            instances/30n20b8.pre.mps.gz [  14822.03]  21%  ETA: 2017-05-01 17:02:08  48 / 227
+            instances/30n20b8.pre.mps.gz [  15121.71]  22%  ETA: 2017-05-01 16:57:19  49 / 227
+            instances/30n20b8.pre.mps.gz [  15421.38]  22%  ETA: 2017-05-01 16:52:41  50 / 227
+            instances/30n20b8.pre.mps.gz [  15721.04]  22%  ETA: 2017-05-01 16:48:13  51 / 227
+            instances/30n20b8.pre.mps.gz [  16020.71]  23%  ETA: 2017-05-01 16:43:56  52 / 227
+            instances/30n20b8.pre.mps.gz [  16320.38]  23%  ETA: 2017-05-01 16:39:49  53 / 227
+            instances/30n20b8.pre.mps.gz [  16620.05]  24%  ETA: 2017-05-01 16:35:51  54 / 227
+            instances/30n20b8.pre.mps.gz [  16919.69]  24%  ETA: 2017-05-01 16:32:02  55 / 227
+            instances/30n20b8.pre.mps.gz [  17219.19]  25%  ETA: 2017-05-01 16:28:20  56 / 227
+            instances/30n20b8.pre.mps.gz [  17518.60]  25%  ETA: 2017-05-01 16:24:47  57 / 227
+            instances/30n20b8.pre.mps.gz [  17818.27]  26%  ETA: 2017-05-01 16:21:21  58 / 227
+            instances/30n20b8.pre.mps.gz [  18117.94]  26%  ETA: 2017-05-01 15:55:54  60 / 227
+            instances/30n20b8.pre.mps.gz [  18417.61]  27%  ETA: 2017-05-01 15:53:06  61 / 227
+            instances/30n20b8.pre.mps.gz [  18717.12]  27%  ETA: 2017-05-01 15:50:24  62 / 227
+            instances/30n20b8.pre.mps.gz [  19016.79]  28%  ETA: 2017-05-01 15:47:47  63 / 227
+            instances/30n20b8.pre.mps.gz [  19316.46]  28%  ETA: 2017-05-01 15:45:15  64 / 227
+            instances/30n20b8.pre.mps.gz [  19616.12]  29%  ETA: 2017-05-01 15:42:48  65 / 227
+            instances/30n20b8.pre.mps.gz [  19915.78]  29%  ETA: 2017-05-01 15:40:25  66 / 227
+            instances/30n20b8.pre.mps.gz [  20215.31]  30%  ETA: 2017-05-01 15:38:06  67 / 227
+            instances/30n20b8.pre.mps.gz [  20514.98]  30%  ETA: 2017-05-01 15:35:51  68 / 227
+            instances/30n20b8.pre.mps.gz [  20814.64]  30%  ETA: 2017-05-01 15:33:41  69 / 227
+            instances/30n20b8.pre.mps.gz [  21114.31]  31%  ETA: 2017-05-01 15:31:34  70 / 227
+            instances/30n20b8.pre.mps.gz [  21413.96]  31%  ETA: 2017-05-01 15:29:30  71 / 227
+            instances/30n20b8.pre.mps.gz [  21713.64]  32%  ETA: 2017-05-01 15:27:30  72 / 227
+            instances/30n20b8.pre.mps.gz [  22013.31]  32%  ETA: 2017-05-01 15:25:34  73 / 227
+            instances/30n20b8.pre.mps.gz [  22312.98]  33%  ETA: 2017-05-01 15:23:40  74 / 227
+            instances/30n20b8.pre.mps.gz [  22612.65]  33%  ETA: 2017-05-01 15:21:50  75 / 227
+            instances/30n20b8.pre.mps.gz [  22912.32]  33%  ETA: 2017-05-01 15:20:02  76 / 227
+            instances/30n20b8.pre.mps.gz [  23211.99]  34%  ETA: 2017-05-01 15:18:17  77 / 227
+            instances/30n20b8.pre.mps.gz [  23511.66]  34%  ETA: 2017-05-01 15:16:35  78 / 227
+            instances/30n20b8.pre.mps.gz [  23811.32]  35%  ETA: 2017-05-01 15:14:55  79 / 227
+            instances/30n20b8.pre.mps.gz [  24111.00]  35%  ETA: 2017-05-01 15:13:18  80 / 227
+            instances/30n20b8.pre.mps.gz [  24410.67]  36%  ETA: 2017-05-01 15:11:44  81 / 227
+            instances/30n20b8.pre.mps.gz [  24710.34]  36%  ETA: 2017-05-01 15:10:11  82 / 227
+            instances/30n20b8.pre.mps.gz [  25010.02]  37%  ETA: 2017-05-01 15:08:41  83 / 227
+            instances/30n20b8.pre.mps.gz [  25309.69]  37%  ETA: 2017-05-01 15:07:13  84 / 227
+            instances/30n20b8.pre.mps.gz [  25609.37]  38%  ETA: 2017-05-01 14:51:12  86 / 227
+            instances/30n20b8.pre.mps.gz [  25904.68]  38%  ETA: 2017-05-01 14:49:59  87 / 227
+            instances/30n20b8.pre.mps.gz [  26204.19]  39%  ETA: 2017-05-01 14:48:48  88 / 227
+            instances/30n20b8.pre.mps.gz [  26503.85]  39%  ETA: 2017-05-01 14:47:38  89 / 227
+            instances/30n20b8.pre.mps.gz [  26803.39]  40%  ETA: 2017-05-01 14:46:30  90 / 227
+            instances/30n20b8.pre.mps.gz [  27103.05]  40%  ETA: 2017-05-01 14:45:23  91 / 227
+            instances/30n20b8.pre.mps.gz [  27402.72]  41%  ETA: 2017-05-01 14:44:18  92 / 227
+            instances/30n20b8.pre.mps.gz [  27702.39]  41%  ETA: 2017-05-01 14:43:17  93 / 227
+            instances/30n20b8.pre.mps.gz [  28002.06]  41%  ETA: 2017-05-01 14:42:14  94 / 227
+            instances/30n20b8.pre.mps.gz [  28301.73]  42%  ETA: 2017-05-01 14:41:13  95 / 227
+            instances/30n20b8.pre.mps.gz [  28601.40]  42%  ETA: 2017-05-01 14:40:14  96 / 227
+            instances/30n20b8.pre.mps.gz [  28901.07]  43%  ETA: 2017-05-01 14:39:15  97 / 227
+            instances/30n20b8.pre.mps.gz [  29200.74]  44%  ETA: 2017-05-01 14:25:54  99 / 227
+            instances/30n20b8.pre.mps.gz [  29500.41]  44%  ETA: 2017-05-01 14:25:05  100 / 227
+            instances/30n20b8.pre.mps.gz [  29800.08]  44%  ETA: 2017-05-01 14:24:18  101 / 227
+            instances/30n20b8.pre.mps.gz [  30099.75]  45%  ETA: 2017-05-01 14:23:32  102 / 227
+            instances/30n20b8.pre.mps.gz [  30399.42]  45%  ETA: 2017-05-01 14:22:46  103 / 227
+            instances/30n20b8.pre.mps.gz [  30699.09]  45%  ETA: 2017-05-01 14:33:47  103 / 227
+            instances/30n20b8.pre.mps.gz [  30998.76]  47%  ETA: 2017-05-01 14:09:53  106 / 227
+            instances/30n20b8.pre.mps.gz [  31298.43]  47%  ETA: 2017-05-01 14:09:17  107 / 227
+            instances/30n20b8.pre.mps.gz [  31598.10]  48%  ETA: 2017-05-01 14:08:41  108 / 227
+            instances/30n20b8.pre.mps.gz [  31897.77]  48%  ETA: 2017-05-01 14:08:06  109 / 227
+            instances/30n20b8.pre.mps.gz [  32197.45]  49%  ETA: 2017-05-01 13:56:45  111 / 227
+            instances/30n20b8.pre.mps.gz [  32497.11]  49%  ETA: 2017-05-01 13:56:18  112 / 227
+            instances/30n20b8.pre.mps.gz [  32796.79]  50%  ETA: 2017-05-01 13:55:51  113 / 227
+            instances/30n20b8.pre.mps.gz [  33096.46]  50%  ETA: 2017-05-01 13:55:24  114 / 227
+            instances/30n20b8.pre.mps.gz [  33396.13]  51%  ETA: 2017-05-01 13:54:58  115 / 227
+            instances/30n20b8.pre.mps.gz [  33695.80]  52%  ETA: 2017-05-01 13:44:26  117 / 227
+            instances/30n20b8.pre.mps.gz [  33995.47]  52%  ETA: 2017-05-01 13:44:06  118 / 227
+            instances/30n20b8.pre.mps.gz [  34295.01]  52%  ETA: 2017-05-01 13:43:46  119 / 227
+            instances/30n20b8.pre.mps.gz [  34594.67]  53%  ETA: 2017-05-01 13:43:27  120 / 227
+            instances/30n20b8.pre.mps.gz [  34894.34]  53%  ETA: 2017-05-01 13:43:08  121 / 227
+            instances/30n20b8.pre.mps.gz [  35194.02]  54%  ETA: 2017-05-01 13:33:18  123 / 227
+            instances/30n20b8.pre.mps.gz [  35493.69]  55%  ETA: 2017-05-01 13:33:05  124 / 227
+            instances/30n20b8.pre.mps.gz [  35793.36]  55%  ETA: 2017-05-01 13:32:51  125 / 227
+            instances/30n20b8.pre.mps.gz [  36093.03]  56%  ETA: 2017-05-01 13:32:38  126 / 227
+            instances/30n20b8.pre.mps.gz [  36392.71]  56%  ETA: 2017-05-01 13:32:26  127 / 227
+            instances/30n20b8.pre.mps.gz [  36692.38]  56%  ETA: 2017-05-01 13:32:13  128 / 227
+            instances/30n20b8.pre.mps.gz [  36992.05]  57%  ETA: 2017-05-01 13:23:04  130 / 227
+            instances/30n20b8.pre.mps.gz [  37291.72]  58%  ETA: 2017-05-01 13:22:56  131 / 227
+            instances/30n20b8.pre.mps.gz [  37591.40]  58%  ETA: 2017-05-01 13:22:48  132 / 227
+            instances/30n20b8.pre.mps.gz [  37891.07]  59%  ETA: 2017-05-01 13:22:41  133 / 227
+            instances/30n20b8.pre.mps.gz [  38190.72]  59%  ETA: 2017-05-01 13:22:33  134 / 227
+            instances/30n20b8.pre.mps.gz [  38490.40]  60%  ETA: 2017-05-01 13:13:57  136 / 227
+            instances/30n20b8.pre.mps.gz [  38790.08]  60%  ETA: 2017-05-01 13:13:54  137 / 227
+            instances/30n20b8.pre.mps.gz [  39089.75]  61%  ETA: 2017-05-01 13:13:50  138 / 227
+            instances/30n20b8.pre.mps.gz [  39389.42]  61%  ETA: 2017-05-01 13:13:46  139 / 227
+            instances/30n20b8.pre.mps.gz [  39689.08]  62%  ETA: 2017-05-01 13:13:43  140 / 227
+            instances/30n20b8.pre.mps.gz [  39988.76]  62%  ETA: 2017-05-01 13:13:39  141 / 227
+            instances/30n20b8.pre.mps.gz [  40288.43]  63%  ETA: 2017-05-01 13:13:36  142 / 227
+            instances/30n20b8.pre.mps.gz [  40588.05]  63%  ETA: 2017-05-01 13:05:36  144 / 227
+            instances/30n20b8.pre.mps.gz [  40887.73]  63%  ETA: 2017-05-01 13:13:29  144 / 227
+            instances/30n20b8.pre.mps.gz [  41187.40]  64%  ETA: 2017-05-01 13:05:36  146 / 227
+            instances/30n20b8.pre.mps.gz [  41487.07]  65%  ETA: 2017-05-01 13:05:38  147 / 227
+            instances/30n20b8.pre.mps.gz [  41786.74]  65%  ETA: 2017-05-01 13:05:38  148 / 227
+            instances/30n20b8.pre.mps.gz [  42086.42]  66%  ETA: 2017-05-01 13:05:38  149 / 227
+            instances/30n20b8.pre.mps.gz [  42385.97]  66%  ETA: 2017-05-01 13:05:38  150 / 227
+            instances/30n20b8.pre.mps.gz [  42685.38]  67%  ETA: 2017-05-01 13:05:38  151 / 227
+            instances/30n20b8.pre.mps.gz [  42985.04]  67%  ETA: 2017-05-01 13:05:37  152 / 227
+            instances/30n20b8.pre.mps.gz [  43284.71]  67%  ETA: 2017-05-01 13:05:37  153 / 227
+            instances/30n20b8.pre.mps.gz [  43584.38]  68%  ETA: 2017-05-01 13:05:37  154 / 227
+            instances/30n20b8.pre.mps.gz [  43884.05]  68%  ETA: 2017-05-01 13:05:37  155 / 227
+            instances/30n20b8.pre.mps.gz [  44183.73]  69%  ETA: 2017-05-01 12:58:24  157 / 227
+            instances/30n20b8.pre.mps.gz [  44483.40]  70%  ETA: 2017-05-01 12:58:26  158 / 227
+            instances/30n20b8.pre.mps.gz [  44783.05]  70%  ETA: 2017-05-01 12:58:29  159 / 227
+            instances/30n20b8.pre.mps.gz [  45082.72]  70%  ETA: 2017-05-01 12:58:32  160 / 227
+            instances/30n20b8.pre.mps.gz [  45382.39]  71%  ETA: 2017-05-01 12:58:34  161 / 227
+            instances/30n20b8.pre.mps.gz [  45682.07]  71%  ETA: 2017-05-01 12:58:37  162 / 227
+            instances/30n20b8.pre.mps.gz [  45981.74]  72%  ETA: 2017-05-01 12:58:39  163 / 227
+            instances/30n20b8.pre.mps.gz [  46281.41]  72%  ETA: 2017-05-01 12:58:42  164 / 227
+            instances/30n20b8.pre.mps.gz [  46581.08]  73%  ETA: 2017-05-01 12:51:56  166 / 227
+            instances/30n20b8.pre.mps.gz [  46880.76]  74%  ETA: 2017-05-01 12:52:01  167 / 227
+            instances/30n20b8.pre.mps.gz [  47180.43]  74%  ETA: 2017-05-01 12:52:06  168 / 227
+            instances/30n20b8.pre.mps.gz [  47480.10]  75%  ETA: 2017-05-01 12:45:35  170 / 227
+            instances/30n20b8.pre.mps.gz [  47779.77]  75%  ETA: 2017-05-01 12:45:42  171 / 227
+            instances/30n20b8.pre.mps.gz [  48079.45]  76%  ETA: 2017-05-01 12:45:49  172 / 227
+            instances/30n20b8.pre.mps.gz [  48379.12]  76%  ETA: 2017-05-01 12:45:56  173 / 227
+            instances/30n20b8.pre.mps.gz [  48678.79]  77%  ETA: 2017-05-01 12:46:03  174 / 227
+            instances/30n20b8.pre.mps.gz [  48978.46]  77%  ETA: 2017-05-01 12:46:09  175 / 227
+            instances/30n20b8.pre.mps.gz [  49278.13]  78%  ETA: 2017-05-01 12:39:58  177 / 227
+            instances/30n20b8.pre.mps.gz [  49577.81]  78%  ETA: 2017-05-01 12:40:06  178 / 227
+            instances/30n20b8.pre.mps.gz [  49877.48]  79%  ETA: 2017-05-01 12:40:15  179 / 227
+            instances/30n20b8.pre.mps.gz [  50177.16]  79%  ETA: 2017-05-01 12:40:23  180 / 227
+            instances/30n20b8.pre.mps.gz [  50476.83]  80%  ETA: 2017-05-01 12:40:32  181 / 227
+            instances/30n20b8.pre.mps.gz [  50776.51]  81%  ETA: 2017-05-01 12:34:36  183 / 227
+            instances/30n20b8.pre.mps.gz [  51076.18]  81%  ETA: 2017-05-01 12:34:46  184 / 227
+            instances/30n20b8.pre.mps.gz [  51375.85]  81%  ETA: 2017-05-01 12:34:56  185 / 227
+            instances/30n20b8.pre.mps.gz [  51675.53]  82%  ETA: 2017-05-01 12:35:06  186 / 227
+            instances/30n20b8.pre.mps.gz [  51975.20]  82%  ETA: 2017-05-01 12:35:16  187 / 227
+            instances/30n20b8.pre.mps.gz [  52274.88]  83%  ETA: 2017-05-01 12:29:34  189 / 227
+            instances/30n20b8.pre.mps.gz [  52574.55]  84%  ETA: 2017-05-01 12:29:46  190 / 227
+            instances/30n20b8.pre.mps.gz [  52874.22]  84%  ETA: 2017-05-01 12:29:57  191 / 227
+            instances/30n20b8.pre.mps.gz [  53173.89]  85%  ETA: 2017-05-01 12:30:08  192 / 227
+            instances/30n20b8.pre.mps.gz [  53473.56]  85%  ETA: 2017-05-01 12:36:03  192 / 227
+            instances/30n20b8.pre.mps.gz [  53773.23]  85%  ETA: 2017-05-01 12:36:12  193 / 227
+            instances/30n20b8.pre.mps.gz [  54072.90]  85%  ETA: 2017-05-01 12:36:21  194 / 227
+            instances/30n20b8.pre.mps.gz [  54372.58]  86%  ETA: 2017-05-01 12:30:51  196 / 227
+            instances/30n20b8.pre.mps.gz [  54672.25]  86%  ETA: 2017-05-01 12:36:39  196 / 227
+            instances/30n20b8.pre.mps.gz [  54971.92]  87%  ETA: 2017-05-01 12:36:49  197 / 227
+            instances/30n20b8.pre.mps.gz [  55271.59]  88%  ETA: 2017-05-01 12:31:24  199 / 227
+            instances/30n20b8.pre.mps.gz [  55571.26]  88%  ETA: 2017-05-01 12:31:34  200 / 227
+            instances/30n20b8.pre.mps.gz [  55870.93]  89%  ETA: 2017-05-01 12:31:44  201 / 227
+            instances/30n20b8.pre.mps.gz [  56170.60]  89%  ETA: 2017-05-01 12:31:54  202 / 227
+            instances/30n20b8.pre.mps.gz [  56470.27]  89%  ETA: 2017-05-01 12:32:04  203 / 227
+            instances/30n20b8.pre.mps.gz [  56769.95]  90%  ETA: 2017-05-01 12:32:14  204 / 227
+            instances/30n20b8.pre.mps.gz [  57069.62]  90%  ETA: 2017-05-01 12:32:24  205 / 227
+            instances/30n20b8.pre.mps.gz [  57369.29]  91%  ETA: 2017-05-01 12:32:34  206 / 227
+            instances/30n20b8.pre.mps.gz [  57668.97]  91%  ETA: 2017-05-01 12:32:43  207 / 227
+            instances/30n20b8.pre.mps.gz [  57968.64]  92%  ETA: 2017-05-01 12:32:53  208 / 227
+            instances/30n20b8.pre.mps.gz [  58268.31]  92%  ETA: 2017-05-01 12:33:02  209 / 227
+            instances/30n20b8.pre.mps.gz [  58567.98]  93%  ETA: 2017-05-01 12:33:11  210 / 227
+            instances/30n20b8.pre.mps.gz [  58867.64]  93%  ETA: 2017-05-01 12:33:20  211 / 227
+            instances/30n20b8.pre.mps.gz [  59167.19]  93%  ETA: 2017-05-01 12:33:29  212 / 227
+            instances/30n20b8.pre.mps.gz [  59466.76]  93%  ETA: 2017-05-01 12:38:51  212 / 227
+            instances/30n20b8.pre.mps.gz [  59766.27]  94%  ETA: 2017-05-01 12:33:47  214 / 227
+            instances/30n20b8.pre.mps.gz [  60065.79]  94%  ETA: 2017-05-01 12:39:06  214 / 227
+            instances/30n20b8.pre.mps.gz [  60365.47]  95%  ETA: 2017-05-01 12:39:13  215 / 227
+            instances/30n20b8.pre.mps.gz [  60665.14]  95%  ETA: 2017-05-01 12:39:20  216 / 227
+            instances/30n20b8.pre.mps.gz [  60964.81]  96%  ETA: 2017-05-01 12:39:28  217 / 227
+            instances/30n20b8.pre.mps.gz [  61264.48]  96%  ETA: 2017-05-01 12:39:35  218 / 227
+            instances/30n20b8.pre.mps.gz [  61564.16]  96%  ETA: 2017-05-01 12:39:42  219 / 227
+            instances/30n20b8.pre.mps.gz [  61863.83]  97%  ETA: 2017-05-01 12:39:49  220 / 227
+            instances/30n20b8.pre.mps.gz [  62163.50]  97%  ETA: 2017-05-01 12:39:56  221 / 227
+            instances/30n20b8.pre.mps.gz [  62463.18]  98%  ETA: 2017-05-01 12:35:04  223 / 227
+            instances/30n20b8.pre.mps.gz [  62762.81]  99%  ETA: 2017-05-01 12:35:12  224 / 227
+            instances/30n20b8.pre.mps.gz [  63062.42]  99%  ETA: 2017-05-01 12:35:21  225 / 227
+            instances/30n20b8.pre.mps.gz [  63362.09] 100%  ETA: 2017-05-01 12:35:29  226 / 227
+            instances/30n20b8.pre.mps.gz [  63574.06] Ending timer 2: 63392.58s
+            instances/30n20b8.pre.mps.gz [  63574.06] Added 0 violated cuts...
+            instances/30n20b8.pre.mps.gz [  63574.13] 	 123.694896 [optimal]					   
+            instances/30n20b8.pre.mps.gz [  63574.13] Writting stats: out/30n20b8.pre.yaml...
+            instances/30n20b8.pre.mps.gz [  63574.13] Done.

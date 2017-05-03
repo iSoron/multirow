@@ -1,0 +1,23 @@
+input_file:
+  instances/pigeon-10.pre.mps.gz
+sol_value:
+  0: -10000.000000
+  1: -10000.000000
+  2: -10000.000000
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    106
+  depth:
+    0: 106
+timers:
+  1: 0.0340
+  2: 0.7499
+cut_speed:
+  round_1: inf
+  round_2: inf
+mip_value:
+  -9000.000000

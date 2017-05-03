@@ -39,7 +39,6 @@ else
     end
 
     w_improv = (wedges_opt-mir_opt) / (mip_opt-mir_opt)
-
-    # improvement
-    print (number_format + "\n") % (100 * w_improv.abs)
+    print (number_format ) % (100 * w_improv.abs)
+    print (int_format + "\n") % yaml['timers'][2]
 end

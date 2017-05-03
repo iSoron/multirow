@@ -1,0 +1,199 @@
+             instances/mspp16.pre.mps.gz [      0.00] Reading input file: instances/mspp16.pre.mps.gz...
+             instances/mspp16.pre.mps.gz [     24.42] Fetched 524588 rows, 528623 cols.
+             instances/mspp16.pre.mps.gz [     24.42] Solving first relaxation...
+             instances/mspp16.pre.mps.gz [     47.31] 	 341.000000 [optimal]					   
+             instances/mspp16.pre.mps.gz [     47.32] Reading basis...
+             instances/mspp16.pre.mps.gz [    272.93]   0%  ETA: 2017-05-01 18:31:22  1794 / 524588
+             instances/mspp16.pre.mps.gz [    477.89]   1%  ETA: 2017-05-01 19:42:18  3422 / 524588
+             instances/mspp16.pre.mps.gz [    680.19]   1%  ETA: 2017-05-01 20:10:54  5039 / 524588
+             instances/mspp16.pre.mps.gz [    876.14]   1%  ETA: 2017-05-01 20:52:20  6545 / 524588
+             instances/mspp16.pre.mps.gz [   1078.30]   2%  ETA: 2017-05-01 21:34:12  7973 / 524588
+             instances/mspp16.pre.mps.gz [   1276.09]   2%  ETA: 2017-05-01 22:26:05  9275 / 524588
+             instances/mspp16.pre.mps.gz [   1469.66]   2%  ETA: 2017-05-01 23:14:07  10523 / 524588
+             instances/mspp16.pre.mps.gz [   1677.55]   2%  ETA: 2017-05-01 23:46:13  11809 / 524588
+             instances/mspp16.pre.mps.gz [   1870.73]   2%  ETA: 2017-05-02 00:24:46  13003 / 524588
+             instances/mspp16.pre.mps.gz [   2071.14]   3%  ETA: 2017-05-02 00:56:50  14197 / 524588
+             instances/mspp16.pre.mps.gz [   2270.47]   3%  ETA: 2017-05-02 01:26:15  15372 / 524588
+             instances/mspp16.pre.mps.gz [   2464.58]   3%  ETA: 2017-05-02 01:53:54  16526 / 524588
+             instances/mspp16.pre.mps.gz [   2669.14]   3%  ETA: 2017-05-02 02:16:38  17692 / 524588
+             instances/mspp16.pre.mps.gz [   2870.61]   4%  ETA: 2017-05-02 02:26:48  18953 / 524588
+             instances/mspp16.pre.mps.gz [   3055.56]   4%  ETA: 2017-05-02 02:20:58  20368 / 524588
+             instances/mspp16.pre.mps.gz [   3260.33]   4%  ETA: 2017-05-02 01:49:03  22091 / 524588
+             instances/mspp16.pre.mps.gz [   3476.23]   5%  ETA: 2017-05-02 01:20:43  23827 / 524588
+             instances/mspp16.pre.mps.gz [   3757.01]   5%  ETA: 2017-05-02 00:04:45  26296 / 524588
+             instances/mspp16.pre.mps.gz [   3953.35]   5%  ETA: 2017-05-02 00:04:10  27766 / 524588
+             instances/mspp16.pre.mps.gz [   4155.62]   6%  ETA: 2017-05-02 00:01:11  29276 / 524588
+             instances/mspp16.pre.mps.gz [   4346.27]   6%  ETA: 2017-05-02 00:04:16  30687 / 524588
+             instances/mspp16.pre.mps.gz [   4564.33]   6%  ETA: 2017-05-01 23:56:03  32296 / 524588
+             instances/mspp16.pre.mps.gz [   4765.41]   6%  ETA: 2017-05-01 23:50:40  33866 / 524588
+             instances/mspp16.pre.mps.gz [   4967.64]   7%  ETA: 2017-05-01 23:45:07  35449 / 524588
+             instances/mspp16.pre.mps.gz [   5165.91]   7%  ETA: 2017-05-01 23:47:40  36873 / 524588
+             instances/mspp16.pre.mps.gz [   5375.61]   7%  ETA: 2017-05-01 23:43:47  38432 / 524588
+             instances/mspp16.pre.mps.gz [   5602.67]   8%  ETA: 2017-05-01 23:39:18  40011 / 524588
+             instances/mspp16.pre.mps.gz [   5826.67]   8%  ETA: 2017-05-01 23:20:06  41948 / 524588
+             instances/mspp16.pre.mps.gz [   6126.34]   9%  ETA: 2017-05-01 22:05:05  45391 / 524588
+             instances/mspp16.pre.mps.gz [   6425.63]   9%  ETA: 2017-05-01 21:08:26  48599 / 524588
+             instances/mspp16.pre.mps.gz [   6723.13]  10%  ETA: 2017-05-01 20:23:42  51646 / 524588
+             instances/mspp16.pre.mps.gz [   7022.79]  11%  ETA: 2017-05-01 19:31:49  55129 / 524588
+             instances/mspp16.pre.mps.gz [   7322.43]  11%  ETA: 2017-05-01 18:55:10  58254 / 524588
+             instances/mspp16.pre.mps.gz [   7622.04]  12%  ETA: 2017-05-01 18:27:26  61161 / 524588
+             instances/mspp16.pre.mps.gz [   7921.69]  12%  ETA: 2017-05-01 17:55:53  64352 / 524588
+             instances/mspp16.pre.mps.gz [   8221.36]  13%  ETA: 2017-05-01 17:21:24  67830 / 524588
+             instances/mspp16.pre.mps.gz [   8517.97]  14%  ETA: 2017-05-01 16:54:25  71092 / 524588
+             instances/mspp16.pre.mps.gz [   8817.64]  14%  ETA: 2017-05-01 16:24:31  74649 / 524588
+             instances/mspp16.pre.mps.gz [   9100.17]  15%  ETA: 2017-05-01 16:12:13  77326 / 524588
+             instances/mspp16.pre.mps.gz [   9399.74]  15%  ETA: 2017-05-01 15:59:04  80105 / 524588
+             instances/mspp16.pre.mps.gz [   9699.39]  16%  ETA: 2017-05-01 15:45:29  82968 / 524588
+             instances/mspp16.pre.mps.gz [   9999.05]  16%  ETA: 2017-05-01 15:29:01  86085 / 524588
+             instances/mspp16.pre.mps.gz [  10298.71]  17%  ETA: 2017-05-01 15:13:42  89202 / 524588
+             instances/mspp16.pre.mps.gz [  10598.37]  18%  ETA: 2017-05-01 14:59:25  92319 / 524588
+             instances/mspp16.pre.mps.gz [  10898.04]  18%  ETA: 2017-05-01 14:45:48  95458 / 524588
+             instances/mspp16.pre.mps.gz [  11197.70]  19%  ETA: 2017-05-01 14:35:18  98415 / 524588
+             instances/mspp16.pre.mps.gz [  11497.36]  19%  ETA: 2017-05-01 14:26:42  101271 / 524588
+             instances/mspp16.pre.mps.gz [  11797.02]  20%  ETA: 2017-05-01 14:16:46  104277 / 524588
+             instances/mspp16.pre.mps.gz [  12096.68]  20%  ETA: 2017-05-01 14:08:48  107156 / 524588
+             instances/mspp16.pre.mps.gz [  12396.34]  21%  ETA: 2017-05-01 14:05:17  109665 / 524588
+             instances/mspp16.pre.mps.gz [  12696.00]  21%  ETA: 2017-05-01 13:58:46  112470 / 524588
+             instances/mspp16.pre.mps.gz [  12995.66]  22%  ETA: 2017-05-01 13:54:25  115096 / 524588
+             instances/mspp16.pre.mps.gz [  13295.32]  22%  ETA: 2017-05-01 13:49:02  117845 / 524588
+             instances/mspp16.pre.mps.gz [  13594.97]  23%  ETA: 2017-05-01 13:43:42  120614 / 524588
+             instances/mspp16.pre.mps.gz [  13894.46]  24%  ETA: 2017-05-01 13:37:45  123473 / 524588
+             instances/mspp16.pre.mps.gz [  14193.93]  24%  ETA: 2017-05-01 13:32:13  126315 / 524588
+             instances/mspp16.pre.mps.gz [  14493.57]  25%  ETA: 2017-05-01 13:27:27  129101 / 524588
+             instances/mspp16.pre.mps.gz [  14793.23]  25%  ETA: 2017-05-01 13:22:20  131947 / 524588
+             instances/mspp16.pre.mps.gz [  15092.90]  26%  ETA: 2017-05-01 13:19:00  134611 / 524588
+             instances/mspp16.pre.mps.gz [  15392.56]  26%  ETA: 2017-05-01 13:18:53  136908 / 524588
+             instances/mspp16.pre.mps.gz [  15692.23]  27%  ETA: 2017-05-01 13:12:48  139929 / 524588
+             instances/mspp16.pre.mps.gz [  15991.89]  27%  ETA: 2017-05-01 13:04:19  143287 / 524588
+             instances/mspp16.pre.mps.gz [  16291.56]  28%  ETA: 2017-05-01 13:02:44  145801 / 524588
+             instances/mspp16.pre.mps.gz [  16591.22]  28%  ETA: 2017-05-01 12:57:38  148785 / 524588
+             instances/mspp16.pre.mps.gz [  16890.86]  29%  ETA: 2017-05-01 12:53:32  151660 / 524588
+             instances/mspp16.pre.mps.gz [  17190.53]  30%  ETA: 2017-05-01 12:44:52  155190 / 524588
+             instances/mspp16.pre.mps.gz [  17490.19]  30%  ETA: 2017-05-01 12:36:20  158754 / 524588
+             instances/mspp16.pre.mps.gz [  17789.86]  31%  ETA: 2017-05-01 12:35:50  161198 / 524588
+             instances/mspp16.pre.mps.gz [  18089.53]  31%  ETA: 2017-05-01 12:37:02  163391 / 524588
+             instances/mspp16.pre.mps.gz [  18389.20]  32%  ETA: 2017-05-01 12:38:25  165551 / 524588
+             instances/mspp16.pre.mps.gz [  18688.87]  32%  ETA: 2017-05-01 12:31:59  168895 / 524588
+             instances/mspp16.pre.mps.gz [  18988.54]  33%  ETA: 2017-05-01 12:24:24  172462 / 524588
+             instances/mspp16.pre.mps.gz [  19288.20]  34%  ETA: 2017-05-01 12:17:06  176029 / 524588
+             instances/mspp16.pre.mps.gz [  19587.87]  34%  ETA: 2017-05-01 12:10:09  179589 / 524588
+             instances/mspp16.pre.mps.gz [  19887.54]  35%  ETA: 2017-05-01 12:05:16  182841 / 524588
+             instances/mspp16.pre.mps.gz [  20187.21]  35%  ETA: 2017-05-01 12:02:41  185726 / 524588
+             instances/mspp16.pre.mps.gz [  20486.88]  36%  ETA: 2017-05-01 11:59:18  188762 / 524588
+             instances/mspp16.pre.mps.gz [  20786.55]  37%  ETA: 2017-05-01 11:53:39  192231 / 524588
+             instances/mspp16.pre.mps.gz [  21086.22]  37%  ETA: 2017-05-01 11:47:39  195799 / 524588
+             instances/mspp16.pre.mps.gz [  21385.88]  38%  ETA: 2017-05-01 11:43:34  199045 / 524588
+             instances/mspp16.pre.mps.gz [  21685.55]  39%  ETA: 2017-05-01 11:37:57  202612 / 524588
+             instances/mspp16.pre.mps.gz [  21985.22]  39%  ETA: 2017-05-01 11:34:22  205816 / 524588
+             instances/mspp16.pre.mps.gz [  22284.89]  40%  ETA: 2017-05-01 11:30:19  209137 / 524588
+             instances/mspp16.pre.mps.gz [  22584.55]  40%  ETA: 2017-05-01 11:29:51  211750 / 524588
+             instances/mspp16.pre.mps.gz [  22884.22]  41%  ETA: 2017-05-01 11:24:49  215314 / 524588
+             instances/mspp16.pre.mps.gz [  23183.89]  42%  ETA: 2017-05-01 11:19:54  218884 / 524588
+             instances/mspp16.pre.mps.gz [  23483.56]  42%  ETA: 2017-05-01 11:15:10  222454 / 524588
+             instances/mspp16.pre.mps.gz [  23783.23]  43%  ETA: 2017-05-01 11:10:34  226023 / 524588
+             instances/mspp16.pre.mps.gz [  24082.90]  44%  ETA: 2017-05-01 11:07:16  229331 / 524588
+             instances/mspp16.pre.mps.gz [  24382.56]  44%  ETA: 2017-05-01 11:05:10  232389 / 524588
+             instances/mspp16.pre.mps.gz [  24682.23]  45%  ETA: 2017-05-01 11:03:44  235302 / 524588
+             instances/mspp16.pre.mps.gz [  24981.89]  45%  ETA: 2017-05-01 11:01:21  238446 / 524588
+             instances/mspp16.pre.mps.gz [  25281.55]  46%  ETA: 2017-05-01 10:59:11  241564 / 524588
+             instances/mspp16.pre.mps.gz [  25581.22]  47%  ETA: 2017-05-01 10:56:58  244701 / 524588
+             instances/mspp16.pre.mps.gz [  25877.80]  47%  ETA: 2017-05-01 10:54:12  247982 / 524588
+             instances/mspp16.pre.mps.gz [  26177.47]  48%  ETA: 2017-05-01 10:51:35  251248 / 524588
+             instances/mspp16.pre.mps.gz [  26477.13]  49%  ETA: 2017-05-01 10:47:46  254835 / 524588
+             instances/mspp16.pre.mps.gz [  26776.70]  49%  ETA: 2017-05-01 10:44:36  258281 / 524588
+             instances/mspp16.pre.mps.gz [  27076.19]  50%  ETA: 2017-05-01 10:44:01  261070 / 524588
+             instances/mspp16.pre.mps.gz [  27375.77]  50%  ETA: 2017-05-01 10:43:58  263722 / 524588
+             instances/mspp16.pre.mps.gz [  27675.39]  51%  ETA: 2017-05-01 10:44:00  266347 / 524588
+             instances/mspp16.pre.mps.gz [  27975.04]  51%  ETA: 2017-05-01 10:43:39  269082 / 524588
+             instances/mspp16.pre.mps.gz [  28274.69]  52%  ETA: 2017-05-01 10:43:47  271683 / 524588
+             instances/mspp16.pre.mps.gz [  28574.35]  52%  ETA: 2017-05-01 10:43:18  274451 / 524588
+             instances/mspp16.pre.mps.gz [  28874.02]  53%  ETA: 2017-05-01 10:42:02  277445 / 524588
+             instances/mspp16.pre.mps.gz [  29173.68]  53%  ETA: 2017-05-01 10:40:12  280605 / 524588
+             instances/mspp16.pre.mps.gz [  29473.35]  54%  ETA: 2017-05-01 10:39:28  283461 / 524588
+             instances/mspp16.pre.mps.gz [  29773.02]  54%  ETA: 2017-05-01 10:41:28  285536 / 524588
+             instances/mspp16.pre.mps.gz [  30072.68]  55%  ETA: 2017-05-01 10:39:44  288683 / 524588
+             instances/mspp16.pre.mps.gz [  30372.34]  56%  ETA: 2017-05-01 10:36:30  292284 / 524588
+             instances/mspp16.pre.mps.gz [  30672.01]  56%  ETA: 2017-05-01 10:33:28  295849 / 524588
+             instances/mspp16.pre.mps.gz [  30971.67]  57%  ETA: 2017-05-01 10:32:19  298864 / 524588
+             instances/mspp16.pre.mps.gz [  31271.31]  58%  ETA: 2017-05-01 10:30:19  302147 / 524588
+             instances/mspp16.pre.mps.gz [  31570.96]  58%  ETA: 2017-05-01 10:28:41  305329 / 524588
+             instances/mspp16.pre.mps.gz [  31870.62]  59%  ETA: 2017-05-01 10:27:34  308359 / 524588
+             instances/mspp16.pre.mps.gz [  32170.29]  59%  ETA: 2017-05-01 10:27:34  311042 / 524588
+             instances/mspp16.pre.mps.gz [  32469.95]  60%  ETA: 2017-05-01 10:27:37  313704 / 524588
+             instances/mspp16.pre.mps.gz [  32769.62]  60%  ETA: 2017-05-01 10:25:01  317229 / 524588
+             instances/mspp16.pre.mps.gz [  33069.29]  61%  ETA: 2017-05-01 10:22:15  320826 / 524588
+             instances/mspp16.pre.mps.gz [  33368.96]  62%  ETA: 2017-05-01 10:20:40  324054 / 524588
+             instances/mspp16.pre.mps.gz [  33668.62]  62%  ETA: 2017-05-01 10:18:17  327554 / 524588
+             instances/mspp16.pre.mps.gz [  33968.29]  63%  ETA: 2017-05-01 10:15:41  331149 / 524588
+             instances/mspp16.pre.mps.gz [  34267.96]  64%  ETA: 2017-05-01 10:13:08  334749 / 524588
+             instances/mspp16.pre.mps.gz [  34567.63]  64%  ETA: 2017-05-01 10:10:38  338348 / 524588
+             instances/mspp16.pre.mps.gz [  34867.31]  65%  ETA: 2017-05-01 10:08:16  341918 / 524588
+             instances/mspp16.pre.mps.gz [  35166.98]  66%  ETA: 2017-05-01 10:06:02  345459 / 524588
+             instances/mspp16.pre.mps.gz [  35466.64]  66%  ETA: 2017-05-01 10:05:12  348505 / 524588
+             instances/mspp16.pre.mps.gz [  35766.31]  67%  ETA: 2017-05-01 10:02:53  352102 / 524588
+             instances/mspp16.pre.mps.gz [  36065.98]  68%  ETA: 2017-05-01 10:00:36  355701 / 524588
+             instances/mspp16.pre.mps.gz [  36365.65]  68%  ETA: 2017-05-01 09:59:37  358829 / 524588
+             instances/mspp16.pre.mps.gz [  36665.11]  69%  ETA: 2017-05-01 09:59:13  361744 / 524588
+             instances/mspp16.pre.mps.gz [  36964.78]  70%  ETA: 2017-05-01 09:58:13  364888 / 524588
+             instances/mspp16.pre.mps.gz [  37264.45]  70%  ETA: 2017-05-01 09:57:01  368116 / 524588
+             instances/mspp16.pre.mps.gz [  37564.12]  71%  ETA: 2017-05-01 09:54:56  371701 / 524588
+             instances/mspp16.pre.mps.gz [  37863.78]  72%  ETA: 2017-05-01 09:53:19  375117 / 524588
+             instances/mspp16.pre.mps.gz [  38163.46]  72%  ETA: 2017-05-01 09:51:23  378671 / 524588
+             instances/mspp16.pre.mps.gz [  38463.12]  73%  ETA: 2017-05-01 09:49:46  382110 / 524588
+             instances/mspp16.pre.mps.gz [  38762.79]  73%  ETA: 2017-05-01 09:48:49  385287 / 524588
+             instances/mspp16.pre.mps.gz [  39062.45]  74%  ETA: 2017-05-01 09:47:43  388534 / 524588
+             instances/mspp16.pre.mps.gz [  39362.12]  75%  ETA: 2017-05-01 09:46:13  391965 / 524588
+             instances/mspp16.pre.mps.gz [  39661.79]  75%  ETA: 2017-05-01 09:45:08  395227 / 524588
+             instances/mspp16.pre.mps.gz [  39961.46]  76%  ETA: 2017-05-01 09:43:29  398728 / 524588
+             instances/mspp16.pre.mps.gz [  40261.08]  77%  ETA: 2017-05-01 09:42:28  401978 / 524588
+             instances/mspp16.pre.mps.gz [  40560.15]  77%  ETA: 2017-05-01 09:42:32  404759 / 524588
+             instances/mspp16.pre.mps.gz [  40859.82]  78%  ETA: 2017-05-01 09:42:37  407534 / 524588
+             instances/mspp16.pre.mps.gz [  41159.47]  78%  ETA: 2017-05-01 09:43:14  410070 / 524588
+             instances/mspp16.pre.mps.gz [  41459.08]  79%  ETA: 2017-05-01 09:42:39  413137 / 524588
+             instances/mspp16.pre.mps.gz [  41758.75]  79%  ETA: 2017-05-01 09:41:24  416504 / 524588
+             instances/mspp16.pre.mps.gz [  42058.42]  80%  ETA: 2017-05-01 09:39:46  420058 / 524588
+             instances/mspp16.pre.mps.gz [  42358.08]  81%  ETA: 2017-05-01 09:38:08  423616 / 524588
+             instances/mspp16.pre.mps.gz [  42657.74]  81%  ETA: 2017-05-01 09:36:33  427173 / 524588
+             instances/mspp16.pre.mps.gz [  42957.41]  82%  ETA: 2017-05-01 09:35:16  430594 / 524588
+             instances/mspp16.pre.mps.gz [  43257.07]  83%  ETA: 2017-05-01 09:34:14  433915 / 524588
+             instances/mspp16.pre.mps.gz [  43556.74]  83%  ETA: 2017-05-01 09:33:14  437223 / 524588
+             instances/mspp16.pre.mps.gz [  43856.40]  84%  ETA: 2017-05-01 09:31:49  440735 / 524588
+             instances/mspp16.pre.mps.gz [  44156.07]  85%  ETA: 2017-05-01 09:30:33  444187 / 524588
+             instances/mspp16.pre.mps.gz [  44455.65]  85%  ETA: 2017-05-01 09:29:33  447519 / 524588
+             instances/mspp16.pre.mps.gz [  44755.31]  86%  ETA: 2017-05-01 09:28:24  450936 / 524588
+             instances/mspp16.pre.mps.gz [  45054.97]  87%  ETA: 2017-05-01 09:26:51  454552 / 524588
+             instances/mspp16.pre.mps.gz [  45354.65]  87%  ETA: 2017-05-01 09:25:56  457868 / 524588
+             instances/mspp16.pre.mps.gz [  45654.17]  88%  ETA: 2017-05-01 09:25:35  460905 / 524588
+             instances/mspp16.pre.mps.gz [  45953.84]  88%  ETA: 2017-05-01 09:25:09  463994 / 524588
+             instances/mspp16.pre.mps.gz [  46253.51]  89%  ETA: 2017-05-01 09:24:18  467290 / 524588
+             instances/mspp16.pre.mps.gz [  46553.16]  90%  ETA: 2017-05-01 09:23:38  470496 / 524588
+             instances/mspp16.pre.mps.gz [  46852.83]  90%  ETA: 2017-05-01 09:22:33  473926 / 524588
+             instances/mspp16.pre.mps.gz [  47152.50]  91%  ETA: 2017-05-01 09:21:16  477468 / 524588
+             instances/mspp16.pre.mps.gz [  47452.16]  92%  ETA: 2017-05-01 09:19:57  481045 / 524588
+             instances/mspp16.pre.mps.gz [  47751.83]  92%  ETA: 2017-05-01 09:18:44  484569 / 524588
+             instances/mspp16.pre.mps.gz [  48051.50]  93%  ETA: 2017-05-01 09:18:12  487740 / 524588
+             instances/mspp16.pre.mps.gz [  48351.15]  94%  ETA: 2017-05-01 09:18:19  490566 / 524588
+             instances/mspp16.pre.mps.gz [  48650.81]  94%  ETA: 2017-05-01 09:18:04  493588 / 524588
+             instances/mspp16.pre.mps.gz [  48950.48]  95%  ETA: 2017-05-01 09:16:49  497155 / 524588
+             instances/mspp16.pre.mps.gz [  49250.14]  95%  ETA: 2017-05-01 09:15:40  500681 / 524588
+             instances/mspp16.pre.mps.gz [  49549.81]  96%  ETA: 2017-05-01 09:14:30  504225 / 524588
+             instances/mspp16.pre.mps.gz [  49849.47]  97%  ETA: 2017-05-01 09:14:24  507173 / 524588
+             instances/mspp16.pre.mps.gz [  50149.13]  97%  ETA: 2017-05-01 09:13:35  510530 / 524588
+             instances/mspp16.pre.mps.gz [  50448.79]  98%  ETA: 2017-05-01 09:12:51  513849 / 524588
+             instances/mspp16.pre.mps.gz [  50748.45]  98%  ETA: 2017-05-01 09:13:33  516353 / 524588
+             instances/mspp16.pre.mps.gz [  51048.11]  99%  ETA: 2017-05-01 09:13:27  519317 / 524588
+             instances/mspp16.pre.mps.gz [  51347.78] 100%  ETA: 2017-05-01 09:12:58  522494 / 524588
+             instances/mspp16.pre.mps.gz [  51532.76] Generating MIR cuts...
+             instances/mspp16.pre.mps.gz [  51532.76] Finding interesting rows...
+             instances/mspp16.pre.mps.gz [  51650.04] 	 9 rows found
+             instances/mspp16.pre.mps.gz [  51650.04] Starting timer 1...
+             instances/mspp16.pre.mps.gz [  51650.11] Ending timer 1: 0.07s
+             instances/mspp16.pre.mps.gz [  51650.11] Added 9 violated cuts...
+             instances/mspp16.pre.mps.gz [  51668.76] 	 341.000000 [optimal]					   
+             instances/mspp16.pre.mps.gz [  51668.76] Generating wedge cuts...
+             instances/mspp16.pre.mps.gz [  51668.76] Starting timer 2...
+             instances/mspp16.pre.mps.gz [  51674.23] Ending timer 2: 5.47s
+             instances/mspp16.pre.mps.gz [  51674.23] Added 0 violated cuts...
+             instances/mspp16.pre.mps.gz [  51687.89] 	 341.000000 [optimal]					   
+             instances/mspp16.pre.mps.gz [  51687.89] Writting stats: out/mspp16.pre.yaml...
+             instances/mspp16.pre.mps.gz [  51687.89] Done.

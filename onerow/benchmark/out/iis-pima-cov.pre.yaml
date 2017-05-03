@@ -1,0 +1,25 @@
+input_file:
+  instances/iis-pima-cov.pre.mps.gz
+sol_value:
+  0: 26.620389
+  1: 26.754058
+  2: 26.756708
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    309
+  depth:
+    0: 174
+    1: 134
+    5: 1
+timers:
+  1: 113.5287
+  2: 26287.7247
+cut_speed:
+  round_1: inf
+  round_2: inf
+mip_value:
+  33.000000

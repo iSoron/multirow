@@ -1,0 +1,49 @@
+             instances/sp98ir.pre.mps.gz [      0.00] Reading input file: instances/sp98ir.pre.mps.gz...
+             instances/sp98ir.pre.mps.gz [      0.05] Fetched 1373 rows, 2926 cols.
+             instances/sp98ir.pre.mps.gz [      0.05] Solving first relaxation...
+             instances/sp98ir.pre.mps.gz [      0.13] 	 216670237.636667 [optimal]					   
+             instances/sp98ir.pre.mps.gz [      0.13] Reading basis...
+             instances/sp98ir.pre.mps.gz [      0.31] Generating MIR cuts...
+             instances/sp98ir.pre.mps.gz [      0.31] Finding interesting rows...
+             instances/sp98ir.pre.mps.gz [     17.22] 	 281 rows found
+             instances/sp98ir.pre.mps.gz [     17.22] Starting timer 1...
+             instances/sp98ir.pre.mps.gz [     23.68] 	 216809560.950495 [optimal]					   
+             instances/sp98ir.pre.mps.gz [     35.26] Ending timer 1: 18.04s
+             instances/sp98ir.pre.mps.gz [     35.26] Added 100 violated cuts...
+             instances/sp98ir.pre.mps.gz [     35.26] 	 216809560.950495 [optimal]					   
+             instances/sp98ir.pre.mps.gz [     35.26] Generating wedge cuts...
+             instances/sp98ir.pre.mps.gz [     35.26] Starting timer 2...
+             instances/sp98ir.pre.mps.gz [    333.70]   2%  ETA: 2017-05-02 10:09:06  6 / 281
+             instances/sp98ir.pre.mps.gz [    632.96]   5%  ETA: 2017-05-02 09:22:16  15 / 281
+             instances/sp98ir.pre.mps.gz [    932.61]   8%  ETA: 2017-05-02 09:18:11  23 / 281
+             instances/sp98ir.pre.mps.gz [   1232.25]  11%  ETA: 2017-05-02 09:16:13  31 / 281
+             instances/sp98ir.pre.mps.gz [   1531.90]  13%  ETA: 2017-05-02 09:24:47  37 / 281
+             instances/sp98ir.pre.mps.gz [   1831.55]  16%  ETA: 2017-05-02 09:26:31  44 / 281
+             instances/sp98ir.pre.mps.gz [   2131.20]  18%  ETA: 2017-05-02 09:27:46  51 / 281
+             instances/sp98ir.pre.mps.gz [   2430.85]  21%  ETA: 2017-05-02 09:28:43  58 / 281
+             instances/sp98ir.pre.mps.gz [   2730.51]  23%  ETA: 2017-05-02 09:26:31  66 / 281
+             instances/sp98ir.pre.mps.gz [   3030.17]  27%  ETA: 2017-05-02 09:22:16  75 / 281
+             instances/sp98ir.pre.mps.gz [   3329.84]  30%  ETA: 2017-05-02 09:16:45  85 / 281
+             instances/sp98ir.pre.mps.gz [   3629.51]  34%  ETA: 2017-05-02 09:12:24  95 / 281
+             instances/sp98ir.pre.mps.gz [   3929.18]  38%  ETA: 2017-05-02 09:07:14  106 / 281
+             instances/sp98ir.pre.mps.gz [   4228.64]  41%  ETA: 2017-05-02 09:04:30  116 / 281
+             instances/sp98ir.pre.mps.gz [   4528.30]  45%  ETA: 2017-05-02 09:02:11  126 / 281
+             instances/sp98ir.pre.mps.gz [   4827.92]  48%  ETA: 2017-05-02 09:01:27  135 / 281
+             instances/sp98ir.pre.mps.gz [   5127.59]  52%  ETA: 2017-05-02 08:58:31  146 / 281
+             instances/sp98ir.pre.mps.gz [   5427.26]  56%  ETA: 2017-05-02 08:56:00  157 / 281
+             instances/sp98ir.pre.mps.gz [   5507.71] 	 216813694.963202 [optimal]					   
+             instances/sp98ir.pre.mps.gz [   5726.93]  60%  ETA: 2017-05-02 08:53:49  168 / 281
+             instances/sp98ir.pre.mps.gz [   6026.61]  64%  ETA: 2017-05-02 08:51:54  179 / 281
+             instances/sp98ir.pre.mps.gz [   6326.28]  68%  ETA: 2017-05-02 08:50:13  190 / 281
+             instances/sp98ir.pre.mps.gz [   6625.95]  72%  ETA: 2017-05-02 08:48:42  201 / 281
+             instances/sp98ir.pre.mps.gz [   6925.62]  75%  ETA: 2017-05-02 08:47:21  212 / 281
+             instances/sp98ir.pre.mps.gz [   7225.29]  79%  ETA: 2017-05-02 08:46:09  223 / 281
+             instances/sp98ir.pre.mps.gz [   7524.96]  84%  ETA: 2017-05-02 08:44:25  235 / 281
+             instances/sp98ir.pre.mps.gz [   7824.62]  88%  ETA: 2017-05-02 08:43:26  246 / 281
+             instances/sp98ir.pre.mps.gz [   8124.29]  92%  ETA: 2017-05-02 08:41:59  258 / 281
+             instances/sp98ir.pre.mps.gz [   8423.96]  96%  ETA: 2017-05-02 08:40:39  270 / 281
+             instances/sp98ir.pre.mps.gz [   8696.45] Ending timer 2: 8661.18s
+             instances/sp98ir.pre.mps.gz [   8696.45] Added 100 violated cuts...
+             instances/sp98ir.pre.mps.gz [   8696.45] 	 216813694.963202 [optimal]					   
+             instances/sp98ir.pre.mps.gz [   8696.45] Writting stats: out/sp98ir.pre.yaml...
+             instances/sp98ir.pre.mps.gz [   8696.45] Done.

@@ -1,0 +1,81 @@
+        instances/neos-686190.pre.mps.gz [      0.00] Reading input file: instances/neos-686190.pre.mps.gz...
+        instances/neos-686190.pre.mps.gz [      0.02] Fetched 3658 rows, 7198 cols.
+        instances/neos-686190.pre.mps.gz [      0.02] Solving first relaxation...
+        instances/neos-686190.pre.mps.gz [      0.06] 	 5134.813830 [optimal]					   
+        instances/neos-686190.pre.mps.gz [      0.06] Reading basis...
+        instances/neos-686190.pre.mps.gz [      0.35] Generating MIR cuts...
+        instances/neos-686190.pre.mps.gz [      0.35] Finding interesting rows...
+        instances/neos-686190.pre.mps.gz [     12.59] 	 254 rows found
+        instances/neos-686190.pre.mps.gz [     12.60] Starting timer 1...
+        instances/neos-686190.pre.mps.gz [     18.03] 	 5200.526605 [optimal]					   
+        instances/neos-686190.pre.mps.gz [     26.34] Ending timer 1: 13.75s
+        instances/neos-686190.pre.mps.gz [     26.35] Added 123 violated cuts...
+        instances/neos-686190.pre.mps.gz [     26.43] 	 5208.329673 [optimal]					   
+        instances/neos-686190.pre.mps.gz [     26.43] Generating wedge cuts...
+        instances/neos-686190.pre.mps.gz [     26.43] Starting timer 2...
+        instances/neos-686190.pre.mps.gz [    278.72] 	 5213.448033 [optimal]					   
+        instances/neos-686190.pre.mps.gz [    326.12]   1%  ETA: 2017-05-01 21:01:39  3 / 254
+        instances/neos-686190.pre.mps.gz [    625.79]   2%  ETA: 2017-05-01 21:01:39  6 / 254
+        instances/neos-686190.pre.mps.gz [    925.47]   4%  ETA: 2017-05-01 21:01:39  9 / 254
+        instances/neos-686190.pre.mps.gz [   1225.14]   6%  ETA: 2017-05-01 20:01:10  14 / 254
+        instances/neos-686190.pre.mps.gz [   1524.81]   7%  ETA: 2017-05-01 19:51:05  18 / 254
+        instances/neos-686190.pre.mps.gz [   1824.48]   8%  ETA: 2017-05-01 20:19:19  20 / 254
+        instances/neos-686190.pre.mps.gz [   2124.16]  10%  ETA: 2017-05-01 19:53:55  25 / 254
+        instances/neos-686190.pre.mps.gz [   2290.51] 	 5217.460585 [optimal]					   
+        instances/neos-686190.pre.mps.gz [   2423.87]  11%  ETA: 2017-05-01 19:48:39  29 / 254
+        instances/neos-686190.pre.mps.gz [   2723.54]  13%  ETA: 2017-05-01 19:55:30  32 / 254
+        instances/neos-686190.pre.mps.gz [   3023.22]  14%  ETA: 2017-05-01 19:51:05  36 / 254
+        instances/neos-686190.pre.mps.gz [   3322.89]  16%  ETA: 2017-05-01 19:47:34  40 / 254
+        instances/neos-686190.pre.mps.gz [   3622.56]  17%  ETA: 2017-05-01 19:44:40  44 / 254
+        instances/neos-686190.pre.mps.gz [   3922.14]  18%  ETA: 2017-05-01 19:57:19  46 / 254
+        instances/neos-686190.pre.mps.gz [   4221.81]  20%  ETA: 2017-05-01 19:54:00  50 / 254
+        instances/neos-686190.pre.mps.gz [   4521.48]  21%  ETA: 2017-05-01 19:51:10  54 / 254
+        instances/neos-686190.pre.mps.gz [   4821.15]  23%  ETA: 2017-05-01 19:48:44  58 / 254
+        instances/neos-686190.pre.mps.gz [   5062.53] 	 5220.794580 [optimal]					   
+        instances/neos-686190.pre.mps.gz [   5120.87]  24%  ETA: 2017-05-01 19:46:36  62 / 254
+        instances/neos-686190.pre.mps.gz [   5420.54]  26%  ETA: 2017-05-01 19:44:44  66 / 254
+        instances/neos-686190.pre.mps.gz [   5720.20]  28%  ETA: 2017-05-01 19:38:14  71 / 254
+        instances/neos-686190.pre.mps.gz [   6019.88]  29%  ETA: 2017-05-01 19:41:37  74 / 254
+        instances/neos-686190.pre.mps.gz [   6319.55]  31%  ETA: 2017-05-01 19:40:17  78 / 254
+        instances/neos-686190.pre.mps.gz [   6619.22]  32%  ETA: 2017-05-01 19:39:06  82 / 254
+        instances/neos-686190.pre.mps.gz [   6918.89]  34%  ETA: 2017-05-01 19:34:06  87 / 254
+        instances/neos-686190.pre.mps.gz [   7218.56]  35%  ETA: 2017-05-01 19:37:01  90 / 254
+        instances/neos-686190.pre.mps.gz [   7518.23]  37%  ETA: 2017-05-01 19:39:45  93 / 254
+        instances/neos-686190.pre.mps.gz [   7817.83]  37%  ETA: 2017-05-01 19:45:56  95 / 254
+        instances/neos-686190.pre.mps.gz [   8117.50]  39%  ETA: 2017-05-01 19:44:43  99 / 254
+        instances/neos-686190.pre.mps.gz [   8417.17]  40%  ETA: 2017-05-01 19:46:59  102 / 254
+        instances/neos-686190.pre.mps.gz [   8716.78]  42%  ETA: 2017-05-01 19:45:48  106 / 254
+        instances/neos-686190.pre.mps.gz [   9016.44]  43%  ETA: 2017-05-01 19:44:43  110 / 254
+        instances/neos-686190.pre.mps.gz [   9316.11]  45%  ETA: 2017-05-01 19:43:42  114 / 254
+        instances/neos-686190.pre.mps.gz [   9615.78]  47%  ETA: 2017-05-01 19:39:51  119 / 254
+        instances/neos-686190.pre.mps.gz [   9915.45]  49%  ETA: 2017-05-01 19:36:20  124 / 254
+        instances/neos-686190.pre.mps.gz [  10215.12]  50%  ETA: 2017-05-01 19:35:41  128 / 254
+        instances/neos-686190.pre.mps.gz [  10514.79]  52%  ETA: 2017-05-01 19:37:39  131 / 254
+        instances/neos-686190.pre.mps.gz [  10814.46]  53%  ETA: 2017-05-01 19:37:00  135 / 254
+        instances/neos-686190.pre.mps.gz [  11114.13]  55%  ETA: 2017-05-01 19:36:24  139 / 254
+        instances/neos-686190.pre.mps.gz [  11413.80]  56%  ETA: 2017-05-01 19:35:49  143 / 254
+        instances/neos-686190.pre.mps.gz [  11713.47]  58%  ETA: 2017-05-01 19:33:00  148 / 254
+        instances/neos-686190.pre.mps.gz [  12013.15]  60%  ETA: 2017-05-01 19:32:33  152 / 254
+        instances/neos-686190.pre.mps.gz [  12312.82]  61%  ETA: 2017-05-01 19:32:07  156 / 254
+        instances/neos-686190.pre.mps.gz [  12612.48]  63%  ETA: 2017-05-01 19:31:43  160 / 254
+        instances/neos-686190.pre.mps.gz [  12912.16]  65%  ETA: 2017-05-01 19:31:19  164 / 254
+        instances/neos-686190.pre.mps.gz [  13211.83]  66%  ETA: 2017-05-01 19:30:57  168 / 254
+        instances/neos-686190.pre.mps.gz [  13511.50]  68%  ETA: 2017-05-01 19:30:36  172 / 254
+        instances/neos-686190.pre.mps.gz [  13811.17]  69%  ETA: 2017-05-01 19:30:16  176 / 254
+        instances/neos-686190.pre.mps.gz [  14110.84]  71%  ETA: 2017-05-01 19:29:57  180 / 254
+        instances/neos-686190.pre.mps.gz [  14410.51]  72%  ETA: 2017-05-01 19:29:38  184 / 254
+        instances/neos-686190.pre.mps.gz [  14710.18]  74%  ETA: 2017-05-01 19:29:20  188 / 254
+        instances/neos-686190.pre.mps.gz [  15009.85]  76%  ETA: 2017-05-01 19:27:21  193 / 254
+        instances/neos-686190.pre.mps.gz [  15309.52]  79%  ETA: 2017-05-01 19:20:34  201 / 254
+        instances/neos-686190.pre.mps.gz [  15609.19]  82%  ETA: 2017-05-01 19:15:50  208 / 254
+        instances/neos-686190.pre.mps.gz [  15908.86]  85%  ETA: 2017-05-01 19:11:24  215 / 254
+        instances/neos-686190.pre.mps.gz [  16208.53]  87%  ETA: 2017-05-01 19:07:15  222 / 254
+        instances/neos-686190.pre.mps.gz [  16508.21]  91%  ETA: 2017-05-01 19:02:01  230 / 254
+        instances/neos-686190.pre.mps.gz [  16807.26]  93%  ETA: 2017-05-01 19:00:58  235 / 254
+        instances/neos-686190.pre.mps.gz [  17106.93]  95%  ETA: 2017-05-01 18:57:27  242 / 254
+        instances/neos-686190.pre.mps.gz [  17406.43]  97%  ETA: 2017-05-01 18:56:33  247 / 254
+        instances/neos-686190.pre.mps.gz [  17661.64] Ending timer 2: 17635.22s
+        instances/neos-686190.pre.mps.gz [  17661.65] Added 355 violated cuts...
+        instances/neos-686190.pre.mps.gz [  17661.93] 	 5223.182745 [optimal]					   
+        instances/neos-686190.pre.mps.gz [  17661.93] Writting stats: out/neos-686190.pre.yaml...
+        instances/neos-686190.pre.mps.gz [  17661.93] Done.

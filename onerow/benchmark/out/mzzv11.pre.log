@@ -1,0 +1,118 @@
+             instances/mzzv11.pre.mps.gz [      0.00] Reading input file: instances/mzzv11.pre.mps.gz...
+             instances/mzzv11.pre.mps.gz [      0.23] Fetched 8222 rows, 14278 cols.
+             instances/mzzv11.pre.mps.gz [      0.23] Solving first relaxation...
+             instances/mzzv11.pre.mps.gz [     73.33] 	 -22773.750000 [optimal]					   
+             instances/mzzv11.pre.mps.gz [     73.33] Reading basis...
+             instances/mzzv11.pre.mps.gz [     76.49] Generating MIR cuts...
+             instances/mzzv11.pre.mps.gz [     76.49] Finding interesting rows...
+             instances/mzzv11.pre.mps.gz [    131.08] 	 3349 rows found
+             instances/mzzv11.pre.mps.gz [    131.08] Starting timer 1...
+             instances/mzzv11.pre.mps.gz [    225.56] 	 -22504.666667 [optimal]					   
+             instances/mzzv11.pre.mps.gz [    348.97] 	 -22488.829233 [optimal]					   
+             instances/mzzv11.pre.mps.gz [    378.79] Ending timer 1: 247.71s
+             instances/mzzv11.pre.mps.gz [    378.79] Added 239 violated cuts...
+             instances/mzzv11.pre.mps.gz [    378.87] 	 -22488.806793 [optimal]					   
+             instances/mzzv11.pre.mps.gz [    378.87] Generating wedge cuts...
+             instances/mzzv11.pre.mps.gz [    378.87] Starting timer 2...
+             instances/mzzv11.pre.mps.gz [    572.77]   2%  ETA: 2017-04-30 22:03:51  72 / 3349
+             instances/mzzv11.pre.mps.gz [    755.54]   2%  ETA: 2017-05-01 01:37:49  75 / 3349
+             instances/mzzv11.pre.mps.gz [    943.50]   2%  ETA: 2017-05-01 04:39:13  80 / 3349
+             instances/mzzv11.pre.mps.gz [   1146.43]   2%  ETA: 2017-05-01 07:38:16  83 / 3349
+             instances/mzzv11.pre.mps.gz [   1350.65]   3%  ETA: 2017-05-01 10:13:38  87 / 3349
+             instances/mzzv11.pre.mps.gz [   1547.35]   3%  ETA: 2017-05-01 12:35:20  91 / 3349
+             instances/mzzv11.pre.mps.gz [   1748.92]   3%  ETA: 2017-05-01 14:45:07  95 / 3349
+             instances/mzzv11.pre.mps.gz [   1945.99]   3%  ETA: 2017-05-01 16:44:24  99 / 3349
+             instances/mzzv11.pre.mps.gz [   2141.39]   4%  ETA: 2017-05-01 12:07:44  140 / 3349
+             instances/mzzv11.pre.mps.gz [   2333.30]   6%  ETA: 2017-05-01 08:57:15  189 / 3349
+             instances/mzzv11.pre.mps.gz [   2536.34]   6%  ETA: 2017-05-01 10:10:37  192 / 3349
+             instances/mzzv11.pre.mps.gz [   2744.37]   6%  ETA: 2017-05-01 11:06:07  198 / 3349
+             instances/mzzv11.pre.mps.gz [   2943.00]   6%  ETA: 2017-05-01 12:14:17  201 / 3349
+             instances/mzzv11.pre.mps.gz [   3151.86]   6%  ETA: 2017-05-01 13:03:47  207 / 3349
+             instances/mzzv11.pre.mps.gz [   3360.50]   6%  ETA: 2017-05-01 14:01:41  211 / 3349
+             instances/mzzv11.pre.mps.gz [   3574.93]   6%  ETA: 2017-05-01 15:03:14  214 / 3349
+             instances/mzzv11.pre.mps.gz [   3798.06]   7%  ETA: 2017-05-01 15:57:05  218 / 3349
+             instances/mzzv11.pre.mps.gz [   4053.29]   7%  ETA: 2017-05-01 16:48:59  222 / 3349
+             instances/mzzv11.pre.mps.gz [   4255.09]   7%  ETA: 2017-05-01 17:39:02  226 / 3349
+             instances/mzzv11.pre.mps.gz [   4464.22]   7%  ETA: 2017-05-01 18:21:04  231 / 3349
+             instances/mzzv11.pre.mps.gz [   4660.08]   7%  ETA: 2017-05-01 19:14:02  234 / 3349
+             instances/mzzv11.pre.mps.gz [   4878.50]   7%  ETA: 2017-05-01 18:56:43  248 / 3349
+             instances/mzzv11.pre.mps.gz [   5089.63]   8%  ETA: 2017-05-01 17:36:53  274 / 3349
+             instances/mzzv11.pre.mps.gz [   5281.67]   9%  ETA: 2017-05-01 16:48:59  296 / 3349
+             instances/mzzv11.pre.mps.gz [   5468.79]   9%  ETA: 2017-05-01 16:46:14  309 / 3349
+             instances/mzzv11.pre.mps.gz [   5658.16]   9%  ETA: 2017-05-01 17:04:51  317 / 3349
+             instances/mzzv11.pre.mps.gz [   5855.06]  10%  ETA: 2017-05-01 16:25:07  339 / 3349
+             instances/mzzv11.pre.mps.gz [   6121.89]  10%  ETA: 2017-05-01 16:50:27  345 / 3349
+             instances/mzzv11.pre.mps.gz [   6420.16]  11%  ETA: 2017-05-01 17:11:00  352 / 3349
+             instances/mzzv11.pre.mps.gz [   6719.62]  11%  ETA: 2017-05-01 17:30:44  359 / 3349
+             instances/mzzv11.pre.mps.gz [   6947.74] 	 -22487.718312 [optimal]					   
+             instances/mzzv11.pre.mps.gz [   7127.02]  12%  ETA: 2017-05-01 15:52:24  399 / 3349
+             instances/mzzv11.pre.mps.gz [   7426.68]  14%  ETA: 2017-05-01 13:26:13  464 / 3349
+             instances/mzzv11.pre.mps.gz [   7726.35]  15%  ETA: 2017-05-01 12:41:00  498 / 3349
+             instances/mzzv11.pre.mps.gz [   8025.97]  16%  ETA: 2017-05-01 12:05:35  530 / 3349
+             instances/mzzv11.pre.mps.gz [   8325.64]  20%  ETA: 2017-05-01 08:46:06  670 / 3349
+             instances/mzzv11.pre.mps.gz [   8570.78] 	 -22484.993161 [optimal]					   
+             instances/mzzv11.pre.mps.gz [   8633.98]  22%  ETA: 2017-05-01 07:59:24  728 / 3349
+             instances/mzzv11.pre.mps.gz [   8817.73] 	 -22484.989638 [optimal]					   
+             instances/mzzv11.pre.mps.gz [   9050.46]  24%  ETA: 2017-05-01 07:01:57  804 / 3349
+             instances/mzzv11.pre.mps.gz [   9332.89]  27%  ETA: 2017-05-01 06:07:54  888 / 3349
+             instances/mzzv11.pre.mps.gz [   9632.55]  28%  ETA: 2017-05-01 05:40:13  948 / 3349
+             instances/mzzv11.pre.mps.gz [   9931.79]  32%  ETA: 2017-05-01 04:28:39  1085 / 3349
+             instances/mzzv11.pre.mps.gz [  10231.41]  33%  ETA: 2017-05-01 04:39:27  1093 / 3349
+             instances/mzzv11.pre.mps.gz [  10531.09]  33%  ETA: 2017-05-01 04:50:06  1101 / 3349
+             instances/mzzv11.pre.mps.gz [  10830.76]  33%  ETA: 2017-05-01 05:00:00  1110 / 3349
+             instances/mzzv11.pre.mps.gz [  11130.43]  33%  ETA: 2017-05-01 05:10:56  1117 / 3349
+             instances/mzzv11.pre.mps.gz [  11430.08]  34%  ETA: 2017-05-01 05:21:07  1125 / 3349
+             instances/mzzv11.pre.mps.gz [  11729.63]  34%  ETA: 2017-05-01 05:29:59  1135 / 3349
+             instances/mzzv11.pre.mps.gz [  12029.28]  34%  ETA: 2017-05-01 05:39:53  1143 / 3349
+             instances/mzzv11.pre.mps.gz [  12328.92]  34%  ETA: 2017-05-01 05:49:38  1151 / 3349
+             instances/mzzv11.pre.mps.gz [  12628.49]  35%  ETA: 2017-05-01 05:56:13  1164 / 3349
+             instances/mzzv11.pre.mps.gz [  12928.16]  35%  ETA: 2017-05-01 06:05:42  1172 / 3349
+             instances/mzzv11.pre.mps.gz [  13227.83]  35%  ETA: 2017-05-01 06:14:26  1181 / 3349
+             instances/mzzv11.pre.mps.gz [  13527.51]  36%  ETA: 2017-05-01 06:23:39  1189 / 3349
+             instances/mzzv11.pre.mps.gz [  13827.18]  36%  ETA: 2017-05-01 06:24:10  1211 / 3349
+             instances/mzzv11.pre.mps.gz [  14126.86]  38%  ETA: 2017-05-01 06:07:49  1262 / 3349
+             instances/mzzv11.pre.mps.gz [  14426.53]  39%  ETA: 2017-05-01 05:50:37  1317 / 3349
+             instances/mzzv11.pre.mps.gz [  14726.20]  41%  ETA: 2017-05-01 05:33:47  1374 / 3349
+             instances/mzzv11.pre.mps.gz [  15025.86]  42%  ETA: 2017-05-01 05:23:57  1419 / 3349
+             instances/mzzv11.pre.mps.gz [  15325.53]  43%  ETA: 2017-05-01 05:22:30  1447 / 3349
+             instances/mzzv11.pre.mps.gz [  15625.20]  44%  ETA: 2017-05-01 05:24:46  1467 / 3349
+             instances/mzzv11.pre.mps.gz [  15924.87]  45%  ETA: 2017-05-01 05:15:21  1513 / 3349
+             instances/mzzv11.pre.mps.gz [  16224.54]  47%  ETA: 2017-05-01 04:54:57  1587 / 3349
+             instances/mzzv11.pre.mps.gz [  16524.08]  52%  ETA: 2017-05-01 04:09:21  1736 / 3349
+             instances/mzzv11.pre.mps.gz [  16823.75]  54%  ETA: 2017-05-01 03:55:26  1806 / 3349
+             instances/mzzv11.pre.mps.gz [  17123.42]  56%  ETA: 2017-05-01 03:45:56  1865 / 3349
+             instances/mzzv11.pre.mps.gz [  17423.09]  58%  ETA: 2017-05-01 03:31:29  1943 / 3349
+             instances/mzzv11.pre.mps.gz [  17722.76]  59%  ETA: 2017-05-01 03:31:27  1973 / 3349
+             instances/mzzv11.pre.mps.gz [  18022.43]  60%  ETA: 2017-05-01 03:33:23  1996 / 3349
+             instances/mzzv11.pre.mps.gz [  18322.10]  60%  ETA: 2017-05-01 03:34:26  2022 / 3349
+             instances/mzzv11.pre.mps.gz [  18621.77]  68%  ETA: 2017-05-01 02:40:58  2267 / 3349
+             instances/mzzv11.pre.mps.gz [  18921.43]  72%  ETA: 2017-05-01 02:17:28  2411 / 3349
+             instances/mzzv11.pre.mps.gz [  19221.10]  72%  ETA: 2017-05-01 02:21:23  2426 / 3349
+             instances/mzzv11.pre.mps.gz [  19520.77]  73%  ETA: 2017-05-01 02:25:50  2438 / 3349
+             instances/mzzv11.pre.mps.gz [  19820.44]  73%  ETA: 2017-05-01 02:31:04  2446 / 3349
+             instances/mzzv11.pre.mps.gz [  20120.12]  76%  ETA: 2017-05-01 02:15:55  2557 / 3349
+             instances/mzzv11.pre.mps.gz [  20419.79]  78%  ETA: 2017-05-01 02:11:02  2618 / 3349
+             instances/mzzv11.pre.mps.gz [  20719.45]  80%  ETA: 2017-05-01 02:08:29  2667 / 3349
+             instances/mzzv11.pre.mps.gz [  21019.12]  84%  ETA: 2017-05-01 01:50:29  2808 / 3349
+             instances/mzzv11.pre.mps.gz [  21318.79]  85%  ETA: 2017-05-01 01:49:36  2850 / 3349
+             instances/mzzv11.pre.mps.gz [  21618.46]  85%  ETA: 2017-05-01 01:53:22  2863 / 3349
+             instances/mzzv11.pre.mps.gz [  21918.13]  87%  ETA: 2017-05-01 01:53:05  2901 / 3349
+             instances/mzzv11.pre.mps.gz [  22217.80]  88%  ETA: 2017-05-01 01:51:15  2949 / 3349
+             instances/mzzv11.pre.mps.gz [  22517.47]  89%  ETA: 2017-05-01 01:49:37  2996 / 3349
+             instances/mzzv11.pre.mps.gz [  22817.14]  91%  ETA: 2017-05-01 01:48:39  3039 / 3349
+             instances/mzzv11.pre.mps.gz [  23116.81]  92%  ETA: 2017-05-01 01:46:04  3093 / 3349
+             instances/mzzv11.pre.mps.gz [  23416.48]  94%  ETA: 2017-05-01 01:45:45  3132 / 3349
+             instances/mzzv11.pre.mps.gz [  23716.15]  96%  ETA: 2017-05-01 01:38:57  3217 / 3349
+             instances/mzzv11.pre.mps.gz [  24015.81]  96%  ETA: 2017-05-01 01:43:02  3225 / 3349
+             instances/mzzv11.pre.mps.gz [  24315.48]  97%  ETA: 2017-05-01 01:46:40  3236 / 3349
+             instances/mzzv11.pre.mps.gz [  24615.15]  97%  ETA: 2017-05-01 01:50:09  3248 / 3349
+             instances/mzzv11.pre.mps.gz [  24914.82]  97%  ETA: 2017-05-01 01:54:01  3257 / 3349
+             instances/mzzv11.pre.mps.gz [  25214.49]  98%  ETA: 2017-05-01 01:53:54  3294 / 3349
+             instances/mzzv11.pre.mps.gz [  25514.16]  99%  ETA: 2017-05-01 01:57:34  3304 / 3349
+             instances/mzzv11.pre.mps.gz [  25813.83]  99%  ETA: 2017-05-01 02:00:56  3316 / 3349
+             instances/mzzv11.pre.mps.gz [  26113.50] 100%  ETA: 2017-05-01 02:03:25  3334 / 3349
+             instances/mzzv11.pre.mps.gz [  26264.31] Ending timer 2: 25885.44s
+             instances/mzzv11.pre.mps.gz [  26264.31] Added 382 violated cuts...
+             instances/mzzv11.pre.mps.gz [  26334.35] 	 -22483.587203 [optimal]					   
+             instances/mzzv11.pre.mps.gz [  26334.35] Writting stats: out/mzzv11.pre.yaml...
+             instances/mzzv11.pre.mps.gz [  26334.35] Done.

@@ -1,0 +1,42 @@
+         instances/pw-myciel4.pre.mps.gz [      0.00] Reading input file: instances/pw-myciel4.pre.mps.gz...
+         instances/pw-myciel4.pre.mps.gz [      0.02] Fetched 1056 rows, 2048 cols.
+         instances/pw-myciel4.pre.mps.gz [      0.02] Solving first relaxation...
+         instances/pw-myciel4.pre.mps.gz [      0.16] 	 4.000000 [optimal]					   
+         instances/pw-myciel4.pre.mps.gz [      0.16] Reading basis...
+         instances/pw-myciel4.pre.mps.gz [      0.22] Generating MIR cuts...
+         instances/pw-myciel4.pre.mps.gz [      0.22] Finding interesting rows...
+         instances/pw-myciel4.pre.mps.gz [     15.86] 	 688 rows found
+         instances/pw-myciel4.pre.mps.gz [     15.86] Starting timer 1...
+         instances/pw-myciel4.pre.mps.gz [     19.69] 	 4.000000 [optimal]					   
+         instances/pw-myciel4.pre.mps.gz [     39.48] Ending timer 1: 23.62s
+         instances/pw-myciel4.pre.mps.gz [     39.48] Added 100 violated cuts...
+         instances/pw-myciel4.pre.mps.gz [     39.48] 	 4.000000 [optimal]					   
+         instances/pw-myciel4.pre.mps.gz [     39.48] Generating wedge cuts...
+         instances/pw-myciel4.pre.mps.gz [     39.48] Starting timer 2...
+         instances/pw-myciel4.pre.mps.gz [    339.15]   4%  ETA: 2017-05-01 22:25:13  30 / 688
+         instances/pw-myciel4.pre.mps.gz [    638.76]   9%  ETA: 2017-05-01 22:21:31  62 / 688
+         instances/pw-myciel4.pre.mps.gz [    909.37]  12%  ETA: 2017-05-01 22:39:33  80 / 688
+         instances/pw-myciel4.pre.mps.gz [   1209.04]  16%  ETA: 2017-05-01 22:39:08  107 / 688
+         instances/pw-myciel4.pre.mps.gz [   1508.71]  20%  ETA: 2017-05-01 22:36:05  137 / 688
+         instances/pw-myciel4.pre.mps.gz [   1808.38]  25%  ETA: 2017-05-01 22:32:40  169 / 688
+         instances/pw-myciel4.pre.mps.gz [   2108.04]  29%  ETA: 2017-05-01 22:32:09  198 / 688
+         instances/pw-myciel4.pre.mps.gz [   2407.71]  34%  ETA: 2017-05-01 22:29:41  231 / 688
+         instances/pw-myciel4.pre.mps.gz [   2707.39]  39%  ETA: 2017-05-01 22:27:22  265 / 688
+         instances/pw-myciel4.pre.mps.gz [   3007.06]  43%  ETA: 2017-05-01 22:25:36  299 / 688
+         instances/pw-myciel4.pre.mps.gz [   3306.74]  48%  ETA: 2017-05-01 22:25:13  330 / 688
+         instances/pw-myciel4.pre.mps.gz [   3606.41]  53%  ETA: 2017-05-01 22:24:16  363 / 688
+         instances/pw-myciel4.pre.mps.gz [   3906.09]  58%  ETA: 2017-05-01 22:23:13  397 / 688
+         instances/pw-myciel4.pre.mps.gz [   4205.76]  62%  ETA: 2017-05-01 22:22:34  430 / 688
+         instances/pw-myciel4.pre.mps.gz [   4505.44]  67%  ETA: 2017-05-01 22:21:46  464 / 688
+         instances/pw-myciel4.pre.mps.gz [   4805.11]  72%  ETA: 2017-05-01 22:21:32  496 / 688
+         instances/pw-myciel4.pre.mps.gz [   5104.79]  77%  ETA: 2017-05-01 22:21:07  529 / 688
+         instances/pw-myciel4.pre.mps.gz [   5404.47]  82%  ETA: 2017-05-01 22:20:44  562 / 688
+         instances/pw-myciel4.pre.mps.gz [   5703.98]  86%  ETA: 2017-05-01 22:20:58  592 / 688
+         instances/pw-myciel4.pre.mps.gz [   6003.64]  90%  ETA: 2017-05-01 22:21:10  622 / 688
+         instances/pw-myciel4.pre.mps.gz [   6303.32]  95%  ETA: 2017-05-01 22:21:21  652 / 688
+         instances/pw-myciel4.pre.mps.gz [   6602.99] 100%  ETA: 2017-05-01 22:20:53  686 / 688
+         instances/pw-myciel4.pre.mps.gz [   6618.74] Ending timer 2: 6579.26s
+         instances/pw-myciel4.pre.mps.gz [   6618.74] Added 0 violated cuts...
+         instances/pw-myciel4.pre.mps.gz [   6618.74] 	 4.000000 [optimal]					   
+         instances/pw-myciel4.pre.mps.gz [   6618.74] Writting stats: out/pw-myciel4.pre.yaml...
+         instances/pw-myciel4.pre.mps.gz [   6618.74] Done.

@@ -1,0 +1,23 @@
+input_file:
+  instances/ns1688347.pre.mps.gz
+sol_value:
+  0: 2.259259
+  1: 9.079511
+  2: 9.079511
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    200
+  depth:
+    0: 200
+timers:
+  1: 144.6170
+  2: 66875.0284
+cut_speed:
+  round_1: inf
+  round_2: inf
+mip_value:
+  27.000000

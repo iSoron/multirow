@@ -1,0 +1,70 @@
+            instances/eilB101.pre.mps.gz [      0.00] Reading input file: instances/eilB101.pre.mps.gz...
+            instances/eilB101.pre.mps.gz [      0.03] Fetched 100 rows, 2816 cols.
+            instances/eilB101.pre.mps.gz [      0.03] Solving first relaxation...
+            instances/eilB101.pre.mps.gz [      0.08] 	 1075.247691 [optimal]					   
+            instances/eilB101.pre.mps.gz [      0.08] Reading basis...
+            instances/eilB101.pre.mps.gz [      0.10] Generating MIR cuts...
+            instances/eilB101.pre.mps.gz [      0.10] Finding interesting rows...
+            instances/eilB101.pre.mps.gz [     10.28] 	 89 rows found
+            instances/eilB101.pre.mps.gz [     10.29] Starting timer 1...
+            instances/eilB101.pre.mps.gz [     20.82] Ending timer 1: 10.53s
+            instances/eilB101.pre.mps.gz [     20.84] Added 89 violated cuts...
+            instances/eilB101.pre.mps.gz [     20.87] 	 1078.994157 [optimal]					   
+            instances/eilB101.pre.mps.gz [     20.87] Generating wedge cuts...
+            instances/eilB101.pre.mps.gz [     20.87] Starting timer 2...
+            instances/eilB101.pre.mps.gz [    224.58]   1%  ETA: 2017-04-29 18:29:08  1 / 89
+            instances/eilB101.pre.mps.gz [    434.44]   2%  ETA: 2017-04-29 18:29:08  2 / 89
+            instances/eilB101.pre.mps.gz [    556.25] 	 1079.037378 [optimal]					   
+            instances/eilB101.pre.mps.gz [    637.17]   3%  ETA: 2017-04-29 18:29:08  3 / 89
+            instances/eilB101.pre.mps.gz [    832.36]   4%  ETA: 2017-04-29 18:29:08  4 / 89
+            instances/eilB101.pre.mps.gz [   1039.24]   6%  ETA: 2017-04-29 18:29:08  5 / 89
+            instances/eilB101.pre.mps.gz [   1245.02]   7%  ETA: 2017-04-29 18:29:08  6 / 89
+            instances/eilB101.pre.mps.gz [   1439.71]   9%  ETA: 2017-04-29 17:33:30  8 / 89
+            instances/eilB101.pre.mps.gz [   1640.38]  10%  ETA: 2017-04-29 17:39:41  9 / 89
+            instances/eilB101.pre.mps.gz [   1848.49]  11%  ETA: 2017-04-29 17:44:38  10 / 89
+            instances/eilB101.pre.mps.gz [   2051.69]  12%  ETA: 2017-04-29 17:48:40  11 / 89
+            instances/eilB101.pre.mps.gz [   2233.90]  13%  ETA: 2017-04-29 17:52:03  12 / 89
+            instances/eilB101.pre.mps.gz [   2436.36]  15%  ETA: 2017-04-29 17:54:54  13 / 89
+            instances/eilB101.pre.mps.gz [   2638.30]  16%  ETA: 2017-04-29 17:57:20  14 / 89
+            instances/eilB101.pre.mps.gz [   2836.47]  17%  ETA: 2017-04-29 17:59:28  15 / 89
+            instances/eilB101.pre.mps.gz [   3034.54]  18%  ETA: 2017-04-29 18:01:19  16 / 89
+            instances/eilB101.pre.mps.gz [   3234.36]  20%  ETA: 2017-04-29 17:39:41  18 / 89
+            instances/eilB101.pre.mps.gz [   3443.57]  21%  ETA: 2017-04-29 17:42:17  19 / 89
+            instances/eilB101.pre.mps.gz [   3643.87]  22%  ETA: 2017-04-29 17:44:38  20 / 89
+            instances/eilB101.pre.mps.gz [   3849.45]  24%  ETA: 2017-04-29 17:46:45  21 / 89
+            instances/eilB101.pre.mps.gz [   4048.08]  25%  ETA: 2017-04-29 17:48:40  22 / 89
+            instances/eilB101.pre.mps.gz [   4252.14]  26%  ETA: 2017-04-29 17:50:26  23 / 89
+            instances/eilB101.pre.mps.gz [   4348.94] 	 1079.047638 [optimal]					   
+            instances/eilB101.pre.mps.gz [   4452.33]  27%  ETA: 2017-04-29 17:52:03  24 / 89
+            instances/eilB101.pre.mps.gz [   4654.10]  28%  ETA: 2017-04-29 17:53:32  25 / 89
+            instances/eilB101.pre.mps.gz [   4899.51]  30%  ETA: 2017-04-29 17:39:41  27 / 89
+            instances/eilB101.pre.mps.gz [   5199.15]  34%  ETA: 2017-04-29 17:14:58  30 / 89
+            instances/eilB101.pre.mps.gz [   5498.83]  36%  ETA: 2017-04-29 17:05:41  32 / 89
+            instances/eilB101.pre.mps.gz [   5798.51]  38%  ETA: 2017-04-29 16:57:30  34 / 89
+            instances/eilB101.pre.mps.gz [   6098.18]  40%  ETA: 2017-04-29 16:50:14  36 / 89
+            instances/eilB101.pre.mps.gz [   6397.86]  43%  ETA: 2017-04-29 16:43:44  38 / 89
+            instances/eilB101.pre.mps.gz [   6697.53]  45%  ETA: 2017-04-29 16:37:55  40 / 89
+            instances/eilB101.pre.mps.gz [   6997.20]  47%  ETA: 2017-04-29 16:32:37  42 / 89
+            instances/eilB101.pre.mps.gz [   7296.87]  49%  ETA: 2017-04-29 16:27:48  44 / 89
+            instances/eilB101.pre.mps.gz [   7596.46]  53%  ETA: 2017-04-29 16:16:36  47 / 89
+            instances/eilB101.pre.mps.gz [   7896.11]  55%  ETA: 2017-04-29 16:12:56  49 / 89
+            instances/eilB101.pre.mps.gz [   8195.79]  58%  ETA: 2017-04-29 16:03:40  52 / 89
+            instances/eilB101.pre.mps.gz [   8495.45]  62%  ETA: 2017-04-29 15:55:25  55 / 89
+            instances/eilB101.pre.mps.gz [   8795.13]  65%  ETA: 2017-04-29 15:48:02  58 / 89
+            instances/eilB101.pre.mps.gz [   9094.80]  69%  ETA: 2017-04-29 15:41:22  61 / 89
+            instances/eilB101.pre.mps.gz [   9394.47]  72%  ETA: 2017-04-29 15:35:19  64 / 89
+            instances/eilB101.pre.mps.gz [   9694.15]  74%  ETA: 2017-04-29 15:33:51  66 / 89
+            instances/eilB101.pre.mps.gz [   9993.82]  78%  ETA: 2017-04-29 15:28:34  69 / 89
+            instances/eilB101.pre.mps.gz [  10293.50]  81%  ETA: 2017-04-29 15:23:44  72 / 89
+            instances/eilB101.pre.mps.gz [  10593.16]  83%  ETA: 2017-04-29 15:22:44  74 / 89
+            instances/eilB101.pre.mps.gz [  10884.98] 	 1079.060861 [optimal]					   
+            instances/eilB101.pre.mps.gz [  10892.83]  87%  ETA: 2017-04-29 15:18:26  77 / 89
+            instances/eilB101.pre.mps.gz [  11192.50]  90%  ETA: 2017-04-29 15:14:27  80 / 89
+            instances/eilB101.pre.mps.gz [  11485.09]  92%  ETA: 2017-04-29 15:13:47  82 / 89
+            instances/eilB101.pre.mps.gz [  11773.82]  94%  ETA: 2017-04-29 15:13:08  84 / 89
+            instances/eilB101.pre.mps.gz [  12073.48]  98%  ETA: 2017-04-29 15:09:40  87 / 89
+            instances/eilB101.pre.mps.gz [  12212.06] Ending timer 2: 12191.19s
+            instances/eilB101.pre.mps.gz [  12212.07] Added 386 violated cuts...
+            instances/eilB101.pre.mps.gz [  12212.11] 	 1079.063552 [optimal]					   
+            instances/eilB101.pre.mps.gz [  12212.11] Writting stats: out/eilB101.pre.yaml...
+            instances/eilB101.pre.mps.gz [  12212.12] Done.

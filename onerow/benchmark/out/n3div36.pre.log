@@ -1,0 +1,304 @@
+            instances/n3div36.pre.mps.gz [      0.00] Reading input file: instances/n3div36.pre.mps.gz...
+            instances/n3div36.pre.mps.gz [      0.21] Fetched 4453 rows, 25056 cols.
+            instances/n3div36.pre.mps.gz [      0.21] Solving first relaxation...
+            instances/n3div36.pre.mps.gz [      0.69] 	 114333.374741 [optimal]					   
+            instances/n3div36.pre.mps.gz [      0.69] Reading basis...
+            instances/n3div36.pre.mps.gz [      2.44] Generating MIR cuts...
+            instances/n3div36.pre.mps.gz [      2.44] Finding interesting rows...
+            instances/n3div36.pre.mps.gz [     21.71] 	 48 rows found
+            instances/n3div36.pre.mps.gz [     21.71] Starting timer 1...
+            instances/n3div36.pre.mps.gz [     45.43] Ending timer 1: 23.72s
+            instances/n3div36.pre.mps.gz [     45.50] Added 47 violated cuts...
+            instances/n3div36.pre.mps.gz [     45.76] 	 116994.300552 [optimal]					   
+            instances/n3div36.pre.mps.gz [     45.76] Generating wedge cuts...
+            instances/n3div36.pre.mps.gz [     45.76] Starting timer 2...
+            instances/n3div36.pre.mps.gz [    345.43]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [    645.09]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [    942.74]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [   1240.95]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [   1540.61]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [   1840.29]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [   2139.96]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [   2439.60]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [   2736.57]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [   3036.24]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [   3322.61]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [   3622.29]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [   3921.96]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [   4221.63]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [   4521.30]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [   4820.98]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [   5120.65]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [   5420.33]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [   5720.01]   0%  ETA: unknown
+            instances/n3div36.pre.mps.gz [   6019.68]   2%  ETA: 2017-05-04 04:28:54  1 / 48
+            instances/n3div36.pre.mps.gz [   6319.35]   2%  ETA: 2017-05-04 08:28:54  1 / 48
+            instances/n3div36.pre.mps.gz [   6619.03]   2%  ETA: 2017-05-04 12:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [   6918.71]   2%  ETA: 2017-05-04 16:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [   7218.39]   2%  ETA: 2017-05-04 20:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [   7518.07]   2%  ETA: 2017-05-05 00:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [   7817.75]   2%  ETA: 2017-05-05 04:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [   8117.41]   2%  ETA: 2017-05-05 08:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [   8417.08]   2%  ETA: 2017-05-05 12:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [   8716.71]   2%  ETA: 2017-05-05 16:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [   9016.38]   2%  ETA: 2017-05-05 20:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [   9316.03]   2%  ETA: 2017-05-06 00:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [   9615.70]   2%  ETA: 2017-05-06 04:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [   9915.36]   2%  ETA: 2017-05-06 08:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [  10215.03]   2%  ETA: 2017-05-06 12:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [  10514.70]   2%  ETA: 2017-05-06 16:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [  10814.36]   2%  ETA: 2017-05-06 20:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [  11114.02]   2%  ETA: 2017-05-07 00:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [  11413.68]   2%  ETA: 2017-05-07 04:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [  11713.35]   2%  ETA: 2017-05-07 08:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [  12013.02]   2%  ETA: 2017-05-07 12:29:42  1 / 48
+            instances/n3div36.pre.mps.gz [  12312.69]   4%  ETA: 2017-05-04 06:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  12612.36]   4%  ETA: 2017-05-04 08:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  12912.03]   4%  ETA: 2017-05-04 10:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  13211.70]   4%  ETA: 2017-05-04 12:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  13334.51] 	 117003.959673 [optimal]					   
+            instances/n3div36.pre.mps.gz [  13511.48]   4%  ETA: 2017-05-04 14:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  13811.15]   4%  ETA: 2017-05-04 16:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  14110.82]   4%  ETA: 2017-05-04 18:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  14410.49]   4%  ETA: 2017-05-04 20:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  14710.15]   4%  ETA: 2017-05-04 22:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  15009.82]   4%  ETA: 2017-05-05 00:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  15309.49]   4%  ETA: 2017-05-05 02:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  15609.15]   4%  ETA: 2017-05-05 04:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  15908.82]   4%  ETA: 2017-05-05 06:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  16208.49]   4%  ETA: 2017-05-05 08:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  16508.16]   4%  ETA: 2017-05-05 10:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  16807.82]   4%  ETA: 2017-05-05 12:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  17107.49]   4%  ETA: 2017-05-05 14:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  17407.16]   4%  ETA: 2017-05-05 16:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  17706.83]   4%  ETA: 2017-05-05 18:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  18006.49]   4%  ETA: 2017-05-05 20:29:18  2 / 48
+            instances/n3div36.pre.mps.gz [  18306.16]   6%  ETA: 2017-05-04 05:49:10  3 / 48
+            instances/n3div36.pre.mps.gz [  18605.83]   8%  ETA: 2017-05-03 10:29:06  4 / 48
+            instances/n3div36.pre.mps.gz [  18905.50]   8%  ETA: 2017-05-03 11:29:06  4 / 48
+            instances/n3div36.pre.mps.gz [  19205.17]   8%  ETA: 2017-05-03 12:29:06  4 / 48
+            instances/n3div36.pre.mps.gz [  19504.84]   8%  ETA: 2017-05-03 13:29:06  4 / 48
+            instances/n3div36.pre.mps.gz [  19804.51]   8%  ETA: 2017-05-03 14:29:06  4 / 48
+            instances/n3div36.pre.mps.gz [  20104.18]   8%  ETA: 2017-05-03 15:29:06  4 / 48
+            instances/n3div36.pre.mps.gz [  20400.70]   8%  ETA: 2017-05-03 16:29:06  4 / 48
+            instances/n3div36.pre.mps.gz [  20700.37]   8%  ETA: 2017-05-03 17:29:06  4 / 48
+            instances/n3div36.pre.mps.gz [  20999.97]   8%  ETA: 2017-05-03 18:29:06  4 / 48
+            instances/n3div36.pre.mps.gz [  21299.64]   8%  ETA: 2017-05-03 19:29:18  4 / 48
+            instances/n3div36.pre.mps.gz [  21599.31]   8%  ETA: 2017-05-03 20:29:18  4 / 48
+            instances/n3div36.pre.mps.gz [  21898.97]   8%  ETA: 2017-05-03 21:29:18  4 / 48
+            instances/n3div36.pre.mps.gz [  22198.64]   8%  ETA: 2017-05-03 22:29:18  4 / 48
+            instances/n3div36.pre.mps.gz [  22498.31]   8%  ETA: 2017-05-03 23:29:18  4 / 48
+            instances/n3div36.pre.mps.gz [  22797.98]   8%  ETA: 2017-05-04 00:29:18  4 / 48
+            instances/n3div36.pre.mps.gz [  23097.64]   8%  ETA: 2017-05-04 01:29:18  4 / 48
+            instances/n3div36.pre.mps.gz [  23397.32]   8%  ETA: 2017-05-04 02:29:18  4 / 48
+            instances/n3div36.pre.mps.gz [  23696.98]   8%  ETA: 2017-05-04 03:29:18  4 / 48
+            instances/n3div36.pre.mps.gz [  23996.65]   8%  ETA: 2017-05-04 04:29:18  4 / 48
+            instances/n3div36.pre.mps.gz [  24296.32]   8%  ETA: 2017-05-04 05:29:18  4 / 48
+            instances/n3div36.pre.mps.gz [  24596.00]   8%  ETA: 2017-05-04 06:29:18  4 / 48
+            instances/n3div36.pre.mps.gz [  24895.67]   8%  ETA: 2017-05-04 07:29:18  4 / 48
+            instances/n3div36.pre.mps.gz [  25195.34]   8%  ETA: 2017-05-04 08:29:18  4 / 48
+            instances/n3div36.pre.mps.gz [  25495.01]  10%  ETA: 2017-05-03 16:29:13  5 / 48
+            instances/n3div36.pre.mps.gz [  25794.69]  10%  ETA: 2017-05-03 17:17:13  5 / 48
+            instances/n3div36.pre.mps.gz [  26094.37]  10%  ETA: 2017-05-03 18:05:13  5 / 48
+            instances/n3div36.pre.mps.gz [  26394.04]  10%  ETA: 2017-05-03 18:53:13  5 / 48
+            instances/n3div36.pre.mps.gz [  26693.71]  10%  ETA: 2017-05-03 19:41:13  5 / 48
+            instances/n3div36.pre.mps.gz [  26993.39]  10%  ETA: 2017-05-03 20:29:13  5 / 48
+            instances/n3div36.pre.mps.gz [  27293.06]  10%  ETA: 2017-05-03 21:17:13  5 / 48
+            instances/n3div36.pre.mps.gz [  27592.73]  10%  ETA: 2017-05-03 22:05:13  5 / 48
+            instances/n3div36.pre.mps.gz [  27892.40]  10%  ETA: 2017-05-03 22:53:13  5 / 48
+            instances/n3div36.pre.mps.gz [  28192.07]  10%  ETA: 2017-05-03 23:41:13  5 / 48
+            instances/n3div36.pre.mps.gz [  28491.75]  10%  ETA: 2017-05-04 00:29:13  5 / 48
+            instances/n3div36.pre.mps.gz [  28791.43]  10%  ETA: 2017-05-04 01:17:13  5 / 48
+            instances/n3div36.pre.mps.gz [  29091.10]  10%  ETA: 2017-05-04 02:05:13  5 / 48
+            instances/n3div36.pre.mps.gz [  29390.77]  10%  ETA: 2017-05-04 02:53:13  5 / 48
+            instances/n3div36.pre.mps.gz [  29690.45]  10%  ETA: 2017-05-04 03:41:13  5 / 48
+            instances/n3div36.pre.mps.gz [  29990.12]  10%  ETA: 2017-05-04 04:29:13  5 / 48
+            instances/n3div36.pre.mps.gz [  30289.79]  10%  ETA: 2017-05-04 05:17:13  5 / 48
+            instances/n3div36.pre.mps.gz [  30589.47]  10%  ETA: 2017-05-04 06:05:13  5 / 48
+            instances/n3div36.pre.mps.gz [  30889.03]  10%  ETA: 2017-05-04 06:53:13  5 / 48
+            instances/n3div36.pre.mps.gz [  31188.70]  10%  ETA: 2017-05-04 07:41:13  5 / 48
+            instances/n3div36.pre.mps.gz [  31488.12]  10%  ETA: 2017-05-04 08:29:13  5 / 48
+            instances/n3div36.pre.mps.gz [  31787.79]  10%  ETA: 2017-05-04 09:17:13  5 / 48
+            instances/n3div36.pre.mps.gz [  32087.46]  12%  ETA: 2017-05-03 19:49:10  6 / 48
+            instances/n3div36.pre.mps.gz [  32387.13]  12%  ETA: 2017-05-03 20:29:10  6 / 48
+            instances/n3div36.pre.mps.gz [  32686.80]  12%  ETA: 2017-05-03 21:09:10  6 / 48
+            instances/n3div36.pre.mps.gz [  32986.49]  12%  ETA: 2017-05-03 21:49:10  6 / 48
+            instances/n3div36.pre.mps.gz [  33286.16]  12%  ETA: 2017-05-03 22:29:10  6 / 48
+            instances/n3div36.pre.mps.gz [  33585.83]  12%  ETA: 2017-05-03 23:09:10  6 / 48
+            instances/n3div36.pre.mps.gz [  33884.99]  12%  ETA: 2017-05-03 23:49:10  6 / 48
+            instances/n3div36.pre.mps.gz [  34184.64]  12%  ETA: 2017-05-04 00:29:10  6 / 48
+            instances/n3div36.pre.mps.gz [  34484.31]  12%  ETA: 2017-05-04 01:09:18  6 / 48
+            instances/n3div36.pre.mps.gz [  34783.96]  12%  ETA: 2017-05-04 01:49:18  6 / 48
+            instances/n3div36.pre.mps.gz [  35083.63]  12%  ETA: 2017-05-04 02:29:18  6 / 48
+            instances/n3div36.pre.mps.gz [  35382.19]  12%  ETA: 2017-05-04 03:09:18  6 / 48
+            instances/n3div36.pre.mps.gz [  35681.83]  12%  ETA: 2017-05-04 03:49:18  6 / 48
+            instances/n3div36.pre.mps.gz [  35981.48]  12%  ETA: 2017-05-04 04:29:18  6 / 48
+            instances/n3div36.pre.mps.gz [  36281.16]  12%  ETA: 2017-05-04 05:09:18  6 / 48
+            instances/n3div36.pre.mps.gz [  36580.83]  12%  ETA: 2017-05-04 05:49:18  6 / 48
+            instances/n3div36.pre.mps.gz [  36880.50]  12%  ETA: 2017-05-04 06:29:18  6 / 48
+            instances/n3div36.pre.mps.gz [  37180.17]  12%  ETA: 2017-05-04 07:09:18  6 / 48
+            instances/n3div36.pre.mps.gz [  37479.36]  12%  ETA: 2017-05-04 07:49:18  6 / 48
+            instances/n3div36.pre.mps.gz [  37776.50]  12%  ETA: 2017-05-04 08:29:18  6 / 48
+            instances/n3div36.pre.mps.gz [  38075.99]  15%  ETA: 2017-05-03 21:03:31  7 / 48
+            instances/n3div36.pre.mps.gz [  38375.44]  15%  ETA: 2017-05-03 21:37:48  7 / 48
+            instances/n3div36.pre.mps.gz [  38674.64]  15%  ETA: 2017-05-03 22:12:06  7 / 48
+            instances/n3div36.pre.mps.gz [  38974.31]  15%  ETA: 2017-05-03 22:46:23  7 / 48
+            instances/n3div36.pre.mps.gz [  39273.98]  15%  ETA: 2017-05-03 23:20:40  7 / 48
+            instances/n3div36.pre.mps.gz [  39573.65]  15%  ETA: 2017-05-03 23:54:57  7 / 48
+            instances/n3div36.pre.mps.gz [  39873.32]  15%  ETA: 2017-05-04 00:29:14  7 / 48
+            instances/n3div36.pre.mps.gz [  40172.99]  15%  ETA: 2017-05-04 01:03:31  7 / 48
+            instances/n3div36.pre.mps.gz [  40472.66]  15%  ETA: 2017-05-04 01:37:48  7 / 48
+            instances/n3div36.pre.mps.gz [  40772.32]  15%  ETA: 2017-05-04 02:12:06  7 / 48
+            instances/n3div36.pre.mps.gz [  41072.00]  15%  ETA: 2017-05-04 02:46:23  7 / 48
+            instances/n3div36.pre.mps.gz [  41371.67]  15%  ETA: 2017-05-04 03:20:40  7 / 48
+            instances/n3div36.pre.mps.gz [  41671.34]  15%  ETA: 2017-05-04 03:54:57  7 / 48
+            instances/n3div36.pre.mps.gz [  41971.01]  15%  ETA: 2017-05-04 04:29:14  7 / 48
+            instances/n3div36.pre.mps.gz [  42270.68]  15%  ETA: 2017-05-04 05:03:31  7 / 48
+            instances/n3div36.pre.mps.gz [  42570.35]  15%  ETA: 2017-05-04 05:37:48  7 / 48
+            instances/n3div36.pre.mps.gz [  42870.02]  15%  ETA: 2017-05-04 06:12:06  7 / 48
+            instances/n3div36.pre.mps.gz [  43169.70]  15%  ETA: 2017-05-04 06:46:23  7 / 48
+            instances/n3div36.pre.mps.gz [  43469.36]  15%  ETA: 2017-05-04 07:20:40  7 / 48
+            instances/n3div36.pre.mps.gz [  43769.04]  17%  ETA: 2017-05-03 21:29:12  8 / 48
+            instances/n3div36.pre.mps.gz [  44068.71]  21%  ETA: 2017-05-03 07:17:08  10 / 48
+            instances/n3div36.pre.mps.gz [  44368.37]  21%  ETA: 2017-05-03 07:41:08  10 / 48
+            instances/n3div36.pre.mps.gz [  44668.04]  21%  ETA: 2017-05-03 08:05:08  10 / 48
+            instances/n3div36.pre.mps.gz [  44967.71]  21%  ETA: 2017-05-03 08:29:08  10 / 48
+            instances/n3div36.pre.mps.gz [  45267.38]  21%  ETA: 2017-05-03 08:53:08  10 / 48
+            instances/n3div36.pre.mps.gz [  45567.05]  21%  ETA: 2017-05-03 09:17:08  10 / 48
+            instances/n3div36.pre.mps.gz [  45866.72]  21%  ETA: 2017-05-03 09:41:08  10 / 48
+            instances/n3div36.pre.mps.gz [  46166.34]  21%  ETA: 2017-05-03 10:05:08  10 / 48
+            instances/n3div36.pre.mps.gz [  46466.00]  21%  ETA: 2017-05-03 10:29:08  10 / 48
+            instances/n3div36.pre.mps.gz [  46765.67]  21%  ETA: 2017-05-03 10:53:08  10 / 48
+            instances/n3div36.pre.mps.gz [  47065.35]  21%  ETA: 2017-05-03 11:17:08  10 / 48
+            instances/n3div36.pre.mps.gz [  47365.03]  21%  ETA: 2017-05-03 11:41:08  10 / 48
+            instances/n3div36.pre.mps.gz [  47664.71]  21%  ETA: 2017-05-03 12:05:08  10 / 48
+            instances/n3div36.pre.mps.gz [  47964.38]  21%  ETA: 2017-05-03 12:29:08  10 / 48
+            instances/n3div36.pre.mps.gz [  48264.06]  21%  ETA: 2017-05-03 12:53:08  10 / 48
+            instances/n3div36.pre.mps.gz [  48563.74]  21%  ETA: 2017-05-03 13:17:08  10 / 48
+            instances/n3div36.pre.mps.gz [  48863.41]  21%  ETA: 2017-05-03 13:41:13  10 / 48
+            instances/n3div36.pre.mps.gz [  49163.10]  21%  ETA: 2017-05-03 14:05:13  10 / 48
+            instances/n3div36.pre.mps.gz [  49462.77]  21%  ETA: 2017-05-03 14:29:13  10 / 48
+            instances/n3div36.pre.mps.gz [  49762.45]  21%  ETA: 2017-05-03 14:53:13  10 / 48
+            instances/n3div36.pre.mps.gz [  50062.13]  21%  ETA: 2017-05-03 15:17:13  10 / 48
+            instances/n3div36.pre.mps.gz [  50361.81]  23%  ETA: 2017-05-03 09:34:38  11 / 48
+            instances/n3div36.pre.mps.gz [  50661.49]  23%  ETA: 2017-05-03 09:56:27  11 / 48
+            instances/n3div36.pre.mps.gz [  50961.17]  23%  ETA: 2017-05-03 10:18:16  11 / 48
+            instances/n3div36.pre.mps.gz [  51260.85]  23%  ETA: 2017-05-03 10:40:06  11 / 48
+            instances/n3div36.pre.mps.gz [  51560.53]  23%  ETA: 2017-05-03 11:01:55  11 / 48
+            instances/n3div36.pre.mps.gz [  51860.21]  23%  ETA: 2017-05-03 11:23:44  11 / 48
+            instances/n3div36.pre.mps.gz [  52159.89]  23%  ETA: 2017-05-03 11:45:33  11 / 48
+            instances/n3div36.pre.mps.gz [  52459.56]  23%  ETA: 2017-05-03 12:07:22  11 / 48
+            instances/n3div36.pre.mps.gz [  52759.23]  23%  ETA: 2017-05-03 12:29:11  11 / 48
+            instances/n3div36.pre.mps.gz [  53058.90]  23%  ETA: 2017-05-03 12:51:00  11 / 48
+            instances/n3div36.pre.mps.gz [  53358.58]  23%  ETA: 2017-05-03 13:12:49  11 / 48
+            instances/n3div36.pre.mps.gz [  53658.26]  23%  ETA: 2017-05-03 13:34:38  11 / 48
+            instances/n3div36.pre.mps.gz [  53957.94]  23%  ETA: 2017-05-03 13:56:27  11 / 48
+            instances/n3div36.pre.mps.gz [  54257.61]  23%  ETA: 2017-05-03 14:18:16  11 / 48
+            instances/n3div36.pre.mps.gz [  54557.29]  23%  ETA: 2017-05-03 14:40:06  11 / 48
+            instances/n3div36.pre.mps.gz [  54856.96]  23%  ETA: 2017-05-03 15:01:55  11 / 48
+            instances/n3div36.pre.mps.gz [  55156.64]  23%  ETA: 2017-05-03 15:23:44  11 / 48
+            instances/n3div36.pre.mps.gz [  55456.32]  23%  ETA: 2017-05-03 15:45:33  11 / 48
+            instances/n3div36.pre.mps.gz [  55755.99]  23%  ETA: 2017-05-03 16:07:22  11 / 48
+            instances/n3div36.pre.mps.gz [  56055.66]  23%  ETA: 2017-05-03 16:29:11  11 / 48
+            instances/n3div36.pre.mps.gz [  56355.34]  25%  ETA: 2017-05-03 11:09:10  12 / 48
+            instances/n3div36.pre.mps.gz [  56655.01]  25%  ETA: 2017-05-03 11:29:10  12 / 48
+            instances/n3div36.pre.mps.gz [  56954.69]  25%  ETA: 2017-05-03 11:49:10  12 / 48
+            instances/n3div36.pre.mps.gz [  57254.36]  25%  ETA: 2017-05-03 12:09:10  12 / 48
+            instances/n3div36.pre.mps.gz [  57554.03]  25%  ETA: 2017-05-03 12:29:10  12 / 48
+            instances/n3div36.pre.mps.gz [  57853.71]  25%  ETA: 2017-05-03 12:49:10  12 / 48
+            instances/n3div36.pre.mps.gz [  58152.76]  25%  ETA: 2017-05-03 13:09:10  12 / 48
+            instances/n3div36.pre.mps.gz [  58450.61]  25%  ETA: 2017-05-03 13:29:10  12 / 48
+            instances/n3div36.pre.mps.gz [  58750.26]  25%  ETA: 2017-05-03 13:49:10  12 / 48
+            instances/n3div36.pre.mps.gz [  59049.93]  25%  ETA: 2017-05-03 14:09:10  12 / 48
+            instances/n3div36.pre.mps.gz [  59349.54]  25%  ETA: 2017-05-03 14:29:10  12 / 48
+            instances/n3div36.pre.mps.gz [  59649.22]  25%  ETA: 2017-05-03 14:49:10  12 / 48
+            instances/n3div36.pre.mps.gz [  59948.89]  25%  ETA: 2017-05-03 15:09:10  12 / 48
+            instances/n3div36.pre.mps.gz [  60248.50]  25%  ETA: 2017-05-03 15:29:10  12 / 48
+            instances/n3div36.pre.mps.gz [  60548.15]  25%  ETA: 2017-05-03 15:49:10  12 / 48
+            instances/n3div36.pre.mps.gz [  60847.77]  25%  ETA: 2017-05-03 16:09:10  12 / 48
+            instances/n3div36.pre.mps.gz [  61147.33]  25%  ETA: 2017-05-03 16:29:10  12 / 48
+            instances/n3div36.pre.mps.gz [  61446.99]  25%  ETA: 2017-05-03 16:49:14  12 / 48
+            instances/n3div36.pre.mps.gz [  61746.57]  25%  ETA: 2017-05-03 17:09:14  12 / 48
+            instances/n3div36.pre.mps.gz [  62046.25]  25%  ETA: 2017-05-03 17:29:14  12 / 48
+            instances/n3div36.pre.mps.gz [  62345.92]  25%  ETA: 2017-05-03 17:49:14  12 / 48
+            instances/n3div36.pre.mps.gz [  62645.39]  25%  ETA: 2017-05-03 18:09:14  12 / 48
+            instances/n3div36.pre.mps.gz [  62945.06]  27%  ETA: 2017-05-03 13:06:07  13 / 48
+            instances/n3div36.pre.mps.gz [  63244.74]  27%  ETA: 2017-05-03 13:24:35  13 / 48
+            instances/n3div36.pre.mps.gz [  63544.41]  27%  ETA: 2017-05-03 13:43:03  13 / 48
+            instances/n3div36.pre.mps.gz [  63843.98]  27%  ETA: 2017-05-03 14:01:30  13 / 48
+            instances/n3div36.pre.mps.gz [  64143.65]  27%  ETA: 2017-05-03 14:19:58  13 / 48
+            instances/n3div36.pre.mps.gz [  64443.32]  27%  ETA: 2017-05-03 14:38:26  13 / 48
+            instances/n3div36.pre.mps.gz [  64743.00]  27%  ETA: 2017-05-03 14:56:54  13 / 48
+            instances/n3div36.pre.mps.gz [  65042.68]  27%  ETA: 2017-05-03 15:15:21  13 / 48
+            instances/n3div36.pre.mps.gz [  65342.35]  27%  ETA: 2017-05-03 15:33:49  13 / 48
+            instances/n3div36.pre.mps.gz [  65642.02]  27%  ETA: 2017-05-03 15:52:17  13 / 48
+            instances/n3div36.pre.mps.gz [  65941.69]  27%  ETA: 2017-05-03 16:10:44  13 / 48
+            instances/n3div36.pre.mps.gz [  66241.36]  27%  ETA: 2017-05-03 16:29:12  13 / 48
+            instances/n3div36.pre.mps.gz [  66541.03]  27%  ETA: 2017-05-03 16:47:40  13 / 48
+            instances/n3div36.pre.mps.gz [  66840.71]  27%  ETA: 2017-05-03 17:06:07  13 / 48
+            instances/n3div36.pre.mps.gz [  67140.38]  27%  ETA: 2017-05-03 17:24:35  13 / 48
+            instances/n3div36.pre.mps.gz [  67440.06]  27%  ETA: 2017-05-03 17:43:03  13 / 48
+            instances/n3div36.pre.mps.gz [  67739.62]  27%  ETA: 2017-05-03 18:01:30  13 / 48
+            instances/n3div36.pre.mps.gz [  68039.19]  27%  ETA: 2017-05-03 18:19:58  13 / 48
+            instances/n3div36.pre.mps.gz [  68338.86]  27%  ETA: 2017-05-03 18:38:26  13 / 48
+            instances/n3div36.pre.mps.gz [  68638.52]  27%  ETA: 2017-05-03 18:56:54  13 / 48
+            instances/n3div36.pre.mps.gz [  68901.30] 	 117384.954982 [optimal]					   
+            instances/n3div36.pre.mps.gz [  68938.33]  29%  ETA: 2017-05-03 14:12:02  14 / 48
+            instances/n3div36.pre.mps.gz [  69237.87]  29%  ETA: 2017-05-03 14:29:11  14 / 48
+            instances/n3div36.pre.mps.gz [  69537.46]  29%  ETA: 2017-05-03 14:46:19  14 / 48
+            instances/n3div36.pre.mps.gz [  69837.13]  29%  ETA: 2017-05-03 15:03:28  14 / 48
+            instances/n3div36.pre.mps.gz [  70136.80]  29%  ETA: 2017-05-03 15:20:36  14 / 48
+            instances/n3div36.pre.mps.gz [  70436.48]  29%  ETA: 2017-05-03 15:37:45  14 / 48
+            instances/n3div36.pre.mps.gz [  70736.15]  29%  ETA: 2017-05-03 15:54:54  14 / 48
+            instances/n3div36.pre.mps.gz [  71035.82]  29%  ETA: 2017-05-03 16:12:02  14 / 48
+            instances/n3div36.pre.mps.gz [  71335.49]  29%  ETA: 2017-05-03 16:29:11  14 / 48
+            instances/n3div36.pre.mps.gz [  71635.16]  29%  ETA: 2017-05-03 16:46:19  14 / 48
+            instances/n3div36.pre.mps.gz [  71934.84]  29%  ETA: 2017-05-03 17:03:28  14 / 48
+            instances/n3div36.pre.mps.gz [  72234.51]  29%  ETA: 2017-05-03 17:20:36  14 / 48
+            instances/n3div36.pre.mps.gz [  72534.18]  29%  ETA: 2017-05-03 17:37:45  14 / 48
+            instances/n3div36.pre.mps.gz [  72833.85]  29%  ETA: 2017-05-03 17:54:54  14 / 48
+            instances/n3div36.pre.mps.gz [  73133.52]  31%  ETA: 2017-05-03 13:33:10  15 / 48
+            instances/n3div36.pre.mps.gz [  73433.19]  31%  ETA: 2017-05-03 13:49:10  15 / 48
+            instances/n3div36.pre.mps.gz [  73732.86]  31%  ETA: 2017-05-03 14:05:10  15 / 48
+            instances/n3div36.pre.mps.gz [  74032.54]  31%  ETA: 2017-05-03 14:21:13  15 / 48
+            instances/n3div36.pre.mps.gz [  74332.21]  31%  ETA: 2017-05-03 14:37:13  15 / 48
+            instances/n3div36.pre.mps.gz [  74631.88]  31%  ETA: 2017-05-03 14:53:13  15 / 48
+            instances/n3div36.pre.mps.gz [  74931.51]  31%  ETA: 2017-05-03 15:09:13  15 / 48
+            instances/n3div36.pre.mps.gz [  75231.18]  31%  ETA: 2017-05-03 15:25:13  15 / 48
+            instances/n3div36.pre.mps.gz [  75530.85]  31%  ETA: 2017-05-03 15:41:13  15 / 48
+            instances/n3div36.pre.mps.gz [  75830.53]  31%  ETA: 2017-05-03 15:57:13  15 / 48
+            instances/n3div36.pre.mps.gz [  76130.03]  31%  ETA: 2017-05-03 16:13:13  15 / 48
+            instances/n3div36.pre.mps.gz [  76429.27]  31%  ETA: 2017-05-03 16:29:13  15 / 48
+            instances/n3div36.pre.mps.gz [  76728.94]  31%  ETA: 2017-05-03 16:45:13  15 / 48
+            instances/n3div36.pre.mps.gz [  77028.61]  31%  ETA: 2017-05-03 17:01:13  15 / 48
+            instances/n3div36.pre.mps.gz [  77328.29]  31%  ETA: 2017-05-03 17:17:13  15 / 48
+            instances/n3div36.pre.mps.gz [  77627.93]  31%  ETA: 2017-05-03 17:33:13  15 / 48
+            instances/n3div36.pre.mps.gz [  77927.53]  31%  ETA: 2017-05-03 17:49:13  15 / 48
+            instances/n3div36.pre.mps.gz [  78227.12]  31%  ETA: 2017-05-03 18:05:13  15 / 48
+            instances/n3div36.pre.mps.gz [  78526.80]  31%  ETA: 2017-05-03 18:21:13  15 / 48
+            instances/n3div36.pre.mps.gz [  78826.35]  31%  ETA: 2017-05-03 18:37:13  15 / 48
+            instances/n3div36.pre.mps.gz [  79126.02]  33%  ETA: 2017-05-03 14:29:12  16 / 48
+            instances/n3div36.pre.mps.gz [  79425.69]  33%  ETA: 2017-05-03 14:44:12  16 / 48
+            instances/n3div36.pre.mps.gz [  79725.33]  33%  ETA: 2017-05-03 14:59:12  16 / 48
+            instances/n3div36.pre.mps.gz [  80024.98]  33%  ETA: 2017-05-03 15:14:12  16 / 48
+            instances/n3div36.pre.mps.gz [  80323.63]  33%  ETA: 2017-05-03 15:29:12  16 / 48
+            instances/n3div36.pre.mps.gz [  80621.30]  33%  ETA: 2017-05-03 15:44:12  16 / 48
+            instances/n3div36.pre.mps.gz [  80918.05]  33%  ETA: 2017-05-03 15:59:12  16 / 48
+            instances/n3div36.pre.mps.gz [  81217.65]  33%  ETA: 2017-05-03 16:14:12  16 / 48
+            instances/n3div36.pre.mps.gz [  81517.25]  33%  ETA: 2017-05-03 16:29:12  16 / 48
+            instances/n3div36.pre.mps.gz [  81808.39]  33%  ETA: 2017-05-03 16:44:12  16 / 48
+            instances/n3div36.pre.mps.gz [  82081.55]  33%  ETA: 2017-05-03 16:59:12  16 / 48
+            instances/n3div36.pre.mps.gz [  82381.22]  33%  ETA: 2017-05-03 17:14:12  16 / 48
+            instances/n3div36.pre.mps.gz [  82680.90]  33%  ETA: 2017-05-03 17:29:12  16 / 48
+            instances/n3div36.pre.mps.gz [  82980.58]  33%  ETA: 2017-05-03 17:44:12  16 / 48
+            instances/n3div36.pre.mps.gz [  83280.25]  33%  ETA: 2017-05-03 17:59:12  16 / 48
+            instances/n3div36.pre.mps.gz [  83579.92]  33%  ETA: 2017-05-03 18:14:12  16 / 48
+            instances/n3div36.pre.mps.gz [  83879.59]  33%  ETA: 2017-05-03 18:29:12  16 / 48
+            instances/n3div36.pre.mps.gz [  84179.26]  33%  ETA: 2017-05-03 18:44:12  16 / 48
+            instances/n3div36.pre.mps.gz [  84450.32]  33%  ETA: 2017-05-03 18:59:12  16 / 48
+            instances/n3div36.pre.mps.gz [  84749.99]  33%  ETA: 2017-05-03 19:14:12  16 / 48
+            instances/n3div36.pre.mps.gz [  85049.64]  33%  ETA: 2017-05-03 19:29:12  16 / 48
+            instances/n3div36.pre.mps.gz [  85349.31]  33%  ETA: 2017-05-03 19:44:12  16 / 48
+            instances/n3div36.pre.mps.gz [  85648.98]  33%  ETA: 2017-05-03 19:59:12  16 / 48
+            instances/n3div36.pre.mps.gz [  85948.64]  33%  ETA: 2017-05-03 20:14:12  16 / 48
+            instances/n3div36.pre.mps.gz [  86248.31]  35%  ETA: 2017-05-03 16:15:03  17 / 48

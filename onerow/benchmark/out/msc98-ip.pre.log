@@ -1,0 +1,76 @@
+           instances/msc98-ip.pre.mps.gz [      0.00] Reading input file: instances/msc98-ip.pre.mps.gz...
+           instances/msc98-ip.pre.mps.gz [      0.10] Fetched 15021 rows, 23872 cols.
+           instances/msc98-ip.pre.mps.gz [      0.10] Solving first relaxation...
+           instances/msc98-ip.pre.mps.gz [     14.40] 	 19530897.712251 [optimal]					   
+           instances/msc98-ip.pre.mps.gz [     14.40] Reading basis...
+           instances/msc98-ip.pre.mps.gz [     20.73] Generating MIR cuts...
+           instances/msc98-ip.pre.mps.gz [     20.73] Finding interesting rows...
+           instances/msc98-ip.pre.mps.gz [     96.27] 	 5877 rows found
+           instances/msc98-ip.pre.mps.gz [     96.27] Starting timer 1...
+           instances/msc98-ip.pre.mps.gz [    126.61] 	 19649787.712175 [optimal]					   
+           instances/msc98-ip.pre.mps.gz [    304.16] 	 19683150.806067 [optimal]					   
+           instances/msc98-ip.pre.mps.gz [    350.00] Ending timer 1: 253.73s
+           instances/msc98-ip.pre.mps.gz [    350.00] Added 205 violated cuts...
+           instances/msc98-ip.pre.mps.gz [    350.12] 	 19683150.806067 [optimal]					   
+           instances/msc98-ip.pre.mps.gz [    350.12] Generating wedge cuts...
+           instances/msc98-ip.pre.mps.gz [    350.12] Starting timer 2...
+           instances/msc98-ip.pre.mps.gz [    649.79]   4%  ETA: 2017-04-29 18:09:43  260 / 5877
+           instances/msc98-ip.pre.mps.gz [    949.47]   6%  ETA: 2017-04-29 19:00:40  359 / 5877
+           instances/msc98-ip.pre.mps.gz [   1249.14]   8%  ETA: 2017-04-29 19:31:31  453 / 5877
+           instances/msc98-ip.pre.mps.gz [   1548.81]   9%  ETA: 2017-04-29 19:54:08  541 / 5877
+           instances/msc98-ip.pre.mps.gz [   1848.49]  11%  ETA: 2017-04-29 20:10:26  629 / 5877
+           instances/msc98-ip.pre.mps.gz [   2148.16]  12%  ETA: 2017-04-29 20:25:09  710 / 5877
+           instances/msc98-ip.pre.mps.gz [   2447.83]  21%  ETA: 2017-04-29 19:03:03  1237 / 5877
+           instances/msc98-ip.pre.mps.gz [   2747.51]  24%  ETA: 2017-04-29 19:00:21  1437 / 5877
+           instances/msc98-ip.pre.mps.gz [   3047.18]  27%  ETA: 2017-04-29 19:05:25  1568 / 5877
+           instances/msc98-ip.pre.mps.gz [   3346.85]  29%  ETA: 2017-04-29 19:11:52  1678 / 5877
+           instances/msc98-ip.pre.mps.gz [   3646.52]  30%  ETA: 2017-04-29 19:19:34  1768 / 5877
+           instances/msc98-ip.pre.mps.gz [   3946.19]  32%  ETA: 2017-04-29 19:24:06  1882 / 5877
+           instances/msc98-ip.pre.mps.gz [   4245.87]  34%  ETA: 2017-04-29 19:30:39  1970 / 5877
+           instances/msc98-ip.pre.mps.gz [   4545.54]  35%  ETA: 2017-04-29 19:35:11  2073 / 5877
+           instances/msc98-ip.pre.mps.gz [   4845.21]  37%  ETA: 2017-04-29 19:39:40  2172 / 5877
+           instances/msc98-ip.pre.mps.gz [   5144.88]  39%  ETA: 2017-04-29 19:44:02  2268 / 5877
+           instances/msc98-ip.pre.mps.gz [   5444.55]  40%  ETA: 2017-04-29 19:48:57  2354 / 5877
+           instances/msc98-ip.pre.mps.gz [   5744.23]  41%  ETA: 2017-04-29 19:55:07  2422 / 5877
+           instances/msc98-ip.pre.mps.gz [   6043.90]  43%  ETA: 2017-04-29 19:59:37  2505 / 5877
+           instances/msc98-ip.pre.mps.gz [   6343.58]  44%  ETA: 2017-04-29 20:03:33  2591 / 5877
+           instances/msc98-ip.pre.mps.gz [   6643.25]  46%  ETA: 2017-04-29 20:06:38  2684 / 5877
+           instances/msc98-ip.pre.mps.gz [   6942.92]  47%  ETA: 2017-04-29 20:10:32  2765 / 5877
+           instances/msc98-ip.pre.mps.gz [   7242.60]  49%  ETA: 2017-04-29 20:13:47  2851 / 5877
+           instances/msc98-ip.pre.mps.gz [   7542.27]  50%  ETA: 2017-04-29 20:18:15  2920 / 5877
+           instances/msc98-ip.pre.mps.gz [   7841.94]  51%  ETA: 2017-04-29 20:21:12  3005 / 5877
+           instances/msc98-ip.pre.mps.gz [   8141.61]  53%  ETA: 2017-04-29 20:22:23  3110 / 5877
+           instances/msc98-ip.pre.mps.gz [   8441.28]  55%  ETA: 2017-04-29 20:24:21  3204 / 5877
+           instances/msc98-ip.pre.mps.gz [   8740.95]  56%  ETA: 2017-04-29 20:26:03  3300 / 5877
+           instances/msc98-ip.pre.mps.gz [   9040.63]  58%  ETA: 2017-04-29 20:26:55  3406 / 5877
+           instances/msc98-ip.pre.mps.gz [   9340.30]  60%  ETA: 2017-04-29 20:28:48  3497 / 5877
+           instances/msc98-ip.pre.mps.gz [   9639.97]  61%  ETA: 2017-04-29 20:31:32  3575 / 5877
+           instances/msc98-ip.pre.mps.gz [   9939.64]  62%  ETA: 2017-04-29 20:33:38  3660 / 5877
+           instances/msc98-ip.pre.mps.gz [  10239.32]  64%  ETA: 2017-04-29 20:35:39  3745 / 5877
+           instances/msc98-ip.pre.mps.gz [  10538.99]  65%  ETA: 2017-04-29 20:37:43  3828 / 5877
+           instances/msc98-ip.pre.mps.gz [  10838.66]  66%  ETA: 2017-04-29 20:40:50  3894 / 5877
+           instances/msc98-ip.pre.mps.gz [  11138.33]  68%  ETA: 2017-04-29 20:43:15  3969 / 5877
+           instances/msc98-ip.pre.mps.gz [  11438.00]  69%  ETA: 2017-04-29 20:45:26  4046 / 5877
+           instances/msc98-ip.pre.mps.gz [  11737.67]  70%  ETA: 2017-04-29 20:46:46  4135 / 5877
+           instances/msc98-ip.pre.mps.gz [  12037.35]  72%  ETA: 2017-04-29 20:47:46  4228 / 5877
+           instances/msc98-ip.pre.mps.gz [  12337.03]  74%  ETA: 2017-04-29 20:48:10  4330 / 5877
+           instances/msc98-ip.pre.mps.gz [  12636.71]  75%  ETA: 2017-04-29 20:49:36  4415 / 5877
+           instances/msc98-ip.pre.mps.gz [  12936.38]  77%  ETA: 2017-04-29 20:51:09  4497 / 5877
+           instances/msc98-ip.pre.mps.gz [  13236.06]  78%  ETA: 2017-04-29 20:52:03  4589 / 5877
+           instances/msc98-ip.pre.mps.gz [  13535.73]  80%  ETA: 2017-04-29 20:52:55  4681 / 5877
+           instances/msc98-ip.pre.mps.gz [  13835.41]  81%  ETA: 2017-04-29 20:54:13  4765 / 5877
+           instances/msc98-ip.pre.mps.gz [  14135.08]  83%  ETA: 2017-04-29 20:55:21  4851 / 5877
+           instances/msc98-ip.pre.mps.gz [  14434.75]  84%  ETA: 2017-04-29 20:56:24  4938 / 5877
+           instances/msc98-ip.pre.mps.gz [  14734.43]  86%  ETA: 2017-04-29 20:56:07  5048 / 5877
+           instances/msc98-ip.pre.mps.gz [  15034.10]  88%  ETA: 2017-04-29 20:56:42  5143 / 5877
+           instances/msc98-ip.pre.mps.gz [  15333.78]  89%  ETA: 2017-04-29 20:56:13  5257 / 5877
+           instances/msc98-ip.pre.mps.gz [  15633.46]  92%  ETA: 2017-04-29 20:54:24  5397 / 5877
+           instances/msc98-ip.pre.mps.gz [  15933.13]  93%  ETA: 2017-04-29 20:55:15  5486 / 5877
+           instances/msc98-ip.pre.mps.gz [  16232.81]  95%  ETA: 2017-04-29 20:54:56  5598 / 5877
+           instances/msc98-ip.pre.mps.gz [  16532.48]  97%  ETA: 2017-04-29 20:56:20  5675 / 5877
+           instances/msc98-ip.pre.mps.gz [  16832.16]  98%  ETA: 2017-04-29 20:56:55  5768 / 5877
+           instances/msc98-ip.pre.mps.gz [  17097.80] Ending timer 2: 16747.68s
+           instances/msc98-ip.pre.mps.gz [  17097.80] Added 0 violated cuts...
+           instances/msc98-ip.pre.mps.gz [  17097.88] 	 19683150.806067 [optimal]					   
+           instances/msc98-ip.pre.mps.gz [  17097.88] Writting stats: out/msc98-ip.pre.yaml...
+           instances/msc98-ip.pre.mps.gz [  17097.88] Done.

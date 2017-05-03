@@ -1,0 +1,47 @@
+       instances/iis-bupa-cov.pre.mps.gz [      0.00] Reading input file: instances/iis-bupa-cov.pre.mps.gz...
+       instances/iis-bupa-cov.pre.mps.gz [      0.04] Fetched 4803 rows, 5145 cols.
+       instances/iis-bupa-cov.pre.mps.gz [      0.04] Solving first relaxation...
+       instances/iis-bupa-cov.pre.mps.gz [      0.84] 	 26.497217 [optimal]					   
+       instances/iis-bupa-cov.pre.mps.gz [      0.84] Reading basis...
+       instances/iis-bupa-cov.pre.mps.gz [      1.30] Generating MIR cuts...
+       instances/iis-bupa-cov.pre.mps.gz [      1.30] Finding interesting rows...
+       instances/iis-bupa-cov.pre.mps.gz [     40.81] 	 4768 rows found
+       instances/iis-bupa-cov.pre.mps.gz [     40.82] Starting timer 1...
+       instances/iis-bupa-cov.pre.mps.gz [     41.76] 	 26.587448 [optimal]					   
+       instances/iis-bupa-cov.pre.mps.gz [     71.18] 	 26.609233 [optimal]					   
+       instances/iis-bupa-cov.pre.mps.gz [     84.17] Ending timer 1: 43.35s
+       instances/iis-bupa-cov.pre.mps.gz [     84.17] Added 202 violated cuts...
+       instances/iis-bupa-cov.pre.mps.gz [     84.28] 	 26.613065 [optimal]					   
+       instances/iis-bupa-cov.pre.mps.gz [     84.28] Generating wedge cuts...
+       instances/iis-bupa-cov.pre.mps.gz [     84.28] Starting timer 2...
+       instances/iis-bupa-cov.pre.mps.gz [    383.94]   4%  ETA: 2017-04-29 15:50:05  183 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [    683.57]   8%  ETA: 2017-04-29 15:50:26  365 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [    983.24]  12%  ETA: 2017-04-29 15:47:45  559 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   1282.90]  16%  ETA: 2017-04-29 15:47:38  746 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   1582.58]  20%  ETA: 2017-04-29 15:45:57  945 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   1882.25]  23%  ETA: 2017-04-29 15:48:10  1115 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   2030.11] 	 26.616332 [optimal]					   
+       instances/iis-bupa-cov.pre.mps.gz [   2181.95]  27%  ETA: 2017-04-29 15:49:32  1287 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   2481.62]  31%  ETA: 2017-04-29 15:49:57  1466 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   2781.28]  34%  ETA: 2017-04-29 15:50:32  1642 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   3080.95]  38%  ETA: 2017-04-29 15:50:55  1819 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   3380.62]  42%  ETA: 2017-04-29 15:50:15  2011 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   3680.28]  47%  ETA: 2017-04-29 15:48:50  2218 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   3979.95]  51%  ETA: 2017-04-29 15:48:30  2409 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   4279.63]  55%  ETA: 2017-04-29 15:48:01  2604 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   4560.58]  58%  ETA: 2017-04-29 15:48:50  2772 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   4860.26]  62%  ETA: 2017-04-29 15:48:24  2967 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   5159.94]  66%  ETA: 2017-04-29 15:47:58  3163 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   5458.26]  70%  ETA: 2017-04-29 15:48:56  3324 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   5757.93]  73%  ETA: 2017-04-29 15:49:17  3499 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   6057.60]  77%  ETA: 2017-04-29 15:50:00  3663 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   6357.28]  81%  ETA: 2017-04-29 15:49:38  3857 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   6656.95]  85%  ETA: 2017-04-29 15:49:16  4052 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   6956.63]  89%  ETA: 2017-04-29 15:48:51  4250 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   7256.31]  93%  ETA: 2017-04-29 15:48:22  4451 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   7555.99]  97%  ETA: 2017-04-29 15:48:08  4645 / 4768
+       instances/iis-bupa-cov.pre.mps.gz [   7746.37] Ending timer 2: 7662.09s
+       instances/iis-bupa-cov.pre.mps.gz [   7746.37] Added 191 violated cuts...
+       instances/iis-bupa-cov.pre.mps.gz [   7746.50] 	 26.617380 [optimal]					   
+       instances/iis-bupa-cov.pre.mps.gz [   7746.50] Writting stats: out/iis-bupa-cov.pre.yaml...
+       instances/iis-bupa-cov.pre.mps.gz [   7746.50] Done.

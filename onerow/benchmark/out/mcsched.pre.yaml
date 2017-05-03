@@ -1,0 +1,24 @@
+input_file:
+  instances/mcsched.pre.mps.gz
+sol_value:
+  0: 193774.753707
+  1: 193781.935771
+  2: 193781.941673
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    130
+  depth:
+    0: 128
+    1: 2
+timers:
+  1: 17.8713
+  2: 3582.8893
+cut_speed:
+  round_1: inf
+  round_2: inf
+mip_value:
+  211913.000000

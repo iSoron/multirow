@@ -1,0 +1,28 @@
+input_file:
+  instances/sp98ir.pre.mps.gz
+sol_value:
+  0: 216670237.636667
+  1: 216809560.950495
+  2: 216813694.963202
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    200
+  depth:
+    0: 100
+    1: 86
+    2: 2
+    3: 8
+    4: 3
+    7: 1
+timers:
+  1: 18.0393
+  2: 8661.1833
+cut_speed:
+  round_1: inf
+  round_2: inf
+mip_value:
+  219677000.000000

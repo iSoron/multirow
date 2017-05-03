@@ -1,0 +1,108 @@
+       instances/iis-pima-cov.pre.mps.gz [      0.00] Reading input file: instances/iis-pima-cov.pre.mps.gz...
+       instances/iis-pima-cov.pre.mps.gz [      0.07] Fetched 7201 rows, 7938 cols.
+       instances/iis-pima-cov.pre.mps.gz [      0.07] Solving first relaxation...
+       instances/iis-pima-cov.pre.mps.gz [      1.29] 	 26.620389 [optimal]					   
+       instances/iis-pima-cov.pre.mps.gz [      1.29] Reading basis...
+       instances/iis-pima-cov.pre.mps.gz [      2.40] Generating MIR cuts...
+       instances/iis-pima-cov.pre.mps.gz [      2.40] Finding interesting rows...
+       instances/iis-pima-cov.pre.mps.gz [    152.21] 	 7102 rows found
+       instances/iis-pima-cov.pre.mps.gz [    152.21] Starting timer 1...
+       instances/iis-pima-cov.pre.mps.gz [    154.72] 	 26.741054 [optimal]					   
+       instances/iis-pima-cov.pre.mps.gz [    265.74] Ending timer 1: 113.53s
+       instances/iis-pima-cov.pre.mps.gz [    265.74] Added 174 violated cuts...
+       instances/iis-pima-cov.pre.mps.gz [    265.90] 	 26.754058 [optimal]					   
+       instances/iis-pima-cov.pre.mps.gz [    265.90] Generating wedge cuts...
+       instances/iis-pima-cov.pre.mps.gz [    265.90] Starting timer 2...
+       instances/iis-pima-cov.pre.mps.gz [    565.57]   1%  ETA: 2017-04-29 21:31:07  85 / 7102
+       instances/iis-pima-cov.pre.mps.gz [    691.12] 	 26.755907 [optimal]					   
+       instances/iis-pima-cov.pre.mps.gz [    865.25]   2%  ETA: 2017-04-29 21:31:07  170 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   1164.83]   4%  ETA: 2017-04-29 21:29:29  256 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   1464.49]   5%  ETA: 2017-04-29 21:27:28  343 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   1746.42]   6%  ETA: 2017-04-29 21:41:11  415 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   2046.09]   7%  ETA: 2017-04-29 21:41:11  498 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   2345.57]   8%  ETA: 2017-04-29 21:46:24  574 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   2644.59]   9%  ETA: 2017-04-29 22:01:26  634 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   2944.19]  10%  ETA: 2017-04-29 22:17:53  688 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   3243.85]  11%  ETA: 2017-04-29 22:16:20  767 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   3543.52]  12%  ETA: 2017-04-29 22:16:10  844 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   3843.03]  13%  ETA: 2017-04-29 22:15:02  923 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   4142.70]  14%  ETA: 2017-04-29 22:16:51  996 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   4442.37]  15%  ETA: 2017-04-29 22:15:23  1076 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   4742.03]  16%  ETA: 2017-04-29 22:16:32  1150 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   5041.70]  17%  ETA: 2017-04-29 22:13:47  1234 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   5341.37]  19%  ETA: 2017-04-29 22:11:02  1319 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   5641.04]  20%  ETA: 2017-04-29 22:08:17  1405 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   5940.66]  21%  ETA: 2017-04-29 22:07:23  1486 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   6240.31]  22%  ETA: 2017-04-29 22:06:52  1566 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   6536.10]  23%  ETA: 2017-04-29 22:08:20  1639 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   6835.78]  24%  ETA: 2017-04-29 22:08:21  1717 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   7135.46]  25%  ETA: 2017-04-29 22:06:51  1801 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   7435.13]  27%  ETA: 2017-04-29 22:04:45  1888 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   7734.80]  28%  ETA: 2017-04-29 22:03:22  1973 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   8034.48]  29%  ETA: 2017-04-29 22:01:36  2060 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   8334.15]  30%  ETA: 2017-04-29 22:01:26  2140 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   8633.82]  31%  ETA: 2017-04-29 22:01:05  2221 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   8933.49]  32%  ETA: 2017-04-29 22:00:22  2304 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   9233.16]  34%  ETA: 2017-04-29 22:00:27  2383 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   9532.83]  35%  ETA: 2017-04-29 22:00:53  2460 / 7102
+       instances/iis-pima-cov.pre.mps.gz [   9832.50]  36%  ETA: 2017-04-29 21:59:22  2548 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  10132.17]  37%  ETA: 2017-04-29 21:58:48  2631 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  10431.85]  38%  ETA: 2017-04-29 21:58:15  2714 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  10731.52]  39%  ETA: 2017-04-29 21:57:17  2800 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  11031.19]  41%  ETA: 2017-04-29 21:56:58  2882 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  11330.87]  42%  ETA: 2017-04-29 21:57:52  2956 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  11630.55]  43%  ETA: 2017-04-29 21:57:08  3041 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  11930.22]  44%  ETA: 2017-04-29 21:56:59  3122 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  12229.89]  45%  ETA: 2017-04-29 21:56:02  3209 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  12529.57]  46%  ETA: 2017-04-29 21:55:31  3293 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  12829.24]  48%  ETA: 2017-04-29 21:54:23  3382 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  13128.92]  49%  ETA: 2017-04-29 21:54:12  3464 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  13428.60]  50%  ETA: 2017-04-29 21:54:31  3542 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  13728.26]  51%  ETA: 2017-04-29 21:54:20  3624 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  14027.93]  52%  ETA: 2017-04-29 21:56:11  3689 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  14327.60]  53%  ETA: 2017-04-29 21:56:05  3770 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  14627.27]  54%  ETA: 2017-04-29 21:55:53  3852 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  14926.95]  55%  ETA: 2017-04-29 21:55:14  3938 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  15226.63]  57%  ETA: 2017-04-29 21:54:57  4021 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  15526.30]  58%  ETA: 2017-04-29 21:54:53  4102 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  15825.97]  59%  ETA: 2017-04-29 21:54:56  4182 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  16125.65]  60%  ETA: 2017-04-29 21:54:15  4269 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  16425.33]  61%  ETA: 2017-04-29 21:53:36  4356 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  16725.00]  62%  ETA: 2017-04-29 21:53:39  4436 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  17024.67]  64%  ETA: 2017-04-29 21:53:55  4514 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  17324.35]  65%  ETA: 2017-04-29 21:53:18  4601 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  17624.02]  66%  ETA: 2017-04-29 21:52:43  4688 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  17923.70]  67%  ETA: 2017-04-29 21:52:03  4776 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  18223.37]  68%  ETA: 2017-04-29 21:51:36  4862 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  18523.05]  70%  ETA: 2017-04-29 21:51:15  4947 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  18822.73]  71%  ETA: 2017-04-29 21:51:00  5031 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  19122.40]  72%  ETA: 2017-04-29 21:50:19  5120 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  19422.08]  73%  ETA: 2017-04-29 21:49:50  5207 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  19721.75]  75%  ETA: 2017-04-29 21:49:32  5292 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  20021.43]  76%  ETA: 2017-04-29 21:49:15  5377 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  20321.10]  77%  ETA: 2017-04-29 21:50:44  5440 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  20620.77]  78%  ETA: 2017-04-29 21:50:26  5525 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  20920.45]  79%  ETA: 2017-04-29 21:49:49  5614 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  21220.13]  80%  ETA: 2017-04-29 21:49:29  5700 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  21519.81]  82%  ETA: 2017-04-29 21:48:55  5789 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  21819.49]  83%  ETA: 2017-04-29 21:48:35  5875 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  22119.17]  84%  ETA: 2017-04-29 21:48:51  5953 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  22418.84]  85%  ETA: 2017-04-29 21:49:54  6020 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  22718.51]  86%  ETA: 2017-04-29 21:50:30  6093 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  23018.19]  87%  ETA: 2017-04-29 21:50:27  6175 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  23312.26]  88%  ETA: 2017-04-29 21:50:36  6254 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  23611.89]  89%  ETA: 2017-04-29 21:50:49  6332 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  23911.55]  90%  ETA: 2017-04-29 21:50:25  6419 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  24211.22]  92%  ETA: 2017-04-29 21:50:14  6503 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  24510.84]  93%  ETA: 2017-04-29 21:50:43  6577 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  24810.38]  94%  ETA: 2017-04-29 21:51:20  6649 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  25110.01]  95%  ETA: 2017-04-29 21:51:36  6726 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  25409.53]  96%  ETA: 2017-04-29 21:51:55  6802 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  25709.10]  97%  ETA: 2017-04-29 21:52:22  6876 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  26008.73]  98%  ETA: 2017-04-29 21:52:52  6949 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  26308.40]  99%  ETA: 2017-04-29 21:52:43  7032 / 7102
+       instances/iis-pima-cov.pre.mps.gz [  26553.63] Ending timer 2: 26287.72s
+       instances/iis-pima-cov.pre.mps.gz [  26553.63] Added 135 violated cuts...
+       instances/iis-pima-cov.pre.mps.gz [  26553.71] 	 26.756708 [optimal]					   
+       instances/iis-pima-cov.pre.mps.gz [  26553.71] Writting stats: out/iis-pima-cov.pre.yaml...
+       instances/iis-pima-cov.pre.mps.gz [  26553.71] Done.

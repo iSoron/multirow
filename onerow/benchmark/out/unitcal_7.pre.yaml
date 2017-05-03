@@ -1,0 +1,23 @@
+input_file:
+  instances/unitcal_7.pre.mps.gz
+sol_value:
+  0: 19449580.554328
+  1: 19466515.326663
+  2: 19466515.326663
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    494
+  depth:
+    0: 494
+timers:
+  1: 1.6048
+  2: 28.0487
+cut_speed:
+  round_1: inf
+  round_2: inf
+mip_value:
+  19635600.000000

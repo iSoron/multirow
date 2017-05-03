@@ -1,0 +1,30 @@
+input_file:
+  instances/rococoC10-001000.pre.mps.gz
+sol_value:
+  0: 7515.271029
+  1: 8362.359515
+  2: 8392.867464
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    540
+  depth:
+    0: 154
+    1: 166
+    2: 102
+    3: 84
+    4: 23
+    5: 6
+    6: 3
+    7: 2
+timers:
+  1: 0.8659
+  2: 183.9100
+cut_speed:
+  round_1: inf
+  round_2: inf
+mip_value:
+  11460.000000

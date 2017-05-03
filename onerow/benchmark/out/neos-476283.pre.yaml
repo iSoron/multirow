@@ -1,0 +1,23 @@
+input_file:
+  instances/neos-476283.pre.mps.gz
+sol_value:
+  0: 406.244708
+  1: 406.250302
+  2: 406.250302
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    35
+  depth:
+    0: 35
+timers:
+  1: 10.4584
+  2: 20.0600
+cut_speed:
+  round_1: inf
+  round_2: inf
+mip_value:
+  406.363000

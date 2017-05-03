@@ -1,0 +1,28 @@
+input_file:
+  instances/mzzv11.pre.mps.gz
+sol_value:
+  0: -22773.750000
+  1: -22488.806793
+  2: -22483.587203
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    621
+  depth:
+    0: 300
+    1: 168
+    2: 91
+    3: 45
+    4: 12
+    5: 5
+timers:
+  1: 247.7053
+  2: 25885.4398
+cut_speed:
+  round_1: inf
+  round_2: inf
+mip_value:
+  -21718.000000

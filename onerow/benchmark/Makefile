@@ -1,3 +1,15 @@
+miplib2010-top := \
+	instances/gmu-35-40.pre.done \
+	instances/eil33-2.pre.done \
+	instances/neos-1337307.pre.done \
+	instances/opm2-z7-s2.pre.done \
+	instances/mik-250-1-100-1.pre.done \
+	instances/neos-686190.pre.done \
+	instances/mine-90-10.pre.done \
+	instances/cov1075.pre.done \
+	instances/mine-166-5.pre.done \
+	instances/n3div36.pre.done
+
 miplib2010 := \
 	instances/30n20b8.pre.done \
 	instances/aflow40b.pre.done \
@@ -88,6 +100,7 @@ benchmark := ../../build/onerow/benchmark/onerow-benchmark.run
 .SECONDARY:
 
 miplib2010: $(miplib2010)
+miplib2010-top: $(miplib2010-top)
 
 instances/%.done: $(benchmark) out/%.yaml
 	@touch $@
@@ -95,3 +108,5 @@ instances/%.done: $(benchmark) out/%.yaml
 out/%.yaml: $(benchmark) instances/%.mps.gz
 	@$(benchmark) -mw -f instances/$*.mps.gz -s out/$*.yaml 2>&1 | tee out/$*.log
 
+clean:
+	rm -f out/* instances/*.done

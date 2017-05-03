@@ -1,0 +1,23 @@
+input_file:
+  instances/pw-myciel4.pre.mps.gz
+sol_value:
+  0: 4.000000
+  1: 4.000000
+  2: 4.000000
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    100
+  depth:
+    0: 100
+timers:
+  1: 23.6234
+  2: 6579.2578
+cut_speed:
+  round_1: inf
+  round_2: inf
+mip_value:
+  10.000000

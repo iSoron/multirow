@@ -1,0 +1,23 @@
+input_file:
+  instances/msc98-ip.pre.mps.gz
+sol_value:
+  0: 19530897.712251
+  1: 19683150.806067
+  2: 19683150.806067
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_added_cuts:
+  total:
+    205
+  depth:
+    0: 205
+timers:
+  1: 253.7344
+  2: 16747.6840
+cut_speed:
+  round_1: inf
+  round_2: inf
+mip_value:
+  19839500.000000
