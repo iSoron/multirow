@@ -1,0 +1,25 @@
+input_file:
+  running/air04.pre.mps.gz
+sol_value:
+  0: 55535.436388
+  1: 55584.386216
+  2: 55590.316130
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_cuts:
+  total:
+    715
+  depth:
+    0: 106
+    1: 339
+    2: 149
+    3: 58
+    4: 37
+    5: 18
+    6: 7
+    7: 1
+mip_value:
+  56137.000000
+time: 144318.96

@@ -1,5 +1,5 @@
 input_file:
-  instances/danoint.pre.mps.gz
+  running/danoint.pre.mps.gz
 sol_value:
   0: 62.637280
   1: 62.690000
@@ -8,16 +8,11 @@ sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
     52
   depth:
     0: 52
-timers:
-  1: 0.6409
-  2: 2.0667
-cut_speed:
-  round_1: inf
-  round_2: inf
 mip_value:
   65.666700
+time: 10.29

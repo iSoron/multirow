@@ -1,23 +1,19 @@
 input_file:
-  instances/dfn-gwin-UUM.pre.mps.gz
+  running/dfn-gwin-UUM.pre.mps.gz
 sol_value:
   0: 27467.257235
-  1: 32138.118246
-  2: 32138.118246
+  1: 32186.983731
+  2: 32195.320369
 sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
-    45
+    46
   depth:
     0: 45
-timers:
-  1: 0.0460
-  2: 0.1510
-cut_speed:
-  round_1: inf
-  round_2: inf
+    1: 1
 mip_value:
   38752.000000
+time: 0.60

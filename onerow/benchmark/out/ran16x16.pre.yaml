@@ -1,5 +1,5 @@
 input_file:
-  instances/ran16x16.pre.mps.gz
+  running/ran16x16.pre.mps.gz
 sol_value:
   0: 3116.429512
   1: 3238.332602
@@ -8,19 +8,14 @@ sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
-    70
+    72
   depth:
     0: 20
-    1: 39
+    1: 41
     2: 10
     3: 1
-timers:
-  1: 0.0350
-  2: 1.1018
-cut_speed:
-  round_1: inf
-  round_2: inf
 mip_value:
   3823.000000
+time: 1.51

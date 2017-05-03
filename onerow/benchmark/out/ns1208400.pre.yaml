@@ -1,0 +1,18 @@
+input_file:
+  running/ns1208400.pre.mps.gz
+sol_value:
+  0: 0.000000
+  1: 0.000000
+  2: 0.000000
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_cuts:
+  total:
+    135
+  depth:
+    0: 135
+mip_value:
+  2.000000
+time: 145362.20

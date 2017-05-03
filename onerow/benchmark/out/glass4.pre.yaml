@@ -1,5 +1,5 @@
 input_file:
-  instances/glass4.pre.mps.gz
+  running/glass4.pre.mps.gz
 sol_value:
   0: 800002400.000000
   1: 1269062192.116870
@@ -8,16 +8,11 @@ sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
     72
   depth:
     0: 72
-timers:
-  1: 0.0090
-  2: 0.0390
-cut_speed:
-  round_1: inf
-  round_2: inf
 mip_value:
   1200010000.000000
+time: 0.10

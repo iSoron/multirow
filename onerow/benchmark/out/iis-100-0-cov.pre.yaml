@@ -1,5 +1,5 @@
 input_file:
-  instances/iis-100-0-cov.pre.mps.gz
+  running/iis-100-0-cov.pre.mps.gz
 sol_value:
   0: 16.666667
   1: 16.883520
@@ -8,17 +8,12 @@ sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
     141
   depth:
     0: 100
     1: 41
-timers:
-  1: 0.9249
-  2: 25.5771
-cut_speed:
-  round_1: inf
-  round_2: inf
 mip_value:
   29.000000
+time: 48.90

@@ -1,5 +1,5 @@
 input_file:
-  instances/bienst2.pre.mps.gz
+  running/bienst2.pre.mps.gz
 sol_value:
   0: 11.724138
   1: 14.442185
@@ -8,16 +8,11 @@ sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
-    32
+    33
   depth:
-    0: 32
-timers:
-  1: 0.1320
-  2: 0.2480
-cut_speed:
-  round_1: inf
-  round_2: inf
+    0: 33
 mip_value:
   54.600000
+time: 2.77

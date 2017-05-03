@@ -1,29 +1,24 @@
 input_file:
-  instances/eil33-2.pre.mps.gz
+  running/eil33-2.pre.mps.gz
 sol_value:
   0: 811.278996
   1: 816.525944
-  2: 829.945565
+  2: 829.999720
 sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
-    314
+    277
   depth:
     0: 30
-    1: 44
-    2: 65
-    3: 85
-    4: 59
-    5: 30
+    1: 35
+    2: 63
+    3: 83
+    4: 42
+    5: 23
     6: 1
-timers:
-  1: 3.9404
-  2: 7439.7170
-cut_speed:
-  round_1: inf
-  round_2: inf
 mip_value:
   934.008000
+time: 6454.46

@@ -1,23 +1,18 @@
 input_file:
-  instances/bab5.pre.mps.gz
+  running/bab5.pre.mps.gz
 sol_value:
   0: -117062.158350
-  1: -115831.073600
-  2: -115831.073600
+  1: -114125.743033
+  2: -114125.743033
 sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
-    124
+    104
   depth:
-    0: 124
-timers:
-  1: 11.1843
-  2: 10894.0409
-cut_speed:
-  round_1: inf
-  round_2: inf
+    0: 104
 mip_value:
   -106412.000000
+time: 10384.46

@@ -1,0 +1,25 @@
+input_file:
+  running/n3div36.pre.mps.gz
+sol_value:
+  0: 114333.374741
+  1: 117031.236697
+  2: 117437.521387
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_cuts:
+  total:
+    148
+  depth:
+    0: 48
+    1: 45
+    2: 14
+    3: 17
+    4: 9
+    5: 11
+    6: 3
+    7: 1
+mip_value:
+  130800.000000
+time: 133533.72

@@ -1,23 +1,18 @@
 input_file:
-  instances/zib54-UUE.pre.mps.gz
+  running/zib54-UUE.pre.mps.gz
 sol_value:
   0: 4081019.857589
-  1: 4520243.074329
-  2: 4520243.074329
+  1: 4488547.496596
+  2: 4488547.496596
 sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
     59
   depth:
     0: 59
-timers:
-  1: 0.1840
-  2: 0.2990
-cut_speed:
-  round_1: inf
-  round_2: inf
 mip_value:
   10334000.000000
+time: 1.19

@@ -1,5 +1,5 @@
 input_file:
-  instances/rmine6.pre.mps.gz
+  running/rmine6.pre.mps.gz
 sol_value:
   0: -462.305727
   1: -461.559834
@@ -8,19 +8,14 @@ sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
     423
   depth:
     0: 123
-    1: 282
-    2: 15
+    1: 283
+    2: 14
     3: 3
-timers:
-  1: 22.5076
-  2: 2161.9483
-cut_speed:
-  round_1: inf
-  round_2: inf
 mip_value:
   -457.186000
+time: 2751.66

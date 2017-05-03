@@ -1,5 +1,5 @@
 input_file:
-  instances/gmu-35-40.pre.mps.gz
+  running/gmu-35-40.pre.mps.gz
 sol_value:
   0: -2406943.556343
   1: -2406943.400139
@@ -8,23 +8,18 @@ sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
-    535
+    430
   depth:
     0: 27
-    1: 73
-    2: 132
-    3: 124
-    4: 84
-    5: 56
-    6: 29
+    1: 45
+    2: 109
+    3: 98
+    4: 69
+    5: 42
+    6: 30
     7: 10
-timers:
-  1: 0.4809
-  2: 77.0923
-cut_speed:
-  round_1: inf
-  round_2: inf
 mip_value:
   -2406730.000000
+time: 88.37

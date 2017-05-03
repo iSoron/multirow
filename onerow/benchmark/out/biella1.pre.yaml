@@ -1,0 +1,18 @@
+input_file:
+  running/biella1.pre.mps.gz
+sol_value:
+  0: 3060037.430763
+  1: 3060377.602310
+  2: 3060377.602310
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_cuts:
+  total:
+    101
+  depth:
+    0: 101
+mip_value:
+  3065010.000000
+time: 128231.64

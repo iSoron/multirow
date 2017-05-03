@@ -1,19 +1,17 @@
-           instances/aflow40b.pre.mps.gz [      0.00] Reading input file: instances/aflow40b.pre.mps.gz...
-           instances/aflow40b.pre.mps.gz [      0.01] Fetched 1405 rows, 4056 cols.
-           instances/aflow40b.pre.mps.gz [      0.01] Solving first relaxation...
-           instances/aflow40b.pre.mps.gz [      0.10] 	 1005.664817 [optimal]					   
-           instances/aflow40b.pre.mps.gz [      0.10] Reading basis...
-           instances/aflow40b.pre.mps.gz [      0.16] Generating MIR cuts...
-           instances/aflow40b.pre.mps.gz [      0.16] Finding interesting rows...
-           instances/aflow40b.pre.mps.gz [      1.40] 	 32 rows found
-           instances/aflow40b.pre.mps.gz [      1.40] Starting timer 1...
-           instances/aflow40b.pre.mps.gz [      1.85] Ending timer 1: 0.44s
-           instances/aflow40b.pre.mps.gz [      1.85] Added 32 violated cuts...
-           instances/aflow40b.pre.mps.gz [      1.91] 	 1019.113628 [optimal]					   
-           instances/aflow40b.pre.mps.gz [      1.91] Generating wedge cuts...
-           instances/aflow40b.pre.mps.gz [      1.91] Starting timer 2...
-           instances/aflow40b.pre.mps.gz [    159.04] Ending timer 2: 157.13s
-           instances/aflow40b.pre.mps.gz [    159.04] Added 4 violated cuts...
-           instances/aflow40b.pre.mps.gz [    159.07] 	 1019.203643 [optimal]					   
-           instances/aflow40b.pre.mps.gz [    159.07] Writting stats: out/aflow40b.pre.yaml...
-           instances/aflow40b.pre.mps.gz [    159.07] Done.
+version: benchmark-99d69fb.run
+machine: cogradmac143
+[      0.00] Reading input file: running/aflow40b.pre.mps.gz...
+[      0.00] Fetched 1405 rows, 4056 cols.
+[      0.00] Solving first relaxation...
+[      0.08]     1005.664817 [optimal]                    
+[      0.08] Reading basis...
+                                                       [      0.14] Generating MIR cuts...
+[      0.14] Finding interesting rows...
+[      1.13]     32 rows found
+                                                       [      1.54] Added 32 violated cuts...
+[      1.61]     1018.504641 [optimal]                    
+[      1.61] Generating wedge cuts...
+ 12%  ETA: 2016-04-12 11:56:37  4 / 32 12%  ETA: 2016-04-12 11:56:45  4 / 32 12%  ETA: 2016-04-12 11:56:53  4 / 32 12%  ETA: 2016-04-12 11:57:01  4 / 32 12%  ETA: 2016-04-12 11:57:09  4 / 32 12%  ETA: 2016-04-12 11:57:17  4 / 32 12%  ETA: 2016-04-12 11:57:25  4 / 32 12%  ETA: 2016-04-12 11:57:33  4 / 32 25%  ETA: 2016-04-12 11:57:05  8 / 32 31%  ETA: 2016-04-12 11:57:01  10 / 32 34%  ETA: 2016-04-12 11:57:01  11 / 32 38%  ETA: 2016-04-12 11:57:01  12 / 32 38%  ETA: 2016-04-12 11:57:03  12 / 32 47%  ETA: 2016-04-12 11:56:58  15 / 32 47%  ETA: 2016-04-12 11:57:01  15 / 32 50%  ETA: 2016-04-12 11:57:01  16 / 32 50%  ETA: 2016-04-12 11:57:03  16 / 32 50%  ETA: 2016-04-12 11:57:05  16 / 32 53%  ETA: 2016-04-12 11:57:04  17 / 32 62%  ETA: 2016-04-12 11:57:01  20 / 32 69%  ETA: 2016-04-12 11:56:59  22 / 32 69%  ETA: 2016-04-12 11:57:01  22 / 32 69%  ETA: 2016-04-12 11:57:02  22 / 32 69%  ETA: 2016-04-12 11:57:03  22 / 32 69%  ETA: 2016-04-12 11:57:05  22 / 32 69%  ETA: 2016-04-12 11:57:06  22 / 32 78%  ETA: 2016-04-12 11:57:03  25 / 32 81%  ETA: 2016-04-12 11:57:03  26 / 32 81%  ETA: 2016-04-12 11:57:04  26 / 32 81%  ETA: 2016-04-12 11:57:05  26 / 32 81%  ETA: 2016-04-12 11:57:07  26 / 32 84%  ETA: 2016-04-12 11:57:06  27 / 32 84%  ETA: 2016-04-12 11:57:08  27 / 32 88%  ETA: 2016-04-12 11:57:07  28 / 32 88%  ETA: 2016-04-12 11:57:09  28 / 32 88%  ETA: 2016-04-12 11:57:10  28 / 32 91%  ETA: 2016-04-12 11:57:09  29 / 32 91%  ETA: 2016-04-12 11:57:10  29 / 32 91%  ETA: 2016-04-12 11:57:12  29 / 32 97%  ETA: 2016-04-12 11:57:10  31 / 32 97%  ETA: 2016-04-12 11:57:11  31 / 32 97%  ETA: 2016-04-12 11:57:12  31 / 32 97%  ETA: 2016-04-12 11:57:13  31 / 32 97%  ETA: 2016-04-12 11:57:14  31 / 32 97%  ETA: 2016-04-12 11:57:15  31 / 32 97%  ETA: 2016-04-12 11:57:16  31 / 32 97%  ETA: 2016-04-12 11:57:17  31 / 32                                                       [    152.57] Added 0 violated cuts...
+[    152.58]     1018.504641 [optimal]                    
+[    152.58] Writting stats: out/aflow40b.yaml...
+[    152.58] Done.

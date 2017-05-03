@@ -1,24 +1,19 @@
-   instances/rococoC10-001000.pre.mps.gz [      0.00] Reading input file: instances/rococoC10-001000.pre.mps.gz...
-   instances/rococoC10-001000.pre.mps.gz [      0.01] Fetched 576 rows, 2689 cols.
-   instances/rococoC10-001000.pre.mps.gz [      0.01] Solving first relaxation...
-   instances/rococoC10-001000.pre.mps.gz [      0.05] 	 7515.271029 [optimal]					   
-   instances/rococoC10-001000.pre.mps.gz [      0.06] Reading basis...
-   instances/rococoC10-001000.pre.mps.gz [      0.08] Generating MIR cuts...
-   instances/rococoC10-001000.pre.mps.gz [      0.08] Finding interesting rows...
-   instances/rococoC10-001000.pre.mps.gz [      1.27] 	 192 rows found
-   instances/rococoC10-001000.pre.mps.gz [      1.27] Starting timer 1...
-   instances/rococoC10-001000.pre.mps.gz [      1.73] 	 8300.403407 [optimal]					   
-   instances/rococoC10-001000.pre.mps.gz [      2.14] Ending timer 1: 0.87s
-   instances/rococoC10-001000.pre.mps.gz [      2.14] Added 136 violated cuts...
-   instances/rococoC10-001000.pre.mps.gz [      2.14] 	 8362.359515 [optimal]					   
-   instances/rococoC10-001000.pre.mps.gz [      2.14] Generating wedge cuts...
-   instances/rococoC10-001000.pre.mps.gz [      2.14] Starting timer 2...
-   instances/rococoC10-001000.pre.mps.gz [     21.60] 	 8366.995697 [optimal]					   
-   instances/rococoC10-001000.pre.mps.gz [     48.43] 	 8381.927143 [optimal]					   
-   instances/rococoC10-001000.pre.mps.gz [     96.17] 	 8386.079348 [optimal]					   
-   instances/rococoC10-001000.pre.mps.gz [    176.89] 	 8392.866106 [optimal]					   
-   instances/rococoC10-001000.pre.mps.gz [    186.05] Ending timer 2: 183.91s
-   instances/rococoC10-001000.pre.mps.gz [    186.05] Added 404 violated cuts...
-   instances/rococoC10-001000.pre.mps.gz [    186.06] 	 8392.867464 [optimal]					   
-   instances/rococoC10-001000.pre.mps.gz [    186.06] Writting stats: out/rococoC10-001000.pre.yaml...
-   instances/rococoC10-001000.pre.mps.gz [    186.06] Done.
+version: benchmark-99d69fb.run
+machine: cogradmac143
+[      0.00] Reading input file: running/rococoC10-001000.pre.mps.gz...
+[      0.00] Fetched 576 rows, 2689 cols.
+[      0.00] Solving first relaxation...
+[      0.04]     7515.271029 [optimal]                    
+[      0.04] Reading basis...
+                                                       [      0.05] Generating MIR cuts...
+[      0.05] Finding interesting rows...
+[      1.70]     192 rows found
+[      2.37]     8242.745255 [optimal]                    
+                                                       [      2.97] Added 136 violated cuts...
+[      2.97]     8349.908437 [optimal]                    
+[      2.97] Generating wedge cuts...
+  3%  ETA: 2016-04-12 10:50:41  5 / 192  3%  ETA: 2016-04-12 10:51:07  6 / 192  5%  ETA: 2016-04-12 10:51:00  10 / 192  5%  ETA: 2016-04-12 10:51:19  10 / 192  7%  ETA: 2016-04-12 10:51:11  14 / 192 10%  ETA: 2016-04-12 10:51:03  19 / 192 13%  ETA: 2016-04-12 10:50:56  25 / 192 13%  ETA: 2016-04-12 10:51:04  25 / 192 14%  ETA: 2016-04-12 10:51:09  26 / 192 16%  ETA: 2016-04-12 10:51:07  30 / 192 19%  ETA: 2016-04-12 10:51:01  36 / 192 20%  ETA: 2016-04-12 10:51:02  39 / 192 21%  ETA: 2016-04-12 10:51:05  40 / 192 25%  ETA: 2016-04-12 10:50:59  48 / 192 26%  ETA: 2016-04-12 10:51:00  50 / 192 27%  ETA: 2016-04-12 10:51:03  51 / 192 29%  ETA: 2016-04-12 10:51:01  56 / 192 31%  ETA: 2016-04-12 10:51:00  60 / 192 32%  ETA: 2016-04-12 10:51:01  62 / 192 35%  ETA: 2016-04-12 10:50:59  68 / 192 38%  ETA: 2016-04-12 10:50:59  72 / 192 38%  ETA: 2016-04-12 10:51:01  72 / 192 38%  ETA: 2016-04-12 10:51:04  72 / 192 38%  ETA: 2016-04-12 10:51:07  72 / 192 43%  ETA: 2016-04-12 10:51:01  82 / 192 44%  ETA: 2016-04-12 10:51:02  84 / 192 45%  ETA: 2016-04-12 10:51:03  86 / 192 46%  ETA: 2016-04-12 10:51:03  89 / 192 48%  ETA: 2016-04-12 10:51:03  92 / 192 51%  ETA: 2016-04-12 10:51:01  98 / 192 53%  ETA: 2016-04-12 10:51:01  102 / 192[    120.17]     8397.918627 [optimal]                    
+ 56%  ETA: 2016-04-12 10:51:00  107 / 192 59%  ETA: 2016-04-12 10:50:58  114 / 192 61%  ETA: 2016-04-12 10:50:58  118 / 192 62%  ETA: 2016-04-12 10:50:59  119 / 192 62%  ETA: 2016-04-12 10:51:01  119 / 192 62%  ETA: 2016-04-12 10:51:02  119 / 192 64%  ETA: 2016-04-12 10:51:02  122 / 192 65%  ETA: 2016-04-12 10:51:02  125 / 192 67%  ETA: 2016-04-12 10:51:03  128 / 192 70%  ETA: 2016-04-12 10:51:01  135 / 192 71%  ETA: 2016-04-12 10:51:01  137 / 192 72%  ETA: 2016-04-12 10:51:02  138 / 192 72%  ETA: 2016-04-12 10:51:04  138 / 192 72%  ETA: 2016-04-12 10:51:05  138 / 192 74%  ETA: 2016-04-12 10:51:05  142 / 192 76%  ETA: 2016-04-12 10:51:04  146 / 192 78%  ETA: 2016-04-12 10:51:04  150 / 192 80%  ETA: 2016-04-12 10:51:04  153 / 192 81%  ETA: 2016-04-12 10:51:04  156 / 192 84%  ETA: 2016-04-12 10:51:03  162 / 192 86%  ETA: 2016-04-12 10:51:03  166 / 192 87%  ETA: 2016-04-12 10:51:03  167 / 192 88%  ETA: 2016-04-12 10:51:04  169 / 192 90%  ETA: 2016-04-12 10:51:04  173 / 192 92%  ETA: 2016-04-12 10:51:03  177 / 192 94%  ETA: 2016-04-12 10:51:03  180 / 192 96%  ETA: 2016-04-12 10:51:03  185 / 192 98%  ETA: 2016-04-12 10:51:03  188 / 192                                                       [    226.20] Added 149 violated cuts...
+[    226.21]     8399.191044 [optimal]                    
+[    226.21] Writting stats: out/rococoC10-001000.yaml...
+[    226.21] Done.

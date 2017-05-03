@@ -1,5 +1,5 @@
 input_file:
-  instances/n4-3.pre.mps.gz
+  running/n4-3.pre.mps.gz
 sol_value:
   0: 4933.823529
   1: 5365.701682
@@ -8,16 +8,11 @@ sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
     40
   depth:
     0: 40
-timers:
-  1: 0.1700
-  2: 1.3238
-cut_speed:
-  round_1: inf
-  round_2: inf
 mip_value:
   8993.000000
+time: 3.03

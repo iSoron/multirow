@@ -1,0 +1,24 @@
+input_file:
+  running/opm2-z7-s2.pre.mps.gz
+sol_value:
+  0: -12879.686897
+  1: -12863.676447
+  2: -12854.203684
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_cuts:
+  total:
+    300
+  depth:
+    0: 100
+    1: 95
+    2: 48
+    3: 41
+    4: 14
+    5: 1
+    8: 1
+mip_value:
+  -10280.000000
+time: 203382.60

@@ -1,5 +1,5 @@
 input_file:
-  instances/neos-916792.pre.mps.gz
+  running/neos-916792.pre.mps.gz
 sol_value:
   0: 26.283217
   1: 26.509787
@@ -8,17 +8,12 @@ sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
     92
   depth:
     0: 91
     1: 1
-timers:
-  1: 1.2888
-  2: 106.2149
-cut_speed:
-  round_1: inf
-  round_2: inf
 mip_value:
   31.870400
+time: 112.65

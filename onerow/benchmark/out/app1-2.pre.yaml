@@ -1,5 +1,5 @@
 input_file:
-  instances/app1-2.pre.mps.gz
+  running/app1-2.pre.mps.gz
 sol_value:
   0: -239.813455
   1: -234.274066
@@ -8,16 +8,11 @@ sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
-    113
+    116
   depth:
-    0: 113
-timers:
-  1: 5.1192
-  2: 1.9197
-cut_speed:
-  round_1: inf
-  round_2: inf
+    0: 116
 mip_value:
   -41.000000
+time: 24.32

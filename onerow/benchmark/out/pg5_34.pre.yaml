@@ -1,5 +1,5 @@
 input_file:
-  instances/pg5_34.pre.mps.gz
+  running/pg5_34.pre.mps.gz
 sol_value:
   0: -16646.586017
   1: -16105.550202
@@ -8,16 +8,11 @@ sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
     88
   depth:
     0: 88
-timers:
-  1: 0.1290
-  2: 0.2400
-cut_speed:
-  round_1: inf
-  round_2: inf
 mip_value:
   -14339.400000
+time: 0.91

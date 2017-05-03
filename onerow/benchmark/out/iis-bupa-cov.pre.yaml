@@ -1,5 +1,5 @@
 input_file:
-  instances/iis-bupa-cov.pre.mps.gz
+  running/iis-bupa-cov.pre.mps.gz
 sol_value:
   0: 26.497217
   1: 26.613065
@@ -8,7 +8,7 @@ sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
     393
   depth:
@@ -18,11 +18,6 @@ n_added_cuts:
     3: 6
     4: 5
     5: 1
-timers:
-  1: 43.3524
-  2: 7662.0872
-cut_speed:
-  round_1: inf
-  round_2: inf
 mip_value:
   36.000000
+time: 9892.62

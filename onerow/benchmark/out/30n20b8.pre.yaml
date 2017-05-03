@@ -1,23 +1,20 @@
 input_file:
-  instances/30n20b8.pre.mps.gz
+  running/30n20b8.pre.mps.gz
 sol_value:
   0: 93.274056
-  1: 123.694896
-  2: 123.694896
+  1: 125.006794
+  2: 125.006884
 sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
-    108
+    209
   depth:
-    0: 108
-timers:
-  1: 139.4448
-  2: 63392.5849
-cut_speed:
-  round_1: inf
-  round_2: inf
+    0: 164
+    1: 43
+    2: 2
 mip_value:
   302.000000
+time: 79768.06

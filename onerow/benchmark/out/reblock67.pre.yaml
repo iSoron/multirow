@@ -1,5 +1,5 @@
 input_file:
-  instances/reblock67.pre.mps.gz
+  running/reblock67.pre.mps.gz
 sol_value:
   0: -38650726.713440
   1: -37791113.900165
@@ -8,7 +8,7 @@ sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
     500
   depth:
@@ -16,11 +16,6 @@ n_added_cuts:
     1: 84
     2: 13
     3: 3
-timers:
-  1: 5.2752
-  2: 398.4454
-cut_speed:
-  round_1: inf
-  round_2: inf
 mip_value:
   -34630600.000000
+time: 446.95

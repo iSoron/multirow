@@ -1,23 +1,18 @@
 input_file:
-  instances/ns1830653.pre.mps.gz
+  running/ns1830653.pre.mps.gz
 sol_value:
   0: 7083.000000
-  1: 8339.500000
-  2: 8339.500000
+  1: 8406.500000
+  2: 8406.500000
 sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
-    108
+    103
   depth:
-    0: 108
-timers:
-  1: 3.5985
-  2: 563.7153
-cut_speed:
-  round_1: inf
-  round_2: inf
+    0: 103
 mip_value:
   20622.000000
+time: 470.77

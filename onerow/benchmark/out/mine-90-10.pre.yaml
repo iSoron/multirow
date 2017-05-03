@@ -1,5 +1,5 @@
 input_file:
-  instances/mine-90-10.pre.mps.gz
+  running/mine-90-10.pre.mps.gz
 sol_value:
   0: -871747718.655552
   1: -860908625.402480
@@ -8,7 +8,7 @@ sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
     796
   depth:
@@ -20,11 +20,6 @@ n_added_cuts:
     5: 11
     6: 4
     7: 4
-timers:
-  1: 6.4680
-  2: 512.6511
-cut_speed:
-  round_1: inf
-  round_2: inf
 mip_value:
   -784302000.000000
+time: 714.79

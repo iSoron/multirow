@@ -1,24 +1,18 @@
 input_file:
-  instances/aflow40b.pre.mps.gz
+  running/aflow40b.pre.mps.gz
 sol_value:
   0: 1005.664817
-  1: 1019.113628
-  2: 1019.203643
+  1: 1018.504641
+  2: 1018.504641
 sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
-    36
+    32
   depth:
     0: 32
-    1: 4
-timers:
-  1: 0.4419
-  2: 157.1291
-cut_speed:
-  round_1: inf
-  round_2: inf
 mip_value:
   1168.000000
+time: 152.58

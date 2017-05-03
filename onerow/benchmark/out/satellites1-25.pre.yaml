@@ -1,0 +1,18 @@
+input_file:
+  running/satellites1-25.pre.mps.gz
+sol_value:
+  0: -20.000000
+  1: -20.000000
+  2: -20.000000
+sol_status:
+  0: optimal
+  1: optimal
+  2: optimal
+n_cuts:
+  total:
+    236
+  depth:
+    0: 236
+mip_value:
+  -5.000000
+time: 203393.00

@@ -1,29 +1,27 @@
-    instances/mik-250-1-100-1.pre.mps.gz [      0.00] Reading input file: instances/mik-250-1-100-1.pre.mps.gz...
-    instances/mik-250-1-100-1.pre.mps.gz [      0.01] Fetched 100 rows, 352 cols.
-    instances/mik-250-1-100-1.pre.mps.gz [      0.01] Solving first relaxation...
-    instances/mik-250-1-100-1.pre.mps.gz [      0.01] 	 -79842.423635 [optimal]					   
-    instances/mik-250-1-100-1.pre.mps.gz [      0.01] Reading basis...
-    instances/mik-250-1-100-1.pre.mps.gz [      0.01] Generating MIR cuts...
-    instances/mik-250-1-100-1.pre.mps.gz [      0.01] Finding interesting rows...
-    instances/mik-250-1-100-1.pre.mps.gz [      0.10] 	 100 rows found
-    instances/mik-250-1-100-1.pre.mps.gz [      0.10] Starting timer 1...
-    instances/mik-250-1-100-1.pre.mps.gz [      0.20] 	 -72824.000000 [optimal]					   
-    instances/mik-250-1-100-1.pre.mps.gz [      0.20] Ending timer 1: 0.10s
-    instances/mik-250-1-100-1.pre.mps.gz [      0.20] Added 100 violated cuts...
-    instances/mik-250-1-100-1.pre.mps.gz [      0.20] 	 -72824.000000 [optimal]					   
-    instances/mik-250-1-100-1.pre.mps.gz [      0.20] Generating wedge cuts...
-    instances/mik-250-1-100-1.pre.mps.gz [      0.20] Starting timer 2...
-    instances/mik-250-1-100-1.pre.mps.gz [      0.47] 	 -72566.863951 [optimal]					   
-    instances/mik-250-1-100-1.pre.mps.gz [      0.58] 	 -72435.000000 [optimal]					   
-    instances/mik-250-1-100-1.pre.mps.gz [      1.31] 	 -71938.105936 [optimal]					   
-    instances/mik-250-1-100-1.pre.mps.gz [      1.72] 	 -71670.464500 [optimal]					   
-    instances/mik-250-1-100-1.pre.mps.gz [      2.18] 	 -71327.899303 [optimal]					   
-    instances/mik-250-1-100-1.pre.mps.gz [      2.68] 	 -71105.775513 [optimal]					   
-    instances/mik-250-1-100-1.pre.mps.gz [      3.37] 	 -70911.468055 [optimal]					   
-    instances/mik-250-1-100-1.pre.mps.gz [      4.92] 	 -70578.002538 [optimal]					   
-    instances/mik-250-1-100-1.pre.mps.gz [      6.60] 	 -70305.535504 [optimal]					   
-    instances/mik-250-1-100-1.pre.mps.gz [      7.91] Ending timer 2: 7.71s
-    instances/mik-250-1-100-1.pre.mps.gz [      7.91] Added 961 violated cuts...
-    instances/mik-250-1-100-1.pre.mps.gz [      7.92] 	 -70211.611017 [optimal]					   
-    instances/mik-250-1-100-1.pre.mps.gz [      7.92] Writting stats: out/mik-250-1-100-1.pre.yaml...
-    instances/mik-250-1-100-1.pre.mps.gz [      7.92] Done.
+version: benchmark-99d69fb.run
+machine: cogradmac143
+[      0.00] Reading input file: running/mik-250-1-100-1.pre.mps.gz...
+[      0.00] Fetched 100 rows, 352 cols.
+[      0.00] Solving first relaxation...
+[      0.00]     -79842.423635 [optimal]                    
+[      0.00] Reading basis...
+                                                       [      0.00] Generating MIR cuts...
+[      0.00] Finding interesting rows...
+[      0.14]     100 rows found
+[      0.32]     -72824.000000 [optimal]                    
+                                                       [      0.33] Added 100 violated cuts...
+[      0.33]     -72824.000000 [optimal]                    
+[      0.33] Generating wedge cuts...
+[      0.64]     -72659.578424 [optimal]                    
+[      1.06]     -72428.186935 [optimal]                    
+[      2.04]     -72034.085483 [optimal]                    
+[      2.72]     -71545.602680 [optimal]                    
+[      3.54]     -71273.915696 [optimal]                    
+ 33%  ETA: 2016-04-12 10:46:13  33 / 100[      4.12]     -71090.556565 [optimal]                    
+[      6.01]     -70648.288537 [optimal]                    
+[      7.84]     -70454.941796 [optimal]                    
+ 67%  ETA: 2016-04-12 10:46:12  67 / 100[      9.53]     -70272.362175 [optimal]                    
+                                                       [     11.00] Added 942 violated cuts...
+[     11.00]     -70219.174256 [optimal]                    
+[     11.00] Writting stats: out/mik-250-1-100-1.yaml...
+[     11.00] Done.

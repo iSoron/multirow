@@ -1,19 +1,17 @@
-        instances/neos-476283.pre.mps.gz [      0.00] Reading input file: instances/neos-476283.pre.mps.gz...
-        instances/neos-476283.pre.mps.gz [      1.62] Fetched 9617 rows, 21034 cols.
-        instances/neos-476283.pre.mps.gz [      1.62] Solving first relaxation...
-        instances/neos-476283.pre.mps.gz [     56.37] 	 406.244708 [optimal]					   
-        instances/neos-476283.pre.mps.gz [     56.37] Reading basis...
-        instances/neos-476283.pre.mps.gz [    102.11] Generating MIR cuts...
-        instances/neos-476283.pre.mps.gz [    102.11] Finding interesting rows...
-        instances/neos-476283.pre.mps.gz [    432.34] 	 103 rows found
-        instances/neos-476283.pre.mps.gz [    432.34] Starting timer 1...
-        instances/neos-476283.pre.mps.gz [    442.80] Ending timer 1: 10.46s
-        instances/neos-476283.pre.mps.gz [    442.80] Added 35 violated cuts...
-        instances/neos-476283.pre.mps.gz [    443.98] 	 406.250302 [optimal]					   
-        instances/neos-476283.pre.mps.gz [    443.98] Generating wedge cuts...
-        instances/neos-476283.pre.mps.gz [    443.98] Starting timer 2...
-        instances/neos-476283.pre.mps.gz [    464.04] Ending timer 2: 20.06s
-        instances/neos-476283.pre.mps.gz [    464.04] Added 0 violated cuts...
-        instances/neos-476283.pre.mps.gz [    464.94] 	 406.250302 [optimal]					   
-        instances/neos-476283.pre.mps.gz [    464.94] Writting stats: out/neos-476283.pre.yaml...
-        instances/neos-476283.pre.mps.gz [    464.94] Done.
+version: benchmark-99d69fb.run
+machine: cogradmac143
+[      0.00] Reading input file: running/neos-476283.pre.mps.gz...
+[      0.00] Fetched 9617 rows, 21034 cols.
+[      0.00] Solving first relaxation...
+[    113.89]     406.244708 [optimal]                    
+[    113.89] Reading basis...
+  2%  ETA: 2016-04-24 15:56:44  218 / 9617  5%  ETA: 2016-04-24 15:56:44  437 / 9617  7%  ETA: 2016-04-24 15:56:43  657 / 9617  9%  ETA: 2016-04-24 15:56:43  876 / 9617 11%  ETA: 2016-04-24 15:56:43  1098 / 9617 14%  ETA: 2016-04-24 15:56:43  1321 / 9617 16%  ETA: 2016-04-24 15:56:43  1543 / 9617 18%  ETA: 2016-04-24 15:56:43  1766 / 9617 21%  ETA: 2016-04-24 15:56:43  1988 / 9617 23%  ETA: 2016-04-24 15:56:43  2210 / 9617 25%  ETA: 2016-04-24 15:56:43  2433 / 9617 28%  ETA: 2016-04-24 15:56:43  2655 / 9617 30%  ETA: 2016-04-24 15:56:43  2877 / 9617 32%  ETA: 2016-04-24 15:56:43  3100 / 9617 35%  ETA: 2016-04-24 15:56:43  3321 / 9617 37%  ETA: 2016-04-24 15:56:43  3541 / 9617 39%  ETA: 2016-04-24 15:56:43  3761 / 9617 41%  ETA: 2016-04-24 15:56:43  3983 / 9617 44%  ETA: 2016-04-24 15:56:43  4206 / 9617 46%  ETA: 2016-04-24 15:56:43  4428 / 9617 48%  ETA: 2016-04-24 15:56:43  4649 / 9617 51%  ETA: 2016-04-24 15:56:43  4872 / 9617 53%  ETA: 2016-04-24 15:56:43  5094 / 9617 55%  ETA: 2016-04-24 15:56:43  5316 / 9617 58%  ETA: 2016-04-24 15:56:43  5535 / 9617 60%  ETA: 2016-04-24 15:56:43  5758 / 9617 62%  ETA: 2016-04-24 15:56:43  5980 / 9617 65%  ETA: 2016-04-24 15:56:43  6203 / 9617 67%  ETA: 2016-04-24 15:56:43  6424 / 9617 69%  ETA: 2016-04-24 15:56:43  6646 / 9617 71%  ETA: 2016-04-24 15:56:43  6866 / 9617 74%  ETA: 2016-04-24 15:56:43  7081 / 9617 76%  ETA: 2016-04-24 15:56:43  7298 / 9617 78%  ETA: 2016-04-24 15:56:43  7517 / 9617 80%  ETA: 2016-04-24 15:56:43  7736 / 9617 83%  ETA: 2016-04-24 15:56:43  7952 / 9617 85%  ETA: 2016-04-24 15:56:43  8169 / 9617 87%  ETA: 2016-04-24 15:56:43  8386 / 9617 89%  ETA: 2016-04-24 15:56:43  8605 / 9617 92%  ETA: 2016-04-24 15:56:43  8822 / 9617 94%  ETA: 2016-04-24 15:56:43  9039 / 9617 96%  ETA: 2016-04-24 15:56:43  9258 / 9617 99%  ETA: 2016-04-24 15:56:43  9476 / 9617                                                       [    157.50] Generating MIR cuts...
+[    157.50] Finding interesting rows...
+[    664.83]     100 rows found
+ 21%  ETA: 2016-04-24 15:59:14  21 / 100 44%  ETA: 2016-04-24 15:59:14  44 / 100 68%  ETA: 2016-04-24 15:59:14  68 / 100 96%  ETA: 2016-04-24 15:59:14  96 / 100                                                       [    680.40] Added 36 violated cuts...
+[    681.14]     406.256374 [optimal]                    
+[    681.14] Generating wedge cuts...
+ 10%  ETA: 2016-04-24 15:59:25  10 / 100 23%  ETA: 2016-04-24 15:59:23  23 / 100 35%  ETA: 2016-04-24 15:59:23  35 / 100 48%  ETA: 2016-04-24 15:59:23  48 / 100 59%  ETA: 2016-04-24 15:59:23  59 / 100 77%  ETA: 2016-04-24 15:59:22  77 / 100 91%  ETA: 2016-04-24 15:59:22  91 / 100                                                       [    710.46] Added 0 violated cuts...
+[    711.24]     406.256374 [optimal]                    
+[    711.24] Writting stats: out/neos-476283.yaml...
+[    711.24] Done.

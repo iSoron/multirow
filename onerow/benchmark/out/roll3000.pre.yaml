@@ -1,5 +1,5 @@
 input_file:
-  instances/roll3000.pre.mps.gz
+  running/roll3000.pre.mps.gz
 sol_value:
   0: 11098.140167
   1: 11489.294339
@@ -8,18 +8,13 @@ sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
-    240
+    209
   depth:
-    0: 204
-    1: 33
-    2: 3
-timers:
-  1: 1.4198
-  2: 266.7534
-cut_speed:
-  round_1: inf
-  round_2: inf
+    0: 194
+    1: 14
+    2: 1
 mip_value:
   12890.000000
+time: 356.92

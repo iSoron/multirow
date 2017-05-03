@@ -1,5 +1,5 @@
 input_file:
-  instances/newdano.pre.mps.gz
+  running/newdano.pre.mps.gz
 sol_value:
   0: 11.724138
   1: 14.442185
@@ -8,16 +8,11 @@ sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
-    51
+    52
   depth:
-    0: 51
-timers:
-  1: 0.2040
-  2: 0.3279
-cut_speed:
-  round_1: inf
-  round_2: inf
+    0: 52
 mip_value:
   65.666700
+time: 2.94

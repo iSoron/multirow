@@ -1,23 +1,18 @@
 input_file:
-  instances/beasleyC3.pre.mps.gz
+  running/beasleyC3.pre.mps.gz
 sol_value:
   0: 237.987805
-  1: 329.816700
-  2: 329.840187
+  1: 318.388275
+  2: 318.424561
 sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
-    135
+    124
   depth:
-    0: 135
-timers:
-  1: 0.1230
-  2: 0.3979
-cut_speed:
-  round_1: inf
-  round_2: inf
+    0: 124
 mip_value:
   754.000000
+time: 0.70

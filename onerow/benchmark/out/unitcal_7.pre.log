@@ -1,23 +1,21 @@
-          instances/unitcal_7.pre.mps.gz [      0.00] Reading input file: instances/unitcal_7.pre.mps.gz...
-          instances/unitcal_7.pre.mps.gz [      0.15] Fetched 38455 rows, 57906 cols.
-          instances/unitcal_7.pre.mps.gz [      0.15] Solving first relaxation...
-          instances/unitcal_7.pre.mps.gz [     26.62] 	 19449580.554328 [optimal]					   
-          instances/unitcal_7.pre.mps.gz [     26.62] Reading basis...
-          instances/unitcal_7.pre.mps.gz [     50.33] Generating MIR cuts...
-          instances/unitcal_7.pre.mps.gz [     50.33] Finding interesting rows...
-          instances/unitcal_7.pre.mps.gz [     70.05] 	 549 rows found
-          instances/unitcal_7.pre.mps.gz [     70.05] Starting timer 1...
-          instances/unitcal_7.pre.mps.gz [     70.34] 	 19451731.417317 [optimal]					   
-          instances/unitcal_7.pre.mps.gz [     70.69] 	 19456188.622361 [optimal]					   
-          instances/unitcal_7.pre.mps.gz [     71.13] 	 19460801.679410 [optimal]					   
-          instances/unitcal_7.pre.mps.gz [     71.53] 	 19464891.167601 [optimal]					   
-          instances/unitcal_7.pre.mps.gz [     71.66] Ending timer 1: 1.60s
-          instances/unitcal_7.pre.mps.gz [     71.66] Added 494 violated cuts...
-          instances/unitcal_7.pre.mps.gz [     71.77] 	 19466515.326663 [optimal]					   
-          instances/unitcal_7.pre.mps.gz [     71.77] Generating wedge cuts...
-          instances/unitcal_7.pre.mps.gz [     71.77] Starting timer 2...
-          instances/unitcal_7.pre.mps.gz [     99.82] Ending timer 2: 28.05s
-          instances/unitcal_7.pre.mps.gz [     99.82] Added 0 violated cuts...
-          instances/unitcal_7.pre.mps.gz [     99.95] 	 19466515.326663 [optimal]					   
-          instances/unitcal_7.pre.mps.gz [     99.95] Writting stats: out/unitcal_7.pre.yaml...
-          instances/unitcal_7.pre.mps.gz [     99.95] Done.
+version: benchmark-99d69fb.run
+machine: cogradmac143
+[      0.00] Reading input file: running/unitcal_7.pre.mps.gz...
+[      0.00] Fetched 38455 rows, 57906 cols.
+[      0.00] Solving first relaxation...
+[      3.02]     19449580.554328 [optimal]                    
+[      3.02] Reading basis...
+  3%  ETA: 2016-04-19 15:42:32  1172 / 38455  7%  ETA: 2016-04-19 15:42:30  2512 / 38455 10%  ETA: 2016-04-19 15:42:29  3897 / 38455 13%  ETA: 2016-04-19 15:42:30  5055 / 38455 16%  ETA: 2016-04-19 15:42:30  6317 / 38455 19%  ETA: 2016-04-19 15:42:31  7362 / 38455 22%  ETA: 2016-04-19 15:42:31  8423 / 38455 25%  ETA: 2016-04-19 15:42:32  9543 / 38455 28%  ETA: 2016-04-19 15:42:32  10762 / 38455 31%  ETA: 2016-04-19 15:42:32  11970 / 38455 34%  ETA: 2016-04-19 15:42:32  13097 / 38455 37%  ETA: 2016-04-19 15:42:32  14306 / 38455 40%  ETA: 2016-04-19 15:42:32  15485 / 38455 43%  ETA: 2016-04-19 15:42:32  16720 / 38455 46%  ETA: 2016-04-19 15:42:32  17751 / 38455 49%  ETA: 2016-04-19 15:42:32  18943 / 38455 52%  ETA: 2016-04-19 15:42:32  20132 / 38455 55%  ETA: 2016-04-19 15:42:32  21228 / 38455 58%  ETA: 2016-04-19 15:42:32  22406 / 38455 61%  ETA: 2016-04-19 15:42:32  23649 / 38455 65%  ETA: 2016-04-19 15:42:32  24874 / 38455 68%  ETA: 2016-04-19 15:42:32  26233 / 38455 72%  ETA: 2016-04-19 15:42:32  27595 / 38455 75%  ETA: 2016-04-19 15:42:32  28799 / 38455 78%  ETA: 2016-04-19 15:42:32  29996 / 38455 81%  ETA: 2016-04-19 15:42:31  31270 / 38455 85%  ETA: 2016-04-19 15:42:31  32648 / 38455 88%  ETA: 2016-04-19 15:42:31  33926 / 38455 92%  ETA: 2016-04-19 15:42:31  35262 / 38455 95%  ETA: 2016-04-19 15:42:31  36575 / 38455 98%  ETA: 2016-04-19 15:42:31  37777 / 38455                                                       [     34.48] Generating MIR cuts...
+[     34.48] Finding interesting rows...
+[     64.42]     549 rows found
+[     64.80]     19451743.896165 [optimal]                    
+[     65.36]     19456429.165331 [optimal]                    
+[     66.03]     19461689.105210 [optimal]                    
+ 85%  ETA: 2016-04-19 15:42:42  464 / 549[     66.59]     19466069.188558 [optimal]                    
+                                                       [     66.79] Added 477 violated cuts...
+[     66.94]     19466515.326663 [optimal]                    
+[     66.95] Generating wedge cuts...
+ 11%  ETA: 2016-04-19 15:42:52  59 / 549 21%  ETA: 2016-04-19 15:42:52  114 / 549 28%  ETA: 2016-04-19 15:42:53  152 / 549 54%  ETA: 2016-04-19 15:42:50  297 / 549 58%  ETA: 2016-04-19 15:42:51  321 / 549 62%  ETA: 2016-04-19 15:42:52  340 / 549 70%  ETA: 2016-04-19 15:42:53  384 / 549 97%  ETA: 2016-04-19 15:42:51  534 / 549                                                       [     96.22] Added 0 violated cuts...
+[     96.32]     19466515.326663 [optimal]                    
+[     96.32] Writting stats: out/unitcal_7.yaml...
+[     96.32] Done.

@@ -1,24 +1,21 @@
-          instances/gmu-35-40.pre.mps.gz [      0.00] Reading input file: instances/gmu-35-40.pre.mps.gz...
-          instances/gmu-35-40.pre.mps.gz [      0.01] Fetched 356 rows, 921 cols.
-          instances/gmu-35-40.pre.mps.gz [      0.01] Solving first relaxation...
-          instances/gmu-35-40.pre.mps.gz [      0.01] 	 -2406943.556343 [optimal]					   
-          instances/gmu-35-40.pre.mps.gz [      0.01] Reading basis...
-          instances/gmu-35-40.pre.mps.gz [      0.02] Generating MIR cuts...
-          instances/gmu-35-40.pre.mps.gz [      0.02] Finding interesting rows...
-          instances/gmu-35-40.pre.mps.gz [      0.53] 	 27 rows found
-          instances/gmu-35-40.pre.mps.gz [      0.53] Starting timer 1...
-          instances/gmu-35-40.pre.mps.gz [      1.01] Ending timer 1: 0.48s
-          instances/gmu-35-40.pre.mps.gz [      1.01] Added 27 violated cuts...
-          instances/gmu-35-40.pre.mps.gz [      1.01] 	 -2406943.400139 [optimal]					   
-          instances/gmu-35-40.pre.mps.gz [      1.01] Generating wedge cuts...
-          instances/gmu-35-40.pre.mps.gz [      1.01] Starting timer 2...
-          instances/gmu-35-40.pre.mps.gz [      8.18] 	 -2406943.399349 [optimal]					   
-          instances/gmu-35-40.pre.mps.gz [      8.57] 	 -2406943.399025 [optimal]					   
-          instances/gmu-35-40.pre.mps.gz [     10.71] 	 -2406943.398873 [optimal]					   
-          instances/gmu-35-40.pre.mps.gz [     15.15] 	 -2406923.855764 [optimal]					   
-          instances/gmu-35-40.pre.mps.gz [     18.00] 	 -2406922.322224 [optimal]					   
-          instances/gmu-35-40.pre.mps.gz [     78.11] Ending timer 2: 77.09s
-          instances/gmu-35-40.pre.mps.gz [     78.11] Added 508 violated cuts...
-          instances/gmu-35-40.pre.mps.gz [     78.11] 	 -2406922.322211 [optimal]					   
-          instances/gmu-35-40.pre.mps.gz [     78.11] Writting stats: out/gmu-35-40.pre.yaml...
-          instances/gmu-35-40.pre.mps.gz [     78.11] Done.
+version: benchmark-99d69fb.run
+machine: cogradmac143
+[      0.00] Reading input file: running/gmu-35-40.pre.mps.gz...
+[      0.00] Fetched 356 rows, 921 cols.
+[      0.00] Solving first relaxation...
+[      0.00]     -2406943.556343 [optimal]                    
+[      0.00] Reading basis...
+                                                       [      0.01] Generating MIR cuts...
+[      0.01] Finding interesting rows...
+[      0.73]     27 rows found
+                                                       [      1.16] Added 27 violated cuts...
+[      1.16]     -2406943.400139 [optimal]                    
+[      1.16] Generating wedge cuts...
+[      1.83]     -2406943.399246 [optimal]                    
+  0%  ETA: unknown[      7.46]     -2406943.398938 [optimal]                    
+  0%  ETA: unknown  0%  ETA: unknown[     14.00]     -2406923.855776 [optimal]                    
+  7%  ETA: 2016-04-12 10:50:18  2 / 27 22%  ETA: 2016-04-12 10:49:46  6 / 27 22%  ETA: 2016-04-12 10:49:51  6 / 27[     26.36]     -2406922.322216 [optimal]                    
+ 26%  ETA: 2016-04-12 10:49:51  7 / 27 26%  ETA: 2016-04-12 10:49:54  7 / 27 33%  ETA: 2016-04-12 10:49:51  9 / 27 37%  ETA: 2016-04-12 10:49:51  10 / 27 37%  ETA: 2016-04-12 10:49:53  10 / 27 44%  ETA: 2016-04-12 10:49:51  12 / 27 52%  ETA: 2016-04-12 10:49:49  14 / 27 59%  ETA: 2016-04-12 10:49:47  16 / 27 67%  ETA: 2016-04-12 10:49:46  18 / 27 67%  ETA: 2016-04-12 10:49:48  18 / 27 70%  ETA: 2016-04-12 10:49:48  19 / 27 74%  ETA: 2016-04-12 10:49:48  20 / 27 78%  ETA: 2016-04-12 10:49:48  21 / 27 81%  ETA: 2016-04-12 10:49:48  22 / 27 81%  ETA: 2016-04-12 10:49:49  22 / 27 85%  ETA: 2016-04-12 10:49:49  23 / 27 96%  ETA: 2016-04-12 10:49:47  26 / 27                                                       [     88.36] Added 403 violated cuts...
+[     88.37]     -2406922.322211 [optimal]                    
+[     88.37] Writting stats: out/gmu-35-40.yaml...
+[     88.37] Done.

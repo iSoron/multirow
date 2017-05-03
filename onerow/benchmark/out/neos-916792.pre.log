@@ -1,19 +1,17 @@
-        instances/neos-916792.pre.mps.gz [      0.00] Reading input file: instances/neos-916792.pre.mps.gz...
-        instances/neos-916792.pre.mps.gz [      0.10] Fetched 1413 rows, 2617 cols.
-        instances/neos-916792.pre.mps.gz [      0.10] Solving first relaxation...
-        instances/neos-916792.pre.mps.gz [      0.28] 	 26.283217 [optimal]					   
-        instances/neos-916792.pre.mps.gz [      0.28] Reading basis...
-        instances/neos-916792.pre.mps.gz [      0.59] Generating MIR cuts...
-        instances/neos-916792.pre.mps.gz [      0.59] Finding interesting rows...
-        instances/neos-916792.pre.mps.gz [     11.99] 	 91 rows found
-        instances/neos-916792.pre.mps.gz [     11.99] Starting timer 1...
-        instances/neos-916792.pre.mps.gz [     13.28] Ending timer 1: 1.29s
-        instances/neos-916792.pre.mps.gz [     13.28] Added 91 violated cuts...
-        instances/neos-916792.pre.mps.gz [     13.29] 	 26.509787 [optimal]					   
-        instances/neos-916792.pre.mps.gz [     13.29] Generating wedge cuts...
-        instances/neos-916792.pre.mps.gz [     13.29] Starting timer 2...
-        instances/neos-916792.pre.mps.gz [    119.51] Ending timer 2: 106.21s
-        instances/neos-916792.pre.mps.gz [    119.51] Added 1 violated cuts...
-        instances/neos-916792.pre.mps.gz [    119.51] 	 26.510115 [optimal]					   
-        instances/neos-916792.pre.mps.gz [    119.51] Writting stats: out/neos-916792.pre.yaml...
-        instances/neos-916792.pre.mps.gz [    119.51] Done.
+version: benchmark-99d69fb.run
+machine: cogradmac143
+[      0.00] Reading input file: running/neos-916792.pre.mps.gz...
+[      0.00] Fetched 1413 rows, 2617 cols.
+[      0.00] Solving first relaxation...
+[      0.09]     26.283217 [optimal]                    
+[      0.09] Reading basis...
+                                                       [      0.30] Generating MIR cuts...
+[      0.30] Finding interesting rows...
+[     13.04]     91 rows found
+                                                       [     15.03] Added 91 violated cuts...
+[     15.04]     26.509787 [optimal]                    
+[     15.04] Generating wedge cuts...
+  1%  ETA: 2016-04-18 23:15:54  1 / 91  8%  ETA: 2016-04-18 23:14:49  7 / 91 10%  ETA: 2016-04-18 23:14:53  9 / 91 14%  ETA: 2016-04-18 23:14:51  13 / 91 18%  ETA: 2016-04-18 23:14:51  16 / 91 22%  ETA: 2016-04-18 23:14:50  20 / 91 24%  ETA: 2016-04-18 23:14:51  22 / 91 27%  ETA: 2016-04-18 23:14:52  25 / 91 31%  ETA: 2016-04-18 23:14:52  28 / 91 34%  ETA: 2016-04-18 23:14:52  31 / 91 40%  ETA: 2016-04-18 23:14:50  36 / 91 42%  ETA: 2016-04-18 23:14:51  38 / 91 46%  ETA: 2016-04-18 23:14:51  42 / 91 51%  ETA: 2016-04-18 23:14:50  46 / 91 54%  ETA: 2016-04-18 23:14:50  49 / 91 58%  ETA: 2016-04-18 23:14:50  53 / 91 63%  ETA: 2016-04-18 23:14:50  57 / 91 67%  ETA: 2016-04-18 23:14:49  61 / 91 70%  ETA: 2016-04-18 23:14:50  64 / 91 75%  ETA: 2016-04-18 23:14:49  68 / 91 78%  ETA: 2016-04-18 23:14:49  71 / 91 82%  ETA: 2016-04-18 23:14:49  75 / 91 86%  ETA: 2016-04-18 23:14:49  78 / 91 90%  ETA: 2016-04-18 23:14:49  82 / 91 92%  ETA: 2016-04-18 23:14:50  84 / 91 99%  ETA: 2016-04-18 23:14:49  90 / 91                                                       [    112.64] Added 1 violated cuts...
+[    112.65]     26.510115 [optimal]                    
+[    112.65] Writting stats: out/neos-916792.yaml...
+[    112.65] Done.

@@ -1,24 +1,23 @@
 input_file:
-  instances/cov1075.pre.mps.gz
+  running/cov1075.pre.mps.gz
 sol_value:
   0: 17.142857
-  1: 17.250244
-  2: 17.250246
+  1: 17.245850
+  2: 17.262477
 sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
-    102
+    149
   depth:
-    0: 100
-    2: 2
-timers:
-  1: 1.1378
-  2: 70.9752
-cut_speed:
-  round_1: inf
-  round_2: inf
+    0: 101
+    1: 36
+    2: 1
+    4: 4
+    5: 4
+    6: 3
 mip_value:
   20.000000
+time: 70.60

@@ -1,24 +1,19 @@
 input_file:
-  instances/csched010.pre.mps.gz
+  running/csched010.pre.mps.gz
 sol_value:
   0: 332.422727
-  1: 335.610291
-  2: 335.659099
+  1: 335.363758
+  2: 335.368221
 sol_status:
   0: optimal
   1: optimal
   2: optimal
-n_added_cuts:
+n_cuts:
   total:
-    89
+    87
   depth:
-    0: 85
-    1: 4
-timers:
-  1: 2.0427
-  2: 770.3929
-cut_speed:
-  round_1: inf
-  round_2: inf
+    0: 84
+    1: 3
 mip_value:
   408.000000
+time: 647.40
