@@ -28,9 +28,6 @@
 using std::cout;
 using std::endl;
 
-#include <gperftools/heap-profiler.h>
-#include <gperftools/malloc_extension.h>
-
 
 template<class Generator>
 int CplexHelper::add_single_row_cuts()
