@@ -33,17 +33,18 @@ using namespace std;
 char *input_filename = 0;
 char *stats_filename = 0;
 char *sol_filename = 0;
+char *basis_filename = 0;
 bool enable_gomory_cuts = false;
 bool enable_wedge_cuts = false;
 bool enable_mir_cuts = false;
 
 int c;
 extern char *optarg;
-char usage[] = "usage: %s [-gmw] -f model.mps [-s stats.yaml]\n";
+char usage[] = "usage: %s [-gmw] -f model.mps [-b basis.bas] [-s stats.yaml]\n";
 
 void read_params(int argc, char **argv)
 {
-	while ((c = getopt(argc, argv, "gwmf:s:x:")) != -1)
+	while ((c = getopt(argc, argv, "gwmf:s:x:b:")) != -1)
 	{
 		switch (c)
 		{
@@ -58,6 +59,9 @@ void read_params(int argc, char **argv)
 			break;
 		case 'f':
 			input_filename = optarg;
+			break;
+		case 'b':
+			basis_filename = optarg;
 			break;
 		case 's':
 			stats_filename = optarg;
@@ -126,6 +130,17 @@ int main(int argc, char **argv)
 
 	// relaxes integrality
 	CPXchgprobtype(env, lp, CPXPROB_LP);
+
+	if (basis_filename)
+	{
+		time_printf("Loading basis from %s...\n", basis_filename);
+		status = CPXreadcopybase(env, lp, basis_filename);
+		if(status)
+		{
+			fprintf(stderr, "could not read basis file");
+			return 1;
+		}
+	}
 
 	time_printf("Solving first relaxation...\n");
 	cplexHelper.solve(true);

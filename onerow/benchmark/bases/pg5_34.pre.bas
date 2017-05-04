@@ -1,0 +1,1399 @@
+* ENCODING=ISO-8859-1
+NAME          ../miplib2010_pre_intslacks/pg5_34.pre.mps.gz  Iterations 328  Rows 225  Cols 2826
+ XL z0         c1      
+ XL z1         c2      
+ XL z2         c3      
+ XL z3         c4      
+ XL z4         c5      
+ XL z5         c6      
+ XL z6         c7      
+ XL z7         c8      
+ XL z9         c9      
+ XL z11        c10     
+ XL z12        c11     
+ XL z13        c12     
+ XL z14        c13     
+ XL z15        c14     
+ XL z16        c15     
+ XL z18        c16     
+ XL z19        c17     
+ XL z20        c18     
+ XL z21        c19     
+ XL z23        c20     
+ XL z24        c21     
+ XL z26        c22     
+ XL z27        c23     
+ XL z28        c24     
+ XL z29        c25     
+ XL z30        c26     
+ XL z32        c27     
+ XL z33        c28     
+ XL z34        c29     
+ XL z35        c30     
+ XL z36        c31     
+ XL z37        c32     
+ XL z38        c33     
+ XL z39        c34     
+ XL z41        c35     
+ XL z42        c36     
+ XL z43        c37     
+ XL z44        c38     
+ XL z45        c39     
+ XL z47        c40     
+ XL z49        c41     
+ XL z50        c42     
+ XL z51        c43     
+ XL z52        c44     
+ XL z53        c45     
+ XL z54        c46     
+ XL z55        c47     
+ XL z57        c48     
+ XL z59        c49     
+ XL z60        c50     
+ XL z61        c51     
+ XL z63        c52     
+ XL z66        c53     
+ XL z67        c54     
+ XL z69        c55     
+ XL z70        c56     
+ XL z71        c57     
+ XL z72        c58     
+ XL z73        c59     
+ XL z74        c60     
+ XL z75        c61     
+ XL z76        c62     
+ XL z77        c63     
+ XL z78        c64     
+ XL z80        c65     
+ XL z81        c66     
+ XL z82        c67     
+ XL z83        c68     
+ XL z84        c69     
+ XL z85        c70     
+ XL z86        c71     
+ XL z88        c72     
+ XL z89        c73     
+ XL z90        c74     
+ XL z91        c75     
+ XL z92        c76     
+ XL z93        c77     
+ XL z94        c78     
+ XL z95        c79     
+ XL z97        c80     
+ XL z98        c81     
+ XL z99        c82     
+ XL l0105      c83     
+ XL l52103     c84     
+ XL l3112      c85     
+ XL l2100      c86     
+ XL l8105      c87     
+ XL l8116      c88     
+ XL z10        c89     
+ XL l35118     c90     
+ XL l10122     c91     
+ XL l17101     c92     
+ XL l19102     c93     
+ XL l22103     c94     
+ XL z25        c95     
+ XL l27123     c96     
+ XL l31113     c97     
+ XL z40        c98     
+ XL l58110     c99     
+ XL l26109     c100    
+ XL z46        c101    
+ XL l48104     c102    
+ XL l55117     c103    
+ XL z56        c104    
+ XL l13111     c105    
+ XL l58124     c106    
+ XL l19104     c107    
+ XL l62122     c108    
+ XL l64105     c109    
+ XL l33108     c110    
+ XL l65111     c111    
+ XL l65121     c112    
+ XL l68121     c113    
+ XL l4101      c114    
+ XL l72114     c115    
+ XL l31100     c116    
+ XL l19115     c117    
+ XL l11107     c118    
+ XL l76120     c119    
+ XL l79124     c120    
+ XL l87107     c121    
+ XL l77106     c122    
+ XL l84119     c123    
+ XL l9124      c124    
+ XL z96        c125    
+ XL _sc126     c126    
+ XL _sc127     c127    
+ XL _sc128     c128    
+ XL _sc129     c129    
+ XL _sc130     c130    
+ XL _sc131     c131    
+ XL _sc132     c132    
+ XL _sc133     c133    
+ XL _sc134     c134    
+ XL _sc135     c135    
+ XL _sc136     c136    
+ XL _sc137     c137    
+ XL _sc138     c138    
+ XL _sc139     c139    
+ XL _sc140     c140    
+ XL _sc141     c141    
+ XL _sc142     c142    
+ XL _sc143     c143    
+ XL _sc144     c144    
+ XL _sc145     c145    
+ XL _sc146     c146    
+ XL _sc147     c147    
+ XL _sc148     c148    
+ XL _sc149     c149    
+ XL _sc150     c150    
+ XL _sc151     c151    
+ XL _sc152     c152    
+ XL _sc153     c153    
+ XL _sc154     c154    
+ XL _sc155     c155    
+ XL _sc156     c156    
+ XL _sc157     c157    
+ XL _sc158     c158    
+ XL _sc159     c159    
+ XL _sc160     c160    
+ XL _sc161     c161    
+ XL _sc162     c162    
+ XL _sc163     c163    
+ XL _sc164     c164    
+ XL _sc165     c165    
+ XL _sc166     c166    
+ XL _sc167     c167    
+ XL _sc168     c168    
+ XL _sc169     c169    
+ XL _sc170     c170    
+ XL _sc171     c171    
+ XL _sc172     c172    
+ XL _sc173     c173    
+ XL _sc174     c174    
+ XL _sc175     c175    
+ XL _sc176     c176    
+ XL _sc177     c177    
+ XL _sc178     c178    
+ XL _sc179     c179    
+ XL _sc180     c180    
+ XL _sc181     c181    
+ XL _sc182     c182    
+ XL _sc183     c183    
+ XL _sc184     c184    
+ XL _sc185     c185    
+ XL _sc186     c186    
+ XL _sc187     c187    
+ XL _sc188     c188    
+ XL _sc189     c189    
+ XL _sc190     c190    
+ XL _sc191     c191    
+ XL _sc192     c192    
+ XL _sc193     c193    
+ XL _sc194     c194    
+ XL _sc195     c195    
+ XL _sc196     c196    
+ XL _sc197     c197    
+ XL _sc198     c198    
+ XL _sc199     c199    
+ XL _sc200     c200    
+ XL _sc201     c201    
+ XL _sc202     c202    
+ XL _sc203     c203    
+ XL _sc204     c204    
+ XL _sc205     c205    
+ XL _sc206     c206    
+ XL _sc207     c207    
+ XL _sc208     c208    
+ XL _sc209     c209    
+ XL _sc210     c210    
+ XL _sc211     c211    
+ XL _sc212     c212    
+ XL _sc213     c213    
+ XL _sc214     c214    
+ XL _sc215     c215    
+ XL _sc216     c216    
+ XL _sc217     c217    
+ XL _sc218     c218    
+ XL _sc219     c219    
+ XL _sc220     c220    
+ XL _sc221     c221    
+ XL _sc222     c222    
+ XL _sc223     c223    
+ XL _sc224     c224    
+ XL _sc225     c225    
+ UL z8
+ UL z17
+ UL z22
+ UL z31
+ UL z48
+ UL z58
+ UL z62
+ UL z64
+ UL z65
+ UL z68
+ UL z79
+ UL z87
+ UL l0100
+ UL l0101
+ UL l0106
+ UL l0108
+ UL l0116
+ UL l0123
+ UL l0124
+ UL l1103
+ UL l1107
+ UL l1111
+ UL l1116
+ UL l1119
+ UL l1123
+ UL l2102
+ UL l2104
+ UL l2105
+ UL l2107
+ UL l2108
+ UL l2109
+ UL l2110
+ UL l2112
+ UL l2114
+ UL l2115
+ UL l2116
+ UL l2117
+ UL l2119
+ UL l2120
+ UL l2122
+ UL l2123
+ UL l3100
+ UL l3102
+ UL l3104
+ UL l3106
+ UL l3107
+ UL l3109
+ UL l3110
+ UL l3113
+ UL l3114
+ UL l3115
+ UL l3116
+ UL l3118
+ UL l3120
+ UL l3121
+ UL l3123
+ UL l3124
+ UL l4102
+ UL l4103
+ UL l4104
+ UL l4105
+ UL l4106
+ UL l4107
+ UL l4110
+ UL l4112
+ UL l4113
+ UL l4115
+ UL l4117
+ UL l4118
+ UL l4121
+ UL l4123
+ UL l4124
+ UL l5101
+ UL l5103
+ UL l5109
+ UL l5110
+ UL l5112
+ UL l5113
+ UL l5120
+ UL l5123
+ UL l6100
+ UL l6102
+ UL l6103
+ UL l6106
+ UL l6107
+ UL l6109
+ UL l6112
+ UL l6114
+ UL l6119
+ UL l6120
+ UL l6121
+ UL l7100
+ UL l7102
+ UL l7103
+ UL l7104
+ UL l7108
+ UL l7111
+ UL l7112
+ UL l7114
+ UL l7115
+ UL l7116
+ UL l7117
+ UL l7119
+ UL l7120
+ UL l7123
+ UL l7124
+ UL l8103
+ UL l8104
+ UL l8106
+ UL l8107
+ UL l8108
+ UL l8110
+ UL l8111
+ UL l8112
+ UL l8113
+ UL l8114
+ UL l8115
+ UL l8117
+ UL l8118
+ UL l8119
+ UL l8120
+ UL l8121
+ UL l8124
+ UL l9102
+ UL l9105
+ UL l9106
+ UL l9107
+ UL l9110
+ UL l9111
+ UL l9113
+ UL l9116
+ UL l9120
+ UL l9122
+ UL l9123
+ UL l10100
+ UL l10101
+ UL l10103
+ UL l10104
+ UL l10105
+ UL l10106
+ UL l10107
+ UL l10110
+ UL l10112
+ UL l10113
+ UL l10114
+ UL l10115
+ UL l10118
+ UL l10119
+ UL l10124
+ UL l11101
+ UL l11102
+ UL l11103
+ UL l11104
+ UL l11105
+ UL l11109
+ UL l11110
+ UL l11112
+ UL l11113
+ UL l11114
+ UL l11115
+ UL l11117
+ UL l11121
+ UL l11124
+ UL l12100
+ UL l12102
+ UL l12104
+ UL l12107
+ UL l12108
+ UL l12110
+ UL l12111
+ UL l12112
+ UL l12115
+ UL l12117
+ UL l12121
+ UL l12122
+ UL l12123
+ UL l13108
+ UL l13109
+ UL l13110
+ UL l13114
+ UL l13115
+ UL l13117
+ UL l13119
+ UL l13120
+ UL l14100
+ UL l14101
+ UL l14103
+ UL l14104
+ UL l14105
+ UL l14107
+ UL l14109
+ UL l14111
+ UL l14113
+ UL l14117
+ UL l14118
+ UL l14119
+ UL l14123
+ UL l14124
+ UL l15101
+ UL l15110
+ UL l15111
+ UL l15115
+ UL l15118
+ UL l15119
+ UL l16102
+ UL l16104
+ UL l16106
+ UL l16111
+ UL l16115
+ UL l16116
+ UL l16121
+ UL l17100
+ UL l17102
+ UL l17104
+ UL l17105
+ UL l17106
+ UL l17107
+ UL l17108
+ UL l17109
+ UL l17111
+ UL l17112
+ UL l17113
+ UL l17114
+ UL l17115
+ UL l17118
+ UL l17119
+ UL l17122
+ UL l17123
+ UL l18101
+ UL l18103
+ UL l18104
+ UL l18109
+ UL l18112
+ UL l18115
+ UL l18117
+ UL l18118
+ UL l18120
+ UL l19100
+ UL l19101
+ UL l19105
+ UL l19106
+ UL l19109
+ UL l19110
+ UL l19112
+ UL l19116
+ UL l19117
+ UL l19121
+ UL l19122
+ UL l19123
+ UL l19124
+ UL l20100
+ UL l20101
+ UL l20103
+ UL l20104
+ UL l20106
+ UL l20109
+ UL l20110
+ UL l20112
+ UL l20113
+ UL l20117
+ UL l20122
+ UL l21100
+ UL l21101
+ UL l21102
+ UL l21105
+ UL l21106
+ UL l21107
+ UL l21108
+ UL l21117
+ UL l21118
+ UL l21120
+ UL l21121
+ UL l21122
+ UL l21124
+ UL l22100
+ UL l22101
+ UL l22105
+ UL l22106
+ UL l22108
+ UL l22109
+ UL l22110
+ UL l22111
+ UL l22112
+ UL l22113
+ UL l22115
+ UL l22117
+ UL l22118
+ UL l22120
+ UL l22121
+ UL l22122
+ UL l22123
+ UL l22124
+ UL l23102
+ UL l23104
+ UL l23105
+ UL l23110
+ UL l23115
+ UL l23118
+ UL l23122
+ UL l23123
+ UL l24100
+ UL l24101
+ UL l24102
+ UL l24104
+ UL l24107
+ UL l24108
+ UL l24110
+ UL l24115
+ UL l24117
+ UL l24122
+ UL l24124
+ UL l25112
+ UL l25118
+ UL l25121
+ UL l25124
+ UL l26100
+ UL l26101
+ UL l26102
+ UL l26105
+ UL l26108
+ UL l26111
+ UL l26112
+ UL l26113
+ UL l26115
+ UL l26116
+ UL l26117
+ UL l26119
+ UL l26121
+ UL l26122
+ UL l26123
+ UL l26124
+ UL l27101
+ UL l27104
+ UL l27105
+ UL l27106
+ UL l27107
+ UL l27108
+ UL l27110
+ UL l27114
+ UL l27117
+ UL l27121
+ UL l27124
+ UL l28100
+ UL l28105
+ UL l28109
+ UL l28114
+ UL l28115
+ UL l28116
+ UL l28118
+ UL l28121
+ UL l28124
+ UL l29102
+ UL l29109
+ UL l29112
+ UL l29119
+ UL l29123
+ UL l30101
+ UL l30102
+ UL l30103
+ UL l30104
+ UL l30107
+ UL l30108
+ UL l30110
+ UL l30111
+ UL l30114
+ UL l30117
+ UL l30118
+ UL l30119
+ UL l30122
+ UL l30123
+ UL l30124
+ UL l31102
+ UL l31103
+ UL l31104
+ UL l31106
+ UL l31107
+ UL l31108
+ UL l31109
+ UL l31110
+ UL l31112
+ UL l31114
+ UL l31115
+ UL l31116
+ UL l31118
+ UL l31119
+ UL l31120
+ UL l31121
+ UL l31124
+ UL l32100
+ UL l32101
+ UL l32107
+ UL l32114
+ UL l32115
+ UL l32119
+ UL l32120
+ UL l32121
+ UL l33100
+ UL l33102
+ UL l33107
+ UL l33110
+ UL l33111
+ UL l33113
+ UL l33115
+ UL l33119
+ UL l33120
+ UL l33122
+ UL l33124
+ UL l34100
+ UL l34101
+ UL l34106
+ UL l34107
+ UL l34108
+ UL l34109
+ UL l34114
+ UL l34117
+ UL l34120
+ UL l34122
+ UL l34124
+ UL l35100
+ UL l35101
+ UL l35103
+ UL l35106
+ UL l35107
+ UL l35108
+ UL l35111
+ UL l35112
+ UL l35113
+ UL l35115
+ UL l35117
+ UL l35119
+ UL l35122
+ UL l36104
+ UL l36106
+ UL l36109
+ UL l36110
+ UL l36111
+ UL l36114
+ UL l36115
+ UL l36116
+ UL l36118
+ UL l36122
+ UL l36123
+ UL l37100
+ UL l37105
+ UL l37106
+ UL l37107
+ UL l37109
+ UL l37110
+ UL l37115
+ UL l37116
+ UL l37118
+ UL l37120
+ UL l37122
+ UL l38100
+ UL l38101
+ UL l38106
+ UL l38108
+ UL l38109
+ UL l38110
+ UL l38112
+ UL l38114
+ UL l38121
+ UL l38122
+ UL l38123
+ UL l38124
+ UL l39100
+ UL l39101
+ UL l39107
+ UL l39109
+ UL l39110
+ UL l39112
+ UL l39115
+ UL l39121
+ UL l39123
+ UL l40100
+ UL l40101
+ UL l40102
+ UL l40103
+ UL l40104
+ UL l40105
+ UL l40106
+ UL l40107
+ UL l40108
+ UL l40114
+ UL l40115
+ UL l40117
+ UL l40118
+ UL l40119
+ UL l40120
+ UL l40122
+ UL l41100
+ UL l41104
+ UL l41110
+ UL l41119
+ UL l41120
+ UL l42107
+ UL l42113
+ UL l42118
+ UL l42119
+ UL l42120
+ UL l42122
+ UL l42123
+ UL l42124
+ UL l43100
+ UL l43105
+ UL l43106
+ UL l43108
+ UL l43109
+ UL l43110
+ UL l43114
+ UL l43121
+ UL l43124
+ UL l44100
+ UL l44102
+ UL l44106
+ UL l44109
+ UL l44110
+ UL l44112
+ UL l44115
+ UL l44124
+ UL l45100
+ UL l45103
+ UL l45109
+ UL l45110
+ UL l45111
+ UL l45112
+ UL l45115
+ UL l45118
+ UL l45119
+ UL l45121
+ UL l45123
+ UL l45124
+ UL l46100
+ UL l46103
+ UL l46110
+ UL l46118
+ UL l46123
+ UL l47101
+ UL l47102
+ UL l47104
+ UL l47107
+ UL l47109
+ UL l47110
+ UL l47112
+ UL l47114
+ UL l47115
+ UL l47116
+ UL l47117
+ UL l47119
+ UL l47121
+ UL l47124
+ UL l48100
+ UL l48101
+ UL l48102
+ UL l48106
+ UL l48107
+ UL l48109
+ UL l48110
+ UL l48111
+ UL l48112
+ UL l48113
+ UL l48114
+ UL l48115
+ UL l48117
+ UL l48118
+ UL l48119
+ UL l48120
+ UL l48121
+ UL l48123
+ UL l48124
+ UL l49100
+ UL l49101
+ UL l49102
+ UL l49104
+ UL l49105
+ UL l49106
+ UL l49109
+ UL l49110
+ UL l49113
+ UL l49115
+ UL l49119
+ UL l49120
+ UL l49121
+ UL l50101
+ UL l50102
+ UL l50104
+ UL l50109
+ UL l50110
+ UL l50113
+ UL l50114
+ UL l50117
+ UL l50119
+ UL l50123
+ UL l51105
+ UL l51113
+ UL l51114
+ UL l51116
+ UL l51118
+ UL l51120
+ UL l52105
+ UL l52108
+ UL l52116
+ UL l52118
+ UL l52119
+ UL l52123
+ UL l53100
+ UL l53101
+ UL l53104
+ UL l53105
+ UL l53107
+ UL l53109
+ UL l53110
+ UL l53113
+ UL l53116
+ UL l53117
+ UL l53120
+ UL l53121
+ UL l53122
+ UL l53123
+ UL l53124
+ UL l54106
+ UL l54110
+ UL l54112
+ UL l54114
+ UL l54116
+ UL l54117
+ UL l54119
+ UL l54120
+ UL l54121
+ UL l54122
+ UL l54124
+ UL l55100
+ UL l55101
+ UL l55102
+ UL l55103
+ UL l55106
+ UL l55109
+ UL l55112
+ UL l55119
+ UL l55121
+ UL l55122
+ UL l56101
+ UL l56102
+ UL l56103
+ UL l56106
+ UL l56110
+ UL l56111
+ UL l56112
+ UL l56114
+ UL l56115
+ UL l56116
+ UL l56117
+ UL l56118
+ UL l56121
+ UL l56122
+ UL l57106
+ UL l57110
+ UL l57111
+ UL l57116
+ UL l57117
+ UL l57119
+ UL l57122
+ UL l57124
+ UL l58100
+ UL l58101
+ UL l58105
+ UL l58106
+ UL l58107
+ UL l58108
+ UL l58109
+ UL l58113
+ UL l58114
+ UL l58115
+ UL l58116
+ UL l58117
+ UL l58118
+ UL l58120
+ UL l58121
+ UL l58122
+ UL l58123
+ UL l59103
+ UL l59106
+ UL l59110
+ UL l59112
+ UL l59114
+ UL l59121
+ UL l59122
+ UL l59123
+ UL l60100
+ UL l60101
+ UL l60102
+ UL l60106
+ UL l60109
+ UL l60110
+ UL l60112
+ UL l60119
+ UL l61100
+ UL l61101
+ UL l61103
+ UL l61107
+ UL l61108
+ UL l61113
+ UL l61116
+ UL l61124
+ UL l62101
+ UL l62102
+ UL l62103
+ UL l62104
+ UL l62105
+ UL l62106
+ UL l62107
+ UL l62108
+ UL l62109
+ UL l62110
+ UL l62111
+ UL l62112
+ UL l62113
+ UL l62115
+ UL l62117
+ UL l62118
+ UL l62124
+ UL l63100
+ UL l63103
+ UL l63104
+ UL l63105
+ UL l63106
+ UL l63107
+ UL l63108
+ UL l63111
+ UL l63116
+ UL l63117
+ UL l63119
+ UL l63121
+ UL l63124
+ UL l64100
+ UL l64102
+ UL l64103
+ UL l64104
+ UL l64107
+ UL l64108
+ UL l64110
+ UL l64111
+ UL l64112
+ UL l64113
+ UL l64115
+ UL l64117
+ UL l64119
+ UL l64120
+ UL l64121
+ UL l64122
+ UL l64123
+ UL l64124
+ UL l65100
+ UL l65101
+ UL l65103
+ UL l65104
+ UL l65106
+ UL l65107
+ UL l65109
+ UL l65110
+ UL l65112
+ UL l65113
+ UL l65114
+ UL l65115
+ UL l65116
+ UL l65117
+ UL l65120
+ UL l65122
+ UL l65123
+ UL l65124
+ UL l66101
+ UL l66103
+ UL l66105
+ UL l66106
+ UL l66107
+ UL l66109
+ UL l66111
+ UL l66112
+ UL l66113
+ UL l66115
+ UL l66118
+ UL l66119
+ UL l66120
+ UL l66123
+ UL l67101
+ UL l67104
+ UL l67105
+ UL l67111
+ UL l67112
+ UL l67116
+ UL l67119
+ UL l67120
+ UL l67123
+ UL l67124
+ UL l68100
+ UL l68101
+ UL l68103
+ UL l68104
+ UL l68106
+ UL l68107
+ UL l68108
+ UL l68109
+ UL l68113
+ UL l68114
+ UL l68115
+ UL l68116
+ UL l68118
+ UL l68119
+ UL l68120
+ UL l68122
+ UL l68123
+ UL l68124
+ UL l69100
+ UL l69101
+ UL l69103
+ UL l69104
+ UL l69108
+ UL l69109
+ UL l69110
+ UL l69112
+ UL l69116
+ UL l69117
+ UL l69118
+ UL l69119
+ UL l69120
+ UL l69121
+ UL l69122
+ UL l69123
+ UL l69124
+ UL l70103
+ UL l70106
+ UL l70108
+ UL l70109
+ UL l70114
+ UL l70115
+ UL l70118
+ UL l70119
+ UL l70120
+ UL l70121
+ UL l70122
+ UL l70124
+ UL l71103
+ UL l71107
+ UL l71109
+ UL l71111
+ UL l71115
+ UL l71124
+ UL l72100
+ UL l72101
+ UL l72104
+ UL l72107
+ UL l72115
+ UL l72116
+ UL l72117
+ UL l72121
+ UL l72123
+ UL l73104
+ UL l73106
+ UL l73111
+ UL l73113
+ UL l73114
+ UL l73115
+ UL l73116
+ UL l73118
+ UL l73121
+ UL l74101
+ UL l74102
+ UL l74103
+ UL l74104
+ UL l74106
+ UL l74108
+ UL l74109
+ UL l74110
+ UL l74114
+ UL l74115
+ UL l74117
+ UL l74118
+ UL l74119
+ UL l74120
+ UL l74121
+ UL l74122
+ UL l74124
+ UL l75100
+ UL l75106
+ UL l75109
+ UL l75112
+ UL l75113
+ UL l75116
+ UL l75117
+ UL l75119
+ UL l75120
+ UL l75122
+ UL l75123
+ UL l75124
+ UL l76100
+ UL l76103
+ UL l76107
+ UL l76108
+ UL l76109
+ UL l76110
+ UL l76112
+ UL l76114
+ UL l76117
+ UL l76118
+ UL l76119
+ UL l76122
+ UL l76124
+ UL l77101
+ UL l77103
+ UL l77105
+ UL l77108
+ UL l77109
+ UL l77112
+ UL l77114
+ UL l77115
+ UL l77117
+ UL l77118
+ UL l77119
+ UL l77120
+ UL l77121
+ UL l77122
+ UL l77124
+ UL l78101
+ UL l78102
+ UL l78104
+ UL l78106
+ UL l78107
+ UL l78109
+ UL l78111
+ UL l78112
+ UL l78113
+ UL l78120
+ UL l78122
+ UL l79100
+ UL l79101
+ UL l79102
+ UL l79104
+ UL l79105
+ UL l79107
+ UL l79108
+ UL l79109
+ UL l79110
+ UL l79111
+ UL l79115
+ UL l79116
+ UL l79117
+ UL l79118
+ UL l79119
+ UL l79122
+ UL l79123
+ UL l80100
+ UL l80107
+ UL l80108
+ UL l80109
+ UL l80110
+ UL l80112
+ UL l80115
+ UL l80118
+ UL l80120
+ UL l80121
+ UL l81106
+ UL l81113
+ UL l81117
+ UL l81119
+ UL l82101
+ UL l82107
+ UL l82109
+ UL l82110
+ UL l82111
+ UL l82113
+ UL l82115
+ UL l82116
+ UL l82117
+ UL l82119
+ UL l82124
+ UL l83100
+ UL l83105
+ UL l83106
+ UL l83107
+ UL l83109
+ UL l83111
+ UL l83112
+ UL l83118
+ UL l83119
+ UL l83121
+ UL l84100
+ UL l84102
+ UL l84105
+ UL l84107
+ UL l84108
+ UL l84112
+ UL l84114
+ UL l84118
+ UL l84120
+ UL l84121
+ UL l84122
+ UL l84124
+ UL l85100
+ UL l85102
+ UL l85103
+ UL l85104
+ UL l85108
+ UL l85110
+ UL l85112
+ UL l85118
+ UL l85124
+ UL l86100
+ UL l86105
+ UL l86107
+ UL l86109
+ UL l86111
+ UL l86112
+ UL l86114
+ UL l86115
+ UL l86116
+ UL l86123
+ UL l87100
+ UL l87101
+ UL l87102
+ UL l87103
+ UL l87104
+ UL l87105
+ UL l87106
+ UL l87108
+ UL l87110
+ UL l87111
+ UL l87112
+ UL l87113
+ UL l87114
+ UL l87115
+ UL l87119
+ UL l87122
+ UL l87124
+ UL l88101
+ UL l88104
+ UL l88108
+ UL l88113
+ UL l88115
+ UL l88117
+ UL l88118
+ UL l88119
+ UL l88120
+ UL l88122
+ UL l88124
+ UL l89106
+ UL l89108
+ UL l89109
+ UL l89110
+ UL l89111
+ UL l89113
+ UL l89115
+ UL l89117
+ UL l89119
+ UL l90100
+ UL l90104
+ UL l90105
+ UL l90108
+ UL l90109
+ UL l90112
+ UL l90113
+ UL l90119
+ UL l90120
+ UL l90123
+ UL l91101
+ UL l91104
+ UL l91105
+ UL l91106
+ UL l91107
+ UL l91108
+ UL l91111
+ UL l91112
+ UL l91113
+ UL l91116
+ UL l91117
+ UL l91118
+ UL l91120
+ UL l91123
+ UL l92100
+ UL l92101
+ UL l92103
+ UL l92104
+ UL l92106
+ UL l92109
+ UL l92110
+ UL l92111
+ UL l92113
+ UL l92114
+ UL l92120
+ UL l92121
+ UL l93100
+ UL l93101
+ UL l93102
+ UL l93103
+ UL l93104
+ UL l93106
+ UL l93110
+ UL l93112
+ UL l93114
+ UL l93117
+ UL l93119
+ UL l93120
+ UL l93121
+ UL l93124
+ UL l94101
+ UL l94103
+ UL l94104
+ UL l94105
+ UL l94107
+ UL l94108
+ UL l94109
+ UL l94112
+ UL l94113
+ UL l94115
+ UL l94116
+ UL l94118
+ UL l94119
+ UL l94121
+ UL l94122
+ UL l94124
+ UL l95100
+ UL l95101
+ UL l95104
+ UL l95107
+ UL l95109
+ UL l95114
+ UL l95115
+ UL l95117
+ UL l95120
+ UL l95121
+ UL l95124
+ UL l96100
+ UL l96101
+ UL l96103
+ UL l96104
+ UL l96105
+ UL l96108
+ UL l96109
+ UL l96110
+ UL l96112
+ UL l96113
+ UL l96117
+ UL l96118
+ UL l96119
+ UL l96120
+ UL l96122
+ UL l96123
+ UL l96124
+ UL l97100
+ UL l97101
+ UL l97105
+ UL l97117
+ UL l97118
+ UL l97119
+ UL l97121
+ UL l97123
+ UL l98101
+ UL l98104
+ UL l98108
+ UL l98109
+ UL l98110
+ UL l98112
+ UL l98117
+ UL l99100
+ UL l99102
+ UL l99103
+ UL l99107
+ UL l99117
+ UL l99118
+ UL l99119
+ UL l99123
+ UL l99124
+ENDATA

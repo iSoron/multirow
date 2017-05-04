@@ -106,7 +106,7 @@ instances/%.done: $(benchmark) out/%.yaml
 	@touch $@
 
 out/%.yaml: $(benchmark) instances/%.mps.gz
-	@$(benchmark) -mw -f instances/$*.mps.gz -s out/$*.yaml 2>&1 | tee out/$*.log
+	@$(benchmark) -mw -f instances/$*.mps.gz -b bases/$*.bas -s out/$*.yaml 2>&1 | tee out/$*.log
 
 clean:
 	rm -f out/* instances/*.done
