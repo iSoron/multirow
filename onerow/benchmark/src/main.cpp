@@ -149,21 +149,21 @@ int main(int argc, char **argv)
 	if (enable_gomory_cuts)
 	{
 		time_printf("Generating Gomory cuts...\n");
-		cplexHelper.add_single_row_cuts<GomoryCutGenerator>();
+		cplexHelper.add_single_row_cuts<GomoryCutGenerator>(0);
 		cplexHelper.solve(true);
 	}
 
 	if (enable_mir_cuts)
 	{
 		time_printf("Generating MIR cuts...\n");
-		cplexHelper.add_single_row_cuts<MIRCutGenerator>();
+		cplexHelper.add_single_row_cuts<MIRCutGenerator>(0);
 		cplexHelper.solve(true);
 	}
 
 	if (enable_wedge_cuts)
 	{
 		time_printf("Generating wedge cuts...\n");
-		cplexHelper.add_single_row_cuts<WedgeCutGenerator>();
+		cplexHelper.add_single_row_cuts<WedgeCutGenerator>(MAX_GOOD_ROWS);
 		cplexHelper.solve(true);
 	}
 

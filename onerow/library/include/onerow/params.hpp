@@ -25,16 +25,14 @@ const long REDUCE_FACTOR_RHS          = 1000000;
 const long REDUCE_FACTOR_R1           = 1000;
 const long REDUCE_FACTOR_COEFFICIENT  = 1000000;
 
-const int MAX_CUT_DEPTH = 200;
+const int MAX_R1_RAYS   = 1000000;
+const int MAX_CUT_DEPTH = 1000000;
+const int MAX_GOOD_ROWS = 1000000;
 
 const int ETA_UPDATE_INTERVAL = 300;
 const unsigned int MAX_CUT_BUFFER_SIZE = 100;
 
-const double COEFFICIENT_SAFETY_MARGIN = 0.00001;
-
 #define INTERSECTION_CUT_USE_DOUBLE
-
-#define ENABLE_TRIVIAL_LIFTING
 // #define ENABLE_EXTENDED_STATISTICS
 // #define PRETEND_TO_ADD_CUTS
 

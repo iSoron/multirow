@@ -3,28 +3,21 @@ for i in out/*yaml; do
     IN=${i/.pre.yaml/}
     IN=${IN/out\//}
     grep -q mip_value $i && continue
-    echo $IN
     grep $IN instances/opt.tab | awk '{ print "mip_value:\n  "$2 }' >> $i
 done
 
-echo "                                     TABLE 1                                    "
-echo "--------------------------------------------------------------------------------"
-printf "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n" instance cutsmir cutsw origgap mirperf wperf mircontrib wcontrib wimprov wtime | tee 'tables/gap.csv'
+printf "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n" instance cutsmir cutsw origgap mirperf wperf mircontrib wcontrib wimprov wtime > 'tables/gap.csv'
 for i in out/*.yaml; do
     IN=${i/.yaml/}
     IN=${IN/out\//}
     printf "%s," $IN
     scripts/gap.rb $i
-done | sort -t',' -nrsk 8 | sed -e 's/,$//g' | tee -a 'tables/gap.csv'
+done | sed -e 's/,$//g' >> 'tables/gap.csv'
 
-echo
-echo
-echo "                                     TABLE 2                                    "
-echo "--------------------------------------------------------------------------------"
-printf "%s,%s,%s,%s,%s,%s\n" instance cutsmir cutsw mirt wedget avgm | tee 'tables/speed.csv'
+printf "%s,%s,%s,%s,%s,%s\n" instance cutsmir cutsw mirt wedget avgm > 'tables/speed.csv'
 for i in out/*.yaml; do
     IN=${i/.yaml/}
     IN=${IN/out\//}
     printf "%s," $IN
     scripts/speed.rb $i
-done | sort | sed -e 's/,$//g' | tee -a 'tables/speed.csv'
+done | sort | sed -e 's/,$//g' >> 'tables/speed.csv'

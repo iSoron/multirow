@@ -29,6 +29,7 @@
 #include <onerow/geometry.hpp>
 #include <onerow/stats.hpp>
 #include <onerow/params.hpp>
+#include <cstring>
 
 using std::cout;
 using std::endl;
@@ -39,7 +40,7 @@ static bool debug = false;
 CplexHelper::CplexHelper(CPXENVptr _env, CPXLPptr _lp) :
 		env(_env), lp(_lp), is_integer(0), n_cuts(0), n_rows(0), ub(0), lb(0),
 		cstat(0), cplex_rows(0), first_solution(0), current_solution(0),
-		optimal_solution(0), current_round(0), n_good_rows(-1)
+		optimal_solution(0), current_round(0), n_good_rows(-1), reduced_costs(0)
 {
 }
 
@@ -260,6 +261,9 @@ Row* CplexHelper::get_tableau_row(int index)
 	row->is_integer = is_integer;
 	row->c = cplex_row_to_constraint(cplex_rows[index]);
 
+	row->reduced_costs = reduced_costs;
+	row->cost_cutoff = cost_cutoff;
+
 	if (optimal_solution)
 		assert(cplex_rows[index].get_violation(optimal_solution) <= 0.001);
 
@@ -272,7 +276,7 @@ Row* CplexHelper::get_tableau_row(int index)
 	return row;
 }
 
-int CplexHelper::solve(bool should_end_round)
+void CplexHelper::solve(bool should_end_round)
 {
 	// Optimize
 	int status = CPXlpopt(env, lp);
@@ -312,8 +316,6 @@ int CplexHelper::solve(bool should_end_round)
 
 	if (should_end_round)
 		Stats::set_solution(current_round++, objval, string(buffer));
-
-	return objval;
 }
 
 
@@ -363,6 +365,16 @@ void CplexHelper::read_basis()
 	CPXgetub(env, lp, ub, 0, n_cols - 1);
 	CPXgetlb(env, lp, lb, 0, n_cols - 1);
 	CPXgetbase(env, lp, cstat, rstat);
+
+	reduced_costs = new double[n_cols];
+	CPXgetdj(env, lp, reduced_costs, 0, n_cols-1);
+
+	cost_cutoff = -INFINITY;
+	double *costs_copy = new double[n_cols];
+	memcpy(costs_copy, reduced_costs, sizeof(double) * n_cols);
+	std::sort(costs_copy, costs_copy + n_cols, std::greater<double>());
+	if(n_cols > MAX_R1_RAYS) cost_cutoff = costs_copy[MAX_R1_RAYS];
+	delete costs_copy;
 
 	cplex_rows = new CplexRow[n_rows];
 	assert(cplex_rows != 0);
@@ -509,10 +521,10 @@ void CplexHelper::eta_print()
 FINISHED:;
 }
 
-void CplexHelper::find_good_rows()
+void CplexHelper::find_good_rows(int max_rows)
 {
-	n_good_rows = 0;
-	good_rows = new int[n_rows];
+	bool *is_good = new bool[n_rows];
+	double *fractionality = new double[n_rows];
 
 	time_printf("Finding interesting rows...\n");
 
@@ -521,14 +533,37 @@ void CplexHelper::find_good_rows()
 	{
 		Row *row = get_tableau_row(i);
 
-		if (row->c.pi_zero.frac() != 0 &&
-				row->is_integer[row->basic_var_index])
-		{
-			good_rows[n_good_rows++] = i;
-		}
+		fractionality[i] = row->c.pi_zero.frac().get_double();
+		fractionality[i] = fabs(fractionality[i] - 0.5);
+
+		is_good[i] = true;
+		if (row->c.pi_zero.frac() == 0) is_good[i] = false;
+		if (!row->is_integer[row->basic_var_index]) is_good[i] = false;
 
 		delete row;
 	}
 
-	time_printf("	 %d rows found\n", n_good_rows, n_rows);
+	if(max_rows > 0)
+	{
+		double frac_cutoff = 1.0;
+		std::sort(fractionality, fractionality + n_rows);
+		if (n_rows > max_rows) frac_cutoff = fractionality[max_rows];
+
+		for (int i = 0; i < n_rows; i++)
+			if (fractionality[i] > frac_cutoff)
+				is_good[i] = false;
+	}
+
+	n_good_rows = 0;
+	good_rows = new int[n_rows];
+	for (int i = 0; i < n_rows; i++)
+	{
+		if (!is_good[i]) continue;
+		good_rows[n_good_rows++] = i;
+		if(max_rows > 0 && n_good_rows >= max_rows) break;
+	}
+
+	delete is_good;
+	delete fractionality;
+	time_printf("	 %d rows found\n", n_good_rows);
 }

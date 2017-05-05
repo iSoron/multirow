@@ -30,12 +30,17 @@ using std::endl;
 
 
 template<class Generator>
-int CplexHelper::add_single_row_cuts()
+int CplexHelper::add_single_row_cuts(int max_rows)
 {
 	total_cuts = 0;
 
-	if(n_good_rows < 0)
-		find_good_rows();
+	if(n_good_rows > 0)
+	{
+		n_good_rows = 0;
+		delete good_rows;
+	}
+
+	find_good_rows(max_rows);
 
 	eta_reset();
 	eta_count = 0;
@@ -48,7 +53,6 @@ int CplexHelper::add_single_row_cuts()
 	for (int i = 0; i < n_good_rows; i++)
 	{
 		Row *row = get_tableau_row(good_rows[i]);
-		//Row *row = good_rows[i];
 
 		Generator generator(*row);
 

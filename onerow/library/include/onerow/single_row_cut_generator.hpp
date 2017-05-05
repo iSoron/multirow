@@ -66,6 +66,8 @@ struct Row {
 	int basic_var_index;
 
 	bool* is_integer;
+	double* reduced_costs;
+	double cost_cutoff;
 };
 
 /**

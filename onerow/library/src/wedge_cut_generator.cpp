@@ -296,6 +296,9 @@ void WedgeCutGenerator::eval_next()
 		}
 
 		int r1_index = row.c.pi.index(r1_offset);
+		if(row.reduced_costs[r1_index] < row.cost_cutoff)
+			continue;
+
 		r1[0] = -row.c.pi.value(r1_offset).reduce(REDUCE_FACTOR_R1);
 		r1[1] = 1;
 
