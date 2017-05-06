@@ -98,6 +98,8 @@ int main(int argc, char **argv)
 
 	Stats::set_input_filename(string(input_filename));
 
+	time_printf("Using OpenMP (%d threads)\n", omp_get_max_threads());
+
 	// reads input file
 	time_printf("Reading input file: %s...\n", input_filename);
 	status = CPXreadcopyprob(env, lp, input_filename, NULL);
