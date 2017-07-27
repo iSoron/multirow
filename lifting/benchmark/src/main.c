@@ -40,10 +40,12 @@ unsigned int SEED = 0;
 #define ALGORITHM_BOUND 0
 #define ALGORITHM_NAIVE 1
 #define ALGORITHM_MIP 2
+#define ALGORITHM_HEUR 3
 
 int SELECT_NAIVE_ALGORITHM = 0;
 int SELECT_BOUND_ALGORITHM = 0;
 int SELECT_MIP_ALGORITHM = 0;
+int SELECT_HEUR_ALGORITHM = 0;
 
 int ENABLE_PREPROCESSING = 0;
 int ENABLE_SHEAR = 0;
@@ -83,6 +85,7 @@ static const struct option options_tab[] =
     {"check-answers", required_argument, 0, 'c'},
     {"samples", required_argument, 0, 'a'},
     {"mip", no_argument, 0, 'm'},
+    {"heuristic", no_argument, 0, 'r'},
     {0, 0, 0, 0}
 };
 
@@ -108,6 +111,8 @@ static void print_usage(char **argv)
             "select MIP algorithm");
     printf("%4s %-20s %s\n", "-u", "--bound",
             "select bound algorithm");
+    printf("%4s %-20s %s\n", "-e", "--heuristic",
+            "select heuristic algorithm");
     printf("%4s %-20s %s\n", "-p", "--preprocess",
             "enable pre-processing step in bound algorithm");
     printf("%4s %-20s %s\n", "-e", "--shear",
@@ -144,7 +149,7 @@ static int parse_args(int argc,
     {
         int c = 0;
         int option_index = 0;
-        c = getopt_long(argc, argv, "hb:k:s:f:o:nupew:c:a:m", options_tab,
+        c = getopt_long(argc, argv, "hb:k:s:f:o:nupew:c:a:mr", options_tab,
                         &option_index);
 
         if (c < 0) break;
@@ -208,6 +213,10 @@ static int parse_args(int argc,
             SELECT_BOUND_ALGORITHM = 1;
             break;
 
+        case 'r':
+            SELECT_HEUR_ALGORITHM = 1;
+            break;
+
         case 'p':
             ENABLE_PREPROCESSING = 1;
             break;
@@ -243,7 +252,8 @@ static int parse_args(int argc,
         rval = 1;
     }
 
-    if (SELECT_NAIVE_ALGORITHM + SELECT_BOUND_ALGORITHM + SELECT_MIP_ALGORITHM != 1)
+    if (SELECT_NAIVE_ALGORITHM + SELECT_BOUND_ALGORITHM + SELECT_MIP_ALGORITHM
+            + SELECT_HEUR_ALGORITHM != 1)
     {
         fprintf(stderr, "You must select exactly one algorithm.\n");
         rval = 1;
@@ -298,6 +308,18 @@ int benchmark_set_sample(int algorithm,
                          int *wrong_answer)
 {
     int rval = 0;
+    double xi_plus, xi_minus, ignored;
+
+    if(algorithm == ALGORITHM_BOUND)
+    {
+        rval = LIFTING_2D_optimize_continuous(set->n_halfspaces,
+                set->halfspaces, 1, &ignored, &xi_plus);
+        abort_if(rval, "LIFTING_2D_optimize_continuous failed");
+
+        rval = LIFTING_2D_optimize_continuous(set->n_halfspaces,
+                set->halfspaces, -1, &ignored, &xi_minus);
+        abort_if(rval, "LIFTING_2D_optimize_continuous failed");
+    }
 
     for (int i = 0; i < N_RAYS; i++)
     {
@@ -319,8 +341,8 @@ int benchmark_set_sample(int algorithm,
         switch (algorithm)
         {
             case ALGORITHM_BOUND:
-                rval = LIFTING_2D_bound(set->n_halfspaces, set->halfspaces, ray,
-                        &value);
+                rval = LIFTING_2D_bound(set->n_halfspaces, set->halfspaces,
+                        ray, xi_plus, xi_minus, &value);
                 abort_if(rval, "LIFTING_2D_bound failed");
                 break;
 
@@ -334,6 +356,12 @@ int benchmark_set_sample(int algorithm,
                 rval = LIFTING_2D_mip(set->n_halfspaces, set->halfspaces, ray,
                         &value);
                 abort_if(rval, "LIFTING_2D_mip failed");
+                break;
+
+            case ALGORITHM_HEUR:
+                rval = LIFTING_2D_heur(set->n_halfspaces, set->halfspaces, ray,
+                        &value);
+                abort_if(rval, "LIFTING_2D_heur failed");
                 break;
 
             default:
@@ -371,8 +399,6 @@ int benchmark_set_sample(int algorithm,
                             " expected=%.8lf delta=%.8lf)\n", set_idx,
                             i, value, expected_value, delta);
                     *wrong_answer = 1;
-
-                    LFREE_2D_print_set(set);
                 }
             }
 
@@ -440,11 +466,17 @@ int benchmark(int n_sets, struct LFreeSet2D *sets, double *rays,
         int algorithm)
 {
     int rval = 0;
+    double *times = 0;
+    int *wrong = 0;
+
+    wrong = (int*) malloc(n_sets * sizeof(int));
+    times = (double*) malloc(n_sets * sizeof(double));
+    abort_if(!wrong, "could not allocate wrong");
+    abort_if(!times, "could not allocate times");
 
     log_info("Running benchmark...\n");
 
     double total_initial_time = get_user_time();
-    stats_printf("cpu_time:\n");
 
     for (int j = 0; j < n_sets; j++)
     {
@@ -467,11 +499,19 @@ int benchmark(int n_sets, struct LFreeSet2D *sets, double *rays,
         double set_duration = get_user_time() - set_initial_time;
         double avg = (set_duration / N_SAMPLES_PER_SET) * 1000;
 
-        if(wrong_answer) avg = 1000000;
+        times[j] = avg;
+        wrong[j] = wrong_answer;
 
-        stats_printf("  %d: %.8lf\n", j, avg);
         log_info("  %3d: %12.3lf ms\n", j, avg);
     }
+
+    stats_printf("cpu_time:\n");
+    for(int j = 0; j < n_sets; j++)
+        stats_printf("  %d: %.8lf\n", j, times[j]);
+
+    stats_printf("wrong_answer:\n");
+    for(int j = 0; j < n_sets; j++)
+        stats_printf("  %d: %d\n", j, wrong[j]);
 
     double total_duration = get_user_time() - total_initial_time;
 
@@ -485,6 +525,8 @@ int benchmark(int n_sets, struct LFreeSet2D *sets, double *rays,
     }
 
 CLEANUP:
+    if(wrong) free(wrong);
+    if(times) free(times);
     return rval;
 }
 
@@ -550,22 +592,32 @@ int main(int argc, char **argv)
         ray[1] = DOUBLE_random(0.0, 1.0);
     }
 
-    int algorithm = ALGORITHM_BOUND;
-    if(SELECT_MIP_ALGORITHM) algorithm = ALGORITHM_MIP;
-    else if(SELECT_NAIVE_ALGORITHM) algorithm = ALGORITHM_NAIVE;
-
-    if(algorithm == ALGORITHM_NAIVE)
+    int algorithm = -1;
+    
+    if(SELECT_BOUND_ALGORITHM)
+    {
+        log_info("Enabling bound algorithm\n");
+        algorithm = ALGORITHM_BOUND;
+    }
+    else if(SELECT_MIP_ALGORITHM)
+    {
+        log_info("Enabling MIP algorithm\n");
+        algorithm = ALGORITHM_MIP;
+    }
+    else if(SELECT_NAIVE_ALGORITHM)
     {
         log_info("Enabling naive algorithm\n");
+        algorithm = ALGORITHM_NAIVE;
 
         if(USE_FIXED_BOUNDS)
             log_info("Using fixed big M: %d\n", NAIVE_BIG_M);
         else
             log_info("Enabling bounding boxes\n");
     }
-    else
+    else if(SELECT_HEUR_ALGORITHM)
     {
-        log_info("Enabling bound algorithm\n");
+        log_info("Enabling heuristic algorithm\n");
+        algorithm = ALGORITHM_HEUR;
     }
 
     log_info("Setting %d samples per set\n", N_SAMPLES_PER_SET);

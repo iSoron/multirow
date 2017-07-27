@@ -35,6 +35,7 @@ int LP_open(struct LP *lp)
 
     CPXsetintparam(lp->cplex_env, CPX_PARAM_DATACHECK, CPX_ON);
     CPXsetintparam(lp->cplex_env, CPX_PARAM_NUMERICALEMPHASIS, CPX_ON);
+    CPXsetintparam(lp->cplex_env, CPX_PARAM_THREADS, 1);
     CPXsetlogfile(lp->cplex_env, 0);
 
 CLEANUP:
