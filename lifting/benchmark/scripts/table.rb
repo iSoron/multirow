@@ -3,8 +3,6 @@
 require 'yaml'
 require 'bigdecimal'
 
-BIG_M = 1000000
-
 def sum(a)
     a.inject(0){ |accum, i| accum + i }
 end
@@ -35,7 +33,7 @@ ARGV.each_with_index do |filename,idx|
     filenames[idx] = filename
             .gsub(/.*\//,"")
             .gsub(".yaml", "")
-            .gsub(/[^A-Za-z]/, "")
+            .gsub(/[^A-Za-z0-9]/, "")
     files[idx] = YAML::load(File.open(filename))
 end
 
@@ -59,14 +57,14 @@ files.each_with_index do |f,idx|
     for i in 0..(n_instances-1) do
         time = f['cpu_time'][i]
         next if time.nil?
-
+        times[idx].push(time)
         all_times[idx].push(time)
 
-        if(time == BIG_M)
+        wrong = f['wrong_answer'][i]
+        if(wrong == 1)
             fail_count[idx] += 1
         else
             success_count[idx] += 1
-            times[idx].push(time)
         end
     end
 
@@ -75,6 +73,7 @@ end
 
 best_percentage = [0] * files.length
 
+BIG_M = 1000000000
 for i in 0..(n_instances-1) do
     best_time = BIG_M
     files.each_with_index do |f,idx|
@@ -87,7 +86,6 @@ for i in 0..(n_instances-1) do
         best_percentage[idx] += 1 if time == best_time
 
         next if best_time <= 0
-        next if time >= BIG_M
         ratios_to_best[idx].push(time / best_time)
     end
 end

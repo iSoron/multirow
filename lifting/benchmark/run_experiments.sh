@@ -8,6 +8,8 @@ function title()
 }
 
 RUN=../../build/lifting/benchmark/lifting-benchmark.run
+make -C ../../build lifting-benchmark.run || exit 1
+
 if [ ! -f $RUN ]; then
     echo "not found: $RUN"
     echo "please build the project before running this script"
@@ -15,12 +17,9 @@ if [ ! -f $RUN ]; then
 fi
 
 INSTANCES="instances/filtered/all.txt"
-# SAMPLES_SLOW=10
-# SAMPLES_MEDIUM=100
-# SAMPLES_FAST=1000
-SAMPLES_SLOW=1
-SAMPLES_MEDIUM=1
-SAMPLES_FAST=1
+SAMPLES_SLOW=10
+SAMPLES_MEDIUM=100
+SAMPLES_FAST=1000
 SEED=1240
 
 # ORIGINAL
@@ -36,8 +35,11 @@ COMMON_OPTS="$COMMON_OPTS --check-answers $ANSWERS"
 DIR=orig-100
 mkdir -p $DIR; rm -f $DIR/*log $DIR/*yaml
 
+title Heuristic
+$RUN $COMMON_OPTS --samples $SAMPLES_FAST --heuristic --log $DIR/heur.log --stats $DIR/heur.yaml || exit
+
 title Bound Original
-$RUN $COMMON_OPTS --samples $SAMPLES_FAST --bound --log $DIR/bound-nopre.log --stats $DIR/bound-nopre.yaml || exit
+$RUN $COMMON_OPTS --samples $SAMPLES_FAST --bound --log $DIR/bound.log --stats $DIR/bound.yaml || exit
 
 title Bound Pre-processing
 $RUN $COMMON_OPTS --samples $SAMPLES_FAST --bound --preprocess --log $DIR/bound-pre.log --stats $DIR/bound-pre.yaml || exit
@@ -47,10 +49,16 @@ $RUN $COMMON_OPTS --samples $SAMPLES_MEDIUM --naive --log $DIR/naive-bbox.log --
 
 title Naive Fixed-M
 M=50
-$RUN $COMMON_OPTS --samples $SAMPLES_MEDIUM --naive --fixed-bounds $M --log $DIR/naive-fixed-$M.log --stats $DIR/naive-fixed-$M.yaml || exit
+$RUN $COMMON_OPTS --samples $SAMPLES_SLOW --naive --fixed-bounds $M --log $DIR/naive-fixed-$M.log --stats $DIR/naive-fixed-$M.yaml || exit
+
+title Naive Bounding-Box Pre-processing
+$RUN $COMMON_OPTS --samples $SAMPLES_SLOW --naive --preprocess --log $DIR/naive-bbox-pre.log --stats $DIR/naive-bbox-pre.yaml || exit
 
 title MIP
 $RUN $COMMON_OPTS --samples $SAMPLES_SLOW --mip --log $DIR/mip.log --stats $DIR/mip.yaml || exit
+
+title MIP Pre-processing
+$RUN $COMMON_OPTS --samples $SAMPLES_SLOW --mip --preprocess --log $DIR/mip-pre.log --stats $DIR/mip-pre.yaml || exit
 
 # SHEAR
 # ------------------------------------------------------------------------------
@@ -69,7 +77,7 @@ title Bound Pre-processing + Shear
 $RUN $COMMON_OPTS --samples $SAMPLES_FAST --bound --preprocess --log $DIR/bound-pre.log --stats $DIR/bound-pre.yaml || exit
 
 title Bound Original + Shear
-$RUN $COMMON_OPTS --samples $SAMPLES_MEDIUM --bound --log $DIR/bound-nopre.log --stats $DIR/bound-nopre.yaml || exit
+$RUN $COMMON_OPTS --samples $SAMPLES_MEDIUM --bound --log $DIR/bound.log --stats $DIR/bound.yaml || exit
 
 title Naive Bounding-Box + Shear
 $RUN $COMMON_OPTS --samples $SAMPLES_SLOW --naive --log $DIR/naive-bbox.log --stats $DIR/naive-bbox.yaml || exit

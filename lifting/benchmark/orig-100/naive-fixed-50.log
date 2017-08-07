@@ -5,7 +5,7 @@
 [      0.00] Generating 100 random rays...
 [      0.00] Enabling naive algorithm
 [      0.00] Using fixed big M: 50
-[      0.00] Setting 1 samples per set
+[      0.00] Setting 10 samples per set
 [      0.00] Reading sets from file...
 [      0.00]     skipping invalid set on line 2
 [      0.00]     skipping invalid set on line 7
@@ -62,61 +62,61 @@
 [      0.00]     skipping invalid set on line 324
 [      0.00]     skipping invalid set on line 325
 [      0.00]     skipping invalid set on line 329
-[      0.00]     skipping invalid set on line 354
-[      0.00]     skipping invalid set on line 366
-[      0.00]     skipping invalid set on line 368
-[      0.00]     skipping invalid set on line 369
-[      0.00]     skipping invalid set on line 374
-[      0.00]     skipping invalid set on line 377
-[      0.00]     skipping invalid set on line 400
-[      0.00]     skipping invalid set on line 407
-[      0.00]     skipping invalid set on line 409
-[      0.00]     skipping invalid set on line 413
-[      0.00]     skipping invalid set on line 416
-[      0.00]     skipping invalid set on line 431
-[      0.00]     skipping invalid set on line 432
-[      0.00]     skipping invalid set on line 446
-[      0.00]     skipping invalid set on line 449
-[      0.00]     skipping invalid set on line 450
-[      0.00]     skipping invalid set on line 463
-[      0.00]     skipping invalid set on line 478
-[      0.00]     skipping invalid set on line 483
-[      0.00]     skipping invalid set on line 491
-[      0.00]     skipping invalid set on line 495
-[      0.00]     skipping invalid set on line 498
-[      0.00]     skipping invalid set on line 503
-[      0.00]     skipping invalid set on line 508
-[      0.00]     skipping invalid set on line 509
-[      0.00]     skipping invalid set on line 513
-[      0.00]     skipping invalid set on line 521
-[      0.00]     skipping invalid set on line 527
-[      0.00]     skipping invalid set on line 533
-[      0.00]     skipping invalid set on line 536
-[      0.00]     skipping invalid set on line 545
-[      0.00]     skipping invalid set on line 550
-[      0.00]     skipping invalid set on line 556
-[      0.00]     skipping invalid set on line 567
-[      0.00]     skipping invalid set on line 575
-[      0.00]     skipping invalid set on line 580
-[      0.00]     skipping invalid set on line 619
-[      0.00]     skipping invalid set on line 626
-[      0.00]     skipping invalid set on line 630
-[      0.00]     skipping invalid set on line 632
-[      0.00]     skipping invalid set on line 634
-[      0.00]     skipping invalid set on line 635
-[      0.00]     skipping invalid set on line 636
-[      0.00]     skipping invalid set on line 642
-[      0.00]     skipping invalid set on line 651
-[      0.00]     skipping invalid set on line 658
-[      0.00]     skipping invalid set on line 662
-[      0.00]     skipping invalid set on line 667
-[      0.00]     skipping invalid set on line 677
-[      0.00]     skipping invalid set on line 685
-[      0.00]     skipping invalid set on line 691
-[      0.00]     skipping invalid set on line 692
-[      0.00]     skipping invalid set on line 709
-[      0.00]     skipping invalid set on line 718
-[      0.00]     skipping invalid set on line 719
+[      0.01]     skipping invalid set on line 354
+[      0.01]     skipping invalid set on line 366
+[      0.01]     skipping invalid set on line 368
+[      0.01]     skipping invalid set on line 369
+[      0.01]     skipping invalid set on line 374
+[      0.01]     skipping invalid set on line 377
+[      0.01]     skipping invalid set on line 400
+[      0.01]     skipping invalid set on line 407
+[      0.01]     skipping invalid set on line 409
+[      0.01]     skipping invalid set on line 413
+[      0.01]     skipping invalid set on line 416
+[      0.01]     skipping invalid set on line 431
+[      0.01]     skipping invalid set on line 432
+[      0.01]     skipping invalid set on line 446
+[      0.01]     skipping invalid set on line 449
+[      0.01]     skipping invalid set on line 450
+[      0.01]     skipping invalid set on line 463
+[      0.01]     skipping invalid set on line 478
+[      0.01]     skipping invalid set on line 483
+[      0.01]     skipping invalid set on line 491
+[      0.01]     skipping invalid set on line 495
+[      0.01]     skipping invalid set on line 498
+[      0.01]     skipping invalid set on line 503
+[      0.01]     skipping invalid set on line 508
+[      0.01]     skipping invalid set on line 509
+[      0.01]     skipping invalid set on line 513
+[      0.01]     skipping invalid set on line 521
+[      0.01]     skipping invalid set on line 527
+[      0.01]     skipping invalid set on line 533
+[      0.01]     skipping invalid set on line 536
+[      0.01]     skipping invalid set on line 545
+[      0.01]     skipping invalid set on line 550
+[      0.01]     skipping invalid set on line 556
+[      0.01]     skipping invalid set on line 567
+[      0.01]     skipping invalid set on line 575
+[      0.01]     skipping invalid set on line 580
+[      0.01]     skipping invalid set on line 619
+[      0.01]     skipping invalid set on line 626
+[      0.01]     skipping invalid set on line 630
+[      0.01]     skipping invalid set on line 632
+[      0.01]     skipping invalid set on line 634
+[      0.01]     skipping invalid set on line 635
+[      0.01]     skipping invalid set on line 636
+[      0.01]     skipping invalid set on line 642
+[      0.01]     skipping invalid set on line 651
+[      0.01]     skipping invalid set on line 658
+[      0.01]     skipping invalid set on line 662
+[      0.01]     skipping invalid set on line 667
+[      0.01]     skipping invalid set on line 677
+[      0.01]     skipping invalid set on line 685
+[      0.01]     skipping invalid set on line 691
+[      0.01]     skipping invalid set on line 692
+[      0.01]     skipping invalid set on line 709
+[      0.01]     skipping invalid set on line 718
+[      0.01]     skipping invalid set on line 719
 [      0.01]     skipping invalid set on line 762
 [      0.01]     skipping invalid set on line 767
 [      0.01]     skipping invalid set on line 771
@@ -168,1154 +168,1147 @@
 [      0.01]     skipping invalid set on line 1093
 [      0.01]     skipping invalid set on line 1097
 [      0.01]     skipping invalid set on line 1113
-[      0.01]     skipping invalid set on line 1118
-[      0.01]     skipping invalid set on line 1135
-[      0.01]     skipping invalid set on line 1149
-[      0.01]     skipping invalid set on line 1151
-[      0.01] Successfully read 1000 sets
-[      0.01] Running benchmark...
-[      0.12]     0:      112.083 ms
-[      0.23]     1:      107.720 ms
-[      0.33]     2:      107.236 ms
-[      0.44]     3:      107.354 ms
-[      0.55]     4:      107.594 ms
-[      0.66]     5:      106.964 ms
-[      0.76]     6:      107.108 ms
-[      0.87]     7:      106.848 ms
-[      0.98]     8:      107.050 ms
-[      1.09]     9:      107.926 ms
-[      1.19]    10:      106.774 ms
-[      1.30]    11:      106.329 ms
-[      1.41]    12:      108.686 ms
-[      1.51]    13:      106.960 ms
-[      1.62]    14:      107.276 ms
-[      1.73]    15:      107.720 ms
-[      1.84]    16:      107.140 ms
-[      1.94]    17:      106.657 ms
-[      2.06]    18:      111.948 ms
-[      2.16]    19:      107.156 ms
-[      2.27]    20:      107.086 ms
-[      2.38]    21:      112.587 ms
-[      2.49]    22:      107.667 ms
-[      2.60]    23:      107.009 ms
-[      2.74]    24:      139.955 ms
-[      2.85]    25:      114.071 ms
-[      3.00]    26:      144.488 ms
-[      3.15]    27:      150.697 ms
-[      3.30]    28:      157.120 ms
-[      3.44]    29:      134.451 ms
-[      3.59]    30:      152.097 ms
-[      3.71]    31:      117.721 ms
-[      3.81]    32:      107.226 ms
-[      3.92]    33:      107.025 ms
-[      4.03]    34:      107.590 ms
-[      4.14]    35:      108.229 ms
-[      4.25]    36:      107.629 ms
-[      4.36]    37:      113.927 ms
-[      4.47]    38:      107.216 ms
-[      4.57]    39:      107.582 ms
-[      4.68]    40:      106.847 ms
-[      4.79]    41:      107.242 ms
-[      4.89]    42:      106.729 ms
-[      5.00]    43:      107.297 ms
-[      5.11]    44:      107.495 ms
-[      5.22]    45:      106.723 ms
-[      5.32]    46:      107.323 ms
-[      5.43]    47:      106.931 ms
-[      5.54]    48:      106.594 ms
-[      5.64]    49:      106.724 ms
-[      5.75]    50:      107.460 ms
-[      5.86]    51:      107.424 ms
-[      5.97]    52:      107.431 ms
-[      6.07]    53:      106.488 ms
-[      6.18]    54:      106.428 ms
-[      6.29]    55:      107.185 ms
-[      6.40]    56:      110.122 ms
-[      6.51]    57:      110.356 ms
-[      6.61]    58:      107.768 ms
-[      6.72]    59:      107.565 ms
-[      6.83]    60:      107.187 ms
-[      6.94]    61:      107.745 ms
-[      7.04]    62:      106.711 ms
-[      7.15]    63:      106.006 ms
-[      7.26]    64:      106.482 ms
-[      7.37]    65:      109.595 ms
-[      7.47]    66:      106.794 ms
-[      7.58]    67:      107.206 ms
-[      7.69]    68:      106.782 ms
-[      7.69]     wrong answer (set=69 ray=1 answer=0.48545781 expected=0.48058199 delta=0.00487582)
-[      7.70]     wrong answer (set=69 ray=12 answer=0.28325777 expected=0.28062003 delta=0.00263774)
-[      7.70]     wrong answer (set=69 ray=13 answer=0.59200872 expected=0.58596589 delta=0.00604282)
-[      7.70]     wrong answer (set=69 ray=14 answer=0.56050749 expected=0.55481542 delta=0.00569207)
-[      7.71]     wrong answer (set=69 ray=20 answer=0.81594923 expected=0.80744452 delta=0.00850472)
-[      7.71]     wrong answer (set=69 ray=24 answer=0.47307005 expected=0.46833811 delta=0.00473195)
-[      7.72]     wrong answer (set=69 ray=32 answer=0.94717112 expected=0.93721165 delta=0.00995947)
-[      7.73]     wrong answer (set=69 ray=43 answer=0.90433955 expected=0.89484368 delta=0.00949587)
-[      7.74]     wrong answer (set=69 ray=46 answer=0.16171499 expected=0.16042010 delta=0.00129489)
-[      7.74]     wrong answer (set=69 ray=50 answer=0.82217211 expected=0.81358747 delta=0.00858465)
-[      7.74]     wrong answer (set=69 ray=51 answer=0.44462482 expected=0.44021259 delta=0.00441222)
-[      7.75]     wrong answer (set=69 ray=54 answer=0.88863217 expected=0.87931215 delta=0.00932002)
-[      7.75]     wrong answer (set=69 ray=60 answer=0.46240663 expected=0.45778659 delta=0.00462004)
-[      7.76]     wrong answer (set=69 ray=65 answer=0.51054521 expected=0.50539762 delta=0.00514759)
-[      7.77]     wrong answer (set=69 ray=73 answer=0.66212026 expected=0.65529410 delta=0.00682615)
-[      7.78]     wrong answer (set=69 ray=82 answer=0.81936545 expected=0.81081278 delta=0.00855267)
-[      7.78]     wrong answer (set=69 ray=85 answer=0.39812901 expected=0.39421237 delta=0.00391665)
-[      7.78]     wrong answer (set=69 ray=87 answer=0.60264016 expected=0.59648543 delta=0.00615473)
-[      7.79]     wrong answer (set=69 ray=92 answer=0.48319345 expected=0.47834960 delta=0.00484385)
-[      7.79]     wrong answer (set=69 ray=93 answer=0.90438881 expected=0.89489294 delta=0.00949587)
-[      7.80]     wrong answer (set=69 ray=95 answer=0.95811382 expected=0.94804245 delta=0.01007137)
-[      7.80]     wrong answer (set=69 ray=96 answer=0.55540152 expected=0.54977434 delta=0.00562718)
-[      7.80]     wrong answer (set=69 ray=97 answer=0.85510636 expected=0.84617001 delta=0.00893635)
-[      7.80]    69:  1000000.000 ms
-[      7.91]    70:      110.246 ms
-[      8.02]    71:      106.732 ms
-[      8.13]    72:      107.561 ms
-[      8.24]    73:      112.072 ms
-[      8.35]    74:      110.752 ms
-[      8.46]    75:      106.562 ms
-[      8.56]    76:      107.558 ms
-[      8.67]    77:      106.991 ms
-[      8.78]    78:      107.415 ms
-[      8.89]    79:      108.007 ms
-[      8.99]    80:      107.633 ms
-[      9.10]    81:      107.044 ms
-[      9.21]    82:      108.274 ms
-[      9.32]    83:      107.956 ms
-[      9.42]    84:      107.227 ms
-[      9.53]    85:      106.765 ms
-[      9.64]    86:      107.616 ms
-[      9.75]    87:      106.432 ms
-[      9.85]    88:      106.990 ms
-[      9.96]    89:      106.713 ms
-[     10.07]    90:      106.638 ms
-[     10.17]    91:      107.288 ms
-[     10.28]    92:      107.889 ms
-[     10.39]    93:      109.096 ms
-[     10.50]    94:      106.801 ms
-[     10.61]    95:      108.242 ms
-[     10.71]    96:      107.865 ms
-[     10.82]    97:      106.649 ms
-[     10.93]    98:      107.051 ms
-[     11.03]    99:      107.514 ms
-[     11.14]   100:      107.431 ms
-[     11.25]   101:      106.819 ms
-[     11.36]   102:      111.945 ms
-[     11.47]   103:      106.829 ms
-[     11.58]   104:      107.629 ms
-[     11.68]   105:      107.143 ms
-[     11.79]   106:      107.197 ms
-[     11.90]   107:      107.246 ms
-[     12.00]   108:      106.664 ms
-[     12.11]   109:      107.390 ms
-[     12.22]   110:      106.486 ms
-[     12.33]   111:      111.534 ms
-[     12.44]   112:      108.569 ms
-[     12.55]   113:      108.590 ms
-[     12.65]   114:      106.882 ms
-[     12.76]   115:      107.657 ms
-[     12.87]   116:      106.779 ms
-[     12.98]   117:      107.784 ms
-[     13.08]   118:      106.851 ms
-[     13.19]   119:      106.844 ms
-[     13.33]   120:      139.655 ms
-[     13.44]   121:      106.679 ms
-[     13.54]   122:      106.903 ms
-[     13.65]   123:      107.707 ms
-[     13.76]   124:      107.790 ms
-[     13.87]   125:      107.899 ms
-[     13.97]   126:      106.816 ms
-[     14.08]   127:      106.828 ms
-[     14.19]   128:      107.046 ms
-[     14.30]   129:      110.165 ms
-[     14.41]   130:      109.118 ms
-[     14.51]   131:      109.367 ms
-[     14.62]   132:      107.051 ms
-[     14.73]   133:      107.926 ms
-[     14.84]   134:      107.850 ms
-[     14.94]   135:      106.426 ms
-[     15.05]   136:      107.217 ms
-[     15.16]   137:      106.752 ms
-[     15.27]   138:      108.900 ms
-[     15.38]   139:      110.618 ms
-[     15.48]   140:      106.359 ms
-[     15.59]   141:      107.543 ms
-[     15.70]   142:      108.208 ms
-[     15.81]   143:      107.029 ms
-[     15.91]   144:      106.769 ms
-[     16.02]   145:      106.042 ms
-[     16.13]   146:      106.210 ms
-[     16.23]   147:      107.081 ms
-[     16.34]   148:      109.479 ms
-[     16.45]   149:      108.364 ms
-[     16.56]   150:      106.911 ms
-[     16.67]   151:      107.222 ms
-[     16.77]   152:      107.545 ms
-[     16.88]   153:      106.288 ms
-[     16.99]   154:      107.302 ms
-[     17.09]   155:      107.572 ms
-[     17.20]   156:      106.561 ms
-[     17.31]   157:      106.883 ms
-[     17.41]   158:      107.237 ms
-[     17.52]   159:      106.852 ms
-[     17.63]   160:      107.392 ms
-[     17.74]   161:      107.843 ms
-[     17.84]   162:      107.732 ms
-[     17.95]   163:      107.960 ms
-[     18.06]   164:      107.620 ms
-[     18.17]   165:      107.606 ms
-[     18.27]   166:      107.232 ms
-[     18.38]   167:      107.818 ms
-[     18.49]   168:      111.049 ms
-[     18.60]   169:      106.394 ms
-[     18.71]   170:      106.336 ms
-[     18.81]   171:      107.595 ms
-[     18.92]   172:      106.744 ms
-[     19.03]   173:      107.173 ms
-[     19.14]   174:      107.397 ms
-[     19.24]   175:      106.880 ms
-[     19.35]   176:      109.018 ms
-[     19.46]   177:      107.550 ms
-[     19.57]   178:      115.171 ms
-[     19.68]   179:      108.589 ms
-[     19.79]   180:      107.284 ms
-[     19.90]   181:      106.674 ms
-[     20.00]   182:      107.423 ms
-[     20.11]   183:      106.698 ms
-[     20.22]   184:      109.765 ms
-[     20.33]   185:      109.905 ms
-[     20.44]   186:      107.360 ms
-[     20.54]   187:      106.560 ms
-[     20.65]   188:      107.653 ms
-[     20.76]   189:      107.192 ms
-[     20.87]   190:      108.700 ms
-[     20.98]   191:      107.347 ms
-[     21.08]   192:      106.652 ms
-[     21.19]   193:      106.191 ms
-[     21.30]   194:      106.835 ms
-[     21.40]   195:      107.541 ms
-[     21.51]   196:      107.378 ms
-[     21.62]   197:      106.313 ms
-[     21.72]   198:      107.104 ms
-[     21.83]   199:      107.016 ms
-[     21.94]   200:      107.757 ms
-[     22.05]   201:      109.780 ms
-[     22.16]   202:      108.995 ms
-[     22.26]   203:      107.172 ms
-[     22.38]   204:      112.195 ms
-[     22.48]   205:      106.843 ms
-[     22.59]   206:      106.716 ms
-[     22.70]   207:      107.466 ms
-[     22.80]   208:      106.827 ms
-[     22.91]   209:      108.094 ms
-[     23.02]   210:      107.563 ms
-[     23.13]   211:      106.862 ms
-[     23.23]   212:      106.987 ms
-[     23.34]   213:      106.892 ms
-[     23.45]   214:      107.665 ms
-[     23.56]   215:      106.981 ms
-[     23.66]   216:      107.005 ms
-[     23.77]   217:      106.530 ms
-[     23.88]   218:      108.154 ms
-[     23.98]   219:      107.181 ms
-[     24.09]   220:      106.999 ms
-[     24.20]   221:      107.530 ms
-[     24.31]   222:      107.429 ms
-[     24.41]   223:      108.126 ms
-[     24.52]   224:      106.508 ms
-[     24.63]   225:      107.331 ms
-[     24.73]   226:      106.307 ms
-[     24.84]   227:      107.224 ms
-[     24.95]   228:      107.556 ms
-[     25.06]   229:      106.484 ms
-[     25.16]   230:      107.894 ms
-[     25.27]   231:      107.620 ms
-[     25.38]   232:      111.714 ms
-[     25.49]   233:      106.668 ms
-[     25.60]   234:      106.414 ms
-[     25.71]   235:      110.235 ms
-[     25.82]   236:      108.549 ms
-[     25.92]   237:      106.727 ms
-[     26.03]   238:      107.748 ms
-[     26.14]   239:      106.947 ms
-[     26.24]   240:      107.934 ms
-[     26.35]   241:      108.336 ms
-[     26.46]   242:      107.324 ms
-[     26.57]   243:      106.584 ms
-[     26.67]   244:      107.492 ms
-[     26.78]   245:      106.863 ms
-[     26.89]   246:      108.009 ms
-[     27.03]   247:      139.927 ms
-[     27.14]   248:      106.775 ms
-[     27.24]   249:      106.105 ms
-[     27.35]   250:      110.794 ms
-[     27.46]   251:      107.589 ms
-[     27.57]   252:      107.694 ms
-[     27.68]   253:      110.378 ms
-[     27.79]   254:      108.484 ms
-[     27.89]   255:      107.255 ms
-[     28.00]   256:      107.283 ms
-[     28.11]   257:      107.018 ms
-[     28.22]   258:      107.344 ms
-[     28.32]   259:      107.582 ms
-[     28.43]   260:      107.413 ms
-[     28.54]   261:      108.095 ms
-[     28.65]   262:      107.276 ms
-[     28.75]   263:      107.561 ms
-[     28.86]   264:      107.169 ms
-[     28.97]   265:      107.813 ms
-[     29.08]   266:      107.233 ms
-[     29.18]   267:      106.400 ms
-[     29.29]   268:      111.166 ms
-[     29.40]   269:      107.607 ms
-[     29.51]   270:      108.441 ms
-[     29.65]   271:      140.107 ms
-[     29.76]   272:      106.391 ms
-[     29.86]   273:      106.756 ms
-[     29.97]   274:      106.197 ms
-[     30.08]   275:      106.480 ms
-[     30.18]   276:      106.899 ms
-[     30.29]   277:      106.662 ms
-[     30.40]   278:      107.288 ms
-[     30.54]   279:      139.997 ms
-[     30.64]   280:      106.769 ms
-[     30.75]   281:      106.950 ms
-[     30.86]   282:      106.323 ms
-[     30.96]   283:      107.223 ms
-[     31.07]   284:      108.146 ms
-[     31.18]   285:      107.742 ms
-[     31.32]   286:      142.540 ms
-[     31.43]   287:      109.555 ms
-[     31.54]   288:      108.027 ms
-[     31.65]   289:      106.955 ms
-[     31.75]   290:      107.424 ms
-[     31.86]   291:      108.150 ms
-[     31.97]   292:      107.011 ms
-[     32.08]   293:      107.885 ms
-[     32.18]   294:      106.829 ms
-[     32.29]   295:      107.949 ms
-[     32.40]   296:      107.463 ms
-[     32.51]   297:      108.894 ms
-[     32.62]   298:      107.349 ms
-[     32.72]   299:      106.554 ms
-[     32.86]   300:      140.660 ms
-[     32.99]   301:      129.481 ms
-[     33.12]   302:      124.308 ms
-[     33.22]   303:      107.554 ms
-[     33.33]   304:      107.058 ms
-[     33.44]   305:      106.768 ms
-[     33.55]   306:      109.157 ms
-[     33.66]   307:      108.555 ms
-[     33.76]   308:      107.356 ms
-[     33.87]   309:      106.878 ms
-[     33.98]   310:      107.270 ms
-[     34.08]   311:      106.810 ms
-[     34.19]   312:      106.857 ms
-[     34.30]   313:      106.760 ms
-[     34.41]   314:      108.362 ms
-[     34.51]   315:      106.560 ms
-[     34.62]   316:      106.964 ms
-[     34.76]   317:      140.666 ms
-[     34.87]   318:      107.947 ms
-[     34.98]   319:      108.106 ms
-[     35.08]   320:      106.919 ms
-[     35.19]   321:      107.344 ms
-[     35.30]   322:      106.990 ms
-[     35.41]   323:      107.753 ms
-[     35.52]   324:      110.527 ms
-[     35.62]   325:      106.039 ms
-[     35.63]     wrong answer (set=326 ray=2 answer=0.80853412 expected=0.79403349 delta=0.01450063)
-[     35.63]     wrong answer (set=326 ray=3 answer=0.42832297 expected=0.42172459 delta=0.00659838)
-[     35.63]     wrong answer (set=326 ray=4 answer=0.41829933 expected=0.41193802 delta=0.00636131)
-[     35.63]     wrong answer (set=326 ray=5 answer=0.69447187 expected=0.68238142 delta=0.01209044)
-[     35.63]     wrong answer (set=326 ray=6 answer=0.50757488 expected=0.49931703 delta=0.00825785)
-[     35.63]     wrong answer (set=326 ray=7 answer=0.37323151 expected=0.36777896 delta=0.00545255)
-[     35.63]     wrong answer (set=326 ray=8 answer=0.28692557 expected=0.28329054 delta=0.00363504)
-[     35.63]     wrong answer (set=326 ray=9 answer=0.55686466 expected=0.54757952 delta=0.00928515)
-[     35.64]     wrong answer (set=326 ray=10 answer=0.87433823 expected=0.85849422 delta=0.01584401)
-[     35.64]     wrong answer (set=326 ray=11 answer=0.42281514 expected=0.41633529 delta=0.00647985)
-[     35.64]     wrong answer (set=326 ray=12 answer=0.31479940 expected=0.31057169 delta=0.00422770)
-[     35.64]     wrong answer (set=326 ray=16 answer=0.56496143 expected=0.55551824 delta=0.00944319)
-[     35.64]     wrong answer (set=326 ray=17 answer=0.94999794 expected=0.93257347 delta=0.01742446)
-[     35.64]     wrong answer (set=326 ray=18 answer=0.60363849 expected=0.59340508 delta=0.01023342)
-[     35.65]     wrong answer (set=326 ray=20 answer=0.41917968 expected=0.41277886 delta=0.00640082)
-[     35.65]     wrong answer (set=326 ray=23 answer=0.28923546 expected=0.28556091 delta=0.00367455)
-[     35.65]     wrong answer (set=326 ray=24 answer=0.20358672 expected=0.20169018 delta=0.00189654)
-[     35.65]     wrong answer (set=326 ray=25 answer=0.58011380 expected=0.57039403 delta=0.00971977)
-[     35.65]     wrong answer (set=326 ray=27 answer=0.62513203 expected=0.61446399 delta=0.01066804)
-[     35.66]     wrong answer (set=326 ray=28 answer=0.35923873 expected=0.35410227 delta=0.00513646)
-[     35.66]     wrong answer (set=326 ray=29 answer=0.53453677 expected=0.52576527 delta=0.00877150)
-[     35.66]     wrong answer (set=326 ray=30 answer=0.98636466 expected=0.96818948 delta=0.01817518)
-[     35.66]     wrong answer (set=326 ray=31 answer=0.25712988 expected=0.25408751 delta=0.00304237)
-[     35.66]     wrong answer (set=326 ray=32 answer=0.55789353 expected=0.54860838 delta=0.00928515)
-[     35.66]     wrong answer (set=326 ray=34 answer=0.29004738 expected=0.28633332 delta=0.00371406)
-[     35.67]     wrong answer (set=326 ray=36 answer=0.74437789 expected=0.73126015 delta=0.01311774)
-[     35.67]     wrong answer (set=326 ray=39 answer=0.35426707 expected=0.34924914 delta=0.00501793)
-[     35.67]     wrong answer (set=326 ray=40 answer=0.63139627 expected=0.62060970 delta=0.01078657)
-[     35.67]     wrong answer (set=326 ray=41 answer=0.86578970 expected=0.85010373 delta=0.01568597)
-[     35.68]     wrong answer (set=326 ray=42 answer=0.80220606 expected=0.78786347 delta=0.01434259)
-[     35.68]     wrong answer (set=326 ray=44 answer=0.41862252 expected=0.41222170 delta=0.00640082)
-[     35.68]     wrong answer (set=326 ray=45 answer=0.20527132 expected=0.20329575 delta=0.00197556)
-[     35.68]     wrong answer (set=326 ray=46 answer=0.33016678 expected=0.32562299 delta=0.00454379)
-[     35.69]     wrong answer (set=326 ray=50 answer=0.32761703 expected=0.32315226 delta=0.00446477)
-[     35.69]     wrong answer (set=326 ray=51 answer=0.18172911 expected=0.18030671 delta=0.00142241)
-[     35.69]     wrong answer (set=326 ray=52 answer=0.78465576 expected=0.77066877 delta=0.01398698)
-[     35.69]     wrong answer (set=326 ray=54 answer=0.91952028 expected=0.90272800 delta=0.01679228)
-[     35.69]     wrong answer (set=326 ray=55 answer=0.82905680 expected=0.81412154 delta=0.01493525)
-[     35.70]     wrong answer (set=326 ray=56 answer=0.87608609 expected=0.86020256 delta=0.01588353)
-[     35.70]     wrong answer (set=326 ray=59 answer=0.30635647 expected=0.30228681 delta=0.00406966)
-[     35.70]     wrong answer (set=326 ray=61 answer=0.92173044 expected=0.90489864 delta=0.01683180)
-[     35.70]     wrong answer (set=326 ray=62 answer=0.41709489 expected=0.41077309 delta=0.00632180)
-[     35.70]     wrong answer (set=326 ray=64 answer=0.39698757 expected=0.39106089 delta=0.00592669)
-[     35.71]     wrong answer (set=326 ray=66 answer=0.53126370 expected=0.52253171 delta=0.00873199)
-[     35.71]     wrong answer (set=326 ray=67 answer=0.52452871 expected=0.51595476 delta=0.00857394)
-[     35.71]     wrong answer (set=326 ray=68 answer=0.86956378 expected=0.85379879 delta=0.01576499)
-[     35.71]     wrong answer (set=326 ray=70 answer=0.94121447 expected=0.92394806 delta=0.01726642)
-[     35.71]     wrong answer (set=326 ray=71 answer=0.79549007 expected=0.78126602 delta=0.01422405)
-[     35.71]     wrong answer (set=326 ray=72 answer=0.38080158 expected=0.37519098 delta=0.00561060)
-[     35.72]     wrong answer (set=326 ray=74 answer=0.81544035 expected=0.80082118 delta=0.01461916)
-[     35.72]     wrong answer (set=326 ray=75 answer=0.50863178 expected=0.50037393 delta=0.00825785)
-[     35.72]     wrong answer (set=326 ray=76 answer=0.35495320 expected=0.34989576 delta=0.00505744)
-[     35.73]     wrong answer (set=326 ray=80 answer=0.41349640 expected=0.40721411 delta=0.00628229)
-[     35.73]     wrong answer (set=326 ray=81 answer=0.96031636 expected=0.94269434 delta=0.01762202)
-[     35.73]     wrong answer (set=326 ray=82 answer=0.23551974 expected=0.23295151 delta=0.00256823)
-[     35.74]     wrong answer (set=326 ray=85 answer=0.86298303 expected=0.84737608 delta=0.01560695)
-[     35.74]     wrong answer (set=326 ray=86 answer=0.37689449 expected=0.37140243 delta=0.00549206)
-[     35.74]     wrong answer (set=326 ray=90 answer=0.52415507 expected=0.51558112 delta=0.00857394)
-[     35.75]     wrong answer (set=326 ray=93 answer=0.88963574 expected=0.87347563 delta=0.01616010)
-[     35.75]     wrong answer (set=326 ray=94 answer=0.19766295 expected=0.19588494 delta=0.00177801)
-[     35.75]     wrong answer (set=326 ray=95 answer=0.46678925 expected=0.45940065 delta=0.00738860)
-[     35.75]     wrong answer (set=326 ray=96 answer=0.62470917 expected=0.61404113 delta=0.01066804)
-[     35.75]     wrong answer (set=326 ray=97 answer=0.31355265 expected=0.30936445 delta=0.00418819)
-[     35.75]     wrong answer (set=326 ray=98 answer=0.89107299 expected=0.87487337 delta=0.01619962)
-[     35.75]     wrong answer (set=326 ray=99 answer=0.98606089 expected=0.96788572 delta=0.01817518)
-[     35.75]   326:  1000000.000 ms
-[     35.86]   327:      108.609 ms
-[     35.97]   328:      108.070 ms
-[     36.08]   329:      107.022 ms
-[     36.19]   330:      107.729 ms
-[     36.29]   331:      107.635 ms
-[     36.40]   332:      107.543 ms
-[     36.51]   333:      107.196 ms
-[     36.61]   334:      106.527 ms
-[     36.72]   335:      106.667 ms
-[     36.83]   336:      106.841 ms
-[     36.93]   337:      106.948 ms
-[     37.04]   338:      106.744 ms
-[     37.15]   339:      108.728 ms
-[     37.26]   340:      107.081 ms
-[     37.37]   341:      110.563 ms
-[     37.51]   342:      139.463 ms
-[     37.62]   343:      110.043 ms
-[     37.72]   344:      106.527 ms
-[     37.83]   345:      106.772 ms
-[     37.83]     wrong answer (set=346 ray=0 answer=0.96974008 expected=0.96304202 delta=0.00669806)
-[     37.83]     wrong answer (set=346 ray=2 answer=0.94306983 expected=0.93670254 delta=0.00636729)
-[     37.83]     wrong answer (set=346 ray=3 answer=0.95764835 expected=0.95103298 delta=0.00661537)
-[     37.84]     wrong answer (set=346 ray=4 answer=0.71578497 expected=0.71214652 delta=0.00363845)
-[     37.84]     wrong answer (set=346 ray=6 answer=0.80443660 expected=0.79972315 delta=0.00471345)
-[     37.84]     wrong answer (set=346 ray=7 answer=0.96527049 expected=0.95857243 delta=0.00669806)
-[     37.84]     wrong answer (set=346 ray=9 answer=0.74559335 expected=0.74154143 delta=0.00405191)
-[     37.84]     wrong answer (set=346 ray=10 answer=0.78860900 expected=0.78406094 delta=0.00454807)
-[     37.85]     wrong answer (set=346 ray=14 answer=0.75023962 expected=0.74618771 delta=0.00405191)
-[     37.85]     wrong answer (set=346 ray=16 answer=0.76994328 expected=0.76564329 delta=0.00429999)
-[     37.85]     wrong answer (set=346 ray=18 answer=0.63411591 expected=0.63138707 delta=0.00272884)
-[     37.85]     wrong answer (set=346 ray=21 answer=0.81134413 expected=0.80654798 delta=0.00479614)
-[     37.86]     wrong answer (set=346 ray=23 answer=0.80718817 expected=0.80247472 delta=0.00471345)
-[     37.86]     wrong answer (set=346 ray=24 answer=0.75577084 expected=0.75163623 delta=0.00413461)
-[     37.86]     wrong answer (set=346 ray=28 answer=0.68421919 expected=0.68099420 delta=0.00322499)
-[     37.86]     wrong answer (set=346 ray=29 answer=0.52704214 expected=0.52563637 delta=0.00140577)
-[     37.86]     wrong answer (set=346 ray=30 answer=0.68109118 expected=0.67786619 delta=0.00322499)
-[     37.87]     wrong answer (set=346 ray=33 answer=0.51585941 expected=0.51461903 delta=0.00124038)
-[     37.87]     wrong answer (set=346 ray=35 answer=0.86329208 expected=0.85791709 delta=0.00537499)
-[     37.88]     wrong answer (set=346 ray=39 answer=0.73279083 expected=0.72898700 delta=0.00380384)
-[     37.88]     wrong answer (set=346 ray=41 answer=0.70062682 expected=0.69715375 delta=0.00347307)
-[     37.88]     wrong answer (set=346 ray=42 answer=0.81121857 expected=0.80642243 delta=0.00479614)
-[     37.88]     wrong answer (set=346 ray=43 answer=0.62475788 expected=0.62219443 delta=0.00256346)
-[     37.88]     wrong answer (set=346 ray=44 answer=0.92483739 expected=0.91863548 delta=0.00620191)
-[     37.89]     wrong answer (set=346 ray=48 answer=0.59819560 expected=0.59596291 delta=0.00223269)
-[     37.89]     wrong answer (set=346 ray=50 answer=0.57487481 expected=0.57289020 delta=0.00198461)
-[     37.90]     wrong answer (set=346 ray=51 answer=0.80079243 expected=0.79616167 delta=0.00463076)
-[     37.90]     wrong answer (set=346 ray=52 answer=0.58566192 expected=0.58351192 delta=0.00215000)
-[     37.90]     wrong answer (set=346 ray=55 answer=0.51340697 expected=0.51216659 delta=0.00124038)
-[     37.90]     wrong answer (set=346 ray=56 answer=0.87942857 expected=0.87380551 delta=0.00562306)
-[     37.91]     wrong answer (set=346 ray=60 answer=0.74827564 expected=0.74422372 delta=0.00405191)
-[     37.91]     wrong answer (set=346 ray=61 answer=0.60946631 expected=0.60706824 delta=0.00239807)
-[     37.91]     wrong answer (set=346 ray=62 answer=0.54350570 expected=0.54193455 delta=0.00157115)
-[     37.91]     wrong answer (set=346 ray=63 answer=0.56653153 expected=0.56462961 delta=0.00190192)
-[     37.91]     wrong answer (set=346 ray=65 answer=0.63368055 expected=0.63103441 delta=0.00264615)
-[     37.91]     wrong answer (set=346 ray=66 answer=0.78421021 expected=0.77966215 delta=0.00454807)
-[     37.92]     wrong answer (set=346 ray=67 answer=0.88915736 expected=0.88336891 delta=0.00578845)
-[     37.92]     wrong answer (set=346 ray=70 answer=0.61115345 expected=0.60875538 delta=0.00239807)
-[     37.92]     wrong answer (set=346 ray=71 answer=0.73524366 expected=0.73135713 delta=0.00388653)
-[     37.92]     wrong answer (set=346 ray=72 answer=0.91192606 expected=0.90588953 delta=0.00603652)
-[     37.92]     wrong answer (set=346 ray=73 answer=0.73331376 expected=0.72942723 delta=0.00388653)
-[     37.92]     wrong answer (set=346 ray=74 answer=0.66283158 expected=0.65977197 delta=0.00305961)
-[     37.92]     wrong answer (set=346 ray=75 answer=0.92646964 expected=0.92026773 delta=0.00620191)
-[     37.93]     wrong answer (set=346 ray=77 answer=0.91813500 expected=0.91209847 delta=0.00603652)
-[     37.93]     wrong answer (set=346 ray=80 answer=0.98893301 expected=0.98198687 delta=0.00694614)
-[     37.93]     wrong answer (set=346 ray=82 answer=0.81108180 expected=0.80628566 delta=0.00479614)
-[     37.94]     wrong answer (set=346 ray=86 answer=0.63329889 expected=0.63065274 delta=0.00264615)
-[     37.94]     wrong answer (set=346 ray=87 answer=0.94473834 expected=0.93837105 delta=0.00636729)
-[     37.94]     wrong answer (set=346 ray=88 answer=0.73787889 expected=0.73399236 delta=0.00388653)
-[     37.94]     wrong answer (set=346 ray=90 answer=0.80917595 expected=0.80437981 delta=0.00479614)
-[     37.95]     wrong answer (set=346 ray=91 answer=0.69284654 expected=0.68945616 delta=0.00339038)
-[     37.95]     wrong answer (set=346 ray=96 answer=0.80660435 expected=0.80180820 delta=0.00479614)
-[     37.95]     wrong answer (set=346 ray=97 answer=0.62420300 expected=0.62163954 delta=0.00256346)
-[     37.95]     wrong answer (set=346 ray=98 answer=0.77663279 expected=0.77225011 delta=0.00438268)
-[     37.96]     wrong answer (set=346 ray=99 answer=0.66329286 expected=0.66023325 delta=0.00305961)
-[     37.96]   346:  1000000.000 ms
-[     38.07]   347:      109.769 ms
-[     38.17]   348:      107.182 ms
-[     38.28]   349:      107.344 ms
-[     38.39]   350:      106.579 ms
-[     38.50]   351:      107.513 ms
-[     38.60]   352:      107.200 ms
-[     38.71]   353:      108.526 ms
-[     38.82]   354:      107.973 ms
-[     38.93]   355:      108.601 ms
-[     39.03]   356:      106.760 ms
-[     39.14]   357:      107.831 ms
-[     39.25]   358:      106.880 ms
-[     39.36]   359:      112.731 ms
-[     39.47]   360:      109.924 ms
-[     39.58]   361:      109.387 ms
-[     39.69]   362:      107.165 ms
-[     39.80]   363:      106.682 ms
-[     39.90]   364:      106.586 ms
-[     40.01]   365:      106.884 ms
-[     40.12]   366:      106.849 ms
-[     40.22]   367:      106.264 ms
-[     40.33]   368:      107.129 ms
-[     40.44]   369:      108.088 ms
-[     40.54]   370:      107.519 ms
-[     40.65]   371:      106.694 ms
-[     40.76]   372:      106.435 ms
-[     40.86]   373:      107.265 ms
-[     40.97]   374:      106.658 ms
-[     41.08]   375:      106.787 ms
-[     41.19]   376:      112.470 ms
-[     41.30]   377:      106.775 ms
-[     41.40]   378:      107.169 ms
-[     41.51]   379:      106.457 ms
-[     41.62]   380:      106.317 ms
-[     41.72]   381:      106.464 ms
-[     41.83]   382:      107.641 ms
-[     41.94]   383:      107.387 ms
-[     42.05]   384:      106.362 ms
-[     42.15]   385:      106.496 ms
-[     42.26]   386:      106.567 ms
-[     42.37]   387:      113.093 ms
-[     42.48]   388:      106.840 ms
-[     42.59]   389:      107.334 ms
-[     42.69]   390:      106.949 ms
-[     42.80]   391:      106.854 ms
-[     42.91]   392:      107.063 ms
-[     43.01]   393:      107.234 ms
-[     43.12]   394:      107.728 ms
-[     43.23]   395:      106.603 ms
-[     43.33]   396:      106.625 ms
-[     43.44]   397:      109.118 ms
-[     43.55]   398:      108.759 ms
-[     43.66]   399:      106.774 ms
-[     43.77]   400:      106.539 ms
-[     43.87]   401:      107.908 ms
-[     43.98]   402:      108.080 ms
-[     44.09]   403:      107.547 ms
-[     44.20]   404:      107.848 ms
-[     44.30]   405:      107.290 ms
-[     44.41]   406:      107.796 ms
-[     44.52]   407:      108.112 ms
-[     44.63]   408:      107.216 ms
-[     44.73]   409:      106.897 ms
-[     44.84]   410:      106.765 ms
-[     44.95]   411:      106.574 ms
-[     45.05]   412:      106.602 ms
-[     45.16]   413:      107.976 ms
-[     45.27]   414:      110.972 ms
-[     45.38]   415:      107.835 ms
-[     45.49]   416:      108.033 ms
-[     45.60]   417:      107.455 ms
-[     45.70]   418:      106.916 ms
-[     45.81]   419:      106.772 ms
-[     45.92]   420:      107.160 ms
-[     46.03]   421:      108.660 ms
-[     46.13]   422:      106.725 ms
-[     46.24]   423:      106.990 ms
-[     46.35]   424:      108.114 ms
-[     46.46]   425:      106.885 ms
-[     46.56]   426:      107.043 ms
-[     46.67]   427:      107.257 ms
-[     46.78]   428:      109.252 ms
-[     46.89]   429:      107.275 ms
-[     46.99]   430:      106.914 ms
-[     47.10]   431:      107.084 ms
-[     47.21]   432:      110.147 ms
-[     47.32]   433:      107.796 ms
-[     47.42]   434:      106.459 ms
-[     47.53]   435:      106.836 ms
-[     47.64]   436:      106.839 ms
-[     47.75]   437:      107.035 ms
-[     47.85]   438:      106.690 ms
-[     47.96]   439:      107.949 ms
-[     48.07]   440:      106.449 ms
-[     48.17]   441:      107.328 ms
-[     48.28]   442:      108.191 ms
-[     48.39]   443:      108.262 ms
-[     48.50]   444:      106.100 ms
-[     48.60]   445:      107.335 ms
-[     48.71]   446:      106.763 ms
-[     48.82]   447:      106.864 ms
-[     48.92]   448:      107.033 ms
-[     49.04]   449:      110.783 ms
-[     49.14]   450:      108.554 ms
-[     49.25]   451:      107.256 ms
-[     49.36]   452:      108.035 ms
-[     49.47]   453:      106.534 ms
-[     49.57]   454:      108.106 ms
-[     49.68]   455:      107.490 ms
-[     49.79]   456:      107.619 ms
-[     49.90]   457:      107.590 ms
-[     50.00]   458:      107.370 ms
-[     50.11]   459:      106.545 ms
-[     50.22]   460:      107.020 ms
-[     50.32]   461:      106.586 ms
-[     50.43]   462:      106.900 ms
-[     50.54]   463:      107.276 ms
-[     50.65]   464:      107.594 ms
-[     50.75]   465:      107.314 ms
-[     50.86]   466:      107.039 ms
-[     50.97]   467:      109.017 ms
-[     51.08]   468:      107.813 ms
-[     51.18]   469:      107.432 ms
-[     51.29]   470:      107.252 ms
-[     51.40]   471:      106.662 ms
-[     51.54]   472:      139.429 ms
-[     51.65]   473:      107.292 ms
-[     51.75]   474:      107.754 ms
-[     51.86]   475:      106.850 ms
-[     51.97]   476:      106.425 ms
-[     52.07]   477:      107.142 ms
-[     52.18]   478:      106.383 ms
-[     52.29]   479:      106.908 ms
-[     52.39]   480:      106.699 ms
-[     52.50]   481:      107.336 ms
-[     52.61]   482:      106.602 ms
-[     52.71]   483:      107.111 ms
-[     52.82]   484:      107.391 ms
-[     52.93]   485:      107.139 ms
-[     53.04]   486:      107.669 ms
-[     53.15]   487:      113.352 ms
-[     53.27]   488:      115.673 ms
-[     53.39]   489:      127.544 ms
-[     53.50]   490:      106.769 ms
-[     53.61]   491:      107.440 ms
-[     53.72]   492:      107.465 ms
-[     53.82]   493:      107.569 ms
-[     53.93]   494:      106.570 ms
-[     54.04]   495:      106.548 ms
-[     54.14]   496:      107.990 ms
-[     54.25]   497:      107.043 ms
-[     54.36]   498:      108.682 ms
-[     54.47]   499:      107.236 ms
-[     54.57]   500:      106.729 ms
-[     54.68]   501:      107.432 ms
-[     54.79]   502:      107.792 ms
-[     54.90]   503:      107.768 ms
-[     55.00]   504:      107.291 ms
-[     55.11]   505:      106.836 ms
-[     55.22]   506:      110.137 ms
-[     55.33]   507:      108.844 ms
-[     55.44]   508:      106.760 ms
-[     55.54]   509:      106.721 ms
-[     55.65]   510:      106.406 ms
-[     55.76]   511:      106.956 ms
-[     55.86]   512:      107.909 ms
-[     55.97]   513:      107.651 ms
-[     56.08]   514:      107.717 ms
-[     56.19]   515:      107.808 ms
-[     56.29]   516:      106.272 ms
-[     56.40]   517:      106.851 ms
-[     56.51]   518:      107.269 ms
-[     56.62]   519:      107.626 ms
-[     56.72]   520:      106.927 ms
-[     56.83]   521:      107.498 ms
-[     56.94]   522:      107.678 ms
-[     57.05]   523:      107.054 ms
-[     57.15]   524:      106.922 ms
-[     57.26]   525:      108.873 ms
-[     57.37]   526:      111.805 ms
-[     57.48]   527:      109.260 ms
-[     57.59]   528:      106.311 ms
-[     57.69]   529:      106.282 ms
-[     57.80]   530:      107.529 ms
-[     57.91]   531:      106.791 ms
-[     58.02]   532:      107.795 ms
-[     58.12]   533:      107.679 ms
-[     58.23]   534:      107.160 ms
-[     58.34]   535:      107.128 ms
-[     58.45]   536:      106.525 ms
-[     58.55]   537:      106.476 ms
-[     58.66]   538:      106.959 ms
-[     58.77]   539:      106.927 ms
-[     58.87]   540:      107.505 ms
-[     58.98]   541:      106.627 ms
-[     59.09]   542:      106.938 ms
-[     59.19]   543:      106.743 ms
-[     59.30]   544:      106.365 ms
-[     59.41]   545:      107.328 ms
-[     59.51]   546:      106.490 ms
-[     59.62]   547:      107.329 ms
-[     59.73]   548:      106.545 ms
-[     59.83]   549:      106.833 ms
-[     59.94]   550:      106.678 ms
-[     60.05]   551:      107.076 ms
-[     60.15]   552:      105.851 ms
-[     60.26]   553:      107.515 ms
-[     60.37]   554:      110.761 ms
-[     60.48]   555:      107.145 ms
-[     60.59]   556:      107.816 ms
-[     60.69]   557:      107.063 ms
-[     60.80]   558:      106.938 ms
-[     60.91]   559:      106.531 ms
-[     61.02]   560:      109.054 ms
-[     61.12]   561:      107.052 ms
-[     61.23]   562:      106.270 ms
-[     61.34]   563:      107.473 ms
-[     61.44]   564:      106.629 ms
-[     61.55]   565:      107.439 ms
-[     61.66]   566:      107.337 ms
-[     61.77]   567:      106.863 ms
-[     61.88]   568:      110.519 ms
-[     61.99]   569:      114.628 ms
-[     62.11]   570:      120.076 ms
-[     62.22]   571:      112.880 ms
-[     62.36]   572:      137.546 ms
-[     62.49]   573:      128.048 ms
-[     62.61]   574:      123.359 ms
-[     62.74]   575:      125.932 ms
-[     62.85]   576:      109.409 ms
-[     62.96]   577:      106.595 ms
-[     63.07]   578:      113.247 ms
-[     63.18]   579:      108.387 ms
-[     63.28]   580:      106.525 ms
-[     63.39]   581:      106.711 ms
-[     63.50]   582:      107.205 ms
-[     63.60]   583:      107.227 ms
-[     63.71]   584:      107.293 ms
-[     63.82]   585:      106.923 ms
-[     63.93]   586:      107.228 ms
-[     64.03]   587:      107.235 ms
-[     64.14]   588:      107.625 ms
-[     64.25]   589:      107.739 ms
-[     64.36]   590:      112.133 ms
-[     64.47]   591:      106.553 ms
-[     64.58]   592:      107.429 ms
-[     64.68]   593:      107.910 ms
-[     64.79]   594:      106.981 ms
-[     64.90]   595:      107.450 ms
-[     65.00]   596:      107.077 ms
-[     65.11]   597:      107.968 ms
-[     65.22]   598:      111.135 ms
-[     65.33]   599:      106.303 ms
-[     65.44]   600:      107.048 ms
-[     65.54]   601:      107.148 ms
-[     65.65]   602:      107.396 ms
-[     65.76]   603:      106.905 ms
-[     65.87]   604:      106.940 ms
-[     65.97]   605:      107.326 ms
-[     66.08]   606:      106.879 ms
-[     66.19]   607:      107.713 ms
-[     66.29]   608:      107.156 ms
-[     66.40]   609:      107.247 ms
-[     66.54]   610:      140.118 ms
-[     66.65]   611:      106.645 ms
-[     66.76]   612:      107.055 ms
-[     66.89]   613:      139.137 ms
-[     67.00]   614:      106.636 ms
-[     67.11]   615:      110.425 ms
-[     67.22]   616:      108.902 ms
-[     67.33]   617:      106.687 ms
-[     67.44]   618:      107.465 ms
-[     67.54]   619:      107.122 ms
-[     67.65]   620:      107.481 ms
-[     67.76]   621:      106.764 ms
-[     67.86]   622:      106.853 ms
-[     67.97]   623:      106.928 ms
-[     68.08]   624:      106.922 ms
-[     68.18]   625:      107.579 ms
-[     68.30]   626:      110.492 ms
-[     68.40]   627:      106.433 ms
-[     68.51]   628:      107.364 ms
-[     68.62]   629:      106.807 ms
-[     68.72]   630:      106.698 ms
-[     68.83]   631:      107.043 ms
-[     68.94]   632:      106.330 ms
-[     69.04]   633:      106.665 ms
-[     69.15]   634:      106.845 ms
-[     69.26]   635:      107.277 ms
-[     69.37]   636:      111.575 ms
-[     69.48]   637:      108.822 ms
-[     69.58]   638:      106.500 ms
-[     69.69]   639:      106.446 ms
-[     69.80]   640:      107.993 ms
-[     69.91]   641:      107.665 ms
-[     70.01]   642:      106.155 ms
-[     70.12]   643:      107.412 ms
-[     70.26]   644:      140.794 ms
-[     70.37]   645:      110.677 ms
-[     70.48]   646:      107.851 ms
-[     70.59]   647:      106.982 ms
-[     70.69]   648:      106.734 ms
-[     70.80]   649:      107.632 ms
-[     70.91]   650:      107.375 ms
-[     71.02]   651:      107.527 ms
-[     71.12]   652:      107.514 ms
-[     71.23]   653:      106.242 ms
-[     71.34]   654:      107.806 ms
-[     71.44]   655:      106.909 ms
-[     71.55]   656:      108.572 ms
-[     71.66]   657:      107.780 ms
-[     71.77]   658:      106.607 ms
-[     71.87]   659:      106.895 ms
-[     71.98]   660:      107.195 ms
-[     72.09]   661:      106.994 ms
-[     72.20]   662:      108.051 ms
-[     72.30]   663:      106.691 ms
-[     72.41]   664:      108.158 ms
-[     72.52]   665:      107.248 ms
-[     72.63]   666:      108.312 ms
-[     72.73]   667:      106.651 ms
-[     72.84]   668:      106.941 ms
-[     72.95]   669:      106.126 ms
-[     73.05]   670:      107.562 ms
-[     73.16]   671:      107.094 ms
-[     73.27]   672:      109.290 ms
-[     73.38]   673:      111.078 ms
-[     73.49]   674:      107.357 ms
-[     73.60]   675:      107.614 ms
-[     73.74]   676:      139.864 ms
-[     73.84]   677:      107.154 ms
-[     73.95]   678:      107.314 ms
-[     74.06]   679:      107.743 ms
-[     74.17]   680:      107.136 ms
-[     74.27]   681:      107.018 ms
-[     74.38]   682:      110.160 ms
-[     74.49]   683:      106.089 ms
-[     74.60]   684:      107.030 ms
-[     74.71]   685:      117.400 ms
-[     74.82]   686:      107.233 ms
-[     74.93]   687:      107.410 ms
-[     75.03]   688:      106.820 ms
-[     75.14]   689:      106.588 ms
-[     75.25]   690:      110.713 ms
-[     75.37]   691:      113.338 ms
-[     75.47]   692:      108.020 ms
-[     75.58]   693:      107.095 ms
-[     75.69]   694:      107.695 ms
-[     75.80]   695:      107.298 ms
-[     75.94]   696:      140.246 ms
-[     76.04]   697:      106.706 ms
-[     76.15]   698:      106.500 ms
-[     76.26]   699:      108.336 ms
-[     76.37]   700:      110.108 ms
-[     76.51]   701:      140.334 ms
-[     76.61]   702:      107.284 ms
-[     76.72]   703:      106.632 ms
-[     76.83]   704:      106.838 ms
-[     76.94]   705:      107.268 ms
-[     77.04]   706:      107.715 ms
-[     77.15]   707:      107.666 ms
-[     77.26]   708:      106.444 ms
-[     77.37]   709:      109.780 ms
-[     77.48]   710:      108.389 ms
-[     77.58]   711:      107.373 ms
-[     77.69]   712:      106.873 ms
-[     77.80]   713:      107.330 ms
-[     77.91]   714:      107.751 ms
-[     78.01]   715:      106.995 ms
-[     78.12]   716:      107.439 ms
-[     78.23]   717:      106.536 ms
-[     78.33]   718:      107.541 ms
-[     78.44]   719:      107.254 ms
-[     78.55]   720:      107.030 ms
-[     78.66]   721:      107.215 ms
-[     78.76]   722:      106.872 ms
-[     78.87]   723:      107.345 ms
-[     78.98]   724:      107.294 ms
-[     79.08]   725:      107.531 ms
-[     79.19]   726:      106.725 ms
-[     79.30]   727:      106.854 ms
-[     79.40]   728:      106.937 ms
-[     79.51]   729:      107.871 ms
-[     79.62]   730:      108.574 ms
-[     79.73]   731:      108.327 ms
-[     79.84]   732:      107.260 ms
-[     79.95]   733:      109.027 ms
-[     80.05]   734:      107.719 ms
-[     80.16]   735:      106.747 ms
-[     80.27]   736:      107.602 ms
-[     80.38]   737:      112.676 ms
-[     80.49]   738:      107.217 ms
-[     80.60]   739:      107.029 ms
-[     80.70]   740:      107.200 ms
-[     80.81]   741:      107.122 ms
-[     80.92]   742:      107.829 ms
-[     81.02]   743:      106.624 ms
-[     81.13]   744:      105.794 ms
-[     81.24]   745:      108.016 ms
-[     81.34]   746:      106.358 ms
-[     81.45]   747:      106.549 ms
-[     81.56]   748:      108.144 ms
-[     81.67]   749:      107.595 ms
-[     81.77]   750:      106.841 ms
-[     81.88]   751:      107.745 ms
-[     81.99]   752:      106.929 ms
-[     82.09]   753:      106.721 ms
-[     82.20]   754:      106.816 ms
-[     82.31]   755:      107.319 ms
-[     82.42]   756:      106.676 ms
-[     82.52]   757:      107.312 ms
-[     82.63]   758:      107.130 ms
-[     82.77]   759:      139.838 ms
-[     82.88]   760:      107.402 ms
-[     82.98]   761:      107.265 ms
-[     83.09]   762:      107.325 ms
-[     83.20]   763:      107.238 ms
-[     83.31]   764:      109.650 ms
-[     83.42]   765:      107.973 ms
-[     83.52]   766:      106.036 ms
-[     83.63]   767:      107.164 ms
-[     83.74]   768:      106.564 ms
-[     83.84]   769:      107.743 ms
-[     83.95]   770:      106.870 ms
-[     84.06]   771:      107.192 ms
-[     84.17]   772:      107.633 ms
-[     84.27]   773:      107.006 ms
-[     84.38]   774:      110.975 ms
-[     84.49]   775:      106.715 ms
-[     84.60]   776:      106.401 ms
-[     84.70]   777:      107.579 ms
-[     84.81]   778:      107.905 ms
-[     84.92]   779:      107.875 ms
-[     85.03]   780:      106.470 ms
-[     85.13]   781:      106.986 ms
-[     85.24]   782:      106.545 ms
-[     85.35]   783:      106.971 ms
-[     85.46]   784:      108.967 ms
-[     85.56]   785:      108.129 ms
-[     85.67]   786:      106.265 ms
-[     85.78]   787:      107.021 ms
-[     85.88]   788:      106.350 ms
-[     85.99]   789:      107.627 ms
-[     86.10]   790:      107.955 ms
-[     86.21]   791:      107.486 ms
-[     86.31]   792:      107.082 ms
-[     86.42]   793:      107.558 ms
-[     86.53]   794:      107.891 ms
-[     86.64]   795:      106.684 ms
-[     86.74]   796:      106.298 ms
-[     86.85]   797:      107.259 ms
-[     86.96]   798:      109.456 ms
-[     87.07]   799:      109.668 ms
-[     87.18]   800:      109.668 ms
-[     87.29]   801:      106.700 ms
-[     87.40]   802:      110.727 ms
-[     87.50]   803:      107.146 ms
-[     87.61]   804:      107.640 ms
-[     87.72]   805:      107.448 ms
-[     87.83]   806:      107.391 ms
-[     87.93]   807:      106.511 ms
-[     88.04]   808:      107.822 ms
-[     88.15]   809:      107.295 ms
-[     88.26]   810:      107.608 ms
-[     88.40]   811:      140.242 ms
-[     88.50]   812:      107.394 ms
-[     88.64]   813:      141.002 ms
-[     88.75]   814:      107.303 ms
-[     88.86]   815:      107.882 ms
-[     88.97]   816:      106.921 ms
-[     89.07]   817:      107.355 ms
-[     89.18]   818:      109.459 ms
-[     89.29]   819:      108.359 ms
-[     89.40]   820:      107.891 ms
-[     89.51]   821:      106.974 ms
-[     89.61]   822:      106.908 ms
-[     89.72]   823:      107.060 ms
-[     89.83]   824:      106.674 ms
-[     89.93]   825:      106.351 ms
-[     90.04]   826:      106.608 ms
-[     90.15]   827:      106.794 ms
-[     90.25]   828:      107.675 ms
-[     90.36]   829:      107.252 ms
-[     90.47]   830:      106.958 ms
-[     90.58]   831:      107.044 ms
-[     90.68]   832:      106.645 ms
-[     90.79]   833:      106.895 ms
-[     90.90]   834:      107.089 ms
-[     91.00]   835:      107.031 ms
-[     91.11]   836:      108.556 ms
-[     91.22]   837:      109.333 ms
-[     91.34]   838:      117.092 ms
-[     91.45]   839:      111.655 ms
-[     91.58]   840:      125.728 ms
-[     91.70]   841:      124.594 ms
-[     91.81]   842:      106.790 ms
-[     91.92]   843:      111.117 ms
-[     92.03]   844:      107.792 ms
-[     92.13]   845:      106.854 ms
-[     92.24]   846:      106.161 ms
-[     92.35]   847:      106.662 ms
-[     92.45]   848:      107.116 ms
-[     92.56]   849:      106.931 ms
-[     92.67]   850:      106.903 ms
-[     92.77]   851:      107.576 ms
-[     92.88]   852:      107.507 ms
-[     92.99]   853:      106.729 ms
-[     93.10]   854:      110.462 ms
-[     93.21]   855:      109.605 ms
-[     93.32]   856:      109.267 ms
-[     93.42]   857:      106.350 ms
-[     93.53]   858:      107.309 ms
-[     93.64]   859:      106.812 ms
-[     93.75]   860:      106.423 ms
-[     93.85]   861:      107.371 ms
-[     93.96]   862:      106.531 ms
-[     94.07]   863:      106.795 ms
-[     94.17]   864:      106.516 ms
-[     94.28]   865:      106.798 ms
-[     94.39]   866:      107.418 ms
-[     94.49]   867:      106.407 ms
-[     94.60]   868:      106.449 ms
-[     94.71]   869:      106.709 ms
-[     94.81]   870:      107.290 ms
-[     94.92]   871:      107.335 ms
-[     95.03]   872:      107.461 ms
-[     95.14]   873:      109.198 ms
-[     95.24]   874:      106.280 ms
-[     95.35]   875:      109.294 ms
-[     95.46]   876:      106.553 ms
-[     95.57]   877:      107.049 ms
-[     95.67]   878:      107.463 ms
-[     95.78]   879:      107.155 ms
-[     95.89]   880:      105.979 ms
-[     95.99]   881:      107.403 ms
-[     96.10]   882:      108.791 ms
-[     96.24]   883:      140.593 ms
-[     96.35]   884:      109.297 ms
-[     96.46]   885:      107.715 ms
-[     96.57]   886:      107.281 ms
-[     96.68]   887:      107.598 ms
-[     96.78]   888:      107.921 ms
-[     96.89]   889:      107.686 ms
-[     97.00]   890:      106.688 ms
-[     97.11]   891:      107.077 ms
-[     97.21]   892:      109.089 ms
-[     97.32]   893:      108.893 ms
-[     97.43]   894:      105.901 ms
-[     97.54]   895:      108.335 ms
-[     97.65]   896:      107.322 ms
-[     97.75]   897:      108.090 ms
-[     97.86]   898:      107.412 ms
-[     97.97]   899:      106.549 ms
-[     98.07]   900:      106.419 ms
-[     98.18]   901:      106.818 ms
-[     98.29]   902:      107.097 ms
-[     98.39]   903:      107.012 ms
-[     98.50]   904:      107.133 ms
-[     98.61]   905:      107.604 ms
-[     98.72]   906:      108.552 ms
-[     98.83]   907:      107.905 ms
-[     98.93]   908:      107.343 ms
-[     99.04]   909:      107.172 ms
-[     99.15]   910:      107.394 ms
-[     99.26]   911:      114.418 ms
-[     99.37]   912:      112.563 ms
-[     99.49]   913:      110.794 ms
-[     99.59]   914:      106.558 ms
-[     99.70]   915:      107.534 ms
-[     99.81]   916:      106.702 ms
-[     99.91]   917:      106.676 ms
-[    100.05]   918:      140.335 ms
-[    100.16]   919:      107.413 ms
-[    100.27]   920:      107.145 ms
-[    100.38]   921:      111.139 ms
-[    100.49]   922:      106.192 ms
-[    100.59]   923:      107.867 ms
-[    100.70]   924:      107.605 ms
-[    100.81]   925:      107.219 ms
-[    100.91]   926:      106.386 ms
-[    101.02]   927:      107.148 ms
-[    101.13]   928:      107.182 ms
-[    101.24]   929:      107.562 ms
-[    101.34]   930:      107.559 ms
-[    101.45]   931:      108.053 ms
-[    101.56]   932:      107.784 ms
-[    101.67]   933:      109.357 ms
-[    101.78]   934:      107.180 ms
-[    101.89]   935:      110.887 ms
-[    101.99]   936:      107.096 ms
-[    102.10]   937:      107.272 ms
-[    102.21]   938:      107.721 ms
-[    102.32]   939:      108.223 ms
-[    102.43]   940:      107.382 ms
-[    102.53]   941:      106.133 ms
-[    102.64]   942:      106.441 ms
-[    102.74]   943:      106.213 ms
-[    102.85]   944:      106.384 ms
-[    102.96]   945:      106.987 ms
-[    103.07]   946:      108.585 ms
-[    103.17]   947:      107.263 ms
-[    103.28]   948:      107.046 ms
-[    103.39]   949:      107.430 ms
-[    103.49]   950:      107.230 ms
-[    103.60]   951:      107.055 ms
-[    103.71]   952:      109.784 ms
-[    103.82]   953:      107.772 ms
-[    103.93]   954:      107.601 ms
-[    104.03]   955:      107.408 ms
-[    104.14]   956:      107.402 ms
-[    104.25]   957:      108.075 ms
-[    104.36]   958:      108.077 ms
-[    104.46]   959:      106.512 ms
-[    104.57]   960:      106.660 ms
-[    104.68]   961:      106.674 ms
-[    104.79]   962:      107.674 ms
-[    104.89]   963:      107.675 ms
-[    105.00]   964:      107.032 ms
-[    105.11]   965:      106.634 ms
-[    105.21]   966:      106.667 ms
-[    105.32]   967:      107.014 ms
-[    105.43]   968:      106.598 ms
-[    105.53]   969:      107.313 ms
-[    105.64]   970:      107.007 ms
-[    105.75]   971:      107.836 ms
-[    105.86]   972:      111.145 ms
-[    105.97]   973:      107.603 ms
-[    106.07]   974:      106.125 ms
-[    106.18]   975:      107.164 ms
-[    106.29]   976:      106.168 ms
-[    106.40]   977:      108.167 ms
-[    106.50]   978:      106.975 ms
-[    106.61]   979:      107.492 ms
-[    106.72]   980:      107.549 ms
-[    106.82]   981:      106.604 ms
-[    106.93]   982:      106.890 ms
-[    107.04]   983:      107.162 ms
-[    107.15]   984:      107.256 ms
-[    107.25]   985:      107.060 ms
-[    107.36]   986:      108.118 ms
-[    107.47]   987:      108.035 ms
-[    107.58]   988:      108.204 ms
-[    107.68]   989:      107.241 ms
-[    107.80]   990:      110.629 ms
-[    107.91]   991:      109.651 ms
-[    108.01]   992:      106.919 ms
-[    108.12]   993:      105.804 ms
-[    108.23]   994:      107.203 ms
-[    108.33]   995:      107.237 ms
-[    108.44]   996:      107.128 ms
-[    108.55]   997:      112.985 ms
-[    108.66]   998:      107.091 ms
-[    108.77]   999:      107.478 ms
-[    108.77]     108.759 ms per set                     
-[    108.77] Done.
+[      0.02]     skipping invalid set on line 1118
+[      0.02]     skipping invalid set on line 1135
+[      0.02]     skipping invalid set on line 1149
+[      0.02]     skipping invalid set on line 1151
+[      0.02] Successfully read 1000 sets
+[      0.02] Running benchmark...
+[      1.24]     0:      122.881 ms
+[      1.97]     1:       72.089 ms
+[      2.36]     2:       39.694 ms
+[      2.72]     3:       35.395 ms
+[      3.07]     4:       35.495 ms
+[      3.43]     5:       35.595 ms
+[      3.78]     6:       35.395 ms
+[      4.13]     7:       34.795 ms
+[      4.47]     8:       34.195 ms
+[      4.81]     9:       34.095 ms
+[      5.15]    10:       34.195 ms
+[      5.50]    11:       34.095 ms
+[      5.84]    12:       34.795 ms
+[      6.18]    13:       34.095 ms
+[      6.52]    14:       33.895 ms
+[      6.86]    15:       33.995 ms
+[      7.20]    16:       34.095 ms
+[      7.54]    17:       34.095 ms
+[      7.88]    18:       33.995 ms
+[      8.23]    19:       34.195 ms
+[      8.56]    20:       33.795 ms
+[      8.90]    21:       33.895 ms
+[      9.25]    22:       34.295 ms
+[      9.58]    23:       33.795 ms
+[     10.03]    24:       44.993 ms
+[     10.38]    25:       34.195 ms
+[     10.72]    26:       34.095 ms
+[     11.06]    27:       34.195 ms
+[     11.40]    28:       34.095 ms
+[     11.74]    29:       33.895 ms
+[     12.08]    30:       33.995 ms
+[     12.42]    31:       34.195 ms
+[     12.76]    32:       34.195 ms
+[     13.10]    33:       34.095 ms
+[     13.45]    34:       34.395 ms
+[     13.79]    35:       34.195 ms
+[     14.13]    36:       34.095 ms
+[     14.47]    37:       34.195 ms
+[     14.81]    38:       33.995 ms
+[     15.16]    39:       34.295 ms
+[     15.50]    40:       34.095 ms
+[     15.84]    41:       34.295 ms
+[     16.18]    42:       34.195 ms
+[     16.52]    43:       34.095 ms
+[     16.87]    44:       34.295 ms
+[     17.21]    45:       34.295 ms
+[     17.55]    46:       33.895 ms
+[     17.89]    47:       33.895 ms
+[     18.23]    48:       34.595 ms
+[     18.58]    49:       34.595 ms
+[     18.92]    50:       33.795 ms
+[     19.26]    51:       34.395 ms
+[     19.60]    52:       34.195 ms
+[     19.94]    53:       34.095 ms
+[     20.28]    54:       34.195 ms
+[     20.63]    55:       34.395 ms
+[     20.97]    56:       34.095 ms
+[     21.32]    57:       34.695 ms
+[     21.66]    58:       34.595 ms
+[     22.01]    59:       34.695 ms
+[     22.35]    60:       34.495 ms
+[     22.70]    61:       34.395 ms
+[     23.04]    62:       34.595 ms
+[     23.39]    63:       34.195 ms
+[     23.73]    64:       34.095 ms
+[     24.07]    65:       34.295 ms
+[     24.41]    66:       33.995 ms
+[     24.75]    67:       33.895 ms
+[     25.09]    68:       34.095 ms
+[     25.09]     wrong answer (set=69 ray=8 answer=0.46542199 expected=0.46076998 delta=0.00465202)
+[     25.10]     wrong answer (set=69 ray=12 answer=0.68921273 expected=0.68209882 delta=0.00711391)
+[     25.10]     wrong answer (set=69 ray=20 answer=0.96119306 expected=0.95108971 delta=0.01010335)
+[     25.10]     wrong answer (set=69 ray=22 answer=0.41284256 expected=0.40878204 delta=0.00406052)
+[     25.10]     wrong answer (set=69 ray=26 answer=0.62611537 expected=0.61970486 delta=0.00641051)
+[     25.10]     wrong answer (set=69 ray=30 answer=0.80457254 expected=0.79617973 delta=0.00839281)
+[     25.10]     wrong answer (set=69 ray=32 answer=0.63999894 expected=0.63342857 delta=0.00657037)
+[     25.10]     wrong answer (set=69 ray=38 answer=0.98308802 expected=0.97274488 delta=0.01034314)
+[     25.11]     wrong answer (set=69 ray=44 answer=0.76211000 expected=0.75419678 delta=0.00791322)
+[     25.11]     wrong answer (set=69 ray=46 answer=0.77124296 expected=0.76321783 delta=0.00802513)
+[     25.11]     wrong answer (set=69 ray=48 answer=0.51229167 expected=0.50712809 delta=0.00516358)
+[     25.11]     wrong answer (set=69 ray=49 answer=0.57206159 expected=0.56624257 delta=0.00581902)
+[     25.11]     wrong answer (set=69 ray=54 answer=0.78591475 expected=0.77772976 delta=0.00818499)
+[     25.11]     wrong answer (set=69 ray=62 answer=0.33456624 expected=0.33135299 delta=0.00321325)
+[     25.11]     wrong answer (set=69 ray=65 answer=0.51791964 expected=0.51269211 delta=0.00522752)
+[     25.11]     wrong answer (set=69 ray=70 answer=0.31946500 expected=0.31642761 delta=0.00303740)
+[     25.12]     wrong answer (set=69 ray=71 answer=0.15595052 expected=0.15471958 delta=0.00123095)
+[     25.12]     wrong answer (set=69 ray=77 answer=0.21458803 expected=0.21270164 delta=0.00188638)
+[     25.12]     wrong answer (set=69 ray=78 answer=0.19301169 expected=0.19136510 delta=0.00164659)
+[     25.12]     wrong answer (set=69 ray=79 answer=0.33775326 expected=0.33452403 delta=0.00322923)
+[     25.12]     wrong answer (set=69 ray=81 answer=0.50907853 expected=0.50394693 delta=0.00513160)
+[     25.12]     wrong answer (set=69 ray=83 answer=0.22027603 expected=0.21834168 delta=0.00193434)
+[     25.12]     wrong answer (set=69 ray=84 answer=0.77034697 expected=0.76233783 delta=0.00800914)
+[     25.12]     wrong answer (set=69 ray=87 answer=0.65903719 expected=0.65225900 delta=0.00677819)
+[     25.12]     wrong answer (set=69 ray=88 answer=0.84417609 expected=0.83535165 delta=0.00882444)
+[     25.12]     wrong answer (set=69 ray=89 answer=0.77472832 expected=0.76667122 delta=0.00805710)
+[     25.12]     wrong answer (set=69 ray=91 answer=0.54741561 expected=0.54186836 delta=0.00554725)
+[     25.12]     wrong answer (set=69 ray=93 answer=0.88528185 expected=0.87599381 delta=0.00928804)
+[     25.12]     wrong answer (set=69 ray=95 answer=0.18862325 expected=0.18702462 delta=0.00159863)
+[     25.12]     wrong answer (set=69 ray=97 answer=0.64536570 expected=0.63873138 delta=0.00663432)
+[     25.12]     wrong answer (set=69 ray=98 answer=0.38926636 expected=0.38546162 delta=0.00380474)
+[     25.43]    69:       34.095 ms
+[     25.77]    70:       33.595 ms
+[     26.11]    71:       34.195 ms
+[     26.45]    72:       33.995 ms
+[     26.79]    73:       33.795 ms
+[     27.13]    74:       34.095 ms
+[     27.47]    75:       34.295 ms
+[     27.81]    76:       34.195 ms
+[     28.15]    77:       33.995 ms
+[     28.49]    78:       34.095 ms
+[     28.83]    79:       34.095 ms
+[     29.18]    80:       34.095 ms
+[     29.52]    81:       34.195 ms
+[     29.86]    82:       34.195 ms
+[     30.20]    83:       33.995 ms
+[     30.54]    84:       33.895 ms
+[     30.88]    85:       34.095 ms
+[     31.22]    86:       34.195 ms
+[     31.56]    87:       33.995 ms
+[     31.90]    88:       34.095 ms
+[     32.24]    89:       34.195 ms
+[     32.59]    90:       34.095 ms
+[     32.93]    91:       34.195 ms
+[     33.27]    92:       34.195 ms
+[     33.61]    93:       34.195 ms
+[     33.95]    94:       34.095 ms
+[     34.30]    95:       34.395 ms
+[     34.64]    96:       34.095 ms
+[     34.98]    97:       33.895 ms
+[     35.32]    98:       34.095 ms
+[     35.66]    99:       33.995 ms
+[     36.00]   100:       34.095 ms
+[     36.34]   101:       34.295 ms
+[     36.68]   102:       34.195 ms
+[     37.03]   103:       34.295 ms
+[     37.37]   104:       34.195 ms
+[     37.71]   105:       34.095 ms
+[     38.05]   106:       34.195 ms
+[     38.39]   107:       34.395 ms
+[     38.74]   108:       34.495 ms
+[     39.09]   109:       34.595 ms
+[     39.43]   110:       34.495 ms
+[     39.79]   111:       35.595 ms
+[     40.13]   112:       34.395 ms
+[     40.47]   113:       34.095 ms
+[     40.81]   114:       33.995 ms
+[     41.15]   115:       34.295 ms
+[     41.50]   116:       34.195 ms
+[     41.84]   117:       33.995 ms
+[     42.18]   118:       34.295 ms
+[     42.52]   119:       34.295 ms
+[     42.98]   120:       45.493 ms
+[     43.32]   121:       34.595 ms
+[     43.67]   122:       34.595 ms
+[     44.01]   123:       34.495 ms
+[     44.37]   124:       35.395 ms
+[     44.71]   125:       34.195 ms
+[     45.05]   126:       34.295 ms
+[     45.39]   127:       33.995 ms
+[     45.74]   128:       34.295 ms
+[     46.08]   129:       34.195 ms
+[     46.42]   130:       34.195 ms
+[     46.76]   131:       34.395 ms
+[     47.11]   132:       34.695 ms
+[     47.46]   133:       34.595 ms
+[     47.80]   134:       34.795 ms
+[     48.15]   135:       34.395 ms
+[     48.49]   136:       34.195 ms
+[     48.83]   137:       34.095 ms
+[     49.17]   138:       34.295 ms
+[     49.51]   139:       34.095 ms
+[     49.85]   140:       33.995 ms
+[     50.19]   141:       33.895 ms
+[     50.54]   142:       34.395 ms
+[     50.88]   143:       34.095 ms
+[     51.22]   144:       34.195 ms
+[     51.56]   145:       33.995 ms
+[     51.90]   146:       34.195 ms
+[     52.24]   147:       34.195 ms
+[     52.59]   148:       34.295 ms
+[     52.93]   149:       34.095 ms
+[     53.27]   150:       33.895 ms
+[     53.61]   151:       34.395 ms
+[     53.95]   152:       33.995 ms
+[     54.29]   153:       34.195 ms
+[     54.63]   154:       33.895 ms
+[     54.97]   155:       34.095 ms
+[     55.31]   156:       34.095 ms
+[     55.65]   157:       33.595 ms
+[     55.99]   158:       33.795 ms
+[     56.33]   159:       33.895 ms
+[     56.67]   160:       33.995 ms
+[     57.01]   161:       34.095 ms
+[     57.35]   162:       34.095 ms
+[     57.69]   163:       33.795 ms
+[     58.02]   164:       33.695 ms
+[     58.36]   165:       33.995 ms
+[     58.71]   166:       34.095 ms
+[     59.05]   167:       33.995 ms
+[     59.39]   168:       34.295 ms
+[     59.73]   169:       33.995 ms
+[     60.07]   170:       34.095 ms
+[     60.41]   171:       34.295 ms
+[     60.75]   172:       34.095 ms
+[     61.10]   173:       34.395 ms
+[     61.44]   174:       34.295 ms
+[     61.78]   175:       34.095 ms
+[     62.12]   176:       34.295 ms
+[     62.46]   177:       33.995 ms
+[     62.80]   178:       34.095 ms
+[     63.74]   179:       93.686 ms
+[     64.34]   180:       59.291 ms
+[     64.79]   181:       45.793 ms
+[     65.19]   182:       39.394 ms
+[     65.54]   183:       35.495 ms
+[     65.90]   184:       35.495 ms
+[     66.25]   185:       35.495 ms
+[     66.61]   186:       35.495 ms
+[     66.95]   187:       34.295 ms
+[     67.29]   188:       34.295 ms
+[     67.63]   189:       34.195 ms
+[     67.98]   190:       34.395 ms
+[     68.32]   191:       34.095 ms
+[     68.66]   192:       34.195 ms
+[     69.00]   193:       34.195 ms
+[     69.34]   194:       33.995 ms
+[     69.68]   195:       34.095 ms
+[     70.02]   196:       33.795 ms
+[     70.36]   197:       33.895 ms
+[     70.70]   198:       33.995 ms
+[     71.04]   199:       33.795 ms
+[     71.38]   200:       33.795 ms
+[     71.72]   201:       33.995 ms
+[     72.06]   202:       34.095 ms
+[     72.40]   203:       34.595 ms
+[     72.75]   204:       34.395 ms
+[     73.10]   205:       34.795 ms
+[     73.45]   206:       35.195 ms
+[     73.80]   207:       34.995 ms
+[     74.15]   208:       35.095 ms
+[     74.49]   209:       33.995 ms
+[     74.83]   210:       33.995 ms
+[     75.17]   211:       34.295 ms
+[     75.51]   212:       33.895 ms
+[     75.85]   213:       34.195 ms
+[     76.19]   214:       34.095 ms
+[     76.54]   215:       34.195 ms
+[     76.88]   216:       33.995 ms
+[     77.22]   217:       34.195 ms
+[     77.56]   218:       34.095 ms
+[     77.90]   219:       34.195 ms
+[     78.24]   220:       33.895 ms
+[     78.58]   221:       34.095 ms
+[     78.92]   222:       34.095 ms
+[     79.26]   223:       34.095 ms
+[     79.60]   224:       33.895 ms
+[     79.94]   225:       34.295 ms
+[     80.29]   226:       34.295 ms
+[     80.63]   227:       33.795 ms
+[     80.96]   228:       33.795 ms
+[     81.30]   229:       34.095 ms
+[     81.64]   230:       33.795 ms
+[     81.98]   231:       34.195 ms
+[     82.32]   232:       33.995 ms
+[     82.66]   233:       33.995 ms
+[     83.00]   234:       33.995 ms
+[     83.35]   235:       34.295 ms
+[     83.69]   236:       34.295 ms
+[     84.03]   237:       34.095 ms
+[     84.38]   238:       34.795 ms
+[     84.72]   239:       33.895 ms
+[     85.06]   240:       34.095 ms
+[     85.40]   241:       33.895 ms
+[     85.74]   242:       34.295 ms
+[     86.08]   243:       34.195 ms
+[     86.42]   244:       34.195 ms
+[     86.77]   245:       34.395 ms
+[     87.12]   246:       35.095 ms
+[     87.57]   247:       44.993 ms
+[     87.91]   248:       34.495 ms
+[     88.26]   249:       34.595 ms
+[     88.61]   250:       34.595 ms
+[     88.95]   251:       34.695 ms
+[     89.30]   252:       34.395 ms
+[     89.64]   253:       34.195 ms
+[     89.98]   254:       34.095 ms
+[     90.32]   255:       34.195 ms
+[     90.66]   256:       34.095 ms
+[     91.00]   257:       33.995 ms
+[     91.35]   258:       34.495 ms
+[     91.69]   259:       33.995 ms
+[     92.03]   260:       33.995 ms
+[     92.37]   261:       33.995 ms
+[     92.71]   262:       33.895 ms
+[     93.05]   263:       33.995 ms
+[     93.39]   264:       34.095 ms
+[     93.74]   265:       34.895 ms
+[     94.08]   266:       34.295 ms
+[     94.42]   267:       33.795 ms
+[     94.75]   268:       33.695 ms
+[     95.09]   269:       33.895 ms
+[     95.44]   270:       34.695 ms
+[     95.89]   271:       45.093 ms
+[     96.23]   272:       34.295 ms
+[     96.58]   273:       34.295 ms
+[     96.92]   274:       34.295 ms
+[     97.26]   275:       34.195 ms
+[     97.60]   276:       34.095 ms
+[     97.94]   277:       33.895 ms
+[     98.28]   278:       34.095 ms
+[     98.73]   279:       44.793 ms
+[     99.07]   280:       34.095 ms
+[     99.41]   281:       34.095 ms
+[     99.75]   282:       33.795 ms
+[    100.09]   283:       33.695 ms
+[    100.43]   284:       34.395 ms
+[    100.77]   285:       34.195 ms
+[    101.23]   286:       45.193 ms
+[    101.57]   287:       34.295 ms
+[    101.91]   288:       34.395 ms
+[    102.25]   289:       34.195 ms
+[    102.59]   290:       33.895 ms
+[    102.94]   291:       34.495 ms
+[    103.28]   292:       34.095 ms
+[    103.62]   293:       34.095 ms
+[    103.96]   294:       34.195 ms
+[    104.30]   295:       34.195 ms
+[    104.64]   296:       33.895 ms
+[    104.98]   297:       34.095 ms
+[    105.32]   298:       34.095 ms
+[    105.67]   299:       34.195 ms
+[    106.12]   300:       44.993 ms
+[    106.46]   301:       34.295 ms
+[    106.81]   302:       34.595 ms
+[    107.15]   303:       33.995 ms
+[    107.49]   304:       34.195 ms
+[    107.83]   305:       34.195 ms
+[    108.17]   306:       33.895 ms
+[    108.51]   307:       33.995 ms
+[    108.85]   308:       34.295 ms
+[    109.20]   309:       34.495 ms
+[    109.54]   310:       34.595 ms
+[    109.89]   311:       34.595 ms
+[    110.23]   312:       34.195 ms
+[    110.57]   313:       33.895 ms
+[    110.92]   314:       34.895 ms
+[    111.26]   315:       34.295 ms
+[    111.60]   316:       34.095 ms
+[    112.05]   317:       44.593 ms
+[    112.39]   318:       34.195 ms
+[    112.73]   319:       33.795 ms
+[    113.07]   320:       33.995 ms
+[    113.41]   321:       34.195 ms
+[    113.75]   322:       33.995 ms
+[    114.09]   323:       33.895 ms
+[    114.43]   324:       33.995 ms
+[    114.77]   325:       34.295 ms
+[    114.77]     wrong answer (set=326 ray=0 answer=0.47494651 expected=0.46739986 delta=0.00754665)
+[    114.77]     wrong answer (set=326 ray=1 answer=0.97544262 expected=0.95746500 delta=0.01797762)
+[    114.77]     wrong answer (set=326 ray=2 answer=0.85968161 expected=0.84411417 delta=0.01556744)
+[    114.77]     wrong answer (set=326 ray=3 answer=0.81775392 expected=0.80305573 delta=0.01469819)
+[    114.77]     wrong answer (set=326 ray=4 answer=0.36238682 expected=0.35717133 delta=0.00521549)
+[    114.77]     wrong answer (set=326 ray=5 answer=0.90621660 expected=0.88970090 delta=0.01651571)
+[    114.77]     wrong answer (set=326 ray=6 answer=0.76059763 expected=0.74712429 delta=0.01347334)
+[    114.77]     wrong answer (set=326 ray=7 answer=0.72712018 expected=0.71431854 delta=0.01280165)
+[    114.77]     wrong answer (set=326 ray=8 answer=0.85700694 expected=0.84151853 delta=0.01548841)
+[    114.77]     wrong answer (set=326 ray=9 answer=0.78860859 expected=0.77454258 delta=0.01406601)
+[    114.78]     wrong answer (set=326 ray=10 answer=0.90482257 expected=0.88830686 delta=0.01651571)
+[    114.78]     wrong answer (set=326 ray=11 answer=0.64382310 expected=0.63275995 delta=0.01106315)
+[    114.78]     wrong answer (set=326 ray=18 answer=0.75001736 expected=0.73674158 delta=0.01327578)
+[    114.78]     wrong answer (set=326 ray=19 answer=0.36088827 expected=0.35571230 delta=0.00517597)
+[    114.78]     wrong answer (set=326 ray=20 answer=0.85600395 expected=0.84051554 delta=0.01548841)
+[    114.78]     wrong answer (set=326 ray=21 answer=0.76654555 expected=0.75295367 delta=0.01359187)
+[    114.78]     wrong answer (set=326 ray=22 answer=0.20027245 expected=0.19845494 delta=0.00181752)
+[    114.78]     wrong answer (set=326 ray=23 answer=0.87467224 expected=0.85878871 delta=0.01588353)
+[    114.78]     wrong answer (set=326 ray=24 answer=0.43059957 expected=0.42396168 delta=0.00663789)
+[    114.78]     wrong answer (set=326 ray=25 answer=0.64233572 expected=0.63131208 delta=0.01102364)
+[    114.78]     wrong answer (set=326 ray=27 answer=0.26481462 expected=0.26161421 delta=0.00320041)
+[    114.78]     wrong answer (set=326 ray=28 answer=0.48350327 expected=0.47579858 delta=0.00770470)
+[    114.78]     wrong answer (set=326 ray=29 answer=0.62557655 expected=0.61490851 delta=0.01066804)
+[    114.78]     wrong answer (set=326 ray=31 answer=0.40446411 expected=0.39837937 delta=0.00608473)
+[    114.78]     wrong answer (set=326 ray=32 answer=0.39171906 expected=0.38591091 delta=0.00580815)
+[    114.78]     wrong answer (set=326 ray=33 answer=0.24939808 expected=0.24651376 delta=0.00288432)
+[    114.78]     wrong answer (set=326 ray=35 answer=0.97685692 expected=0.95887930 delta=0.01797762)
+[    114.78]     wrong answer (set=326 ray=36 answer=0.60006803 expected=0.58991363 delta=0.01015439)
+[    114.79]     wrong answer (set=326 ray=38 answer=0.67550732 expected=0.66377248 delta=0.01173484)
+[    114.79]     wrong answer (set=326 ray=39 answer=0.58041521 expected=0.57065593 delta=0.00975928)
+[    114.79]     wrong answer (set=326 ray=44 answer=0.51475290 expected=0.50637652 delta=0.00837639)
+[    114.79]     wrong answer (set=326 ray=45 answer=0.64089884 expected=0.62991471 delta=0.01098413)
+[    114.79]     wrong answer (set=326 ray=48 answer=0.25523793 expected=0.25227459 delta=0.00296334)
+[    114.79]     wrong answer (set=326 ray=49 answer=0.31521198 expected=0.31098428 delta=0.00422770)
+[    114.79]     wrong answer (set=326 ray=50 answer=0.89057136 expected=0.87441126 delta=0.01616010)
+[    114.79]     wrong answer (set=326 ray=52 answer=0.47387098 expected=0.46636384 delta=0.00750714)
+[    114.79]     wrong answer (set=326 ray=54 answer=0.97896759 expected=0.96095046 delta=0.01801713)
+[    114.79]     wrong answer (set=326 ray=55 answer=0.97824101 expected=0.96022388 delta=0.01801713)
+[    114.79]     wrong answer (set=326 ray=56 answer=0.25534095 expected=0.25233809 delta=0.00300286)
+[    114.79]     wrong answer (set=326 ray=59 answer=0.64061448 expected=0.62963035 delta=0.01098413)
+[    114.79]     wrong answer (set=326 ray=60 answer=0.57778827 expected=0.56810802 delta=0.00968026)
+[    114.79]     wrong answer (set=326 ray=61 answer=0.63605142 expected=0.62514631 delta=0.01090511)
+[    114.79]     wrong answer (set=326 ray=64 answer=0.94026938 expected=0.92307743 delta=0.01719195)
+[    114.79]     wrong answer (set=326 ray=65 answer=0.39318723 expected=0.38733956 delta=0.00584767)
+[    114.80]     wrong answer (set=326 ray=67 answer=0.75995876 expected=0.74648543 delta=0.01347334)
+[    114.80]     wrong answer (set=326 ray=68 answer=0.53079861 expected=0.52210613 delta=0.00869248)
+[    114.80]     wrong answer (set=326 ray=69 answer=0.48634581 expected=0.47856209 delta=0.00778372)
+[    114.80]     wrong answer (set=326 ray=70 answer=0.80628448 expected=0.79186287 delta=0.01442161)
+[    114.80]     wrong answer (set=326 ray=74 answer=0.95316270 expected=0.93565922 delta=0.01750349)
+[    114.80]     wrong answer (set=326 ray=76 answer=0.63195469 expected=0.62116811 delta=0.01078657)
+[    114.80]     wrong answer (set=326 ray=77 answer=0.89053525 expected=0.87433564 delta=0.01619962)
+[    114.80]     wrong answer (set=326 ray=79 answer=0.42489591 expected=0.41837655 delta=0.00651936)
+[    114.80]     wrong answer (set=326 ray=80 answer=0.83346727 expected=0.81845300 delta=0.01501428)
+[    114.80]     wrong answer (set=326 ray=83 answer=0.31077549 expected=0.30662681 delta=0.00414868)
+[    114.80]     wrong answer (set=326 ray=85 answer=0.75195194 expected=0.73863664 delta=0.01331529)
+[    114.80]     wrong answer (set=326 ray=86 answer=0.98446393 expected=0.96632827 delta=0.01813567)
+[    114.81]     wrong answer (set=326 ray=87 answer=0.52537840 expected=0.51676494 delta=0.00861345)
+[    114.81]     wrong answer (set=326 ray=88 answer=0.45159314 expected=0.44452063 delta=0.00707251)
+[    114.81]     wrong answer (set=326 ray=89 answer=0.23951736 expected=0.23687011 delta=0.00264725)
+[    114.81]     wrong answer (set=326 ray=91 answer=0.37414595 expected=0.36869339 delta=0.00545255)
+[    114.81]     wrong answer (set=326 ray=92 answer=0.35123976 expected=0.34626135 delta=0.00497842)
+[    114.81]     wrong answer (set=326 ray=93 answer=0.89914860 expected=0.88279094 delta=0.01635766)
+[    114.81]     wrong answer (set=326 ray=94 answer=0.68827628 expected=0.67630436 delta=0.01197191)
+[    114.81]     wrong answer (set=326 ray=95 answer=0.80460530 expected=0.79022320 delta=0.01438210)
+[    114.81]     wrong answer (set=326 ray=96 answer=0.86488347 expected=0.84923701 delta=0.01564646)
+[    114.82]     wrong answer (set=326 ray=98 answer=0.21252102 expected=0.21042693 delta=0.00209410)
+[    115.69]   326:       91.786 ms
+[    116.30]   327:       61.491 ms
+[    116.77]   328:       46.893 ms
+[    117.17]   329:       39.794 ms
+[    117.53]   330:       35.595 ms
+[    117.88]   331:       35.495 ms
+[    118.24]   332:       35.495 ms
+[    118.59]   333:       35.495 ms
+[    118.93]   334:       34.295 ms
+[    119.28]   335:       34.295 ms
+[    119.62]   336:       34.095 ms
+[    119.96]   337:       34.095 ms
+[    120.30]   338:       33.895 ms
+[    120.63]   339:       33.595 ms
+[    120.97]   340:       33.795 ms
+[    121.31]   341:       34.195 ms
+[    121.76]   342:       44.993 ms
+[    122.11]   343:       34.095 ms
+[    122.45]   344:       34.195 ms
+[    122.79]   345:       33.895 ms
+[    122.79]     wrong answer (set=346 ray=2 answer=0.58273857 expected=0.58067126 delta=0.00206730)
+[    122.79]     wrong answer (set=346 ray=3 answer=0.61343265 expected=0.61095189 delta=0.00248076)
+[    122.79]     wrong answer (set=346 ray=4 answer=0.82530696 expected=0.82026274 delta=0.00504422)
+[    122.79]     wrong answer (set=346 ray=5 answer=0.61699408 expected=0.61451332 delta=0.00248076)
+[    122.79]     wrong answer (set=346 ray=9 answer=0.77740463 expected=0.77302195 delta=0.00438268)
+[    122.79]     wrong answer (set=346 ray=10 answer=0.52134254 expected=0.52001946 delta=0.00132307)
+[    122.79]     wrong answer (set=346 ray=12 answer=0.89536811 expected=0.88957966 delta=0.00578845)
+[    122.79]     wrong answer (set=346 ray=14 answer=0.65625718 expected=0.65328027 delta=0.00297692)
+[    122.79]     wrong answer (set=346 ray=15 answer=0.89607106 expected=0.89028261 delta=0.00578845)
+[    122.79]     wrong answer (set=346 ray=18 answer=0.77780843 expected=0.77342575 delta=0.00438268)
+[    122.79]     wrong answer (set=346 ray=19 answer=0.93004195 expected=0.92375735 delta=0.00628460)
+[    122.80]     wrong answer (set=346 ray=22 answer=0.74038030 expected=0.73649377 delta=0.00388653)
+[    122.80]     wrong answer (set=346 ray=23 answer=0.53597960 expected=0.53440845 delta=0.00157115)
+[    122.80]     wrong answer (set=346 ray=26 answer=0.96535349 expected=0.95873812 delta=0.00661537)
+[    122.80]     wrong answer (set=346 ray=27 answer=0.95032008 expected=0.94378740 delta=0.00653268)
+[    122.80]     wrong answer (set=346 ray=30 answer=0.63408305 expected=0.63143690 delta=0.00264615)
+[    122.80]     wrong answer (set=346 ray=35 answer=0.52636028 expected=0.52495452 delta=0.00140577)
+[    122.80]     wrong answer (set=346 ray=38 answer=0.84564259 expected=0.84043299 delta=0.00520960)
+[    122.80]     wrong answer (set=346 ray=39 answer=0.74684331 expected=0.74279140 delta=0.00405191)
+[    122.80]     wrong answer (set=346 ray=43 answer=0.67823817 expected=0.67501318 delta=0.00322499)
+[    122.80]     wrong answer (set=346 ray=47 answer=0.68455461 expected=0.68124692 delta=0.00330768)
+[    122.80]     wrong answer (set=346 ray=48 answer=0.63825713 expected=0.63552829 delta=0.00272884)
+[    122.80]     wrong answer (set=346 ray=49 answer=0.50746129 expected=0.50630360 delta=0.00115769)
+[    122.81]     wrong answer (set=346 ray=51 answer=0.86810506 expected=0.86264738 delta=0.00545768)
+[    122.81]     wrong answer (set=346 ray=52 answer=0.61994716 expected=0.61746640 delta=0.00248076)
+[    122.81]     wrong answer (set=346 ray=55 answer=0.51629643 expected=0.51497335 delta=0.00132307)
+[    122.81]     wrong answer (set=346 ray=60 answer=0.59829894 expected=0.59606625 delta=0.00223269)
+[    122.81]     wrong answer (set=346 ray=62 answer=0.72699253 expected=0.72318869 delta=0.00380384)
+[    122.81]     wrong answer (set=346 ray=66 answer=0.58704817 expected=0.58498087 delta=0.00206730)
+[    122.81]     wrong answer (set=346 ray=74 answer=0.83757225 expected=0.83244534 delta=0.00512691)
+[    122.81]     wrong answer (set=346 ray=78 answer=0.70240056 expected=0.69892749 delta=0.00347307)
+[    122.82]     wrong answer (set=346 ray=80 answer=0.77685873 expected=0.77247605 delta=0.00438268)
+[    122.82]     wrong answer (set=346 ray=85 answer=0.91309161 expected=0.90705508 delta=0.00603652)
+[    122.82]     wrong answer (set=346 ray=86 answer=0.76851107 expected=0.76421108 delta=0.00429999)
+[    122.82]     wrong answer (set=346 ray=89 answer=0.78304424 expected=0.77857887 delta=0.00446537)
+[    122.82]     wrong answer (set=346 ray=92 answer=0.80749765 expected=0.80270151 delta=0.00479614)
+[    122.82]     wrong answer (set=346 ray=96 answer=0.79355446 expected=0.78892370 delta=0.00463076)
+[    122.82]     wrong answer (set=346 ray=98 answer=0.69944956 expected=0.69597649 delta=0.00347307)
+[    122.82]     wrong answer (set=346 ray=99 answer=0.88360627 expected=0.87798321 delta=0.00562306)
+[    123.13]   346:       33.995 ms
+[    123.47]   347:       34.595 ms
+[    123.82]   348:       34.695 ms
+[    124.16]   349:       34.195 ms
+[    124.50]   350:       33.895 ms
+[    124.84]   351:       34.295 ms
+[    125.19]   352:       34.495 ms
+[    125.53]   353:       34.295 ms
+[    126.38]   354:       85.187 ms
+[    126.95]   355:       56.391 ms
+[    127.39]   356:       43.693 ms
+[    127.77]   357:       38.094 ms
+[    128.12]   358:       35.595 ms
+[    128.47]   359:       34.995 ms
+[    128.83]   360:       35.395 ms
+[    129.18]   361:       35.295 ms
+[    129.52]   362:       33.895 ms
+[    129.86]   363:       34.195 ms
+[    130.20]   364:       34.295 ms
+[    130.55]   365:       34.195 ms
+[    130.89]   366:       34.095 ms
+[    131.23]   367:       34.295 ms
+[    131.57]   368:       34.195 ms
+[    131.91]   369:       34.095 ms
+[    132.25]   370:       34.195 ms
+[    132.60]   371:       34.295 ms
+[    132.94]   372:       33.995 ms
+[    133.28]   373:       34.295 ms
+[    133.62]   374:       34.295 ms
+[    133.96]   375:       34.195 ms
+[    134.30]   376:       33.995 ms
+[    134.64]   377:       33.995 ms
+[    134.99]   378:       34.195 ms
+[    135.32]   379:       33.795 ms
+[    135.66]   380:       33.795 ms
+[    136.00]   381:       34.095 ms
+[    136.34]   382:       33.995 ms
+[    136.68]   383:       34.095 ms
+[    137.03]   384:       34.095 ms
+[    137.37]   385:       34.495 ms
+[    137.72]   386:       34.495 ms
+[    138.06]   387:       34.495 ms
+[    138.41]   388:       34.595 ms
+[    138.75]   389:       34.395 ms
+[    139.10]   390:       34.595 ms
+[    139.44]   391:       34.495 ms
+[    139.79]   392:       34.595 ms
+[    140.13]   393:       34.595 ms
+[    140.48]   394:       34.895 ms
+[    140.83]   395:       34.795 ms
+[    141.17]   396:       34.395 ms
+[    141.52]   397:       34.095 ms
+[    141.86]   398:       34.395 ms
+[    142.20]   399:       33.995 ms
+[    142.54]   400:       34.295 ms
+[    142.88]   401:       34.095 ms
+[    143.23]   402:       34.395 ms
+[    143.57]   403:       34.095 ms
+[    143.91]   404:       34.195 ms
+[    144.25]   405:       34.095 ms
+[    144.59]   406:       33.795 ms
+[    144.93]   407:       34.195 ms
+[    145.27]   408:       34.195 ms
+[    145.61]   409:       33.995 ms
+[    145.95]   410:       34.195 ms
+[    146.30]   411:       34.095 ms
+[    146.64]   412:       33.995 ms
+[    146.98]   413:       34.295 ms
+[    147.33]   414:       34.695 ms
+[    147.67]   415:       33.995 ms
+[    148.01]   416:       34.195 ms
+[    148.35]   417:       34.295 ms
+[    148.69]   418:       34.295 ms
+[    149.04]   419:       34.195 ms
+[    149.38]   420:       34.295 ms
+[    149.72]   421:       34.395 ms
+[    150.07]   422:       34.295 ms
+[    150.41]   423:       34.295 ms
+[    150.75]   424:       34.195 ms
+[    151.09]   425:       34.295 ms
+[    151.43]   426:       34.195 ms
+[    151.78]   427:       34.295 ms
+[    152.13]   428:       35.195 ms
+[    152.47]   429:       33.695 ms
+[    152.81]   430:       34.595 ms
+[    153.16]   431:       34.995 ms
+[    153.51]   432:       34.695 ms
+[    153.85]   433:       34.495 ms
+[    154.20]   434:       34.395 ms
+[    154.54]   435:       33.995 ms
+[    154.88]   436:       33.695 ms
+[    155.21]   437:       33.795 ms
+[    155.55]   438:       33.895 ms
+[    155.89]   439:       34.095 ms
+[    156.23]   440:       33.895 ms
+[    156.57]   441:       33.295 ms
+[    156.92]   442:       34.995 ms
+[    157.26]   443:       34.095 ms
+[    157.60]   444:       34.095 ms
+[    157.94]   445:       34.095 ms
+[    158.28]   446:       34.095 ms
+[    158.62]   447:       34.195 ms
+[    158.96]   448:       33.995 ms
+[    159.30]   449:       34.095 ms
+[    159.64]   450:       34.095 ms
+[    159.99]   451:       34.295 ms
+[    160.33]   452:       34.095 ms
+[    160.67]   453:       33.995 ms
+[    161.02]   454:       35.195 ms
+[    161.36]   455:       34.495 ms
+[    161.71]   456:       34.195 ms
+[    162.05]   457:       34.195 ms
+[    162.39]   458:       34.095 ms
+[    162.73]   459:       34.095 ms
+[    163.07]   460:       34.495 ms
+[    163.42]   461:       34.195 ms
+[    163.76]   462:       34.295 ms
+[    164.10]   463:       33.695 ms
+[    164.44]   464:       34.295 ms
+[    164.78]   465:       34.195 ms
+[    165.12]   466:       34.295 ms
+[    165.47]   467:       34.295 ms
+[    165.81]   468:       34.395 ms
+[    166.15]   469:       34.295 ms
+[    166.49]   470:       33.995 ms
+[    166.83]   471:       33.995 ms
+[    167.28]   472:       45.093 ms
+[    167.62]   473:       33.795 ms
+[    167.96]   474:       34.095 ms
+[    168.31]   475:       34.395 ms
+[    168.65]   476:       33.795 ms
+[    168.99]   477:       34.095 ms
+[    169.33]   478:       34.195 ms
+[    169.67]   479:       33.895 ms
+[    170.01]   480:       34.495 ms
+[    170.36]   481:       34.495 ms
+[    170.70]   482:       34.395 ms
+[    171.04]   483:       34.095 ms
+[    171.38]   484:       34.095 ms
+[    171.72]   485:       34.195 ms
+[    172.07]   486:       34.595 ms
+[    172.41]   487:       34.195 ms
+[    172.75]   488:       33.995 ms
+[    173.10]   489:       34.795 ms
+[    173.44]   490:       34.195 ms
+[    173.78]   491:       33.995 ms
+[    174.13]   492:       34.295 ms
+[    174.46]   493:       33.795 ms
+[    174.80]   494:       33.895 ms
+[    175.14]   495:       33.895 ms
+[    175.48]   496:       34.095 ms
+[    175.83]   497:       34.295 ms
+[    176.17]   498:       34.195 ms
+[    176.51]   499:       33.995 ms
+[    176.85]   500:       34.295 ms
+[    177.19]   501:       34.295 ms
+[    177.54]   502:       34.395 ms
+[    177.88]   503:       34.195 ms
+[    178.22]   504:       34.195 ms
+[    178.56]   505:       34.395 ms
+[    178.90]   506:       33.895 ms
+[    179.25]   507:       34.395 ms
+[    179.59]   508:       34.195 ms
+[    179.93]   509:       34.195 ms
+[    180.27]   510:       34.295 ms
+[    180.61]   511:       33.995 ms
+[    180.96]   512:       34.495 ms
+[    181.31]   513:       34.595 ms
+[    181.65]   514:       34.295 ms
+[    181.99]   515:       34.195 ms
+[    182.33]   516:       34.095 ms
+[    182.67]   517:       34.195 ms
+[    183.02]   518:       34.295 ms
+[    183.35]   519:       33.495 ms
+[    183.69]   520:       34.095 ms
+[    184.04]   521:       34.995 ms
+[    184.38]   522:       34.095 ms
+[    184.72]   523:       34.095 ms
+[    185.07]   524:       34.195 ms
+[    185.42]   525:       34.995 ms
+[    185.76]   526:       34.195 ms
+[    186.10]   527:       34.695 ms
+[    186.45]   528:       34.695 ms
+[    186.82]   529:       36.495 ms
+[    187.16]   530:       34.495 ms
+[    187.51]   531:       34.495 ms
+[    187.85]   532:       34.495 ms
+[    188.20]   533:       34.595 ms
+[    188.54]   534:       34.695 ms
+[    188.89]   535:       34.595 ms
+[    189.23]   536:       34.395 ms
+[    189.58]   537:       34.195 ms
+[    189.92]   538:       33.995 ms
+[    190.26]   539:       34.095 ms
+[    190.60]   540:       34.195 ms
+[    190.94]   541:       33.995 ms
+[    191.28]   542:       34.095 ms
+[    191.62]   543:       34.295 ms
+[    191.96]   544:       34.095 ms
+[    192.31]   545:       34.195 ms
+[    192.65]   546:       33.995 ms
+[    192.99]   547:       34.195 ms
+[    193.33]   548:       34.095 ms
+[    193.67]   549:       34.295 ms
+[    194.01]   550:       34.295 ms
+[    194.35]   551:       33.995 ms
+[    194.69]   552:       33.995 ms
+[    195.04]   553:       34.295 ms
+[    195.38]   554:       34.295 ms
+[    195.72]   555:       34.195 ms
+[    196.07]   556:       35.095 ms
+[    196.42]   557:       34.295 ms
+[    196.76]   558:       33.995 ms
+[    197.10]   559:       34.095 ms
+[    197.44]   560:       34.395 ms
+[    197.78]   561:       34.195 ms
+[    198.12]   562:       33.895 ms
+[    198.46]   563:       34.195 ms
+[    198.81]   564:       34.195 ms
+[    199.15]   565:       34.295 ms
+[    199.49]   566:       34.195 ms
+[    199.83]   567:       34.095 ms
+[    200.17]   568:       33.595 ms
+[    200.51]   569:       33.795 ms
+[    200.85]   570:       34.595 ms
+[    201.19]   571:       33.995 ms
+[    201.53]   572:       34.195 ms
+[    201.88]   573:       34.295 ms
+[    202.22]   574:       34.295 ms
+[    202.56]   575:       34.095 ms
+[    202.90]   576:       34.095 ms
+[    203.24]   577:       34.195 ms
+[    203.58]   578:       33.995 ms
+[    203.93]   579:       34.295 ms
+[    204.27]   580:       34.195 ms
+[    204.61]   581:       34.095 ms
+[    204.95]   582:       34.195 ms
+[    205.29]   583:       34.095 ms
+[    205.63]   584:       33.995 ms
+[    205.97]   585:       33.895 ms
+[    206.31]   586:       33.995 ms
+[    206.65]   587:       34.095 ms
+[    206.99]   588:       33.995 ms
+[    207.33]   589:       34.295 ms
+[    207.68]   590:       34.095 ms
+[    208.02]   591:       34.295 ms
+[    208.36]   592:       34.395 ms
+[    208.71]   593:       34.295 ms
+[    209.05]   594:       34.395 ms
+[    209.39]   595:       33.695 ms
+[    209.73]   596:       34.295 ms
+[    210.07]   597:       34.095 ms
+[    210.41]   598:       34.295 ms
+[    210.75]   599:       33.895 ms
+[    211.09]   600:       33.795 ms
+[    211.43]   601:       33.995 ms
+[    211.77]   602:       33.895 ms
+[    212.11]   603:       34.295 ms
+[    212.46]   604:       34.495 ms
+[    212.80]   605:       34.595 ms
+[    213.15]   606:       34.695 ms
+[    213.49]   607:       34.295 ms
+[    213.84]   608:       34.695 ms
+[    214.18]   609:       34.195 ms
+[    214.63]   610:       44.593 ms
+[    214.97]   611:       33.895 ms
+[    215.31]   612:       34.295 ms
+[    215.76]   613:       45.293 ms
+[    216.10]   614:       34.095 ms
+[    216.44]   615:       33.595 ms
+[    216.78]   616:       34.095 ms
+[    217.12]   617:       34.195 ms
+[    217.46]   618:       34.195 ms
+[    217.81]   619:       34.195 ms
+[    218.15]   620:       34.295 ms
+[    218.49]   621:       33.895 ms
+[    218.82]   622:       33.695 ms
+[    219.17]   623:       34.195 ms
+[    219.51]   624:       34.295 ms
+[    219.85]   625:       34.295 ms
+[    220.20]   626:       34.595 ms
+[    220.54]   627:       34.395 ms
+[    220.88]   628:       33.995 ms
+[    221.23]   629:       34.395 ms
+[    221.57]   630:       34.195 ms
+[    221.91]   631:       34.195 ms
+[    222.25]   632:       33.995 ms
+[    222.59]   633:       34.095 ms
+[    222.93]   634:       34.095 ms
+[    223.27]   635:       34.095 ms
+[    223.62]   636:       34.395 ms
+[    223.96]   637:       34.295 ms
+[    224.30]   638:       33.995 ms
+[    224.64]   639:       33.695 ms
+[    224.98]   640:       34.295 ms
+[    225.32]   641:       33.995 ms
+[    225.66]   642:       34.095 ms
+[    226.00]   643:       33.995 ms
+[    226.45]   644:       45.093 ms
+[    226.79]   645:       34.195 ms
+[    227.14]   646:       34.295 ms
+[    227.48]   647:       34.195 ms
+[    227.82]   648:       33.895 ms
+[    228.16]   649:       33.995 ms
+[    228.50]   650:       34.195 ms
+[    228.84]   651:       34.195 ms
+[    229.18]   652:       33.895 ms
+[    229.52]   653:       33.695 ms
+[    229.86]   654:       33.795 ms
+[    230.20]   655:       34.195 ms
+[    230.54]   656:       33.995 ms
+[    230.88]   657:       34.195 ms
+[    231.22]   658:       34.295 ms
+[    231.56]   659:       34.195 ms
+[    231.91]   660:       34.595 ms
+[    232.26]   661:       34.595 ms
+[    232.60]   662:       34.695 ms
+[    232.95]   663:       34.395 ms
+[    233.29]   664:       34.095 ms
+[    233.63]   665:       34.195 ms
+[    233.97]   666:       34.295 ms
+[    234.31]   667:       33.795 ms
+[    234.65]   668:       33.795 ms
+[    234.99]   669:       34.095 ms
+[    235.33]   670:       34.195 ms
+[    235.67]   671:       34.195 ms
+[    236.02]   672:       34.195 ms
+[    236.35]   673:       33.695 ms
+[    236.69]   674:       33.895 ms
+[    237.03]   675:       34.295 ms
+[    237.48]   676:       44.993 ms
+[    237.83]   677:       34.295 ms
+[    238.17]   678:       34.395 ms
+[    238.51]   679:       34.295 ms
+[    238.86]   680:       34.295 ms
+[    239.20]   681:       34.095 ms
+[    239.54]   682:       34.095 ms
+[    239.88]   683:       34.295 ms
+[    240.23]   684:       34.395 ms
+[    240.57]   685:       34.095 ms
+[    240.91]   686:       34.495 ms
+[    241.25]   687:       34.095 ms
+[    241.60]   688:       34.195 ms
+[    241.94]   689:       33.995 ms
+[    242.28]   690:       34.195 ms
+[    242.62]   691:       34.095 ms
+[    242.96]   692:       33.995 ms
+[    243.30]   693:       33.995 ms
+[    243.64]   694:       34.295 ms
+[    243.98]   695:       34.295 ms
+[    244.44]   696:       45.193 ms
+[    244.78]   697:       34.495 ms
+[    245.12]   698:       33.995 ms
+[    245.46]   699:       34.195 ms
+[    245.81]   700:       34.295 ms
+[    246.26]   701:       45.193 ms
+[    246.60]   702:       33.995 ms
+[    246.94]   703:       34.095 ms
+[    247.28]   704:       33.795 ms
+[    247.63]   705:       35.195 ms
+[    247.98]   706:       35.495 ms
+[    248.33]   707:       35.095 ms
+[    248.68]   708:       34.195 ms
+[    249.02]   709:       34.295 ms
+[    249.36]   710:       34.195 ms
+[    249.70]   711:       34.195 ms
+[    250.04]   712:       34.195 ms
+[    250.39]   713:       34.195 ms
+[    250.73]   714:       34.695 ms
+[    251.08]   715:       34.295 ms
+[    251.42]   716:       33.995 ms
+[    251.76]   717:       33.995 ms
+[    252.10]   718:       34.295 ms
+[    252.44]   719:       34.195 ms
+[    252.78]   720:       33.995 ms
+[    253.12]   721:       34.195 ms
+[    253.47]   722:       34.295 ms
+[    253.81]   723:       34.095 ms
+[    254.15]   724:       34.095 ms
+[    254.49]   725:       34.195 ms
+[    254.84]   726:       34.695 ms
+[    255.18]   727:       34.595 ms
+[    255.53]   728:       34.595 ms
+[    255.87]   729:       34.495 ms
+[    256.22]   730:       34.095 ms
+[    256.56]   731:       34.195 ms
+[    256.90]   732:       33.895 ms
+[    257.24]   733:       34.495 ms
+[    257.58]   734:       33.995 ms
+[    257.92]   735:       34.195 ms
+[    258.26]   736:       34.195 ms
+[    258.60]   737:       33.995 ms
+[    258.95]   738:       34.195 ms
+[    259.29]   739:       34.095 ms
+[    259.63]   740:       34.295 ms
+[    259.98]   741:       35.095 ms
+[    260.33]   742:       34.695 ms
+[    260.68]   743:       34.695 ms
+[    261.02]   744:       34.595 ms
+[    261.37]   745:       34.695 ms
+[    261.71]   746:       33.895 ms
+[    262.05]   747:       33.795 ms
+[    262.39]   748:       34.095 ms
+[    262.73]   749:       34.095 ms
+[    263.07]   750:       34.295 ms
+[    263.41]   751:       34.195 ms
+[    263.75]   752:       34.295 ms
+[    264.10]   753:       34.195 ms
+[    264.44]   754:       34.095 ms
+[    264.77]   755:       33.695 ms
+[    265.12]   756:       34.595 ms
+[    265.46]   757:       33.995 ms
+[    265.80]   758:       34.195 ms
+[    266.25]   759:       45.193 ms
+[    266.60]   760:       34.095 ms
+[    266.94]   761:       34.295 ms
+[    267.28]   762:       34.195 ms
+[    267.62]   763:       34.195 ms
+[    267.96]   764:       33.995 ms
+[    268.30]   765:       34.195 ms
+[    268.64]   766:       33.995 ms
+[    268.99]   767:       34.095 ms
+[    269.33]   768:       34.195 ms
+[    269.67]   769:       34.195 ms
+[    270.01]   770:       34.395 ms
+[    270.35]   771:       33.895 ms
+[    270.69]   772:       34.095 ms
+[    271.04]   773:       34.495 ms
+[    271.38]   774:       34.095 ms
+[    271.72]   775:       34.195 ms
+[    272.06]   776:       34.395 ms
+[    272.41]   777:       34.195 ms
+[    272.75]   778:       34.595 ms
+[    273.10]   779:       34.595 ms
+[    273.44]   780:       34.595 ms
+[    273.79]   781:       34.595 ms
+[    274.14]   782:       34.595 ms
+[    274.47]   783:       33.795 ms
+[    274.81]   784:       33.495 ms
+[    275.15]   785:       34.295 ms
+[    275.49]   786:       34.095 ms
+[    275.84]   787:       34.595 ms
+[    276.19]   788:       34.695 ms
+[    276.53]   789:       34.695 ms
+[    276.88]   790:       34.595 ms
+[    277.22]   791:       33.995 ms
+[    277.56]   792:       34.195 ms
+[    277.90]   793:       34.395 ms
+[    278.25]   794:       34.095 ms
+[    278.59]   795:       34.095 ms
+[    278.93]   796:       34.295 ms
+[    279.27]   797:       33.995 ms
+[    279.61]   798:       34.395 ms
+[    279.96]   799:       34.395 ms
+[    280.30]   800:       34.195 ms
+[    280.64]   801:       33.895 ms
+[    280.98]   802:       34.195 ms
+[    281.32]   803:       33.995 ms
+[    281.66]   804:       34.295 ms
+[    282.00]   805:       34.095 ms
+[    282.35]   806:       34.295 ms
+[    282.69]   807:       34.095 ms
+[    283.03]   808:       34.495 ms
+[    283.37]   809:       33.495 ms
+[    283.71]   810:       34.195 ms
+[    284.16]   811:       45.093 ms
+[    284.50]   812:       34.295 ms
+[    284.96]   813:       45.293 ms
+[    285.30]   814:       33.995 ms
+[    285.64]   815:       34.195 ms
+[    285.98]   816:       34.195 ms
+[    286.32]   817:       33.895 ms
+[    286.66]   818:       34.395 ms
+[    287.01]   819:       34.295 ms
+[    287.35]   820:       34.195 ms
+[    287.69]   821:       34.295 ms
+[    288.04]   822:       34.395 ms
+[    288.38]   823:       34.195 ms
+[    288.72]   824:       33.795 ms
+[    289.05]   825:       33.895 ms
+[    289.39]   826:       33.895 ms
+[    289.73]   827:       33.995 ms
+[    290.07]   828:       33.895 ms
+[    290.41]   829:       33.895 ms
+[    290.75]   830:       33.795 ms
+[    291.09]   831:       34.495 ms
+[    291.44]   832:       34.195 ms
+[    291.78]   833:       34.395 ms
+[    292.12]   834:       33.995 ms
+[    292.46]   835:       34.195 ms
+[    292.81]   836:       34.395 ms
+[    293.15]   837:       34.095 ms
+[    293.49]   838:       33.995 ms
+[    293.83]   839:       33.995 ms
+[    294.16]   840:       33.795 ms
+[    294.50]   841:       33.895 ms
+[    294.84]   842:       34.095 ms
+[    295.18]   843:       33.995 ms
+[    295.53]   844:       34.195 ms
+[    295.87]   845:       34.295 ms
+[    296.21]   846:       34.195 ms
+[    296.56]   847:       34.595 ms
+[    296.90]   848:       34.695 ms
+[    297.25]   849:       34.595 ms
+[    297.60]   850:       34.595 ms
+[    297.94]   851:       34.395 ms
+[    298.28]   852:       33.995 ms
+[    298.62]   853:       33.995 ms
+[    298.96]   854:       34.295 ms
+[    299.31]   855:       34.395 ms
+[    299.64]   856:       33.795 ms
+[    299.98]   857:       33.795 ms
+[    300.33]   858:       34.395 ms
+[    300.67]   859:       34.295 ms
+[    301.01]   860:       34.095 ms
+[    301.35]   861:       34.195 ms
+[    301.69]   862:       33.795 ms
+[    302.03]   863:       34.195 ms
+[    302.37]   864:       33.995 ms
+[    302.72]   865:       34.395 ms
+[    303.05]   866:       33.895 ms
+[    303.39]   867:       33.895 ms
+[    303.73]   868:       34.095 ms
+[    304.08]   869:       34.095 ms
+[    304.41]   870:       33.795 ms
+[    304.76]   871:       34.195 ms
+[    305.10]   872:       34.195 ms
+[    305.44]   873:       34.195 ms
+[    305.78]   874:       34.195 ms
+[    306.13]   875:       34.595 ms
+[    306.47]   876:       34.095 ms
+[    306.81]   877:       34.295 ms
+[    307.15]   878:       34.095 ms
+[    307.50]   879:       34.495 ms
+[    307.84]   880:       34.495 ms
+[    308.20]   881:       35.495 ms
+[    308.55]   882:       35.095 ms
+[    309.00]   883:       45.493 ms
+[    309.35]   884:       34.495 ms
+[    309.70]   885:       34.895 ms
+[    310.04]   886:       34.695 ms
+[    310.38]   887:       33.895 ms
+[    310.72]   888:       34.195 ms
+[    311.06]   889:       33.895 ms
+[    311.40]   890:       33.695 ms
+[    311.74]   891:       33.895 ms
+[    312.08]   892:       34.095 ms
+[    312.42]   893:       34.095 ms
+[    312.76]   894:       34.095 ms
+[    313.11]   895:       34.895 ms
+[    313.45]   896:       33.995 ms
+[    313.79]   897:       34.295 ms
+[    314.14]   898:       34.195 ms
+[    314.48]   899:       34.095 ms
+[    314.82]   900:       34.195 ms
+[    315.16]   901:       34.395 ms
+[    315.51]   902:       34.195 ms
+[    315.84]   903:       33.995 ms
+[    316.19]   904:       34.495 ms
+[    316.53]   905:       33.995 ms
+[    316.87]   906:       33.995 ms
+[    317.22]   907:       34.595 ms
+[    317.56]   908:       33.995 ms
+[    317.90]   909:       34.395 ms
+[    318.24]   910:       34.495 ms
+[    318.59]   911:       34.495 ms
+[    318.93]   912:       34.295 ms
+[    319.27]   913:       33.895 ms
+[    319.61]   914:       34.195 ms
+[    319.96]   915:       34.295 ms
+[    320.30]   916:       33.995 ms
+[    320.64]   917:       34.195 ms
+[    321.09]   918:       44.993 ms
+[    321.43]   919:       33.995 ms
+[    321.77]   920:       34.195 ms
+[    322.12]   921:       34.495 ms
+[    322.46]   922:       34.695 ms
+[    322.80]   923:       33.795 ms
+[    323.14]   924:       33.995 ms
+[    323.49]   925:       34.595 ms
+[    323.83]   926:       34.295 ms
+[    324.17]   927:       34.395 ms
+[    324.51]   928:       34.095 ms
+[    324.85]   929:       33.995 ms
+[    325.20]   930:       34.295 ms
+[    325.54]   931:       34.095 ms
+[    325.88]   932:       34.695 ms
+[    326.23]   933:       34.295 ms
+[    326.57]   934:       34.195 ms
+[    326.91]   935:       34.295 ms
+[    327.25]   936:       33.595 ms
+[    327.59]   937:       34.195 ms
+[    327.93]   938:       34.295 ms
+[    328.27]   939:       33.995 ms
+[    328.62]   940:       34.195 ms
+[    328.96]   941:       34.195 ms
+[    329.30]   942:       33.895 ms
+[    329.64]   943:       34.195 ms
+[    329.98]   944:       33.995 ms
+[    330.32]   945:       33.995 ms
+[    330.66]   946:       34.195 ms
+[    331.00]   947:       34.495 ms
+[    331.35]   948:       34.095 ms
+[    331.69]   949:       34.295 ms
+[    332.03]   950:       34.195 ms
+[    332.37]   951:       34.295 ms
+[    332.72]   952:       34.595 ms
+[    333.06]   953:       34.195 ms
+[    333.40]   954:       34.095 ms
+[    333.74]   955:       34.095 ms
+[    334.08]   956:       34.095 ms
+[    334.43]   957:       34.095 ms
+[    334.77]   958:       34.295 ms
+[    335.11]   959:       34.095 ms
+[    335.45]   960:       34.095 ms
+[    335.79]   961:       34.095 ms
+[    336.13]   962:       34.295 ms
+[    336.47]   963:       34.095 ms
+[    336.82]   964:       34.295 ms
+[    337.16]   965:       34.195 ms
+[    337.50]   966:       33.895 ms
+[    337.84]   967:       34.195 ms
+[    338.18]   968:       34.095 ms
+[    338.52]   969:       34.195 ms
+[    338.87]   970:       34.195 ms
+[    339.20]   971:       33.895 ms
+[    339.54]   972:       33.995 ms
+[    339.89]   973:       34.095 ms
+[    340.23]   974:       34.195 ms
+[    340.57]   975:       34.095 ms
+[    340.91]   976:       34.295 ms
+[    341.25]   977:       33.795 ms
+[    341.59]   978:       34.095 ms
+[    341.93]   979:       34.195 ms
+[    342.28]   980:       34.495 ms
+[    342.62]   981:       34.295 ms
+[    342.96]   982:       34.395 ms
+[    343.30]   983:       33.995 ms
+[    343.64]   984:       34.095 ms
+[    343.99]   985:       34.295 ms
+[    344.33]   986:       33.995 ms
+[    344.67]   987:       34.595 ms
+[    345.02]   988:       34.695 ms
+[    345.36]   989:       34.395 ms
+[    345.70]   990:       33.795 ms
+[    346.04]   991:       33.895 ms
+[    346.38]   992:       33.795 ms
+[    346.72]   993:       33.995 ms
+[    347.06]   994:       34.195 ms
+[    347.40]   995:       33.895 ms
+[    347.74]   996:       33.995 ms
+[    348.08]   997:       34.195 ms
+[    348.42]   998:       34.095 ms
+[    348.76]   999:       34.095 ms
+[    348.76]     34.875 ms per set                     
+[    348.76] Done.

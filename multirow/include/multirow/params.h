@@ -36,7 +36,7 @@
 /*
  * Maximum bounding-box size for naive algorithm
  */
-#define MAX_BOX_SIZE 10000
+#define MAX_BOX_SIZE 1000
 
 /*
  * Maximum number of sets that should be considered

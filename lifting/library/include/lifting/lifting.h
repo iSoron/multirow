@@ -46,7 +46,14 @@ int LIFTING_2D_naive(int n_halfspaces,
 int LIFTING_2D_bound(int n_halfspaces,
                      const double *halfspaces,
                      const double *ray,
+                     const double xi_plus,
+                     const double xi_minus,
                      double *value);
+
+int LIFTING_2D_heur(int n_halfspaces,
+                    const double *halfspaces,
+                    const double *ray,
+                    double *value);
 
 int LIFTING_2D_verify(struct LFreeSet2D *set);
 

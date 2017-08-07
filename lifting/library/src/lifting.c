@@ -205,29 +205,38 @@ CLEANUP:
     return rval;
 }
 
+int LIFTING_2D_heur(int n_halfspaces,
+                    const double *halfspaces,
+                    const double *ray,
+                    double *value)
+{
+    int rval = 0;
+
+    double q[2] = { ray[0] - ceil(ray[0]), ray[1] - ceil(ray[1])};
+
+    rval = LIFTING_2D_psi(n_halfspaces, halfspaces, q, value);
+    abort_if(rval, "LIFTING_2D_ps failed");
+
+CLEANUP:
+    return rval;
+}
+
 int LIFTING_2D_bound(int n_halfspaces,
                      const double *halfspaces,
                      const double *ray,
+                     const double xi_plus,
+                     const double xi_minus,
                      double *value)
 {
     int rval = 0;
 
     double eta_star, eta_plus, eta_minus;
-    double xi_plus, xi_minus;
     double m_plus, m_minus;
     double ignored;
     int k1 = 1;
 
     rval = LIFTING_2D_lift_fixed(n_halfspaces, halfspaces, ray, 0, &eta_star);
     abort_if(rval, "LIFTING_2D_lift_fixed failed");
-
-    rval = LIFTING_2D_optimize_continuous(n_halfspaces, halfspaces, 1, &ignored,
-            &xi_plus);
-    abort_if(rval, "LIFTING_2D_optimize_continuous failed");
-
-    rval = LIFTING_2D_optimize_continuous(n_halfspaces, halfspaces, -1,
-            &ignored, &xi_minus);
-    abort_if(rval, "LIFTING_2D_optimize_continuous failed");
 
     m_plus = m_minus = INFINITY;
 
