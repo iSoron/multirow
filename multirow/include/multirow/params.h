@@ -41,7 +41,7 @@
 /*
  * Maximum number of sets that should be considered
  */
-#define MAX_N_SETS 1000
+#define MAX_N_SETS 1
 
 /*
  * Number of rays that should be generated per set.
