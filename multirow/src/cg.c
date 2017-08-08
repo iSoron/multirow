@@ -1115,4 +1115,32 @@ int CG_total_nz(const struct Tableau *tableau)
     return total_nz;
 }
 
+int CG_print_model(const struct MultiRowModel *model)
+{
+    int rval = 0;
+    int nrows = model->nrows;
+
+    time_printf("       f = [");
+    for (int i = 0; i < nrows; i++)
+        printf("%20.12lf ", model->f[i]);
+    printf("]\n");
+
+    for (int i = 0; i < model->rays.nrays; i++)
+    {
+        double *ray = LFREE_get_ray(&model->rays, i);
+        double norm = 0;
+
+        time_printf("ray[%3d] = [", i);
+        for (int j = 0; j < nrows; j++)
+        {
+            printf("%20.12lf ", ray[j]);
+            norm += fabs(ray[j]);
+        }
+        printf("] norm=%20.12lf \n", norm);
+    }
+
+CLEANUP:
+    return rval;
+}
+
 #endif // TEST_SOURCE

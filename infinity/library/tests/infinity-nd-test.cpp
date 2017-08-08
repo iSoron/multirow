@@ -370,6 +370,53 @@ CLEANUP:
     if(rval) FAIL();
 }
 
+TEST(InfinityNDTest, psi_test_3)
+{
+    int rval = 0;
+
+    double f[] = { 0.671875, 0.671875 };
+    double rays[] = {
+            -0.007812500000,  0.000000000000,
+            -0.039062500000,  0.046875000000,
+             0.000000000000,  0.046875000000,
+             0.046875000000,  0.000000000000,
+             0.000000000000, -0.039062500000
+    };
+
+    double beta[] = {
+            66.909090909091,
+            29.440000000000,
+            14.000000000000,
+            14.000000000000,
+            29.440000000000,
+    };
+
+    double q[] = { 0 - f[0], 1 - f[1]};
+
+    struct ConvLFreeSet lfree;
+    lfree.f = f;
+    lfree.beta = beta;
+    lfree.rays.nrays = 5;
+    lfree.rays.values = rays;
+    lfree.nrows = lfree.rays.dim = 2;
+
+    double value;
+    struct LP lp;
+
+    rval = LP_open(&lp);
+    abort_if(rval, "LP_open failed");
+
+    rval = INFINITY_create_psi_lp(&lfree, &lp);
+    abort_if(rval, "INFINITY_create_psi_lp failed");
+
+    rval = INFINITY_psi(lfree.nrows, q, 1.0, &lp, &value);
+    abort_if(rval, "GREDDY_ND_psi failed");
+    EXPECT_NEAR(value, 1.0, 1e-6);
+
+CLEANUP:
+    if(rval) FAIL();
+}
+
 TEST(InfinityNDTest, generate_cut_test_1)
 {
     int rval = 0;

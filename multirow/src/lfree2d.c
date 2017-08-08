@@ -559,6 +559,41 @@ CLEANUP:
     return rval;
 }
 
+int LFREE_print_set(const struct ConvLFreeSet *set)
+{
+    int rval = 0;
+
+    log_debug("f=%12.6lf %12.6lf\n", set->f[0], set->f[1]);
+
+    for (int i = 0; i < set->rays.nrays; i++)
+    {
+        double *ray = LFREE_get_ray(&set->rays, i);
+        log_debug("ray[%-3d] = ", i);
+        for (int j = 0; j < set->nrows; j++)
+            printf("%20.12lf ", ray[j]);
+        printf("\n");
+    }
+
+    for (int i = 0; i < set->rays.nrays; i++)
+    {
+        double beta = set->beta[i];
+        log_debug("beta[%-3d] = %20.12lf\n", i, beta);
+    }
+
+    for (int i = 0; i < set->rays.nrays; i++)
+    {
+        double *ray = LFREE_get_ray(&set->rays, i);
+        double beta = set->beta[i];
+        log_debug("vertex[%-3d] = ", i);
+        for (int j = 0; j < set->nrows; j++)
+            printf("%20.12lf ", ray[j] * beta + set->f[j]);
+        printf("\n");
+    }
+
+CLEANUP:
+    return rval;
+}
+
 void LFREE_free_conv(struct ConvLFreeSet *lfree)
 {
     if(!lfree) return;

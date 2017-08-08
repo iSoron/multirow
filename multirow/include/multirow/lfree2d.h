@@ -40,7 +40,6 @@ struct RayList
     int dim;
 };
 
-
 struct ConvLFreeSet
 {
     double *f;
@@ -81,5 +80,7 @@ int LFREE_init_ray_list(struct RayList *list, int dim, int capacity);
 int LFREE_init_conv(struct ConvLFreeSet *lfree, int dim, int max_nrays);
 
 void LFREE_free_conv(struct ConvLFreeSet *lfree);
+
+int LFREE_print_set(const struct ConvLFreeSet *lfree);
 
 #endif //LFREE_2D_H
