@@ -108,6 +108,7 @@ static int create_cut_from_lfree(const struct Tableau *tableau,
                                 struct Row *cut)
 {
     int rval = 0;
+    double *ray = 0;
 
     struct LP lp;
     int nvars = map->nvars;
@@ -122,22 +123,34 @@ static int create_cut_from_lfree(const struct Tableau *tableau,
     rval = INFINITY_create_psi_lp(lfree, &lp);
     abort_if(rval, "create_psi_lp failed");
 
+    ray = (double*) malloc(nrows * sizeof(double));
+    abort_if(!ray, "could not allocate ray");
+
     cut->nz = nvars;
     for(int i = 0; i < nvars; i++)
     {
-        double value;
-        const double *q = LFREE_get_ray(rays, map->variable_to_ray[i]);
+        double value, norm = 0;
+        double *original_ray = LFREE_get_ray(rays, map->variable_to_ray[i]);
         char type = tableau->column_types[map->indices[i]];
 
+        for (int j = 0; j < nrows; j++)
+        {
+            ray[j] = original_ray[j];
+            norm += fabs(ray[j]);
+        }
+
+        if (norm < 0.001)
+            for (int j = 0; j < nrows; j++)
+                ray[j] *= 0.001 / norm;
 
         if(ENABLE_LIFTING && type == MILP_INTEGER)
         {
-            rval = INFINITY_pi(nrows, q, map->ray_scale[i], &lp, &value);
+            rval = INFINITY_pi(nrows, ray, map->ray_scale[i], &lp, &value);
             abort_if(rval, "INFINITY_pi failed");
         }
         else
         {
-            rval = INFINITY_psi(nrows, q, map->ray_scale[i], &lp, &value);
+            rval = INFINITY_psi(nrows, ray, map->ray_scale[i], &lp, &value);
             abort_if(rval, "INFINITY_psi failed");
         }
 
@@ -147,7 +160,7 @@ static int create_cut_from_lfree(const struct Tableau *tableau,
         {
             time_printf("    q=[");
             for(int j = 0; j < nrows; j++)
-                printf("%25.20lf ", q[j] * map->ray_scale[i]);
+                printf("%25.20lf ", ray[j] * map->ray_scale[i]);
             printf("] value=%25.20lf\n", value);
         }
 
@@ -163,6 +176,7 @@ static int create_cut_from_lfree(const struct Tableau *tableau,
     cut->pi_zero = -1.0;
 
 CLEANUP:
+    if(ray) free(ray);
     LP_free(&lp);
     return rval;
 }
