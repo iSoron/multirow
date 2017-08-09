@@ -945,7 +945,10 @@ int CG_add_multirow_cuts(struct CG *cg,
                 LP_free_row(&cut);
                 goto NEXT_COMBINATION;
             }
-            else abort_iff(rval, "generate failed (cut %d)", count);
+            else if(rval) {
+                dump_tableau(&tableau, count);
+                abort_iff(1, "generate failed (cut %d)", count);
+            }
 
             if_verbose_level dump_cut(&cut, count);
 

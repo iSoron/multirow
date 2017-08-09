@@ -428,16 +428,14 @@ int INFINITY_generate_cut(const struct Tableau *tableau, struct Row *cut)
     rval = append_extra_rays(&filtered_model);
     abort_if(rval, "append_extra_rays failed");
 
-//    if(tableau->nrows == 2)
-//        rval = INFINITY_2D_generate_lfree(&filtered_model, &lfree);
-//    else
-        rval = INFINITY_ND_generate_lfree(&filtered_model, &lfree);
-
-    if(rval)
+    if_debug_level
     {
-        rval = ERR_NO_CUT;
-        goto CLEANUP;
+        rval = CG_print_model(&filtered_model);
+        abort_if(rval, "CG_print_model failed");
     }
+
+    rval = INFINITY_ND_generate_lfree(&filtered_model, &lfree);
+    abort_if(rval, "INFINITY_ND_generate_lfree failed");
 
     if(SHOULD_DUMP_CUTS)
     {

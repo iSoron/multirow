@@ -602,7 +602,7 @@ static int find_interior_point_enum(const int nrows,
                 }
             }
 
-    if(!DOUBLE_geq(best_value, 1)) *found = 1;
+    if(best_value < 0.999) *found = 1;
 
 CLEANUP:
     if(beta2) free(beta2);
@@ -665,7 +665,7 @@ static int find_interior_point_cplex(const int nrows,
 
     log_debug("    obj = %.8lf\n", objval);
 
-    if(DOUBLE_geq(objval, 1.0))
+    if(objval > 0.999)
     {
         log_debug("  set is lattice-free\n");
         *found = 0;
@@ -1321,8 +1321,6 @@ int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
             abort_if(rval, "bound failed");
 
             if(isinf(epsilon_x)) break;
-
-//            epsilon_x = (floor(epsilon_x * 128) / 128);
             log_debug("    epsilon_x = %.8lf\n", epsilon_x);
 
             if(DOUBLE_eq(epsilon_x, epsilon))
@@ -1347,7 +1345,7 @@ int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
         {
             if(t[i])
             {
-                beta[i] = min(beta[i], epsilon);
+                beta[i] = min(beta[i] * 0.999, epsilon);
             }
             else if(!skip_ahull)
             {
@@ -1364,7 +1362,6 @@ int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
                     continue;
                 }
 
-//                alpha = (floor(alpha * 128) / 128);
                 beta[i] = min(beta[i], alpha);
             }
 
