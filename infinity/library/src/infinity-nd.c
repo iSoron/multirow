@@ -365,10 +365,6 @@ static int create_tight_rays_lp(int nrows,
     rval = LP_relax(lp);
     abort_if(rval, "LP_relax failed");
 
-    //rval = LP_write(lp, "tight-rays.lp");
-    //abort_if(rval, "LP_write failed");
-
-
 CLEANUP:
     if(rmatind) free(rmatind);
     if(rmatval) free(rmatval);

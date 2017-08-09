@@ -187,7 +187,7 @@ static int filter_model(const struct MultiRowModel *original_model,
     struct RayList *filtered_rays = &filtered_model->rays;
     const struct RayList *original_rays = &original_model->rays;
 
-    memcpy(f, original_model->f, 2 * sizeof(double));
+    memcpy(f, original_model->f, nrows * sizeof(double));
 
     r = (double*) malloc(nrows * sizeof(double));
     abort_if(!r, "could not allocate r");
@@ -412,6 +412,9 @@ int INFINITY_generate_cut(const struct Tableau *tableau, struct Row *cut)
     rval = CG_init_map(&original_map, max_nrays, tableau->nrows);
     abort_if(rval, "CG_init_map failed");
 
+    rval = LFREE_init_conv(&lfree, tableau->nrows, max_nrays);
+    abort_if(rval, "LFREE_init_conv failed");
+
     rval = extract_models(tableau, &original_model, &filtered_model,
             &original_map);
     abort_if(rval, "extract_models failed");
@@ -421,9 +424,6 @@ int INFINITY_generate_cut(const struct Tableau *tableau, struct Row *cut)
         rval = ERR_NO_CUT;
         goto CLEANUP;
     }
-
-    rval = LFREE_init_conv(&lfree, tableau->nrows, max_nrays);
-    abort_if(rval, "LFREE_init_conv failed");
 
     rval = append_extra_rays(&filtered_model);
     abort_if(rval, "append_extra_rays failed");
