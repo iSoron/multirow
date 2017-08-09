@@ -154,6 +154,7 @@ static int create_cut_from_lfree(const struct Tableau *tableau,
             abort_if(rval, "INFINITY_psi failed");
         }
 
+        value *= 1.001;
         log_verbose("   psi[%4d] = %20.12lf %d\n", map->indices[i], value);
 
         cut->indices[i] = map->indices[i];
