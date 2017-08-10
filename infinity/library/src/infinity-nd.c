@@ -1316,7 +1316,7 @@ int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
                     &epsilon_x, tx);
             abort_if(rval, "bound failed");
 
-            if(isinf(epsilon_x)) break;
+            abort_if(isinf(epsilon_x), "epsilon_x is infinite");
             log_debug("    epsilon_x = %.8lf\n", epsilon_x);
 
             if(DOUBLE_eq(epsilon_x, epsilon))
