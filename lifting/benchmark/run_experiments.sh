@@ -33,23 +33,23 @@ DIR=orig-100
 mkdir -p $DIR; rm -f $DIR/*log $DIR/*yaml
 
 title Heuristic
-$RUN $COMMON_OPTS --samples 250000 --heuristic --log $DIR/heur.log --stats $DIR/heur.yaml || exit
+$RUN $COMMON_OPTS --samples 100000 --heuristic --log $DIR/heur.log --stats $DIR/heur.yaml || exit
 
 title Bound Original
-$RUN $COMMON_OPTS --samples 17000 --bound --log $DIR/bound.log --stats $DIR/bound.yaml || exit
+$RUN $COMMON_OPTS --samples 1000 --bound --log $DIR/bound.log --stats $DIR/bound.yaml || exit
 
 title Bound Pre-processing
-$RUN $COMMON_OPTS --samples 12000 --bound --preprocess --log $DIR/bound-pre.log --stats $DIR/bound-pre.yaml || exit
+$RUN $COMMON_OPTS --samples 1000 --bound --preprocess --log $DIR/bound-pre.log --stats $DIR/bound-pre.yaml || exit
 
 title Naive Bounding-Box
-$RUN $COMMON_OPTS --samples 300 --naive --log $DIR/naive-bbox.log --stats $DIR/naive-bbox.yaml || exit
+$RUN $COMMON_OPTS --samples 100 --naive --log $DIR/naive-bbox.log --stats $DIR/naive-bbox.yaml || exit
 
 title Naive Fixed-M
 M=50
-$RUN $COMMON_OPTS --samples 30 --naive --fixed-bounds $M --log $DIR/naive-fixed-$M.log --stats $DIR/naive-fixed-$M.yaml || exit
+$RUN $COMMON_OPTS --samples 100 --naive --fixed-bounds $M --log $DIR/naive-fixed-$M.log --stats $DIR/naive-fixed-$M.yaml || exit
 
 title Naive Bounding-Box Pre-processing
-$RUN $COMMON_OPTS --samples 300 --naive --preprocess --log $DIR/naive-bbox-pre.log --stats $DIR/naive-bbox-pre.yaml || exit
+$RUN $COMMON_OPTS --samples 100 --naive --preprocess --log $DIR/naive-bbox-pre.log --stats $DIR/naive-bbox-pre.yaml || exit
 
 title MIP
 $RUN $COMMON_OPTS --samples 10 --mip --log $DIR/mip.log --stats $DIR/mip.yaml || exit
@@ -71,20 +71,20 @@ DIR=shear-100
 mkdir -p $DIR; rm -f $DIR/*log $DIR/*yaml
 
 title Heuristic + Shear
-$RUN $COMMON_OPTS --samples 250000 --heuristic --log $DIR/heur.log --stats $DIR/heur.yaml || exit
+$RUN $COMMON_OPTS --samples 100000 --heuristic --log $DIR/heur.log --stats $DIR/heur.yaml || exit
 
 title Bound Original + Shear
-$RUN $COMMON_OPTS --samples 500 --bound --log $DIR/bound.log --stats $DIR/bound.yaml || exit
+$RUN $COMMON_OPTS --samples 1000 --bound --log $DIR/bound.log --stats $DIR/bound.yaml || exit
 
 title Bound Pre-processing + Shear
-$RUN $COMMON_OPTS --samples 13000 --bound --preprocess --log $DIR/bound-pre.log --stats $DIR/bound-pre.yaml || exit
+$RUN $COMMON_OPTS --samples 1000 --bound --preprocess --log $DIR/bound-pre.log --stats $DIR/bound-pre.yaml || exit
 
 title Naive Bounding-Box + Shear
 $RUN $COMMON_OPTS --samples 10 --naive --log $DIR/naive-bbox.log --stats $DIR/naive-bbox.yaml || exit
 
 title Naive Fixed-M + Shear
 M=50
-$RUN $COMMON_OPTS --samples 30 --naive --fixed-bounds $M --log $DIR/naive-fixed-$M.log --stats $DIR/naive-fixed-$M.yaml || exit
+$RUN $COMMON_OPTS --samples 100 --naive --fixed-bounds $M --log $DIR/naive-fixed-$M.log --stats $DIR/naive-fixed-$M.yaml || exit
 
 title MIP + Shear
 $RUN $COMMON_OPTS --samples 10 --mip --log $DIR/mip.log --stats $DIR/mip.yaml || exit
