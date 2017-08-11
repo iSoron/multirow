@@ -571,7 +571,7 @@ CLEANUP:
     if (rval) FAIL();
 }
 
-TEST(InfinityTest, generate_cut_test_14)
+TEST(DISABLED_InfinityTest, generate_cut_test_14)
 {
     int rval = 0;
 

@@ -417,7 +417,7 @@ CLEANUP:
     if(rval) FAIL();
 }
 
-TEST(InfinityNDTest, generate_cut_test_1)
+TEST(DISABLED_InfinityNDTest, generate_cut_test_1)
 {
     int rval = 0;
 

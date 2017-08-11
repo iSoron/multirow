@@ -426,9 +426,8 @@ static int create_violated_cone_lp(int nrows,
     rval = LP_relax(lp);
     abort_if(rval, "LP_relax failed");
 
-    //rval = LP_write(lp, "violated-cone.lp");
-    //abort_if(rval, "LP_write failed");
-    //UTIL_pause();
+//    rval = LP_write(lp, "violated-cone.lp");
+//    abort_if(rval, "LP_write failed");
 
 CLEANUP:
     if(rmatind) free(rmatind);
@@ -631,14 +630,14 @@ static int find_interior_point_cplex(const int nrows,
     rval = create_sfree_mip(nrows, nrays, f, rays, beta, epsilon, &lp);
     abort_if(rval, "greate_sfree_mip failed");
 
-    log_debug("  solving sfree mip...\n");
+    log_debug("    solving sfree mip...\n");
     rval = LP_optimize(&lp, &infeasible);
     if(rval == ERR_MIP_TIMEOUT) goto CLEANUP;
     abort_if(rval, "LP_optimize failed");
 
     if(infeasible)
     {
-        log_debug("  mip is infeasible. Stopping.\n");
+        log_debug("        mip is infeasible. Stopping.\n");
         *found = 0;
         goto CLEANUP;
     }
@@ -659,11 +658,11 @@ static int find_interior_point_cplex(const int nrows,
     rval = LP_get_obj_val(&lp, &objval);
     abort_if(rval, "LP_get_obj_val failed");
 
-    log_debug("    obj = %.8lf\n", objval);
+    log_debug("        obj: %.8lf\n", objval);
 
     if(objval > 0.999)
     {
-        log_debug("  set is lattice-free\n");
+        log_debug("    set is lattice-free\n");
         *found = 0;
         goto CLEANUP;
     }
@@ -853,7 +852,7 @@ static int find_violated_cone(int nrows,
                               double *sbar,
                               int *violated_found)
 {
-    log_verbose("      find_violated_cone\n");
+    log_debug("    finding violated cone:\n");
     int rval = 0;
 
     struct LP lp;
@@ -890,30 +889,30 @@ static int find_violated_cone(int nrows,
     rval = LP_get_obj_val(&lp, &obj);
     abort_if(rval, "LP_get_obj_val failed");
 
-    log_verbose("  o=%.8lf\n", obj);
+    log_debug("      obj: %.8lf\n", obj);
 
-    if(DOUBLE_geq(obj, 0.999))
+    if(obj > 0.999)
     {
         *violated_found = 0;
+        log_debug("    no violated cone found\n");
     }
     else
     {
         *violated_found = 1;
 
-        log_verbose("Violated cone found\n");
-        log_verbose("  f=%.8lf %.8lf\n", f[0], f[1]);
-        log_verbose("  x=%.8lf %.8lf\n", x[0], x[1]);
+        log_debug("    violated cone found:\n");
+        log_debug("      f: %12.8lf %12.8lf\n", f[0], f[1]);
+        log_debug("      x: %12.8lf %12.8lf\n", x[0], x[1]);
 
         for(int i = 0; i < nrays; i++)
         {
             rx[i] = (sbar[i] > 1e-9);
 
-            if(rx[i]) if_verbose_level
+            if(rx[i]) if_debug_level
             {
-                double m = min(epsilon, beta[i]);
+                const double m = fmin(epsilon, beta[i]);
                 const double *r = &rays[nrows * i];
-                time_printf("  r[%d]=%.8lf %.8lf\n", i, r[0], r[1]);
-                time_printf("  r[%d]=%.8lf %.8lf\n", i, m * r[0], m * r[1]);
+                time_printf("      r[%d]: %12.8lf %12.8lf\n", i, m * sbar[i] * r[0], m * sbar[i] * r[1]);
             }
         }
     }
@@ -974,15 +973,12 @@ static int bound(int nrows,
                 fbar[i] -= min(*epsilon, beta[j]) * r[i] * sbar[j];
         }
 
-        log_verbose("%.12lf %.12lf\n", f[0], f[1]);
-        log_verbose("%.12lf %.12lf\n", fbar[0], fbar[1]);
-
         prev_epsilon = *epsilon;
 
         rval = cone_bound(nrows, nrays, fbar, rays, rx, x, beta, epsilon);
         abort_if(rval, "cone_bound failed");
 
-        log_verbose("        e=%.12lf\n", *epsilon);
+        log_debug("    cone bound: %.20lf\n", epsilon);
         abort_if(prev_epsilon < *epsilon, "epsilon should never increase");
     }
 
@@ -1211,8 +1207,6 @@ CLEANUP:
 int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
                                struct ConvLFreeSet *lfree)
 {
-    log_debug("INFINITY_ND_generate_lfree\n");
-
     int rval = 0;
     int nrows = model->nrows;
     int nrays = model->rays.nrays;
@@ -1245,24 +1239,6 @@ int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
 
     int it = 0;
 
-    //lp_time = 0;
-    //lp_count = 0;
-
-    //epsilon_lp_count = 0;
-    //epsilon_lp_time = 0;
-    //
-    //sfree_mip_count = 0;
-    //sfree_mip_time = 0;
-
-    //tight_lp_count = 0;
-    //tight_lp_time = 0;
-
-    //violated_lp_count = 0;
-    //violated_lp_time = 0;
-
-    //scale_ahull_lp_time = 0;
-    //scale_ahull_lp_count = 0;
-
     long x_count = 0;
     double epsilon;
 
@@ -1285,7 +1261,7 @@ int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
 
         while(1)
         {
-            log_debug("  epsilon = %.8lf\n", epsilon);
+            log_debug("    epsilon: %.8lf\n", epsilon);
 
             int found = 0;
 
@@ -1305,8 +1281,14 @@ int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
                 if(!found) break;
             }
 
-            log_debug("    found interior point:\n");
-            for(int i = 0; i < nrows; i++) log_debug("        %.2lf\n", x[i]);
+            if_debug_level {
+                time_printf("    found interior point:\n");
+                time_printf("        x: ");
+                for (int i = 0; i < nrows; i++)
+                    printf("%.2lf ", x[i]);
+                printf("\n");
+
+            }
 
             x_count++;
             abort_if(x_count > 1000, "infinite loop");
@@ -1317,7 +1299,7 @@ int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
             abort_if(rval, "bound failed");
 
             abort_if(isinf(epsilon_x), "epsilon_x is infinite");
-            log_debug("    epsilon_x = %.8lf\n", epsilon_x);
+            log_debug("    epsilon_x: %.8lf\n", epsilon_x);
 
             if(DOUBLE_eq(epsilon_x, epsilon))
             {
@@ -1337,6 +1319,7 @@ int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
 
         int skip_ahull = 0;
 
+        log_debug("    updating beta:\n");
         for(int i = 0; i < nrays; i++)
         {
             if(t[i])
@@ -1361,10 +1344,8 @@ int INFINITY_ND_generate_lfree(const struct MultiRowModel *model,
                 beta[i] = min(beta[i], alpha);
             }
 
-            log_debug("  beta[%2d] = %20.12lf\n", i, beta[i]);
+            log_debug("        beta[%2d]: %20.12lf\n", i, beta[i]);
         }
-
-        log_debug("epsilon = %.6lf\n", epsilon);
     }
 
     log_debug("    %6ld lattice points, %ld iterations\n", x_count, it);
