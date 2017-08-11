@@ -7,6 +7,8 @@ include_directories(${CPLEX_INCLUDE_DIR})
 
 find_package(GMP REQUIRED)
 find_package(OpenMP REQUIRED)
+find_package(BLAS REQUIRED)
+find_package(LAPACKE REQUIRED)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -Werror ${OpenMP_CXX_FLAGS} -O3")
