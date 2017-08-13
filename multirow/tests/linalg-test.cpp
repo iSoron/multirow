@@ -62,7 +62,7 @@ TEST(LinAlgTest, solve_test)
     double b[] = { 1.0, 3.0, 5.0 };
     double x[] = { 0.0, 0.0, 0.0 };
 
-    rval = LINALG_solve(3, A, b, x);
+    rval = LINALG_solve(3, 3, A, b, x);
     abort_if(rval, "LINALG_solve failed");
 
     // Should compute x correctly
@@ -77,6 +77,30 @@ TEST(LinAlgTest, solve_test)
     EXPECT_EQ(b[0], 1.0);
     EXPECT_EQ(b[1], 3.0);
     EXPECT_EQ(b[2], 5.0);
+
+CLEANUP:
+    if(rval) FAIL();
+}
+
+TEST(LinAlgTest, solve_test_2)
+{
+    int rval = 0;
+
+    double A[] = {
+            1.0, 3.0,
+            0.0, 0.0,
+            2.0, 2.0,
+            3.0, 5.0,
+    };
+    double b[] = { 5/2.0, 0.0, 8/3.0, 31/6.0 };
+    double x[2];
+
+    rval = LINALG_solve(2, 4, A, b, x);
+    abort_if(rval, "LINALG_solve failed");
+
+    // Should compute x correctly
+    EXPECT_NEAR(x[0], 3/4.0, E);
+    EXPECT_NEAR(x[1], 7/12.0, E);
 
 CLEANUP:
     if(rval) FAIL();

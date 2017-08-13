@@ -33,8 +33,8 @@ double LINALG_dot(int n, double *x, double *y);
 double LINALG_norm(int n, double *x);
 
 /**
- * Given an invertible n-by-n matrix A and an n-dimensional vector b, this
- * function set x to A^(-1) b. Returns zero if the operation is successful and
- * non-zero otherwise.
+ * Given a full rank m-by-n matrix A and an m-dimensional vector b, this
+ * function finds x such that Ax = b. Returns zero if the operation is
+ * successful and non-zero otherwise.
  */
-int LINALG_solve(int n, double *A, double *b, double *x);
+int LINALG_solve(int n, int m, double *A, double *b, double *x);

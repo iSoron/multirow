@@ -17,8 +17,9 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include<cblas.h>
-#include<lapacke.h>
+#include <math.h>
+#include <cblas.h>
+#include <lapacke.h>
 #include <multirow/util.h>
 
 void LINALG_scale(int n, double *x, double alpha)
@@ -36,16 +37,14 @@ double LINALG_norm(int n, double *x)
     return cblas_dasum(n, x, 1);
 }
 
-int LINALG_solve(int n, double *A, double *b, double *x)
+int LINALG_solve(int n, int m, double *A, double *b, double *x)
 {
     int rval = 0;
-    int ignored[n];
-    double A_copy[n * n];
+    double A_copy[n * m];
+    memcpy(x, b, m * sizeof(double));
+    memcpy(A_copy, A, n * m * sizeof(double));
 
-    memcpy(x, b, n * sizeof(double));
-    memcpy(A_copy, A, n * n * sizeof(double));
-
-    rval = LAPACKE_dgesv(LAPACK_ROW_MAJOR, n, 1, A_copy, n, ignored, x, 1);
+    LAPACKE_dgels(LAPACK_ROW_MAJOR, 'N', m, n, 1, A_copy, n, x, 1);
     abort_if(rval, "LAPACKE_dgesv failed");
 
 CLEANUP:

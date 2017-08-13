@@ -78,6 +78,7 @@ void time_printf(const char *fmt,
 #define UNUSED(x) (void)(x)
 
 #define min(x,y) ((x) < (y) ? (x) : (y))
+#define max(x,y) ((x) > (y) ? (x) : (y))
 #define sign(x) ((x) > 0 ? 1 : ((x) < 0 ? -1 : 0))
 #define swap(x, y, T) do { T SWAP = x; x = y; y = SWAP; } while (0)
 

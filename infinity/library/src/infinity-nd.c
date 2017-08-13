@@ -22,6 +22,7 @@
 #include <multirow/util.h>
 
 #include <infinity/infinity-nd.h>
+#include <multirow/linalg.h>
 
 static long lp_count = 0;
 static double lp_time = 0;
@@ -40,6 +41,41 @@ static double sfree_mip_time = 0;
 
 static long scale_ahull_lp_count = 0;
 static double scale_ahull_lp_time = 0;
+
+static int cone_bound_find_lambda(const struct RayList *rays,
+                                  const double *f,
+                                  const double *x,
+                                  double *lambda)
+{
+    int rval = 0;
+    double *A = 0;
+    double *b = 0;
+    int dim = rays->dim;
+    int nrays = rays->nrays;
+
+    A = (double*) malloc(nrays * dim * sizeof(double));
+    b = (double*) malloc(dim * sizeof(double));
+    abort_if(!A, "could not allocate A");
+    abort_if(!b, "could not allocate b");
+
+    for (int i = 0; i < dim; i++)
+    {
+        b[i] = x[i] - f[i];
+        for (int j = 0; j < nrays; j++)
+            A[i * nrays + j] = rays->values[j * dim + i];
+    }
+
+    rval = LINALG_solve(nrays, dim, A, b, lambda);
+    abort_if(rval, "LINALG_solve failed");
+
+    for (int i = 0; i < dim; i++)
+        abort_iff(lambda[0] < 0, "lambda[i] is negative (%lf)", i, lambda[i]);
+
+CLEANUP:
+    if(A) free(A);
+    if(b) free(b);
+    return rval;
+}
 
 static int create_sfree_mip(int nrows,
                             int nrays,

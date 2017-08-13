@@ -27,6 +27,7 @@ extern "C" {
 #include "../src/infinity-nd.c"
 }
 
+const double E = 1e-6;
 
 TEST(InfinityNDTest, find_violated_cone_test)
 {
@@ -164,11 +165,11 @@ TEST(InfinityNDTest, cone_bound_test_1)
 
     rval = cone_bound(2, 6, f, rays, rx1, x, beta, &epsilon);
     abort_if(rval, "cone_bound failed");
-    EXPECT_NEAR(0.5, epsilon, 1e-6);
+    EXPECT_NEAR(0.5, epsilon, E);
 
     rval = cone_bound(2, 6, f, rays, rx2, x, beta, &epsilon);
     abort_if(rval, "cone_bound failed");
-    EXPECT_NEAR(1.0, epsilon, 1e-6);
+    EXPECT_NEAR(1.0, epsilon, E);
 
     CLEANUP:
     if(rval) FAIL();
@@ -197,7 +198,7 @@ TEST(InfinityNDTest, cone_bound_test_2)
 
     rval = cone_bound(2, 2, f, rays, rx, x1, beta1, &epsilon);
     abort_if(rval, "cone_bound failed");
-    EXPECT_NEAR(1.0, epsilon, 1e-6);
+    EXPECT_NEAR(1.0, epsilon, E);
 
     rval = cone_bound(2, 2, f, rays, rx, x1, beta2, &epsilon);
     abort_if(rval, "cone_bound failed");
@@ -205,7 +206,7 @@ TEST(InfinityNDTest, cone_bound_test_2)
 
     rval = cone_bound(2, 2, f, rays, rx, x2, beta2, &epsilon);
     abort_if(rval, "cone_bound failed");
-    EXPECT_NEAR(1.0, epsilon, 1e-6);
+    EXPECT_NEAR(1.0, epsilon, E);
 
     rval = cone_bound(2, 2, f, rays, rx, x2, beta3, &epsilon);
     abort_if(rval, "cone_bound failed");
@@ -239,7 +240,7 @@ TEST(InfinityNDTest, bound_test_1)
 
     rval = bound(2, 6, f, rays, x, beta1, &epsilon, tx);
     abort_if(rval, "bound failed");
-    EXPECT_NEAR(epsilon, 0.5, 1e-6);
+    EXPECT_NEAR(epsilon, 0.5, E);
     EXPECT_TRUE(tx[0]);
     EXPECT_FALSE(tx[1]);
     EXPECT_FALSE(tx[2]);
@@ -249,7 +250,7 @@ TEST(InfinityNDTest, bound_test_1)
 
     rval = bound(2, 6, f, rays, x, beta2, &epsilon, tx);
     abort_if(rval, "bound failed");
-    EXPECT_NEAR(epsilon, 1.0, 1e-6);
+    EXPECT_NEAR(epsilon, 1.0, E);
     EXPECT_TRUE(tx[0]);
     EXPECT_FALSE(tx[1]);
     EXPECT_FALSE(tx[2]);
@@ -308,11 +309,11 @@ TEST(InfinityNDTest, psi_test)
 
     rval = INFINITY_psi(2, q1, 1.0, &lp, &value);
     abort_if(rval, "GREDDY_ND_psi failed");
-    EXPECT_NEAR(value, 2.0, 1e-6);
+    EXPECT_NEAR(value, 2.0, E);
 
     rval = INFINITY_psi(2, q2, 2.0, &lp, &value);
     abort_if(rval, "GREDDY_ND_psi failed");
-    EXPECT_NEAR(value, 8.0, 1e-6);
+    EXPECT_NEAR(value, 8.0, E);
 
 CLEANUP:
     LP_free(&lp);
@@ -360,11 +361,11 @@ TEST(InfinityNDTest, psi_test_2)
 
     rval = INFINITY_psi(3, q1, 1.0, &lp, &value);
     abort_if(rval, "GREDDY_ND_psi failed");
-    EXPECT_NEAR(value, 1.0, 1e-6);
+    EXPECT_NEAR(value, 1.0, E);
 
     rval = INFINITY_psi(3, q2, 1.0, &lp, &value);
     abort_if(rval, "GREDDY_ND_psi failed");
-    EXPECT_NEAR(value, 2.0, 1e-6);
+    EXPECT_NEAR(value, 2.0, E);
 
 CLEANUP:
     if(rval) FAIL();
@@ -411,7 +412,7 @@ TEST(InfinityNDTest, psi_test_3)
 
     rval = INFINITY_psi(lfree.nrows, q, 1.0, &lp, &value);
     abort_if(rval, "GREDDY_ND_psi failed");
-    EXPECT_NEAR(value, 1.0, 1e-6);
+    EXPECT_NEAR(value, 1.0, E);
 
 CLEANUP:
     if(rval) FAIL();
@@ -445,12 +446,12 @@ TEST(DISABLED_InfinityNDTest, generate_cut_test_1)
     rval = INFINITY_ND_generate_lfree(&model, &lfree);
     abort_if(rval, "INFINITY_ND_generate_lfree failed");
 
-    EXPECT_NEAR(lfree.beta[0], 0.5, 1e-6);
-    EXPECT_NEAR(lfree.beta[1], 0.5, 1e-6);
-    EXPECT_NEAR(lfree.beta[2], 0.5, 1e-6);
-    EXPECT_NEAR(lfree.beta[3], 0.5, 1e-6);
-    EXPECT_NEAR(lfree.beta[4], 1.0, 1e-6);
-    EXPECT_NEAR(lfree.beta[5], 1.0, 1e-6);
+    EXPECT_NEAR(lfree.beta[0], 0.5, E);
+    EXPECT_NEAR(lfree.beta[1], 0.5, E);
+    EXPECT_NEAR(lfree.beta[2], 0.5, E);
+    EXPECT_NEAR(lfree.beta[3], 0.5, E);
+    EXPECT_NEAR(lfree.beta[4], 1.0, E);
+    EXPECT_NEAR(lfree.beta[5], 1.0, E);
 
 CLEANUP:
     if(rval) FAIL();
@@ -485,12 +486,12 @@ TEST(InfinityNDTest, generate_cut_test_2)
     rval = INFINITY_ND_generate_lfree(&model, &lfree);
     abort_if(rval, "INFINITY_ND_generate_lfree failed");
 
-    EXPECT_NEAR(lfree.beta[0], 0.75, 1e-6);
-    EXPECT_NEAR(lfree.beta[1], 2.25, 1e-6);
-    EXPECT_NEAR(lfree.beta[2], 0.75, 1e-6);
-    EXPECT_NEAR(lfree.beta[3], 2.25, 1e-6);
-    EXPECT_NEAR(lfree.beta[4], 0.75, 1e-6);
-    EXPECT_NEAR(lfree.beta[5], 2.25, 1e-6);
+    EXPECT_NEAR(lfree.beta[0], 0.75, E);
+    EXPECT_NEAR(lfree.beta[1], 2.25, E);
+    EXPECT_NEAR(lfree.beta[2], 0.75, E);
+    EXPECT_NEAR(lfree.beta[3], 2.25, E);
+    EXPECT_NEAR(lfree.beta[4], 0.75, E);
+    EXPECT_NEAR(lfree.beta[5], 2.25, E);
 
 CLEANUP:
     CG_free_model(&model);
@@ -533,4 +534,69 @@ TEST(InfinityNDTest, scale_to_ahull_test)
 
 CLEANUP:
     if(rval) FAIL();
+}
+
+TEST(InfinityNDTest, cone_bound_find_lambda_test)
+{
+    int rval = 0;
+
+    double f[] = { 1/2.0, 1/3.0 };
+    double x[] = { 3.0, 3.0 };
+    double ray_values[] = {
+            1.0, 2.0,
+            3.0, 2.0,
+    };
+
+    struct RayList rays = {.values = ray_values, .nrays = 2, .dim = 2};
+    double lambda[2];
+
+    rval = cone_bound_find_lambda(&rays, f, x, lambda);
+    abort_if(rval, "cone_bound_find_lambda failed");
+
+    EXPECT_NEAR(lambda[0], 3/4.0, E);
+    EXPECT_NEAR(lambda[1], 7/12.0, E);
+
+ CLEANUP:
+    if(rval) FAIL();
+}
+
+TEST(InfinityNDTest, cone_bound_find_lambda_test_2)
+{
+    int rval = 0;
+
+    double f[] = { 1/2.0, 1/3.0, 5/6.0 };
+    double x[] = { 3.0, 3.0, 6.0 };
+    double ray_values[] = {
+            1.0, 2.0, 3.0,
+            3.0, 2.0, 5.0,
+    };
+
+    struct RayList rays = {.values = ray_values, .nrays = 2, .dim = 3};
+    double lambda[2];
+
+    rval = cone_bound_find_lambda(&rays, f, x, lambda);
+    abort_if(rval, "cone_bound_find_lambda failed");
+
+    EXPECT_NEAR(lambda[0], 3/4.0, E);
+    EXPECT_NEAR(lambda[1], 7/12.0, E);
+
+CLEANUP:
+    if(rval) FAIL();
+}
+
+TEST(InfinityNDTest, cone_bound_find_lambda_test_3)
+{
+    int rval = 0;
+    double f[] = { 1/2.0, 1/2.0 };
+    double x[] = { 3.0, 3.0 };
+    double ray_values[] = {
+             0.0, -1.0,
+            -1.0,  0.0,
+    };
+
+    struct RayList rays = {.values = ray_values, .nrays = 2, .dim = 2};
+    double lambda[2];
+
+    rval = cone_bound_find_lambda(&rays, f, x, lambda);
+    EXPECT_NE(rval, 0);
 }
